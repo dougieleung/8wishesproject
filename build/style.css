@@ -2,8 +2,9 @@
 
 body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0 auto;
   align-items: center;
   background: linear-gradient(to top left, #28b487, #7dd56f);
 
@@ -23,4 +24,30 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* bottom navigation bar */
+
+.footer_links {
+  display: none;
+}
+
+.bottom_navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Desktop View - no bottom navigation bar */
+@media only screen and (min-width: 600px) {
+
+  .bottom_navbar {
+    display: none;
+  }
+
+  .footer_links {
+    display: block;
+  }
+
 }
