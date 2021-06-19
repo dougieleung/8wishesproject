@@ -1,0 +1,23 @@
+{
+  "name": "8wishesproject",
+  "version": "1.0.0",
+  "description": "PWA for users to capture, store, and organize gift ideas",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougieleung/8wishesproject.git"
+  },
+  "author": "Douglas Leung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dougieleung/8wishesproject/issues"
+  },
+  "homepage": "https://github.com/dougieleung/8wishesproject#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}

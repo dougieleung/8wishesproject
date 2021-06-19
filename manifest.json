@@ -1,0 +1,22 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "8wishes Gifting Application",
+  "short_name": "8wishes",
+  "icons": [
+    {
+      "src": "",
+      "sizes": "192x192"
+    },
+    {
+      "src": "",
+      "sizes": "512x512"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "orange",
+  "background_color": "purple"
+}

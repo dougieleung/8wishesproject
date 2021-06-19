@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./js/main.js"></script>
+    <title>8 Wishes</title>
+    <meta name="description" content="An application for searching special unique gifts" />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((reg) => {
+          console.log(`Service Worker ready (Scope: ${reg.scope})`);
+        });
+
+        navigator.serviceWorker
+          .register("./sw.js", { scope: "/" })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+        
+    </header>
+    <main>
+
+
+
+
+
+
+
+
+<h2>Frequently Asked Questions</h2>
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quidem facilis voluptatem nam autem magni omnis ipsa ducimus porro. Ea.</p>
+
+</main>
+<footer>
+    <!-- emmet footer>nav>ul>li*5>a[href="#"] -->
+    <nav>
+        <ul>
+            <li><a href="./tour.html">Take A Tour</a></li>
+            <li><a href="./privacy.html">Privacy Policies</a></li>
+            <li><a href="./advertise.html">Ads Info</a></li>
+            <li><a href="./business.html">Business</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
