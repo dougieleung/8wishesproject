@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./js/main.js"></script>
+    <title>8 Wishes</title>
+    <meta name="description" content="An application for searching special unique gifts" />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((reg) => {
+          console.log(`Service Worker ready (Scope: ${reg.scope})`);
+        });
+
+        navigator.serviceWorker
+          .register("./sw.js", { scope: "/" })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+        
+    </header>
+    <main>
+
+
+
+
+
+
+
+
+<header>
+<h1>REGISTRATION</h1>
+</header>
+<main>
+<form id="registerForm">
+    <div class="form-item form-item1">
+      <label for="username">Name</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-item form-item2">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your e-mail"
+        required
+      />
+    </div>
+    <div class="form-item form-item3">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Set up a password"
+        required
+      />
+    </div>
+    <div class="form-item form-item4">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        name="confirmPassword"
+        id="confirmPassword"
+        placeholder="Enter password again"
+        required
+      />
+    </div>
+    <div class="form-item form-button">
+      <button type="submit" id="registerButton">Register</button>
+    </div>
+  </form>
+  <p id="outputMessage"></p>
+</main>
+
+  </main>
+<footer>
+    <!-- emmet footer>nav>ul>li*5>a[href="#"] -->
+    <nav>
+        <ul>
+            <li><a href="./tour.html">Take A Tour</a></li>
+            <li><a href="./privacy.html">Privacy Policies</a></li>
+            <li><a href="./advertise.html">Ads Info</a></li>
+            <li><a href="./business.html">Business</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
