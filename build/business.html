@@ -46,8 +46,27 @@
 
 </main>
 <footer>
-    <!-- emmet footer>nav>ul>li*5>a[href="#"] -->
-    <nav>
+
+<!-- note: buttons replaced by UI assets -->
+<!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
+
+<!-- .navbar_container>nav.bottom_navbar>ul>(li>button#btn$.button.button$)*5 -->
+<div class="navbar_container">
+    <nav class="bottom_navbar">
+        <ul>
+            <li><button id="btn1" class="button button1">Home</button></li>
+            <li><button id="btn2" class="button button2">My List</button></li>
+            <li><button id="btn3" class="button button3">+</button></li>
+            <li><button id="btn4" class="button button4">Friends</button></li>
+            <li><button id="btn5" class="button button5">Store</button></li>
+        </ul>
+    </nav>
+</div>
+
+    <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
+
+<div class="footer_container">
+    <nav class="footer_links">
         <ul>
             <li><a href="./tour.html">Take A Tour</a></li>
             <li><a href="./privacy.html">Privacy Policies</a></li>
@@ -56,6 +75,8 @@
             <li><a href="./faq.html">FAQ</a></li>
         </ul>
     </nav>
+</div>
+
 </footer>
 </body>
 </html>
