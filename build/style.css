@@ -39,7 +39,8 @@ img {
   padding: 0;
 }
 
-/* Desktop View - no bottom navigation bar */
+/* Desktop View - no bottom navigation bar , footer links*/
+
 @media only screen and (min-width: 600px) {
 
   .bottom_navbar {
@@ -48,6 +49,18 @@ img {
 
   .footer_links {
     display: block;
+  }
+
+  .footer_links ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer_links ul a {
+    text-decoration: none;
+    color: black;
   }
 
 }
