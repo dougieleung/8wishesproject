@@ -31,6 +31,13 @@
       console.warn("Service Worker not available");
     }
   </script>
+
+<!-- Include FirebaseUI via CDN -->
+<!-- https://firebase.google.com/docs/auth/web/firebaseui -->
+
+<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
 </head>
 
 <body>
@@ -45,6 +52,7 @@
 
 </main>
 <footer>
+
 
 <!-- note: buttons will be replaced by UI assets -->
 <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
@@ -85,6 +93,10 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 
 <script>
     // Your web app's Firebase configuration

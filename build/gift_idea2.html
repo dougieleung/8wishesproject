@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,6 +31,13 @@
       console.warn("Service Worker not available");
     }
   </script>
+
+<!-- Include FirebaseUI via CDN -->
+<!-- https://firebase.google.com/docs/auth/web/firebaseui -->
+
+<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
 </head>
 
 <body>
@@ -37,9 +46,7 @@
   </header>
   <main>
 
-    
 <a href="./gift_idea1.html" class="link link5">Back</a>
-
 
 <h2>Add Gift Idea Page 2 - Take Picture, Access Gallery</h2>
 
@@ -97,6 +104,10 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 
 <script>
     // Your web app's Firebase configuration
