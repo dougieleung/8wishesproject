@@ -14,7 +14,7 @@
     }
   ],
   "scope": "/",
-  "start_url": "/index.html",
+  "start_url": "/pages/index.html",
   "display": "standalone",
   "orientation": "landscape",
   "theme_color": "orange",
