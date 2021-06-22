@@ -2,7 +2,7 @@
   "name": "8wishesproject",
   "version": "1.0.0",
   "description": "PWA for users to capture, store, and organize gift ideas",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

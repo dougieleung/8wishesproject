@@ -1,53 +1,11 @@
-// const gulp        = require('gulp');
-
-// const paths = {
-//   scripts: {
-//     src: './',
-//     dest: './build/'
-//   }
-// };
-
-// async function includeHTML(){
-//     return gulp.src([
-//       '*.html',
-//       '*.css',
-//       'pages/*.html',
-//       'css/*.css',
-//       '!header.html', // ignore
-//       '!footer.html', // ignore
-//       ])
-//       .pipe(fileinclude({
-//         prefix: '@@',
-//         basepath: '@file'
-//       }))
-//       .pipe(gulp.dest(paths.scripts.dest));
-//   }
-  
-//   exports.default = includeHTML;
-
 const gulp = require('gulp');
+const fileinclude = require('gulp-file-include');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const cssnano = require('gulp-cssnano');
-const fileinclude = require('gulp-file-include');
 const jsonminify = require('gulp-jsonminify');
-
-
-
-/*
-  -- TOP LEVEL FUNCTIONS 
-  gulp.task - Define tasks
-  gulp.src - Point to files to use
-  gulp.dest - Points to folder to output
-  gulp.watch - Watch files and folders for changes
-*/
-
-// Logs Message
-gulp.task('message', function(){
-  return console.log('Gulp is running...');
-});
 
 // Copy All HTML files
 gulp.task('createHTML', function includeHTML(){
@@ -61,6 +19,7 @@ gulp.task('createHTML', function includeHTML(){
       .pipe(gulp.dest('dist/pages'));
 });
 
+// Minify CSS
 gulp.task('minifyCSS', function() {
       gulp.src('src/css/*.css')
       .pipe(cssnano())
@@ -108,4 +67,4 @@ gulp.task('copySW', function () {
       .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['message', 'createHTML', 'minifyCSS','optimizeIMG','minifyJS', 'sass', 'concatJS', 'minifyJSON','copySW']);
+gulp.task('default', ['createHTML', 'minifyCSS','optimizeIMG','minifyJS', 'sass', 'concatJS', 'minifyJSON','copySW']);
