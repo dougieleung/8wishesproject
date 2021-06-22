@@ -32,6 +32,8 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const cssnano = require('gulp-cssnano');
 const fileinclude = require('gulp-file-include');
+const jsonminify = require('gulp-jsonminify');
+
 
 
 /*
@@ -48,7 +50,7 @@ gulp.task('message', function(){
 });
 
 // Copy All HTML files
-gulp.task('copyHtml', function includeHTML(){
+gulp.task('createHTML', function includeHTML(){
       return gulp.src(['src/pages/*.html',
            '!src/pages/header.html', // ignore
            '!src/pages/footer.html']) // ignore
@@ -66,14 +68,14 @@ gulp.task('minifyCSS', function() {
 });
 
 // Optimize Images
-gulp.task('imageMin', function(){
+gulp.task('optimizeIMG', function(){
 	gulp.src('src/images/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist/images'));
 });
 
 // Minify JS
-gulp.task('minify', function(){
+gulp.task('minifyJS', function(){
   gulp.src('src/js/*.js')
       .pipe(uglify())
       .pipe(gulp.dest('dist/js'));
@@ -86,25 +88,24 @@ gulp.task('sass', function(){
       .pipe(gulp.dest('dist/css'));
 });
 
-// Scripts
-gulp.task('scripts', function(){
+// Concat Scripts
+gulp.task('concatJS', function(){
   gulp.src('src/js/*.js')
       .pipe(concat('main.js'))
       .pipe(uglify())
       .pipe(gulp.dest('dist/js'));
 });
 
-// gulp.task('minifyJSON', function () {
-//   return gulp.src('src/*.json')
-//       .pipe(jsonminify())
-//       .pipe(gulp.dest('dist'));
-// });
+// Minify JSON
+gulp.task('minifyJSON', function () {
+  return gulp.src('src/*.json')
+      .pipe(jsonminify())
+      .pipe(gulp.dest('dist'));
+});
 
-gulp.task('default', ['message', 'copyHtml', 'minifyCSS', 'imageMin', 'sass', 'scripts']);
+gulp.task('copySW', function () {
+  return gulp.src('src/sw.js')
+      .pipe(gulp.dest('dist'));
+});
 
-// gulp.task('watch', function(){
-//   gulp.watch('src/js/*.js', ['scripts']);
-//   gulp.watch('src/images/*', ['imageMin']);
-//   gulp.watch('src/sass/*.scss', ['sass']);
-//   gulp.watch('src/*.html', ['copyHtml']);
-// });
+gulp.task('default', ['message', 'createHTML', 'minifyCSS','optimizeIMG','minifyJS', 'sass', 'concatJS', 'minifyJSON','copySW']);
