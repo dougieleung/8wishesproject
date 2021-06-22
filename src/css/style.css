@@ -1,0 +1,66 @@
+/* Common Css Styles */
+
+body {
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0 auto;
+  align-items: center;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+
+  /* margin: 0;
+  padding: 0; */
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  line-height: 1.3em;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* bottom navigation bar */
+
+.footer_links {
+  display: none;
+}
+
+.bottom_navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Desktop View - no bottom navigation bar , footer links */
+
+@media only screen and (min-width: 600px) {
+
+  .bottom_navbar {
+    display: none;
+  }
+
+  .footer_links {
+    display: block;
+  }
+
+  .footer_links ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer_links ul a {
+    text-decoration: none;
+    color: black;
+  }
+
+}
