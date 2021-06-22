@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/dougieleung/8wishesproject#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-file-include": "^2.3.0"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
   }
 }

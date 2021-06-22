@@ -30,7 +30,6 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const jsonminify = require('gulp-jsonminify');
 const cssnano = require('gulp-cssnano');
 const fileinclude = require('gulp-file-include');
 
