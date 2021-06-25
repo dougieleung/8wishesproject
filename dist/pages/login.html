@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/main.js" defer></script>
+  <title>8 Wishes</title>
+  <meta name="description" content="An application for searching special unique gifts" />
+  <link rel="manifest" href="../manifest.json" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.ready.then((reg) => {
+        console.log(`Service Worker ready (Scope: ${reg.scope})`);
+      });
+
+      navigator.serviceWorker
+        .register("../sw.js", {
+          scope: "/"
+        })
+        .then(function (reg) {
+          console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+        })
+        .catch(function (error) {
+          console.log(`Service Worker Error (${error})`);
+        });
+    } else {
+      console.warn("Service Worker not available");
+    }
+  </script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+
+<h2>Login</h2>
+
+<!-- Logo and/or background image -->
+<img src="" alt="">
+
+<div class="grid" id="not-logged-in">
+    <h3>Please Log In</h3>
+    <input type="email" placeholder="email" id="email1" required>
+    <input type="password" placeholder="password" id="password1" required>
+    <button id="btn_login" class="button button3">Log in</button> 
+</div>
+<div id="logged-in">
+    <h3>Welcome! You are logged in!</h3>
+    <p id="user_para">Welcome to Firebase login</p>
+    <button id="btn_logout" class="button button5">Logout</button>
+</div>
+
+<span>Not a Member?</span><br>
+<a href="#" class="link link2">Forgot Password?</a>
+<a href="./register.html" class="link link3 ">Sign up Now!</a>
+
+</main>
+<footer>
+
+
+<!-- note: buttons will be replaced by UI assets -->
+<!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
+
+<!-- .navbar_container>nav.bottom_navbar>ul>(li>button#nav_btn$.button.button$)*5 -->
+<div class="navbar_container">
+    <nav class="bottom_navbar">
+        <ul>
+            <li><button id="nav_btn1" class="button button5">Home</button></li>
+            <li><button id="nav_btn2" class="button button6">My List</button></li>
+            <li><button id="nav_btn3" class="button button7">+</button></li>
+            <li><button id="nav_btn4" class="button button8">Friends</button></li>
+            <li><button id="nav_btn5" class="button button9">Store</button></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
+
+<div class="footer_container">
+    <nav class="footer_links">
+        <hr>
+        <ul>
+            <li><a href="./tour.html">Take A Tour</a></li>
+            <li><a href="./privacy.html">Privacy Policies</a></li>
+            <li><a href="./advertise.html">Ads Info</a></li>
+            <li><a href="./business.html">Business</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+
+</footer>
+
+<script type="text/javascript" src="../js/firebase.js"></script>
+
+</body>
+</html>
