@@ -11,6 +11,9 @@
   <title>8 Wishes</title>
   <meta name="description" content="An application for searching special unique gifts" />
   <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then((reg) => {
@@ -51,13 +54,13 @@
   </header>
   <main>
 
-<a href="./gift_idea2.html" class="link link6">Back</a>
+<a href="./gift_idea2.html" class="link link6"><i class="fas fa-chevron-left"></i>Add idea</a>
 
-<h2>Add Gift Idea Page 3 - Location</h2>
 
+<div class="add-idea-2">
 
 <!-- <img src="" alt=""> Display image; if no photo, display default image -->
-
+<img src="https://www.picsum.photos/300" alt="">
 <!-- Display Title of gift idea; pre-populated from previous input text -->
 <p id="displayTitle"></p>
 <p id="displayDesc"></p>
@@ -65,7 +68,9 @@
 <label for="location">Add location(optional)</label>
 <!-- input field for geolocation -->
 
-<button id="btn14" class="button button14" type="submit">Next</button> 
+<button class="button button14" type="submit">Next</button> 
+
+</div>
 
 </main>
 <footer>
