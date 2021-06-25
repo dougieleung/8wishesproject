@@ -20,12 +20,12 @@
 //********** Register page**************************************/
 // declaring variables from HTML elements.
 
-const usernameInput = document.querySelector('#username');
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
-const confirmPassword = document.querySelector('#confirmPassword');
-const registerBtn = document.querySelector('#registerButton');
-const registerForm = document.querySelector('#registerForm');
+let usernameInput = document.querySelector('#username');
+let emailInput = document.querySelector('#email');
+let passwordInput = document.querySelector('#password');
+let confirmPassword = document.querySelector('#confirmPassword');
+let registerBtn = document.querySelector('#registerButton');
+let registerForm = document.querySelector('#registerForm');
 
 // collecting data into Object
 
@@ -67,37 +67,37 @@ class userProfile {
         } else { document.getElementById('outputMessage').innerHTML = "Password should have at least 1 lowercase letter; 1 digit, 1 special character and be minium 8 characters"; 
         }
     }
-}
+};
 
-registerForm.addEventListener('submit', (event) => {
-    event.preventDefault(); //MUST REMOVE THIS FOR DEPLOYMENT!!!!!!!!
-    console.log('Form submitted')
-    let newUser = new userProfile(usernameInput.value, emailInput.value, passwordInput.value, confirmPassword.value);
+// registerBtn.addEventListener('click', () => {
+//     // event.preventDefault(); //MUST REMOVE THIS FOR DEPLOYMENT!!!!!!!!
+//     console.log('Form submitted')
+//     let newUser = new userProfile(usernameInput.value, emailInput.value, passwordInput.value, confirmPassword.value);
 
-    firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
-    .then((user) => {
-        if(user) {
-            alert('Welcome to 8Wishes! You are now a registered user!');
-        }
-    })
-    .catch((error) => {
-      let errorMessage = error.message;
+//     firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
+//     .then((user) => {
+//         if(user) {
+//             alert('Welcome to 8Wishes! You are now a registered user!');
+//         }
+//     })
+//     .catch((error) => {
+//       let errorMessage = error.message;
 
-          console.log('Error registering, ', errorMessage);
-          alert(errorMessage);
+//           console.log('Error registering, ', errorMessage);
+//           alert(errorMessage);
     
-    });
-})
+//     });
+// })
 
 //**************************************************************/
 // Log/Sign In and Sign Out
 
     //Get the currently signed in user (whether logged in or not)
     firebase.auth().onAuthStateChanged((user) => {
-        let notLoggedIn = document.getElementById('not-logged-in');
-        let loggedIn = document.getElementById('logged-in');
+        var notLoggedIn = document.getElementById('not-logged-in');
+        var loggedIn = document.getElementById('logged-in');
         if (user) {
-            loggedIn.style.display = 'block';
+            loggedIn.style.display = 'flex';
             notLoggedIn.style.display = 'none';
 
         // Get User Profile
@@ -111,13 +111,13 @@ registerForm.addEventListener('submit', (event) => {
 
             } else {
                 loggedIn.style.display = 'none';
-                notLoggedIn.style.display = 'block';
+                notLoggedIn.style.display = 'flex';
             }
     });
 
     // Logging in
 
-    document.getElementById("btn_login").addEventListener("click", () => {
+    document.getElementById("btn_login").addEventListener('click', () => {
         let email = document.getElementById('email1').value;
         let password = document.getElementById('password1').value;
         firebase.auth().signInWithEmailAndPassword(email, password)
@@ -137,7 +137,7 @@ registerForm.addEventListener('submit', (event) => {
 
     // Logging out
 
-    document.getElementById("btn_logout").addEventListener("click", () => {
+    document.getElementById("btn_logout").addEventListener('click', () => {
         firebase.auth().signOut().then(() => {
             // Sign-out successful.
           }).catch((error) => {
