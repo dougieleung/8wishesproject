@@ -5,8 +5,8 @@ body {
   /* display: flex; */
   /* flex-direction: column; */
   margin: 0 auto;
-  align-items: center;
-  background: linear-gradient(to top left, #28b487, #7dd56f);
+  /* align-items: center; */
+  background: linear-gradient(to top left, rgb(119, 185, 238), white);
 
   /* margin: 0;
   padding: 0; */
@@ -35,9 +35,51 @@ img {
 .bottom_navbar ul {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   list-style-type: none;
   padding: 0;
 }
+
+
+.button7 {
+  padding: 6px 10px 6px 10px;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+/* login */
+
+.login, .logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-image: linear-gradient(to bottom right,rgb(93, 65, 119),white);
+  width: 250px;
+  margin: 5% auto;
+  padding: 10%;
+}
+
+.login input, .login button {
+  flex: 1;
+  width: 180px;
+  margin: 2%;
+  justify-content: center;
+}
+
+.login button {
+  width: 190px;
+  border-style: outset;
+  background-color: navy;
+  color: white;
+
+}
+
+#logged-in, #logged-out {
+  display: none;
+}
+
 
 /* Desktop View - no bottom navigation bar , footer links */
 
