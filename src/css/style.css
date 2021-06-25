@@ -214,3 +214,44 @@ textarea[name="description"] {
 .add-idea-2 label {
   margin-bottom: 35vh;
 }
+
+/* Add idea 3*/
+
+.add-idea-3 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+}
+
+.idea-window {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 10% 0;;
+}
+
+
+.button15, .button16 {
+  width: 100%;
+  border: none;
+  padding: 3% 8%;
+}
+
+.button16 {
+  background-color:papayawhip;
+}
+
+.button17 {
+  border: none;
+  border-radius: 20px;
+  padding: 1% 8%;
+}
+
+.button15 a, .link7 {
+  text-decoration: none;
+  color: black;
+}
+
+
