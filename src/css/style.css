@@ -234,10 +234,12 @@ textarea[name="description"] {
 
   .window-description {
    margin: 2%; 
+   width: 60vw;
 }
 
 .idea-window img {
   margin: 2%;
+  width: 30vw;
 }
 
 .button15, .button16 {
@@ -256,9 +258,35 @@ textarea[name="description"] {
   padding: 1% 8%;
 }
 
+.button17 a {
+  text-decoration: none;
+  color: black;
+}
+
 .button15 a, .link7 {
   text-decoration: none;
   color: black;
 }
 
+/* Add gift idea4 */
 
+.add-idea-4 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  /* padding-top: 35vh;
+  padding-bottom: 35vh; */
+}
+
+.add-idea-4 h2 {
+  font-size: 2rem;
+  font-family: Handlee;
+}
+
+.button18 {
+  border: none;
+  border-radius: 20px;
+  padding: 1% 8%;
+}
