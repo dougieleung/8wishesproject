@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Handlee:regular);
+
 /* Common Css Styles */
 
 body {
@@ -10,6 +12,11 @@ body {
 
   /* margin: 0;
   padding: 0; */
+}
+
+.link {
+  text-decoration: none;
+  color: black;
 }
 
 h1 {
@@ -40,14 +47,40 @@ img {
   padding: 0;
 }
 
-
 .button7 {
-  padding: 6px 10px 6px 10px;
+  padding: 6px 15px 6px 15px;
   border-radius: 50%;
+  border-style: outset;
   font-size: 2rem;
 }
 
-/* login */
+/* Desktop View - no bottom navigation bar , footer links */
+
+@media only screen and (min-width: 600px) {
+
+  .bottom_navbar {
+    display: none;
+  }
+
+  .footer_links {
+    display: block;
+  }
+
+  .footer_links ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer_links ul a {
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+/* login page */
 
 .login, .logout {
   display: flex;
@@ -80,29 +113,180 @@ img {
   display: none;
 }
 
+/* main home page - add gift ideas */
 
-/* Desktop View - no bottom navigation bar , footer links */
+.main-home-ideas {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  padding-top: 35vh;
+  padding-bottom: 35vh;
+}
 
-@media only screen and (min-width: 600px) {
+.main-home-ideas h2 {
+  font-size: 2rem;
+font-family: Handlee;
+}
 
-  .bottom_navbar {
-    display: none;
-  }
+.button10 {
+  border: none;
+  border-radius: 20px;
+  padding: 2% 5%;
+}
 
-  .footer_links {
-    display: block;
-  }
+.button10 a {
+  text-decoration: none;
+  color: black;
+}
 
-  .footer_links ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding: 0;
-  }
+/* Add idea 1*/
 
-  .footer_links ul a {
-    text-decoration: none;
-    color: black;
-  }
+.add-idea-1 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+}
 
+.button11, .button12 {
+  border: none;
+  font-size: 2rem;
+  background-color: none;
+  color: none;
+  margin-top: 8rem;
+  margin-bottom: 14rem;
+}
+
+.button13 {
+  border: none;
+  border-radius: 20px;
+  padding: 1% 8%;
+}
+
+.button13 a, .link5 {
+  text-decoration: none;
+  color: black;
+}
+
+.fas {
+  margin-right: 5%;
+}
+
+input[name="title"] {
+  background-color: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 60vw;
+  margin-top: 4rem;
+}
+
+textarea[name="description"] {
+  background-color: none;
+  border: none;
+  height: 40vw;
+  width: 60vw;
+}
+
+/* Add idea 2*/
+
+.add-idea-2 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+}
+
+.button14 {
+  border: none;
+  border-radius: 20px;
+  padding: 1% 8%;
+}
+
+.button14 a, .link6 {
+  text-decoration: none;
+  color: black;
+}
+
+.add-idea-2 label {
+  margin-bottom: 35vh;
+}
+
+/* Add idea 3*/
+
+.add-idea-3 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+}
+
+.idea-window {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 10% 0;;
+}
+
+  .window-description {
+   margin: 2%; 
+   width: 60vw;
+}
+
+.idea-window img {
+  margin: 2%;
+  width: 30vw;
+}
+
+.button15, .button16 {
+  width: 100%;
+  border: none;
+  padding: 3% 8%;
+}
+
+.button16 {
+  background-color:papayawhip;
+}
+
+.button17 {
+  border: none;
+  border-radius: 20px;
+  padding: 1% 8%;
+}
+
+.button17 a {
+  text-decoration: none;
+  color: black;
+}
+
+.button15 a, .link7 {
+  text-decoration: none;
+  color: black;
+}
+
+/* Add gift idea4 */
+
+.add-idea-4 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  /* padding-top: 35vh;
+  padding-bottom: 35vh; */
+}
+
+.add-idea-4 h2 {
+  font-size: 2rem;
+  font-family: Handlee;
+}
+
+.button18 {
+  border: none;
+  border-radius: 20px;
+  padding: 1% 8%;
 }

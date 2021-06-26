@@ -11,6 +11,9 @@
   <title>8 Wishes</title>
   <meta name="description" content="An application for searching special unique gifts" />
   <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then((reg) => {
@@ -51,21 +54,27 @@
   </header>
   <main>
 
-<a href="./gift_idea2.html" class="link link6">Back</a>
-
-<h2>Add Gift Idea Page 3 - Location</h2>
+<a href="./gift_idea2.html" class="link link7"><i class="fas fa-chevron-left"></i>Add idea</a>
 
 
-<!-- <img src="" alt=""> Display image; if no photo, display default image -->
+<div class="add-idea-3">
 
-<!-- Display Title of gift idea; pre-populated from previous input text -->
-<p id="displayTitle"></p>
-<p id="displayDesc"></p>
+<div class="idea-window">
+    <img src="https://www.picsum.photos/100" alt="">
+    <div class="window-description"></div>
+</div>
 
-<label for="location">Add location(optional)</label>
+<button id="addtowish" class="button button15">Add to wishlist</button>
+<button id="addtofriend" class="button button16">Add to friend's</button>
+
+<!-- Generated from list from Firestore -->
+<div id="listoffriends"></div>
+
 <!-- input field for geolocation -->
 
-<button id="btn14" class="button button14" type="submit">Next</button> 
+<button class="button button17" type="submit"><a href="gift_idea4.html">Next</a></button> 
+
+</div>
 
 </main>
 <footer>
@@ -107,4 +116,4 @@
 <script type="text/javascript" src="../js/firebase.js"></script>
 
 </body>
-</html> 
+</html>
