@@ -69,25 +69,28 @@ class userProfile {
     }
 };
 
-// registerBtn.addEventListener('click', () => {
-//     // event.preventDefault(); //MUST REMOVE THIS FOR DEPLOYMENT!!!!!!!!
-//     console.log('Form submitted')
-//     let newUser = new userProfile(usernameInput.value, emailInput.value, passwordInput.value, confirmPassword.value);
 
-//     firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
-//     .then((user) => {
-//         if(user) {
-//             alert('Welcome to 8Wishes! You are now a registered user!');
-//         }
-//     })
-//     .catch((error) => {
-//       let errorMessage = error.message;
 
-//           console.log('Error registering, ', errorMessage);
-//           alert(errorMessage);
+registerBtn.addEventListener('submit', (event) => {
+    event.preventDefault(); //MUST REMOVE THIS FOR DEPLOYMENT!!!!!!!!
+    console.log('Form submitted')
+    let newUser = new userProfile(usernameInput.value, emailInput.value, passwordInput.value, confirmPassword.value);
+
+
+    firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
+    .then((user) => {
+        if(user) {
+            alert('Welcome to 8Wishes! You are now a registered user!');
+        }
+    })
+    .catch((error) => {
+      let errorMessage = error.message;
+
+          console.log('Error registering, ', errorMessage);
+          alert(errorMessage);
     
-//     });
-// })
+    });
+});
 
 //**************************************************************/
 // Log/Sign In and Sign Out
