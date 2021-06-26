@@ -5,7 +5,6 @@
 
 // friends list - need to add and retrieve this from Firestore; for now, we're going to use local static data
 
-    let friendsArray = [];
 
     // Structure of gift idea object //
 
@@ -26,9 +25,17 @@
         }
     };
 
-    friendsArray.push(friend);
+    // List of friends - populated from database.
 
+    let friendsArray = ['Elnaz','Yulia','Amir','Rachel','Harman'];
 
+    for(let i=0;i < friendsArray.length;i++) {
+        const friends = document.getElementById('friends1');
+        const l1 = document.createElement("li");
+        l1.innerText = friendsArray[i];
+        friends.append(l1);
+    };
+    
     // populate idea-window on Gift Idea 3 frame
     
         const div = document.querySelector('.window-description');

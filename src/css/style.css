@@ -4,14 +4,8 @@
 
 body {
   height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
   margin: 0 auto;
-  /* align-items: center; */
-  background: linear-gradient(to top left, rgb(119, 185, 238), white);
-
-  /* margin: 0;
-  padding: 0; */
+  background: no-repeat linear-gradient(to top left, rgb(119, 185, 238), white);
 }
 
 .link {
@@ -54,6 +48,25 @@ img {
   font-size: 2rem;
 }
 
+.button5, .button6, .button8, .button9 {
+  padding: 10px;
+  border-radius: 50%;
+  border-style: outset;
+  font-size: 0.5rem;
+}
+
+.button5:hover, .button6:hover, .button7:hover, .button8:hover, .button9:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.bottom_navbar li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 /* Desktop View - no bottom navigation bar , footer links */
 
 @media only screen and (min-width: 600px) {
@@ -68,7 +81,7 @@ img {
 
   .footer_links ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style-type: none;
     padding: 0;
   }
@@ -87,12 +100,15 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
-  background-image: linear-gradient(to bottom right,rgb(93, 65, 119),white);
+  border: 2px outset rgb(65, 49, 80);
+  background-image: linear-gradient(to bottom right,rgb(105, 81, 128),white);
+  height: 250px;
   width: 250px;
   margin: 5% auto;
+  margin-bottom: 70%;
   padding: 10%;
 }
+
 
 .login input, .login button {
   flex: 1;
@@ -101,10 +117,10 @@ img {
   justify-content: center;
 }
 
-.login button {
+.button3, .button4 {
   width: 190px;
   border-style: outset;
-  background-color: navy;
+  background-color: rgb(65, 49, 80);
   color: white;
 
 }
@@ -120,9 +136,7 @@ img {
   flex-direction: column;  
   justify-content: center;
   align-items: center;
-  margin: 5% auto;
-  padding-top: 35vh;
-  padding-bottom: 35vh;
+  margin: 60% auto;
 }
 
 .main-home-ideas h2 {
@@ -156,8 +170,8 @@ font-family: Handlee;
   font-size: 2rem;
   background-color: none;
   color: none;
-  margin-top: 8rem;
-  margin-bottom: 14rem;
+  margin-top: 90%;
+  margin-bottom: 250%;
 }
 
 .button13 {
@@ -172,10 +186,10 @@ font-family: Handlee;
 }
 
 .fas {
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
-input[name="title"] {
+.add-idea-1 input[name="title"] {
   background-color: none;
   border: none;
   border-bottom: 1px solid #000;
@@ -212,33 +226,33 @@ textarea[name="description"] {
 }
 
 .add-idea-2 label {
-  margin-bottom: 35vh;
+  margin-bottom: 33vh;
 }
 
 /* Add idea 3*/
 
-.add-idea-3 {
+.add-idea-3, .listoffriends {
   display: flex;
   flex-direction: column;  
   justify-content: center;
   align-items: center;
-  margin: 5% auto;
+  margin: 0;
 }
 
 .idea-window {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin: 10% 0;;
+  margin: 4% 0;
 }
 
   .window-description {
    margin: 2%; 
-   width: 60vw;
+   width: 50vw;
 }
 
 .idea-window img {
-  margin: 2%;
+  margin: 0;
   width: 30vw;
 }
 
@@ -246,16 +260,14 @@ textarea[name="description"] {
   width: 100%;
   border: none;
   padding: 3% 8%;
-}
-
-.button16 {
-  background-color:papayawhip;
+  border: 1px solid gray;
 }
 
 .button17 {
   border: none;
   border-radius: 20px;
   padding: 1% 8%;
+  margin-top: 3%;
 }
 
 .button17 a {
@@ -268,6 +280,19 @@ textarea[name="description"] {
   color: black;
 }
 
+.listoffriends li {
+  list-style-type: none;
+  text-align: center;
+  padding: 5% 10%;
+  width: 70vw;
+  border: 1px solid lightblue;
+  background-color: rgba(65, 106, 119,0.3);
+}
+
+.listoffriends {
+  margin: 5% 0;
+}
+
 /* Add gift idea4 */
 
 .add-idea-4 {
@@ -276,17 +301,26 @@ textarea[name="description"] {
   justify-content: center;
   align-items: center;
   margin: 5% auto;
-  /* padding-top: 35vh;
-  padding-bottom: 35vh; */
 }
 
 .add-idea-4 h2 {
   font-size: 2rem;
   font-family: Handlee;
+  margin-bottom: 10vh;
 }
 
 .button18 {
   border: none;
   border-radius: 20px;
   padding: 1% 8%;
+  margin-top: 50vh;
+}
+
+.button18 a {
+  text-decoration: none;
+  color: black;
+}
+
+input[type="text"], input[type="date"] {
+  width: 50vw;
 }
