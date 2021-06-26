@@ -232,6 +232,13 @@ textarea[name="description"] {
   margin: 10% 0;;
 }
 
+  .window-description {
+   margin: 2%; 
+}
+
+.idea-window img {
+  margin: 2%;
+}
 
 .button15, .button16 {
   width: 100%;

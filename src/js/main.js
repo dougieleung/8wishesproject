@@ -10,8 +10,8 @@
     // Structure of gift idea object //
 
     let gift_idea = {
-        title: "Cultural Ornament",
-        description: "19th century teaset",
+        title: "19th Century Chinese Teaset",
+        description: "The accepted history[1] of the tea set begins in China during the Han Dynasty (206–220 BC). At this time, tea ware was made of porcelain and consisted of two styles: a northern white porcelain and a southern light blue porcelain",
         image: null,
         location: null
     }
