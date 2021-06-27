@@ -11,6 +11,9 @@
   <title>8 Wishes</title>
   <meta name="description" content="An application for searching special unique gifts" />
   <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then((reg) => {
@@ -18,7 +21,7 @@
       });
 
       navigator.serviceWorker
-        .register("../sw.js", {
+        .register("./sw.js", {
           scope: "/"
         })
         .then(function (reg) {
@@ -51,20 +54,23 @@
   </header>
   <main>
 
-<a href="./gift_idea1.html" class="link link5">Back</a>
-
-<h2>Add Gift Idea Page 2 - Take Picture, Access Gallery</h2>
-
-<form id="ideaForm" method="post"></form>
-<input type="text" name="title" id="gift_title" placeholder="Title" required>
-<input type="text" name="description" id="gift_description" placeholder="Description" required>
+<a href="./gift_idea1.html" class="link link6"><i class="fas fa-chevron-left"></i>Add idea</a>
 
 
-<!-- The camera and gallery buttons will be replaced by UI assets -->
-<button id="camera_btn11" class="button button11" type="image">Camera</button>
-<button id="gallery_btn12" class="button button12" type="image">Gallery</button>
-<button id="btn13" class="button button13" type="submit">Next</button> 
-</form>
+<div class="add-idea-2">
+
+<!-- <img src="" alt=""> Display image; if no photo, display default image -->
+<img src="https://www.picsum.photos/300" alt="">
+<!-- Display Title of gift idea; pre-populated from previous input text -->
+<p id="displayTitle"></p>
+<p id="displayDesc"></p>
+
+<label for="location">Add location(optional)</label>
+<!-- input field for geolocation -->
+
+<button class="button button16" type="submit"><a href="gift_idea3.html">Next</a></button> 
+
+</div>
 
 </main>
 <footer>
@@ -77,11 +83,11 @@
 <div class="navbar_container">
     <nav class="bottom_navbar">
         <ul>
-            <li><button id="nav_btn1" class="button button5">Home</button></li>
-            <li><button id="nav_btn2" class="button button6">My List</button></li>
-            <li><button id="nav_btn3" class="button button7">+</button></li>
-            <li><button id="nav_btn4" class="button button8">Friends</button></li>
-            <li><button id="nav_btn5" class="button button9">Store</button></li>
+            <li><a href="../pages/home.html"><button id="nav_btn1" class="button button7"></button><label>Home</label></a></li>
+            <li><button id="nav_btn2" class="button button8"></button><label>My List</label></li>
+            <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button9">+</button></a></li>
+            <li><button id="nav_btn4" class="button button10"></button><label>Friends</label></li>
+            <li><button id="nav_btn5" class="button button11"></button><label>Stores</label></li>
         </ul>
     </nav>
 </div>
@@ -106,4 +112,4 @@
 <script type="text/javascript" src="../js/firebase.js"></script>
 
 </body>
-</html>
+</html> 

@@ -1,19 +1,25 @@
 @@include('./header.html')
 
-<a href="./gift_idea2.html" class="link link6">Back</a>
-
-<h2>Add Gift Idea Page 3 - Location</h2>
+<a href="./gift_idea2.html" class="link link7"><i class="fas fa-chevron-left"></i>back</a>
 
 
-<!-- <img src="" alt=""> Display image; if no photo, display default image -->
+<div class="add-idea-3">
 
-<!-- Display Title of gift idea; pre-populated from previous input text -->
-<p id="displayTitle"></p>
-<p id="displayDesc"></p>
+<div class="idea-window">
+    <img src="https://www.picsum.photos/100" alt="">
+    <div class="window-description"></div>
+</div>
 
-<label for="location">Add location(optional)</label>
+<button id="addtowish" class="button button17">Add to wishlist</button>
+<button id="addtofriend" class="button button18">Add to friend's</button>
+
+<!-- Generated from list from Firestore -->
+<div class="listoffriends" id="friends1"></div>
+
 <!-- input field for geolocation -->
 
-<button id="btn14" class="button button14" type="submit">Next</button> 
+<button class="button button19" type="submit"><a href="gift_idea4.html">Next</a></button> 
 
-@@include('./footer.html') 
+</div>
+
+@@include('./footer.html')

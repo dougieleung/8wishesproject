@@ -11,6 +11,9 @@
   <title>8 Wishes</title>
   <meta name="description" content="An application for searching special unique gifts" />
   <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then((reg) => {
@@ -18,7 +21,7 @@
       });
 
       navigator.serviceWorker
-        .register("../sw.js", {
+        .register("./sw.js", {
           scope: "/"
         })
         .then(function (reg) {
@@ -66,9 +69,8 @@
 <div class="logout" id="logged-in">
     <h3>Welcome! You are logged in!</h3>
     <p id="user_para">Welcome to Firebase login</p>
-    <button id="btn_logout" class="button button5">Logout</button>
+    <button id="btn_logout" class="button button4">Logout</button>
 </div>
-
 
 
 </main>
@@ -82,11 +84,11 @@
 <div class="navbar_container">
     <nav class="bottom_navbar">
         <ul>
-            <li><button id="nav_btn1" class="button button5">Home</button></li>
-            <li><button id="nav_btn2" class="button button6">My List</button></li>
-            <li><button id="nav_btn3" class="button button7">+</button></li>
-            <li><button id="nav_btn4" class="button button8">Friends</button></li>
-            <li><button id="nav_btn5" class="button button9">Store</button></li>
+            <li><a href="../pages/home.html"><button id="nav_btn1" class="button button7"></button><label>Home</label></a></li>
+            <li><button id="nav_btn2" class="button button8"></button><label>My List</label></li>
+            <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button9">+</button></a></li>
+            <li><button id="nav_btn4" class="button button10"></button><label>Friends</label></li>
+            <li><button id="nav_btn5" class="button button11"></button><label>Stores</label></li>
         </ul>
     </nav>
 </div>
