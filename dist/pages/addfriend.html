@@ -37,6 +37,34 @@
 
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            height: 81.2%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main h2 {
+            font-family: cursive;
+        }
+
+        main button {
+            border-radius: 20px;
+            padding: 10px 20px;
+            border-color: #fff;
+        }
+
+        main button a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 
 </head>
 
@@ -45,7 +73,7 @@
         <h2>Friends</h2>
     </header>
     <main>
-        <p>Your friend list is empty.</p>
+        <h2>Your friend list is empty.</h2>
         <button class="add-friend-btn"><a href="addfriend1.html">Add a friend</a></button>
     </main>
     <footer>
@@ -58,11 +86,14 @@
         <div class="navbar_container">
             <nav class="bottom_navbar">
                 <ul>
-                    <li><button id="nav_btn1" class="button button5">Home</button></li>
-                    <li><button id="nav_btn2" class="button button6">My List</button></li>
-                    <li><button id="nav_btn3" class="button button7">+</button></li>
-                    <li><button id="nav_btn4" class="button button8">Friends</button></li>
-                    <li><button id="nav_btn5" class="button button9">Store</button></li>
+                    <li><a href="../pages/home.html"><button id="nav_btn1"
+                                class="button button7"></button><label>Home</label></a></li>
+                    <li><button id="nav_btn2" class="button button8"></button><label>My List</label></li>
+                    <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button9">+</button></a>
+                    </li>
+                    <li><a href="../pages/addfriend.html"><button id="nav_btn4"
+                                class="button button10"></button><label>Friends</label></a></li>
+                    <li><button id="nav_btn5" class="button button11"></button><label>Stores</label></li>
                 </ul>
             </nav>
         </div>
@@ -94,6 +125,7 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
 
     <script>
         // Your web app's Firebase configuration

@@ -37,6 +37,48 @@
 
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header i {
+            margin: 10px;
+        }
+
+        main {
+            height: 85%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            line-height: 3;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main input {
+            padding: 6px;
+            margin: 6px;
+            border-radius: 20px;
+            border-color: #fff;
+        }
+
+        main button {
+            margin-top: 2rem;
+            padding: 5px 20px;
+            border-radius: 20px;
+            background-color: blueviolet;
+            border-color: blueviolet;
+        }
+
+        main button a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
 
 
 
@@ -44,11 +86,12 @@
 
 <body>
     <header>
-        <a href="addfriend.html">Back</a>
-        <h2>Add a friend</h2>
+        <a href="addfriend.html"><i class="fas fa-chevron-left"></i></a>
+
     </header>
     <main>
-        <div>Add profile pic</div>
+        <h2>Add a friend</h2>
+        <div class="profile-pic"><a href="#">Add profile pic</a></div>
 
         <label for="name">Friend name</label>
         <input type="text">
@@ -68,11 +111,14 @@
         <div class="navbar_container">
             <nav class="bottom_navbar">
                 <ul>
-                    <li><button id="nav_btn1" class="button button5">Home</button></li>
-                    <li><button id="nav_btn2" class="button button6">My List</button></li>
-                    <li><button id="nav_btn3" class="button button7">+</button></li>
-                    <li><button id="nav_btn4" class="button button8">Friends</button></li>
-                    <li><button id="nav_btn5" class="button button9">Store</button></li>
+                    <li><a href="../pages/home.html"><button id="nav_btn1"
+                                class="button button7"></button><label>Home</label></a></li>
+                    <li><button id="nav_btn2" class="button button8"></button><label>My List</label></li>
+                    <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button9">+</button></a>
+                    </li>
+                    <li><a href="../pages/addfriend.html"><button id="nav_btn4"
+                                class="button button10"></button><label>Friends</label></a></li>
+                    <li><button id="nav_btn5" class="button button11"></button><label>Stores</label></li>
                 </ul>
             </nav>
         </div>
