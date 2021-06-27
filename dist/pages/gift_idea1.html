@@ -21,7 +21,7 @@
       });
 
       navigator.serviceWorker
-        .register("../sw.js", {
+        .register("./sw.js", {
           scope: "/"
         })
         .then(function (reg) {
@@ -65,10 +65,10 @@
 
 <!-- The camera and gallery buttons will be replaced by UI assets -->
 <div class="images">
-<button id="camera_btn11" class="button button11" type="image"><i class="fas fa-camera"></i></button>
-<button id="gallery_btn12" class="button button12" type="image"><i class="far fa-image"></i></button>
+<button id="camera_btn11" class="button button13" type="image"><i class="fas fa-camera"></i></button>
+<button id="gallery_btn12" class="button button14" type="image"><i class="far fa-image"></i></button>
 </div>
-<button id="btn13" class="button button13" type="submit"><a href="gift_idea2.html">Next</a></button> 
+<button id="btn13" class="button button15" type="submit"><a href="gift_idea2.html">Next</a></button> 
 </form>
 
 </div>
@@ -84,11 +84,11 @@
 <div class="navbar_container">
     <nav class="bottom_navbar">
         <ul>
-            <li><button id="nav_btn1" class="button button5"></button><label>Home</label></li>
-            <li><button id="nav_btn2" class="button button6"></button><label>My List</label></li>
-            <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button7">+</button></a></li>
-            <li><button id="nav_btn4" class="button button8"></button><label>Friends</label></li>
-            <li><button id="nav_btn5" class="button button9"></button><label>Stores</label></li>
+            <li><a href="../pages/home.html"><button id="nav_btn1" class="button button7"></button><label>Home</label></a></li>
+            <li><button id="nav_btn2" class="button button8"></button><label>My List</label></li>
+            <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button9">+</button></a></li>
+            <li><button id="nav_btn4" class="button button10"></button><label>Friends</label></li>
+            <li><button id="nav_btn5" class="button button11"></button><label>Stores</label></li>
         </ul>
     </nav>
 </div>

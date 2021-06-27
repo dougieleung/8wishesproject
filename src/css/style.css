@@ -41,26 +41,38 @@ img {
   padding: 0;
 }
 
-.button7 {
+.button9 {
   padding: 6px 15px 6px 15px;
   border-radius: 50%;
   border-style: outset;
+  border-color: white;
   font-size: 2rem;
 }
 
-.button5, .button6, .button8, .button9 {
+.button7, .button8, .button10, .button11 {
   padding: 10px;
   border-radius: 50%;
   border-style: outset;
+  border-color: white;
   font-size: 0.5rem;
 }
 
-.button5:hover, .button6:hover, .button7:hover, .button8:hover, .button9:hover {
+.button7:hover, .button8:hover, .button9:hover, .button10:hover, .button11:hover {
   background-color: orangered;
   color: white;
 }
 
 .bottom_navbar li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bottom_navbar li a {
+  text-decoration: none;
+  border-color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -144,13 +156,13 @@ img {
 font-family: Handlee;
 }
 
-.button10 {
+.button12 {
   border: none;
   border-radius: 20px;
   padding: 2% 5%;
 }
 
-.button10 a {
+.button12 a {
   text-decoration: none;
   color: black;
 }
@@ -165,7 +177,7 @@ font-family: Handlee;
   margin: 5% auto;
 }
 
-.button11, .button12 {
+.button13, .button14 {
   border: none;
   font-size: 2rem;
   background-color: none;
@@ -174,13 +186,13 @@ font-family: Handlee;
   margin-bottom: 250%;
 }
 
-.button13 {
+.button15 {
   border: none;
   border-radius: 20px;
   padding: 1% 8%;
 }
 
-.button13 a, .link5 {
+.button15 a, .link5 {
   text-decoration: none;
   color: black;
 }
@@ -214,13 +226,13 @@ textarea[name="description"] {
   margin: 5% auto;
 }
 
-.button14 {
+.button16 {
   border: none;
   border-radius: 20px;
   padding: 1% 8%;
 }
 
-.button14 a, .link6 {
+.button16 a, .link6 {
   text-decoration: none;
   color: black;
 }
@@ -256,26 +268,26 @@ textarea[name="description"] {
   width: 30vw;
 }
 
-.button15, .button16 {
+.button17, .button18 {
   width: 100%;
   border: none;
   padding: 3% 8%;
   border: 1px solid gray;
 }
 
-.button17 {
+.button19 {
   border: none;
   border-radius: 20px;
   padding: 1% 8%;
   margin-top: 3%;
 }
 
-.button17 a {
+.button19 a {
   text-decoration: none;
   color: black;
 }
 
-.button15 a, .link7 {
+.button17 a, .link7 {
   text-decoration: none;
   color: black;
 }
@@ -309,18 +321,38 @@ textarea[name="description"] {
   margin-bottom: 10vh;
 }
 
-.button18 {
+.button20 {
   border: none;
   border-radius: 20px;
   padding: 1% 8%;
   margin-top: 50vh;
 }
 
-.button18 a {
+.button20 a {
   text-decoration: none;
   color: black;
 }
 
 input[type="text"], input[type="date"] {
   width: 50vw;
+}
+
+/* Add gift idea5 */
+
+.add-idea-5 {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+}
+
+.add-idea-5 h2 {
+  font-size: 2rem;
+  font-family: Handlee;
+}
+
+.button21 {
+  margin-top: 30%;
+  margin-bottom: 85%;
 }
