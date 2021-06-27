@@ -21,7 +21,7 @@
       });
 
       navigator.serviceWorker
-        .register("../sw.js", {
+        .register("./sw.js", {
           scope: "/"
         })
         .then(function (reg) {
@@ -56,14 +56,14 @@
 
 <a href="./gift_idea4.html" class="link link9"><i class="fas fa-chevron-left"></i>Back</a>
 
-<div class="add-idea-4">
+<div class="add-idea-5">
 
 <h2>Your idea is added!</h2>
 
 <div class="idea-card"></div>
 <!-- Card to show image, title, description, friend, and event, date -->
 
-<button class="button button19" type="submit">Done</button> 
+<button class="button button21" type="submit">Done</button> 
 
 </div>
 
@@ -78,11 +78,11 @@
 <div class="navbar_container">
     <nav class="bottom_navbar">
         <ul>
-            <li><button id="nav_btn1" class="button button5"></button><label>Home</label></li>
-            <li><button id="nav_btn2" class="button button6"></button><label>My List</label></li>
-            <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button7">+</button></a></li>
-            <li><button id="nav_btn4" class="button button8"></button><label>Friends</label></li>
-            <li><button id="nav_btn5" class="button button9"></button><label>Stores</label></li>
+            <li><a href="../pages/home.html"><button id="nav_btn1" class="button button7"></button><label>Home</label></a></li>
+            <li><button id="nav_btn2" class="button button8"></button><label>My List</label></li>
+            <li><a href="../pages/gift_idea1.html"><button id="nav_btn3" class="button button9">+</button></a></li>
+            <li><button id="nav_btn4" class="button button10"></button><label>Friends</label></li>
+            <li><button id="nav_btn5" class="button button11"></button><label>Stores</label></li>
         </ul>
     </nav>
 </div>

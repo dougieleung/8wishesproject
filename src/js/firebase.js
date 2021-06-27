@@ -69,8 +69,6 @@
 //     }
 // };
 
-
-
 // registerBtn.addEventListener('submit', (event) => {
 //     event.preventDefault(); //MUST REMOVE THIS FOR DEPLOYMENT!!!!!!!!
 //     console.log('Form submitted')
