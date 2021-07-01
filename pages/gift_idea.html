@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
 
     <title>8 Wishes</title>
     <meta name="description" content="An application for searching special unique gifts" />
@@ -47,6 +47,7 @@
     <script src="../js/firebase.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/addgifts.js" defer></script>
+    <script src="../js/addevents.js" defer></script>
 </head>
 
 <body>
@@ -129,7 +130,7 @@
                     <div class="window-description"></div>
                 </div>
 
-                <button id="addtowish" class="button button17">Add to wishlist</button>
+                <button id="addtowish" class="button button17"><a href="wishlist.html">to wishlist</a></button>
                 <button id="addtofriend" class="button button18">Add to friend's</button>
 
                 <!-- Generated from list from Firestore -->
@@ -153,10 +154,10 @@
                 <h2>Choose an event for your idea</h2>
 
                 <label for="">Event (optional)</label><br>
-                <input type="text" placeholder="name of event"><br>
-                <input type="date" id="due" name="due" />
+                <input type="text" id="eventname" placeholder="name of event"><br>
+                <input type="date" id="eventdate" name="due" />
 
-                <button class="button button20" type="submit"><a href="gift_idea5.html">Next</a></button>
+                <button id="addEventBtn" class="button button20" type="submit">Next</button>
 
             </div>
         </section>

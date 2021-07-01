@@ -1,7 +1,7 @@
 "use strict";
 // this will throw errors when any syntax is missed or wrong, has GLOBAL SCOPE
 
-console.log('CONNECTED TO  firebase.JS FILE!!!!')
+console.log('FIREBASE.JS CONNECTED')
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -16,6 +16,8 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
 
 // Declare Firebase DB
 const db = firebase.firestore();
