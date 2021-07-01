@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>8 Wishes</title>
+    <meta name="description" content="An application for searching special unique gifts" />
+    <link rel="manifest" href="../manifest.json" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.ready.then((reg) => {
+                console.log(`Service Worker ready (Scope: ${reg.scope})`);
+            });
+
+            navigator.serviceWorker
+                .register("./sw.js", {
+                    scope: "/"
+                })
+                .then(function (reg) {
+                    console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+                })
+                .catch(function (error) {
+                    console.log(`Service Worker Error (${error})`);
+                });
+        } else {
+            console.warn("Service Worker not available");
+        }
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
+
+    <script src="../js/firebase.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/addgifts.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!--***********************Home Page Section ***************************** -->
+
+        <section class="" id="giftIdeaHomePage">
+
+            <a href="#" class="link link4">All ideas</a>
+
+            <div class="main-home-ideas">
+
+
+                <h2>Add your first gift idea</h2>
+
+                <button class="button button12"><a href="gift_idea1.html">Add a new idea</a></button>
+            </div>
+        </section>
+        <!-- /#giftIdeaHomePage -->
+
+        <section id="giftIdeaAdd">
+            <a href="./gift_home_1.html" class="link link5"><i class="fas fa-chevron-left"></i>Back</a>
+
+            <div class="add-idea-1">
+
+                <form id="ideaForm" method="post"></form>
+                <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
+                <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
+
+
+                <!-- The camera and gallery buttons will be replaced by UI assets -->
+                <div class="images">
+                    <button id="camera_btn11" class="button button13" type="image"><i
+                            class="fas fa-camera"></i></button>
+                    <button id="gallery_btn12" class="button button14" type="image"><i
+                            class="far fa-image"></i></button>
+                </div>
+                <button id="btn13" class="button button15" type="submit">NEXT</button>
+                </form>
+
+            </div>
+        </section>
+        <!-- /#giftIdeaAdd -->
+
+        <!--***************************** Gift Idea Summary Card  **************************-->
+        <section id="summaryCard">
+            <a href="./gift_idea1.html" class="link link6"><i class="fas fa-chevron-left"></i>Add idea</a>
+
+
+            <div class="add-idea-2">
+
+                <!-- <img src="" alt=""> Display image; if no photo, display default image -->
+                <img src="https://www.picsum.photos/300" alt="">
+                <!-- Display Title of gift idea; pre-populated from previous input text -->
+                <p id="displayTitle"></p>
+                <p id="displayDesc"></p>
+
+                <label for="location">Add location(optional)</label>
+                <!-- input field for geolocation -->
+
+                <button class="button button16" type="submit"><a href="gift_idea3.html">Next</a></button>
+
+            </div>
+        </section>
+        <!-- /#summaryCard -->
+
+        <!--****************************** Add to Wishlist Page ******************************** -->
+
+        <section id="addToWishlist">
+            <a href="./gift_idea2.html" class="link link7"><i class="fas fa-chevron-left"></i>back</a>
+
+
+            <div class="add-idea-3">
+
+                <div class="idea-window">
+                    <img src="https://www.picsum.photos/100" alt="">
+                    <div class="window-description"></div>
+                </div>
+
+                <button id="addtowish" class="button button17">Add to wishlist</button>
+                <button id="addtofriend" class="button button18">Add to friend's</button>
+
+                <!-- Generated from list from Firestore -->
+                <div class="listoffriends" id="friends1"></div>
+
+                <!-- input field for geolocation -->
+
+                <button class="button button19" type="submit"><a href="gift_idea4.html">Next</a></button>
+
+            </div>
+        </section>
+        <!-- /#addToWishlist -->
+
+        <!--*************************Choose Event  ******************************************-->
+
+        <section id="chooseEvent">
+            <a href="./gift_idea3.html" class="link link8"><i class="fas fa-chevron-left"></i>Back</a>
+
+            <div class="add-idea-4">
+
+                <h2>Choose an event for your idea</h2>
+
+                <label for="">Event (optional)</label><br>
+                <input type="text" placeholder="name of event"><br>
+                <input type="date" id="due" name="due" />
+
+                <button class="button button20" type="submit"><a href="gift_idea5.html">Next</a></button>
+
+            </div>
+        </section>
+        <!-- /#chooseEvent -->
+
+        <!--****************************** Idea added - Complete  ***************************-->
+
+        <section id="Complete">
+            <a href="./gift_idea4.html" class="link link9"><i class="fas fa-chevron-left"></i>Back</a>
+
+            <div class="add-idea-5">
+
+                <h2>Your idea is added!</h2>
+
+                <div class="idea-card"></div>
+                <!-- Card to show image, title, description, friend, and event, date -->
+
+                <button class="button button21" type="submit">Done</button>
+
+            </div>
+        </section>
+        <!-- /#Complete -->
+
+
+
+    </main>
+    <footer>
+
+
+        <!-- note: buttons will be replaced by UI assets -->
+        <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
+
+        <!-- .navbar_container>nav.bottom_navbar>ul>(li>button#nav_btn$.button.button$)*5 -->
+        <div class="navbar_container">
+            <nav class="bottom_navbar">
+                <ul>
+                    <li><button id="nav_btn1" class="button button5">Home</button></li>
+                    <li><button id="nav_btn2" class="button button6">My List</button></li>
+                    <li><button id="nav_btn3" class="button button7">+</button></li>
+                    <li><button id="nav_btn4" class="button button8">Friends</button></li>
+                    <li><button id="nav_btn5" class="button button9">Store</button></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
+
+        <div class="footer_container">
+            <nav class="footer_links">
+                <hr>
+                <ul>
+                    <li><a href="./tour.html">Take A Tour</a></li>
+                    <li><a href="./privacy.html">Privacy Policies</a></li>
+                    <li><a href="./advertise.html">Ads Info</a></li>
+                    <li><a href="./business.html">Business</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

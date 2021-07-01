@@ -1,0 +1,8 @@
+section {
+    border: 1px solid #000;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
