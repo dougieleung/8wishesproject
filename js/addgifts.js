@@ -1,34 +1,30 @@
-
-
-
-addGift.addEventListener('click', async function addToFirestore() {
-
-    await db.collection(firebase.auth().currentUser.uid).doc().set({
-        // username: this.username,
-        userID: firebase.auth().currentUser.uid,
-        giftTitle: giftTitle.value,
-        // description: 
+//  ADD GIFT ITEM TO DB
+addGift.addEventListener("click", async function addToFirestore() {
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("addGifts")
+    .set({
+      // username: this.username,
+      //   userID: firebase.auth().currentUser.uid,
+      giftTitle: giftTitle.value,
+      giftDescription: giftDescription.value,
     })
-        .then(() => {
-            console.log("Document successfully written!");
-        })
-        .catch((error) => {
-            console.error("Error writing document: ", error);
-        });
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+});
 
-})
-
-
-// The following example shows how to retrieve the contents of a single document using get():
-db.collection("cities").doc("SF");
-
-docRef.get().then((doc) => {
-    if (doc.exists) {
-        console.log("Document data:", doc.data());
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-}).catch((error) => {
-    console.log("Error getting document:", error);
+// ADD TO WISHLIST FOR THE LOGGED IN USER
+addWishlist.addEventListener("click", async function addToWishlist() {
+  console.log("Button clicked");
+  const snapshot = await firebase
+    .firestore()
+    .collection(firebase.auth().currentUser.uid)
+    .get();
+  return snapshot.docs.map((doc) => doc.data());
+  //   console.log(snapshot.docs.map((doc) => doc.data().giftTitle));
+  //   console.log(snapshot.docs.map((doc) => doc.data().giftDescription));
 });
