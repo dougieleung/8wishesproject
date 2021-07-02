@@ -41,6 +41,42 @@ loginButton.addEventListener('click', () => {
         })
 })
 
+// **********************    Logout Existing User    **************************
+
+logoutButton.addEventListener('click', () => {
+    console.log('Logout Clicked')
+
+    firebase.auth().signOut().then(() => {
+            // Convert alert message to message on UI
+            alert('Thanks for visiting us.  See you later!');
+
+        }).catch((error) => {
+            console.error('Error signing out, ', error.message);
+            alert(error.message);
+        });  
+});
+
+// *****Attach the observer using the onAuthStateChanged method. When a user successfully signs in, you can get information about the user in the observer. 
+
+    firebase.auth().onAuthStateChanged((user) => {
+        const notLoggedIn = document.getElementById('not-logged-in');
+        const loggedIn = document.getElementById('logged-in');
+        if (user) {
+            loggedIn.style.display = 'flex';
+            notLoggedIn.style.display = 'none';
+        
+        // Get User Profile
+        const user = firebase.auth().currentUser;
+            if (user !== null) {
+                const email = user.email;
+                document.getElementById('user_para').innerHTML = "Welcome User : " + email;
+            }
+        
+            } else {
+                loggedIn.style.display = 'none';
+                notLoggedIn.style.display = 'flex';
+            }
+        });
 
 //Get the currently signed in user (whether logged in or not)
 // firebase.auth().onAuthStateChanged((user) => {

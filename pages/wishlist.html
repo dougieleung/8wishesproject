@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <title>8 Wishes</title>
+    <meta name="description" content="An application for searching special unique gifts" />
+    <link rel="manifest" href="../manifest.json" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.ready.then((reg) => {
+                console.log(`Service Worker ready (Scope: ${reg.scope})`);
+            });
+
+            navigator.serviceWorker
+                .register("./sw.js", {
+                    scope: "/"
+                })
+                .then(function (reg) {
+                    console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+                })
+                .catch(function (error) {
+                    console.log(`Service Worker Error (${error})`);
+                });
+        } else {
+            console.warn("Service Worker not available");
+        }
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
+
+    <script src="../js/firebase.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/wishlist.js" defer></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+
+
+        <div id="giftcard_display"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </main>
+    <footer>
+
+        <div class="navbar_container">
+            <nav class="bottom_navbar">
+                <ul>
+                    <li><button id="nav_btn1" class="button button5">Home</button></li>
+                    <li><button id="nav_btn2" class="button button6">My List</button></li>
+                    <li><button id="nav_btn3" class="button button7">+</button></li>
+                    <li><button id="nav_btn4" class="button button8">Friends</button></li>
+                    <li><button id="nav_btn5" class="button button9">Store</button></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer_container">
+            <nav class="footer_links">
+                <hr>
+                <ul>
+                    <li><a href="./tour.html">Take A Tour</a></li>
+                    <li><a href="./privacy.html">Privacy Policies</a></li>
+                    <li><a href="./advertise.html">Ads Info</a></li>
+                    <li><a href="./business.html">Business</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
