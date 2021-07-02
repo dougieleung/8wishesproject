@@ -22,6 +22,7 @@ const addGift = document.querySelector("#btn13");
 // Adding idea to own wish list or to friend's
 const addToWish = document.querySelector('#addtowish');
 const addToFriend = document.querySelector('#addtofriend');
+const addToDB = document.querySelector('#addToDB');
 
 // Add special event variables
 const eventName = document.querySelector('#eventname');
