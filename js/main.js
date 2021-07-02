@@ -8,14 +8,25 @@ const confirmPassword = document.querySelector("#confirmPassword");
 const registerBtn = document.querySelector("#registerButton");
 const registerForm = document.querySelector("#registerForm");
 
+// Login/Logout page variables
 const loginButton = document.querySelector("#btn_login");
 const loginEmail = document.querySelector("#email1");
 const loginPassword = document.querySelector("#password1");
+const logoutButton = document.querySelector('#btn_logout');
 
+// Adding gift idea variables
 const giftTitle = document.querySelector("#gift_title");
 const giftDescription = document.querySelector("#gift_description");
 const addGift = document.querySelector("#btn13");
-const addWishlist = document.querySelector("#addtowish");
+
+// Adding idea to own wish list or to friend's
+const addToWish = document.querySelector('#addtowish');
+const addToFriend = document.querySelector('#addtofriend');
+
+// Add special event variables
+const eventName = document.querySelector('#eventname');
+const dateOfEvent = document.querySelector('#eventdate');
+const addEvent = document.querySelector('#addEventBtn');
 
 class userInfo {
   constructor(username, email) {

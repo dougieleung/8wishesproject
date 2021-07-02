@@ -2,7 +2,9 @@
 addGift.addEventListener("click", async function addToFirestore() {
   await db
     .collection(firebase.auth().currentUser.uid)
-    .doc("addGifts")
+    .doc("wishes")
+    .collection('List of items')
+    .doc('gift idea one')
     .set({
       // username: this.username,
       //   userID: firebase.auth().currentUser.uid,
