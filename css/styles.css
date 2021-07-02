@@ -1,17 +1,30 @@
 section {
-    border: 1px solid #000;
-    flex: 0 0 43%;
-    margin: 1%;
+  border: 1px solid #000;
+  flex: 0 0 43%;
+  margin: 1%;
 }
 
 main {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 
 /* login page */
 
-  /* #logged-in, #logged-out {
+/* #logged-in, #logged-out {
     display: none;
   } */
+
+.show {
+  display: block;
+  border-bottom: 3px solid red;
+}
+
+.hide {
+  display: none;
+}
+
+.page {
+  display: none;
+}
