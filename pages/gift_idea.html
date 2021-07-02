@@ -104,7 +104,7 @@
                 <!-- <img src="" alt=""> Display image; if no photo, display default image -->
                 <img src="https://www.picsum.photos/300" alt="">
                 <!-- Display Title of gift idea; pre-populated from previous input text -->
-                <p id="displayTitle"></p>
+                <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
                 <label for="location">Add location(optional)</label>
@@ -153,10 +153,10 @@
                 <h2>Choose an event for your idea</h2>
 
                 <label for="">Event (optional)</label><br>
-                <input type="text" placeholder="name of event"><br>
-                <input type="date" id="due" name="due" />
+                <input id="eventname" type="text" placeholder="name of event"><br>
+                <input type="date" id="eventdate" name="due" />
 
-                <button class="button button20" type="submit"><a href="gift_idea5.html">Next</a></button>
+                <button id="addEventBtn" class="button button20" type="submit"> Next</button>
 
             </div>
         </section>
@@ -174,7 +174,7 @@
                 <div class="idea-card"></div>
                 <!-- Card to show image, title, description, friend, and event, date -->
 
-                <button class="button button21" type="submit">Done</button>
+                <button id="addToDB" class="button button21" type="submit">Done</button>
 
             </div>
         </section>
