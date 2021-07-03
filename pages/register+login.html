@@ -70,30 +70,28 @@
       <!-- ************************************* -->
     
       <section id="loginPage">
-        <h2>Login</h2>
+        <h2>LOGIN / LOGOUT</h2>
 
         <!-- Logo and/or background image -->
         <img src="" alt="" />
 
-        <div class="logout" id="logged-out">
-        <input type="email" name="" id="email1" />
-        <input type="password" name="" id="password1" />
-
-        <a href="#" class="link link2">Forgot Password?</a>
-
-        <button id="btn_login" class="button button3">Log in</button>
-        <span>Not a Member?</span><br />
-
-        <a href="register.html" class="link link3">Sign up Now!</a>
+        <div class="notloggedin" id="not-logged-in">  
+            <input type="email" name="" id="email1" placeholder="Enter your e-mail"/>
+            <input type="password" name="" id="password1" placeholder="Enter your password"/>
+            <a href="#" class="link link2">Forgot Password?</a>
+            <button id="btn_login" class="button button3">Log in</button>
+            <span>Not a Member?</span><br />
+            <a href="register.html" class="link link3">Sign up Now!</a>
         </div>
-        <div class="logout" id="logged-in">
+      
+        <div class="loggedin" id="logged-in">
             <h3>Welcome! You are logged in!</h3>
-            <p id="user_para">Welcome to Firebase login</p>
+            <p id="user_para"></p>
             <button id="btn_logout" class="button button4">Logout</button>
         </div>
 
       </section>
-      <!-- /#loginPage -->
+ 
 
       <!--************************************  -->
       <!-- REGISTER PAGE SECTION -->
@@ -152,10 +150,7 @@
       <!-- /#registerPage. -->
     </main>
     <footer>
-      <!-- note: buttons will be replaced by UI assets -->
-      <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
-
-      <!-- .navbar_container>nav.bottom_navbar>ul>(li>button#nav_btn$.button.button$)*5 -->
+      
       <div class="navbar_container">
         <nav class="bottom_navbar">
           <ul>
@@ -172,8 +167,6 @@
         </nav>
       </div>
 
-      <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
-
       <div class="footer_container">
         <nav class="footer_links">
           <hr />
@@ -186,6 +179,8 @@
           </ul>
         </nav>
       </div>
+    
     </footer>
+  
   </body>
 </html>
