@@ -25,7 +25,7 @@ friendEventSelect.addEventListener("change", () => {
     createEvent.innerHTML = "";
     createEvent.style.display = "block";
     const inputEl = document.createElement("input");
-    inputEl.id = "inputOther";
+    inputEl.setAttribute("id", "inputOther");
     inputEl.setAttribute("type", "text");
     const labelEl = document.createElement("label");
     labelEl.innerText = "Create Event";
@@ -41,7 +41,7 @@ addFriendBtn.addEventListener("click", (event) => {
   event.preventDefault();
   if (
     friendName.value.trim() &&
-    friendEventSelect.value !== -1 &&
+    friendEventSelect.value !== "Other" &&
     friendDate.value.trim()
   ) {
     newFriend = new addFriendClass(
