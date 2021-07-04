@@ -12,7 +12,7 @@ const registerForm = document.querySelector("#registerForm");
 const loginButton = document.querySelector("#btn_login");
 const loginEmail = document.querySelector("#email1");
 const loginPassword = document.querySelector("#password1");
-const logoutButton = document.querySelector('#btn_logout');
+const logoutButton = document.querySelector("#btn_logout");
 
 // Forgot Password: Send e-mail to reset
 const emailtoreset = document.getElementById('email_to_reset')
@@ -24,14 +24,14 @@ const giftDescription = document.querySelector("#gift_description");
 const addGift = document.querySelector("#btn13");
 
 // Adding idea to own wish list or to friend's
-const addToWish = document.querySelector('#addtowish');
-const addToFriend = document.querySelector('#addtofriend');
-const addToDB = document.querySelector('#addToDB');
+const addToWish = document.querySelector("#addtowish");
+const addToFriend = document.querySelector("#addtofriend");
+const addToDB = document.querySelector("#addToDB");
 
 // Add special event variables
-const eventName = document.querySelector('#eventname');
-const dateOfEvent = document.querySelector('#eventdate');
-const addEvent = document.querySelector('#addEventBtn');
+const eventName = document.querySelector("#eventname");
+const dateOfEvent = document.querySelector("#eventdate");
+const addEvent = document.querySelector("#addEventBtn");
 
 
 class userInfo {
