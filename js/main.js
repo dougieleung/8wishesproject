@@ -14,6 +14,10 @@ const loginEmail = document.querySelector("#email1");
 const loginPassword = document.querySelector("#password1");
 const logoutButton = document.querySelector("#btn_logout");
 
+// Forgot Password: Send e-mail to reset
+const emailtoreset = document.getElementById('email_to_reset')
+const resetPassword = document.getElementById('reset_password');
+
 // Adding gift idea variables
 const giftTitle = document.querySelector("#gift_title");
 const giftDescription = document.querySelector("#gift_description");
@@ -28,6 +32,7 @@ const addToDB = document.querySelector("#addToDB");
 const eventName = document.querySelector("#eventname");
 const dateOfEvent = document.querySelector("#eventdate");
 const addEvent = document.querySelector("#addEventBtn");
+
 
 class userInfo {
   constructor(username, email) {

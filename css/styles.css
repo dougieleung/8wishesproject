@@ -9,4 +9,6 @@ main {
   flex-flow: row wrap;
 }
 
-
+#not-logged-in, #logged-in {
+  display: none;
+}
