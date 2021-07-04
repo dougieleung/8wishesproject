@@ -2,12 +2,6 @@
 class newWishObject {
   constructor(title, desc) {
     (this.wishTitle = title), (this.wishDesc = desc);
-    // this.mine = true;
-    // this.friends = true;
-    // this.picture =
-    //this.location
-    // this.eventName
-    // this.eventDate
   }
 }
 
@@ -16,9 +10,18 @@ const displayDescription = document.querySelector("#displayDesc");
 
 let newWish;
 addGift.addEventListener("click", () => {
-  newWish = new newWishObject(giftTitle.value, giftDescription.value);
-  displayTitle.innerHTML = `${giftTitle.value}`;
-  displayDescription.innerHTML = `${giftDescription.value}`;
+  if (giftTitle.value.trim() && giftDescription.value.trim()) {
+    newWish = new newWishObject(
+      giftTitle.value.trim(),
+      giftDescription.value.trim()
+    );
+    displayTitle.innerHTML = `${giftTitle.value}`;
+    displayDescription.innerHTML = `${giftDescription.value}`;
+    giftTitle.value = "";
+    giftDescription.value = "";
+  } else {
+    alert("All fields are mandatory!");
+  }
 });
 
 addToWish.addEventListener("click", () => {
@@ -29,10 +32,16 @@ addToFriend.addEventListener("click", () => {
   newWish.mine = false;
 });
 
-addEvent.addEventListener("click", () => {
-  newWish.eventName = eventName.value;
-  newWish.eventDate = dateOfEvent.value;
-  console.log(newWish);
+addEventBtn.addEventListener("click", () => {
+  if (eventName.value.trim() && dateOfEvent.value) {
+    newWish.eventName = eventName.value;
+    newWish.eventDate = dateOfEvent.value;
+    console.log(newWish);
+    eventName.value = "";
+    dateOfEvent.value = "";
+  } else {
+    alert("All fields are mandatory!");
+  }
 });
 
 //  ADD GIFT ITEM TO DB
