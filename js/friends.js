@@ -1,4 +1,3 @@
-// const { create } = require("domain");
 console.log("Friends JS Connected!");
 
 // Fetching elements from the DOM
@@ -10,7 +9,7 @@ const addFriendBtn = document.querySelector("#addFriendBtn");
 const friendEventSelect = document.querySelector("#friendEventSelect");
 const createEvent = document.querySelector("#createEvent");
 const friendAddBtn = document.querySelector("#friendAddBtn");
-let newFriend;
+let createEventInput, newFriend;
 
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
@@ -18,8 +17,19 @@ class addFriendClass {
       (this.friendEvent = friendEvent),
       (this.friendDate = friendDate);
   }
+  resetInputs() {
+    friendName.value = "";
+    friendEventSelect.value = "resetOptions";
+    friendDate.value = "";
+    if (createEventInput) {
+      createEventInput.value = "";
+      createEvent.style.display = "none";
+    }
+    friendName.focus();
+  }
 }
 
+// Creating a New Event (Other)
 friendEventSelect.addEventListener("change", () => {
   if (friendEventSelect.value === "Other") {
     createEvent.innerHTML = "";
@@ -32,29 +42,38 @@ friendEventSelect.addEventListener("change", () => {
     labelEl.setAttribute("for", "Other");
     createEvent.appendChild(labelEl);
     createEvent.appendChild(inputEl);
+    createEventInput = document.querySelector("#inputOther");
   } else {
     createEvent.style.display = "none";
   }
 });
 
+// Add Friend
 addFriendBtn.addEventListener("click", (event) => {
   event.preventDefault();
   if (
     friendName.value.trim() &&
+    friendEventSelect.value !== "resetOptions" &&
     friendEventSelect.value !== "Other" &&
-    friendDate.value.trim()
+    friendDate.value
   ) {
     newFriend = new addFriendClass(
       friendName.value.trim(),
       friendEventSelect.value,
       friendDate.value.trim()
     );
-  } else if (friendEventSelect.value === "Other") {
+    newFriend.resetInputs();
+  } else if (
+    friendEventSelect.value === "Other" &&
+    friendDate.value &&
+    createEventInput.value.trim()
+  ) {
     newFriend = new addFriendClass(
       friendName.value.trim(),
-      document.querySelector("#inputOther").value.trim(),
-      friendDate.value.trim()
+      createEventInput.value.trim(),
+      friendDate.value
     );
+    newFriend.resetInputs();
   } else {
     alert("all fields are mandatory!");
   }
