@@ -40,12 +40,12 @@ addToFriend.addEventListener("click", () => {
 });
 
 addEventBtn.addEventListener("click", () => {
-  if (eventName.value.trim() && dateOfEvent.value) {
+  if (eventName.value.trim() && eventDate.value) {
     newWish.eventName = eventName.value;
-    newWish.eventDate = dateOfEvent.value;
+    newWish.eventDate = eventDate.value;
     console.log(newWish);
     eventName.value = "";
-    dateOfEvent.value = "";
+    eventDate.value = "";
   } else {
     alert("All fields are mandatory!");
   }
@@ -70,6 +70,8 @@ addToDB.addEventListener("click", async function addToFirestore() {
         console.error("Error writing document: ", error);
       });
 
+      displayGift.innerHTML = "";
+
 // Get the data back from DB for MINE in TIMESTAMP ORDER
 
       await db
@@ -77,12 +79,12 @@ addToDB.addEventListener("click", async function addToFirestore() {
       .doc('MyWishlist')
       .collection('List of items')
       .where("mine", "==", true)
-      .orderBy("timestamp")
+      .orderBy("timestamp", "desc")
       .get()
       .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
-
+ 
     // Create the card container
     const card = document.createElement('div');
     card.className = 'displaycard';

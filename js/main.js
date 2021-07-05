@@ -30,7 +30,7 @@ const addToDB = document.querySelector("#addToDB");
 
 // Add special event variables
 const eventName = document.querySelector("#eventname");
-const dateOfEvent = document.querySelector("#eventdate");
+const eventDate = document.querySelector("#eventdate");
 const addEventBtn = document.querySelector("#addEventBtn");
 
 class userInfo {
