@@ -52,93 +52,101 @@ addEventBtn.addEventListener("click", () => {
 });
 
 //  ADD GIFT ITEM TO DB AND RETRIEVE LIST IN ORDER OF TIMESTAMP AND PERSON
+
 addToDB.addEventListener("click", async function addToFirestore() {
-  console.log("KEEP CALM AAAAANDDDD ..... Adding to FIRESTORE");
-  if (newWish.mine) {
-    await db
-      .collection(firebase.auth().currentUser.uid)
-      .doc("MyWishlist")
-      .collection("List of items")
-      .doc()
-      .set({
-        ...newWish,
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
+  logintoadd.innerHTML = "";
+  ideaAddedMsg.innerHTML = "";
 
-      displayGift.innerHTML = "";
+  if (firebase.auth().currentUser === null) {
+      logintoadd.innerHTML = "Sorry.  Please sign in before adding wishes."
+  } else if (newWish.mine) {
 
-// Get the data back from DB for MINE in TIMESTAMP ORDER
+  ideaAddedMsg.innerHTML = "Your idea is added!";
 
       await db
-      .collection(firebase.auth().currentUser.uid)
-      .doc('MyWishlist')
-      .collection('List of items')
-      .where("mine", "==", true)
-      .orderBy("timestamp", "desc")
-      .get()
-      .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
- 
-    // Create the card container
-    const card = document.createElement('div');
-    card.className = 'displaycard';
-    // Add the Gift title
-    const giftHeader = document.createElement('h3');
-    const giftHeaderText = document.createTextNode(`${doc.data().wishTitle}`); 
-    giftHeader.appendChild(giftHeaderText);
-    card.appendChild(giftHeader);
+        .collection(firebase.auth().currentUser.uid)
+        .doc("MyWishlist")
+        .collection("List of items")
+        .doc()
+        .set({
+          ...newWish,
+        })
+        .then(() => {
+          console.log("Document successfully written!");
+        })
+        .catch((error) => {
+          console.error("Error writing document: ", error);
+        });
+
+        displayGift.innerHTML = "";
+
+        // Get the data back from DB for MINE in TIMESTAMP ORDER
+
+      await db
+        .collection(firebase.auth().currentUser.uid)
+        .doc('MyWishlist')
+        .collection('List of items')
+        .where("mine", "==", true)
+        .orderBy("timestamp", "desc")
+        .get()
+        .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc.id, " => ", doc.data());
   
-    // Add the image / photo here
+          // Create the card container
+          const card = document.createElement('div');
+          card.className = 'displaycard';
+          // Add the Gift title
+          const giftHeader = document.createElement('h3');
+          const giftHeaderText = document.createTextNode(`${doc.data().wishTitle}`); 
+          giftHeader.appendChild(giftHeaderText);
+          card.appendChild(giftHeader);
+        
+          // Add the image / photo here
 
-    // Add the Gift description to the card
-    const descriptionContainer = document.createElement('div');
-    const descriptionText = document.createTextNode(`${doc.data().wishDesc}`);
-    descriptionContainer.appendChild(descriptionText);
-    card.appendChild(descriptionContainer);
+          // Add the Gift description to the card
+          const descriptionContainer = document.createElement('div');
+          const descriptionText = document.createTextNode(`${doc.data().wishDesc}`);
+          descriptionContainer.appendChild(descriptionText);
+          card.appendChild(descriptionContainer);
 
-    // Add the Event name to the card
-    const eventHeader = document.createElement('p');
-    const eventHeaderText = document.createTextNode(`${doc.data().eventName}`); 
-    eventHeader.appendChild(eventHeaderText);
-    card.appendChild(eventHeader);
+          // Add the Event name to the card
+          const eventHeader = document.createElement('p');
+          const eventHeaderText = document.createTextNode(`${doc.data().eventName}`); 
+          eventHeader.appendChild(eventHeaderText);
+          card.appendChild(eventHeader);
 
-    // Add the Event date to the card
-    const eventDate = document.createElement('p');
-    const eventDateText = document.createTextNode(`${doc.data().eventDate}`); 
-    eventDate.appendChild(eventDateText);
-    card.appendChild(eventDate);
+          // Add the Event date to the card
+          const eventDate = document.createElement('p');
+          const eventDateText = document.createTextNode(`${doc.data().eventDate}`); 
+          eventDate.appendChild(eventDateText);
+          card.appendChild(eventDate);
 
-    // Add the card to the page
-    displayGift.appendChild(card);
-
-      });
-      })
-      .catch((error) => {
-          console.log("Error getting document:", error);
-      });
-
-  } else {
-    await db
-      .collection(firebase.auth().currentUser.uid)
-      .doc("Friends")
-      .collection("List")
-      .doc()
-      .set({
-        ...newWish,
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
-  }
+          // Add the card to the page
+          displayGift.appendChild(card);
+        });
+    }) 
+  
+        .catch((error) => {
+            console.log("Error getting document:", error);
+        });
+    
+    } else {
+      await db
+        .collection(firebase.auth().currentUser.uid)
+        .doc("Friends")
+        .collection("List")
+        .doc()
+        .set({
+          ...newWish,
+        })
+        .then(() => {
+          console.log("Document successfully written!");
+        })
+        .catch((error) => {
+          console.error("Error writing document: ", error);
+        });
+    }
 });
 
 
