@@ -32,11 +32,14 @@ addGift.addEventListener("click", () => {
 });
 
 addToWish.addEventListener("click", () => {
+  addWishMsg.innerHTML = "";
   newWish.mine = true;
+  addWishMsg.innerHTML = 'You have added the idea to your own wishlist! Please click "Next" to add an event to it!';
 });
 
 addToFriend.addEventListener("click", () => {
   newWish.mine = false;
+  addWishMsg.innerHTML = 'You have added the idea to your friend! Please click "Next" to add an event to it!';
 });
 
 addEventBtn.addEventListener("click", () => {
