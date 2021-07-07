@@ -13,3 +13,10 @@ main {
   display: none;
 }
 
+.yes-reset, .no-reset {
+  display: inline-block;
+}
+
+.back-to-login {
+  display: none;
+}

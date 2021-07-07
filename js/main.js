@@ -14,10 +14,6 @@ const loginEmail = document.querySelector("#email1");
 const loginPassword = document.querySelector("#password1");
 const logoutButton = document.querySelector("#btn_logout");
 
-// Forgot Password: Send e-mail to reset
-const emailtoreset = document.getElementById("email_to_reset");
-const resetPassword = document.getElementById("reset_password");
-
 // Adding gift idea variables
 const giftTitle = document.querySelector("#gift_title");
 const giftDescription = document.querySelector("#gift_description");
@@ -26,7 +22,11 @@ const addGift = document.querySelector("#btn13");
 // Adding idea to own wish list or to friend's
 const addToWish = document.querySelector("#addtowish");
 const addToFriend = document.querySelector("#addtofriend");
+const addWishMsg = document.querySelector("#add-wish-msg");
+const friendslist = document.querySelector("#friendslist");
 const addToDB = document.querySelector("#addToDB");
+const logintoadd = document.querySelector("#login-to-add");
+const ideaAddedMsg = document.querySelector("#idea-added-msg");
 
 // Add special event variables
 const eventName = document.querySelector("#eventname");
