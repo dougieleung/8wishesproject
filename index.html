@@ -1,109 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css" />
+    <title>8 Wishes</title>
+    <meta
+      name="description"
+      content="An application for searching special unique gifts"
+    />
+    <link rel="manifest" href="manifest.json" />
 
-  <title>8 Wishes</title>
-  <meta name="description" content="An application for searching special unique gifts" />
-  <link rel="manifest" href="manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
 
-  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then((reg) => {
-        console.log(`Service Worker ready (Scope: ${reg.scope})`);
-      });
-
-      navigator.serviceWorker
-        .register("../sw.js", {
-          scope: "/",
-        })
-        .then(function (reg) {
-          console.log(`Service Worker Registration (Scope: ${reg.scope})`);
-        })
-        .catch(function (error) {
-          console.log(`Service Worker Error (${error})`);
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((reg) => {
+          console.log(`Service Worker ready (Scope: ${reg.scope})`);
         });
-    } else {
-      console.warn("Service Worker not available");
-    }
-  </script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
+        navigator.serviceWorker
+          .register("./sw.js", {
+            scope: "/",
+          })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
+    </script>
 
-  <script src="js/firebase.js" defer></script>
-  <script src="js/main.js" defer></script>
-</head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
+      defer
+    ></script>
+    <!-- Add Firebase products that you want to use -->
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"
+      defer
+    ></script>
 
-<body>
-  <header></header>
-  <main></main>
-  <footer>
-    <!-- note: buttons will be replaced by UI assets -->
-    <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
+    <script src="js/firebase.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
 
-    <!-- .navbar_container>nav.bottom_navbar>ul>(li>button#nav_btn$.button.button$)*5 -->
-    <div class="navbar_container">
-      <nav class="bottom_navbar">
-        <ul>
-          <li><button id="nav_btn1" class="button button5">Home</button></li>
-          <li>
-            <button id="nav_btn2" class="button button6">My List</button>
-          </li>
-          <li><button id="nav_btn3" class="button button7">+</button></li>
-          <li>
-            <button id="nav_btn4" class="button button8">Friends</button>
-          </li>
-          <li><button id="nav_btn5" class="button button9">Store</button></li>
-        </ul>
-      </nav>
-    </div>
+  <body>
+    <header></header>
+    <main></main>
+    <footer>
+      <!-- note: buttons will be replaced by UI assets -->
+      <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
 
-    <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
+      <!-- .navbar_container>nav.bottom_navbar>ul>(li>button#nav_btn$.button.button$)*5 -->
+      <div class="navbar_container">
+        <nav class="bottom_navbar">
+          <ul>
+            <li><button id="nav_btn1" class="button button5">Home</button></li>
+            <li>
+              <button id="nav_btn2" class="button button6">My List</button>
+            </li>
+            <li><button id="nav_btn3" class="button button7">+</button></li>
+            <li>
+              <button id="nav_btn4" class="button button8">Friends</button>
+            </li>
+            <li><button id="nav_btn5" class="button button9">Store</button></li>
+          </ul>
+        </nav>
+      </div>
 
-    <div class="footer_container">
-      <nav class="footer_links">
-        <hr />
-        <ul>
-          <li><a href="./tour.html">Take A Tour</a></li>
-          <li><a href="./privacy.html">Privacy Policies</a></li>
-          <li><a href="./advertise.html">Ads Info</a></li>
-          <li><a href="./business.html">Business</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-</body>
+      <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
 
+      <div class="footer_container">
+        <nav class="footer_links">
+          <hr />
+          <ul>
+            <li><a href="./tour.html">Take A Tour</a></li>
+            <li><a href="./privacy.html">Privacy Policies</a></li>
+            <li><a href="./advertise.html">Ads Info</a></li>
+            <li><a href="./business.html">Business</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
