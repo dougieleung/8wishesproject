@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +10,7 @@
     <title>8 Wishes</title>
     <meta name="description" content="An application for searching special unique gifts" />
     <link rel="manifest" href="../manifest.json" />
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -24,7 +23,7 @@
             });
 
             navigator.serviceWorker
-                .register("./sw.js", {
+                .register("../sw.js", {
                     scope: "/"
                 })
                 .then(function (reg) {
@@ -104,7 +103,7 @@
                 <!-- <img src="" alt=""> Display image; if no photo, display default image -->
                 <img src="https://www.picsum.photos/300" alt="">
                 <!-- Display Title of gift idea; pre-populated from previous input text -->
-                <p id="displayTitle"></p>
+                <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
                 <label for="location">Add location(optional)</label>
@@ -132,12 +131,14 @@
                 <button id="addtowish" class="button button17">Add to wishlist</button>
                 <button id="addtofriend" class="button button18">Add to friend's</button>
 
+                <p id="add-wish-msg"></p>
+
                 <!-- Generated from list from Firestore -->
-                <div class="listoffriends" id="friends1"></div>
+                <div class="friends-list" id="friendslist"></div>
 
                 <!-- input field for geolocation -->
 
-                <button class="button button19" type="submit"><a href="gift_idea4.html">Next</a></button>
+                <button class="button button19" type="submit"><a href="#chooseEvent">Next</a></button>
 
             </div>
         </section>
@@ -153,10 +154,10 @@
                 <h2>Choose an event for your idea</h2>
 
                 <label for="">Event (optional)</label><br>
-                <input type="text" placeholder="name of event"><br>
-                <input type="date" id="due" name="due" />
+                <input id="eventname" type="text" placeholder="name of event"><br>
+                <input type="date" id="eventdate" name="due" />
 
-                <button class="button button20" type="submit"><a href="gift_idea5.html">Next</a></button>
+                <button id="addEventBtn" class="button button20" type="submit"> Next</button>
 
             </div>
         </section>
@@ -169,13 +170,13 @@
 
             <div class="add-idea-5">
 
-                <h2>Your idea is added!</h2>
-
-                <div class="idea-card"></div>
+                <h2>Click done to add your idea!</h2>
+                <p id="idea-added-msg"></p>
+                <p id="login-to-add"></p>
+                <div id="giftcard_display"></div>
                 <!-- Card to show image, title, description, friend, and event, date -->
 
-                <button class="button button21" type="submit">Done</button>
-
+                <button id="addToDB" class="button button21" type="submit">Done</button>
             </div>
         </section>
         <!-- /#Complete -->

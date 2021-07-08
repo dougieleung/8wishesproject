@@ -1,6 +1,12 @@
+"use strict";
+// this will throw errors when any syntax is missed or wrong, has GLOBAL SCOPE
+
+// ********************** FIREBASE AUTHENTICATION *****************************
 
 // firebase.auth().currentuser.uid
 let newUser = null;
+
+// ************************ NEW USER REGISTRATION *****************************
 
 registerForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -11,18 +17,34 @@ registerForm.addEventListener('submit', async (event) => {
         // console.log(reference);
         newUser.signUp(emailInput.value, passwordInput.value);
 
-
-
-
     } else {
-        console.error('Passwords are not matching')
+        console.error('Passwords are not matching');
     }
-
 })
 
+// *********************** AUTHENTICATION STATE CHANGE ************************
 
+firebase.auth().onAuthStateChanged((user) => {
+    const notLoggedIn = document.getElementById('not-logged-in');
+    const loggedIn = document.getElementById('logged-in');
+    if (user) {
+        loggedIn.style.display = 'block';
+        notLoggedIn.style.display = 'none';
+    
+    // Get User Profile
+    const user = firebase.auth().currentUser;
+        if (user !== null) {
+            const email = user.email;
+            document.getElementById('user_para').innerHTML = "Welcome User : " + email;
+        }
+    
+    } else {
+        loggedIn.style.display = 'none';
+        notLoggedIn.style.display = 'block';
+    }
+});
 
-
+// ****************************** USER LOGIN **********************************
 
 loginButton.addEventListener('click', () => {
     console.log('Login Clicked')
@@ -35,19 +57,24 @@ loginButton.addEventListener('click', () => {
         })
         .then((user) => {
             if (user) {
-                // We can have a message on the DOM, rather than alert
-                console.error('Welcome back.  You are now logged in!');
+                
+                alert('Welcome back.  You are now logged in!');
             }
         })
+
+    // Housekeeping
+    loginEmail.value = "";
+    loginPassword.value = "";
+    loginEmail.focus();    
 })
 
-// **********************    Logout Existing User    **************************
+// **********************    LOGOUT EXISTING USER    **************************
 
 logoutButton.addEventListener('click', () => {
-    console.log('Logout Clicked')
+    console.log('Logout Clicked');
 
     firebase.auth().signOut().then(() => {
-            // Convert alert message to message on UI
+           
             alert('Thanks for visiting us.  See you later!');
 
         }).catch((error) => {
@@ -56,47 +83,3 @@ logoutButton.addEventListener('click', () => {
         });  
 });
 
-// *****Attach the observer using the onAuthStateChanged method. When a user successfully signs in, you can get information about the user in the observer. 
-
-    firebase.auth().onAuthStateChanged((user) => {
-        const notLoggedIn = document.getElementById('not-logged-in');
-        const loggedIn = document.getElementById('logged-in');
-        if (user) {
-            loggedIn.style.display = 'flex';
-            notLoggedIn.style.display = 'none';
-        
-        // Get User Profile
-        const user = firebase.auth().currentUser;
-            if (user !== null) {
-                const email = user.email;
-                document.getElementById('user_para').innerHTML = "Welcome User : " + email;
-            }
-        
-            } else {
-                loggedIn.style.display = 'none';
-                notLoggedIn.style.display = 'flex';
-            }
-        });
-
-//Get the currently signed in user (whether logged in or not)
-// firebase.auth().onAuthStateChanged((user) => {
-//     var notLoggedIn = document.getElementById('not-logged-in');
-//     var loggedIn = document.getElementById('logged-in');
-//     if (user) {
-//         loggedIn.style.display = 'flex';
-//         notLoggedIn.style.display = 'none';
-
-//         // Get User Profile
-//         const user = firebase.auth().currentUser;
-//         if (user !== null) {
-//             // Part of registration form 
-//             // const displayName = user.displayName;
-//             const email = user.email;
-//             document.getElementById('user_para').innerHTML = "Welcome User : " + email;
-//         }
-
-//     } else {
-//         loggedIn.style.display = 'none';
-//         notLoggedIn.style.display = 'flex';
-//     }
-// });

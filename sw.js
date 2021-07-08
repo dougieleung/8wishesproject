@@ -31,12 +31,7 @@ self.addEventListener("fetch", (event) => {
 });
 
 // const cacheName = "static-shell-v1";
-// const resourcesToPrecache = [
-//   "/",
-//   "pages/index.html",
-//   "/css/style.css",
-//   "/js/main.js",
-// ];
+// const resourcesToPrecache = ["/", "pages/*.html", "/css/*.css", "/js/*.js"];
 
 // self.addEventListener("install", (event) => {
 //   console.log("SW install event");

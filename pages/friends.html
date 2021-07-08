@@ -4,88 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 
     <title>8 Wishes</title>
     <meta
       name="description"
       content="An application for searching special unique gifts"
     />
-    <link rel="manifest" href="manifest.json" />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="icons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="icons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="icons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="icons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="icons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="icons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="icons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="icons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="icons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="icons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="icons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="icons/favicon-16x16.png"
-    />
-
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="../manifest.json" />
 
     <link
       rel="stylesheet"
@@ -102,7 +28,7 @@
         });
 
         navigator.serviceWorker
-          .register("./sw.js", {
+          .register("../sw.js", {
             scope: "/",
           })
           .then(function (reg) {
@@ -130,14 +56,70 @@
       src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"
       defer
     ></script>
-
-    <script src="js/firebase.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="../js/firebase.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/friends.js" defer></script>
   </head>
 
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <section id="listEmptyPage">
+        <h2>Your friend list is empty.</h2>
+        <button id="addFriend" class="add-friend-btn">
+          <a href="addfriend1.html">Add a friend</a>
+        </button>
+      </section>
+      <!-- /#listEmptyPage -->
+
+      <section id="addFriendPage">
+        <h2>Add a friend</h2>
+        <div class="profile-pic"><a href="#">Add profile pic</a></div>
+
+        <label for="name">Friend name</label>
+        <input id="friendName" type="text" />
+        <label for="name">Select an event</label>
+        <select id="friendEventSelect" name="event">
+          <option value="resetOptions">-- Select An Event --</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Wedding Anniversary">Wedding Anniversary</option>
+          <option value="Graduation Day">Graduation Day</option>
+          <option value="Other">Other...</option>
+        </select>
+        <div id="createEvent"></div>
+        <label for="date">Select a Date</label>
+
+        <!-- <input id="friendEvent" type="text" /> -->
+        <input id="friendDate" type="date" id="event" name="event" />
+        <button id="addFriendBtn"><a href="#friendAddedPage">Add</a></button>
+      </section>
+
+      <!-- /#addFriendPage -->
+      <!-- <section id="friendAddedPage">
+        <h2>Your friend is added !</h2>
+        <div>YJ</div>
+        <label for="name">Event</label>
+       <button id="friendAddBtn"><a href="#friendsListPage">Done</a></button>
+      </section>
+       -->
+
+    <!-- /#friendAddedPage -->
+    <section id="friendsListPage">
+      <h2>Friends</h2>
+      <div id="friendsListFromDB" class="friendAdded">
+        
+        <p><a href="#">See list</a></p>
+      </div>
+      <div class="addfriend">
+        <button id="fetchFriendsBtn">
+          <a href="#" >Fetch friends list</a>
+        </button>
+
+
+        </div>
+      </section>
+      <!-- /#friendsListPage -->
+    </main>
     <footer>
       <!-- note: buttons will be replaced by UI assets -->
       <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
@@ -157,6 +139,7 @@
             <li><button id="nav_btn5" class="button button9">Store</button></li>
           </ul>
         </nav>
+
       </div>
 
       <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->

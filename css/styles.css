@@ -1,6 +1,7 @@
-section {
+section,
+.displaycard {
   border: 1px solid #000;
-  flex: 0 0 43%;
+  /* flex: 0 0 43%; */
   margin: 1%;
 }
 
@@ -9,22 +10,16 @@ main {
   flex-flow: row wrap;
 }
 
-
-/* login page */
-
-/* #logged-in, #logged-out {
-    display: none;
-  } */
-
-.show {
-  display: block;
-  border-bottom: 3px solid red;
-}
-
-.hide {
+#not-logged-in,
+#logged-in {
   display: none;
 }
 
-.page {
+.yes-reset,
+.no-reset {
+  display: inline-block;
+}
+
+.back-to-login {
   display: none;
 }
