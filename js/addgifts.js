@@ -54,6 +54,7 @@ addEventBtn.addEventListener("click", () => {
   }
 });
 
+
 //  ADD GIFT ITEM TO DB AND RETRIEVE LIST IN ORDER OF TIMESTAMP AND PERSON
 
 addToDB.addEventListener("click", async function addToFirestore() {
@@ -152,4 +153,70 @@ addToDB.addEventListener("click", async function addToFirestore() {
     }
 });
 
+nextToWishlists.addEventListener("click", async function friendsListfromDB () {
+  console.log("friends list summary!");
+  await db
+  .collection(firebase.auth().currentUser.uid)
+  .doc('Friends')
+  .collection('List')
+  .get()
+  .then((querySnapshot) => {
+   const list = document.createElement('ul');
+   list.setAttribute("id", "fetchedFriendsList");
+  querySnapshot.forEach((doc) => {
+    console.log(doc.id, " => ", doc.data());
+  
+   
+  
+    const listItem = document.createElement('li');
+    const anchorItem = document.createElement('a');
+    listItem.setAttribute("id", `${doc.id}`);
+    anchorItem.setAttribute("href", "#");
+    const friendsNames = document.createTextNode(`${doc.id}`); 
+    anchorItem.appendChild(friendsNames);
+    listItem.appendChild(anchorItem);
+    list.appendChild(listItem);
+
+    addIdeaToCollection(doc.id);
+  });
+
+  friendsList.appendChild(list);
+  
+  }) 
+  
+  .catch((error) => {
+      console.log("Error getting document:", error);
+  });
+  
+  });
+
+
+  async function addIdeaToCollection(friendsName) {
+    logintoadd.innerHTML = "";
+    ideaAddedMsg.innerHTML = "";
+  
+    if (firebase.auth().currentUser === null) {
+        logintoadd.innerHTML = "Sorry.  Please sign in before adding wishes."
+    } else {
+  
+    ideaAddedMsg.innerHTML = "Your idea is added!";
+  
+        await db
+          .collection(firebase.auth().currentUser.uid)
+          .doc("Friends")
+          .collection("List")
+          .doc(friendsName)
+          .collection("This Friend's List")
+          .doc()
+          .set({
+            ...newWish,
+          })
+          .then(() => {
+            console.log("Document successfully written!");
+          })
+          .catch((error) => {
+            console.error("Error writing document: ", error);
+          });
+  
+        }}
 
