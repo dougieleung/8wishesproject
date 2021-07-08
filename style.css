@@ -1,0 +1,59 @@
+/* ================ Variables ==================*/
+/* ================ Mixins =====================*/
+/* ================ Layout =====================*/
+/* Testing Styles ==================== */
+section,
+.displaycard {
+  border: 1px solid #000;
+  /* flex: 0 0 43%; */
+  margin: 1%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#not-logged-in,
+#logged-in {
+  display: none;
+}
+
+.yes-reset,
+.no-reset {
+  display: inline-block;
+}
+
+.back-to-login {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Styles according to design ========================== */
+.bottom_navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bottom_navbar ul li {
+  list-style-type: none;
+}
+
+main section {
+  width: 100%;
+  min-height: 70vh;
+}
+/*# sourceMappingURL=style.css.map */

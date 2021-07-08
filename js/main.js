@@ -18,6 +18,7 @@ const logoutButton = document.querySelector("#btn_logout");
 const giftTitle = document.querySelector("#gift_title");
 const giftDescription = document.querySelector("#gift_description");
 const addGift = document.querySelector("#btn13");
+const nextToWishlists = document.querySelector("#nextToWishlists");
 
 // Adding idea to own wish list or to friend's
 const addToWish = document.querySelector("#addtowish");
