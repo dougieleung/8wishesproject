@@ -51,11 +51,10 @@
 </head>
 
 <body>
-    <header>
-
-    </header>
+   
     <main id="giftIdeaProcess">
-        <!--***********************Home Page Section ***************************** -->
+
+<!--***********************  #1 Home Page Section  ************************ -->
 
         <section class="show" id="giftIdeaHomePage">
 
@@ -67,60 +66,60 @@
 
                 <button id="startIdeaBtn" class="button button12"><a href="#giftIdeaAdd">Add a new idea</a></button>
             </div>
+       
         </section>
-        <!-- /#giftIdeaHomePage -->
+
+<!--*********************  #2 Add Gift Idea Section  ********************** -->
 
         <section id="giftIdeaAdd" class="hide">
-            <a href="./gift_home_1.html" class="link link5"><i class="fas fa-chevron-left"></i>Back</a>
+            
+            <button id="backToStart"><a href="#giftIdeaHomePage"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-1">
 
                 <form id="ideaForm" method="post"></form>
-                <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
-                <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
-
-
-                <!-- The camera and gallery buttons will be replaced by UI assets -->
-                <div class="images">
-                    <button id="camera_btn11" class="button button13" type="image"><i
-                            class="fas fa-camera"></i></button>
-                    <button id="gallery_btn12" class="button button14" type="image"><i
-                            class="far fa-image"></i></button>
-                </div>
-                <button id="btn13" class="button button15" type="submit">NEXT</button>
+                  <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
+                  <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
                 </form>
+        <!-- The camera and gallery buttons will be replaced by UI assets -->
+                <div class="images">
+                    <button id="camera_btn11" class="button button13" type="image"><i class="fas fa-camera"></i></button>
+                    <button id="gallery_btn12" class="button button14" type="image"><i class="far fa-image"></i></button>
+                </div>
+
+                <button id="addGift" class="button button15" type="submit">NEXT</button>
 
             </div>
+       
         </section>
-        <!-- /#giftIdeaAdd -->
-
-        <!--***************************** Gift Idea Summary Card  **************************-->
+  
+<!--**********************  #3 Gift Idea Summary Card  *********************-->
+        
         <section id="summaryCard" class="hide">
-            <a href="./gift_idea1.html" class="link link6"><i class="fas fa-chevron-left"></i>Add idea</a>
 
+            <button id="backToIdeaAdd"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-2">
 
-                <!-- <img src="" alt=""> Display image; if no photo, display default image -->
-                <img src="https://www.picsum.photos/300" alt="">
-                <!-- Display Title of gift idea; pre-populated from previous input text -->
+        <!-- <img src="" alt=""> Display image; if no photo, display default image -->
+                <img src="https://www.picsum.photos/200" alt="">
+            
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <label for="location">Add location(optional)</label>
-                <!-- input field for geolocation -->
+                <label for="location">Add location(optional)</label><br><br>
 
-                <button id="nextToWishlists" class="button button16" type="submit"><a href="#">Next</a></button>
+                <button id="nextToWishlists" class="button button16" type="submit"><a href="#addToWishlistSection">Next</a></button>
 
             </div>
-        </section>
-        <!-- /#summaryCard -->
 
-        <!--****************************** Add to Wishlist Page ******************************** -->
+        </section>
+   
+<!--********************** #4 Add to Wishlist Page  *********************** -->
 
         <section id="addToWishlistSection" class="hide">
-            <a href="./gift_idea2.html" class="link link7"><i class="fas fa-chevron-left"></i>back</a>
-
+        
+            <button id="backToSummaryCard"><a href="#summaryCard"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-3">
 
@@ -138,17 +137,17 @@
                 <div class="friends-list" id="friendsList"></div>
 
                 <!-- input field for geolocation -->
-
                 <button id="nextToEvents" class="button button19" type="submit"><a href="#chooseEvent">Next</a></button>
 
             </div>
+        
         </section>
-        <!-- /#addToWishlist -->
-
-        <!--*************************Choose Event  ******************************************-->
+     
+<!--*************************  #5 Choose Event  ****************************-->
 
         <section id="chooseEvent" class="hide">
-            <a href="./gift_idea3.html" class="link link8"><i class="fas fa-chevron-left"></i>Back</a>
+           
+            <button id="backToWishlistSection"><a href="#addToWishlistSection"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-4">
 
@@ -156,18 +155,19 @@
 
                 <label for="">Event (optional)</label><br>
                 <input id="eventname" type="text" placeholder="name of event"><br>
-                <input type="date" id="eventdate" name="due" />
+                <input type="date" id="eventdate" name="due" /><br>
 
                 <button id="addEventBtn" class="button button20" type="submit"> Next</button>
 
             </div>
+       
         </section>
-        <!-- /#chooseEvent -->
-
-        <!--****************************** Idea added - Complete  ***************************-->
+      
+<!--**********************  $6 Idea added - Complete  ***********************-->
 
         <section id="complete" class="hide">
-            <a href="./gift_idea4.html" class="link link9"><i class="fas fa-chevron-left"></i>Back</a>
+          
+            <button id="backToChooseEvent"><a href="#chooseEvent"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-5">
 
@@ -175,23 +175,20 @@
                 <p id="idea-added-msg"></p>
                 <p id="login-to-add"></p>
 
-
                 <button id="addToDB" class="button button21" type="submit">Done</button>
+            
             </div>
+       
+            <div id="giftcard_display"></div>
         </section>
-        <!-- /#Complete -->
-        <div id="giftcard_display"></div>
+        
         <!-- Card to show image, title, description, friend, and event, date -->
-
-
+       
+        
     </main>
+    
     <footer>
 
-
-        <!-- note: buttons will be replaced by UI assets -->
-        <!-- .navbar_container>nav.bottom_navbar>ul>(li>a[href="#"]#btn$.button.button$>img)*5 -->
-
-        <!-- .navbar_container>nav.bottom_navbar>ul>(li>button#nav_btn$.button.button$)*5 -->
         <div class="navbar_container">
             <nav class="bottom_navbar">
                 <ul>
@@ -203,8 +200,6 @@
                 </ul>
             </nav>
         </div>
-
-        <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->
 
         <div class="footer_container">
             <nav class="footer_links">
@@ -219,10 +214,7 @@
             </nav>
         </div>
 
-
     </footer>
-
-
 
 </body>
 

@@ -162,6 +162,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
 nextToWishlists.addEventListener("click", async function friendsListfromDB() {
   console.log("friends list summary!");
+  friendsList.innerHTML = "";
   await db
     .collection(firebase.auth().currentUser.uid)
     .doc("Friends")
