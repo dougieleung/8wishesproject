@@ -82,6 +82,10 @@ backToChooseEvent.addEventListener('click', () => {
     complete.classList.remove('show');
     complete.classList.add('hide');
     chooseEvent.classList.toggle('hide');
+    displayGift.innerHTML = "";
+    ideaAddedMsg.innerHTML = "";
+    remove.style.display = "none";
+    addIdea5.style.display = "block";
 })
 
 // =============== Register Login Attempt to hide/show pages ============== 

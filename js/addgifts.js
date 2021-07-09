@@ -13,6 +13,10 @@ class newWishObject {
 const displayTitle = document.querySelector("#displayTitle");
 const displayDescription = document.querySelector("#displayDesc");
 const displayGift = document.querySelector("#giftcard_display");
+const remove = document.querySelector("#remove");
+const ideaName = document.querySelector("#ideaName");
+const removeBtn = document.querySelector("#removeBtn");
+const addIdea5 = document.querySelector("#addIdea5");
 
 let newWish;
 addGift.addEventListener("click", () => {
@@ -71,7 +75,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
       .collection("List of items")
-      .doc()
+      .doc(newWish.wishTitle)
       .set({
         ...newWish,
       })
@@ -136,29 +140,34 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
           // Add the card to the page
           displayGift.appendChild(card);
+
         });
       })
-
       .catch((error) => {
         console.log("Error getting document:", error);
       });
-  } else {
-    await db
-      .collection(firebase.auth().currentUser.uid)
-      .doc("Friends")
-      .collection("List")
-      .doc()
-      .set({
-        ...newWish,
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
-  }
+    }
+  //  else {
+  //   await db
+  //     .collection(firebase.auth().currentUser.uid)
+  //     .doc("Friends")
+  //     .collection("List")
+  //     .doc()
+  //     .set({
+  //       ...newWish,
+  //     })
+  //     .then(() => {
+  //       console.log("Document successfully written!");
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error writing document: ", error);
+  //     });
+  // }
+
+remove.style.display = "block";
 });
+
+
 
 nextToWishlists.addEventListener("click", async function friendsListfromDB() {
   console.log("friends list summary!");
@@ -223,3 +232,79 @@ async function addIdeaToCollection(friendsName) {
       });
   }
 }
+
+removeBtn.addEventListener('click', () => {
+  console.log('remove button works');
+  db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("MyWishlist")
+    .collection("List of items")
+    .doc(ideaName.value)
+    .delete().then(() => {
+    console.log('Document deleted.');
+
+    displayGift.innerHTML = "";
+    addIdea5.style.display = "none";
+
+  db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("MyWishlist")
+    .collection("List of items")
+    .where("mine", "==", true)
+    .orderBy("timestamp", "desc")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+
+        // Create the card container
+        const card = document.createElement("div");
+        card.className = "displaycard";
+        // Add the Gift title
+        const giftHeader = document.createElement("h3");
+        const giftHeaderText = document.createTextNode(
+          `${doc.data().wishTitle}`
+        );
+        giftHeader.appendChild(giftHeaderText);
+        card.appendChild(giftHeader);
+
+        // Add the image / photo here
+
+        // Add the Gift description to the card
+        const descriptionContainer = document.createElement("div");
+        const descriptionText = document.createTextNode(
+          `${doc.data().wishDesc}`
+        );
+        descriptionContainer.appendChild(descriptionText);
+        card.appendChild(descriptionContainer);
+
+        // Add the Event name to the card
+        const eventHeader = document.createElement("p");
+        const eventHeaderText = document.createTextNode(
+          `${doc.data().eventName}`
+        );
+        eventHeader.appendChild(eventHeaderText);
+        card.appendChild(eventHeader);
+
+        // Add the Event date to the card
+        const eventDate = document.createElement("p");
+        const eventDateText = document.createTextNode(
+          `${doc.data().eventDate}`
+        );
+        eventDate.appendChild(eventDateText);
+        card.appendChild(eventDate);
+
+        // Add the card to the page
+        displayGift.appendChild(card);
+
+      });
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+
+  }).catch((error) => {
+    console.error('Error removing document', error);
+  })
+  ideaName.value="";
+})

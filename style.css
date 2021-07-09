@@ -41,6 +41,10 @@ main {
   display: block;
 }
 
+.removeIdea {
+  display: none;
+}
+
 /* Styles according to design ========================== */
 .bottom_navbar ul {
   display: -webkit-box;
