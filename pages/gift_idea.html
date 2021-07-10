@@ -46,6 +46,7 @@
 
     <script src="../js/firebase.js" defer></script>
     <script src="../js/main.js" defer></script>
+    <script src="../js/geolocation.js" defer></script>
     <script src="../js/addgifts.js" defer></script>
     <script src="../js/pageDisplay.js" defer></script>
 </head>
@@ -107,7 +108,9 @@
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <label for="location">Add location(optional)</label><br><br>
+                <button id="locate"><i class="fas fa-map-marker-alt"></i></button><label for="location">Add location(optional)</label><br><br>
+                <p id="status"></p>
+                <a id= "map-link" target="_blank"></a>
 
                 <button id="nextToWishlists" class="button button16" type="submit"><a href="#addToWishlistSection">Next</a></button>
 

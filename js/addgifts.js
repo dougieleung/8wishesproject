@@ -197,6 +197,11 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
     });
 });
 
+nextToWishlists.addEventListener("click", () => {
+  newWish.location = mapLink.href;
+  console.log(newWish);  
+})
+
 async function addIdeaToCollection(friendsName) {
   console.log("Event Listener Triggered! ");
 
