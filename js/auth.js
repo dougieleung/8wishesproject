@@ -46,19 +46,29 @@ firebase.auth().onAuthStateChanged((user) => {
 
 // ****************************** USER LOGIN **********************************
 
+
 loginButton.addEventListener('click', () => {
     console.log('Login Clicked')
     firebase.auth().signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
         .catch((error) => {
 
             console.log('Error signing in, ', error.message);
-            alert(error.message);
+            // alert(error.message);
+            
+            const errorLogin = document.querySelector("#error-login");
+
+            errorLogin.innerHTML=`Incorrect username or password. Please try again.`
+            
 
         })
         .then((user) => {
             if (user) {
+
+                const errorLogin = document.querySelector("#error-login");
                 
                 alert('Welcome back.  You are now logged in!');
+
+                errorLogin.innerHTML= "";
             }
         })
 

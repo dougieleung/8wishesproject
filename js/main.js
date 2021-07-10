@@ -32,6 +32,8 @@ const eventName = document.querySelector("#eventname");
 const eventDate = document.querySelector("#eventdate");
 const addEventBtn = document.querySelector("#addEventBtn");
 
+const errorLogin = document.querySelector("error-login");
+
 class userInfo {
   constructor(username, email) {
     (this.username = username), (this.email = email);
