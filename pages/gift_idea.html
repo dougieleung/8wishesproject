@@ -46,6 +46,8 @@
 
     <script src="../js/firebase.js" defer></script>
     <script src="../js/main.js" defer></script>
+    <script src="../js/geolocation.js" defer></script>
+    <script src="../js/imageCapture.js" defer></script>
     <script src="../js/addgifts.js" defer></script>
     <script src="../js/pageDisplay.js" defer></script>
 </head>
@@ -83,8 +85,8 @@
                 </form>
         <!-- The camera and gallery buttons will be replaced by UI assets -->
                 <div class="images">
-                    <button id="camera_btn11" class="button button13" type="image"><i class="fas fa-camera"></i></button>
-                    <button id="gallery_btn12" class="button button14" type="image"><i class="far fa-image"></i></button>
+                    <button id="camera_btn" class="button button13" type="image"><a href="#takePhoto"><i class="fas fa-camera"></i></a></button>
+                    <button id="gallery_btn" class="button button14" type="image"><i class="far fa-image"></i></button>
                 </div>
 
                 <button id="addGift" class="button button15" type="submit">NEXT</button>
@@ -92,8 +94,30 @@
             </div>
        
         </section>
-  
-<!--**********************  #3 Gift Idea Summary Card  *********************-->
+
+        
+<!--*********************  #3 Snapping Photo Section  ********************* -->
+
+        <section id="takePhoto" class="hide">
+            
+            <button id="backToIdeaAdd2"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i>Back</a></button>
+
+            <div id="camera">
+
+            <video id="video" width="240" height="240" autoplay></video>
+
+            <button id="snap">Snap Photo</button>
+
+            <canvas id="canvas" width="240" height="240"></canvas>
+
+            </div>
+
+
+
+
+        </section>
+
+<!--**********************  #4 Gift Idea Summary Card  *********************-->
         
         <section id="summaryCard" class="hide">
 
@@ -102,12 +126,14 @@
             <div class="add-idea-2">
 
         <!-- <img src="" alt=""> Display image; if no photo, display default image -->
-                <img src="https://www.picsum.photos/200" alt="">
+            <canvas id="canvas2" width="240" height="240"></canvas>
             
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <label for="location">Add location(optional)</label><br><br>
+                <button id="locate"><i class="fas fa-map-marker-alt"></i></button><label for="location">Add location(optional)</label><br><br>
+                <p id="status"></p>
+                <a id= "map-link" target="_blank"></a>
 
                 <button id="nextToWishlists" class="button button16" type="submit"><a href="#addToWishlistSection">Next</a></button>
 
@@ -115,7 +141,7 @@
 
         </section>
    
-<!--********************** #4 Add to Wishlist Page  *********************** -->
+<!--********************** #5 Add to Wishlist Page  *********************** -->
 
         <section id="addToWishlistSection" class="hide">
         
@@ -143,7 +169,7 @@
         
         </section>
      
-<!--*************************  #5 Choose Event  ****************************-->
+<!--*************************  #6 Choose Event  ****************************-->
 
         <section id="chooseEvent" class="hide">
            
@@ -163,7 +189,7 @@
        
         </section>
       
-<!--**********************  $6 Idea added - Complete  ***********************-->
+<!--**********************  #7 Idea added - Complete  ***********************-->
 
         <section id="complete" class="hide">
           

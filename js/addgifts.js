@@ -71,7 +71,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
       .collection("List of items")
-      .doc()
+      .doc(newWish.wishTitle)
       .set({
         ...newWish,
       })
@@ -196,6 +196,11 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
       console.log("Error getting document:", error);
     });
 });
+
+nextToWishlists.addEventListener("click", () => {
+  newWish.location = mapLink.href;
+  console.log(newWish);  
+})
 
 async function addIdeaToCollection(friendsName) {
   console.log("Event Listener Triggered! ");
