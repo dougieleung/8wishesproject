@@ -84,92 +84,8 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
     displayGift.innerHTML = "";
 
-    await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("MyWishlist")
-    .collection("List of items")
-    .where("mine", "==", true)
-    .orderBy("timestamp", "desc")
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
-  
-        // Create the card container
-        const card = document.createElement("div");
-        card.className = "displaycard";
-        // Add the Gift title
-        const giftHeader = document.createElement("h3");
-        const giftHeaderText = document.createTextNode(
-          `${doc.data().wishTitle}`
-        );
-        giftHeader.appendChild(giftHeaderText);
-        card.appendChild(giftHeader);
-  
-        // Add the image / photo here
-  
-        // Add the Gift description to the card
-        const descriptionContainer = document.createElement("div");
-        const descriptionText = document.createTextNode(
-          `${doc.data().wishDesc}`
-        );
-        descriptionContainer.appendChild(descriptionText);
-        card.appendChild(descriptionContainer);
-  
-        const deleteBtn = document.createElement("button");
-        deleteBtn.setAttribute("type", "button");
-        deleteBtn.innerText = "Delete";
-        deleteBtn.addEventListener("click", ()=>{
-          deleteButton(doc.id);
-  
-        })
-      card.appendChild(deleteBtn);
-        
-  
-        // Add the Event name to the card
-        // const eventHeader = document.createElement("p");
-        // const eventHeaderText = document.createTextNode(
-        //   `${doc.data().eventName}`
-        // );
-        // eventHeader.appendChild(eventHeaderText);
-        // card.appendChild(eventHeader);
-  
-        // // Add the Event date to the card
-        // const eventDate = document.createElement("p");
-        // const eventDateText = document.createTextNode(
-        //   `${doc.data().eventDate}`
-        // );
-        // eventDate.appendChild(eventDateText);
-        // card.appendChild(eventDate);
-  
-        // Add the card to the page
-        displayGift.appendChild(card);
-        
-      });
-    })
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
-    // Get the data back from DB for MINE in TIMESTAMP ORDER
-    
-    }
-
-  // } else {
-  //   await db
-  //     .collection(firebase.auth().currentUser.uid)
-  //     .doc("Friends")
-  //     .collection("List")
-  //     .doc()
-  //     .set({
-  //       ...newWish,
-  //     })
-  //     .then(() => {
-  //       console.log("Document successfully written!");
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error writing document: ", error);
-  //     });
-  // }
+    renderWishlist();
+  }
 });
 
 nextToWishlists.addEventListener("click", async function friendsListfromDB() {
@@ -211,8 +127,8 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
-  console.log(newWish);  
-})
+  console.log(newWish);
+});
 
 async function addIdeaToCollection(friendsName) {
   console.log("Event Listener Triggered! ");
@@ -240,61 +156,64 @@ async function addIdeaToCollection(friendsName) {
       });
   }
 }
-
-// Get the data back from DB for MINE in TIMESTAMP ORDER
-async function deleteButton (docID) {
+async function deleteWishlistItem(docID) {
   await db
-  .collection(firebase.auth().currentUser.uid)
-  .doc("MyWishlist")
-  .collection("List of items")
-  .doc(docID)
-  .delete().then(() => {
-    console.log("Document successfully deleted!");
-}).catch((error) => {
-    console.error("Error removing document: ", error);
-});
-displayGift.innerHTML = "";
-
-await db
-.collection(firebase.auth().currentUser.uid)
-.doc("MyWishlist")
-.collection("List of items")
-.where("mine", "==", true)
-.orderBy("timestamp", "desc")
-.get()
-.then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-    // Create the card container
-    const card = document.createElement("div");
-    card.className = "displaycard";
-    // Add the Gift title
-    const giftHeader = document.createElement("h3");
-    const giftHeaderText = document.createTextNode(
-      `${doc.data().wishTitle}`
-    );
-    giftHeader.appendChild(giftHeaderText);
-    card.appendChild(giftHeader);
-    // Add the image / photo here
-    // Add the Gift description to the card
-    const descriptionContainer = document.createElement("div");
-    const descriptionText = document.createTextNode(
-      `${doc.data().wishDesc}`
-    );
-    descriptionContainer.appendChild(descriptionText);
-    card.appendChild(descriptionContainer);
-    const deleteBtn = document.createElement("button");
-    deleteBtn.setAttribute = ("type", "button");
-    deleteBtn.innerText = "Delete";
-    deleteBtn.addEventListener("click", () => {
-      deleteButton(doc.id);
+    .collection(firebase.auth().currentUser.uid)
+    .doc("MyWishlist")
+    .collection("List of items")
+    .doc(docID)
+    .delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+      renderWishlist();
     })
-    card.appendChild(deleteBtn);
+    .catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+  displayGift.innerHTML = "";
+}
 
-    displayGift.appendChild(card);
-  });
-})
-.catch((error) => {
-  console.log("Error getting document:", error);
-});
+async function renderWishlist() {
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("MyWishlist")
+    .collection("List of items")
+    .where("mine", "==", true)
+    .orderBy("timestamp", "desc")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        // Create the card container
+        const card = document.createElement("div");
+        card.className = "displaycard";
+        // Add the Gift title
+        const giftHeader = document.createElement("h3");
+        const giftHeaderText = document.createTextNode(
+          `${doc.data().wishTitle}`
+        );
+        giftHeader.appendChild(giftHeaderText);
+        card.appendChild(giftHeader);
+        // Add the image / photo here
+        // Add the Gift description to the card
+        const descriptionContainer = document.createElement("div");
+        const descriptionText = document.createTextNode(
+          `${doc.data().wishDesc}`
+        );
+        descriptionContainer.appendChild(descriptionText);
+        card.appendChild(descriptionContainer);
+        const deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute = ("type", "button");
+        deleteBtn.innerText = "Delete";
+        deleteBtn.addEventListener("click", () => {
+          deleteWishlistItem(doc.id);
+        });
+        card.appendChild(deleteBtn);
+
+        displayGift.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
 }
