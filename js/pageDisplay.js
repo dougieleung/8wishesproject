@@ -7,7 +7,9 @@ const startIdeaBtn = document.querySelector('#startIdeaBtn');
 const backToStart = document.querySelector('#backToStart');
 const giftIdeaHomePage = document.querySelector('#giftIdeaHomePage');
 const giftIdeaAdd = document.querySelector('#giftIdeaAdd');
+const takePhoto = document.querySelector("#takePhoto");
 const backToIdeaAdd = document.querySelector("#backToIdeaAdd");
+const backToIdeaAdd2 = document.querySelector("#backToIdeaAdd2");
 const addGift = document.querySelector("#addGift");
 const nextToWishlists = document.querySelector("#nextToWishlists");
 const summaryCard = document.querySelector('#summaryCard');
@@ -44,6 +46,18 @@ addGift.addEventListener('click', () => {
 backToIdeaAdd.addEventListener('click', () => {
     summaryCard.classList.remove('show');
     summaryCard.classList.add('hide');
+    giftIdeaAdd.classList.toggle('hide');
+})
+
+cameraBtn.addEventListener('click', () => {
+    giftIdeaAdd.classList.remove('show');
+    giftIdeaAdd.classList.add('hide');
+    takePhoto.classList.toggle('hide');
+})
+
+backToIdeaAdd2.addEventListener('click', () => {
+    takePhoto.classList.remove('show');
+    takePhoto.classList.add('hide');
     giftIdeaAdd.classList.toggle('hide');
 })
 
