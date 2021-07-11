@@ -71,7 +71,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
       .collection("List of items")
-      .doc()
+      .doc(newWish.wishTitle)
       .set({
         ...newWish,
       })
