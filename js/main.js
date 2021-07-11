@@ -27,6 +27,19 @@ const addToDB = document.querySelector("#addToDB");
 const logintoadd = document.querySelector("#login-to-add");
 const ideaAddedMsg = document.querySelector("#idea-added-msg");
 
+// Adding friends to the list
+// Fetching elements from the DOM
+const addFriend = document.querySelector("#addFriend");
+const friendName = document.querySelector("#friendName");
+const friendEvent = document.querySelector("#friendEvent");
+const friendDate = document.querySelector("#friendDate");
+const addFriendBtn = document.querySelector("#addFriendBtn");
+const fetchFriendsBtn = document.querySelector("#fetchFriendsBtn");
+const friendEventSelect = document.querySelector("#friendEventSelect");
+const createEvent = document.querySelector("#createEvent");
+const friendAddBtn = document.querySelector("#friendAddBtn");
+const FriendsListfromDB = document.querySelector("#friendsListFromDB");
+
 // Add special event variables
 const eventName = document.querySelector("#eventname");
 const eventDate = document.querySelector("#eventdate");
