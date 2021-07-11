@@ -1,7 +1,7 @@
 
 console.log('pageDisplay.js CONNECTED')
 
-// ================== Fetching from DOM ===================
+// ================== Fetching from DOM for Gift Idea Page ===================
 
 const startIdeaBtn = document.querySelector('#startIdeaBtn');
 const backToStart = document.querySelector('#backToStart');
@@ -34,7 +34,7 @@ backToStart.addEventListener('click', () => {
     console.log('going back');
     giftIdeaAdd.classList.remove('show');
     giftIdeaAdd.classList.add('hide');
-    giftIdeaHomePage.classList.toggle('hide');  
+    giftIdeaHomePage.classList.toggle('hide');
 })
 
 addGift.addEventListener('click', () => {
@@ -97,6 +97,25 @@ backToChooseEvent.addEventListener('click', () => {
     complete.classList.add('hide');
     chooseEvent.classList.toggle('hide');
 })
+
+
+// ============== Fetching from DOM for friends page ============
+const startFriendsPage = document.querySelector('#listEmptyPage');
+const addFriendPage = document.querySelector('#addFriendPage');
+const friendsListPage = document.querySelector('#friendsListPage');
+
+
+// ===============Friends Page Display Toggle ==================
+addFriend.addEventListener('click', () => {
+    console.log('addFriend button clicked')
+    startFriendsPage.classList.remove('show');
+    startFriendsPage.classList.add('hide');
+    addFriendPage.classList.toggle('hide');
+})
+
+
+
+
 
 // =============== Register Login Attempt to hide/show pages ============== 
 
