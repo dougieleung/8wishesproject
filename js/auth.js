@@ -19,6 +19,11 @@ registerForm.addEventListener('submit', async (event) => {
 
     } else {
         console.error('Passwords are not matching');
+
+        const outputMessage = document.querySelector("#outputMessage");
+
+        outputMessage.innerHTML = "Passwords are not matching!";
+
     }
 })
 
@@ -66,7 +71,7 @@ loginButton.addEventListener('click', () => {
 
                 const errorLogin = document.querySelector("#error-login");
                 
-                alert('Welcome back.  You are now logged in!');
+                // alert('Welcome back.  You are now logged in!');
 
                 errorLogin.innerHTML= "";
             }
@@ -85,11 +90,13 @@ logoutButton.addEventListener('click', () => {
 
     firebase.auth().signOut().then(() => {
            
-            alert('Thanks for visiting us.  See you later!');
+            // alert('Thanks for visiting us.  See you later!');
 
         }).catch((error) => {
             console.error('Error signing out, ', error.message);
             alert(error.message);
+
+            
         });  
 });
 
