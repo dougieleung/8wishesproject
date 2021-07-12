@@ -173,7 +173,10 @@ async function deleteWishlistItem(docID) {
   displayGift.innerHTML = "";
 }
 
+
+
 async function renderWishlist() {
+  displayGift.innerHTML = "";
   await db
     .collection(firebase.auth().currentUser.uid)
     .doc("MyWishlist")
@@ -183,16 +186,13 @@ async function renderWishlist() {
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        // console.log(doc.id, " => ", doc.data());
         // Create the card container
         const card = document.createElement("div");
         card.className = "displaycard";
         // Add the Gift title
         const giftHeader = document.createElement("h3");
-        const giftHeaderText = document.createTextNode(
-          `${doc.data().wishTitle}`
-        );
-        giftHeader.appendChild(giftHeaderText);
+        giftHeader.innerText = `${doc.data().wishTitle}`;
         card.appendChild(giftHeader);
         // Add the image / photo here
         // Add the Gift description to the card
@@ -202,18 +202,81 @@ async function renderWishlist() {
         );
         descriptionContainer.appendChild(descriptionText);
         card.appendChild(descriptionContainer);
+        // Deleting an item
         const deleteBtn = document.createElement("button");
         deleteBtn.setAttribute = ("type", "button");
         deleteBtn.innerText = "Delete";
+        card.appendChild(deleteBtn);
+        displayGift.appendChild(card);
         deleteBtn.addEventListener("click", () => {
           deleteWishlistItem(doc.id);
         });
-        card.appendChild(deleteBtn);
 
-        displayGift.appendChild(card);
+        // Editing an item
+        // Editing Title
+        const editTitleBtn = document.createElement('button');
+        editTitleBtn.innerText = "Edit Title";
+        card.appendChild(editTitleBtn);
+        editTitleBtn.addEventListener('click', () => {
+          editWishTitle(doc, card);
+          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+          editTitleBtn.classList.toggle('hide');
+        })
+        // Editing Description
+        const editDescBtn = document.createElement('button');
+        editDescBtn.innerText = "Edit Desc";
+        card.appendChild(editDescBtn);
+        editDescBtn.addEventListener('click', () => {
+          editWishDesc(doc, card);
+          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+          editDescBtn.classList.toggle('hide');
+        })
+
       });
     })
     .catch((error) => {
       console.log("Error getting document:", error);
     });
+}
+
+function editWishTitle(doc, card) {
+  const editTitleInput = document.createElement('input');
+  editTitleInput.setAttribute('type', 'text');
+  editTitleInput.classList.add('editTitleInput');
+  editTitleInput.setAttribute('value', `${doc.data().wishTitle}`);
+  const doneEditTitleBtn = document.createElement('button');
+  doneEditTitleBtn.innerText = 'OK';
+  card.appendChild(editTitleInput);
+  card.appendChild(doneEditTitleBtn);
+
+  doneEditTitleBtn.addEventListener('click', async function () {
+    let userTitleEdit = { wishTitle: editTitleInput.value };
+    await db.collection(firebase.auth().currentUser.uid)
+      .doc("MyWishlist")
+      .collection("List of items")
+      .doc(doc.id)
+      .update({ ...userTitleEdit });
+    renderWishlist();
+  })
+}
+
+function editWishDesc(doc, card) {
+  const editDescInput = document.createElement('input');
+  editDescInput.setAttribute('type', 'text');
+  editDescInput.classList.add('editDescInput');
+  editDescInput.setAttribute('value', `${doc.data().wishDesc}`);
+  const doneEditDescBtn = document.createElement('button');
+  doneEditDescBtn.innerText = 'OK';
+  card.appendChild(editDescInput);
+  card.appendChild(doneEditDescBtn);
+
+  doneEditDescBtn.addEventListener('click', async function () {
+    let userDescEdit = { wishDesc: editDescInput.value };
+    await db.collection(firebase.auth().currentUser.uid)
+      .doc("MyWishlist")
+      .collection("List of items")
+      .doc(doc.id)
+      .update({ ...userDescEdit });
+    renderWishlist();
+  })
 }
