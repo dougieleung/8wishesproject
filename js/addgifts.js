@@ -127,9 +127,15 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
+
+  if (newWish.location !== undefined) {
   windowDescription.innerHTML = `${newWish.wishTitle}<br>
   ${newWish.wishDesc}<br>
   ${newWish.location}`;
+} else {
+  windowDescription.innerHTML = `${newWish.wishTitle}<br>
+  ${newWish.wishDesc}`;
+}
   console.log(newWish);
 });
 
