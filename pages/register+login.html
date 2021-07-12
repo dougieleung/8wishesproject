@@ -1,150 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/styles.css" />
+    <title>8 Wishes</title>
+    <meta
+      name="description"
+      content="An application for searching special unique gifts"
+    />
+    <link rel="manifest" href="../manifest.json" />
 
-  <title>8 Wishes</title>
-  <meta name="description" content="An application for searching special unique gifts" />
-  <link rel="manifest" href="../manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then((reg) => {
-        console.log(`Service Worker ready (Scope: ${reg.scope})`);
-      });
-
-      navigator.serviceWorker
-        .register("../sw.js", {
-          scope: "/",
-        })
-        .then(function (reg) {
-          console.log(`Service Worker Registration (Scope: ${reg.scope})`);
-        })
-        .catch(function (error) {
-          console.log(`Service Worker Error (${error})`);
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((reg) => {
+          console.log(`Service Worker ready (Scope: ${reg.scope})`);
         });
-    } else {
-      console.warn("Service Worker not available");
-    }
-  </script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
+        navigator.serviceWorker
+          .register("../sw.js", {
+            scope: "/",
+          })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
+    </script>
 
-  <script src="../js/firebase.js" defer></script>
-  <script src="../js/main.js" defer></script>
-  <script src="../js/auth.js" defer></script>
-</head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
+      defer
+    ></script>
+    <!-- Add Firebase products that you want to use -->
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"
+      defer
+    ></script>
 
-<body>
-  <header></header>
-  <main>
-    <!--************************************  -->
-    <!-- LOGIN PAGE SECTION -->
-    <!-- ************************************* -->
+    <script src="../js/firebase.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+  </head>
 
-    <section id="loginPage">
-      <h2>LOGIN / LOGOUT</h2>
+  <body>
+    <header></header>
+    <main>
+      <!--************************************  -->
+      <!-- LOGIN PAGE SECTION -->
+      <!-- ************************************* -->
 
-      <!-- Logo and/or background image -->
-      <img src="" alt="" />
+      <section id="loginPage">
+        <h2>LOGIN / LOGOUT</h2>
 
-      <div class="notloggedin" id="not-logged-in">
-        <input type="email" name="" id="email1" placeholder="Enter your e-mail" />
-        <input type="password" name="" id="password1" placeholder="Enter your password" />
-        <a href="../pages/resetpassword.html" class="link link2">Forgot Password?</a>
-        <button id="btn_login" class="button button3">Log in</button>
-        <span>Not a Member?</span><br />
-        <a href="#registerPage" class="link link3">Sign up Now!</a>
+        <!-- Logo and/or background image -->
+        <img src="" alt="" />
+
+        <div class="notloggedin" id="not-logged-in">
+          <input
+            type="email"
+            name=""
+            id="email1"
+            placeholder="Enter your e-mail"
+          />
+          <input
+            type="password"
+            name=""
+            id="password1"
+            placeholder="Enter your password"
+          />
+          <a href="../pages/resetpassword.html" class="link link2"
+            >Forgot Password?</a
+          >
+          <button id="btn_login" class="button button3">Log in</button>
+          <span>Not a Member?</span><br />
+          <a href="#registerPage" class="link link3">Sign up Now!</a>
+        </div>
+
+        <div class="errorLogin" id="error-login"></div>
+
+        <div class="loggedin" id="logged-in">
+          <h3>Welcome! You are logged in!</h3>
+          <p id="user_para"></p>
+          <button id="btn_logout" class="button button4">Logout</button>
+        </div>
+      </section>
+
+      <!--************************************  -->
+      <!-- REGISTER PAGE SECTION -->
+      <!-- ************************************* -->
+
+      <section class="" id="registerPage">
+        <h1>REGISTRATION</h1>
+
+        <form id="registerForm">
+          <div class="form-item form-item1">
+            <label for="username">Name</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-item form-item2">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your e-mail"
+              required
+            />
+          </div>
+          <div class="form-item form-item3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Set up a password"
+              required
+            />
+          </div>
+          <div class="form-item form-item4">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="Enter password again"
+              required
+            />
+          </div>
+          <div class="form-item form-button">
+            <button type="submit" id="registerButton">Register</button>
+          </div>
+        </form>
+        <p id="outputMessage"></p>
+      </section>
+      <!-- /#registerPage. -->
+    </main>
+    <footer>
+      <div class="navbar_container">
+        <nav class="bottom_navbar">
+          <ul>
+            <li><button id="nav_btn1" class="button button5">Home</button></li>
+            <li>
+              <button id="nav_btn2" class="button button6">My List</button>
+            </li>
+            <li><button id="nav_btn3" class="button button7">+</button></li>
+            <li>
+              <button id="nav_btn4" class="button button8">Friends</button>
+            </li>
+            <li><button id="nav_btn5" class="button button9">Store</button></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="errorLogin" id ="error-login">
-        
+      <div class="footer_container">
+        <nav class="footer_links">
+          <hr />
+          <ul>
+            <li><a href="./tour.html">Take A Tour</a></li>
+            <li><a href="./privacy.html">Privacy Policies</a></li>
+            <li><a href="./advertise.html">Ads Info</a></li>
+            <li><a href="./business.html">Business</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <div class="loggedin" id="logged-in">
-        <h3>Welcome! You are logged in!</h3>
-        <p id="user_para"></p>
-        <button id="btn_logout" class="button button4">Logout</button>
-      </div>
-
-    </section>
-
-    <!--************************************  -->
-    <!-- REGISTER PAGE SECTION -->
-    <!-- ************************************* -->
-
-    <section class="" id="registerPage">
-      <h1>REGISTRATION</h1>
-
-      <form id="registerForm">
-        <div class="form-item form-item1">
-          <label for="username">Name</label>
-          <input type="text" name="username" id="username" placeholder="Enter your name" required />
-        </div>
-        <div class="form-item form-item2">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" placeholder="Enter your e-mail" required />
-        </div>
-        <div class="form-item form-item3">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Set up a password" required />
-        </div>
-        <div class="form-item form-item4">
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter password again"
-            required />
-        </div>
-        <div class="form-item form-button">
-          <button type="submit" id="registerButton">Register</button>
-        </div>
-      </form>
-      <p id="outputMessage"></p>
-    </section>
-    <!-- /#registerPage. -->
-  </main>
-  <footer>
-    <div class="navbar_container">
-      <nav class="bottom_navbar">
-        <ul>
-          <li><button id="nav_btn1" class="button button5">Home</button></li>
-          <li>
-            <button id="nav_btn2" class="button button6">My List</button>
-          </li>
-          <li><button id="nav_btn3" class="button button7">+</button></li>
-          <li>
-            <button id="nav_btn4" class="button button8">Friends</button>
-          </li>
-          <li><button id="nav_btn5" class="button button9">Store</button></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="footer_container">
-      <nav class="footer_links">
-        <hr />
-        <ul>
-          <li><a href="./tour.html">Take A Tour</a></li>
-          <li><a href="./privacy.html">Privacy Policies</a></li>
-          <li><a href="./advertise.html">Ads Info</a></li>
-          <li><a href="./business.html">Business</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

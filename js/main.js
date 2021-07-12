@@ -5,6 +5,7 @@ const usernameInput = document.querySelector("#username");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
+const registerPage = document.querySelector("#registerPage");
 const registerBtn = document.querySelector("#registerButton");
 const registerForm = document.querySelector("#registerForm");
 
