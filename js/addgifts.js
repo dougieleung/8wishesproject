@@ -5,14 +5,12 @@ class newWishObject {
     this.wishDesc = desc;
     this.timestamp = timestamp;
   }
-  toString() {
-    return this.wishTitle + ", " + this.wishDesc + ", " + this.timestamp;
-  }
 }
 
 const displayTitle = document.querySelector("#displayTitle");
 const displayDescription = document.querySelector("#displayDesc");
 const displayGift = document.querySelector("#giftcard_display");
+const windowDescription = document.querySelector("#windowDescription");
 
 let newWish;
 addGift.addEventListener("click", () => {
@@ -22,6 +20,8 @@ addGift.addEventListener("click", () => {
       giftDescription.value.trim(),
       new Date()
     );
+
+    console.log(newWish);
     displayTitle.innerHTML = `${giftTitle.value}`;
     displayDescription.innerHTML = `${giftDescription.value}`;
     giftTitle.value = "";
@@ -35,7 +35,7 @@ addToWish.addEventListener("click", () => {
   addWishMsg.innerHTML = "";
   newWish.mine = true;
   addWishMsg.innerHTML =
-    'You have added the idea to your own wishlist! Please click "Next" to add an event to it!';
+    'You have added the idea to your own wishlist! Please click "Next" to see your list!';
 });
 
 // addToFriend.addEventListener("click", () => {
@@ -127,6 +127,9 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
+  windowDescription.innerHTML = `${newWish.wishTitle}<br>
+  ${newWish.wishDesc}<br>
+  ${newWish.location}`;
   console.log(newWish);
 });
 

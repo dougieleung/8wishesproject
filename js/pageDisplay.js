@@ -59,6 +59,7 @@ backToIdeaAdd2.addEventListener('click', () => {
     takePhoto.classList.remove('show');
     takePhoto.classList.add('hide');
     giftIdeaAdd.classList.toggle('hide');
+    
 })
 
 nextToWishlists.addEventListener('click', () => {
