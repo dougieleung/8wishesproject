@@ -2,7 +2,8 @@ const cameraBtn = document.querySelector("#camera_btn");
 const video = document.querySelector("#video");
 const snap = document.querySelector("#snap");
 const canvas = document.querySelector("#canvas");
-const canvas2 = document.querySelector("#canvas2");
+const summaryCardimage = document.querySelector("#summaryCardimage");
+const windowImage = document.querySelector("#windowImage");
 const context = canvas.getContext("2d");
 context.scale(0.5, 0.5);
 
@@ -22,14 +23,28 @@ snap.addEventListener("click", function () {
 
     context.drawImage(video,0,0);
     const imageBlob = canvas.toBlob(handleBlob, "image/jpeg");
+
+});
+
+backToIdeaAdd2.addEventListener("click", function () {
+
+    const tracks = video.srcObject.getTracks();
+    tracks.forEach(track => track.stop());
+
 });
 
 function handleBlob(blob) {
 
     const objectURL = window.URL.createObjectURL(blob);
     const copyImg = document.createElement("img");
-    copyImg.style.height = "100px";
+    copyImg.style.height = "200px";
     copyImg.src = objectURL;
-    canvas.appendChild(copyImg);
-    console.log(objectURL);
+    summaryCardimage.innerHTML = "";
+    summaryCardimage.appendChild(copyImg);
+    const objectURL2 = window.URL.createObjectURL(blob);
+    const copyImg2 = document.createElement("img");
+    copyImg2.style.height = "100px";
+    copyImg2.src = objectURL2;
+    windowImage.innerHTML = "";
+    windowImage.appendChild(copyImg2);
 }
