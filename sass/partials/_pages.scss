@@ -1,0 +1,247 @@
+// log in  + register + welcome
+
+main {
+  #loginPage,
+  #registerPage,
+  #welcomePage,
+  #giftIdeaHomePage,
+  #giftIdeaAdd,
+  #summaryCard,
+  #addToWishlistSection,
+  #complete,
+  #listEmptyPage,
+  #addFriendPage,
+  #friendsListPage {
+    background-color: $color_primary;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    color: $color_neutral_white;
+    font-family: $font_body;
+
+    #not-logged-in,
+    #registerForm {
+      flex-direction: column;
+      display: flex;
+      width: 60vw;
+
+      a,
+      span {
+        color: $color_neutral_white;
+      }
+
+      input#email1,
+      #password1,
+      #btn_login,
+      #username,
+      #email,
+      #password,
+      #confirmPassword,
+      #registerButton {
+        padding: 1rem 0 1rem 0.3rem;
+        border-radius: 0.7rem;
+        border: 1px solid $color_neutral_white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        margin-left: 0;
+      }
+
+      .forgot-password {
+        text-align: right;
+      }
+
+      #btn_login,
+      #registerButton {
+        background-color: $color_accent;
+        border-color: $color_accent;
+        color: $color_neutral_white;
+      }
+    }
+
+    h2 {
+      color: $color_neutral_white;
+      text-align: center;
+    }
+
+    .footer-login {
+      height: 10vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    #registerForm .footer-register {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+
+  #welcomePage {
+    h1 {
+      font-size: 3rem;
+    }
+    .footer-welcome {
+      text-align: center;
+
+      div {
+        padding: 1rem;
+      }
+
+      a {
+        color: $color_neutral_white;
+      }
+    }
+  }
+}
+
+//////////////// demo page/////////////////
+
+main #demo-page {
+  .demo-carousel {
+    height: 70vh;
+    background-color: $color_neutral_white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fas {
+    justify-self: baseline;
+  }
+
+  .footer-demo {
+    background-color: $color_primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 30vh;
+  }
+
+  #sign-up,
+  #log-in {
+    width: 60%;
+    font-family: $font_body;
+  }
+}
+
+main #loginPage {
+  #logged-in {
+    justify-content: center;
+    height: 40vh;
+  }
+
+  #btn_logout {
+    padding: 1rem 0;
+    border-radius: 0.7rem;
+    border: 1px solid $color_neutral_white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    margin-left: 0;
+    background-color: $color_accent;
+    border-color: $color_accent;
+    color: $color_neutral_white;
+  }
+}
+
+///////////// gift idea page//////////////
+
+main #giftIdeaHomePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #startIdeaBtn {
+    background-color: $color_accent;
+    border-color: $color_accent;
+    color: $color_neutral_white;
+    padding: 1rem 0;
+    border-radius: 0.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    margin-left: 0;
+
+    a {
+      color: $color_neutral_white;
+    }
+  }
+}
+
+main .add-idea-1,
+.add-idea-2,
+.add-idea-3 {
+  width: 60vw;
+  .images {
+    text-align: center;
+  }
+  #ideaForm {
+    #gift_title,
+    #gift_description {
+      padding: 1rem 0;
+      border-radius: 0.7rem;
+      border: 1px solid $color_neutral_white;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+      margin-left: 0;
+    }
+  }
+}
+
+#addGift,
+#nextToWishlists,
+#addtowish,
+#nextToEvents,
+#addToDB,
+#sign-up,
+#log-in,
+#addFriend,
+#addFriendBtn,
+#fetchFriendsBtn {
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid $color_neutral_white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: $color_accent;
+  border-color: $color_accent;
+  color: $color_neutral_white;
+
+  a {
+    color: $color_neutral_white;
+  }
+}
+
+// Friend page
+
+#addFriend,
+#addFriendBtn {
+  width: 60%;
+}
+
+input#friendName,
+#friendEventSelect,
+#friendDate {
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid $color_neutral_white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  width: 60%;
+}
