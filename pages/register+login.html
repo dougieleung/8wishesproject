@@ -52,22 +52,66 @@
   <header></header>
   <main>
     <!--************************************  -->
+    <!-- WELCOME PAGE SECTION -->
+    <!-- ************************************* -->
+
+    <section id="welcomePage">
+      <h1>Welcome</h1>
+
+      <div class="logo">
+        <img src="/icons/apple-icon-180x180.png" alt="8wishes-logo">
+      </div>
+
+      <div class="footer-welcome">
+        <div class="see-demo"><a href="#demo-page">see the demo</a></div>
+        <div class="skip"><a href="#loginPage">skip</a></div>
+      </div>
+    </section>
+
+    <!-- DEMO PAGE -->
+
+    <section id="demo-page">
+
+    <div class="demo-carousel">
+      <img src="/icons/android-icon-144x144.png" alt="">
+    </div>
+
+    <div class="footer-demo">
+      <button id="sign-up">Sign up</button>
+      <button id="log-in">Login</button>
+    </div>
+  </section>
+
+
+    <!--************************************  -->
     <!-- LOGIN PAGE SECTION -->
     <!-- ************************************* -->
 
     <section id="loginPage">
-      <h2>LOGIN / LOGOUT</h2>
+      <h2>LOGIN</h2>
 
       <!-- Logo and/or background image -->
       <img src="" alt="" />
 
       <div class="notloggedin" id="not-logged-in">
-        <input type="email" name="" id="email1" placeholder="Enter your e-mail" required/>
-        <input type="password" name="" id="password1" placeholder="Enter your password" required/>
-        <a href="../pages/resetpassword.html" class="link link2">Forgot Password?</a>
-        <button id="btn_login" class="button button3" type="button">Log in</button>
-        <span>Not a Member?</span><br />
-        <a href="#registerPage" class="link link3">Sign up Now!</a>
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="" id="email1" placeholder="Enter your e-mail" />
+        <label for="password" id="password-label">Password</label>
+        <input type="password" name="" id="password1" placeholder="Enter your password" />
+        
+        <div class="forgot-password">
+
+          <a href="../pages/resetpassword.html" class="link link2">Forgot Password?</a>
+
+        </div>
+
+        <button id="btn_login" class="button button3">Log in</button>
+
+        <div class="footer-login">
+            <span>Not a Member?</span><br />
+            <a href="#registerPage" class="link link3">Sign up Now!</a>
+      </div>
+
       </div>
 
       <div class="errorLogin" id="error-login"></div>
@@ -107,6 +151,12 @@
         <div class="form-item form-button">
           <button type="submit" id="registerButton">Register</button>
         </div>
+
+        <div class="footer-register">
+          <span>Already a Member? <a href="#registerPage" class="link link3">Log in!</a> </span>
+         
+    </div>
+
       </form>
       <p id="outputMessage"></p>
     </section>
