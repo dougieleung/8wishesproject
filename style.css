@@ -1,4 +1,7 @@
 /* ================ Variables ==================*/
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */
@@ -55,5 +58,176 @@ main {
 main section {
   width: 100%;
   min-height: 70vh;
+}
+
+/* ================ Typography =====================*/
+#giftIdeaProcess h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#giftIdeaProcess a, #giftIdeaProcess .button, #giftIdeaProcess button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#giftIdeaProcess input, #giftIdeaProcess textarea {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+}
+
+#giftIdeaProcess h3 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#giftIdeaProcess .displaycard div {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#loginPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#loginPage .notloggedin input {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+}
+
+#loginPage .notloggedin a, #loginPage .notloggedin span {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#loginPage .notloggedin button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#loginPage .loggedin h3 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#loginPage .loggedin p {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#loginPage .loggedin button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#registerPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#registerPage #registerForm label {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#registerPage #registerForm button, #registerPage #registerForm input {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#resetContainer h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#resetContainer h4 {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#resetContainer label {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#resetContainer button, #resetContainer input {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#listEmptyPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#listEmptyPage button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#addFriendPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#addFriendPage label, #addFriendPage .profile-pic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#addFriendPage input, #addFriendPage #friendEventSelect, #addFriendPage button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#friendsListPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#friendsListPage a {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#friendsListPage #fetchedFriendsList {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer_container a {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
