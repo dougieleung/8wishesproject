@@ -91,17 +91,4 @@ class userInfo {
         var errorMessage = error.message;
       });
   }
-
-  // Attach the observer using the onAuthStateChanged method. When a user successfully signs in, you can get information about the user in the observer. NOT WORKING RIGHT NOW - not calling it anywhere...
-  state() {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        var uid = user.uid;
-        // ...
-      } else {
-        // User is signed out
-        // ...
-      }
-    });
-  }
 }
