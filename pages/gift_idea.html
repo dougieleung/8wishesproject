@@ -47,8 +47,8 @@
     <script src="../js/firebase.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/geolocation.js" defer></script>
-    <script src="../js/imageCapture.js" defer></script>
     <script src="../js/addgifts.js" defer></script>
+    <script src="../js/imageCapture.js" defer></script>
     <script src="../js/pageDisplay.js" defer></script>
 </head>
 
@@ -126,7 +126,7 @@
             <div class="add-idea-2">
 
         <!-- <img src="" alt=""> Display image; if no photo, display default image -->
-            <canvas id="canvas2" width="240" height="240"></canvas>
+            <div id=summaryCardimage></div>
             
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
@@ -150,8 +150,8 @@
             <div class="add-idea-3">
 
                 <div class="idea-window">
-                    <img src="https://www.picsum.photos/100" alt="">
-                    <div class="window-description"></div>
+                    <div id=windowImage></div>
+                    <div id="windowDescription" class="window-description"></div>
                 </div>
 
                 <button id="addtowish" class="button button17">Add to wishlist</button>
