@@ -2,6 +2,578 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+/* ================ Pages =====================*/
+main #loginPage,
+main #registerPage,
+main #welcomePage,
+main #giftIdeaHomePage,
+main #giftIdeaAdd,
+main #summaryCard,
+main #addToWishlistSection,
+main #complete,
+main #listEmptyPage,
+main #addFriendPage,
+main #friendsListPage {
+  background-color: #6E64AC;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
+  color: #F9F9FB;
+  font-family: "Livvic", sans-serif;
+}
+
+main #loginPage #not-logged-in,
+main #loginPage #registerForm,
+main #registerPage #not-logged-in,
+main #registerPage #registerForm,
+main #welcomePage #not-logged-in,
+main #welcomePage #registerForm,
+main #giftIdeaHomePage #not-logged-in,
+main #giftIdeaHomePage #registerForm,
+main #giftIdeaAdd #not-logged-in,
+main #giftIdeaAdd #registerForm,
+main #summaryCard #not-logged-in,
+main #summaryCard #registerForm,
+main #addToWishlistSection #not-logged-in,
+main #addToWishlistSection #registerForm,
+main #complete #not-logged-in,
+main #complete #registerForm,
+main #listEmptyPage #not-logged-in,
+main #listEmptyPage #registerForm,
+main #addFriendPage #not-logged-in,
+main #addFriendPage #registerForm,
+main #friendsListPage #not-logged-in,
+main #friendsListPage #registerForm {
+  flex-direction: column;
+  display: flex;
+  width: 60vw;
+}
+
+main #loginPage #not-logged-in a,
+main #loginPage #not-logged-in span,
+main #loginPage #registerForm a,
+main #loginPage #registerForm span,
+main #registerPage #not-logged-in a,
+main #registerPage #not-logged-in span,
+main #registerPage #registerForm a,
+main #registerPage #registerForm span,
+main #welcomePage #not-logged-in a,
+main #welcomePage #not-logged-in span,
+main #welcomePage #registerForm a,
+main #welcomePage #registerForm span,
+main #giftIdeaHomePage #not-logged-in a,
+main #giftIdeaHomePage #not-logged-in span,
+main #giftIdeaHomePage #registerForm a,
+main #giftIdeaHomePage #registerForm span,
+main #giftIdeaAdd #not-logged-in a,
+main #giftIdeaAdd #not-logged-in span,
+main #giftIdeaAdd #registerForm a,
+main #giftIdeaAdd #registerForm span,
+main #summaryCard #not-logged-in a,
+main #summaryCard #not-logged-in span,
+main #summaryCard #registerForm a,
+main #summaryCard #registerForm span,
+main #addToWishlistSection #not-logged-in a,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm a,
+main #addToWishlistSection #registerForm span,
+main #complete #not-logged-in a,
+main #complete #not-logged-in span,
+main #complete #registerForm a,
+main #complete #registerForm span,
+main #listEmptyPage #not-logged-in a,
+main #listEmptyPage #not-logged-in span,
+main #listEmptyPage #registerForm a,
+main #listEmptyPage #registerForm span,
+main #addFriendPage #not-logged-in a,
+main #addFriendPage #not-logged-in span,
+main #addFriendPage #registerForm a,
+main #addFriendPage #registerForm span,
+main #friendsListPage #not-logged-in a,
+main #friendsListPage #not-logged-in span,
+main #friendsListPage #registerForm a,
+main #friendsListPage #registerForm span {
+  color: #F9F9FB;
+}
+
+main #loginPage #not-logged-in input#email1,
+main #loginPage #not-logged-in #password1,
+main #loginPage #not-logged-in #btn_login,
+main #loginPage #not-logged-in #username,
+main #loginPage #not-logged-in #email,
+main #loginPage #not-logged-in #password,
+main #loginPage #not-logged-in #confirmPassword,
+main #loginPage #not-logged-in #registerButton,
+main #loginPage #registerForm input#email1,
+main #loginPage #registerForm #password1,
+main #loginPage #registerForm #btn_login,
+main #loginPage #registerForm #username,
+main #loginPage #registerForm #email,
+main #loginPage #registerForm #password,
+main #loginPage #registerForm #confirmPassword,
+main #loginPage #registerForm #registerButton,
+main #registerPage #not-logged-in input#email1,
+main #registerPage #not-logged-in #password1,
+main #registerPage #not-logged-in #btn_login,
+main #registerPage #not-logged-in #username,
+main #registerPage #not-logged-in #email,
+main #registerPage #not-logged-in #password,
+main #registerPage #not-logged-in #confirmPassword,
+main #registerPage #not-logged-in #registerButton,
+main #registerPage #registerForm input#email1,
+main #registerPage #registerForm #password1,
+main #registerPage #registerForm #btn_login,
+main #registerPage #registerForm #username,
+main #registerPage #registerForm #email,
+main #registerPage #registerForm #password,
+main #registerPage #registerForm #confirmPassword,
+main #registerPage #registerForm #registerButton,
+main #welcomePage #not-logged-in input#email1,
+main #welcomePage #not-logged-in #password1,
+main #welcomePage #not-logged-in #btn_login,
+main #welcomePage #not-logged-in #username,
+main #welcomePage #not-logged-in #email,
+main #welcomePage #not-logged-in #password,
+main #welcomePage #not-logged-in #confirmPassword,
+main #welcomePage #not-logged-in #registerButton,
+main #welcomePage #registerForm input#email1,
+main #welcomePage #registerForm #password1,
+main #welcomePage #registerForm #btn_login,
+main #welcomePage #registerForm #username,
+main #welcomePage #registerForm #email,
+main #welcomePage #registerForm #password,
+main #welcomePage #registerForm #confirmPassword,
+main #welcomePage #registerForm #registerButton,
+main #giftIdeaHomePage #not-logged-in input#email1,
+main #giftIdeaHomePage #not-logged-in #password1,
+main #giftIdeaHomePage #not-logged-in #btn_login,
+main #giftIdeaHomePage #not-logged-in #username,
+main #giftIdeaHomePage #not-logged-in #email,
+main #giftIdeaHomePage #not-logged-in #password,
+main #giftIdeaHomePage #not-logged-in #confirmPassword,
+main #giftIdeaHomePage #not-logged-in #registerButton,
+main #giftIdeaHomePage #registerForm input#email1,
+main #giftIdeaHomePage #registerForm #password1,
+main #giftIdeaHomePage #registerForm #btn_login,
+main #giftIdeaHomePage #registerForm #username,
+main #giftIdeaHomePage #registerForm #email,
+main #giftIdeaHomePage #registerForm #password,
+main #giftIdeaHomePage #registerForm #confirmPassword,
+main #giftIdeaHomePage #registerForm #registerButton,
+main #giftIdeaAdd #not-logged-in input#email1,
+main #giftIdeaAdd #not-logged-in #password1,
+main #giftIdeaAdd #not-logged-in #btn_login,
+main #giftIdeaAdd #not-logged-in #username,
+main #giftIdeaAdd #not-logged-in #email,
+main #giftIdeaAdd #not-logged-in #password,
+main #giftIdeaAdd #not-logged-in #confirmPassword,
+main #giftIdeaAdd #not-logged-in #registerButton,
+main #giftIdeaAdd #registerForm input#email1,
+main #giftIdeaAdd #registerForm #password1,
+main #giftIdeaAdd #registerForm #btn_login,
+main #giftIdeaAdd #registerForm #username,
+main #giftIdeaAdd #registerForm #email,
+main #giftIdeaAdd #registerForm #password,
+main #giftIdeaAdd #registerForm #confirmPassword,
+main #giftIdeaAdd #registerForm #registerButton,
+main #summaryCard #not-logged-in input#email1,
+main #summaryCard #not-logged-in #password1,
+main #summaryCard #not-logged-in #btn_login,
+main #summaryCard #not-logged-in #username,
+main #summaryCard #not-logged-in #email,
+main #summaryCard #not-logged-in #password,
+main #summaryCard #not-logged-in #confirmPassword,
+main #summaryCard #not-logged-in #registerButton,
+main #summaryCard #registerForm input#email1,
+main #summaryCard #registerForm #password1,
+main #summaryCard #registerForm #btn_login,
+main #summaryCard #registerForm #username,
+main #summaryCard #registerForm #email,
+main #summaryCard #registerForm #password,
+main #summaryCard #registerForm #confirmPassword,
+main #summaryCard #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in input#email1,
+main #addToWishlistSection #not-logged-in #password1,
+main #addToWishlistSection #not-logged-in #btn_login,
+main #addToWishlistSection #not-logged-in #username,
+main #addToWishlistSection #not-logged-in #email,
+main #addToWishlistSection #not-logged-in #password,
+main #addToWishlistSection #not-logged-in #confirmPassword,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm input#email1,
+main #addToWishlistSection #registerForm #password1,
+main #addToWishlistSection #registerForm #btn_login,
+main #addToWishlistSection #registerForm #username,
+main #addToWishlistSection #registerForm #email,
+main #addToWishlistSection #registerForm #password,
+main #addToWishlistSection #registerForm #confirmPassword,
+main #addToWishlistSection #registerForm #registerButton,
+main #complete #not-logged-in input#email1,
+main #complete #not-logged-in #password1,
+main #complete #not-logged-in #btn_login,
+main #complete #not-logged-in #username,
+main #complete #not-logged-in #email,
+main #complete #not-logged-in #password,
+main #complete #not-logged-in #confirmPassword,
+main #complete #not-logged-in #registerButton,
+main #complete #registerForm input#email1,
+main #complete #registerForm #password1,
+main #complete #registerForm #btn_login,
+main #complete #registerForm #username,
+main #complete #registerForm #email,
+main #complete #registerForm #password,
+main #complete #registerForm #confirmPassword,
+main #complete #registerForm #registerButton,
+main #listEmptyPage #not-logged-in input#email1,
+main #listEmptyPage #not-logged-in #password1,
+main #listEmptyPage #not-logged-in #btn_login,
+main #listEmptyPage #not-logged-in #username,
+main #listEmptyPage #not-logged-in #email,
+main #listEmptyPage #not-logged-in #password,
+main #listEmptyPage #not-logged-in #confirmPassword,
+main #listEmptyPage #not-logged-in #registerButton,
+main #listEmptyPage #registerForm input#email1,
+main #listEmptyPage #registerForm #password1,
+main #listEmptyPage #registerForm #btn_login,
+main #listEmptyPage #registerForm #username,
+main #listEmptyPage #registerForm #email,
+main #listEmptyPage #registerForm #password,
+main #listEmptyPage #registerForm #confirmPassword,
+main #listEmptyPage #registerForm #registerButton,
+main #addFriendPage #not-logged-in input#email1,
+main #addFriendPage #not-logged-in #password1,
+main #addFriendPage #not-logged-in #btn_login,
+main #addFriendPage #not-logged-in #username,
+main #addFriendPage #not-logged-in #email,
+main #addFriendPage #not-logged-in #password,
+main #addFriendPage #not-logged-in #confirmPassword,
+main #addFriendPage #not-logged-in #registerButton,
+main #addFriendPage #registerForm input#email1,
+main #addFriendPage #registerForm #password1,
+main #addFriendPage #registerForm #btn_login,
+main #addFriendPage #registerForm #username,
+main #addFriendPage #registerForm #email,
+main #addFriendPage #registerForm #password,
+main #addFriendPage #registerForm #confirmPassword,
+main #addFriendPage #registerForm #registerButton,
+main #friendsListPage #not-logged-in input#email1,
+main #friendsListPage #not-logged-in #password1,
+main #friendsListPage #not-logged-in #btn_login,
+main #friendsListPage #not-logged-in #username,
+main #friendsListPage #not-logged-in #email,
+main #friendsListPage #not-logged-in #password,
+main #friendsListPage #not-logged-in #confirmPassword,
+main #friendsListPage #not-logged-in #registerButton,
+main #friendsListPage #registerForm input#email1,
+main #friendsListPage #registerForm #password1,
+main #friendsListPage #registerForm #btn_login,
+main #friendsListPage #registerForm #username,
+main #friendsListPage #registerForm #email,
+main #friendsListPage #registerForm #password,
+main #friendsListPage #registerForm #confirmPassword,
+main #friendsListPage #registerForm #registerButton {
+  padding: 1rem 0 1rem 0.3rem;
+  border-radius: 0.7rem;
+  border: 1px solid #F9F9FB;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+main #loginPage #not-logged-in .forgot-password,
+main #loginPage #registerForm .forgot-password,
+main #registerPage #not-logged-in .forgot-password,
+main #registerPage #registerForm .forgot-password,
+main #welcomePage #not-logged-in .forgot-password,
+main #welcomePage #registerForm .forgot-password,
+main #giftIdeaHomePage #not-logged-in .forgot-password,
+main #giftIdeaHomePage #registerForm .forgot-password,
+main #giftIdeaAdd #not-logged-in .forgot-password,
+main #giftIdeaAdd #registerForm .forgot-password,
+main #summaryCard #not-logged-in .forgot-password,
+main #summaryCard #registerForm .forgot-password,
+main #addToWishlistSection #not-logged-in .forgot-password,
+main #addToWishlistSection #registerForm .forgot-password,
+main #complete #not-logged-in .forgot-password,
+main #complete #registerForm .forgot-password,
+main #listEmptyPage #not-logged-in .forgot-password,
+main #listEmptyPage #registerForm .forgot-password,
+main #addFriendPage #not-logged-in .forgot-password,
+main #addFriendPage #registerForm .forgot-password,
+main #friendsListPage #not-logged-in .forgot-password,
+main #friendsListPage #registerForm .forgot-password {
+  text-align: right;
+}
+
+main #loginPage #not-logged-in #btn_login,
+main #loginPage #not-logged-in #registerButton,
+main #loginPage #registerForm #btn_login,
+main #loginPage #registerForm #registerButton,
+main #registerPage #not-logged-in #btn_login,
+main #registerPage #not-logged-in #registerButton,
+main #registerPage #registerForm #btn_login,
+main #registerPage #registerForm #registerButton,
+main #welcomePage #not-logged-in #btn_login,
+main #welcomePage #not-logged-in #registerButton,
+main #welcomePage #registerForm #btn_login,
+main #welcomePage #registerForm #registerButton,
+main #giftIdeaHomePage #not-logged-in #btn_login,
+main #giftIdeaHomePage #not-logged-in #registerButton,
+main #giftIdeaHomePage #registerForm #btn_login,
+main #giftIdeaHomePage #registerForm #registerButton,
+main #giftIdeaAdd #not-logged-in #btn_login,
+main #giftIdeaAdd #not-logged-in #registerButton,
+main #giftIdeaAdd #registerForm #btn_login,
+main #giftIdeaAdd #registerForm #registerButton,
+main #summaryCard #not-logged-in #btn_login,
+main #summaryCard #not-logged-in #registerButton,
+main #summaryCard #registerForm #btn_login,
+main #summaryCard #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in #btn_login,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm #btn_login,
+main #addToWishlistSection #registerForm #registerButton,
+main #complete #not-logged-in #btn_login,
+main #complete #not-logged-in #registerButton,
+main #complete #registerForm #btn_login,
+main #complete #registerForm #registerButton,
+main #listEmptyPage #not-logged-in #btn_login,
+main #listEmptyPage #not-logged-in #registerButton,
+main #listEmptyPage #registerForm #btn_login,
+main #listEmptyPage #registerForm #registerButton,
+main #addFriendPage #not-logged-in #btn_login,
+main #addFriendPage #not-logged-in #registerButton,
+main #addFriendPage #registerForm #btn_login,
+main #addFriendPage #registerForm #registerButton,
+main #friendsListPage #not-logged-in #btn_login,
+main #friendsListPage #not-logged-in #registerButton,
+main #friendsListPage #registerForm #btn_login,
+main #friendsListPage #registerForm #registerButton {
+  background-color: #F0526C;
+  border-color: #F0526C;
+  color: #F9F9FB;
+}
+
+main #loginPage h2,
+main #registerPage h2,
+main #welcomePage h2,
+main #giftIdeaHomePage h2,
+main #giftIdeaAdd h2,
+main #summaryCard h2,
+main #addToWishlistSection h2,
+main #complete h2,
+main #listEmptyPage h2,
+main #addFriendPage h2,
+main #friendsListPage h2 {
+  color: #F9F9FB;
+  text-align: center;
+}
+
+main #loginPage .footer-login,
+main #registerPage .footer-login,
+main #welcomePage .footer-login,
+main #giftIdeaHomePage .footer-login,
+main #giftIdeaAdd .footer-login,
+main #summaryCard .footer-login,
+main #addToWishlistSection .footer-login,
+main #complete .footer-login,
+main #listEmptyPage .footer-login,
+main #addFriendPage .footer-login,
+main #friendsListPage .footer-login {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+main #loginPage #registerForm .footer-register,
+main #registerPage #registerForm .footer-register,
+main #welcomePage #registerForm .footer-register,
+main #giftIdeaHomePage #registerForm .footer-register,
+main #giftIdeaAdd #registerForm .footer-register,
+main #summaryCard #registerForm .footer-register,
+main #addToWishlistSection #registerForm .footer-register,
+main #complete #registerForm .footer-register,
+main #listEmptyPage #registerForm .footer-register,
+main #addFriendPage #registerForm .footer-register,
+main #friendsListPage #registerForm .footer-register {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+main #welcomePage h1 {
+  font-size: 3rem;
+}
+
+main #welcomePage .footer-welcome {
+  text-align: center;
+}
+
+main #welcomePage .footer-welcome div {
+  padding: 1rem;
+}
+
+main #welcomePage .footer-welcome a {
+  color: #F9F9FB;
+}
+
+main #demo-page .demo-carousel {
+  height: 70vh;
+  background-color: #F9F9FB;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+main #demo-page .fas {
+  justify-self: baseline;
+}
+
+main #demo-page .footer-demo {
+  background-color: #6E64AC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 30vh;
+}
+
+main #demo-page #sign-up,
+main #demo-page #log-in {
+  width: 60%;
+  font-family: "Livvic", sans-serif;
+}
+
+main #loginPage #logged-in {
+  justify-content: center;
+  height: 40vh;
+}
+
+main #loginPage #btn_logout {
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #F9F9FB;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #F0526C;
+  border-color: #F0526C;
+  color: #F9F9FB;
+}
+
+main #giftIdeaHomePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #giftIdeaHomePage #startIdeaBtn {
+  background-color: #F0526C;
+  border-color: #F0526C;
+  color: #F9F9FB;
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+main #giftIdeaHomePage #startIdeaBtn a {
+  color: #F9F9FB;
+}
+
+main .add-idea-1,
+.add-idea-2,
+.add-idea-3 {
+  width: 60vw;
+}
+
+main .add-idea-1 .images,
+.add-idea-2 .images,
+.add-idea-3 .images {
+  text-align: center;
+}
+
+main .add-idea-1 #ideaForm #gift_title,
+main .add-idea-1 #ideaForm #gift_description,
+.add-idea-2 #ideaForm #gift_title,
+.add-idea-2 #ideaForm #gift_description,
+.add-idea-3 #ideaForm #gift_title,
+.add-idea-3 #ideaForm #gift_description {
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #F9F9FB;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+#addGift,
+#nextToWishlists,
+#addtowish,
+#nextToEvents,
+#addToDB,
+#sign-up,
+#log-in,
+#addFriend,
+#addFriendBtn,
+#fetchFriendsBtn {
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #F9F9FB;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #F0526C;
+  border-color: #F0526C;
+  color: #F9F9FB;
+}
+
+#addGift a,
+#nextToWishlists a,
+#addtowish a,
+#nextToEvents a,
+#addToDB a,
+#sign-up a,
+#log-in a,
+#addFriend a,
+#addFriendBtn a,
+#fetchFriendsBtn a {
+  color: #F9F9FB;
+}
+
+#addFriend,
+#addFriendBtn {
+  width: 60%;
+}
+
+input#friendName,
+#friendEventSelect,
+#friendDate {
+  padding: 1rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #F9F9FB;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  width: 60%;
+}
+
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */
@@ -13,13 +585,8 @@ section,
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 #not-logged-in,
@@ -46,8 +613,6 @@ main {
 
 /* Styles according to design ========================== */
 .bottom_navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -230,4 +795,3 @@ main section {
   font-weight: 400;
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */
