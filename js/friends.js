@@ -14,7 +14,7 @@ document.onload = function () {
   });
 };
 
-let createEventInput, newFriend;
+let createEventInput, newFriendObj;
 
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
@@ -56,40 +56,48 @@ friendEventSelect.addEventListener("change", () => {
 // Add Friend
 addFriendBtn.addEventListener("click", (event) => {
   event.preventDefault();
+
+  const friendName = friendName.value
+    .trim()
+    .toLowerCase()
+    .split(" ")
+    .map((eachWord) => eachWord.charAt(0).toUpperCase() + eachWord.substring(1))
+    .join(" ");
+
   if (
-    friendName.value.length &&
+    friendName &&
     friendEventSelect.value !== "resetOptions" &&
     friendEventSelect.value !== "Other" &&
     friendDate.value
   ) {
-    newFriend = new addFriendClass(
-      friendName.value.trim(),
+    newFriendObj = new addFriendClass(
+      friendName,
       friendEventSelect.value,
       friendDate.value.trim()
     );
-    newFriend.resetInputs();
-    addFriendToFirestore(newFriend.friendName, newFriend);
+    newFriendObj.resetInputs();
+    addFriendToFirestore(friendName, newFriendObj);
     console.log("added to Firestore");
   } else if (
     friendEventSelect.value === "Other" &&
     friendDate.value &&
     createEventInput.value.trim()
   ) {
-    newFriend = new addFriendClass(
-      friendName.value.trim(),
+    newFriendObj = new addFriendClass(
+      friendName,
       createEventInput.value.trim(),
       friendDate.value
     );
-    newFriend.resetInputs();
+    newFriendObj.resetInputs();
 
-    addFriendToFirestore(newFriend.friendName, newFriend);
+    addFriendToFirestore(friendName, newFriendObj);
     console.log("added to Firestore");
   } else {
     alert("all fields are mandatory!");
   }
 });
 
-async function addFriendToFirestore(friendsName, friendsObject) {
+async function addFriendToFirestore(friendName, friendObject) {
   const friendsArray = [];
   await db
     .collection(firebase.auth().currentUser.uid)
@@ -104,14 +112,14 @@ async function addFriendToFirestore(friendsName, friendsObject) {
     });
 
   for (let i = 0; i < friendsArray.length; i++) {
-    if (friendsName !== friendsArray[i]) {
+    if (friendName !== friendsArray[i]) {
       await db
         .collection(firebase.auth().currentUser.uid)
         .doc("Friends")
         .collection("List")
-        .doc(friendsName)
+        .doc(friendName)
         .set({
-          ...friendsObject,
+          ...friendObject,
         })
         .then(() => {
           console.log("Document successfully written!");
@@ -120,7 +128,7 @@ async function addFriendToFirestore(friendsName, friendsObject) {
           console.error("Error writing document: ", error);
         });
     } else {
-      alert("Friend already exits, Please enter a different name!");
+      alert("Friend already exits!");
     }
   }
 }
