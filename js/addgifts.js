@@ -88,7 +88,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
   }
 });
 
-nextToWishlists.addEventListener("click", async function friendsListfromDB() {
+async function friendsListfromDB() {
   console.log("friends list summary!");
   friendsList.innerHTML = "";
   await db
@@ -115,6 +115,7 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
         buttonItem.appendChild(friendsNames);
         listItem.appendChild(buttonItem);
         list.appendChild(listItem);
+
       });
 
       friendsList.appendChild(list);
@@ -123,19 +124,21 @@ nextToWishlists.addEventListener("click", async function friendsListfromDB() {
     .catch((error) => {
       console.log("Error getting document:", error);
     });
-});
+}
+
+nextToWishlists.addEventListener("click", friendsListfromDB);
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
 
   if (newWish.location !== undefined) {
-  windowDescription.innerHTML = `${newWish.wishTitle}<br>
+    windowDescription.innerHTML = `${newWish.wishTitle}<br>
   ${newWish.wishDesc}<br>
   ${newWish.location}`;
-} else {
-  windowDescription.innerHTML = `${newWish.wishTitle}<br>
+  } else {
+    windowDescription.innerHTML = `${newWish.wishTitle}<br>
   ${newWish.wishDesc}`;
-}
+  }
   console.log(newWish);
 });
 
