@@ -57,7 +57,8 @@ friendEventSelect.addEventListener("change", () => {
 addFriendBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const friendName = friendName.value
+  // COnverting every word for name to UpperCase Letter
+  const friendsName = friendName.value
     .trim()
     .toLowerCase()
     .split(" ")
@@ -65,32 +66,26 @@ addFriendBtn.addEventListener("click", (event) => {
     .join(" ");
 
   if (
-    friendName &&
+    friendsName &&
     friendEventSelect.value !== "resetOptions" &&
-    friendEventSelect.value !== "Other" &&
     friendDate.value
   ) {
-    newFriendObj = new addFriendClass(
-      friendName,
-      friendEventSelect.value,
-      friendDate.value.trim()
-    );
-    newFriendObj.resetInputs();
-    addFriendToFirestore(friendName, newFriendObj);
-    console.log("added to Firestore");
-  } else if (
-    friendEventSelect.value === "Other" &&
-    friendDate.value &&
-    createEventInput.value.trim()
-  ) {
-    newFriendObj = new addFriendClass(
-      friendName,
-      createEventInput.value.trim(),
-      friendDate.value
-    );
+    if (friendEventSelect.value === "Other" && createEventInput.value.trim()) {
+      newFriendObj = new addFriendClass(
+        friendsName,
+        createEventInput.value.trim(),
+        friendDate.value
+      );
+    } else {
+      newFriendObj = new addFriendClass(
+        friendsName,
+        friendEventSelect.value,
+        friendDate.value
+      );
+    }
+    addFriendToFirestore(friendsName, newFriendObj);
     newFriendObj.resetInputs();
 
-    addFriendToFirestore(friendName, newFriendObj);
     console.log("added to Firestore");
   } else {
     alert("all fields are mandatory!");
