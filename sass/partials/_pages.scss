@@ -1,4 +1,4 @@
-// log in  + register + welcome
+// ///////////////log in  + register + welcome//////////////////////////
 
 main {
   #loginPage,
@@ -23,7 +23,8 @@ main {
     color: $color_neutral_white;
     font-family: $font_body;
 
-    .loggedin #btn_logout {
+    .loggedin #btn_logout,
+    #btn_AddGiftIdea {
       color: $color_text_dark;
     }
 
@@ -36,6 +37,12 @@ main {
       a,
       span {
         color: $color_text_dark;
+      }
+
+      .link2,
+      .link3,
+      span {
+        color: $color_neutral_white;
       }
 
       input#email1,
@@ -73,6 +80,10 @@ main {
       text-align: center;
     }
 
+    label {
+      padding: 0;
+    }
+
     .footer-login {
       height: 10vh;
       display: flex;
@@ -84,11 +95,14 @@ main {
       text-align: center;
       margin-top: 1rem;
 
-      span, a {
+      span,
+      a {
         color: $color_neutral_white;
       }
     }
   }
+
+  ///////////   welcome page  ////////////
 
   #welcomePage {
     h1 {
@@ -108,7 +122,7 @@ main {
   }
 }
 
-//////////////// demo page/////////////////
+////////////////////////// demo page/////////////////////////////////
 
 main #demo-page {
   .demo-carousel {
@@ -137,6 +151,7 @@ main #demo-page {
   #log-in {
     width: 60%;
     font-family: $font_body;
+    margin: 1rem;
   }
 }
 
@@ -146,7 +161,9 @@ main #loginPage {
     height: 40vh;
   }
 
-  #btn_logout {
+  #btn_logout,
+  #btn_AddGiftIdea,
+  #btn_AddFriend {
     padding: 1rem 0;
     border-radius: 0.7rem;
     border: 1px solid $color_neutral_white;
@@ -157,11 +174,16 @@ main #loginPage {
     margin-left: 0;
     background-color: $color_accent;
     border-color: $color_accent;
-    color: $color_neutral_white;
+    color: $color_text_dark;
+
+    a {
+      text-decoration: none;
+      color: $color_secondary_dark;
+    }
   }
 }
 
-///////////// gift idea page//////////////
+////////////////////// gift idea page//////////////////////////////
 
 main #giftIdeaHomePage {
   display: flex;
@@ -186,12 +208,21 @@ main #giftIdeaHomePage {
   }
 }
 
+#summaryCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  #summaryCardimage {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 main .add-idea-1,
 .add-idea-2,
 .add-idea-3 {
-  // #displayTitle{
-  //   border-bottom: 1px solid $color_neutral_white;
-  // }
   label {
     color: $color_neutral_white;
   }
@@ -201,16 +232,16 @@ main .add-idea-1,
     margin-top: 8rem;
   }
 
-  #displayDesc{
+  #displayDesc {
     margin-bottom: 4rem;
   }
-  
+
   #ideaForm {
     #gift_title,
     #gift_description {
       background: none;
       border: none;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
       border-bottom: 1px solid $color_neutral_white;
       width: 100%;
       display: flex;
@@ -219,14 +250,16 @@ main .add-idea-1,
       margin-left: 0;
       color: $color_neutral_white;
 
-      &::placeholder{
-      color: $color_neutral_white;
+      &::placeholder {
+        color: $color_neutral_white;
       }
     }
   }
-  #locate{
+  #locate {
     display: flex;
     background: white;
+    justify-content: center;
+    align-items: center;
 
     border: none;
     border-radius: 44px;
@@ -235,7 +268,7 @@ main .add-idea-1,
     justify-content: flex-end;
     max-width: 100%;
     padding-right: 1rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 
     .fas {
       display: flex;
@@ -244,6 +277,54 @@ main .add-idea-1,
       text-align: end;
     }
   }
+}
+
+//////////////////////// take photo page////////////////////////////
+
+main #takePhoto {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-flow: row nowrap;
+
+  #camera {
+    display: flex;
+    flex-direction: column;
+  }
+  #snap {
+    margin: 1rem;
+  }
+
+  #backToIdeaAdd2 {
+    margin-left: 0;
+  }
+}
+
+#takePhoto #camera {
+  height: 40vw;
+}
+
+#map-link {
+  color: $color_neutral_white;
+}
+
+.add-idea-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+///////////////// add to Wishlist page///////////////////////////////////////
+
+#windowImage,
+#windowDescription {
+  display: flex;
+  justify-content: center;
+}
+
+#nextToWishlists {
+  margin: 0;
+  padding: 0;
 }
 
 #addGift,
@@ -261,6 +342,7 @@ main .add-idea-1,
 #snap,
 #backtologin {
   padding: 1rem 0;
+  border-radius: 1rem;
   border: 1px solid $color_neutral_white;
   display: flex;
   justify-content: center;
@@ -273,8 +355,13 @@ main .add-idea-1,
   }
 }
 
+#add-wish-msg {
+  text-align: center;
+}
+
 #giftcard_display {
   width: 80vw;
+  margin: 1rem;
 
   .displaycard {
     border-color: $color_neutral_white;
@@ -296,7 +383,7 @@ main .add-idea-1,
   .editTitleInput {
     padding: 0.2rem 0;
     border-radius: 0.7rem;
-    border: 1px solid $color_neutral_white;
+    border: 1px solid $color_primary;
     width: 13%;
     display: flex;
     justify-content: center;
@@ -304,9 +391,9 @@ main .add-idea-1,
     align-items: center;
     margin: 1rem;
     margin-left: 0;
-    background-color: $color_accent;
-    border-color: $color_accent;
-    color: $color_neutral_white;
+    background-color: $color_button_purple;
+    border-color: $color_button_purple;
+    color: $color_text_dark;
   }
   .editDescInput,
   .editTitleInput {
@@ -315,9 +402,19 @@ main .add-idea-1,
   }
 }
 
-#friendsList #fetchFriendsList {
-  li button {
-    padding: 0.2rem 0;
+#friendsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+  }
+
+  button {
+    padding: 0 5rem;
+    color: $color_text_dark;
     border-radius: 0.7rem;
     border: 1px solid $color_neutral_white;
     width: 13%;
@@ -327,37 +424,78 @@ main .add-idea-1,
     align-items: center;
     margin: 1rem;
     margin-left: 0;
-    background-color: $color_accent;
-    border-color: $color_accent;
-    color: $color_neutral_white;
+    background-color: $color_card_bg2;
+    border-color: $color_card_bg2;
   }
 }
 
-// Friend page
+/////////////////////// Friend page/////////////////////////////
+
+#friendsListFromDB #fetchedFriendsList li {
+  padding: 0 5rem;
+  color: $color_text_dark;
+  border-radius: 0.7rem;
+  border: 1px solid $color_neutral_white;
+  width: 13%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: $color_card_bg2;
+  border-color: $color_card_bg2;
+}
+
+#fetchFriendsBtn {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: $font_body;
+}
 
 #addFriend,
 #addFriendBtn {
-  width: 60%;
+  width: 40%;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#addFriendBtn {
+  margin-bottom: 2rem;
 }
 
 input#friendName,
 #friendEventSelect,
 #friendDate {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-radius: 0.7rem;
   border: 1px solid $color_neutral_white;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 0;
   margin-left: 0;
   width: 60%;
 }
 
-// reset password page
+#friendDate {
+  margin-bottom: 1rem;
+}
+
+.profile-pic a {
+  color: $color_accent;
+}
+
+.friendAdded a {
+  color: $color_accent;
+}
+
+/////////////////////// reset password page/////////////////////////
 
 #resetContainer form {
-  width: 70%;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -368,7 +506,7 @@ input#friendName,
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
 }
 
 .reset-buttons {
@@ -379,6 +517,7 @@ input#friendName,
 #reset_password,
 #noreset {
   padding: 1rem 2rem;
+  margin: 0.4rem;
 }
 
 label {
@@ -391,21 +530,11 @@ label {
   border: 1px solid $color_neutral_white;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 2rem;
   margin-left: 0;
-  width: 60%;
+  width: 30rem;
 }
 
 #backtologin {
-  width: 16%;
-}
-
-// photo section
-
-#takePhoto #camera {
-  height: 40vw;
-}
-
-#map-link {
-  color: $color_neutral_white;
+  width: 12rem;
 }
