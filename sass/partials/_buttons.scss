@@ -1,0 +1,51 @@
+// gift idea page
+
+#giftIdeaHomePage,
+#giftIdeaAdd,
+#takePhoto,
+#summaryCard,
+#addToWishlistSection,
+#complete {
+
+    #startIdeaBtn,
+    #addGift,
+    #nextToWishlists,
+    #addtowish,
+    #addToDB {
+        border: none;
+        border-radius: 44px;
+        width: 232px;
+        height: 48px;
+        justify-content: center;
+        margin: auto;
+        margin-top: 4rem;
+    }
+
+    #nextToEvents {
+        border: none;
+        border-radius: 44px;
+        width: 232px;
+        height: 48px;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #addtowish {
+        background: $color_button_purple;
+    }
+
+    #backToStart,
+    #backToIdeaAdd2,
+    #backToIdeaAdd,
+    #backToSummaryCard,
+    #backToChooseEvent {
+        align-self: flex-start;
+        margin-left: 2rem;
+        background: none;
+        border: none;
+
+        a {
+            color: $color_neutral_white;
+        }
+    }
+}
