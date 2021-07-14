@@ -7,7 +7,7 @@ const windowImage = document.querySelector("#windowImage");
 const context = canvas.getContext("2d");
 let storeImage = "";
 
-context.scale(0.5, 0.5);
+context.scale(0.4, 0.4);
 
 cameraBtn.addEventListener("click", function () {
   
