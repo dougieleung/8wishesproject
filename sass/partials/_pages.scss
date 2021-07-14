@@ -11,7 +11,9 @@ main {
   #complete,
   #listEmptyPage,
   #addFriendPage,
-  #friendsListPage {
+  #friendsListPage,
+  #resetContainer,
+  #takePhoto {
     background-color: $color_primary;
     display: flex;
     justify-content: space-around;
@@ -207,7 +209,11 @@ main .add-idea-1,
 #log-in,
 #addFriend,
 #addFriendBtn,
-#fetchFriendsBtn {
+#fetchFriendsBtn,
+#reset_password,
+#noreset,
+#snap,
+#backtologin {
   padding: 1rem 0;
   border-radius: 0.7rem;
   border: 1px solid $color_neutral_white;
@@ -221,6 +227,66 @@ main .add-idea-1,
   color: $color_neutral_white;
 
   a {
+    color: $color_neutral_white;
+  }
+}
+
+#giftcard_display {
+  width: 80vw;
+
+  .displaycard {
+    border-color: $color_neutral_white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+
+    div,
+    h3 {
+      align-self: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .displaycard button,
+  .editDescInput,
+  .editTitleInput {
+    padding: 0.2rem 0;
+    border-radius: 0.7rem;
+    border: 1px solid $color_neutral_white;
+    width: 13%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 0;
+    background-color: $color_accent;
+    border-color: $color_accent;
+    color: $color_neutral_white;
+  }
+  .editDescInput,
+  .editTitleInput {
+    background-color: $color_neutral_white;
+    color: $color_primary;
+  }
+}
+
+#friendsList #fetchFriendsList {
+  li button {
+    padding: 0.2rem 0;
+    border-radius: 0.7rem;
+    border: 1px solid $color_neutral_white;
+    width: 13%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 0;
+    background-color: $color_accent;
+    border-color: $color_accent;
     color: $color_neutral_white;
   }
 }
@@ -244,4 +310,60 @@ input#friendName,
   margin: 1rem;
   margin-left: 0;
   width: 60%;
+}
+
+// reset password page
+
+#resetContainer form {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.reset-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reset_password,
+#noreset {
+  padding: 1rem 2rem;
+}
+
+label {
+  padding: 1rem;
+}
+
+#email_to_reset {
+  padding: 1rem 0 1rem 0.3rem;
+  border-radius: 0.7rem;
+  border: 1px solid $color_neutral_white;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  width: 60%;
+}
+
+#backtologin {
+  width: 16%;
+}
+
+// photo section
+
+#takePhoto #camera {
+  height: 40vw;
+}
+
+#map-link {
+  color: $color_neutral_white;
 }

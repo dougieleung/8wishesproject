@@ -13,14 +13,16 @@ main #addToWishlistSection,
 main #complete,
 main #listEmptyPage,
 main #addFriendPage,
-main #friendsListPage {
-  background-color: #6E64AC;
+main #friendsListPage,
+main #resetContainer,
+main #takePhoto {
+  background-color: #6e64ac;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   margin-bottom: 0;
-  color: #F9F9FB;
+  color: #f9f9fb;
   font-family: "Livvic", sans-serif;
 }
 
@@ -45,7 +47,11 @@ main #listEmptyPage #registerForm,
 main #addFriendPage #not-logged-in,
 main #addFriendPage #registerForm,
 main #friendsListPage #not-logged-in,
-main #friendsListPage #registerForm {
+main #friendsListPage #registerForm,
+main #resetContainer #not-logged-in,
+main #resetContainer #registerForm,
+main #takePhoto #not-logged-in,
+main #takePhoto #registerForm {
   flex-direction: column;
   display: flex;
   width: 60vw;
@@ -94,8 +100,16 @@ main #addFriendPage #registerForm span,
 main #friendsListPage #not-logged-in a,
 main #friendsListPage #not-logged-in span,
 main #friendsListPage #registerForm a,
-main #friendsListPage #registerForm span {
-  color: #F9F9FB;
+main #friendsListPage #registerForm span,
+main #resetContainer #not-logged-in a,
+main #resetContainer #not-logged-in span,
+main #resetContainer #registerForm a,
+main #resetContainer #registerForm span,
+main #takePhoto #not-logged-in a,
+main #takePhoto #not-logged-in span,
+main #takePhoto #registerForm a,
+main #takePhoto #registerForm span {
+  color: #f9f9fb;
 }
 
 main #loginPage #not-logged-in input#email1,
@@ -273,10 +287,42 @@ main #friendsListPage #registerForm #username,
 main #friendsListPage #registerForm #email,
 main #friendsListPage #registerForm #password,
 main #friendsListPage #registerForm #confirmPassword,
-main #friendsListPage #registerForm #registerButton {
+main #friendsListPage #registerForm #registerButton,
+main #resetContainer #not-logged-in input#email1,
+main #resetContainer #not-logged-in #password1,
+main #resetContainer #not-logged-in #btn_login,
+main #resetContainer #not-logged-in #username,
+main #resetContainer #not-logged-in #email,
+main #resetContainer #not-logged-in #password,
+main #resetContainer #not-logged-in #confirmPassword,
+main #resetContainer #not-logged-in #registerButton,
+main #resetContainer #registerForm input#email1,
+main #resetContainer #registerForm #password1,
+main #resetContainer #registerForm #btn_login,
+main #resetContainer #registerForm #username,
+main #resetContainer #registerForm #email,
+main #resetContainer #registerForm #password,
+main #resetContainer #registerForm #confirmPassword,
+main #resetContainer #registerForm #registerButton,
+main #takePhoto #not-logged-in input#email1,
+main #takePhoto #not-logged-in #password1,
+main #takePhoto #not-logged-in #btn_login,
+main #takePhoto #not-logged-in #username,
+main #takePhoto #not-logged-in #email,
+main #takePhoto #not-logged-in #password,
+main #takePhoto #not-logged-in #confirmPassword,
+main #takePhoto #not-logged-in #registerButton,
+main #takePhoto #registerForm input#email1,
+main #takePhoto #registerForm #password1,
+main #takePhoto #registerForm #btn_login,
+main #takePhoto #registerForm #username,
+main #takePhoto #registerForm #email,
+main #takePhoto #registerForm #password,
+main #takePhoto #registerForm #confirmPassword,
+main #takePhoto #registerForm #registerButton {
   padding: 1rem 0 1rem 0.3rem;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -305,7 +351,11 @@ main #listEmptyPage #registerForm .forgot-password,
 main #addFriendPage #not-logged-in .forgot-password,
 main #addFriendPage #registerForm .forgot-password,
 main #friendsListPage #not-logged-in .forgot-password,
-main #friendsListPage #registerForm .forgot-password {
+main #friendsListPage #registerForm .forgot-password,
+main #resetContainer #not-logged-in .forgot-password,
+main #resetContainer #registerForm .forgot-password,
+main #takePhoto #not-logged-in .forgot-password,
+main #takePhoto #registerForm .forgot-password {
   text-align: right;
 }
 
@@ -352,10 +402,18 @@ main #addFriendPage #registerForm #registerButton,
 main #friendsListPage #not-logged-in #btn_login,
 main #friendsListPage #not-logged-in #registerButton,
 main #friendsListPage #registerForm #btn_login,
-main #friendsListPage #registerForm #registerButton {
-  background-color: #F0526C;
-  border-color: #F0526C;
-  color: #F9F9FB;
+main #friendsListPage #registerForm #registerButton,
+main #resetContainer #not-logged-in #btn_login,
+main #resetContainer #not-logged-in #registerButton,
+main #resetContainer #registerForm #btn_login,
+main #resetContainer #registerForm #registerButton,
+main #takePhoto #not-logged-in #btn_login,
+main #takePhoto #not-logged-in #registerButton,
+main #takePhoto #registerForm #btn_login,
+main #takePhoto #registerForm #registerButton {
+  background-color: #f0526c;
+  border-color: #f0526c;
+  color: #f9f9fb;
 }
 
 main #loginPage h2,
@@ -368,8 +426,10 @@ main #addToWishlistSection h2,
 main #complete h2,
 main #listEmptyPage h2,
 main #addFriendPage h2,
-main #friendsListPage h2 {
-  color: #F9F9FB;
+main #friendsListPage h2,
+main #resetContainer h2,
+main #takePhoto h2 {
+  color: #f9f9fb;
   text-align: center;
 }
 
@@ -383,7 +443,9 @@ main #addToWishlistSection .footer-login,
 main #complete .footer-login,
 main #listEmptyPage .footer-login,
 main #addFriendPage .footer-login,
-main #friendsListPage .footer-login {
+main #friendsListPage .footer-login,
+main #resetContainer .footer-login,
+main #takePhoto .footer-login {
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -400,7 +462,9 @@ main #addToWishlistSection #registerForm .footer-register,
 main #complete #registerForm .footer-register,
 main #listEmptyPage #registerForm .footer-register,
 main #addFriendPage #registerForm .footer-register,
-main #friendsListPage #registerForm .footer-register {
+main #friendsListPage #registerForm .footer-register,
+main #resetContainer #registerForm .footer-register,
+main #takePhoto #registerForm .footer-register {
   text-align: center;
   margin-top: 1rem;
 }
@@ -418,12 +482,12 @@ main #welcomePage .footer-welcome div {
 }
 
 main #welcomePage .footer-welcome a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main #demo-page .demo-carousel {
   height: 70vh;
-  background-color: #F9F9FB;
+  background-color: #f9f9fb;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -435,7 +499,7 @@ main #demo-page .fas {
 }
 
 main #demo-page .footer-demo {
-  background-color: #6E64AC;
+  background-color: #6e64ac;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,15 +521,15 @@ main #loginPage #logged-in {
 main #loginPage #btn_logout {
   padding: 1rem 0;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem;
   margin-left: 0;
-  background-color: #F0526C;
-  border-color: #F0526C;
-  color: #F9F9FB;
+  background-color: #f0526c;
+  border-color: #f0526c;
+  color: #f9f9fb;
 }
 
 main #giftIdeaHomePage {
@@ -475,9 +539,9 @@ main #giftIdeaHomePage {
 }
 
 main #giftIdeaHomePage #startIdeaBtn {
-  background-color: #F0526C;
-  border-color: #F0526C;
-  color: #F9F9FB;
+  background-color: #f0526c;
+  border-color: #f0526c;
+  color: #f9f9fb;
   padding: 1rem 0;
   border-radius: 0.7rem;
   width: 100%;
@@ -488,7 +552,7 @@ main #giftIdeaHomePage #startIdeaBtn {
 }
 
 main #giftIdeaHomePage #startIdeaBtn a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main .add-idea-1,
@@ -511,7 +575,7 @@ main .add-idea-1 #ideaForm #gift_description,
 .add-idea-3 #ideaForm #gift_description {
   padding: 1rem 0;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -528,18 +592,22 @@ main .add-idea-1 #ideaForm #gift_description,
 #log-in,
 #addFriend,
 #addFriendBtn,
-#fetchFriendsBtn {
+#fetchFriendsBtn,
+#reset_password,
+#noreset,
+#snap,
+#backtologin {
   padding: 1rem 0;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem;
   margin-left: 0;
-  background-color: #F0526C;
-  border-color: #F0526C;
-  color: #F9F9FB;
+  background-color: #f0526c;
+  border-color: #f0526c;
+  color: #f9f9fb;
 }
 
 #addGift a,
@@ -551,8 +619,71 @@ main .add-idea-1 #ideaForm #gift_description,
 #log-in a,
 #addFriend a,
 #addFriendBtn a,
-#fetchFriendsBtn a {
-  color: #F9F9FB;
+#fetchFriendsBtn a,
+#reset_password a,
+#noreset a,
+#snap a,
+#backtologin a {
+  color: #f9f9fb;
+}
+
+#giftcard_display {
+  width: 80vw;
+}
+
+#giftcard_display .displaycard {
+  border-color: #f9f9fb;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#giftcard_display .displaycard div,
+#giftcard_display .displaycard h3 {
+  align-self: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#giftcard_display .displaycard button,
+#giftcard_display .editDescInput,
+#giftcard_display .editTitleInput {
+  padding: 0.2rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 13%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #f0526c;
+  border-color: #f0526c;
+  color: #f9f9fb;
+}
+
+#giftcard_display .editDescInput,
+#giftcard_display .editTitleInput {
+  background-color: #f9f9fb;
+  color: #6e64ac;
+}
+
+#friendsList #fetchFriendsList li button {
+  padding: 0.2rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 13%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #f0526c;
+  border-color: #f0526c;
+  color: #f9f9fb;
 }
 
 #addFriend,
@@ -565,13 +696,67 @@ input#friendName,
 #friendDate {
   padding: 1rem 0;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem;
   margin-left: 0;
   width: 60%;
+}
+
+#resetContainer form {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.reset-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reset_password,
+#noreset {
+  padding: 1rem 2rem;
+}
+
+label {
+  padding: 1rem;
+}
+
+#email_to_reset {
+  padding: 1rem 0 1rem 0.3rem;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  width: 60%;
+}
+
+#backtologin {
+  width: 16%;
+}
+
+#takePhoto #camera {
+  height: 40vw;
+}
+
+#map-link {
+  color: #f9f9fb;
 }
 
 /* ================ Mixins =====================*/
@@ -632,14 +817,17 @@ main section {
   font-size: 28px;
 }
 
-#giftIdeaProcess a, #giftIdeaProcess .button, #giftIdeaProcess button {
+#giftIdeaProcess a,
+#giftIdeaProcess .button,
+#giftIdeaProcess button {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
 }
 
-#giftIdeaProcess input, #giftIdeaProcess textarea {
+#giftIdeaProcess input,
+#giftIdeaProcess textarea {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
 }
@@ -667,7 +855,8 @@ main section {
   font-size: 14px;
 }
 
-#loginPage .notloggedin a, #loginPage .notloggedin span {
+#loginPage .notloggedin a,
+#loginPage .notloggedin span {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -710,7 +899,8 @@ main section {
   font-size: 16px;
 }
 
-#registerPage #registerForm button, #registerPage #registerForm input {
+#registerPage #registerForm button,
+#registerPage #registerForm input {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -734,7 +924,8 @@ main section {
   font-size: 16px;
 }
 
-#resetContainer button, #resetContainer input {
+#resetContainer button,
+#resetContainer input {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -758,13 +949,16 @@ main section {
   font-size: 28px;
 }
 
-#addFriendPage label, #addFriendPage .profile-pic {
+#addFriendPage label,
+#addFriendPage .profile-pic {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
-#addFriendPage input, #addFriendPage #friendEventSelect, #addFriendPage button {
+#addFriendPage input,
+#addFriendPage #friendEventSelect,
+#addFriendPage button {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
