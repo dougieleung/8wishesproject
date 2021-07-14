@@ -59,12 +59,13 @@
       <h1>Welcome</h1>
 
       <div class="logo">
-        <img src="/icons/apple-icon-180x180.png" alt="8wishes-logo">
+        <img src="/icons/logo1.png" alt="8wishes-logo">
       </div>
 
       <div class="footer-welcome">
-        <div class="see-demo"><a href="#demo-page">see the demo</a></div>
-        <div class="skip"><a href="#loginPage">skip</a></div>
+        <div class="see-demo"><a href="#demo-page">See the demo</a></div>
+        <div class="skip"><a href="#loginPage">Skip</a></div>
+        <div class="explore"><a href="gift_idea.html">Explore</a></div>
       </div>
     </section>
 
@@ -72,15 +73,15 @@
 
     <section id="demo-page">
 
-        <div class="errorLogin" id="error-login"></div>
+       
     <div class="demo-carousel">
-      <img src="/icons/android-icon-144x144.png" alt="">
+      <img src="/icons/logo1.png" alt="">
     </div>
 
 
     <div class="footer-demo">
-      <button id="sign-up">Sign up</button>
-      <button id="log-in">Login</button>
+      <button id="sign-up"><a href="#registerPage">Sign up</a></button>
+      <button id="log-in"><a href="#loginPage">Login</a></button>
     </div>
   </section>
 
@@ -109,19 +110,23 @@
 
         <button id="btn_login" class="button button3">Log in</button>
 
+        <div class="errorLogin" id="error-login"></div>
+
         <div class="footer-login">
             <span>Not a Member?</span><br />
             <a href="#registerPage" class="link link3">Sign up Now!</a>
       </div>
 
       </div>
-
-      <div class="errorLogin" id="error-login"></div>
+      
 
       <div class="loggedin" id="logged-in">
         <h3>Welcome! You are logged in!</h3>
         <p id="user_para"></p>
         <button id="btn_logout" class="button button4">Logout</button>
+        <button id="btn_AddGiftIdea" class="button button5"><a href="/pages/gift_idea.html">Add a gift idea</a></button>
+        <button id="btn_AddFriend" class="button button6"><a href="/pages/friends.html">Add a friend</a></button>
+
       </div>
     </section>
 
@@ -155,7 +160,7 @@
         </div>
 
         <div class="footer-register">
-          <span>Already a Member? <a href="#registerPage" class="link link3">Log in!</a> </span>
+          <span>Already a Member? <a href="#loginPage" class="link link3">Log in!</a> </span>
          
     </div>
 
