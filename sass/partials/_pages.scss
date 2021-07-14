@@ -16,12 +16,16 @@ main {
   #takePhoto {
     background-color: $color_primary;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
     color: $color_neutral_white;
     font-family: $font_body;
+
+    .loggedin #btn_logout {
+      color: $color_text_dark;
+    }
 
     #not-logged-in,
     #registerForm {
@@ -31,7 +35,7 @@ main {
 
       a,
       span {
-        color: $color_neutral_white;
+        color: $color_text_dark;
       }
 
       input#email1,
@@ -60,7 +64,7 @@ main {
       #registerButton {
         background-color: $color_accent;
         border-color: $color_accent;
-        color: $color_neutral_white;
+        color: $color_text_dark;
       }
     }
 
@@ -79,6 +83,10 @@ main {
     #registerForm .footer-register {
       text-align: center;
       margin-top: 1rem;
+
+      span, a {
+        color: $color_neutral_white;
+      }
     }
   }
 
@@ -160,20 +168,20 @@ main #giftIdeaHomePage {
   justify-content: center;
   align-items: center;
 
+  .link4 {
+    color: $color_neutral_white;
+  }
+
   #startIdeaBtn {
     background-color: $color_accent;
     border-color: $color_accent;
     color: $color_neutral_white;
     padding: 1rem 0;
-    border-radius: 0.7rem;
-    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 1rem;
-    margin-left: 0;
 
     a {
-      color: $color_neutral_white;
+      color: $color_text_dark;
     }
   }
 }
@@ -181,21 +189,59 @@ main #giftIdeaHomePage {
 main .add-idea-1,
 .add-idea-2,
 .add-idea-3 {
+  // #displayTitle{
+  //   border-bottom: 1px solid $color_neutral_white;
+  // }
+  label {
+    color: $color_neutral_white;
+  }
   width: 60vw;
   .images {
     text-align: center;
+    margin-top: 8rem;
   }
+
+  #displayDesc{
+    margin-bottom: 4rem;
+  }
+  
   #ideaForm {
     #gift_title,
     #gift_description {
-      padding: 1rem 0;
-      border-radius: 0.7rem;
-      border: 1px solid $color_neutral_white;
+      background: none;
+      border: none;
+      padding: .5rem 0;
+      border-bottom: 1px solid $color_neutral_white;
       width: 100%;
       display: flex;
       justify-content: center;
       margin: 1rem;
       margin-left: 0;
+      color: $color_neutral_white;
+
+      &::placeholder{
+      color: $color_neutral_white;
+      }
+    }
+  }
+  #locate{
+    display: flex;
+    background: white;
+
+    border: none;
+    border-radius: 44px;
+    width: 301px;
+    height: 48px;
+    justify-content: flex-end;
+    max-width: 100%;
+    padding-right: 1rem;
+    margin-top: .5rem;
+
+    .fas {
+      display: flex;
+      font-size: 1.5rem;
+      align-self: center;
+      text-align: end;
     }
   }
 }
@@ -215,19 +261,15 @@ main .add-idea-1,
 #snap,
 #backtologin {
   padding: 1rem 0;
-  border-radius: 0.7rem;
   border: 1px solid $color_neutral_white;
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem;
-  margin-left: 0;
   background-color: $color_accent;
   border-color: $color_accent;
-  color: $color_neutral_white;
+  color: $color_text_dark;
 
   a {
-    color: $color_neutral_white;
+    color: $color_text_dark;
   }
 }
 
