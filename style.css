@@ -1327,11 +1327,13 @@ main {
   display: none;
 }
 
-.hide {
+body #giftIdeaProcess .hide,
+body #friendsListProcess .hide {
   display: none;
 }
 
-.show {
+body #giftIdeaProcess .show,
+body #friendsListProcess .show {
   display: block;
 }
 
