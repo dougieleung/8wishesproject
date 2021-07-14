@@ -16,12 +16,12 @@ main {
   display: none;
 }
 
-.yes-reset,
-.no-reset {
-  display: inline-block;
+#reset_password,
+#noreset {
+  display: flex;
 }
 
-.back-to-login {
+#backtologin {
   display: none;
 }
 

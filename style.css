@@ -17,10 +17,19 @@ main #friendsListPage,
 main #resetContainer,
 main #takePhoto {
   background-color: #363D51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
   color: #F9F9FB;
   font-family: "Livvic", sans-serif;
@@ -439,8 +448,12 @@ main #takePhoto #registerForm #registerButton {
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
 }
@@ -578,9 +591,15 @@ main #friendsListPage .footer-login,
 main #resetContainer .footer-login,
 main #takePhoto .footer-login {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 main #loginPage #registerForm .footer-register,
@@ -648,10 +667,19 @@ main #welcomePage .footer-welcome a {
 main #demo-page .demo-carousel {
   height: 70vh;
   background-color: #F9F9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #demo-page .fas {
@@ -660,10 +688,19 @@ main #demo-page .fas {
 
 main #demo-page .footer-demo {
   background-color: #363D51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   height: 30vh;
 }
 
@@ -680,7 +717,9 @@ main #demo-page #log-in a {
 }
 
 main #loginPage #logged-in {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 40vh;
 }
 
@@ -691,8 +730,12 @@ main #loginPage #btn_AddFriend {
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #86E4DE;
@@ -708,9 +751,15 @@ main #loginPage #btn_AddFriend a {
 }
 
 main #giftIdeaHomePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #giftIdeaHomePage .link4 {
@@ -722,8 +771,12 @@ main #giftIdeaHomePage #startIdeaBtn {
   border-color: #86E4DE;
   color: #F9F9FB;
   padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #giftIdeaHomePage #startIdeaBtn a {
@@ -791,10 +844,41 @@ main .add-idea-1 #ideaForm #gift_description,
   padding: 0.5rem 0;
   border-bottom: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
+main .add-idea-1 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
+main .add-idea-1 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
+main .add-idea-1 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
   color: #F9F9FB;
 }
 
@@ -807,34 +891,46 @@ main .add-idea-1 #ideaForm #gift_description::placeholder,
   color: #F9F9FB;
 }
 
-main .add-idea-1 #locate,
-.add-idea-2 #locate,
-.add-idea-3 #locate {
+main .add-idea-1 #coordinates,
+.add-idea-2 #coordinates,
+.add-idea-3 #coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border: none;
   border-radius: 44px;
-  width: 301px;
+  width: 330px;
   height: 48px;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   max-width: 100%;
   padding-right: 1rem;
   margin-top: 0.5rem;
 }
 
-main .add-idea-1 #locate .fas,
-.add-idea-2 #locate .fas,
-.add-idea-3 #locate .fas {
+#locate {
+  border: none;
+  border-radius: 44px;
+  background: white;
+  height: 40px;
+  width: 40px;
+}
+
+#locate .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
-  align-self: center;
-  text-align: end;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 main #takePhoto {
@@ -876,7 +972,7 @@ main #takePhoto #backToIdeaAdd2 {
 }
 
 #map-link {
-  color: #F9F9FB;
+  color: #363D51;
 }
 
 .add-idea-2 {
@@ -924,8 +1020,12 @@ main #takePhoto #backToIdeaAdd2 {
   padding: 1rem 0;
   border-radius: 1rem;
   border: 1px solid #F9F9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #86E4DE;
   border-color: #86E4DE;
   color: #212531;
@@ -1102,6 +1202,8 @@ input#friendName,
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1207,8 +1309,13 @@ section,
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 #not-logged-in,
@@ -1216,12 +1323,14 @@ main {
   display: none;
 }
 
-.yes-reset,
-.no-reset {
-  display: inline-block;
+#reset_password,
+#noreset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.back-to-login {
+#backtologin {
   display: none;
 }
 
@@ -1235,6 +1344,8 @@ main {
 
 /* Styles according to design ========================== */
 .bottom_navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1453,7 +1564,9 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   margin-top: 4rem;
 }
@@ -1468,7 +1581,9 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
 
@@ -1511,7 +1626,8 @@ main section {
 #complete #backToIdeaAdd,
 #complete #backToSummaryCard,
 #complete #backToChooseEvent {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-left: 2rem;
   background: none;
   border: none;
@@ -1549,3 +1665,4 @@ main section {
 #complete #backToChooseEvent a {
   color: #F9F9FB;
 }
+/*# sourceMappingURL=style.css.map */
