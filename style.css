@@ -14,14 +14,37 @@ main #complete,
 main #listEmptyPage,
 main #addFriendPage,
 main #friendsListPage {
-  background-color: #6E64AC;
+  background-color: #363D51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
   color: #F9F9FB;
   font-family: "Livvic", sans-serif;
+}
+
+main #loginPage .loggedin #btn_logout,
+main #registerPage .loggedin #btn_logout,
+main #welcomePage .loggedin #btn_logout,
+main #giftIdeaHomePage .loggedin #btn_logout,
+main #giftIdeaAdd .loggedin #btn_logout,
+main #summaryCard .loggedin #btn_logout,
+main #addToWishlistSection .loggedin #btn_logout,
+main #complete .loggedin #btn_logout,
+main #listEmptyPage .loggedin #btn_logout,
+main #addFriendPage .loggedin #btn_logout,
+main #friendsListPage .loggedin #btn_logout {
+  color: #212531;
 }
 
 main #loginPage #not-logged-in,
@@ -46,7 +69,12 @@ main #addFriendPage #not-logged-in,
 main #addFriendPage #registerForm,
 main #friendsListPage #not-logged-in,
 main #friendsListPage #registerForm {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 60vw;
 }
@@ -95,7 +123,7 @@ main #friendsListPage #not-logged-in a,
 main #friendsListPage #not-logged-in span,
 main #friendsListPage #registerForm a,
 main #friendsListPage #registerForm span {
-  color: #F9F9FB;
+  color: #212531;
 }
 
 main #loginPage #not-logged-in input#email1,
@@ -278,8 +306,12 @@ main #friendsListPage #registerForm #registerButton {
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
 }
@@ -353,9 +385,9 @@ main #friendsListPage #not-logged-in #btn_login,
 main #friendsListPage #not-logged-in #registerButton,
 main #friendsListPage #registerForm #btn_login,
 main #friendsListPage #registerForm #registerButton {
-  background-color: #F0526C;
-  border-color: #F0526C;
-  color: #F9F9FB;
+  background-color: #86E4DE;
+  border-color: #86E4DE;
+  color: #212531;
 }
 
 main #loginPage h2,
@@ -385,9 +417,15 @@ main #listEmptyPage .footer-login,
 main #addFriendPage .footer-login,
 main #friendsListPage .footer-login {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 main #loginPage #registerForm .footer-register,
@@ -403,6 +441,30 @@ main #addFriendPage #registerForm .footer-register,
 main #friendsListPage #registerForm .footer-register {
   text-align: center;
   margin-top: 1rem;
+}
+
+main #loginPage #registerForm .footer-register span, main #loginPage #registerForm .footer-register a,
+main #registerPage #registerForm .footer-register span,
+main #registerPage #registerForm .footer-register a,
+main #welcomePage #registerForm .footer-register span,
+main #welcomePage #registerForm .footer-register a,
+main #giftIdeaHomePage #registerForm .footer-register span,
+main #giftIdeaHomePage #registerForm .footer-register a,
+main #giftIdeaAdd #registerForm .footer-register span,
+main #giftIdeaAdd #registerForm .footer-register a,
+main #summaryCard #registerForm .footer-register span,
+main #summaryCard #registerForm .footer-register a,
+main #addToWishlistSection #registerForm .footer-register span,
+main #addToWishlistSection #registerForm .footer-register a,
+main #complete #registerForm .footer-register span,
+main #complete #registerForm .footer-register a,
+main #listEmptyPage #registerForm .footer-register span,
+main #listEmptyPage #registerForm .footer-register a,
+main #addFriendPage #registerForm .footer-register span,
+main #addFriendPage #registerForm .footer-register a,
+main #friendsListPage #registerForm .footer-register span,
+main #friendsListPage #registerForm .footer-register a {
+  color: #F9F9FB;
 }
 
 main #welcomePage h1 {
@@ -424,10 +486,19 @@ main #welcomePage .footer-welcome a {
 main #demo-page .demo-carousel {
   height: 70vh;
   background-color: #F9F9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #demo-page .fas {
@@ -435,11 +506,20 @@ main #demo-page .fas {
 }
 
 main #demo-page .footer-demo {
-  background-color: #6E64AC;
+  background-color: #363D51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   height: 30vh;
 }
 
@@ -450,7 +530,9 @@ main #demo-page #log-in {
 }
 
 main #loginPage #logged-in {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 40vh;
 }
 
@@ -459,36 +541,50 @@ main #loginPage #btn_logout {
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
-  background-color: #F0526C;
-  border-color: #F0526C;
+  background-color: #86E4DE;
+  border-color: #86E4DE;
   color: #F9F9FB;
 }
 
 main #giftIdeaHomePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #giftIdeaHomePage .link4 {
+  color: #F9F9FB;
 }
 
 main #giftIdeaHomePage #startIdeaBtn {
-  background-color: #F0526C;
-  border-color: #F0526C;
+  background-color: #86E4DE;
+  border-color: #86E4DE;
   color: #F9F9FB;
   padding: 1rem 0;
-  border-radius: 0.7rem;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  margin: 1rem;
-  margin-left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #giftIdeaHomePage #startIdeaBtn a {
-  color: #F9F9FB;
+  color: #212531;
 }
 
 main .add-idea-1,
@@ -497,10 +593,23 @@ main .add-idea-1,
   width: 60vw;
 }
 
+main .add-idea-1 label,
+.add-idea-2 label,
+.add-idea-3 label {
+  color: #F9F9FB;
+}
+
 main .add-idea-1 .images,
 .add-idea-2 .images,
 .add-idea-3 .images {
   text-align: center;
+  margin-top: 8rem;
+}
+
+main .add-idea-1 #displayDesc,
+.add-idea-2 #displayDesc,
+.add-idea-3 #displayDesc {
+  margin-bottom: 4rem;
 }
 
 main .add-idea-1 #ideaForm #gift_title,
@@ -509,14 +618,87 @@ main .add-idea-1 #ideaForm #gift_description,
 .add-idea-2 #ideaForm #gift_description,
 .add-idea-3 #ideaForm #gift_title,
 .add-idea-3 #ideaForm #gift_description {
-  padding: 1rem 0;
-  border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  background: none;
+  border: none;
+  padding: .5rem 0;
+  border-bottom: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
+main .add-idea-1 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
+main .add-idea-1 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
+main .add-idea-1 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #ideaForm #gift_title::placeholder,
+main .add-idea-1 #ideaForm #gift_description::placeholder,
+.add-idea-2 #ideaForm #gift_title::placeholder,
+.add-idea-2 #ideaForm #gift_description::placeholder,
+.add-idea-3 #ideaForm #gift_title::placeholder,
+.add-idea-3 #ideaForm #gift_description::placeholder {
+  color: #F9F9FB;
+}
+
+main .add-idea-1 #locate,
+.add-idea-2 #locate,
+.add-idea-3 #locate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  border: none;
+  border-radius: 44px;
+  width: 301px;
+  height: 48px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-width: 100%;
+  padding-right: 1rem;
+  margin-top: .5rem;
+}
+
+main .add-idea-1 #locate .fas,
+.add-idea-2 #locate .fas,
+.add-idea-3 #locate .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: end;
 }
 
 #addGift,
@@ -530,16 +712,16 @@ main .add-idea-1 #ideaForm #gift_description,
 #addFriendBtn,
 #fetchFriendsBtn {
   padding: 1rem 0;
-  border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  margin: 1rem;
-  margin-left: 0;
-  background-color: #F0526C;
-  border-color: #F0526C;
-  color: #F9F9FB;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #86E4DE;
+  border-color: #86E4DE;
+  color: #212531;
 }
 
 #addGift a,
@@ -552,7 +734,7 @@ main .add-idea-1 #ideaForm #gift_description,
 #addFriend a,
 #addFriendBtn a,
 #fetchFriendsBtn a {
-  color: #F9F9FB;
+  color: #212531;
 }
 
 #addFriend,
@@ -567,8 +749,12 @@ input#friendName,
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
   width: 60%;
@@ -585,8 +771,13 @@ section,
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 #not-logged-in,
@@ -613,6 +804,8 @@ main {
 
 /* Styles according to design ========================== */
 .bottom_navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -795,3 +988,141 @@ main section {
   font-weight: 400;
   text-decoration: none;
 }
+
+/* ================ Buttons =====================*/
+#giftIdeaHomePage #startIdeaBtn,
+#giftIdeaHomePage #addGift,
+#giftIdeaHomePage #nextToWishlists,
+#giftIdeaHomePage #addtowish,
+#giftIdeaHomePage #addToDB,
+#giftIdeaAdd #startIdeaBtn,
+#giftIdeaAdd #addGift,
+#giftIdeaAdd #nextToWishlists,
+#giftIdeaAdd #addtowish,
+#giftIdeaAdd #addToDB,
+#takePhoto #startIdeaBtn,
+#takePhoto #addGift,
+#takePhoto #nextToWishlists,
+#takePhoto #addtowish,
+#takePhoto #addToDB,
+#summaryCard #startIdeaBtn,
+#summaryCard #addGift,
+#summaryCard #nextToWishlists,
+#summaryCard #addtowish,
+#summaryCard #addToDB,
+#addToWishlistSection #startIdeaBtn,
+#addToWishlistSection #addGift,
+#addToWishlistSection #nextToWishlists,
+#addToWishlistSection #addtowish,
+#addToWishlistSection #addToDB,
+#complete #startIdeaBtn,
+#complete #addGift,
+#complete #nextToWishlists,
+#complete #addtowish,
+#complete #addToDB {
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+#giftIdeaHomePage #nextToEvents,
+#giftIdeaAdd #nextToEvents,
+#takePhoto #nextToEvents,
+#summaryCard #nextToEvents,
+#addToWishlistSection #nextToEvents,
+#complete #nextToEvents {
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+#giftIdeaHomePage #addtowish,
+#giftIdeaAdd #addtowish,
+#takePhoto #addtowish,
+#summaryCard #addtowish,
+#addToWishlistSection #addtowish,
+#complete #addtowish {
+  background: #ABA0F5;
+}
+
+#giftIdeaHomePage #backToStart,
+#giftIdeaHomePage #backToIdeaAdd2,
+#giftIdeaHomePage #backToIdeaAdd,
+#giftIdeaHomePage #backToSummaryCard,
+#giftIdeaHomePage #backToChooseEvent,
+#giftIdeaAdd #backToStart,
+#giftIdeaAdd #backToIdeaAdd2,
+#giftIdeaAdd #backToIdeaAdd,
+#giftIdeaAdd #backToSummaryCard,
+#giftIdeaAdd #backToChooseEvent,
+#takePhoto #backToStart,
+#takePhoto #backToIdeaAdd2,
+#takePhoto #backToIdeaAdd,
+#takePhoto #backToSummaryCard,
+#takePhoto #backToChooseEvent,
+#summaryCard #backToStart,
+#summaryCard #backToIdeaAdd2,
+#summaryCard #backToIdeaAdd,
+#summaryCard #backToSummaryCard,
+#summaryCard #backToChooseEvent,
+#addToWishlistSection #backToStart,
+#addToWishlistSection #backToIdeaAdd2,
+#addToWishlistSection #backToIdeaAdd,
+#addToWishlistSection #backToSummaryCard,
+#addToWishlistSection #backToChooseEvent,
+#complete #backToStart,
+#complete #backToIdeaAdd2,
+#complete #backToIdeaAdd,
+#complete #backToSummaryCard,
+#complete #backToChooseEvent {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 2rem;
+  background: none;
+  border: none;
+}
+
+#giftIdeaHomePage #backToStart a,
+#giftIdeaHomePage #backToIdeaAdd2 a,
+#giftIdeaHomePage #backToIdeaAdd a,
+#giftIdeaHomePage #backToSummaryCard a,
+#giftIdeaHomePage #backToChooseEvent a,
+#giftIdeaAdd #backToStart a,
+#giftIdeaAdd #backToIdeaAdd2 a,
+#giftIdeaAdd #backToIdeaAdd a,
+#giftIdeaAdd #backToSummaryCard a,
+#giftIdeaAdd #backToChooseEvent a,
+#takePhoto #backToStart a,
+#takePhoto #backToIdeaAdd2 a,
+#takePhoto #backToIdeaAdd a,
+#takePhoto #backToSummaryCard a,
+#takePhoto #backToChooseEvent a,
+#summaryCard #backToStart a,
+#summaryCard #backToIdeaAdd2 a,
+#summaryCard #backToIdeaAdd a,
+#summaryCard #backToSummaryCard a,
+#summaryCard #backToChooseEvent a,
+#addToWishlistSection #backToStart a,
+#addToWishlistSection #backToIdeaAdd2 a,
+#addToWishlistSection #backToIdeaAdd a,
+#addToWishlistSection #backToSummaryCard a,
+#addToWishlistSection #backToChooseEvent a,
+#complete #backToStart a,
+#complete #backToIdeaAdd2 a,
+#complete #backToIdeaAdd a,
+#complete #backToSummaryCard a,
+#complete #backToChooseEvent a {
+  color: #F9F9FB;
+}
+/*# sourceMappingURL=style.css.map */
