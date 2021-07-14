@@ -113,8 +113,7 @@ fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
         friendID = doc;
 
         const listItem = document.createElement('li');
-        const friendsNames = document.createTextNode(`${doc.id}`);
-        listItem.appendChild(friendsNames);
+        listItem.innerText = `${doc.id}`;
         list.appendChild(listItem);
 
         const seeListBtn = document.createElement('button');
@@ -122,7 +121,8 @@ fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
         listItem.appendChild(seeListBtn);
         listItem.appendChild(friendsWishlist);
 
-        seeListBtn.addEventListener('click', function () {
+        seeListBtn.addEventListener('click', function (e) {
+          console.log(e.target.parentElement);
           friendsWishlist.classList.toggle('hide');
           renderFriendsWishlist(doc);
         })
