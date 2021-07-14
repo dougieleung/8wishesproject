@@ -152,6 +152,10 @@ main #demo-page {
     width: 60%;
     font-family: $font_body;
     margin: 1rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 

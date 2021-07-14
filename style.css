@@ -669,6 +669,11 @@ main #demo-page #log-in {
   margin: 1rem;
 }
 
+main #demo-page #sign-up a,
+main #demo-page #log-in a {
+  text-decoration: none;
+}
+
 main #loginPage #logged-in {
   justify-content: center;
   height: 40vh;
