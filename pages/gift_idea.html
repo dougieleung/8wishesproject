@@ -91,7 +91,7 @@
                 </div>
                 
 
-                <button id="addGift" class="button button15" type="submit">NEXT</button>
+                <button id="addGift" class="button button15" type="submit"><a href="#takePhoto">NEXT</a></button>
 
             </div>
 
@@ -108,7 +108,7 @@
 
                 <video id="video" width="240" height="240" autoplay></video>
 
-                <button id="snap">Snap Photo</button>
+                <button id="snap"><a href="#summaryCard">Snap Photo</a></button>
 
                 <canvas id="canvas" width="240" height="240"></canvas>
 
@@ -133,10 +133,10 @@
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <label for="location">Add location(optional)</label><button id="locate"><i class="fas fa-map-marker-alt"></i></button><br><br>
+                <label for="location">Add location(optional)</label><div><a id="map-link" target="_blank"></a><button id="locate"><i class="fas fa-map-marker-alt"></i></button></div><br><br>
+               
                 <p id="status"></p>
-                <a id="map-link" target="_blank"></a>
-
+                
                 <button id="nextToWishlists" class="button button16" type="submit"><a
                         href="#addToWishlistSection">Next</a></button>
 
@@ -157,13 +157,13 @@
                     <div id="windowDescription" class="window-description"></div>
                 </div>
 
-                <button id="addtowish" class="button button17">Add to wishlist</button>
+                <button id="addtowish" class="button button17" type="submit">Add to wishlist</button>
                 <!-- <button id="addtofriend" class="button button18">Add to friend's</button> -->
 
                 <p id="add-wish-msg"></p>
 
                 <!-- input field for geolocation -->
-                <button id="nextToEvents" class="button button19" type="submit"><a href="#chooseEvent">Add for Friends</a></button>
+                <button id="nextToEvents" class="button button19" type="submit"><a href="#complete">Next</a></button>
 
                 <!-- Generated from list from Firestore -->
                 <div class="friends-list" id="friendsList"></div>
