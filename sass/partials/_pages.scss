@@ -259,30 +259,36 @@ main .add-idea-1,
       }
     }
   }
-  #locate {
+ #coordinates {
     display: flex;
     background: white;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 
     border: none;
     border-radius: 44px;
-    width: 301px;
+    width: 330px;
     height: 48px;
     justify-content: flex-end;
     max-width: 100%;
     padding-right: 1rem;
     margin-top: 0.5rem;
-
-    .fas {
-      display: flex;
-      font-size: 1.5rem;
-      align-self: center;
-      text-align: end;
-    }
   }
 }
 
+#locate {
+  border: none;
+  border-radius: 44px;
+  background: white;
+  height: 40px;
+  width:40px;
+  .fas {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    align-self: center;
+  }
+}
 //////////////////////// take photo page////////////////////////////
 
 main #takePhoto {
@@ -309,7 +315,7 @@ main #takePhoto {
 }
 
 #map-link {
-  color: $color_neutral_white;
+  color: $color_primary;
 }
 
 .add-idea-2 {

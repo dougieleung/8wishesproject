@@ -62,7 +62,7 @@ loginButton.addEventListener("click", (event) => {
           registerPage.style.display = "none";
 
           errorLogin.innerHTML = "";
-          // registerPage.classList.add("hide");
+          registerPage.classList.add("hide");
         }
       })
       .catch((error) => {
@@ -78,9 +78,9 @@ loginButton.addEventListener("click", (event) => {
   }
 
   // Housekeeping
-  // loginEmail.value = "";
-  // loginPassword.value = "";
-  // loginEmail.focus();
+  loginEmail.value = "";
+  loginPassword.value = "";
+  loginEmail.focus();
 });
 
 // **********************    LOGOUT EXISTING USER    **************************
@@ -93,10 +93,14 @@ logoutButton.addEventListener("click", () => {
     .signOut()
     .then(() => {
       // alert('Thanks for visiting us.  See you later!');
-      registerPage.style.display = "block";
+      registerPage.style.display = "flex";
     })
     .catch((error) => {
       console.error("Error signing out, ", error.message);
       alert(error.message);
     });
+  // Housekeeping
+  loginEmail.value = "";
+  loginPassword.value = "";
+  loginEmail.focus();
 });

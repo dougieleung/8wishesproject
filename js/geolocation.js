@@ -14,10 +14,10 @@ function geoLocation () {
     function located(position) {
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
-  
+      
       status.textContent = '';
       mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-      mapLink.textContent = `Co-ordinates: Latitude ${latitude} °, Longitude ${longitude} °`;
+      mapLink.textContent = `Latitude ${latitude.toFixed(2)} °, Longitude ${longitude.toFixed(2)} °`;
     }
   
     function error() {
