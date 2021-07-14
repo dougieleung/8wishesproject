@@ -1,52 +1,50 @@
 /* Testing Styles ==================== */
 section,
 .displaycard {
-    border: 1px solid #000;
-    /* flex: 0 0 43%; */
-    margin: 1%;
+  border: 1px solid #000;
+  /* flex: 0 0 43%; */
+  margin: 1%;
 }
 
 main {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 #not-logged-in,
 #logged-in {
-    display: none;
+  display: none;
 }
 
 .yes-reset,
 .no-reset {
-    display: inline-block;
+  display: inline-block;
 }
 
 .back-to-login {
-    display: none;
+  display: none;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .show {
-    display: block;
+  display: block;
 }
-
 
 /* Styles according to design ========================== */
 .bottom_navbar {
-    ul {
-        display: flex;
-    }
+  ul {
+    display: flex;
+  }
 
-    ul li {
-        list-style-type: none;
-    }
+  ul li {
+    list-style-type: none;
+  }
 }
 
 main section {
-    width: 100%;
-    min-height: 70vh;
-
+  width: 100%;
+  min-height: 70vh;
 }

@@ -53,10 +53,10 @@
 </head>
 
 <body>
-   
+
     <main id="giftIdeaProcess">
 
-<!--***********************  #1 Home Page Section  ************************ -->
+        <!--***********************  #1 Home Page Section  ************************ -->
 
         <section class="show" id="giftIdeaHomePage">
 
@@ -68,47 +68,49 @@
 
                 <button id="startIdeaBtn" class="button button12"><a href="#giftIdeaAdd">Add a new idea</a></button>
             </div>
-       
+
         </section>
 
-<!--*********************  #2 Add Gift Idea Section  ********************** -->
+        <!--*********************  #2 Add Gift Idea Section  ********************** -->
 
         <section id="giftIdeaAdd" class="hide">
-            
+
             <button id="backToStart"><a href="#giftIdeaHomePage"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-1">
 
-                <form id="ideaForm" method="post"></form>
-                  <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
-                  <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
+                <form id="ideaForm" method="post">
+                <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
+                <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
                 </form>
-        <!-- The camera and gallery buttons will be replaced by UI assets -->
+                <!-- The camera and gallery buttons will be replaced by UI assets -->
                 <div class="images">
-                    <button id="camera_btn" class="button button13" type="image"><a href="#takePhoto"><i class="fas fa-camera"></i></a></button>
+                    <button id="camera_btn" class="button button13" type="image"><a href="#takePhoto"><i
+                                class="fas fa-camera"></i></a></button>
                     <button id="gallery_btn" class="button button14" type="image"><i class="far fa-image"></i></button>
                 </div>
+                
 
                 <button id="addGift" class="button button15" type="submit">NEXT</button>
 
             </div>
-       
+
         </section>
 
-        
-<!--*********************  #3 Snapping Photo Section  ********************* -->
+
+        <!--*********************  #3 Snapping Photo Section  ********************* -->
 
         <section id="takePhoto" class="hide">
-            
+
             <button id="backToIdeaAdd2"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div id="camera">
 
-            <video id="video" width="240" height="240" autoplay></video>
+                <video id="video" width="240" height="240" autoplay></video>
 
-            <button id="snap">Snap Photo</button>
+                <button id="snap">Snap Photo</button>
 
-            <canvas id="canvas" width="240" height="240"></canvas>
+                <canvas id="canvas" width="240" height="240"></canvas>
 
             </div>
 
@@ -117,34 +119,36 @@
 
         </section>
 
-<!--**********************  #4 Gift Idea Summary Card  *********************-->
-        
+        <!--**********************  #4 Gift Idea Summary Card  *********************-->
+
         <section id="summaryCard" class="hide">
 
             <button id="backToIdeaAdd"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-2">
 
-        <!-- <img src="" alt=""> Display image; if no photo, display default image -->
-            <div id=summaryCardimage></div>
-            
+                <!-- <img src="" alt=""> Display image; if no photo, display default image -->
+                <div id=summaryCardimage></div>
+
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <button id="locate"><i class="fas fa-map-marker-alt"></i></button><label for="location">Add location(optional)</label><br><br>
+                <button id="locate"><i class="fas fa-map-marker-alt"></i></button><label for="location">Add
+                    location(optional)</label><br><br>
                 <p id="status"></p>
-                <a id= "map-link" target="_blank"></a>
+                <a id="map-link" target="_blank"></a>
 
-                <button id="nextToWishlists" class="button button16" type="submit"><a href="#addToWishlistSection">Next</a></button>
+                <button id="nextToWishlists" class="button button16" type="submit"><a
+                        href="#addToWishlistSection">Next</a></button>
 
             </div>
 
         </section>
-   
-<!--********************** #5 Add to Wishlist Page  *********************** -->
+
+        <!--********************** #5 Add to Wishlist Page  *********************** -->
 
         <section id="addToWishlistSection" class="hide">
-        
+
             <button id="backToSummaryCard"><a href="#summaryCard"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-3">
@@ -166,10 +170,10 @@
                 <button id="nextToEvents" class="button button19" type="submit"><a href="#chooseEvent">Next</a></button>
 
             </div>
-        
+
         </section>
-     
-<!--*************************  #6 Choose Event  ****************************-->
+
+        <!--*************************  #6 Choose Event  ****************************-->
 
         <!-- <section id="chooseEvent" class="hide">
            
@@ -188,11 +192,11 @@
             </div>
        
         </section> -->
-      
-<!--**********************  #7 Idea added - Complete  ***********************-->
+
+        <!--**********************  #7 Idea added - Complete  ***********************-->
 
         <section id="complete" class="hide">
-          
+
             <button id="backToChooseEvent"><a href="#chooseEvent"><i class="fas fa-chevron-left"></i>Back</a></button>
 
             <div class="add-idea-5">
@@ -202,26 +206,26 @@
                 <p id="login-to-add"></p>
 
                 <button id="addToDB" class="button button21" type="submit">Done</button>
-            
+
             </div>
-       
+
             <div id="giftcard_display"></div>
         </section>
-        
+
         <!-- Card to show image, title, description, friend, and event, date -->
-       
-        
+
+
     </main>
-    
+
     <footer>
 
         <div class="navbar_container">
             <nav class="bottom_navbar">
                 <ul>
                     <li><button id="nav_btn1" class="button button5">Home</button></li>
-                    <li><button id="nav_btn2" class="button button6">My List</button></li>
+                    <li><button id="myListFooter" class="button button6">My List</button></li>
                     <li><button id="nav_btn3" class="button button7">+</button></li>
-                    <li><button id="nav_btn4" class="button button8">Friends</button></li>
+                    <li><button id="friendsFooter" class="button button8">Friends</button></li>
                     <li><button id="nav_btn5" class="button button9">Store</button></li>
                 </ul>
             </nav>
