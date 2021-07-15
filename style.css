@@ -1335,15 +1335,18 @@ main {
 }
 
 body #giftIdeaProcess .hide,
-body #friendsListProcess .hide {
+body #friendsListProcess .hide,
+body #introPages .hide {
   display: none;
 }
 
 body #giftIdeaProcess .show,
-body #friendsListProcess .show {
+body #friendsListProcess .show,
+body #introPages .show {
   display: block;
 }
 
+/* ============== Intro Pages ========================= */
 /* Styles according to design ========================== */
 .bottom_navbar ul {
   display: -webkit-box;
