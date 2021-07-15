@@ -14,11 +14,8 @@ document.onload = function () {
   });
 };
 
-
-
-const friendsWishlist = document.querySelector('#friendsWishlist');
+const friendsWishlist = document.querySelector("#friendsWishlist");
 let createEventInput, newFriendObj;
-
 
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
@@ -147,21 +144,20 @@ fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
       querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
 
-        const listItem = document.createElement('li');
+        const listItem = document.createElement("li");
         listItem.innerText = `${doc.id}`;
         list.appendChild(listItem);
 
-        const seeListBtn = document.createElement('button');
-        seeListBtn.innerText = 'See List';
+        const seeListBtn = document.createElement("button");
+        seeListBtn.innerText = "See List";
         listItem.appendChild(seeListBtn);
         // listItem.appendChild(friendsWishlist);
 
-        seeListBtn.addEventListener('click', function () {
-          friendID = this.parentElement.innerText.slice(0, -8);
-          friendsWishlist.classList.remove('hide');
+        seeListBtn.addEventListener("click", function () {
+          friendID = this.parentElement.innerText.slice(0, -9);
+          friendsWishlist.classList.remove("hide");
           renderFriendsWishlist(doc);
-        })
-
+        });
       });
 
       FriendsListfromDB.appendChild(list);
@@ -213,24 +209,23 @@ async function renderFriendsWishlist(doc) {
 
         // Editing an item
         // Editing Title
-        const editTitleBtn = document.createElement('button');
+        const editTitleBtn = document.createElement("button");
         editTitleBtn.innerText = "Edit Title";
         card.appendChild(editTitleBtn);
-        editTitleBtn.addEventListener('click', () => {
+        editTitleBtn.addEventListener("click", () => {
           editWishTitle(item, card);
           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editTitleBtn.classList.toggle('hide');
-        })
+          editTitleBtn.classList.toggle("hide");
+        });
         // Editing Description
-        const editDescBtn = document.createElement('button');
+        const editDescBtn = document.createElement("button");
         editDescBtn.innerText = "Edit Desc";
         card.appendChild(editDescBtn);
-        editDescBtn.addEventListener('click', () => {
+        editDescBtn.addEventListener("click", () => {
           editWishDesc(item, card);
           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editDescBtn.classList.toggle('hide');
-        })
-
+          editDescBtn.classList.toggle("hide");
+        });
       });
     })
     .catch((error) => {
@@ -254,11 +249,9 @@ async function deleteWishlistItem(item) {
     .catch((error) => {
       console.error("Error removing document: ", error);
     });
-
 }
 
 async function renderTHISFriendList(friendID) {
-
   friendsWishlist.innerHTML = "";
 
   await db
@@ -299,24 +292,23 @@ async function renderTHISFriendList(friendID) {
 
         // Editing an item
         // Editing Title
-        const editTitleBtn = document.createElement('button');
+        const editTitleBtn = document.createElement("button");
         editTitleBtn.innerText = "Edit Title";
         card.appendChild(editTitleBtn);
-        editTitleBtn.addEventListener('click', () => {
+        editTitleBtn.addEventListener("click", () => {
           editWishTitle(item, card);
           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editTitleBtn.classList.toggle('hide');
-        })
+          editTitleBtn.classList.toggle("hide");
+        });
         // Editing Description
-        const editDescBtn = document.createElement('button');
+        const editDescBtn = document.createElement("button");
         editDescBtn.innerText = "Edit Desc";
         card.appendChild(editDescBtn);
-        editDescBtn.addEventListener('click', () => {
+        editDescBtn.addEventListener("click", () => {
           editWishDesc(item, card);
           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editDescBtn.classList.toggle('hide');
-        })
-
+          editDescBtn.classList.toggle("hide");
+        });
       });
     })
     .catch((error) => {
