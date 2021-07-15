@@ -46,6 +46,7 @@
   <script src="../js/firebase.js" defer></script>
   <script src="../js/main.js" defer></script>
   <script src="../js/auth.js" defer></script>
+  <script src="../js/pageDisplayIntro.js" defer></script>
 </head>
 
 <body>
@@ -63,15 +64,16 @@
       </div>
 
       <div class="footer-welcome">
-        <div class="see-demo"><a href="#demo-page">See the demo</a></div>
+        <div class="see-demo" id="seeDemo"><a href="#demo-page">See the demo</a></div>
+        <div class="explore" id="exploreLink"><a href="gift_idea.html">Explore</a></div>
         <div class="skip"><a href="#loginPage">Skip</a></div>
-        <div class="explore"><a href="gift_idea.html">Explore</a></div>
+
       </div>
     </section>
 
     <!-- DEMO PAGE -->
 
-    <section class="hide" id="demoPage">
+    <section class="hide" id="demo-page">
 
 
       <div class="demo-carousel">
@@ -82,6 +84,7 @@
       <div class="footer-demo">
         <button id="sign-up"><a href="#registerPage">Sign up</a></button>
         <button id="log-in"><a href="#loginPage">Login</a></button>
+
       </div>
     </section>
 
@@ -114,7 +117,7 @@
 
         <div class="footer-login">
           <span>Not a Member?</span><br />
-          <a href="#registerPage" class="link link3">Sign up Now!</a>
+          <a href="#registerPage" id="registerLink" class="link link3">Sign up Now!</a>
         </div>
 
       </div>
@@ -160,7 +163,7 @@
         </div>
 
         <div class="footer-register">
-          <span>Already a Member? <a href="#loginPage" class="link link3">Log in!</a> </span>
+          <span>Already a Member? <a href="#loginPage" id="loginLink" class="link link3">Log in!</a> </span>
 
         </div>
 

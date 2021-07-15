@@ -1,6 +1,7 @@
 // ///////////////log in  + register + welcome//////////////////////////
 
 main {
+
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -108,6 +109,7 @@ main {
     h1 {
       font-size: 3rem;
     }
+
     .footer-welcome {
       text-align: center;
 
@@ -230,7 +232,9 @@ main .add-idea-1,
   label {
     color: $color_neutral_white;
   }
+
   width: 60vw;
+
   .images {
     text-align: center;
     margin-top: 8rem;
@@ -241,6 +245,7 @@ main .add-idea-1,
   }
 
   #ideaForm {
+
     #gift_title,
     #gift_description {
       background: none;
@@ -259,7 +264,8 @@ main .add-idea-1,
       }
     }
   }
- #coordinates {
+
+  #coordinates {
     display: flex;
     background: white;
     // justify-content: center;
@@ -281,7 +287,8 @@ main .add-idea-1,
   border-radius: 44px;
   background: white;
   height: 40px;
-  width:40px;
+  width: 40px;
+
   .fas {
     display: flex;
     justify-content: center;
@@ -289,6 +296,7 @@ main .add-idea-1,
     align-self: center;
   }
 }
+
 //////////////////////// take photo page////////////////////////////
 
 main #takePhoto {
@@ -301,6 +309,7 @@ main #takePhoto {
     display: flex;
     flex-direction: column;
   }
+
   #snap {
     margin: 1rem;
   }
@@ -405,6 +414,7 @@ main #takePhoto {
     border-color: $color_button_purple;
     color: $color_text_dark;
   }
+
   .editDescInput,
   .editTitleInput {
     background-color: $color_neutral_white;
@@ -511,6 +521,7 @@ input#friendName,
   flex-direction: column;
   align-items: center;
 }
+
 .email {
   display: flex;
   flex-direction: row;
@@ -524,6 +535,7 @@ input#friendName,
   justify-content: center;
   align-items: center;
 }
+
 #reset_password,
 #noreset {
   padding: 1rem 2rem;

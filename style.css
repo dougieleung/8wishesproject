@@ -1343,7 +1343,9 @@ body #introPages .hide {
 body #giftIdeaProcess .show,
 body #friendsListProcess .show,
 body #introPages .show {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* ============== Intro Pages ========================= */
