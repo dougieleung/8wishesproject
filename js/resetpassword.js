@@ -26,7 +26,7 @@ resetPassword.addEventListener("click", (event) => {
     emailtoreset.value = "";
     emailtoreset.focus();
 
-    backtologin.style.display = "inline-block";
+    backtologin.style.display = "flex";
     noreset.style.display = "none";
     resetPassword.style.display = "none";
     } else {
@@ -36,7 +36,7 @@ resetPassword.addEventListener("click", (event) => {
 
 backtologin.addEventListener('click', () => {
 
-    noreset.style.display = "inline-block";
+    noreset.style.display = "flex";
     backtologin.style.display = "none";
 
 })

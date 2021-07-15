@@ -7,7 +7,7 @@ const windowImage = document.querySelector("#windowImage");
 const context = canvas.getContext("2d");
 let storeImage = "";
 
-context.scale(0.5, 0.5);
+context.scale(0.4, 0.4);
 
 cameraBtn.addEventListener("click", function () {
   
@@ -46,7 +46,7 @@ function handleBlob(blob) {
     summaryCardimage.appendChild(copyImg);
  
     const copyImg2 = document.createElement("img");
-    copyImg2.style.height = "100px";
+    copyImg2.style.height = "200px";
     copyImg2.src = objectURL;
     windowImage.innerHTML = "";
     windowImage.appendChild(copyImg2);

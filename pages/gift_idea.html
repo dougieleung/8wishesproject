@@ -68,7 +68,6 @@
 
                 <button id="startIdeaBtn" class="button button12"><a href="#giftIdeaAdd">Add a new idea</a></button>
             </div>
-
         </section>
 
         <!--*********************  #2 Add Gift Idea Section  ********************** -->
@@ -90,7 +89,6 @@
                     <button id="gallery_btn" class="button button14" type="image"><i class="far fa-image"></i></button>
                 </div>
                 
-
                 <button id="addGift" class="button button15" type="submit"><a href="#summaryCard">NEXT</a></button>
 
             </div>
@@ -110,7 +108,7 @@
 
                 <button id="snap">Snap Photo</button>
 
-                <canvas id="canvas" width="240" height="240"></canvas>
+                <canvas id="canvas" width="240" height="190"></canvas>
 
             </div>
 
@@ -133,7 +131,13 @@
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <label for="location">Add location(optional)</label><div><a id="map-link" target="_blank"></a><button id="locate"><i class="fas fa-map-marker-alt"></i></button></div><br><br>
+                <label for="location">Add location(optional)</label>
+                <div id="coordinates">
+                    <a id="map-link" target="_blank"></a>
+                    <button id="locate"><i class="fas fa-map-marker-alt"></i></button>
+                </div>
+                <br>
+                <br>
                
                 <p id="status"></p>
                 
@@ -167,9 +171,7 @@
 
                 <!-- Generated from list from Firestore -->
                 <div class="friends-list" id="friendsList"></div>
-
             </div>
-
         </section>
 
         <!--*************************  #6 Choose Event  ****************************-->
