@@ -1,0 +1,48 @@
+console.log('PageDisplayIntro.js Connected');
+const welcomePage = document.querySelector('#welcomePage');
+const seeDemo = document.querySelector('#seeDemo');
+const demoPage = document.querySelector('#demo-page');
+const signUpBtn = document.querySelector('#sign-up');
+const loginBtn = document.querySelector('#log-in');
+const loginPage = document.querySelector('#loginPage');
+const loginLink = document.querySelector('#loginLink');
+const registerLink = document.querySelector('#registerLink');
+
+
+
+seeDemo.addEventListener('click', () => {
+
+    welcomePage.classList.remove('show');
+    welcomePage.classList.add('hide');
+    demoPage.classList.toggle('hide');
+
+})
+
+signUpBtn.addEventListener('click', () => {
+
+    demoPage.classList.remove('show');
+    demoPage.classList.add('hide');
+    registerPage.classList.toggle('hide');
+
+})
+
+loginBtn.addEventListener('click', () => {
+    demoPage.classList.remove('show');
+    demoPage.classList.add('hide');
+    loginPage.classList.toggle('hide');
+
+})
+
+loginLink.addEventListener('click', () => {
+
+    registerPage.classList.remove('show');
+    registerPage.classList.add('hide');
+    loginPage.classList.toggle('hide');
+})
+
+registerLink.addEventListener('click', () => {
+
+    loginPage.classList.remove('show');
+    loginPage.classList.add('hide');
+    registerPage.classList.toggle('hide');
+})

@@ -1334,14 +1334,21 @@ main {
   display: none;
 }
 
-.hide {
+body #giftIdeaProcess .hide,
+body #friendsListProcess .hide,
+body #introPages .hide {
   display: none;
 }
 
-.show {
-  display: block;
+body #giftIdeaProcess .show,
+body #friendsListProcess .show,
+body #introPages .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
+/* ============== Intro Pages ========================= */
 /* Styles according to design ========================== */
 .bottom_navbar ul {
   display: -webkit-box;
