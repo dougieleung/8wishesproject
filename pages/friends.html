@@ -49,10 +49,10 @@
 
 <body>
   <header></header>
-  <main>
+  <main id="friendsListProcess">
     <section id="listEmptyPage">
       <h2>Your friend list is empty.</h2>
-      <button id="addFriend" class="add-friend-btn">
+      <button id="addFriend" class="add-friend-btn" type="button">
         Add a friend
       </button>
     </section>
@@ -77,7 +77,7 @@
 
       <!-- <input id="friendEvent" type="text" /> -->
       <input id="friendDate" type="date" id="event" name="event" />
-      <button id="addFriendBtn">Add</button>
+      <button id="addFriendBtn" type="button">Add</button>
     </section>
 
     <!-- /#addFriendPage -->
@@ -93,15 +93,10 @@
     <section id="friendsListPage" class="hide">
       <h2>Friends</h2>
       <div id="friendsListFromDB" class="friendAdded">
-
         <p><a href="#">See list</a></p>
       </div>
       <div class="addfriend">
-        <button id="fetchFriendsBtn">
-          <a href="#">Fetch friends list</a>
-        </button>
-
-
+        <button id="fetchFriendsBtn" type="button">Fetch friends list</button>
       </div>
     </section>
     <!-- /#friendsListPage -->
@@ -126,7 +121,6 @@
           <li><button id="nav_btn5" class="button button9">Store</button></li>
         </ul>
       </nav>
-
     </div>
 
     <!-- .footer_container>nav.footer_links>nav>ul>li*5>a[href="#"] -->

@@ -75,11 +75,11 @@
 
         <section id="giftIdeaAdd" class="hide">
 
-            <button id="backToStart"><a href="#giftIdeaHomePage"><i class="fas fa-chevron-left"></i>Back</a></button>
+            <button id="backToStart"><a href="#giftIdeaHomePage"><i class="fas fa-chevron-left"></i></a></button>
 
             <div class="add-idea-1">
 
-                <form id="ideaForm" method="post"></form>
+                <form id="ideaForm" method="post">
                 <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
                 <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
                 </form>
@@ -89,8 +89,9 @@
                                 class="fas fa-camera"></i></a></button>
                     <button id="gallery_btn" class="button button14" type="image"><i class="far fa-image"></i></button>
                 </div>
+                
 
-                <button id="addGift" class="button button15" type="submit">NEXT</button>
+                <button id="addGift" class="button button15" type="submit"><a href="#summaryCard">NEXT</a></button>
 
             </div>
 
@@ -101,7 +102,7 @@
 
         <section id="takePhoto" class="hide">
 
-            <button id="backToIdeaAdd2"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i>Back</a></button>
+            <button id="backToIdeaAdd2"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i></a></button>
 
             <div id="camera">
 
@@ -122,7 +123,7 @@
 
         <section id="summaryCard" class="hide">
 
-            <button id="backToIdeaAdd"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i>Back</a></button>
+            <button id="backToIdeaAdd"><a href="#giftIdeaAdd"><i class="fas fa-chevron-left"></i></a></button>
 
             <div class="add-idea-2">
 
@@ -132,11 +133,10 @@
                 <h3 id="displayTitle"></h3>
                 <p id="displayDesc"></p>
 
-                <button id="locate"><i class="fas fa-map-marker-alt"></i></button><label for="location">Add
-                    location(optional)</label><br><br>
+                <label for="location">Add location(optional)</label><div><a id="map-link" target="_blank"></a><button id="locate"><i class="fas fa-map-marker-alt"></i></button></div><br><br>
+               
                 <p id="status"></p>
-                <a id="map-link" target="_blank"></a>
-
+                
                 <button id="nextToWishlists" class="button button16" type="submit"><a
                         href="#addToWishlistSection">Next</a></button>
 
@@ -148,7 +148,7 @@
 
         <section id="addToWishlistSection" class="hide">
 
-            <button id="backToSummaryCard"><a href="#summaryCard"><i class="fas fa-chevron-left"></i>Back</a></button>
+            <button id="backToSummaryCard"><a href="#summaryCard"><i class="fas fa-chevron-left"></i></a></button>
 
             <div class="add-idea-3">
 
@@ -157,16 +157,16 @@
                     <div id="windowDescription" class="window-description"></div>
                 </div>
 
-                <button id="addtowish" class="button button17">Add to wishlist</button>
+                <button id="addtowish" class="button button17" type="button">Add to wishlist</button>
                 <!-- <button id="addtofriend" class="button button18">Add to friend's</button> -->
 
                 <p id="add-wish-msg"></p>
 
+                <!-- input field for geolocation -->
+                <button id="nextToEvents" class="button button19" type="button"><a href="#complete">Next</a></button>
+
                 <!-- Generated from list from Firestore -->
                 <div class="friends-list" id="friendsList"></div>
-
-                <!-- input field for geolocation -->
-                <button id="nextToEvents" class="button button19" type="submit"><a href="#chooseEvent">Next</a></button>
 
             </div>
 
@@ -196,7 +196,7 @@
 
         <section id="complete" class="hide">
 
-            <button id="backToChooseEvent"><a href="#chooseEvent"><i class="fas fa-chevron-left"></i>Back</a></button>
+            <button id="backToChooseEvent"><a href="#chooseEvent"><i class="fas fa-chevron-left"></i></a></button>
 
             <div class="add-idea-5">
 
