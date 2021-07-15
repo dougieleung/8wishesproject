@@ -36,8 +36,19 @@ addGift.addEventListener("click", () => {
 addToWish.addEventListener("click", () => {
   addWishMsg.innerHTML = "";
   newWish.mine = true;
-  addWishMsg.innerHTML =
-    'You have added the idea to your own wishlist!';
+  addToWishlistSection.classList.add('hide');
+  addToWishlistSection.classList.remove('show');
+  complete.classList.toggle('hide');
+  if (newWish.location !== undefined) {
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
+  ${newWish.wishDesc}<br>
+  ${newWish.location}`;
+  } else {
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
+  ${newWish.wishDesc}`;
+  }
+  // addWishMsg.innerHTML =
+  //   'You have added the idea to your own wishlist!';
 });
 
 // addToFriend.addEventListener("click", () => {
@@ -62,12 +73,12 @@ addToWish.addEventListener("click", () => {
 
 addToDB.addEventListener("click", async function addToFirestore() {
   logintoadd.innerHTML = "";
-  ideaAddedMsg.innerHTML = "";
+  // ideaAddedMsg.innerHTML = "";
 
   if (firebase.auth().currentUser === null) {
     logintoadd.innerHTML = "Sorry.  Please sign in before adding wishes.";
   } else if (newWish.mine) {
-    ideaAddedMsg.innerHTML = "Your idea is added!";
+    // ideaAddedMsg.innerHTML = "Your idea is added!";
 
     await db
       .collection(firebase.auth().currentUser.uid)
@@ -128,7 +139,7 @@ async function friendsListfromDB() {
     });
 }
 
-nextToWishlists.addEventListener("click", friendsListfromDB);
+// nextToWishlists.addEventListener("click", friendsListfromDB);
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;

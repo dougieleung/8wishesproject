@@ -1,18 +1,47 @@
 console.log("Friends JS Connected!");
 
-const currentUser = firebase.auth().currentUser;
+const friendsIntroPageContent = document.querySelector('#friendsIntroPageContent')
 
-document.onload = function () {
-  console.log("Friends page loaded");
-  addFriend.addEventListener("click", () => {
-    event.preventDefault();
-    if (currentUser) {
-      alert("please proceed!");
-    } else {
-      alert("please login first!");
-    }
-  });
-};
+window.addEventListener('load', friendsListfromDB());
+
+async function friendsListfromDB() {
+  console.log("friends list summary!");
+  friendsIntroPageContent.innerHTML = "";
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .get()
+    .then((querySnapshot) => {
+      const list = document.createElement("ul");
+      list.setAttribute("id", "fetchedFriendsList");
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+
+        const listItem = document.createElement("li");
+        listItem.setAttribute("id", `${doc.id}`);
+
+        const buttonItem = document.createElement("button");
+        buttonItem.setAttribute("type", "button");
+        buttonItem.addEventListener("click", () => {
+          addIdeaToCollection(doc.id);
+        });
+
+        const friendsNames = document.createTextNode(`${doc.id}`);
+        buttonItem.appendChild(friendsNames);
+        listItem.appendChild(buttonItem);
+        list.appendChild(listItem);
+
+      });
+
+      friendsList.appendChild(list);
+    })
+
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+}
+
 
 const friendsWishlist = document.querySelector("#friendsWishlist");
 let createEventInput, newFriendObj;
@@ -34,6 +63,10 @@ class addFriendClass {
     friendName.focus();
   }
 }
+
+// fetching list on the first screen
+
+
 
 // Creating a New Event (Other)
 friendEventSelect.addEventListener("change", () => {
@@ -315,3 +348,5 @@ async function renderTHISFriendList(friendID) {
       console.log("Error getting document:", error);
     });
 }
+
+

@@ -79,8 +79,8 @@
             <div class="add-idea-1">
 
                 <form id="ideaForm" method="post">
-                <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
-                <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
+                    <input type="text" name="title" id="gift_title" placeholder="Title" required><br>
+                    <textarea name="description" id="gift_description" placeholder="Description" required></textarea>
                 </form>
                 <!-- The camera and gallery buttons will be replaced by UI assets -->
                 <div class="images">
@@ -88,7 +88,7 @@
                                 class="fas fa-camera"></i></a></button>
                     <button id="gallery_btn" class="button button14" type="image"><i class="far fa-image"></i></button>
                 </div>
-                
+
                 <button id="addGift" class="button button15" type="submit"><a href="#summaryCard">NEXT</a></button>
 
             </div>
@@ -138,9 +138,9 @@
                 </div>
                 <br>
                 <br>
-               
+
                 <p id="status"></p>
-                
+
                 <button id="nextToWishlists" class="button button16" type="submit"><a
                         href="#addToWishlistSection">Next</a></button>
 
@@ -161,38 +161,19 @@
                     <div id="windowDescription" class="window-description"></div>
                 </div>
 
-                <button id="addtowish" class="button button17" type="button">Add to wishlist</button>
+                <button id="addtowish" class="button button17" type="button">Add to My list</button>
                 <!-- <button id="addtofriend" class="button button18">Add to friend's</button> -->
 
                 <p id="add-wish-msg"></p>
 
                 <!-- input field for geolocation -->
-                <button id="nextToEvents" class="button button19" type="button"><a href="#complete">Next</a></button>
+                <button id="nextToEvents" class="button button19" type="button"><a href="friends.htnl">Add to
+                        Friend</a></button>
 
                 <!-- Generated from list from Firestore -->
                 <div class="friends-list" id="friendsList"></div>
             </div>
         </section>
-
-        <!--*************************  #6 Choose Event  ****************************-->
-
-        <!-- <section id="chooseEvent" class="hide">
-           
-            <button id="backToWishlistSection"><a href="#addToWishlistSection"><i class="fas fa-chevron-left"></i>Back</a></button>
-
-            <div class="add-idea-4">
-
-                <h2>Choose an event for your idea</h2>
-
-                <label for="">Event (optional)</label><br>
-                <input id="eventname" type="text" placeholder="name of event"><br>
-                <input type="date" id="eventdate" name="due" /><br>
-
-                <button id="addEventBtn" class="button button20" type="submit"> Next</button>
-
-            </div>
-       
-        </section> -->
 
         <!--**********************  #7 Idea added - Complete  ***********************-->
 
@@ -202,11 +183,13 @@
 
             <div class="add-idea-5">
 
-                <h2>Click done to add your idea!</h2>
-                <p id="idea-added-msg"></p>
+                <h2>Your Idea is Added!</h2>
+                <!-- <p id="idea-added-msg"></p> -->
+                <div id="ideaSummary"></div>
+                <!-- /#ideaSummary -->
                 <p id="login-to-add"></p>
 
-                <button id="addToDB" class="button button21" type="submit">Done</button>
+                <button id="addToDB" class="button button21" type="button">Done</button>
 
             </div>
 
