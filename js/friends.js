@@ -14,7 +14,11 @@ document.onload = function () {
   });
 };
 
+
+
+const friendsWishlist = document.querySelector('#friendsWishlist');
 let createEventInput, newFriendObj;
+
 
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
@@ -128,6 +132,7 @@ async function addFriendToFirestore(friendName, friendObject) {
   }
 }
 
+let friendID;
 fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
   FriendsListfromDB.innerHTML = "";
   console.log("addfriend button working");
@@ -142,10 +147,21 @@ fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
       querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
 
-        const listItem = document.createElement("li");
-        const friendsNames = document.createTextNode(`${doc.id}`);
-        listItem.appendChild(friendsNames);
+        const listItem = document.createElement('li');
+        listItem.innerText = `${doc.id}`;
         list.appendChild(listItem);
+
+        const seeListBtn = document.createElement('button');
+        seeListBtn.innerText = 'See List';
+        listItem.appendChild(seeListBtn);
+        // listItem.appendChild(friendsWishlist);
+
+        seeListBtn.addEventListener('click', function () {
+          friendID = this.parentElement.innerText.slice(0, -8);
+          friendsWishlist.classList.remove('hide');
+          renderFriendsWishlist(doc);
+        })
+
       });
 
       FriendsListfromDB.appendChild(list);
@@ -155,3 +171,155 @@ fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
       console.log("Error getting document:", error);
     });
 });
+
+async function renderFriendsWishlist(doc) {
+  friendsWishlist.innerHTML = "";
+
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .doc(doc.id)
+    .collection("This Friend's List")
+    .orderBy("timestamp", "desc")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((item) => {
+        // console.log(doc.id, " => ", doc.data());
+        // Create the card container
+        const card = document.createElement("div");
+        card.className = "displaycard";
+        // Add the Gift title
+        const giftHeader = document.createElement("h3");
+        giftHeader.innerText = `${item.data().wishTitle}`;
+        card.appendChild(giftHeader);
+        // Add the image / photo here
+        // Add the Gift description to the card
+        const descriptionContainer = document.createElement("div");
+        const descriptionText = document.createTextNode(
+          `${item.data().wishDesc}`
+        );
+        descriptionContainer.appendChild(descriptionText);
+        card.appendChild(descriptionContainer);
+        // Deleting an item
+        const deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute = ("type", "button");
+        deleteBtn.innerText = "Delete";
+        card.appendChild(deleteBtn);
+        friendsWishlist.appendChild(card);
+        deleteBtn.addEventListener("click", () => {
+          deleteWishlistItem(item);
+        });
+
+        // Editing an item
+        // Editing Title
+        const editTitleBtn = document.createElement('button');
+        editTitleBtn.innerText = "Edit Title";
+        card.appendChild(editTitleBtn);
+        editTitleBtn.addEventListener('click', () => {
+          editWishTitle(item, card);
+          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+          editTitleBtn.classList.toggle('hide');
+        })
+        // Editing Description
+        const editDescBtn = document.createElement('button');
+        editDescBtn.innerText = "Edit Desc";
+        card.appendChild(editDescBtn);
+        editDescBtn.addEventListener('click', () => {
+          editWishDesc(item, card);
+          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+          editDescBtn.classList.toggle('hide');
+        })
+
+      });
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+}
+
+async function deleteWishlistItem(item) {
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .doc(friendID)
+    .collection("This Friend's List")
+    .doc(item.id)
+    .delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+      renderTHISFriendList(friendID);
+    })
+    .catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+
+}
+
+async function renderTHISFriendList(friendID) {
+
+  friendsWishlist.innerHTML = "";
+
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .doc(friendID)
+    .collection("This Friend's List")
+    .orderBy("timestamp", "desc")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((item) => {
+        console.log(item.id, " => ", item.data());
+        // Create the card container
+        const card = document.createElement("div");
+        card.className = "displaycard";
+        // Add the Gift title
+        const giftHeader = document.createElement("h3");
+        giftHeader.innerText = `${item.data().wishTitle}`;
+        card.appendChild(giftHeader);
+        // Add the image / photo here
+        // Add the Gift description to the card
+        const descriptionContainer = document.createElement("div");
+        const descriptionText = document.createTextNode(
+          `${item.data().wishDesc}`
+        );
+        descriptionContainer.appendChild(descriptionText);
+        card.appendChild(descriptionContainer);
+        // Deleting an item
+        const deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute = ("type", "button");
+        deleteBtn.innerText = "Delete";
+        card.appendChild(deleteBtn);
+        friendsWishlist.appendChild(card);
+        deleteBtn.addEventListener("click", () => {
+          deleteWishlistItem(item);
+        });
+
+        // Editing an item
+        // Editing Title
+        const editTitleBtn = document.createElement('button');
+        editTitleBtn.innerText = "Edit Title";
+        card.appendChild(editTitleBtn);
+        editTitleBtn.addEventListener('click', () => {
+          editWishTitle(item, card);
+          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+          editTitleBtn.classList.toggle('hide');
+        })
+        // Editing Description
+        const editDescBtn = document.createElement('button');
+        editDescBtn.innerText = "Edit Desc";
+        card.appendChild(editDescBtn);
+        editDescBtn.addEventListener('click', () => {
+          editWishDesc(item, card);
+          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+          editDescBtn.classList.toggle('hide');
+        })
+
+      });
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+}
