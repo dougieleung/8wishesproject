@@ -49,28 +49,33 @@ firebase.auth().onAuthStateChanged((user) => {
 
 // ****************************** USER LOGIN **********************************
 
-loginButton.addEventListener("click", () => {
+loginButton.addEventListener("click", (event) => {
   console.log("Login Clicked");
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
-    .catch((error) => {
-      console.log("Error signing in, ", error.message);
-      // alert(error.message);
+  if (email1.value.length && password1.value.length) {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
+      .then((user) => {
+        if (user) {
+          const errorLogin = document.querySelector("#error-login");
+          // alert('Welcome back.  You are now logged in!');
+          registerPage.style.display = "none";
 
-      const errorLogin = document.querySelector("#error-login");
-      errorLogin.innerHTML = `Incorrect username or password. Please try again.`;
-    })
-    .then((user) => {
-      if (user) {
+          errorLogin.innerHTML = "";
+          registerPage.classList.add("hide");
+        }
+      })
+      .catch((error) => {
+        console.log("Error signing in, ", error.message);
+        // alert(error.message);
+
         const errorLogin = document.querySelector("#error-login");
-        // alert('Welcome back.  You are now logged in!');
-        registerPage.style.display = "none";
-
-        errorLogin.innerHTML = "";
-        // registerPage.classList.add("hide");
-      }
-    });
+        errorLogin.innerHTML = `Incorrect username or password. Please try again.`;
+      });
+  } else {
+    alert("All fields are mandatory!");
+    loginEmail.focus();
+  }
 
   // Housekeeping
   loginEmail.value = "";
@@ -88,10 +93,14 @@ logoutButton.addEventListener("click", () => {
     .signOut()
     .then(() => {
       // alert('Thanks for visiting us.  See you later!');
-      registerPage.style.display = "block";
+      registerPage.style.display = "flex";
     })
     .catch((error) => {
       console.error("Error signing out, ", error.message);
       alert(error.message);
     });
+  // Housekeeping
+  loginEmail.value = "";
+  loginPassword.value = "";
+  loginEmail.focus();
 });

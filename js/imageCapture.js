@@ -5,7 +5,9 @@ const canvas = document.querySelector("#canvas");
 const summaryCardimage = document.querySelector("#summaryCardimage");
 const windowImage = document.querySelector("#windowImage");
 const context = canvas.getContext("2d");
-context.scale(0.5, 0.5);
+let storeImage = "";
+
+context.scale(0.4, 0.4);
 
 cameraBtn.addEventListener("click", function () {
   
@@ -36,15 +38,17 @@ backToIdeaAdd2.addEventListener("click", function () {
 function handleBlob(blob) {
 
     const objectURL = window.URL.createObjectURL(blob);
+    
     const copyImg = document.createElement("img");
     copyImg.style.height = "200px";
     copyImg.src = objectURL;
     summaryCardimage.innerHTML = "";
     summaryCardimage.appendChild(copyImg);
-    const objectURL2 = window.URL.createObjectURL(blob);
+ 
     const copyImg2 = document.createElement("img");
-    copyImg2.style.height = "100px";
-    copyImg2.src = objectURL2;
+    copyImg2.style.height = "200px";
+    copyImg2.src = objectURL;
     windowImage.innerHTML = "";
     windowImage.appendChild(copyImg2);
+    storeImage = objectURL;
 }

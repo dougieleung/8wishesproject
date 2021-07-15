@@ -1,8 +1,9 @@
 // START CREATING AN OBJECT FOR THE WISH
 class newWishObject {
-  constructor(title, desc, timestamp) {
+  constructor(title, desc, image, timestamp) {
     this.wishTitle = title;
     this.wishDesc = desc;
+    this.storeImage = image;
     this.timestamp = timestamp;
   }
 }
@@ -18,6 +19,7 @@ addGift.addEventListener("click", () => {
     newWish = new newWishObject(
       giftTitle.value.trim(),
       giftDescription.value.trim(),
+      storeimage = storeImage,
       new Date()
     );
 
@@ -35,7 +37,7 @@ addToWish.addEventListener("click", () => {
   addWishMsg.innerHTML = "";
   newWish.mine = true;
   addWishMsg.innerHTML =
-    'You have added the idea to your own wishlist! Please click "Next" to see your list!';
+    'You have added the idea to your own wishlist!';
 });
 
 // addToFriend.addEventListener("click", () => {

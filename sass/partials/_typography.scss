@@ -1,0 +1,188 @@
+// Gift Idea Page
+
+#giftIdeaProcess {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+
+    a, .button, button {
+        font-family: $font_interaction;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    input, textarea {
+        font-family: $font_interaction;
+        font-size: 14px;
+    }
+
+    h3 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+    .displaycard div {
+        font-family: $font_body;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+// Login and Register Page
+
+#loginPage {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+
+    .notloggedin {
+        input {
+            font-family: $font_interaction;
+            font-size: 14px;
+        }
+        a, span {
+            font-family: $font_body;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        button {
+            font-family: $font_interaction;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    .loggedin {
+        h3 {
+            font-family: $font_heading;
+            font-weight: 500;
+            font-size: 22px;
+        }
+        p {
+            font-family: $font_body;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        button {
+            font-family: $font_interaction;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+#registerPage {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+
+    #registerForm {
+        label {
+            font-family: $font_body;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        button, input {
+            font-family: $font_interaction;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+// Reset Password Page
+
+#resetContainer {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+    
+    h4 {
+        font-family: $font_body;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    label {
+        font-family: $font_body;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    button, input {
+        font-family: $font_interaction;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+// Freind Page
+
+#listEmptyPage {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+    button {
+        font-family: $font_interaction;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+#addFriendPage {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+    label, .profile-pic {
+        font-family: $font_body;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    input, #friendEventSelect, button {
+        font-family: $font_interaction;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+#friendsListPage {
+    h2 {
+        font-family: $font_heading;
+        font-weight: 500;
+        font-size: 28px;
+    }
+    a {
+        font-family: $font_interaction;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    #fetchedFriendsList {
+        font-family: $font_body;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+// Footer
+
+.footer_container {
+    a {
+        font-family: $font_interaction;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+}
