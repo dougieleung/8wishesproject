@@ -95,7 +95,10 @@ addToDB.addEventListener("click", async function addToFirestore() {
         console.error("Error writing document: ", error);
       });
 
-    displayGift.innerHTML = "";
+    complete.classList.toggle('hide');
+    displayGift.classList.toggle('hide')
+
+    displayGift.innerHTML = `<h2> My List </h2>`;
 
     renderWishlist();
   }
@@ -195,13 +198,13 @@ async function deleteWishlistItem(docID) {
     .catch((error) => {
       console.error("Error removing document: ", error);
     });
-  displayGift.innerHTML = "";
+  displayGift.innerHTML = `<h2> My List </h2>`;
 }
 
 
 
 async function renderWishlist() {
-  displayGift.innerHTML = "";
+  displayGift.innerHTML = `<h2> My List </h2>`;
   await db
     .collection(firebase.auth().currentUser.uid)
     .doc("MyWishlist")
@@ -211,10 +214,11 @@ async function renderWishlist() {
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        // console.log(doc.id, " => ", doc.data());
+        // console.log(doc.id, " => ", doc.data());        
         // Create the card container
         const card = document.createElement("div");
         card.className = "displaycard";
+        // heading:
         // Add the Gift title
         const giftHeader = document.createElement("h3");
         giftHeader.innerText = `${doc.data().wishTitle}`;
