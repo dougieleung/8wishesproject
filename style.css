@@ -1678,10 +1678,17 @@ main section {
   color: #F9F9FB;
 }
 
-/* ================ Media =====================*/
-.homeButton, .storeButton, .friendsButton, .listButton {
-  background: none;
+#registerLink {
   border: none;
+  background: none;
+}
+
+#skiptologin {
+  background: #363D51;
+  border: none;
+  font-size: 16px;
+  font-family: "Livvic", sans-serif;
+  padding: 16px;
 }
 
 .homeButton img, .storeButton img, .friendsButton img, .listButton img {
@@ -1696,5 +1703,6 @@ main section {
   font-size: 2rem;
   border-radius: 60%;
   padding: 8px 16px;
+
 }
 /*# sourceMappingURL=style.css.map */
