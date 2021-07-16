@@ -44,7 +44,9 @@ body #introPages .show {
 /* Styles according to design ========================== */
 .bottom_navbar {
   ul {
+    padding: 0;
     display: flex;
+    justify-content: space-evenly;
   }
 
   ul li {
@@ -56,3 +58,7 @@ main section {
   width: 100%;
   min-height: 70vh;
 }
+
+
+/* Bottom nav bar ==================================== */
+
