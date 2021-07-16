@@ -59,7 +59,7 @@ backToIdeaAdd2.addEventListener('click', () => {
     takePhoto.classList.remove('show');
     takePhoto.classList.add('hide');
     giftIdeaAdd.classList.toggle('hide');
-    
+
 })
 
 nextToWishlists.addEventListener('click', () => {
@@ -75,11 +75,11 @@ backToSummaryCard.addEventListener('click', () => {
     summaryCard.classList.toggle('hide');
 })
 
-nextToEvents.addEventListener('click', () => {
-    addToWishlistSection.classList.add('hide');
-    addToWishlistSection.classList.remove('show');
-    complete.classList.toggle('hide');
-})
+// nextToEvents.addEventListener('click', () => {
+//     addToWishlistSection.classList.add('hide');
+//     addToWishlistSection.classList.remove('show');
+//     complete.classList.toggle('hide');
+// })
 
 backToChooseEvent.addEventListener('click', () => {
     complete.classList.remove('show');
