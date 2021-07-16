@@ -1691,6 +1691,12 @@ main section {
   padding: 16px;
 }
 
+/* ================ Media =====================*/
+.homeButton, .storeButton, .friendsButton, .listButton {
+  background: none;
+  border: none;
+}
+
 .homeButton img, .storeButton img, .friendsButton img, .listButton img {
   height: 1.5cm;
   width: 1.5cm;
@@ -1703,6 +1709,5 @@ main section {
   font-size: 2rem;
   border-radius: 60%;
   padding: 8px 16px;
-
 }
 /*# sourceMappingURL=style.css.map */
