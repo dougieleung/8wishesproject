@@ -1,0 +1,18 @@
+.homeButton, .storeButton, .friendsButton, .listButton {
+    background: none;
+    border: none;
+
+    img {
+        height: 1.5cm;
+        width: 1.5cm;
+    }
+}
+
+.addButton {
+    background-color: $color_neutral_white;
+    border-color: $color_footer_icon;
+    color: color_footer_icon;
+    font-size: 2rem;
+    border-radius: 60%;
+    padding: 8px 16px;
+}

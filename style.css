@@ -1351,9 +1351,13 @@ body #introPages .show {
 /* ============== Intro Pages ========================= */
 /* Styles according to design ========================== */
 .bottom_navbar ul {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .bottom_navbar ul li {
@@ -1365,6 +1369,7 @@ main section {
   min-height: 70vh;
 }
 
+/* Bottom nav bar ==================================== */
 /* ================ Typography =====================*/
 #giftIdeaProcess h2 {
   font-family: "Baloo Bhai 2", sans-serif;
@@ -1684,5 +1689,20 @@ main section {
   font-size: 16px;
   font-family: "Livvic", sans-serif;
   padding: 16px;
+}
+
+.homeButton img, .storeButton img, .friendsButton img, .listButton img {
+  height: 1.5cm;
+  width: 1.5cm;
+}
+
+.addButton {
+  background-color: #F9F9FB;
+  border-color: #6E64AC;
+  color: color_footer_icon;
+  font-size: 2rem;
+  border-radius: 60%;
+  padding: 8px 16px;
+
 }
 /*# sourceMappingURL=style.css.map */
