@@ -1672,4 +1672,17 @@ main section {
 #complete #backToChooseEvent a {
   color: #F9F9FB;
 }
+
+#registerLink {
+  border: none;
+  background: none;
+}
+
+#skiptologin {
+  background: #363D51;
+  border: none;
+  font-size: 16px;
+  font-family: "Livvic", sans-serif;
+  padding: 16px;
+}
 /*# sourceMappingURL=style.css.map */

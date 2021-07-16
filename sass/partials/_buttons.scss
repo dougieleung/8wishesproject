@@ -49,3 +49,17 @@
         }
     }
 }
+
+#registerLink {
+    border: none;
+    background: none;
+}
+
+#skiptologin {
+    background: $color_primary;
+    border: none;
+    font-size: 16px;
+    font-family: $font_body;
+    padding: 16px;
+
+}

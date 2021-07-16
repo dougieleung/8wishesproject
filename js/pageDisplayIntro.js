@@ -1,5 +1,6 @@
 console.log('PageDisplayIntro.js Connected');
 const welcomePage = document.querySelector('#welcomePage');
+const exploreLink = document.querySelector('#exploreLink');
 const seeDemo = document.querySelector('#seeDemo');
 const demoPage = document.querySelector('#demo-page');
 const signUpBtn = document.querySelector('#sign-up');
@@ -7,7 +8,7 @@ const loginBtn = document.querySelector('#log-in');
 const loginPage = document.querySelector('#loginPage');
 const loginLink = document.querySelector('#loginLink');
 const registerLink = document.querySelector('#registerLink');
-
+const skiptologin = document.querySelector('#skiptologin');
 
 
 seeDemo.addEventListener('click', () => {
@@ -30,7 +31,12 @@ loginBtn.addEventListener('click', () => {
     demoPage.classList.remove('show');
     demoPage.classList.add('hide');
     loginPage.classList.toggle('hide');
+})
 
+skiptologin.addEventListener('click', () => {
+    welcomePage.classList.remove('show');
+    welcomePage.classList.add('hide');
+    loginPage.classList.toggle('hide');
 })
 
 loginLink.addEventListener('click', () => {
