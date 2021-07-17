@@ -17,9 +17,14 @@ const backToSummaryCard = document.querySelector("#backToSummaryCard");
 const addToWishlistSection = document.querySelector('#addToWishlistSection');
 const nextToEvents = document.querySelector('#nextToEvents');
 const backToWishlistSection = document.querySelector('#backToWishlistSection');
+const listEmptyPage = document.querySelector('#listEmptyPage');
 const chooseEvent = document.querySelector('#chooseEvent');
 const backToChooseEvent = document.querySelector('#backToChooseEvent');
 const complete = document.querySelector('#complete');
+
+const friendtoProfile = document.querySelector('#friendtoProfile');
+const addEventPage = document.querySelector('#addEventPage');
+const addAFriendBtn = document.querySelector('#addAFriendBtn');
 
 // ==================== Gift Ideas pages Display ========================
 
@@ -98,3 +103,21 @@ backToChooseEvent.addEventListener('click', () => {
 //     complete.classList.add('hide');
 //     chooseEvent.classList.toggle('hide');
 // })
+
+seeFriendsList.addEventListener('click', () =>{
+    addToWishlistSection.classList.remove('show');
+    addToWishlistSection.classList.add('hide');
+    listEmptyPage.classList.toggle('hide');
+})
+
+friendtoProfile.addEventListener('click', ()=> {
+    listEmptyPage.classList.remove('show');
+    listEmptyPage.classList.add('hide');
+    addEventPage.classList.toggle('hide');
+})
+
+addAFriendBtn.addEventListener('click', () => {
+    listEmptyPage.classList.remove('show');
+    listEmptyPage.classList.add('hide');
+    addFriendPage.classList.toggle('hide');
+})

@@ -1,3 +1,7 @@
+<!-- ******************************************************************************************** -->
+<!-- ******************************   Login and Register Page   ********************************* -->
+<!-- ******************************************************************************************** -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,11 +56,11 @@
 <body>
   <header></header>
   <main id="introPages">
-    <!--************************************  -->
-    <!-- WELCOME PAGE SECTION -->
-    <!-- ************************************* -->
 
+<!-- ********************************   WELCOME Page section   ********************************** -->
+  
     <section id="welcomePage">
+  
       <h1>Welcome</h1>
 
       <div class="logo">
@@ -64,22 +68,22 @@
       </div>
 
       <div class="footer-welcome">
+       
         <div class="see-demo" id="seeDemo"><a href="#demo-page">See the demo</a></div>
         <div class="explore" id="exploreLink"><a href="gift_idea.html">Explore</a></div>
         <button id="skiptologin" class="skip"><a href="#loginPage">Skip</a></button>
 
       </div>
+   
     </section>
 
-    <!-- DEMO PAGE -->
+<!-- ************************************   DEMO section   ************************************** -->
 
     <section class="hide" id="demo-page">
-
 
       <div class="demo-carousel">
         <img src="/icons/logo1.png" alt="">
       </div>
-
 
       <div class="footer-demo">
         <button id="sign-up"><a href="#registerPage">Sign up</a></button>
@@ -88,22 +92,17 @@
       </div>
     </section>
 
-
-    <!--************************************  -->
-    <!-- LOGIN PAGE SECTION -->
-    <!-- ************************************* -->
+<!-- *********************************   LOGIN Page section   *********************************** -->
 
     <section class="hide" id="loginPage">
+      
       <h2>LOGIN</h2>
-
-      <!-- Logo and/or background image -->
-      <img src="" alt="" />
 
       <div class="notloggedin" id="not-logged-in">
         <label for="email" id="email-label">Email</label>
-        <input type="email" name="" id="email1" placeholder="Enter your e-mail" />
+          <input type="email" name="" id="email1" placeholder="Enter your e-mail" />
         <label for="password" id="password-label">Password</label>
-        <input type="password" name="" id="password1" placeholder="Enter your password" />
+         <input type="password" name="" id="password1" placeholder="Enter your password" />
 
         <div class="forgot-password">
 
@@ -116,28 +115,33 @@
         <div class="errorLogin" id="error-login"></div>
 
         <div class="footer-login">
+          
           <span>Not a Member?</span><br />
           <button id="registerLink" class="link link3">Sign up Now!</button>
+        
         </div>
 
       </div>
 
+      <!-- Logged in section -->
 
       <div class="loggedin" id="logged-in">
         <h3>Welcome! You are logged in!</h3>
         <p id="user_para"></p>
         <button id="btn_logout" class="button button4">Logout</button>
-        <button id="btn_AddGiftIdea" class="button button5"><a href="/pages/gift_idea.html">Add a gift idea</a></button>
-        <button id="btn_AddFriend" class="button button6"><a href="/pages/friends.html">Add a friend</a></button>
+        <button id="btn_AddGiftIdea" class="button button5">
+          <a href="/pages/gift_idea.html">Add a gift idea</a></button>
+        <button id="btn_AddFriend" class="button button6">
+          <a href="/pages/friends.html">Add a friend</a></button>
 
       </div>
+    
     </section>
 
-    <!--************************************  -->
-    <!-- REGISTER PAGE SECTION -->
-    <!-- ************************************* -->
+<!-- ********************************   REGISTER Page section   ********************************* -->
 
     <section class="hide" id="registerPage">
+     
       <h1>REGISTRATION</h1>
 
       <form id="registerForm">
@@ -169,18 +173,24 @@
 
       </form>
       <p id="outputMessage"></p>
+    
     </section>
-    <!-- /#registerPage. -->
+
   </main>
+
   <footer>
     <div class="navbar_container">
       <nav class="bottom_navbar">
           <ul>
-              <li><button id="nav_btn1" class="button homeButton"><img src="../icons/footerIcons/HomeIcon.svg"></button></li>
-              <li><button id="myListFooter" class="button listButton"><img src="../icons/footerIcons/listIcon.svg"></button></li>
+              <li><button id="nav_btn1" class="button homeButton">
+                <img src="../icons/footerIcons/HomeIcon.svg"></button></li>
+              <li><button id="myListFooter" class="button listButton">
+                <img src="../icons/footerIcons/listIcon.svg"></button></li>
               <li><button id="nav_btn3" class="button addButton">+</button></li>
-              <li><button id="friendsFooter" class="button friendsButton"><img src="../icons/footerIcons/friendsIcon.svg"></button></li>
-              <li><button id="nav_btn5" class="button storeButton"><img src="../icons/footerIcons/storesIcon.svg"></button></li>
+              <li><button id="friendsFooter" class="button friendsButton">
+                <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
+              <li><button id="nav_btn5" class="button storeButton">
+                <img src="../icons/footerIcons/storesIcon.svg"></button></li>
           </ul>
       </nav>
   </div>
