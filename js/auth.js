@@ -11,25 +11,32 @@ let newUser = null;
 class userInfo {
   constructor(username, email) {
     this.username = username,
-    this.email = email
+      this.email = email
   }
   literalObject() {
     return { name: this.username, email: this.email }; //makes recognizable for DB
   }
-  signUp(email, password) {
- 
+  signUp(email, password, username) {
+
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
-    
+
         var user = userCredential.user;
-     
+        if (userCredential) {
+          user.updateProfile({
+            displayName: this.username
+            // photoURL: // some photo url
+          }).then(
+            (s) => console.log(s)
+          )
+        }
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
-    
+
       });
   }
 }
@@ -41,8 +48,8 @@ registerForm.addEventListener("submit", async (event) => {
   console.log("FORM SUBMITTED");
   if (passwordInput.value === confirmPassword.value) {
     newUser = new userInfo(usernameInput.value, emailInput.value);
-  
-    newUser.signUp(emailInput.value, passwordInput.value);
+
+    newUser.signUp(emailInput.value, passwordInput.value, usernameInput.value);
     registerPage.style.display = "none";
   } else {
     // console.error("Passwords are not matching");
@@ -67,7 +74,7 @@ firebase.auth().onAuthStateChanged((user) => {
     if (user !== null) {
       const email = user.email;
       document.getElementById("user_para").innerHTML =
-        "Welcome User : " + email;
+        "Welcome, " + user.displayName;
     }
   } else {
     loggedIn.style.display = "none";
@@ -115,7 +122,7 @@ logoutButton.addEventListener("click", () => {
     .auth()
     .signOut()
     .then(() => {
-  
+
       notLoggedIn.style.display = "block";
     })
     .catch((error) => {
