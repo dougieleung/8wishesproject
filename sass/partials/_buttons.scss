@@ -20,18 +20,35 @@
     margin-top: 4rem;
   }
 
-  #nextToEvents {
-    border: none;
-    border-radius: 44px;
-    width: 232px;
-    height: 48px;
-    justify-content: center;
-    margin: auto;
-  }
 
-  #addtowish {
-    background: $color_button_purple;
-  }
+    #startIdeaBtn,
+    #addGift,
+    #nextToWishlists,
+    #addtowish,
+    #seeFriendsList,
+    #addToDB {
+        border: none;
+        border-radius: 44px;
+        width: 232px;
+        height: 48px;
+        justify-content: center;
+        margin: auto;
+        margin-top: 4rem;
+    }
+
+    #nextToEvents {
+        border: none;
+        border-radius: 44px;
+        width: 232px;
+        height: 48px;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #addtowish, #seeFriendsList {
+        background: $color_button_purple;
+    }
+
 
   #backToStart,
   #backToIdeaAdd2,

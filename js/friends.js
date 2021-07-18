@@ -1,47 +1,88 @@
+// ********************************************************************************************
+// *************** This page is the code related to friend's names and gift list **************
+// ********************************************************************************************
+
 console.log("Friends JS Connected!");
 
-const friendsIntroPageContent = document.querySelector('#friendsIntroPageContent')
+// const friendsIntroPageContent = document.querySelector('#friendsIntroPageContent')
 
-window.addEventListener('load', friendsListfromDB());
+// window.addEventListener('load', friendsListfromDB());
+
+const friendListOutput = document.querySelector('#friendListOutput');
+const seeFriendsList = document.querySelector('#seeFriendsList');
+const friendsProfile = document.querySelector('#friendsProfile');
+const friendNameEventContainer = document.querySelector('#friendNameEventContainer');
 
 async function friendsListfromDB() {
   console.log("friends list summary!");
-  friendsIntroPageContent.innerHTML = "";
+  const friendsListArray = [];
+  // friendsIntroPageContent.innerHTML = "";
   await db
     .collection(firebase.auth().currentUser.uid)
     .doc("Friends")
     .collection("List")
     .get()
     .then((querySnapshot) => {
-      const list = document.createElement("ul");
-      list.setAttribute("id", "fetchedFriendsList");
+
       querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        
+        friendsListArray.push(doc.id);
+        console.log(friendsListArray);
 
-        const listItem = document.createElement("li");
-        listItem.setAttribute("id", `${doc.id}`);
-
-        const buttonItem = document.createElement("button");
-        buttonItem.setAttribute("type", "button");
-        buttonItem.addEventListener("click", () => {
-          addIdeaToCollection(doc.id);
-        });
-
-        const friendsNames = document.createTextNode(`${doc.id}`);
-        buttonItem.appendChild(friendsNames);
-        listItem.appendChild(buttonItem);
-        list.appendChild(listItem);
-
-      });
-
-      friendsList.appendChild(list);
-    })
-
-    .catch((error) => {
-      console.log("Error getting document:", error);
+      })
     });
+
+    if (friendsListArray.length < 1) {
+
+        const header = document.createElement('h2');
+        header.innerText = `Your friend list is empty`;
+  
+        friendNameEventContainer.style.display = "none";
+        friendListOutput.appendChild(header);
+
+    } else {
+
+        await db
+          .collection(firebase.auth().currentUser.uid)
+          .doc("Friends")
+          .collection("List")
+          .get()
+          .then((querySnapshot) => {
+            const list = document.createElement("ul");
+            list.setAttribute("id", "fetchedFriendsList");
+            querySnapshot.forEach((doc) => {
+              
+              console.log(doc.id, " => ", doc.data());
+
+              const listItem = document.createElement("li");
+              listItem.setAttribute("id", `${doc.id}`);
+      
+              const buttonItem = document.createElement("button");
+              buttonItem.setAttribute("type", "button");
+              buttonItem.addEventListener("click", () => {
+                friendsProfile.value = doc.id;
+              });
+      
+              const friendsNames = document.createTextNode(`${doc.id}`);
+              buttonItem.appendChild(friendsNames);
+              listItem.appendChild(buttonItem);
+              list.appendChild(listItem);
+            })
+
+            friendListOutput.appendChild(list);
+
+          })
+          .catch((error) => {
+            console.log("Error getting document:", error);
+          });
+        }
 }
 
+// ******* #5(B) of gift_idea.html, "Add To Friend" generates list of friends ******
+
+seeFriendsList.addEventListener('click', friendsListfromDB);
+
+// *************************** Create Friends Obj via class ************************
 
 const friendsWishlist = document.querySelector("#friendsWishlist");
 let createEventInput, newFriendObj;
@@ -64,34 +105,12 @@ class addFriendClass {
   }
 }
 
-// fetching list on the first screen
+// ************** Adding Friend and checking if Friend's Name is in Firestore ***************
 
+addFriendBtn.addEventListener("click", () => {
+  // event.preventDefault();
 
-
-// Creating a New Event (Other)
-friendEventSelect.addEventListener("change", () => {
-  if (friendEventSelect.value === "Other") {
-    createEvent.innerHTML = "";
-    createEvent.style.display = "block";
-    const inputEl = document.createElement("input");
-    inputEl.setAttribute("id", "inputOther");
-    inputEl.setAttribute("type", "text");
-    const labelEl = document.createElement("label");
-    labelEl.innerText = "Create Event";
-    labelEl.setAttribute("for", "Other");
-    createEvent.appendChild(labelEl);
-    createEvent.appendChild(inputEl);
-    createEventInput = document.querySelector("#inputOther");
-  } else {
-    createEvent.style.display = "none";
-  }
-});
-
-// Add Friend
-addFriendBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  // COnverting every word for name to UpperCase Letter
+  // Converting every word for name to UpperCase Letter
   const friendsName = friendName.value
     .trim()
     .toLowerCase()
@@ -157,196 +176,245 @@ async function addFriendToFirestore(friendName, friendObject) {
           console.error("Error writing document: ", error);
         });
     } else {
-      alert("Friend already exits!");
+      alert("Friend already exists!");
     }
   }
 }
 
-let friendID;
-fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
-  FriendsListfromDB.innerHTML = "";
-  console.log("addfriend button working");
-  await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("Friends")
-    .collection("List")
-    .get()
-    .then((querySnapshot) => {
-      const list = document.createElement("ul");
-      list.setAttribute("id", "fetchedFriendsList");
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+// ************************ Create (Other) New Event input field *********************
 
-        const listItem = document.createElement("li");
-        listItem.innerText = `${doc.id}`;
-        list.appendChild(listItem);
-
-        const seeListBtn = document.createElement("button");
-        seeListBtn.innerText = "See List";
-        listItem.appendChild(seeListBtn);
-        // listItem.appendChild(friendsWishlist);
-
-        seeListBtn.addEventListener("click", function () {
-          friendID = this.parentElement.innerText.slice(0, -9);
-          friendsWishlist.classList.remove("hide");
-          renderFriendsWishlist(doc);
-        });
-      });
-
-      FriendsListfromDB.appendChild(list);
-    })
-
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
+friendEventSelect.addEventListener("change", () => {
+  if (friendEventSelect.value === "Other") {
+    createEvent.innerHTML = "";
+    createEvent.style.display = "block";
+    const inputEl = document.createElement("input");
+    inputEl.setAttribute("id", "inputOther");
+    inputEl.setAttribute("type", "text");
+    const labelEl = document.createElement("label");
+    labelEl.innerText = "Create Event";
+    labelEl.setAttribute("for", "Other");
+    createEvent.appendChild(labelEl);
+    createEvent.appendChild(inputEl);
+    createEventInput = document.querySelector("#inputOther");
+  } else {
+    createEvent.style.display = "none";
+  }
 });
 
-async function renderFriendsWishlist(doc) {
-  friendsWishlist.innerHTML = "";
+// ************************ #2 Create (Other) New Event input field *********************
 
-  await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("Friends")
-    .collection("List")
-    .doc(doc.id)
-    .collection("This Friend's List")
-    .orderBy("timestamp", "desc")
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((item) => {
-        // console.log(doc.id, " => ", doc.data());
-        // Create the card container
-        const card = document.createElement("div");
-        card.className = "displaycard";
-        // Add the Gift title
-        const giftHeader = document.createElement("h3");
-        giftHeader.innerText = `${item.data().wishTitle}`;
-        card.appendChild(giftHeader);
-        // Add the image / photo here
-        // Add the Gift description to the card
-        const descriptionContainer = document.createElement("div");
-        const descriptionText = document.createTextNode(
-          `${item.data().wishDesc}`
-        );
-        descriptionContainer.appendChild(descriptionText);
-        card.appendChild(descriptionContainer);
-        // Deleting an item
-        const deleteBtn = document.createElement("button");
-        deleteBtn.setAttribute = ("type", "button");
-        deleteBtn.innerText = "Delete";
-        card.appendChild(deleteBtn);
-        friendsWishlist.appendChild(card);
-        deleteBtn.addEventListener("click", () => {
-          deleteWishlistItem(item);
-        });
+friendEventSelect2.addEventListener("change", () => {
+  if (friendEventSelect2.value === "Other") {
+    createEvent.innerHTML = "";
+    createEvent.style.display = "block";
+    const inputEl = document.createElement("input");
+    inputEl.setAttribute("id", "inputOther");
+    inputEl.setAttribute("type", "text");
+    const labelEl = document.createElement("label");
+    labelEl.innerText = "Create Event";
+    labelEl.setAttribute("for", "Other");
+    createEvent.appendChild(labelEl);
+    createEvent.appendChild(inputEl);
+    createEventInput = document.querySelector("#inputOther");
+  } else {
+    createEvent.style.display = "none";
+  }
+});
 
-        // Editing an item
-        // Editing Title
-        const editTitleBtn = document.createElement("button");
-        editTitleBtn.innerText = "Edit Title";
-        card.appendChild(editTitleBtn);
-        editTitleBtn.addEventListener("click", () => {
-          editWishTitle(item, card);
-          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editTitleBtn.classList.toggle("hide");
-        });
-        // Editing Description
-        const editDescBtn = document.createElement("button");
-        editDescBtn.innerText = "Edit Desc";
-        card.appendChild(editDescBtn);
-        editDescBtn.addEventListener("click", () => {
-          editWishDesc(item, card);
-          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editDescBtn.classList.toggle("hide");
-        });
-      });
-    })
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
-}
 
-async function deleteWishlistItem(item) {
-  await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("Friends")
-    .collection("List")
-    .doc(friendID)
-    .collection("This Friend's List")
-    .doc(item.id)
-    .delete()
-    .then(() => {
-      console.log("Document successfully deleted!");
-      renderTHISFriendList(friendID);
-    })
-    .catch((error) => {
-      console.error("Error removing document: ", error);
-    });
-}
 
-async function renderTHISFriendList(friendID) {
-  friendsWishlist.innerHTML = "";
+// ********  The below code was to build list of friends from button click *********
+// ********  We also built the "See List" functionality beside each name ***********
+// ********  We added the delete and edit buttons beside each name *****************
+// ********  THE WIREFRAME HAS CHANGED SO NEED TO KNOW IF THIS CODE IS REUSABLE ****
 
-  await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("Friends")
-    .collection("List")
-    .doc(friendID)
-    .collection("This Friend's List")
-    .orderBy("timestamp", "desc")
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((item) => {
-        console.log(item.id, " => ", item.data());
-        // Create the card container
-        const card = document.createElement("div");
-        card.className = "displaycard";
-        // Add the Gift title
-        const giftHeader = document.createElement("h3");
-        giftHeader.innerText = `${item.data().wishTitle}`;
-        card.appendChild(giftHeader);
-        // Add the image / photo here
-        // Add the Gift description to the card
-        const descriptionContainer = document.createElement("div");
-        const descriptionText = document.createTextNode(
-          `${item.data().wishDesc}`
-        );
-        descriptionContainer.appendChild(descriptionText);
-        card.appendChild(descriptionContainer);
-        // Deleting an item
-        const deleteBtn = document.createElement("button");
-        deleteBtn.setAttribute = ("type", "button");
-        deleteBtn.innerText = "Delete";
-        card.appendChild(deleteBtn);
-        friendsWishlist.appendChild(card);
-        deleteBtn.addEventListener("click", () => {
-          deleteWishlistItem(item);
-        });
 
-        // Editing an item
-        // Editing Title
-        const editTitleBtn = document.createElement("button");
-        editTitleBtn.innerText = "Edit Title";
-        card.appendChild(editTitleBtn);
-        editTitleBtn.addEventListener("click", () => {
-          editWishTitle(item, card);
-          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editTitleBtn.classList.toggle("hide");
-        });
-        // Editing Description
-        const editDescBtn = document.createElement("button");
-        editDescBtn.innerText = "Edit Desc";
-        card.appendChild(editDescBtn);
-        editDescBtn.addEventListener("click", () => {
-          editWishDesc(item, card);
-          // removing the button from UI when edit mode is on, otherwise creates multiple inputs
-          editDescBtn.classList.toggle("hide");
-        });
-      });
-    })
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
-}
+let friendID;
+
+// fetchFriendsBtn.addEventListener("click", async function friendsListfromDB() {
+//   FriendsListfromDB.innerHTML = "";
+//   console.log("addfriend button working");
+//   await db
+//     .collection(firebase.auth().currentUser.uid)
+//     .doc("Friends")
+//     .collection("List")
+//     .get()
+//     .then((querySnapshot) => {
+//       const list = document.createElement("ul");
+//       list.setAttribute("id", "fetchedFriendsList");
+//       querySnapshot.forEach((doc) => {
+//         console.log(doc.id, " => ", doc.data());
+
+//         const listItem = document.createElement("li");
+//         listItem.innerText = `${doc.id}`;
+//         list.appendChild(listItem);
+
+//         const seeListBtn = document.createElement("button");
+//         seeListBtn.innerText = "See List";
+//         listItem.appendChild(seeListBtn);
+//         // listItem.appendChild(friendsWishlist);
+
+//         seeListBtn.addEventListener("click", function () {
+//           friendID = this.parentElement.innerText.slice(0, -9);
+//           friendsWishlist.classList.remove("hide");
+//           renderFriendsWishlist(doc);
+//         });
+//       });
+
+//       FriendsListfromDB.appendChild(list);
+//     })
+
+//     .catch((error) => {
+//       console.log("Error getting document:", error);
+//     });
+// });
+
+// async function renderFriendsWishlist(doc) {
+//   friendsWishlist.innerHTML = "";
+
+//   await db
+//     .collection(firebase.auth().currentUser.uid)
+//     .doc("Friends")
+//     .collection("List")
+//     .doc(doc.id)
+//     .collection("This Friend's List")
+//     .orderBy("timestamp", "desc")
+//     .get()
+//     .then((querySnapshot) => {
+//       querySnapshot.forEach((item) => {
+//         // console.log(doc.id, " => ", doc.data());
+//         // Create the card container
+//         const card = document.createElement("div");
+//         card.className = "displaycard";
+//         // Add the Gift title
+//         const giftHeader = document.createElement("h3");
+//         giftHeader.innerText = `${item.data().wishTitle}`;
+//         card.appendChild(giftHeader);
+//         // Add the image / photo here
+//         // Add the Gift description to the card
+//         const descriptionContainer = document.createElement("div");
+//         const descriptionText = document.createTextNode(
+//           `${item.data().wishDesc}`
+//         );
+//         descriptionContainer.appendChild(descriptionText);
+//         card.appendChild(descriptionContainer);
+//         // Deleting an item
+//         const deleteBtn = document.createElement("button");
+//         deleteBtn.setAttribute = ("type", "button");
+//         deleteBtn.innerText = "Delete";
+//         card.appendChild(deleteBtn);
+//         friendsWishlist.appendChild(card);
+//         deleteBtn.addEventListener("click", () => {
+//           deleteWishlistItem(item);
+//         });
+
+//         // Editing an item
+//         // Editing Title
+//         const editTitleBtn = document.createElement("button");
+//         editTitleBtn.innerText = "Edit Title";
+//         card.appendChild(editTitleBtn);
+//         editTitleBtn.addEventListener("click", () => {
+//           editWishTitle(item, card);
+//           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+//           editTitleBtn.classList.toggle("hide");
+//         });
+//         // Editing Description
+//         const editDescBtn = document.createElement("button");
+//         editDescBtn.innerText = "Edit Desc";
+//         card.appendChild(editDescBtn);
+//         editDescBtn.addEventListener("click", () => {
+//           editWishDesc(item, card);
+//           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+//           editDescBtn.classList.toggle("hide");
+//         });
+//       });
+//     })
+//     .catch((error) => {
+//       console.log("Error getting document:", error);
+//     });
+// }
+
+// async function deleteWishlistItem(item) {
+//   await db
+//     .collection(firebase.auth().currentUser.uid)
+//     .doc("Friends")
+//     .collection("List")
+//     .doc(friendID)
+//     .collection("This Friend's List")
+//     .doc(item.id)
+//     .delete()
+//     .then(() => {
+//       console.log("Document successfully deleted!");
+//       renderTHISFriendList(friendID);
+//     })
+//     .catch((error) => {
+//       console.error("Error removing document: ", error);
+//     });
+// }
+
+// async function renderTHISFriendList(friendID) {
+//   friendsWishlist.innerHTML = "";
+
+//   await db
+//     .collection(firebase.auth().currentUser.uid)
+//     .doc("Friends")
+//     .collection("List")
+//     .doc(friendID)
+//     .collection("This Friend's List")
+//     .orderBy("timestamp", "desc")
+//     .get()
+//     .then((querySnapshot) => {
+//       querySnapshot.forEach((item) => {
+//         console.log(item.id, " => ", item.data());
+//         // Create the card container
+//         const card = document.createElement("div");
+//         card.className = "displaycard";
+//         // Add the Gift title
+//         const giftHeader = document.createElement("h3");
+//         giftHeader.innerText = `${item.data().wishTitle}`;
+//         card.appendChild(giftHeader);
+//         // Add the image / photo here
+//         // Add the Gift description to the card
+//         const descriptionContainer = document.createElement("div");
+//         const descriptionText = document.createTextNode(
+//           `${item.data().wishDesc}`
+//         );
+//         descriptionContainer.appendChild(descriptionText);
+//         card.appendChild(descriptionContainer);
+//         // Deleting an item
+//         const deleteBtn = document.createElement("button");
+//         deleteBtn.setAttribute = ("type", "button");
+//         deleteBtn.innerText = "Delete";
+//         card.appendChild(deleteBtn);
+//         friendsWishlist.appendChild(card);
+//         deleteBtn.addEventListener("click", () => {
+//           deleteWishlistItem(item);
+//         });
+
+//         // Editing an item
+//         // Editing Title
+//         const editTitleBtn = document.createElement("button");
+//         editTitleBtn.innerText = "Edit Title";
+//         card.appendChild(editTitleBtn);
+//         editTitleBtn.addEventListener("click", () => {
+//           editWishTitle(item, card);
+//           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+//           editTitleBtn.classList.toggle("hide");
+//         });
+//         // Editing Description
+//         const editDescBtn = document.createElement("button");
+//         editDescBtn.innerText = "Edit Desc";
+//         card.appendChild(editDescBtn);
+//         editDescBtn.addEventListener("click", () => {
+//           editWishDesc(item, card);
+//           // removing the button from UI when edit mode is on, otherwise creates multiple inputs
+//           editDescBtn.classList.toggle("hide");
+//         });
+//       });
+//     })
+//     .catch((error) => {
+//       console.log("Error getting document:", error);
+//     });
+// }
 
 

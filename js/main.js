@@ -30,7 +30,7 @@ const ideaAddedMsg = document.querySelector("#idea-added-msg");
 
 // Adding friends to the list
 // Fetching elements from the DOM
-const addFriend = document.querySelector("#addFriend");
+// const addFriend = document.querySelector("#addFriend");
 const friendName = document.querySelector("#friendName");
 const friendEvent = document.querySelector("#friendEvent");
 const friendDate = document.querySelector("#friendDate");

@@ -1,9 +1,9 @@
-
+const addFriend = document.querySelector('#addFriend');
 
 // ============== Fetching from DOM for friends page ============
 const startFriendsPage = document.querySelector('#listEmptyPage');
-const addFriendPage = document.querySelector('#addFriendPage');
-const friendsListPage = document.querySelector('#friendsListPage');
+// const addFriendPage = document.querySelector('#addFriendPage');
+// const friendsListPage = document.querySelector('#friendsListPage');
 
 
 // ===============Friends Page Display Toggle ==================
@@ -13,11 +13,11 @@ addFriend.addEventListener('click', () => {
     addFriendPage.classList.toggle('hide');
 })
 
-addFriendBtn.addEventListener('click', () => {
-    addFriendPage.classList.remove('show');
-    addFriendPage.classList.add('hide');
-    friendsListPage.classList.toggle('hide');
-})
+// addFriendBtn.addEventListener('click', () => {
+//     addFriendPage.classList.remove('show');
+//     addFriendPage.classList.add('hide');
+//     friendsListPage.classList.toggle('hide');
+// })
 
 
 
