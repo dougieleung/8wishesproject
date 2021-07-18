@@ -11,9 +11,11 @@ console.log("Friends JS Connected!");
 const friendListOutput = document.querySelector('#friendListOutput');
 const seeFriendsList = document.querySelector('#seeFriendsList');
 const friendsProfile = document.querySelector('#friendsProfile');
+const friendNameEventContainer = document.querySelector('#friendNameEventContainer');
 
 async function friendsListfromDB() {
   console.log("friends list summary!");
+  const friendsListArray = [];
   // friendsIntroPageContent.innerHTML = "";
   await db
     .collection(firebase.auth().currentUser.uid)
@@ -21,45 +23,59 @@ async function friendsListfromDB() {
     .collection("List")
     .get()
     .then((querySnapshot) => {
-      const list = document.createElement("ul");
-      list.setAttribute("id", "fetchedFriendsList");
+
       querySnapshot.forEach((doc) => {
         
-        // The condition to check if there are friend's in the database
+        friendsListArray.push(doc.id);
+        console.log(friendsListArray);
 
-        if (doc.exists) {
-        console.log(doc.id, " => ", doc.data());
+      })
+    });
 
-        const listItem = document.createElement("li");
-        listItem.setAttribute("id", `${doc.id}`);
-
-        const buttonItem = document.createElement("button");
-        buttonItem.setAttribute("type", "button");
-        buttonItem.addEventListener("click", () => {
-          friendsProfile.value = doc.id;
-        });
-
-        const friendsNames = document.createTextNode(`${doc.id}`);
-        buttonItem.appendChild(friendsNames);
-        listItem.appendChild(buttonItem);
-        list.appendChild(listItem);
-        } else {
+    if (friendsListArray.length < 1) {
 
         const header = document.createElement('h2');
-        h2.innerText = `Your friend list is empty`;
-
-        addAFriendBtn.style.display = "block";
-        
+        header.innerText = `Your friend list is empty`;
+  
+        friendNameEventContainer.style.display = "none";
         friendListOutput.appendChild(header);
-    
-        }
-      });
-      friendListOutput.appendChild(list);
-    })
 
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
+    } else {
+
+        await db
+          .collection(firebase.auth().currentUser.uid)
+          .doc("Friends")
+          .collection("List")
+          .get()
+          .then((querySnapshot) => {
+            const list = document.createElement("ul");
+            list.setAttribute("id", "fetchedFriendsList");
+            querySnapshot.forEach((doc) => {
+              
+              console.log(doc.id, " => ", doc.data());
+
+              const listItem = document.createElement("li");
+              listItem.setAttribute("id", `${doc.id}`);
+      
+              const buttonItem = document.createElement("button");
+              buttonItem.setAttribute("type", "button");
+              buttonItem.addEventListener("click", () => {
+                friendsProfile.value = doc.id;
+              });
+      
+              const friendsNames = document.createTextNode(`${doc.id}`);
+              buttonItem.appendChild(friendsNames);
+              listItem.appendChild(buttonItem);
+              list.appendChild(listItem);
+            })
+
+            friendListOutput.appendChild(list);
+
+          })
+          .catch((error) => {
+            console.log("Error getting document:", error);
+          });
+        }
 }
 
 // ******* #5(B) of gift_idea.html, "Add To Friend" generates list of friends ******
@@ -169,6 +185,26 @@ async function addFriendToFirestore(friendName, friendObject) {
 
 friendEventSelect.addEventListener("change", () => {
   if (friendEventSelect.value === "Other") {
+    createEvent.innerHTML = "";
+    createEvent.style.display = "block";
+    const inputEl = document.createElement("input");
+    inputEl.setAttribute("id", "inputOther");
+    inputEl.setAttribute("type", "text");
+    const labelEl = document.createElement("label");
+    labelEl.innerText = "Create Event";
+    labelEl.setAttribute("for", "Other");
+    createEvent.appendChild(labelEl);
+    createEvent.appendChild(inputEl);
+    createEventInput = document.querySelector("#inputOther");
+  } else {
+    createEvent.style.display = "none";
+  }
+});
+
+// ************************ #2 Create (Other) New Event input field *********************
+
+friendEventSelect2.addEventListener("change", () => {
+  if (friendEventSelect2.value === "Other") {
     createEvent.innerHTML = "";
     createEvent.style.display = "block";
     const inputEl = document.createElement("input");
