@@ -2,7 +2,6 @@
 section,
 .displaycard {
   border: 1px solid #000;
-  /* flex: 0 0 43%; */
   margin: 1%;
 }
 
@@ -27,19 +26,21 @@ main {
 
 body #giftIdeaProcess .hide,
 body #friendsListProcess .hide,
-body #introPages .hide {
+body #introPages .hide,
+body #listEmptyPage .hide,
+body #addFriendPage .hide {
   display: none;
 }
 
 body #giftIdeaProcess .show,
 body #friendsListProcess .show,
-body #introPages .show {
+body #introPages .show,
+body #listEmptyPage .show,
+body #addFriendPage .show {
   display: flex;
 }
 
 /* ============== Intro Pages ========================= */
-
-
 
 /* Styles according to design ========================== */
 .bottom_navbar {
@@ -59,6 +60,4 @@ main section {
   min-height: 70vh;
 }
 
-
 /* Bottom nav bar ==================================== */
-
