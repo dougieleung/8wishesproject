@@ -1,7 +1,22 @@
 // ///////////////log in  + register + welcome//////////////////////////
 
-main {
+body {
+  margin: 0;
+}
 
+main section {
+  height: 90vh;
+  margin: 0;
+}
+
+#welcomePage,
+#demo-page,
+#registerPage,
+#loginPage {
+  height: 100vh;
+}
+
+main {
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -47,7 +62,6 @@ main {
       span {
         color: $color_neutral_white;
       }
-
 
       input#email1,
       #password1,
@@ -164,7 +178,6 @@ main #demo-page {
   }
 }
 
-
 main #loginPage {
   #logged-in {
     justify-content: center;
@@ -249,7 +262,6 @@ main .add-idea-1,
   }
 
   #ideaForm {
-
     #gift_title,
     #gift_description {
       background: none;
@@ -519,7 +531,7 @@ input#friendName,
 /////////////////////// reset password page/////////////////////////
 
 #resetContainer form {
-  width: 100%;
+  width: 70%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -556,8 +568,7 @@ label {
   border: 1px solid $color_neutral_white;
   display: flex;
   justify-content: center;
-  margin: 2rem;
-  margin-left: 0;
+  margin: 1rem;
   width: 30rem;
 }
 

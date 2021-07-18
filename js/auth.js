@@ -82,6 +82,8 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
+
+
 // ****************************** USER LOGIN **********************************
 
 loginButton.addEventListener("click", (event) => {
@@ -110,7 +112,8 @@ loginButton.addEventListener("click", (event) => {
   loginEmail.value = "";
   loginPassword.value = "";
   loginEmail.focus();
-});
+}); 
+
 
 // **********************    LOGOUT EXISTING USER    **************************
 

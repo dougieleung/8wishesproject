@@ -6,6 +6,20 @@
 #summaryCard,
 #addToWishlistSection,
 #complete {
+  #startIdeaBtn,
+  #addGift,
+  #nextToWishlists,
+  #addtowish,
+  #addToDB {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+  }
+
 
     #startIdeaBtn,
     #addGift,
@@ -35,32 +49,41 @@
         background: $color_button_purple;
     }
 
-    #backToStart,
-    #backToIdeaAdd2,
-    #backToIdeaAdd,
-    #backToSummaryCard,
-    #backToChooseEvent {
-        align-self: flex-start;
-        margin-left: 2rem;
-        background: none;
-        border: none;
 
-        a {
-            color: $color_neutral_white;
-        }
+  #backToStart,
+  #backToIdeaAdd2,
+  #backToIdeaAdd,
+  #backToSummaryCard,
+  #backToChooseEvent {
+    align-self: flex-start;
+    margin-left: 2rem;
+    background: none;
+    border: none;
+
+    a {
+      color: $color_neutral_white;
     }
+  }
 }
 
 #registerLink {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 #skiptologin {
-    background: $color_primary;
-    border: none;
-    font-size: 16px;
-    font-family: $font_body;
-    padding: 16px;
+  background: $color_primary;
+  border: none;
+  font-size: 16px;
+  font-family: $font_body;
+  padding: 16px;
+}
 
+#nav_btn3 a {
+  text-decoration: none;
+}
+
+#nav_btn3 {
+  background-color: $color_card_bg2;
+  border-color: $color_card_bg2;
 }

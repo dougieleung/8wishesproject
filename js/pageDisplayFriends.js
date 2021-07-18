@@ -21,6 +21,9 @@ addFriend.addEventListener('click', () => {
 
 
 
+
+
+
 // =============== Register Login Attempt to hide/show pages ============== 
 
 // if (loginPage.classList.contains('show')) {
