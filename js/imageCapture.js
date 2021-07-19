@@ -28,7 +28,7 @@ snap.addEventListener("click", function () {
 
 });
 
-backToIdeaAdd2.addEventListener("click", function () {
+addPhoto.addEventListener("click", function () {
 
     const tracks = video.srcObject.getTracks();
     tracks.forEach(track => track.stop());
