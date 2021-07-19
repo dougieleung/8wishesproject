@@ -8,7 +8,6 @@
 #complete {
   #startIdeaBtn,
   #addGift,
-  #nextToWishlists,
   #addtowish,
   #addToDB {
     border: none;
@@ -20,35 +19,32 @@
     margin-top: 4rem;
   }
 
+  #startIdeaBtn,
+  #addGift,
+  #addtowish,
+  #addToDB {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+  }
 
-    #startIdeaBtn,
-    #addGift,
-    #nextToWishlists,
-    #addtowish,
-    #seeFriendsList,
-    #addToDB {
-        border: none;
-        border-radius: 44px;
-        width: 232px;
-        height: 48px;
-        justify-content: center;
-        margin: auto;
-        margin-top: 4rem;
-    }
+  #nextToEvents {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+  }
 
-    #nextToEvents {
-        border: none;
-        border-radius: 44px;
-        width: 232px;
-        height: 48px;
-        justify-content: center;
-        margin: auto;
-    }
-
-    #addtowish, #seeFriendsList {
-        background: $color_button_purple;
-    }
-
+  #addtowish,
+  #seeFriendsList {
+    background: $color_button_purple;
+  }
 
   #backToStart,
   #backToIdeaAdd2,
@@ -86,4 +82,16 @@
 #nav_btn3 {
   background-color: $color_card_bg2;
   border-color: $color_card_bg2;
+}
+
+.editButton {
+  width: 5rem;
+}
+
+#friendAddBtn {
+  padding: 1rem 2rem;
+
+  a {
+    text-decoration: none;
+  }
 }

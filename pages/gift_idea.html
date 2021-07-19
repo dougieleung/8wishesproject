@@ -147,6 +147,12 @@
 
                 <canvas id="canvas" width="240" height="190"></canvas>
 
+                <button id="addPhoto" type="submit">
+                    <a href="#summaryCard">NEXT</a>
+                </button>
+
+
+
             </div>
 
         </section>
@@ -228,11 +234,12 @@
 
         <!-- Friend's Intro Page showing list of friends or none -->
         <section id="listEmptyPage" class="hide">
+            <h2>Choose a friend</h2>
             <div id="friendListOutput"></div>
      
           <div id="friendNameEventContainer"> 
-            <h2>Click on friend's name</h2>
-            <button id="friendtoProfile">Proceed to add event</button>
+            
+            <button id="friendtoProfile">Add event for friend</button>
           </div>
 
           <button id="addAFriendBtn"><a href="#addFriendPage">Add a Friend</a></button>
@@ -270,6 +277,7 @@
 <!--**************  #7 (B) If There Are Friends, proceed to page to add events only ************* -->
   
         <section id="addEventPage" class="hide">
+            <h1>Choose an event for</h1>
             <input id="friendsProfile">
 
         <label for="name">Select an event</label>
@@ -287,6 +295,7 @@
             <!-- <input id="friendEvent" type="text" /> -->
             <input id="friendDate2" type="date" id="event" name="event" />
             <button id="addEventBtn" type="button">Add Event</button>
+            <div id="friendEventAdded"></div>
         </section>
 
       
@@ -345,14 +354,14 @@
         <div class="navbar_container">
             <nav class="bottom_navbar">
                 <ul>
-
-                    <li><button id="nav_btn1" class="button homeButton">
-                        <img src="../icons/footerIcons/HomeIcon.svg"></button></li>
+                    <li><button id="nav_btn1" class="button homeButton"><a href="register+login.html">
+                        <img src="../icons/footerIcons/HomeIcon.svg"></a></button></li>
                     <li><button id="myListFooter" class="button listButton">
-                        <img src="../icons/footerIcons/listIcon.svg"></button></li>
-                    <li><button id="nav_btn3" class="button addButton">+</button></li>
+                        <a href ="gift_idea.html"><img src ="../icons/footerIcons/listIcon.svg"></a></button></li>
+                    <li><button id="nav_btn3" class="button addButton"><a href ="gift_idea.html">+</a>
+                    </button></li>
                     <li><button id="friendsFooter" class="button friendsButton">
-                        <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
+                        <a href ="friends.html"><img src ="../icons/footerIcons/friendsIcon.svg"></a></button></li>
                     <li><button id="nav_btn5" class="button storeButton">
                         <img src="../icons/footerIcons/storesIcon.svg"></button></li>
 
