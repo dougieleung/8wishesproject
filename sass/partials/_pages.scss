@@ -16,6 +16,17 @@ main section {
   height: 100vh;
 }
 
+#giftIdeaProcess {
+  background-color: $color_primary;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
+  color: $color_neutral_white;
+  font-family: $font_body;
+}
+
 main {
   #loginPage,
   #registerPage,
@@ -29,9 +40,10 @@ main {
   #addFriendPage,
   #addEventsPage,
   #friendsListPage,
-
   #resetContainer,
-  #takePhoto {
+  #takePhoto,
+  #addEventPage,
+  #friendAddedPage {
     background-color: $color_primary;
     display: flex;
     justify-content: space-evenly;
@@ -71,7 +83,7 @@ main {
       #password,
       #confirmPassword,
       #registerButton {
-        padding: 1rem 0 1rem 0.3rem;
+        padding: 0.7rem 0 0.7rem 0.3rem;
         border-radius: 0.7rem;
         border: 1px solid $color_neutral_white;
         width: 100%;
@@ -243,14 +255,45 @@ main #giftIdeaHomePage {
   }
 }
 
-main .add-idea-1,
+.add-idea-3 {
+  text-align: center;
+  width: 100vw;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#windowDescription {
+  width: 100vw;
+}
+
+#seeFriendsList {
+  align-self: center;
+  margin: 1rem;
+  padding: 1rem 4rem;
+  border-radius: 44px;
+  border: 1px solid $color_neutral_white;
+  display: flex;
+  justify-content: center;
+  background-color: $color_accent;
+  border-color: $color_button_purple;
+  color: $color_text_dark;
+
+  a {
+    color: $color_text_dark;
+  }
+}
+
+.add-idea-1,
+.add-idea-2 {
+  width: 60vw;
+}
+
+.add-idea-1,
 .add-idea-2,
 .add-idea-3 {
   label {
     color: $color_neutral_white;
   }
-
-  width: 60vw;
 
   .images {
     text-align: center;
@@ -315,6 +358,24 @@ main .add-idea-1,
 
 //////////////////////// take photo page////////////////////////////
 
+#addPhoto {
+  margin: 1rem;
+}
+
+#video {
+  border: 0.5rem solid white;
+  margin-top: 5rem;
+}
+
+#canvas {
+  border: 0.5rem solid white;
+}
+
+#camera_btn i,
+#gallery_btn i {
+  font-size: 2.5rem;
+}
+
 main #takePhoto {
   display: flex;
   justify-content: center;
@@ -341,6 +402,7 @@ main #takePhoto {
 
 #map-link {
   color: $color_primary;
+  margin: 1rem;
 }
 
 .add-idea-2 {
@@ -350,6 +412,16 @@ main #takePhoto {
 }
 
 ///////////////// add to Wishlist page///////////////////////////////////////
+#nextToWishlists {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: $color_accent;
+  border-color: $color_accent;
+
+  a {
+    color: $color_text_dark;
+  }
+}
 
 #windowImage,
 #windowDescription {
@@ -357,13 +429,7 @@ main #takePhoto {
   justify-content: center;
 }
 
-#nextToWishlists {
-  margin: 0;
-  padding: 0;
-}
-
 #addGift,
-#nextToWishlists,
 #addtowish,
 #nextToEvents,
 #addToDB,
@@ -375,7 +441,12 @@ main #takePhoto {
 #reset_password,
 #noreset,
 #snap,
-#backtologin {
+#backtologin,
+#addPhoto,
+#addAFriendBtn,
+#friendtoProfile,
+#addEventBtn,
+#friendAddBtn {
   padding: 1rem 0;
   border-radius: 1rem;
   border: 1px solid $color_neutral_white;
@@ -504,7 +575,10 @@ main #takePhoto {
 
 input#friendName,
 #friendEventSelect,
-#friendDate {
+#friendDate,
+#friendsProfile,
+#friendEventSelect2,
+#friendDate2 {
   padding: 0.5rem 0;
   border-radius: 0.7rem;
   border: 1px solid $color_neutral_white;
@@ -574,4 +648,76 @@ label {
 
 #backtologin {
   width: 12rem;
+}
+
+/////////// add to friend  page ////////
+#addAFriendBtn,
+#friendtoProfile {
+  padding: 0.5rem 1rem;
+}
+
+#listEmptyPage {
+  height: 90vh;
+}
+
+#fetchedFriendsList {
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 100vw;
+  }
+}
+
+#fetchedFriendsList li {
+  list-style-type: none;
+}
+
+.friendBtn {
+  border-top: 1px solid $color_neutral_white;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  background-color: $color_primary;
+  opacity: 70%;
+  color: $color_neutral_white;
+  padding: 0.5rem;
+}
+
+#fetchedFriendsList li:hover {
+  background-color: $color_neutral_white;
+  color: $color_text_dark;
+}
+
+#friendListOutput .friendBtn:nth-last-child() {
+  border-bottom: 1px solid $color_neutral_white;
+}
+
+/////////// add event for friend///////////////
+// main #addEventPage {
+//   justify-content: center;
+// }
+
+// #addEventPage h1 {
+//   margin: 3rem;
+// }
+
+#addEventPage {
+  h1 {
+    margin: 0;
+  }
+
+  input#friendsProfile {
+    width: 40%;
+    text-align: center;
+    background-color: $color_primary;
+    border-color: $color_primary;
+    color: $color_neutral_white;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+}
+
+#addEventBtn {
+  padding: 1rem;
 }

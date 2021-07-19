@@ -19,6 +19,17 @@ main section {
   height: 100vh;
 }
 
+#giftIdeaProcess {
+  background-color: #363D51;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
+  color: #F9F9FB;
+  font-family: "Livvic", sans-serif;
+}
+
 main #loginPage,
 main #registerPage,
 main #welcomePage,
@@ -32,7 +43,9 @@ main #addFriendPage,
 main #addEventsPage,
 main #friendsListPage,
 main #resetContainer,
-main #takePhoto {
+main #takePhoto,
+main #addEventPage,
+main #friendAddedPage {
   background-color: #363D51;
   display: flex;
   justify-content: space-evenly;
@@ -70,7 +83,11 @@ main #friendsListPage #btn_AddGiftIdea,
 main #resetContainer .loggedin #btn_logout,
 main #resetContainer #btn_AddGiftIdea,
 main #takePhoto .loggedin #btn_logout,
-main #takePhoto #btn_AddGiftIdea {
+main #takePhoto #btn_AddGiftIdea,
+main #addEventPage .loggedin #btn_logout,
+main #addEventPage #btn_AddGiftIdea,
+main #friendAddedPage .loggedin #btn_logout,
+main #friendAddedPage #btn_AddGiftIdea {
   color: #212531;
 }
 
@@ -101,7 +118,11 @@ main #friendsListPage #registerForm,
 main #resetContainer #not-logged-in,
 main #resetContainer #registerForm,
 main #takePhoto #not-logged-in,
-main #takePhoto #registerForm {
+main #takePhoto #registerForm,
+main #addEventPage #not-logged-in,
+main #addEventPage #registerForm,
+main #friendAddedPage #not-logged-in,
+main #friendAddedPage #registerForm {
   flex-direction: column;
   display: flex;
   width: 60vw;
@@ -162,7 +183,15 @@ main #resetContainer #registerForm span,
 main #takePhoto #not-logged-in a,
 main #takePhoto #not-logged-in span,
 main #takePhoto #registerForm a,
-main #takePhoto #registerForm span {
+main #takePhoto #registerForm span,
+main #addEventPage #not-logged-in a,
+main #addEventPage #not-logged-in span,
+main #addEventPage #registerForm a,
+main #addEventPage #registerForm span,
+main #friendAddedPage #not-logged-in a,
+main #friendAddedPage #not-logged-in span,
+main #friendAddedPage #registerForm a,
+main #friendAddedPage #registerForm span {
   color: #212531;
 }
 
@@ -249,7 +278,19 @@ main #takePhoto #not-logged-in .link3,
 main #takePhoto #not-logged-in span,
 main #takePhoto #registerForm .link2,
 main #takePhoto #registerForm .link3,
-main #takePhoto #registerForm span {
+main #takePhoto #registerForm span,
+main #addEventPage #not-logged-in .link2,
+main #addEventPage #not-logged-in .link3,
+main #addEventPage #not-logged-in span,
+main #addEventPage #registerForm .link2,
+main #addEventPage #registerForm .link3,
+main #addEventPage #registerForm span,
+main #friendAddedPage #not-logged-in .link2,
+main #friendAddedPage #not-logged-in .link3,
+main #friendAddedPage #not-logged-in span,
+main #friendAddedPage #registerForm .link2,
+main #friendAddedPage #registerForm .link3,
+main #friendAddedPage #registerForm span {
   color: #F9F9FB;
 }
 
@@ -476,8 +517,40 @@ main #takePhoto #registerForm #username,
 main #takePhoto #registerForm #email,
 main #takePhoto #registerForm #password,
 main #takePhoto #registerForm #confirmPassword,
-main #takePhoto #registerForm #registerButton {
-  padding: 1rem 0 1rem 0.3rem;
+main #takePhoto #registerForm #registerButton,
+main #addEventPage #not-logged-in input#email1,
+main #addEventPage #not-logged-in #password1,
+main #addEventPage #not-logged-in #btn_login,
+main #addEventPage #not-logged-in #username,
+main #addEventPage #not-logged-in #email,
+main #addEventPage #not-logged-in #password,
+main #addEventPage #not-logged-in #confirmPassword,
+main #addEventPage #not-logged-in #registerButton,
+main #addEventPage #registerForm input#email1,
+main #addEventPage #registerForm #password1,
+main #addEventPage #registerForm #btn_login,
+main #addEventPage #registerForm #username,
+main #addEventPage #registerForm #email,
+main #addEventPage #registerForm #password,
+main #addEventPage #registerForm #confirmPassword,
+main #addEventPage #registerForm #registerButton,
+main #friendAddedPage #not-logged-in input#email1,
+main #friendAddedPage #not-logged-in #password1,
+main #friendAddedPage #not-logged-in #btn_login,
+main #friendAddedPage #not-logged-in #username,
+main #friendAddedPage #not-logged-in #email,
+main #friendAddedPage #not-logged-in #password,
+main #friendAddedPage #not-logged-in #confirmPassword,
+main #friendAddedPage #not-logged-in #registerButton,
+main #friendAddedPage #registerForm input#email1,
+main #friendAddedPage #registerForm #password1,
+main #friendAddedPage #registerForm #btn_login,
+main #friendAddedPage #registerForm #username,
+main #friendAddedPage #registerForm #email,
+main #friendAddedPage #registerForm #password,
+main #friendAddedPage #registerForm #confirmPassword,
+main #friendAddedPage #registerForm #registerButton {
+  padding: 0.7rem 0 0.7rem 0.3rem;
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
   width: 100%;
@@ -514,7 +587,11 @@ main #friendsListPage #registerForm .forgot-password,
 main #resetContainer #not-logged-in .forgot-password,
 main #resetContainer #registerForm .forgot-password,
 main #takePhoto #not-logged-in .forgot-password,
-main #takePhoto #registerForm .forgot-password {
+main #takePhoto #registerForm .forgot-password,
+main #addEventPage #not-logged-in .forgot-password,
+main #addEventPage #registerForm .forgot-password,
+main #friendAddedPage #not-logged-in .forgot-password,
+main #friendAddedPage #registerForm .forgot-password {
   text-align: right;
 }
 
@@ -573,7 +650,15 @@ main #resetContainer #registerForm #registerButton,
 main #takePhoto #not-logged-in #btn_login,
 main #takePhoto #not-logged-in #registerButton,
 main #takePhoto #registerForm #btn_login,
-main #takePhoto #registerForm #registerButton {
+main #takePhoto #registerForm #registerButton,
+main #addEventPage #not-logged-in #btn_login,
+main #addEventPage #not-logged-in #registerButton,
+main #addEventPage #registerForm #btn_login,
+main #addEventPage #registerForm #registerButton,
+main #friendAddedPage #not-logged-in #btn_login,
+main #friendAddedPage #not-logged-in #registerButton,
+main #friendAddedPage #registerForm #btn_login,
+main #friendAddedPage #registerForm #registerButton {
   background-color: #86E4DE;
   border-color: #86E4DE;
   color: #212531;
@@ -592,7 +677,9 @@ main #addFriendPage h2,
 main #addEventsPage h2,
 main #friendsListPage h2,
 main #resetContainer h2,
-main #takePhoto h2 {
+main #takePhoto h2,
+main #addEventPage h2,
+main #friendAddedPage h2 {
   color: #F9F9FB;
   text-align: center;
 }
@@ -610,7 +697,9 @@ main #addFriendPage label,
 main #addEventsPage label,
 main #friendsListPage label,
 main #resetContainer label,
-main #takePhoto label {
+main #takePhoto label,
+main #addEventPage label,
+main #friendAddedPage label {
   padding: 0;
 }
 
@@ -627,7 +716,9 @@ main #addFriendPage .footer-login,
 main #addEventsPage .footer-login,
 main #friendsListPage .footer-login,
 main #resetContainer .footer-login,
-main #takePhoto .footer-login {
+main #takePhoto .footer-login,
+main #addEventPage .footer-login,
+main #friendAddedPage .footer-login {
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -647,7 +738,9 @@ main #addFriendPage #registerForm .footer-register,
 main #addEventsPage #registerForm .footer-register,
 main #friendsListPage #registerForm .footer-register,
 main #resetContainer #registerForm .footer-register,
-main #takePhoto #registerForm .footer-register {
+main #takePhoto #registerForm .footer-register,
+main #addEventPage #registerForm .footer-register,
+main #friendAddedPage #registerForm .footer-register {
   text-align: center;
   margin-top: 1rem;
 }
@@ -679,7 +772,11 @@ main #friendsListPage #registerForm .footer-register a,
 main #resetContainer #registerForm .footer-register span,
 main #resetContainer #registerForm .footer-register a,
 main #takePhoto #registerForm .footer-register span,
-main #takePhoto #registerForm .footer-register a {
+main #takePhoto #registerForm .footer-register a,
+main #addEventPage #registerForm .footer-register span,
+main #addEventPage #registerForm .footer-register a,
+main #friendAddedPage #registerForm .footer-register span,
+main #friendAddedPage #registerForm .footer-register a {
   color: #F9F9FB;
 }
 
@@ -796,33 +893,60 @@ main #giftIdeaHomePage #startIdeaBtn a {
   justify-content: center;
 }
 
-main .add-idea-1,
-.add-idea-2,
 .add-idea-3 {
+  text-align: center;
+  width: 100vw;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#windowDescription {
+  width: 100vw;
+}
+
+#seeFriendsList {
+  align-self: center;
+  margin: 1rem;
+  padding: 1rem 4rem;
+  border-radius: 44px;
+  border: 1px solid #F9F9FB;
+  display: flex;
+  justify-content: center;
+  background-color: #86E4DE;
+  border-color: #ABA0F5;
+  color: #212531;
+}
+
+#seeFriendsList a {
+  color: #212531;
+}
+
+.add-idea-1,
+.add-idea-2 {
   width: 60vw;
 }
 
-main .add-idea-1 label,
+.add-idea-1 label,
 .add-idea-2 label,
 .add-idea-3 label {
   color: #F9F9FB;
 }
 
-main .add-idea-1 .images,
+.add-idea-1 .images,
 .add-idea-2 .images,
 .add-idea-3 .images {
   text-align: center;
   margin-top: 8rem;
 }
 
-main .add-idea-1 #displayDesc,
+.add-idea-1 #displayDesc,
 .add-idea-2 #displayDesc,
 .add-idea-3 #displayDesc {
   margin-bottom: 4rem;
 }
 
-main .add-idea-1 #ideaForm #gift_title,
-main .add-idea-1 #ideaForm #gift_description,
+.add-idea-1 #ideaForm #gift_title,
+.add-idea-1 #ideaForm #gift_description,
 .add-idea-2 #ideaForm #gift_title,
 .add-idea-2 #ideaForm #gift_description,
 .add-idea-3 #ideaForm #gift_title,
@@ -839,8 +963,8 @@ main .add-idea-1 #ideaForm #gift_description,
   color: #F9F9FB;
 }
 
-main .add-idea-1 #ideaForm #gift_title::placeholder,
-main .add-idea-1 #ideaForm #gift_description::placeholder,
+.add-idea-1 #ideaForm #gift_title::placeholder,
+.add-idea-1 #ideaForm #gift_description::placeholder,
 .add-idea-2 #ideaForm #gift_title::placeholder,
 .add-idea-2 #ideaForm #gift_description::placeholder,
 .add-idea-3 #ideaForm #gift_title::placeholder,
@@ -848,7 +972,7 @@ main .add-idea-1 #ideaForm #gift_description::placeholder,
   color: #F9F9FB;
 }
 
-main .add-idea-1 #coordinates,
+.add-idea-1 #coordinates,
 .add-idea-2 #coordinates,
 .add-idea-3 #coordinates {
   display: flex;
@@ -879,6 +1003,24 @@ main .add-idea-1 #coordinates,
   align-self: center;
 }
 
+#addPhoto {
+  margin: 1rem;
+}
+
+#video {
+  border: 0.5rem solid white;
+  margin-top: 5rem;
+}
+
+#canvas {
+  border: 0.5rem solid white;
+}
+
+#camera_btn i,
+#gallery_btn i {
+  font-size: 2.5rem;
+}
+
 main #takePhoto {
   display: flex;
   justify-content: center;
@@ -905,6 +1047,7 @@ main #takePhoto #backToIdeaAdd2 {
 
 #map-link {
   color: #363D51;
+  margin: 1rem;
 }
 
 .add-idea-2 {
@@ -913,19 +1056,24 @@ main #takePhoto #backToIdeaAdd2 {
   flex-direction: column;
 }
 
+#nextToWishlists {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #86E4DE;
+  border-color: #86E4DE;
+}
+
+#nextToWishlists a {
+  color: #212531;
+}
+
 #windowImage,
 #windowDescription {
   display: flex;
   justify-content: center;
 }
 
-#nextToWishlists {
-  margin: 0;
-  padding: 0;
-}
-
 #addGift,
-#nextToWishlists,
 #addtowish,
 #nextToEvents,
 #addToDB,
@@ -937,7 +1085,12 @@ main #takePhoto #backToIdeaAdd2 {
 #reset_password,
 #noreset,
 #snap,
-#backtologin {
+#backtologin,
+#addPhoto,
+#addAFriendBtn,
+#friendtoProfile,
+#addEventBtn,
+#friendAddBtn {
   padding: 1rem 0;
   border-radius: 1rem;
   border: 1px solid #F9F9FB;
@@ -949,7 +1102,6 @@ main #takePhoto #backToIdeaAdd2 {
 }
 
 #addGift a,
-#nextToWishlists a,
 #addtowish a,
 #nextToEvents a,
 #addToDB a,
@@ -961,7 +1113,12 @@ main #takePhoto #backToIdeaAdd2 {
 #reset_password a,
 #noreset a,
 #snap a,
-#backtologin a {
+#backtologin a,
+#addPhoto a,
+#addAFriendBtn a,
+#friendtoProfile a,
+#addEventBtn a,
+#friendAddBtn a {
   color: #212531;
 }
 
@@ -1078,7 +1235,10 @@ main #takePhoto #backToIdeaAdd2 {
 
 input#friendName,
 #friendEventSelect,
-#friendDate {
+#friendDate,
+#friendsProfile,
+#friendEventSelect2,
+#friendDate2 {
   padding: 0.5rem 0;
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
@@ -1146,6 +1306,66 @@ label {
 
 #backtologin {
   width: 12rem;
+}
+
+#addAFriendBtn,
+#friendtoProfile {
+  padding: 0.5rem 1rem;
+}
+
+#listEmptyPage {
+  height: 90vh;
+}
+
+#fetchedFriendsList {
+  margin: 0;
+  padding: 0;
+}
+
+#fetchedFriendsList li {
+  width: 100vw;
+}
+
+#fetchedFriendsList li {
+  list-style-type: none;
+}
+
+.friendBtn {
+  border-top: 1px solid #F9F9FB;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  background-color: #363D51;
+  opacity: 70%;
+  color: #F9F9FB;
+  padding: 0.5rem;
+}
+
+#fetchedFriendsList li:hover {
+  background-color: #F9F9FB;
+  color: #212531;
+}
+
+#friendListOutput .friendBtn:nth-last-child() {
+  border-bottom: 1px solid #F9F9FB;
+}
+
+#addEventPage h1 {
+  margin: 0;
+}
+
+#addEventPage input#friendsProfile {
+  width: 40%;
+  text-align: center;
+  background-color: #363D51;
+  border-color: #363D51;
+  color: #F9F9FB;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+#addEventBtn {
+  padding: 1rem;
 }
 
 /* ================ Mixins =====================*/
@@ -1384,39 +1604,60 @@ main section {
 /* ================ Buttons =====================*/
 #giftIdeaHomePage #startIdeaBtn,
 #giftIdeaHomePage #addGift,
-#giftIdeaHomePage #nextToWishlists,
 #giftIdeaHomePage #addtowish,
-#giftIdeaHomePage #seeFriendsList,
 #giftIdeaHomePage #addToDB,
 #giftIdeaAdd #startIdeaBtn,
 #giftIdeaAdd #addGift,
-#giftIdeaAdd #nextToWishlists,
 #giftIdeaAdd #addtowish,
-#giftIdeaAdd #seeFriendsList,
 #giftIdeaAdd #addToDB,
 #takePhoto #startIdeaBtn,
 #takePhoto #addGift,
-#takePhoto #nextToWishlists,
 #takePhoto #addtowish,
-#takePhoto #seeFriendsList,
 #takePhoto #addToDB,
 #summaryCard #startIdeaBtn,
 #summaryCard #addGift,
-#summaryCard #nextToWishlists,
 #summaryCard #addtowish,
-#summaryCard #seeFriendsList,
 #summaryCard #addToDB,
 #addToWishlistSection #startIdeaBtn,
 #addToWishlistSection #addGift,
-#addToWishlistSection #nextToWishlists,
 #addToWishlistSection #addtowish,
-#addToWishlistSection #seeFriendsList,
 #addToWishlistSection #addToDB,
 #complete #startIdeaBtn,
 #complete #addGift,
-#complete #nextToWishlists,
 #complete #addtowish,
-#complete #seeFriendsList,
+#complete #addToDB {
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+#giftIdeaHomePage #startIdeaBtn,
+#giftIdeaHomePage #addGift,
+#giftIdeaHomePage #addtowish,
+#giftIdeaHomePage #addToDB,
+#giftIdeaAdd #startIdeaBtn,
+#giftIdeaAdd #addGift,
+#giftIdeaAdd #addtowish,
+#giftIdeaAdd #addToDB,
+#takePhoto #startIdeaBtn,
+#takePhoto #addGift,
+#takePhoto #addtowish,
+#takePhoto #addToDB,
+#summaryCard #startIdeaBtn,
+#summaryCard #addGift,
+#summaryCard #addtowish,
+#summaryCard #addToDB,
+#addToWishlistSection #startIdeaBtn,
+#addToWishlistSection #addGift,
+#addToWishlistSection #addtowish,
+#addToWishlistSection #addToDB,
+#complete #startIdeaBtn,
+#complete #addGift,
+#complete #addtowish,
 #complete #addToDB {
   border: none;
   border-radius: 44px;
@@ -1441,7 +1682,8 @@ main section {
   margin: auto;
 }
 
-#giftIdeaHomePage #addtowish, #giftIdeaHomePage #seeFriendsList,
+#giftIdeaHomePage #addtowish,
+#giftIdeaHomePage #seeFriendsList,
 #giftIdeaAdd #addtowish,
 #giftIdeaAdd #seeFriendsList,
 #takePhoto #addtowish,
@@ -1544,6 +1786,18 @@ main section {
 #nav_btn3 {
   background-color: #FF90A3;
   border-color: #FF90A3;
+}
+
+.editButton {
+  width: 5rem;
+}
+
+#friendAddBtn {
+  padding: 1rem 2rem;
+}
+
+#friendAddBtn a {
+  text-decoration: none;
 }
 
 /* ================ Media =====================*/

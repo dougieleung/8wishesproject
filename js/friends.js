@@ -59,6 +59,7 @@ async function friendsListfromDB() {
       
               const buttonItem = document.createElement("button");
               buttonItem.setAttribute("type", "button");
+              buttonItem.className="friendBtn";
               buttonItem.addEventListener("click", () => {
                 friendsProfile.value = doc.id;
               });
@@ -109,6 +110,7 @@ class addFriendClass {
 
 addFriendBtn.addEventListener("click", () => {
   // event.preventDefault();
+
 
   // Converting every word for name to UpperCase Letter
   const friendsName = friendName.value

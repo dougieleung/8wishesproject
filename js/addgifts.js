@@ -92,6 +92,8 @@ addToWish.addEventListener("click", () => {
 
 });
 
+const friendEventAdded = document.querySelector("#friendEventAdded");
+
 // **** #7 (B) IF Friends, add Event to newWish Obj and Firestore ****
 
 addEventBtn.addEventListener("click", () => {
@@ -103,6 +105,10 @@ addEventBtn.addEventListener("click", () => {
     friendDate2.value = "";
 
     addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
+    friendEventAdded.innerHTML = `Successfully added:
+    <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
+
+
 
 });
 
