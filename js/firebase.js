@@ -24,3 +24,6 @@ const db = firebase.firestore();
 // db.collection('Collection_Name').add('Object_to_Add')
 
 
+// images storage
+var storage = firebase.storage();
+var imagesRef = storage.ref().child('images');
