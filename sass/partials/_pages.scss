@@ -77,13 +77,12 @@ main {
 
       input#email1,
       #password1,
-      #btn_login,
       #username,
       #email,
       #password,
       #confirmPassword,
       #registerButton {
-        padding: 0.7rem 0 0.7rem 0.3rem;
+        padding: 0.7rem 0.7rem;
         border-radius: 0.7rem;
         border: 1px solid $color_neutral_white;
         width: 100%;
@@ -97,7 +96,6 @@ main {
         text-align: right;
       }
 
-      #btn_login,
       #registerButton {
         background-color: $color_accent;
         border-color: $color_accent;
@@ -195,27 +193,6 @@ main #loginPage {
     justify-content: center;
     height: 40vh;
   }
-
-  #btn_logout,
-  #btn_AddGiftIdea,
-  #btn_AddFriend {
-    padding: 1rem 0;
-    border-radius: 0.7rem;
-    border: 1px solid $color_neutral_white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-    margin-left: 0;
-    background-color: $color_accent;
-    border-color: $color_accent;
-    color: $color_text_dark;
-
-    a {
-      text-decoration: none;
-      color: $color_secondary_dark;
-    }
-  }
 }
 
 ////////////////////// gift idea page//////////////////////////////
@@ -232,7 +209,6 @@ main #giftIdeaHomePage {
   #startIdeaBtn {
     background-color: $color_accent;
     border-color: $color_accent;
-    color: $color_neutral_white;
     padding: 1rem 0;
     display: flex;
     justify-content: center;
@@ -309,7 +285,7 @@ main #giftIdeaHomePage {
     #gift_description {
       background: none;
       border: none;
-      padding: 0.5rem 0;
+      padding: 0.7rem 0.7rem;
       border-bottom: 1px solid $color_neutral_white;
       width: 100%;
       display: flex;
@@ -322,6 +298,20 @@ main #giftIdeaHomePage {
         color: $color_neutral_white;
       }
     }
+  }
+
+  #displayTitle {
+    background: none;
+    border: none;
+    padding: 0.7rem 0.7rem;
+    border-bottom: 1px solid $color_neutral_white;
+    width: 100%;
+  }
+
+  #displayDesc {
+    background: none;
+    border: none;
+    width: 100%;
   }
 
   #coordinates {
@@ -449,15 +439,26 @@ main #takePhoto {
 #friendAddBtn {
   padding: 1rem 0;
   border-radius: 1rem;
-  border: 1px solid $color_neutral_white;
+  border: none;
   display: flex;
   justify-content: center;
   background-color: $color_accent;
   border-color: $color_accent;
   color: $color_text_dark;
+  transition: all 1s ease;
 
   a {
     color: $color_text_dark;
+    transition: all 1s ease;
+  }
+
+  &:hover {
+    background-color: $color_button_hover_green_bg;
+    color: $color_button_hover_text;
+  }
+
+  &:hover a {
+    color: $color_button_hover_text;
   }
 }
 
@@ -468,26 +469,52 @@ main #takePhoto {
 #giftcard_display {
   width: 80vw;
   margin: 1rem;
+  overflow: hidden;
+  border: none;
 
   .displaycard {
     border-color: $color_neutral_white;
     text-align: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     flex-flow: row wrap;
+    border-radius: 20px;
+    margin-bottom: 1rem;
 
-    div,
+    div {
+      align-self: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+
     h3 {
       align-self: center;
       padding-left: 2rem;
       padding-right: 2rem;
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+
+    .editButton {
+      align-self: center;
+      padding: .3rem 2.5rem;
+      margin: 0;
+      position: relative;
+      left: 9rem;
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      font-size: 12px;
     }
   }
 
   .displaycard button,
   .editDescInput,
   .editTitleInput {
-    padding: 0.2rem 0;
+    padding: 0.7rem 0.7rem;
     border-radius: 0.7rem;
     border: 1px solid $color_primary;
     width: 13%;
@@ -506,6 +533,7 @@ main #takePhoto {
   .editTitleInput {
     background-color: $color_neutral_white;
     color: $color_primary;
+    padding: 0.7rem 0.7rem;
   }
 }
 
@@ -579,7 +607,7 @@ input#friendName,
 #friendsProfile,
 #friendEventSelect2,
 #friendDate2 {
-  padding: 0.5rem 0;
+  padding: 0.7rem 0.7rem;
   border-radius: 0.7rem;
   border: 1px solid $color_neutral_white;
   width: 100%;
@@ -715,6 +743,7 @@ label {
     color: $color_neutral_white;
     font-size: 2rem;
     font-weight: bolder;
+    padding: 0.7rem 0.7rem;
   }
 }
 
