@@ -1176,11 +1176,7 @@ main #takePhoto #backToIdeaAdd2 {
 #friendAddBtn {
   padding: 1rem 0;
   border-radius: 1rem;
-<<<<<<< HEAD
-  border: 1px solid #F9F9FB;
-=======
   border: none;
->>>>>>> dev2
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1274,18 +1270,12 @@ main #takePhoto #backToIdeaAdd2 {
 #giftcard_display .displaycard {
   border-color: #F9F9FB;
   text-align: center;
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-=======
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
->>>>>>> dev2
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1293,8 +1283,6 @@ main #takePhoto #backToIdeaAdd2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-<<<<<<< HEAD
-=======
   border-radius: 20px;
   margin-bottom: 1rem;
 }
@@ -1311,7 +1299,6 @@ main #takePhoto #backToIdeaAdd2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
->>>>>>> dev2
 }
 
 #giftcard_display .displaycard h3 {
@@ -2413,9 +2400,6 @@ main section {
 #complete #backToIdeaAdd2,
 #complete #backToIdeaAdd,
 #complete #backToSummaryCard,
-<<<<<<< HEAD
-#complete #backToChooseEvent {
-=======
 #complete #backToChooseEvent,
 #addEventPage #backToStart,
 #addEventPage #backToIdeaAdd2,
@@ -2427,7 +2411,6 @@ main section {
 #addFriendPage #backToIdeaAdd,
 #addFriendPage #backToSummaryCard,
 #addFriendPage #backToChooseEvent {
->>>>>>> dev2
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-left: 2rem;

@@ -94,22 +94,39 @@ addToWish.addEventListener("click", () => {
 
 const friendEventAdded = document.querySelector("#friendEventAdded");
 
+// ************************ #2 Create (Other) New Event input field *********************
+
+friendEventSelect2.addEventListener("change", () => {
+  if (friendEventSelect2.value === "Other") {
+    createEvent2.innerHTML = "";
+    createEvent2.style.display = "block";
+    const inputEl = document.createElement("input");
+    inputEl.setAttribute("id", "inputOther");
+    inputEl.setAttribute("type", "text");
+    const labelEl = document.createElement("label");
+    labelEl.innerText = "Create Event";
+    labelEl.setAttribute("for", "Other");
+    createEvent2.appendChild(labelEl);
+    createEvent2.appendChild(inputEl);
+    createEventInput = document.querySelector("#inputOther");
+  } else {
+    createEvent2.style.display = "none";
+  }
+});
+
 // **** #7 (B) IF Friends, add Event to newWish Obj and Firestore ****
 
 addEventBtn.addEventListener("click", () => {
 
-    newWish.eventName = friendEventSelect2.value;
+    newWish.eventName = createEventInput.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
-    friendEventSelect2.value = "";
+    createEventInput.value = "";
     friendDate2.value = "";
 
     addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
     friendEventAdded.innerHTML = `Successfully added:
     <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
-
-
-
 });
 
 // ********** Add Gift Idea to Firestore and retrieve list ************
