@@ -26,4 +26,5 @@ const db = firebase.firestore();
 
 // images storage
 var storage = firebase.storage();
-var imagesRef = storage.ref().child('images');
+
+

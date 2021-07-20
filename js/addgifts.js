@@ -31,7 +31,9 @@ let newWish = {};
 
 // ********** #2 Add Gift Idea Section of gift_idea.html **********
 
-
+// variables for the storage
+let storageRef;
+let gsReference;
 addGift.addEventListener("click", () => {
 
   if (giftTitle.value.trim() && giftDescription.value.trim()) {
@@ -41,7 +43,14 @@ addGift.addEventListener("click", () => {
       storeimage = storeImage,
       new Date()
     );
+    // putting the image into firebase storage
+    storageRef = storage.ref();
+    let thisRef = storageRef.child(`images/${newWish.wishTitle}`);
+    thisRef.put(theBlob).then((snapshot) => {
+      console.log('Uploaded a blob or file!');
+    });
 
+    // end of Storage operation
     console.log(newWish);
 
     displayTitle.innerHTML = `${giftTitle.value}`;
@@ -82,7 +91,7 @@ addToWish.addEventListener("click", () => {
   addToWishlistSection.classList.add('hide');
   complete.classList.toggle('hide');
   if (newWish.location !== undefined) {
-    ideaSummary.innerHTML = `<img src="${newWish.storeImage}" alt="your wish idea photo snapshot"> ${newWish.wishTitle}<br>
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
   ${newWish.wishDesc}<br>
   ${newWish.location}`;
   } else {
@@ -230,11 +239,18 @@ async function renderWishlist() {
         const card = document.createElement("div");
         card.className = "displaycard";
         //Image
-        if (doc.data().storeImage !== null) {
-          const wishImage = document.createElement('img');
-          wishImage.src = `${doc.data().storeImage}`;
-          card.appendChild(wishImage);
-        }
+        const theImage = document.createElement('img');
+        storageRef.child(`images/${doc.data().wishTitle}`).getDownloadURL()
+          .then((url) => {
+            // Or inserted into an <img> element
+            theImage.src = url;
+
+          })
+          .catch((error) => {
+            // Handle any errors
+          });
+        card.appendChild(theImage);
+
         // heading:
         // Add the Gift title
         const giftHeader = document.createElement("h3");
