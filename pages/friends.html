@@ -62,30 +62,36 @@
     <section id="addFriendPage" class="hide">
       <h2>Add a friend</h2>
       <div class="profile-pic"><a href="#">Add profile pic</a></div>
+      
+      <div id="addFriendForm">
 
-      <label for="name">Friend name</label>
-      <input id="friendName" type="text" />
-      <label for="name">Select an event</label>
-      <select id="friendEventSelect" name="event">
-        <option value="resetOptions">-- Select An Event --</option>
-        <option value="Birthday">Birthday</option>
-        <option value="Wedding Anniversary">Wedding Anniversary</option>
-        <option value="Graduation Day">Graduation Day</option>
-        <option value="Other">Other...</option>
-      </select>
-      <div id="createEvent"></div>
-      <label for="date">Select a Date</label>
+          <label for="name">Friend name</label>
+          <input id="friendName" type="text" />
+          <label for="name">Select an event</label>
+          <select id="friendEventSelect" name="event">
+            <option value="resetOptions">-- Select An Event --</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Wedding Anniversary">Wedding Anniversary</option>
+            <option value="Graduation Day">Graduation Day</option>
+            <option value="Other">Other...</option>
+          </select>
+          <div id="createEvent"></div>
+          <label for="date">Select a Date</label>
 
-      <!-- <input id="friendEvent" type="text" /> -->
-      <input id="friendDate" type="date" id="event" name="event" />
+          <!-- <input id="friendEvent" type="text" /> -->
+          <input id="friendDate" type="date" id="event" name="event" />
+
+    </div>
+
+
       <button id="addFriendBtn" type="button">Add</button>
     </section>
 
     <!-- /#addFriendPage -->
     <section id="friendAddedPage">
         <h2>Your friend is added !</h2>
-        <div>YJ</div>
-        <label for="name">Event</label>
+        <div id = "newFriendName"></div>
+        <label for="name" id = "newFriendEvent">Event</label>
        <button id="friendAddBtn"><a href="#friendsListPage">Done</a></button>
       </section>
       
@@ -109,13 +115,14 @@
       <nav class="bottom_navbar">
           <ul>
 
-              <li><button id="nav_btn1" class="button homeButton">
-                <img src="../icons/footerIcons/HomeIcon.svg"></button></li>
-              <li><button id="myListFooter" class="button listButton">
-                <img src="../icons/footerIcons/listIcon.svg"></button></li>
-              <li><button id="nav_btn3" class="button addButton">+</button></li>
-              <li><button id="friendsFooter" class="button friendsButton">
-                <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
+            <li><button id="nav_btn1" class="button homeButton"><a href="register+login.html">
+              <img src="../icons/footerIcons/HomeIcon.svg"></a></button></li>
+          <li><button id="myListFooter" class="button listButton">
+              <a href ="gift_idea.html"><img src ="../icons/footerIcons/listIcon.svg"></a></button></li>
+          <li><button id="nav_btn3" class="button addButton"><a href ="gift_idea.html">+</a>
+          </button></li>
+          <li><button id="friendsFooter" class="button friendsButton">
+              <a href ="friends.html"><img src ="../icons/footerIcons/friendsIcon.svg"></a></button></li>
               <li><button id="nav_btn5" class="button storeButton">
                 <img src="../icons/footerIcons/storesIcon.svg"></button></li>
 

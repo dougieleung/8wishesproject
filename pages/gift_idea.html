@@ -146,7 +146,20 @@
 
                 <button id="snap">Snap Photo</button>
 
+                <audio id="cameraAudio">
+                    <source src="/icons/camera-shutter-click-03.mp3">;
+                    Your browser does not support the audio tag.
+                </audio>
+
                 <canvas id="canvas" width="240" height="190"></canvas>
+
+                <button id="addPhoto" type="submit">
+
+
+                    <a href="#summaryCard">NEXT</a>
+                </button>
+
+
 
             </div>
 
@@ -229,7 +242,13 @@
 
         <!-- Friend's Intro Page showing list of friends or none -->
         <section id="listEmptyPage" class="hide">
+            <h2>Choose a friend</h2>
             <div id="friendListOutput"></div>
+
+            <div id="friendNameEventContainer">
+
+                <button id="friendtoProfile">Add event for friend</button>
+            </div>
 
             <div id="friendNameEventContainer">
                 <h2>Click on friend's name</h2>
@@ -271,6 +290,7 @@
         <!--**************  #7 (B) If There Are Friends, proceed to page to add events only ************* -->
 
         <section id="addEventPage" class="hide">
+            <h1>Choose an event for</h1>
             <input id="friendsProfile">
 
             <label for="name">Select an event</label>
@@ -288,6 +308,7 @@
             <!-- <input id="friendEvent" type="text" /> -->
             <input id="friendDate2" type="date" id="event" name="event" />
             <button id="addEventBtn" type="button">Add Event</button>
+            <div id="friendEventAdded"></div>
         </section>
 
 
@@ -346,16 +367,26 @@
         <div class="navbar_container">
             <nav class="bottom_navbar">
                 <ul>
-
-                    <li><button id="nav_btn1" class="button homeButton">
+                    <<<<<<< HEAD <li><button id="nav_btn1" class="button homeButton">
                             <img src="../icons/footerIcons/HomeIcon.svg"></button></li>
-                    <li><button id="myListFooter" class="button listButton">
-                            <img src="../icons/footerIcons/listIcon.svg"></button></li>
-                    <li><button id="nav_btn3" class="button addButton">+</button></li>
-                    <li><button id="friendsFooter" class="button friendsButton">
-                            <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
-                    <li><button id="nav_btn5" class="button storeButton">
-                            <img src="../icons/footerIcons/storesIcon.svg"></button></li>
+                        <li><button id="myListFooter" class="button listButton">
+                                <img src="../icons/footerIcons/listIcon.svg"></button></li>
+                        <li><button id="nav_btn3" class="button addButton">+</button></li>
+                        <li><button id="friendsFooter" class="button friendsButton">
+                                <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
+                        =======
+                        <li><button id="nav_btn1" class="button homeButton"><a href="register+login.html">
+                                    <img src="../icons/footerIcons/HomeIcon.svg"></a></button></li>
+                        <li><button id="myListFooter" class="button listButton">
+                                <a href="gift_idea.html"><img src="../icons/footerIcons/listIcon.svg"></a></button></li>
+                        <li><button id="nav_btn3" class="button addButton"><a href="gift_idea.html">+</a>
+                            </button></li>
+                        <li><button id="friendsFooter" class="button friendsButton">
+                                <a href="friends.html"><img src="../icons/footerIcons/friendsIcon.svg"></a></button>
+                        </li>
+                        >>>>>>> dev2
+                        <li><button id="nav_btn5" class="button storeButton">
+                                <img src="../icons/footerIcons/storesIcon.svg"></button></li>
 
                 </ul>
             </nav>

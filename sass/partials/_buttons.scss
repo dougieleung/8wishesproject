@@ -5,10 +5,43 @@
 #takePhoto,
 #summaryCard,
 #addToWishlistSection,
-#complete {
+#listEmptyPage,
+#complete,
+#addEventPage,
+#addFriendPage {
   #startIdeaBtn,
   #addGift,
+  #addToDB,
   #nextToWishlists,
+  #friendtoProfile,
+  #addAFriendBtn,
+  #addEventBtn,
+  #addFriendBtn {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+
+  #startIdeaBtn,
+  #addGift,
   #addtowish,
   #addToDB {
     border: none;
@@ -20,35 +53,35 @@
     margin-top: 4rem;
   }
 
+  #nextToEvents {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+  }
 
-    #startIdeaBtn,
-    #addGift,
-    #nextToWishlists,
-    #addtowish,
-    #seeFriendsList,
-    #addToDB {
-        border: none;
-        border-radius: 44px;
-        width: 232px;
-        height: 48px;
-        justify-content: center;
-        margin: auto;
-        margin-top: 4rem;
+  #addtowish,
+  #seeFriendsList,
+  #addAFriendBtn {
+    background: $color_button_purple;
+    border: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_purple_bg;
+      color: $color_button_hover_text;
     }
 
-    #nextToEvents {
-        border: none;
-        border-radius: 44px;
-        width: 232px;
-        height: 48px;
-        justify-content: center;
-        margin: auto;
+    a {
+      transition: all 1s ease;
     }
 
-    #addtowish, #seeFriendsList {
-        background: $color_button_purple;
+    &:hover a {
+      color: $color_button_hover_text;
     }
-
+  }
 
   #backToStart,
   #backToIdeaAdd2,
@@ -86,4 +119,50 @@
 #nav_btn3 {
   background-color: $color_card_bg2;
   border-color: $color_card_bg2;
+}
+
+.editButton {
+  width: 5rem;
+}
+
+#friendAddBtn {
+  padding: 1rem 2rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//////////////// Login Page ////////////////////
+#loginPage,
+#resetContainer {
+  #btn_logout,
+  #btn_AddGiftIdea,
+  #btn_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_accent;
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
 }

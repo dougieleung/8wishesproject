@@ -26,9 +26,17 @@ snap.addEventListener("click", function () {
   context.drawImage(video, 0, 0);
   const imageBlob = canvas.toBlob(handleBlob, "image/jpeg");
 
+    function playAudio() {
+      const cameraAudio = document.querySelector("#cameraAudio");
+
+      cameraAudio.play();
+    }
+
+    playAudio();
+
 });
 
-backToIdeaAdd2.addEventListener("click", function () {
+addPhoto.addEventListener("click", function () {
 
   const tracks = video.srcObject.getTracks();
   tracks.forEach(track => track.stop());
