@@ -56,11 +56,29 @@ main {
     .loggedin #btn_logout,
     #btn_AddGiftIdea {
       color: $color_text_dark;
+      margin: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $color_text_dark;
+      }
+    }
+
+    #registerForm {
+      .form-item {
+        width: 100%;
+
+        #registerButton {
+          margin-left: 0.3rem;
+        }
+      }
     }
 
     #not-logged-in,
     #registerForm {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       display: flex;
       width: 60vw;
 
@@ -82,7 +100,7 @@ main {
       #password,
       #confirmPassword,
       #registerButton {
-        padding: 0.7rem 0.7rem;
+        padding: 0.7rem;
         border-radius: 0.7rem;
         border: 1px solid $color_neutral_white;
         width: 100%;
@@ -90,6 +108,7 @@ main {
         justify-content: center;
         margin: 1rem;
         margin-left: 0;
+        padding-right: 0;
       }
 
       .forgot-password {
@@ -361,9 +380,16 @@ main #giftIdeaHomePage {
   border: 0.5rem solid white;
 }
 
+#camera_btn,
+#gallery_btn {
+  background-color: $color_primary;
+  border-style: none;
+}
+
 #camera_btn i,
 #gallery_btn i {
   font-size: 2.5rem;
+  color: $color_neutral_white;
 }
 
 main #takePhoto {
@@ -407,6 +433,7 @@ main #takePhoto {
   border-radius: 1rem;
   background-color: $color_accent;
   border-color: $color_accent;
+  margin: 0;
 
   a {
     color: $color_text_dark;
@@ -501,7 +528,7 @@ main #takePhoto {
 
     .editButton {
       align-self: center;
-      padding: .3rem 2.5rem;
+      padding: 0.3rem 2.5rem;
       margin: 0;
       position: relative;
       left: 9rem;
@@ -630,6 +657,33 @@ input#friendName,
   color: $color_accent;
 }
 
+#addFriendPage {
+  #addFriendForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+    margin: 3rem;
+
+    label {
+      margin: 1rem;
+    }
+
+    input {
+      padding: 0.5rem 4rem;
+      text-align: center;
+    }
+
+    #friendEventSelect {
+      width: 100%;
+    }
+  }
+}
+
+#addFriendBtn {
+  margin: 0;
+}
+
 /////////////////////// reset password page/////////////////////////
 
 #resetContainer form {
@@ -710,6 +764,11 @@ label {
   opacity: 70%;
   color: $color_neutral_white;
   padding: 0.5rem;
+}
+
+#fetchedFriendsList .friendBtn:focus {
+  background-color: $color_card_bg2;
+  opacity: 100%;
 }
 
 #fetchedFriendsList li:hover {
