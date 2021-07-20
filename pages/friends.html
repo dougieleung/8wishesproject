@@ -62,22 +62,28 @@
     <section id="addFriendPage" class="hide">
       <h2>Add a friend</h2>
       <div class="profile-pic"><a href="#">Add profile pic</a></div>
+      
+      <div id="addFriendForm">
 
-      <label for="name">Friend name</label>
-      <input id="friendName" type="text" />
-      <label for="name">Select an event</label>
-      <select id="friendEventSelect" name="event">
-        <option value="resetOptions">-- Select An Event --</option>
-        <option value="Birthday">Birthday</option>
-        <option value="Wedding Anniversary">Wedding Anniversary</option>
-        <option value="Graduation Day">Graduation Day</option>
-        <option value="Other">Other...</option>
-      </select>
-      <div id="createEvent"></div>
-      <label for="date">Select a Date</label>
+          <label for="name">Friend name</label>
+          <input id="friendName" type="text" />
+          <label for="name">Select an event</label>
+          <select id="friendEventSelect" name="event">
+            <option value="resetOptions">-- Select An Event --</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Wedding Anniversary">Wedding Anniversary</option>
+            <option value="Graduation Day">Graduation Day</option>
+            <option value="Other">Other...</option>
+          </select>
+          <div id="createEvent"></div>
+          <label for="date">Select a Date</label>
 
-      <!-- <input id="friendEvent" type="text" /> -->
-      <input id="friendDate" type="date" id="event" name="event" />
+          <!-- <input id="friendEvent" type="text" /> -->
+          <input id="friendDate" type="date" id="event" name="event" />
+
+    </div>
+
+
       <button id="addFriendBtn" type="button">Add</button>
     </section>
 

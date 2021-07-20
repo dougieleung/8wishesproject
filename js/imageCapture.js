@@ -26,6 +26,14 @@ snap.addEventListener("click", function () {
     context.drawImage(video,0,0);
     const imageBlob = canvas.toBlob(handleBlob, "image/jpeg");
 
+    function playAudio() {
+      const cameraAudio = document.querySelector("#cameraAudio");
+
+      cameraAudio.play();
+    }
+
+    playAudio();
+
 });
 
 addPhoto.addEventListener("click", function () {
