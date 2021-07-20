@@ -5,11 +5,18 @@
 #takePhoto,
 #summaryCard,
 #addToWishlistSection,
-#complete {
+#listEmptyPage,
+#complete,
+#addEventPage,
+#addFriendPage {
   #startIdeaBtn,
   #addGift,
-  #addtowish,
-  #addToDB {
+  #addToDB,
+  #nextToWishlists,
+  #friendtoProfile,
+  #addAFriendBtn,
+  #addEventBtn,
+  #addFriendBtn {
     border: none;
     border-radius: 44px;
     width: 232px;
@@ -17,6 +24,20 @@
     justify-content: center;
     margin: auto;
     margin-top: 4rem;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
   }
 
   #startIdeaBtn,
@@ -42,8 +63,24 @@
   }
 
   #addtowish,
-  #seeFriendsList {
+  #seeFriendsList,
+  #addAFriendBtn {
     background: $color_button_purple;
+    border: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_purple_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
   }
 
   #backToStart,
@@ -94,4 +131,40 @@
   a {
     text-decoration: none;
   }
+}
+
+
+//////////////// Login Page ////////////////////
+#loginPage,
+#resetContainer {
+  #btn_logout,
+  #btn_AddGiftIdea,
+  #btn_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_accent;
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+
 }
