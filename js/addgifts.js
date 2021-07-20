@@ -33,7 +33,7 @@ let newWish = {};
 
 
 addGift.addEventListener("click", () => {
-  
+
   if (giftTitle.value.trim() && giftDescription.value.trim()) {
     newWish = new newWishObject(
       giftTitle.value.trim(),
@@ -58,7 +58,7 @@ addGift.addEventListener("click", () => {
 // ************************ Add location ***************************
 
 nextToWishlists.addEventListener("click", () => {
-  
+
   newWish.location = mapLink.href;
 
   if (newWish.location !== undefined) {
@@ -82,7 +82,7 @@ addToWish.addEventListener("click", () => {
   addToWishlistSection.classList.add('hide');
   complete.classList.toggle('hide');
   if (newWish.location !== undefined) {
-    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
+    ideaSummary.innerHTML = `<img src="${newWish.storeImage}" alt="your wish idea photo snapshot"> ${newWish.wishTitle}<br>
   ${newWish.wishDesc}<br>
   ${newWish.location}`;
   } else {
@@ -96,13 +96,13 @@ addToWish.addEventListener("click", () => {
 
 addEventBtn.addEventListener("click", () => {
 
-    newWish.eventName = friendEventSelect2.value;
-    newWish.eventDate = friendDate2.value;
-    console.log(newWish);
-    friendEventSelect2.value = "";
-    friendDate2.value = "";
+  newWish.eventName = friendEventSelect2.value;
+  newWish.eventDate = friendDate2.value;
+  console.log(newWish);
+  friendEventSelect2.value = "";
+  friendDate2.value = "";
 
-    addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
+  addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
 
 });
 
@@ -164,7 +164,7 @@ async function friendsListfromDB() {
         const buttonItem = document.createElement("button");
         buttonItem.setAttribute("type", "button");
         buttonItem.addEventListener("click", () => {
-          
+
           // See L185 Function
           addIdeaToCollection(doc.id);
         });
@@ -194,22 +194,22 @@ async function addIdeaToCollection(friendsName, giftTitle) {
   // } else {
   //   ideaAddedMsg.innerHTML = "Your idea is added!";
 
-    await db
-      .collection(firebase.auth().currentUser.uid)
-      .doc("Friends")
-      .collection("List")
-      .doc(friendsName)
-      .collection("This Friend's List")
-      .doc(giftTitle)
-      .set({
-        ...newWish,
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .doc(friendsName)
+    .collection("This Friend's List")
+    .doc(giftTitle)
+    .set({
+      ...newWish,
+    })
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
 }
 
 // ********** Outputs the list of gift ideas belonging to User ************
@@ -229,6 +229,12 @@ async function renderWishlist() {
         // Create the card container
         const card = document.createElement("div");
         card.className = "displaycard";
+        //Image
+        if (doc.data().storeImage !== null) {
+          const wishImage = document.createElement('img');
+          wishImage.src = `${doc.data().storeImage}`;
+          card.appendChild(wishImage);
+        }
         // heading:
         // Add the Gift title
         const giftHeader = document.createElement("h3");
@@ -292,6 +298,7 @@ function editWish(doc) {
       .doc(doc.id)
       .update({ ...wishEdited });
     editCard.classList.add('hide');
+    displayGift.innerHTML = "";
     renderWishlist();
     displayGift.classList.remove('hide');
 
