@@ -82,8 +82,6 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
-
-
 // ****************************** USER LOGIN **********************************
 
 loginButton.addEventListener("click", (event) => {
@@ -95,6 +93,8 @@ loginButton.addEventListener("click", (event) => {
       .then((user) => {
         if (user) {
           console.log("logged in!");
+          localStorage.clear();
+          localStorage.setItem("mainUser", JSON.stringify(auth.currentUser));
         }
       })
       .catch((error) => {
@@ -125,7 +125,7 @@ logoutButton.addEventListener("click", () => {
     .auth()
     .signOut()
     .then(() => {
-
+      localStorage.clear();
       notLoggedIn.style.display = "block";
     })
     .catch((error) => {
