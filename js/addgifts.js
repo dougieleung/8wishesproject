@@ -31,9 +31,11 @@ let newWish = {};
 
 // ********** #2 Add Gift Idea Section of gift_idea.html **********
 
-
+// variables for the storage
+let storageRef = storage.ref();
+let gsReference;
 addGift.addEventListener("click", () => {
-  
+
   if (giftTitle.value.trim() && giftDescription.value.trim()) {
     newWish = new newWishObject(
       giftTitle.value.trim(),
@@ -41,7 +43,16 @@ addGift.addEventListener("click", () => {
       storeimage = storeImage,
       new Date()
     );
+    // putting the image into firebase storage
+    if (newWish.storeImage !== "") {
 
+      let thisRef = storageRef.child(`images/${newWish.wishTitle}`);
+      thisRef.put(theBlob).then((snapshot) => {
+        console.log('Uploaded a blob or file!');
+      });
+    }
+
+    // end of Storage operation
     console.log(newWish);
 
     displayTitle.innerHTML = `${giftTitle.value}`;
@@ -58,7 +69,7 @@ addGift.addEventListener("click", () => {
 // ************************ Add location ***************************
 
 nextToWishlists.addEventListener("click", () => {
-  
+
   newWish.location = mapLink.href;
 
   if (newWish.location !== undefined) {
@@ -118,14 +129,16 @@ friendEventSelect2.addEventListener("change", () => {
 
 addEventBtn.addEventListener("click", () => {
 
+
     newWish.eventName = createEventInput.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
     createEventInput.value = "";
     friendDate2.value = "";
 
-    addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
-    friendEventAdded.innerHTML = `Successfully added:
+
+  addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
+  friendEventAdded.innerHTML = `Successfully added:
     <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
 });
 
@@ -158,7 +171,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
     complete.classList.toggle('hide');
     displayGift.classList.toggle('hide')
 
-    displayGift.innerHTML = `<h2> My List </h2>`;
+    // displayGift.innerHTML = `<h2> My List </h2>`;
 
     // See L216 Function
     renderWishlist();
@@ -187,7 +200,7 @@ async function friendsListfromDB() {
         const buttonItem = document.createElement("button");
         buttonItem.setAttribute("type", "button");
         buttonItem.addEventListener("click", () => {
-          
+
           // See L185 Function
           addIdeaToCollection(doc.id);
         });
@@ -217,22 +230,22 @@ async function addIdeaToCollection(friendsName, giftTitle) {
   // } else {
   //   ideaAddedMsg.innerHTML = "Your idea is added!";
 
-    await db
-      .collection(firebase.auth().currentUser.uid)
-      .doc("Friends")
-      .collection("List")
-      .doc(friendsName)
-      .collection("This Friend's List")
-      .doc(giftTitle)
-      .set({
-        ...newWish,
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .doc(friendsName)
+    .collection("This Friend's List")
+    .doc(giftTitle)
+    .set({
+      ...newWish,
+    })
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
 }
 
 // ********** Outputs the list of gift ideas belonging to User ************
@@ -248,16 +261,28 @@ async function renderWishlist() {
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        // console.log(doc.id, " => ", doc.data());        
+        console.log('rendering the items');
         // Create the card container
         const card = document.createElement("div");
         card.className = "displaycard";
-        // heading:
+
         // Add the Gift title
         const giftHeader = document.createElement("h3");
         giftHeader.innerText = `${doc.data().wishTitle}`;
         card.appendChild(giftHeader);
         // Add the image / photo here
+        //Image
+        if (doc.data().storeImage != "") {
+          const theImage = document.createElement('img');
+          storageRef.child(`images/${doc.data().wishTitle}`).getDownloadURL()
+            .then((url) => {
+              theImage.src = url;
+            })
+            .catch((error) => {
+              // Handle any errors
+            });
+          card.appendChild(theImage);
+        }
         // Add the Gift description to the card
         const descriptionContainer = document.createElement("div");
         const descriptionText = document.createTextNode(
@@ -265,15 +290,8 @@ async function renderWishlist() {
         );
         descriptionContainer.appendChild(descriptionText);
         card.appendChild(descriptionContainer);
-        // Deleting an item
-        // const deleteBtn = document.createElement("button");
-        // deleteBtn.setAttribute = ("type", "button");
-        // deleteBtn.innerText = "Delete";
-        // card.appendChild(deleteBtn);
+
         displayGift.appendChild(card);
-        // deleteBtn.addEventListener("click", () => {
-        //   deleteWishlistItem(doc.id);
-        // });
 
         // Editing an item
         const editBtn = document.createElement('button');
@@ -282,7 +300,7 @@ async function renderWishlist() {
         editBtn.innerText = "Edit/Delete";
         card.appendChild(editBtn);
         editBtn.addEventListener('click', async function () {
-          // See L274 Editing Wish
+          console.log('Edit Button Clicked');
           editWish(doc);
         })
       });
@@ -296,12 +314,13 @@ async function renderWishlist() {
 
 function editWish(doc) {
   editCard.classList.remove('hide');
-  displayGift.classList.add('hide');
+  // displayGift.classList.add('hide');
 
   wishTitleEdit.value = `${doc.data().wishTitle}`;
   wishDescEdit.value = `${doc.data().wishDesc}`
 
   saveEditBtn.addEventListener('click', async function () {
+    console.log('saveEdit Button Clicked');
     let wishEdited = {
       wishTitle: wishTitleEdit.value,
       wishDesc: wishDescEdit.value,
@@ -314,12 +333,18 @@ function editWish(doc) {
       .collection("List of items")
       .doc(doc.id)
       .update({ ...wishEdited });
+
+
     editCard.classList.add('hide');
+    displayGift.innerHTML = "";
     renderWishlist();
     displayGift.classList.remove('hide');
 
   })
+
+
   deleteWishBtn.addEventListener('click', async function () {
+    console.log('Delete Button Clicked');
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
@@ -333,49 +358,24 @@ function editWish(doc) {
         console.error("Error removing document: ", error);
       });
     editCard.classList.add('hide');
+    displayGift.innerHTML = "";
     renderWishlist();
     displayGift.classList.remove('hide');
+
   });
 }
 
-// async function deleteWishlistItem(docID) {
-//   await db
-//     .collection(firebase.auth().currentUser.uid)
-//     .doc("MyWishlist")
-//     .collection("List of items")
-//     .doc(docID)
-//     .delete()
-//     .then(() => {
-//       console.log("Document successfully deleted!");
-//       editCard.classList.toggle('hide');
-//       renderWishlist();
-//       displayGift.classList.toggle('hide');
-//     })
-//     .catch((error) => {
-//       console.error("Error removing document: ", error);
-//     });
 
-// }
+myListFooter.addEventListener('click', function () {
+  giftIdeaHomePage.classList.add('hide');
+  giftIdeaHomePage.classList.remove('show');
+  displayGift.classList.remove('hide');
+  renderWishlist()
+}
+);
 
+seeFullListLink.addEventListener('click', function () {
+  displayGift.classList.remove('hide');
+  renderWishlist();
+})
 
-
-// function editWishDesc(doc, card) {
-//   const editDescInput = document.createElement('input');
-//   editDescInput.setAttribute('type', 'text');
-//   editDescInput.classList.add('editDescInput');
-//   editDescInput.setAttribute('value', `${doc.data().wishDesc}`);
-//   const doneEditDescBtn = document.createElement('button');
-//   doneEditDescBtn.innerText = 'OK';
-//   card.appendChild(editDescInput);
-//   card.appendChild(doneEditDescBtn);
-
-//   doneEditDescBtn.addEventListener('click', async function () {
-//     let userDescEdit = { wishDesc: editDescInput.value };
-//     await db.collection(firebase.auth().currentUser.uid)
-//       .doc("MyWishlist")
-//       .collection("List of items")
-//       .doc(doc.id)
-//       .update({ ...userDescEdit });
-//     renderWishlist();
-//   })
-// }

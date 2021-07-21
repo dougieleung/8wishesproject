@@ -23,7 +23,7 @@
     height: 48px;
     justify-content: center;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 0;
     transition: all 1s ease;
 
     &:hover {
@@ -133,7 +133,6 @@
   }
 }
 
-
 //////////////// Login Page ////////////////////
 #loginPage,
 #resetContainer {
@@ -166,5 +165,4 @@
       color: $color_button_hover_text;
     }
   }
-
 }
