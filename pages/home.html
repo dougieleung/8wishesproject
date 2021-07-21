@@ -1,5 +1,5 @@
 <!-- ******************************************************************************************** -->
-<!-- ********************************   RESET Password Page   *********************************** -->
+<!-- ****************************  HOME HTML Page   ******************************** -->
 <!-- ******************************************************************************************** -->
 
 <!DOCTYPE html>
@@ -9,8 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
 
-    <title>8 Wishes</title>
+    <title>HOME | 8 Wishes</title>
     <meta
       name="description"
       content="An application for searching special unique gifts"
@@ -32,7 +33,7 @@
         });
 
         navigator.serviceWorker
-          .register("./sw.js", {
+          .register("../sw.js", {
             scope: "/",
           })
           .then(function (reg) {
@@ -62,46 +63,24 @@
     ></script>
 
     <script src="../js/firebase.js" defer></script>
-    <script src="../js/auth.js" defer></script>
     <script src="../js/main.js" defer></script>
-    <script src="../js/resetpassword.js" defer></script>
+    <script src="../js/home.js" defer></script>
+
+    <!-- <script src="../js/geolocation.js" defer></script>
+    <script src="../js/imageCapture.js" defer></script>
+
+    <script src="../js/addgifts.js" defer></script>
+    <script src="../js/pageDisplay.js" defer></script>
+
+    <script src="../js/friends.js" defer></script> -->
+    <!-- <script src="../js/pageDisplayFriends.js" defer></script> -->
   </head>
 
   <body>
-    <header></header>
     <main>
-      <section id="resetContainer">
-        <form method="post">
-          <h2>RESET YOUR PASSWORD</h2>
-
-          <h4 id="resetfeedback">
-            Would you like us to send you an e-mail to reset your password?
-          </h4>
-
-          <div class="email">
-            <!-- <label for="email">E-mail: </label> -->
-            <input
-              type="email"
-              name=""
-              id="email_to_reset"
-              placeholder=" john.doe@mylangara.ca"
-              required
-            />
-          </div>
-
-          <div class="reset-buttons">
-            <button class="yes-reset" id="reset_password">Yes</button>
-            <button class="no-reset" id="noreset">
-              <a href="register+login.html">No</a>
-            </button>
-          </div>
-
-          <button class="back-to-login" id="backtologin">
-            <a href="register+login.html">Back to login page</a>
-          </button>
-        </form>
-      </section>
+      <div id="events-wrapper"></div>
     </main>
+
     <footer>
       <div class="navbar_container">
         <nav class="bottom_navbar">
@@ -127,7 +106,7 @@
             </li>
             <li>
               <button id="friendsFooter" class="button friendsButton">
-                <a href="friendsView.html"
+                <a href="friends.html"
                   ><img src="../icons/footerIcons/friendsIcon.svg"
                 /></a>
               </button>
@@ -142,17 +121,17 @@
       </div>
 
       <!-- <div class="footer_container">
-      <nav class="footer_links">
-        <hr />
-        <ul>
-          <li><a href="./tour.html">Take A Tour</a></li>
-          <li><a href="./privacy.html">Privacy Policies</a></li>
-          <li><a href="./advertise.html">Ads Info</a></li>
-          <li><a href="./business.html">Business</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div> -->
+            <nav class="footer_links">
+                <hr>
+                <ul>
+                    <li><a href="./tour.html">Take A Tour</a></li>
+                    <li><a href="./privacy.html">Privacy Policies</a></li>
+                    <li><a href="./advertise.html">Ads Info</a></li>
+                    <li><a href="./business.html">Business</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div> -->
     </footer>
   </body>
 </html>

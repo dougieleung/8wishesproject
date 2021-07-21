@@ -4,8 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,37 +12,46 @@
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
 
     <title>8 Wishes</title>
-    <meta name="description" content="An application for searching special unique gifts" />
+    <meta
+      name="description"
+      content="An application for searching special unique gifts"
+    />
     <link rel="manifest" href="../manifest.json" />
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.ready.then((reg) => {
-                console.log(`Service Worker ready (Scope: ${reg.scope})`);
-            });
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((reg) => {
+          console.log(`Service Worker ready (Scope: ${reg.scope})`);
+        });
 
-            navigator.serviceWorker
-                .register("../sw.js", {
-                    scope: "/"
-                })
-                .then(function (reg) {
-                    console.log(`Service Worker Registration (Scope: ${reg.scope})`);
-                })
-                .catch(function (error) {
-                    console.log(`Service Worker Error (${error})`);
-                });
-        } else {
-            console.warn("Service Worker not available");
-        }
+        navigator.serviceWorker
+          .register("../sw.js", {
+            scope: "/",
+          })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
     </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
+      defer
+    ></script>
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
@@ -59,12 +67,11 @@
 
     <script src="../js/friends.js" defer></script>
     <!-- <script src="../js/pageDisplayFriends.js" defer></script> -->
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <main id="giftIdeaProcess">
+      <!--**********************************  #1 Home Page Section  *********************************** -->
 
         <!--**********************************  #1 Home Page Section  *********************************** -->
 
@@ -159,15 +166,34 @@
                     <a href="#summaryCard">NEXT</a>
                 </button>
 
+          <!-- Add image and title, description to summary card -->
+          <button id="addGift" type="submit">
+            <a href="#summaryCard">NEXT</a>
+          </button>
+        </div>
+      </section>
 
+      <!--********************************  #3 Snapping Photo Section  ******************************** -->
 
-            </div>
+      <section id="takePhoto" class="hide">
+        <!-- Back button -->
+        <button id="backToIdeaAdd2">
+          <a href="#giftIdeaAdd">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </button>
+        <!-- Back button -->
 
-        </section>
+        <div id="camera">
+          <!-- Video and Snapping photo -->
+          <video id="video" width="240" height="240" autoplay></video>
 
         <!--****************************  #4 Gift Idea Summary Card Section  **************************** -->
 
-        <section id="summaryCard" class="hide">
+          <audio id="cameraAudio">
+            <source src="/icons/camera-shutter-click-03.mp3" />
+            ; Your browser does not support the audio tag.
+          </audio>
 
             <!-- Back button -->
             <button id="backToIdeaAdd">
@@ -176,32 +202,85 @@
                 </a>
             </button>
 
-            <div class="add-idea-2">
+          <button id="addPhoto" type="submit">
+            <a href="#summaryCard">NEXT</a>
+          </button>
+        </div>
+      </section>
 
-                <!-- Display default image if no photo taken -->
-                <div id=summaryCardimage></div>
+      <!--****************************  #4 Gift Idea Summary Card Section  **************************** -->
 
-                <h3 id="displayTitle"></h3>
-                <p id="displayDesc"></p>
+      <section id="summaryCard" class="hide">
+        <!-- Back button -->
+        <button id="backToIdeaAdd">
+          <a href="#giftIdeaAdd">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </button>
 
-                <!-- Add Geolocation -->
-                <label for="location">Add location(optional)</label>
-                <div id="coordinates">
-                    <a id="map-link" target="_blank"></a>
-                    <button id="locate"><i class="fas fa-map-marker-alt"></i></button>
-                </div>
-                <br>
-                <br>
-                <p id="status"></p>
+        <div class="add-idea-2">
+          <!-- Display default image if no photo taken -->
+          <div id="summaryCardimage"></div>
 
-                <!-- Button to next section to add to wish list or friend's list  -->
-                <button id="nextToWishlists" type="submit">
-                    <a href="#addToWishlistSection">Next</a>
-                </button>
+          <h3 id="displayTitle"></h3>
+          <p id="displayDesc"></p>
 
-            </div>
+          <!-- Add Geolocation -->
+          <label for="location">Add location(optional)</label>
+          <div id="coordinates">
+            <a id="map-link" target="_blank"></a>
+            <button id="locate"><i class="fas fa-map-marker-alt"></i></button>
+          </div>
+          <br />
+          <br />
+          <p id="status"></p>
 
-        </section>
+          <!-- Button to next section to add to wish list or friend's list  -->
+          <button id="nextToWishlists" type="submit">
+            <a href="#addToWishlistSection">Next</a>
+          </button>
+        </div>
+      </section>
+
+      <!--*******************  #5 (A) Add to My Wishlist or (B) Friend's List Page  ******************* -->
+
+      <section id="addToWishlistSection" class="hide">
+        <!-- Back button -->
+        <button id="backToSummaryCard">
+          <a href="#summaryCard">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </button>
+
+        <div class="add-idea-3">
+          <div class="idea-window">
+            <div id="windowImage"></div>
+            <div id="windowDescription" class="window-description"></div>
+          </div>
+
+          <!-- Button to add to My List -->
+          <button id="addtowish" type="button">Add to My list</button>
+
+          <!-- User Feedback when wish is added to my list -->
+          <p id="add-wish-msg"></p>
+
+          <!-- Button to add to Friend's List -->
+          <button id="seeFriendsList" class="button button19" type="button">
+            <a href="#listEmptyPage">Add to Friend</a>
+          </button>
+
+          <!-- Generated from list from Firestore -->
+          <div class="friends-list" id="friendsList"></div>
+        </div>
+      </section>
+
+      <!--*********************** IF YOU CHOOSE (A), GO TO LINE 6 (A) LINE 289 ************************ -->
+      <!--*****************************  #6 (B) Add to Friends List Page  ***************************** -->
+
+      <!-- Friend's Intro Page showing list of friends or none -->
+      <section id="listEmptyPage" class="hide">
+        <h2>Choose a friend</h2>
+        <div id="friendListOutput"></div>
 
         <!--*******************  #5 (A) Add to My Wishlist or (B) Friend's List Page  ******************* -->
 
@@ -333,7 +412,9 @@
 
                 <p id="login-to-add"></p>
 
-                <button id="addToDB" class="button button21" type="button">Done</button>
+        <!-- Select Event Date -->
+        <label for="date">Select a Date</label>
+        <input id="friendDate" type="date" id="event" name="event" />
 
             </div>
             <!-- /#friendsWishlist -->
@@ -347,20 +428,72 @@
         <!-- Card to show image, title, description, friend, and event, date -->
         <section id="editCard" class="hide">
 
-            <form action="#" id="editForm">
+      <!--**************  #7 (B) If There Are Friends, proceed to page to add events only ************* -->
 
-                <input type="text" id="wishTitleEdit" name="wishTitleEdit">
-                <input type="text" id="wishDescEdit" name="wishDescEdit">
+      <section id="addEventPage" class="hide">
+        <h1>Choose an event for</h1>
+        <input id="friendsProfile" />
 
-                <a id="seeFullList" href="#">see full list</a>
-                <button id="saveEdit" type="button">Save</button>
-                <button id="deleteWish" type="button">Delete</button>
+        <label for="name">Select an event</label>
+        <select id="friendEventSelect2" name="event">
+          <option value="resetOptions">-- Select An Event --</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Wedding Anniversary">Wedding Anniversary</option>
+          <option value="Graduation Day">Graduation Day</option>
+          <option value="Other">Other...</option>
+        </select>
+        <div id="createEvent"></div>
 
-            </form>
-            <!-- /#editForm -->
-        </section>
-        <!-- /#editCard -->
+        <label for="date">Select a Date</label>
 
+        <!-- <input id="friendEvent" type="text" /> -->
+        <input id="friendDate2" type="date" id="event" name="event" />
+        <button id="addEventBtn" type="button">Add Event</button>
+        <div id="friendEventAdded"></div>
+      </section>
+
+      <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
+
+      <section id="complete" class="hide">
+        <!-- Back button -->
+        <button id="backToChooseEvent">
+          <a href="#chooseEvent">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </button>
+
+        <div class="add-idea-5">
+          <h2>Your Idea is Added!</h2>
+          <!-- <p id="idea-added-msg"></p> -->
+          <div id="ideaSummary"></div>
+          <!-- /#ideaSummary -->
+
+          <p id="login-to-add"></p>
+
+          <button id="addToDB" class="button button21" type="button">
+            Done
+          </button>
+        </div>
+        <!-- /#friendsWishlist -->
+      </section>
+
+      <section id="giftcard_display" class="hide">
+        <h2>My List</h2>
+      </section>
+
+      <!-- Card to show image, title, description, friend, and event, date -->
+      <section id="editCard" class="hide">
+        <form action="#" id="editForm">
+          <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
+          <input type="text" id="wishDescEdit" name="wishDescEdit" />
+
+          <a id="seeFullList" href="#">see full list</a>
+          <button id="saveEdit" type="button">Save</button>
+          <button id="deleteWish" type="button">Delete</button>
+        </form>
+        <!-- /#editForm -->
+      </section>
+      <!-- /#editCard -->
     </main>
 
     <footer>
@@ -369,7 +502,7 @@
             <nav class="bottom_navbar">
                 <ul>
 
-                    <li><button id="nav_btn1" class="button homeButton"><a href="register+login.html">
+                    <li><button id="nav_btn1" class="button homeButton"><a href="./home.html">
                                 <img src="../icons/footerIcons/HomeIcon.svg"></a></button></li>
                     <li><button id="myListFooter" class="button listButton">
                             <a href="#giftcard_display"><img src="../icons/footerIcons/listIcon.svg"></a></button></li>
@@ -398,9 +531,6 @@
                 </ul>
             </nav>
         </div> -->
-
     </footer>
-
-</body>
-
+  </body>
 </html>

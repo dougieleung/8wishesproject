@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style.css" />
+    <title>8 Wishes</title>
+    <meta
+      name="description"
+      content="An application for searching special unique gifts"
+    />
+    <link rel="manifest" href="../manifest.json" />
 
-  <title>8 Wishes</title>
-  <meta name="description" content="An application for searching special unique gifts" />
-  <link rel="manifest" href="../manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then((reg) => {
-        console.log(`Service Worker ready (Scope: ${reg.scope})`);
-      });
-
-      navigator.serviceWorker
-        .register("../sw.js", {
-          scope: "/",
-        })
-        .then(function (reg) {
-          console.log(`Service Worker Registration (Scope: ${reg.scope})`);
-        })
-        .catch(function (error) {
-          console.log(`Service Worker Error (${error})`);
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((reg) => {
+          console.log(`Service Worker ready (Scope: ${reg.scope})`);
         });
-    } else {
-      console.warn("Service Worker not available");
-    }
-  </script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
-  <script src="../js/firebase.js" defer></script>
-  <script src="../js/main.js" defer></script>
-  <script src="../js/friends.js" defer></script>
-  <script src="../js/pageDisplayFriends.js" defer></script>
-</head>
 
-<body>
-  <header></header>
-  <main>
-    <section id="listEmptyPage">
-      
-      <h2>Your friend list is empty.</h2>
-      <button id="addFriend" class="add-friend-btn" type="button">
-       
-        <a href="#addFriendPage"> Add a friend </a>
-      </button>
-    </section>
-    <!-- /#listEmptyPage -->
+        navigator.serviceWorker
+          .register("../sw.js", {
+            scope: "/",
+          })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
+      defer
+    ></script>
+    <!-- Add Firebase products that you want to use -->
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"
+      defer
+    ></script>
+    <script src="../js/firebase.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/friends.js" defer></script>
+    <script src="../js/pageDisplayFriends.js" defer></script>
+  </head>
 
-    <section id="addFriendPage" class="hide">
-      <h2>Add a friend</h2>
-      <div class="profile-pic"><a href="#">Add profile pic</a></div>
-      
-      <div id="addFriendForm">
+  <body>
+    <header></header>
+    <main>
+      <section id="listEmptyPage">
+        <h2>Your friend list is empty.</h2>
+        <button id="addFriend" class="add-friend-btn" type="button">
+          <a href="#addFriendPage"> Add a friend </a>
+        </button>
+      </section>
+      <!-- /#listEmptyPage -->
 
+      <section id="addFriendPage" class="hide">
+        <h2>Add a friend</h2>
+        <div class="profile-pic"><a href="#">Add profile pic</a></div>
+
+        <div id="addFriendForm">
           <label for="name">Friend name</label>
           <input id="friendName" type="text" />
           <label for="name">Select an event</label>
@@ -80,57 +92,72 @@
 
           <!-- <input id="friendEvent" type="text" /> -->
           <input id="friendDate" type="date" id="event" name="event" />
+        </div>
 
-    </div>
-
-
-      <button id="addFriendBtn" type="button">Add</button>
-    </section>
-
-    <!-- /#addFriendPage -->
-    <section id="friendAddedPage">
-        <h2>Your friend is added !</h2>
-        <div id = "newFriendName"></div>
-        <label for="name" id = "newFriendEvent">Event</label>
-       <button id="friendAddBtn"><a href="#friendsListPage">Done</a></button>
+        <button id="addFriendBtn" type="button">Add</button>
       </section>
-      
 
-    <!-- /#friendAddedPage -->
-    <section id="friendsListPage" class="hide">
-      <h2>Friends</h2>
-      <div id="friendsListFromDB" class="friendAdded">
-        <p><a href="#">See list</a></p>
-      </div>
-      <div class="addfriend">
-        <button id="fetchFriendsBtn" type="button">Fetch friends list</button>
-      </div>
-    </section>
-    <!-- /#friendsListPage -->
-    <div id="friendsWishlist" class="hide"></div>
-  </main>
-  <footer>
-  
-    <div class="navbar_container">
-      <nav class="bottom_navbar">
+      <!-- /#addFriendPage -->
+      <section id="friendAddedPage">
+        <h2>Your friend is added !</h2>
+        <div id="newFriendName"></div>
+        <label for="name" id="newFriendEvent">Event</label>
+        <button id="friendAddBtn"><a href="#friendsListPage">Done</a></button>
+      </section>
+
+      <!-- /#friendAddedPage -->
+      <section id="friendsListPage" class="hide">
+        <h2>Friends</h2>
+        <div id="friendsListFromDB" class="friendAdded">
+          <p><a href="#">See list</a></p>
+        </div>
+        <div class="addfriend">
+          <button id="fetchFriendsBtn" type="button">Fetch friends list</button>
+        </div>
+      </section>
+      <!-- /#friendsListPage -->
+      <div id="friendsWishlist" class="hide"></div>
+    </main>
+    <footer>
+      <div class="navbar_container">
+        <nav class="bottom_navbar">
           <ul>
-
-            <li><button id="nav_btn1" class="button homeButton"><a href="register+login.html">
-              <img src="../icons/footerIcons/HomeIcon.svg"></a></button></li>
-          <li><button id="myListFooter" class="button listButton">
-              <a href ="gift_idea.html"><img src ="../icons/footerIcons/listIcon.svg"></a></button></li>
-          <li><button id="nav_btn3" class="button addButton"><a href ="gift_idea.html">+</a>
-          </button></li>
-          <li><button id="friendsFooter" class="button friendsButton">
-              <a href ="friends.html"><img src ="../icons/footerIcons/friendsIcon.svg"></a></button></li>
-              <li><button id="nav_btn5" class="button storeButton">
-                <img src="../icons/footerIcons/storesIcon.svg"></button></li>
-
+            <li>
+              <button id="nav_btn1" class="button homeButton">
+                <a href="./home.html">
+                  <img src="../icons/footerIcons/HomeIcon.svg"
+                /></a>
+              </button>
+            </li>
+            <li>
+              <button id="myListFooter" class="button listButton">
+                <a href="gift_idea.html"
+                  ><img src="../icons/footerIcons/listIcon.svg"
+                /></a>
+              </button>
+            </li>
+            <li>
+              <button id="nav_btn3" class="button addButton">
+                <a href="gift_idea.html">+</a>
+              </button>
+            </li>
+            <li>
+              <button id="friendsFooter" class="button friendsButton">
+                <a href="friends.html"
+                  ><img src="../icons/footerIcons/friendsIcon.svg"
+                /></a>
+              </button>
+            </li>
+            <li>
+              <button id="nav_btn5" class="button storeButton">
+                <img src="../icons/footerIcons/storesIcon.svg" />
+              </button>
+            </li>
           </ul>
-      </nav>
-  </div>
+        </nav>
+      </div>
 
-    <!-- <div class="footer_container">
+      <!-- <div class="footer_container">
       <nav class="footer_links">
         <hr />
         <ul>
@@ -142,7 +169,6 @@
         </ul>
       </nav>
     </div> -->
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
