@@ -7,11 +7,6 @@ body {
   margin: 0;
 }
 
-giftcard_display main section {
-  height: 90vh;
-  margin: 0;
-}
-
 #welcomePage,
 #demo-page,
 #registerPage,
@@ -30,6 +25,10 @@ giftcard_display main section {
   font-family: "Livvic", sans-serif;
 }
 
+#giftIdeaProcess section {
+  height: 89vh;
+}
+
 main #loginPage,
 main #registerPage,
 main #welcomePage,
@@ -44,7 +43,8 @@ main #friendsListPage,
 main #resetContainer,
 main #takePhoto,
 main #addEventPage,
-main #friendAddedPage {
+main #friendAddedPage,
+main #editCard {
   background-color: #363D51;
   display: flex;
   justify-content: space-evenly;
@@ -84,7 +84,9 @@ main #takePhoto #btn_AddGiftIdea,
 main #addEventPage .loggedin #btn_logout,
 main #addEventPage #btn_AddGiftIdea,
 main #friendAddedPage .loggedin #btn_logout,
-main #friendAddedPage #btn_AddGiftIdea {
+main #friendAddedPage #btn_AddGiftIdea,
+main #editCard .loggedin #btn_logout,
+main #editCard #btn_AddGiftIdea {
   color: #212531;
   margin: 2rem;
 }
@@ -118,7 +120,9 @@ main #takePhoto #btn_AddGiftIdea a,
 main #addEventPage .loggedin #btn_logout a,
 main #addEventPage #btn_AddGiftIdea a,
 main #friendAddedPage .loggedin #btn_logout a,
-main #friendAddedPage #btn_AddGiftIdea a {
+main #friendAddedPage #btn_AddGiftIdea a,
+main #editCard .loggedin #btn_logout a,
+main #editCard #btn_AddGiftIdea a {
   text-decoration: none;
   color: #212531;
 }
@@ -137,7 +141,8 @@ main #friendsListPage #registerForm .form-item,
 main #resetContainer #registerForm .form-item,
 main #takePhoto #registerForm .form-item,
 main #addEventPage #registerForm .form-item,
-main #friendAddedPage #registerForm .form-item {
+main #friendAddedPage #registerForm .form-item,
+main #editCard #registerForm .form-item {
   width: 100%;
 }
 
@@ -155,7 +160,8 @@ main #friendsListPage #registerForm .form-item #registerButton,
 main #resetContainer #registerForm .form-item #registerButton,
 main #takePhoto #registerForm .form-item #registerButton,
 main #addEventPage #registerForm .form-item #registerButton,
-main #friendAddedPage #registerForm .form-item #registerButton {
+main #friendAddedPage #registerForm .form-item #registerButton,
+main #editCard #registerForm .form-item #registerButton {
   margin-left: 0.3rem;
 }
 
@@ -188,7 +194,9 @@ main #takePhoto #registerForm,
 main #addEventPage #not-logged-in,
 main #addEventPage #registerForm,
 main #friendAddedPage #not-logged-in,
-main #friendAddedPage #registerForm {
+main #friendAddedPage #registerForm,
+main #editCard #not-logged-in,
+main #editCard #registerForm {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -255,7 +263,11 @@ main #addEventPage #registerForm span,
 main #friendAddedPage #not-logged-in a,
 main #friendAddedPage #not-logged-in span,
 main #friendAddedPage #registerForm a,
-main #friendAddedPage #registerForm span {
+main #friendAddedPage #registerForm span,
+main #editCard #not-logged-in a,
+main #editCard #not-logged-in span,
+main #editCard #registerForm a,
+main #editCard #registerForm span {
   color: #212531;
 }
 
@@ -348,7 +360,13 @@ main #friendAddedPage #not-logged-in .link3,
 main #friendAddedPage #not-logged-in span,
 main #friendAddedPage #registerForm .link2,
 main #friendAddedPage #registerForm .link3,
-main #friendAddedPage #registerForm span {
+main #friendAddedPage #registerForm span,
+main #editCard #not-logged-in .link2,
+main #editCard #not-logged-in .link3,
+main #editCard #not-logged-in span,
+main #editCard #registerForm .link2,
+main #editCard #registerForm .link3,
+main #editCard #registerForm span {
   color: #F9F9FB;
 }
 
@@ -561,7 +579,21 @@ main #friendAddedPage #registerForm #username,
 main #friendAddedPage #registerForm #email,
 main #friendAddedPage #registerForm #password,
 main #friendAddedPage #registerForm #confirmPassword,
-main #friendAddedPage #registerForm #registerButton {
+main #friendAddedPage #registerForm #registerButton,
+main #editCard #not-logged-in input#email1,
+main #editCard #not-logged-in #password1,
+main #editCard #not-logged-in #username,
+main #editCard #not-logged-in #email,
+main #editCard #not-logged-in #password,
+main #editCard #not-logged-in #confirmPassword,
+main #editCard #not-logged-in #registerButton,
+main #editCard #registerForm input#email1,
+main #editCard #registerForm #password1,
+main #editCard #registerForm #username,
+main #editCard #registerForm #email,
+main #editCard #registerForm #password,
+main #editCard #registerForm #confirmPassword,
+main #editCard #registerForm #registerButton {
   padding: 0.7rem;
   border-radius: 0.7rem;
   border: 1px solid #F9F9FB;
@@ -602,7 +634,9 @@ main #takePhoto #registerForm .forgot-password,
 main #addEventPage #not-logged-in .forgot-password,
 main #addEventPage #registerForm .forgot-password,
 main #friendAddedPage #not-logged-in .forgot-password,
-main #friendAddedPage #registerForm .forgot-password {
+main #friendAddedPage #registerForm .forgot-password,
+main #editCard #not-logged-in .forgot-password,
+main #editCard #registerForm .forgot-password {
   text-align: right;
 }
 
@@ -635,7 +669,9 @@ main #takePhoto #registerForm #registerButton,
 main #addEventPage #not-logged-in #registerButton,
 main #addEventPage #registerForm #registerButton,
 main #friendAddedPage #not-logged-in #registerButton,
-main #friendAddedPage #registerForm #registerButton {
+main #friendAddedPage #registerForm #registerButton,
+main #editCard #not-logged-in #registerButton,
+main #editCard #registerForm #registerButton {
   background-color: #86E4DE;
   border-color: #86E4DE;
   color: #212531;
@@ -655,7 +691,8 @@ main #friendsListPage h2,
 main #resetContainer h2,
 main #takePhoto h2,
 main #addEventPage h2,
-main #friendAddedPage h2 {
+main #friendAddedPage h2,
+main #editCard h2 {
   color: #F9F9FB;
   text-align: center;
 }
@@ -674,7 +711,8 @@ main #friendsListPage label,
 main #resetContainer label,
 main #takePhoto label,
 main #addEventPage label,
-main #friendAddedPage label {
+main #friendAddedPage label,
+main #editCard label {
   padding: 0;
 }
 
@@ -692,7 +730,8 @@ main #friendsListPage .footer-login,
 main #resetContainer .footer-login,
 main #takePhoto .footer-login,
 main #addEventPage .footer-login,
-main #friendAddedPage .footer-login {
+main #friendAddedPage .footer-login,
+main #editCard .footer-login {
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -713,7 +752,8 @@ main #friendsListPage #registerForm .footer-register,
 main #resetContainer #registerForm .footer-register,
 main #takePhoto #registerForm .footer-register,
 main #addEventPage #registerForm .footer-register,
-main #friendAddedPage #registerForm .footer-register {
+main #friendAddedPage #registerForm .footer-register,
+main #editCard #registerForm .footer-register {
   text-align: center;
   margin-top: 1rem;
 }
@@ -747,7 +787,9 @@ main #takePhoto #registerForm .footer-register a,
 main #addEventPage #registerForm .footer-register span,
 main #addEventPage #registerForm .footer-register a,
 main #friendAddedPage #registerForm .footer-register span,
-main #friendAddedPage #registerForm .footer-register a {
+main #friendAddedPage #registerForm .footer-register a,
+main #editCard #registerForm .footer-register span,
+main #editCard #registerForm .footer-register a {
   color: #F9F9FB;
 }
 
@@ -848,7 +890,8 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #windowDescription {
-  width: 100vw;
+  width: 300px;
+  overflow: hidden;
 }
 
 #seeFriendsList {
@@ -871,6 +914,11 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-1,
 .add-idea-2 {
   width: 60vw;
+}
+
+.add-idea-3 {
+  align-items: center;
+  margin-top: 3rem;
 }
 
 .add-idea-1 label,
@@ -973,12 +1021,12 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #video {
-  border: 0.5rem solid white;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
   margin-top: 5rem;
 }
 
 #canvas {
-  border: 0.5rem solid white;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
 }
 
 #camera_btn,
@@ -1010,7 +1058,12 @@ main #takePhoto #snap {
 }
 
 main #takePhoto #backToIdeaAdd2 {
-  margin-left: 0;
+  margin: 0;
+}
+
+main #takePhoto #backToIdeaAdd2 i {
+  margin: 0;
+  margin-top: 1rem;
 }
 
 #takePhoto #camera {
@@ -1028,6 +1081,10 @@ main #takePhoto #backToIdeaAdd2 {
   flex-direction: column;
 }
 
+#backToSummaryCard i {
+  margin-top: 1rem;
+}
+
 #nextToWishlists {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -1038,6 +1095,10 @@ main #takePhoto #backToIdeaAdd2 {
 
 #nextToWishlists a {
   color: #212531;
+}
+
+#windowDescription {
+  padding-top: 1rem;
 }
 
 #windowImage,
@@ -1072,7 +1133,7 @@ main #takePhoto #backToIdeaAdd2 {
   background-color: #86E4DE;
   border-color: #86E4DE;
   color: #212531;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 #addGift a,
@@ -1094,7 +1155,7 @@ main #takePhoto #backToIdeaAdd2 {
 #addEventBtn a,
 #friendAddBtn a {
   color: #212531;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 #addGift:hover,
@@ -1152,40 +1213,37 @@ main #takePhoto #backToIdeaAdd2 {
 }
 
 #giftcard_display .displaycard {
-  border-color: #F9F9FB;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
-  flex-flow: row wrap;
+  border-color: #6E64AC;
   border-radius: 20px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6E64AC;
 }
 
 #giftcard_display .displaycard div {
-  align-self: center;
+  margin-top: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  grid-row: 3 / 4;
-  grid-column: 1 / 2;
 }
 
 #giftcard_display .displaycard h3 {
   align-self: center;
   padding-left: 2rem;
   padding-right: 2rem;
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
 }
 
 #giftcard_display .displaycard .editButton {
-  align-self: center;
-  padding: 0.3rem 2.5rem;
-  margin: 0;
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
+  padding: 0.5rem 2.4rem;
+  text-align: center;
   font-size: 12px;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #3DC8BF;
+  border-color: #3DC8BF;
 }
 
 #giftcard_display .displaycard button,
@@ -1211,6 +1269,10 @@ main #takePhoto #backToIdeaAdd2 {
   background-color: #F9F9FB;
   color: #363D51;
   padding: 0.7rem 0.7rem;
+}
+
+.friendEventForm #addEventBtn {
+  margin: 0;
 }
 
 #friendsList {
@@ -1381,8 +1443,19 @@ label {
   padding: 0.5rem 1rem;
 }
 
-#listEmptyPage {
+main #listEmptyPage {
   height: 90vh;
+  display: block;
+}
+
+main #listEmptyPage #friendtoProfile {
+  margin: 1rem;
+}
+
+.addEventForFriend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #fetchedFriendsList {
@@ -1419,8 +1492,13 @@ label {
   color: #212531;
 }
 
-#friendListOutput .friendBtn:nth-last-child() {
+#fetchedFriendsList li button:nth-last-child() {
   border-bottom: 1px solid #F9F9FB;
+}
+
+#addEventPage {
+  display: flex;
+  justify-content: center;
 }
 
 #addEventPage h1 {
@@ -1440,6 +1518,65 @@ label {
 
 #addEventBtn {
   padding: 1rem;
+}
+
+#friendEventForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#friendEventForm label {
+  margin: 1rem;
+}
+
+#ideaSummary {
+  width: 302px;
+  overflow: hidden;
+}
+
+main #complete {
+  justify-content: center;
+  align-items: center;
+}
+
+#giftcard_display {
+  overflow: auto;
+}
+
+#editCard #editForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#editCard #editForm input,
+#editCard #editForm button {
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #F9F9FB;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+#editCard #editForm a {
+  text-decoration: none;
+  color: #F9F9FB;
+}
+
+#editCard #editForm button {
+  background-color: #86E4DE;
+  border-color: #86E4DE;
+  color: #212531;
+}
+
+#friendEventAdded {
+  margin: 3rem;
 }
 
 footer {
@@ -1462,6 +1599,10 @@ main {
   flex-flow: row wrap;
 }
 
+main section {
+  margin: 0;
+}
+
 #not-logged-in,
 #logged-in {
   display: none;
@@ -1480,7 +1621,9 @@ body #giftIdeaProcess .hide,
 body #friendsListProcess .hide,
 body #introPages .hide,
 body #listEmptyPage .hide,
-body #addFriendPage .hide {
+body #addFriendPage .hide,
+body #giftcard_display .hide,
+body .editCard .hide {
   display: none;
 }
 
@@ -1488,14 +1631,17 @@ body #giftIdeaProcess .show,
 body #friendsListProcess .show,
 body #introPages .show,
 body #listEmptyPage .show,
-body #addFriendPage .show {
+body #addFriendPage .show,
+body #giftcard_display .show,
+body .editCard .show {
   display: flex;
 }
 
 /* ============== Intro Pages ========================= */
 /* Styles according to design ========================== */
 .bottom_navbar ul {
-  padding: 0;
+  padding: 1rem;
+  margin: 0;
   display: flex;
   justify-content: space-evenly;
 }
@@ -1991,6 +2137,30 @@ main section {
   color: #F9F9FB;
 }
 
+#giftIdeaHomePage #friendListOutput button#friendtoProfile,
+#giftIdeaAdd #friendListOutput button#friendtoProfile,
+#takePhoto #friendListOutput button#friendtoProfile,
+#summaryCard #friendListOutput button#friendtoProfile,
+#addToWishlistSection #friendListOutput button#friendtoProfile,
+#listEmptyPage #friendListOutput button#friendtoProfile,
+#complete #friendListOutput button#friendtoProfile,
+#addEventPage #friendListOutput button#friendtoProfile,
+#addFriendPage #friendListOutput button#friendtoProfile {
+  margin: 0;
+}
+
+#giftIdeaHomePage #addEventBtn,
+#giftIdeaAdd #addEventBtn,
+#takePhoto #addEventBtn,
+#summaryCard #addEventBtn,
+#addToWishlistSection #addEventBtn,
+#listEmptyPage #addEventBtn,
+#complete #addEventBtn,
+#addEventPage #addEventBtn,
+#addFriendPage #addEventBtn {
+  margin: 0;
+}
+
 #giftIdeaHomePage #startIdeaBtn,
 #giftIdeaHomePage #addGift,
 #giftIdeaHomePage #addtowish,
@@ -2355,6 +2525,54 @@ main section {
 #resetContainer #btn_AddGiftIdea:hover a,
 #resetContainer #btn_login:hover a {
   color: #F9F9FB;
+}
+
+main #resetContainer {
+  height: 100vh;
+}
+
+main #resetContainer #noreset a {
+  text-decoration: none;
+}
+
+#addEventBtn {
+  margin: 0;
+}
+
+.friendEventForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friendEventForm #friendEventSelect2 {
+  width: 100%;
+}
+
+.friendEventForm label,
+.friendEventForm select,
+.friendEventForm div,
+.friendEventForm input#friendDate2 {
+  margin: 1rem;
+  width: 100%;
+}
+
+section > a {
+  color: #F9F9FB;
+}
+
+.fa-chevron-left {
+  margin: 1rem;
+  align-self: baseline;
+}
+
+#addEventPage a {
+  align-self: baseline;
+}
+
+.nav_btn:hover {
+  box-shadow: 5px 10px 10px #B3B7C2;
 }
 
 /* ================ Media =====================*/

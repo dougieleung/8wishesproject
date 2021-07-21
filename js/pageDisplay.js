@@ -27,6 +27,10 @@ const friendtoProfile = document.querySelector('#friendtoProfile');
 const addEventPage = document.querySelector('#addEventPage');
 const addAFriendBtn = document.querySelector('#addAFriendBtn');
 
+const editButton = document.querySelector(".editButton");
+const giftcard_display  = document.querySelector("#giftcard_display");
+
+
 // ==================== Gift Ideas pages Display ========================
 
 startIdeaBtn.addEventListener('click', () => {
@@ -129,4 +133,11 @@ addAFriendBtn.addEventListener('click', () => {
     listEmptyPage.classList.remove('show');
     listEmptyPage.classList.add('hide');
     addFriendPage.classList.toggle('hide');
+})
+
+
+editButton.addEventListener("click", () => {
+    giftcard_display.classList.remove("show");
+    giftcard_display.classList.add("hide");
+    editCard.classList.toggle("hide");
 })
