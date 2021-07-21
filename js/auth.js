@@ -10,7 +10,7 @@ function redirectToHomePage() {
   if (firebase.auth().currentUser.uid) {
     window.setTimeout(function () {
       window.location.href = "./home.html";
-    }, 2000);
+    }, 500);
   } else {
     alert("Please login first!");
   }
