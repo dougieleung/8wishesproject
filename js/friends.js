@@ -8,10 +8,12 @@ console.log("Friends JS Connected!");
 
 // window.addEventListener('load', friendsListfromDB());
 
-const friendListOutput = document.querySelector('#friendListOutput');
-const seeFriendsList = document.querySelector('#seeFriendsList');
-const friendsProfile = document.querySelector('#friendsProfile');
-const friendNameEventContainer = document.querySelector('#friendNameEventContainer');
+const friendListOutput = document.querySelector("#friendListOutput");
+const seeFriendsList = document.querySelector("#seeFriendsList");
+const friendsProfile = document.querySelector("#friendsProfile");
+const friendNameEventContainer = document.querySelector(
+  "#friendNameEventContainer"
+);
 
 async function friendsListfromDB() {
   console.log("friends list summary!");
@@ -23,65 +25,57 @@ async function friendsListfromDB() {
     .collection("List")
     .get()
     .then((querySnapshot) => {
-
       querySnapshot.forEach((doc) => {
-        
         friendsListArray.push(doc.id);
         console.log(friendsListArray);
-
-      })
+      });
     });
 
-    if (friendsListArray.length < 1) {
+  if (friendsListArray.length < 1) {
+    const header = document.createElement("h2");
+    header.innerText = `Your friend list is empty`;
 
-        const header = document.createElement('h2');
-        header.innerText = `Your friend list is empty`;
-  
-        friendNameEventContainer.style.display = "none";
-        friendListOutput.appendChild(header);
+    friendNameEventContainer.style.display = "none";
+    friendListOutput.appendChild(header);
+  } else {
+    await db
+      .collection(firebase.auth().currentUser.uid)
+      .doc("Friends")
+      .collection("List")
+      .get()
+      .then((querySnapshot) => {
+        const list = document.createElement("ul");
+        list.setAttribute("id", "fetchedFriendsList");
+        querySnapshot.forEach((doc) => {
+          console.log(doc.id, " => ", doc.data());
 
-    } else {
+          const listItem = document.createElement("li");
+          listItem.setAttribute("id", `${doc.id}`);
 
-        await db
-          .collection(firebase.auth().currentUser.uid)
-          .doc("Friends")
-          .collection("List")
-          .get()
-          .then((querySnapshot) => {
-            const list = document.createElement("ul");
-            list.setAttribute("id", "fetchedFriendsList");
-            querySnapshot.forEach((doc) => {
-              
-              console.log(doc.id, " => ", doc.data());
-
-              const listItem = document.createElement("li");
-              listItem.setAttribute("id", `${doc.id}`);
-      
-              const buttonItem = document.createElement("button");
-              buttonItem.setAttribute("type", "button");
-              buttonItem.className="friendBtn";
-              buttonItem.addEventListener("click", () => {
-                friendsProfile.value = doc.id;
-              });
-      
-              const friendsNames = document.createTextNode(`${doc.id}`);
-              buttonItem.appendChild(friendsNames);
-              listItem.appendChild(buttonItem);
-              list.appendChild(listItem);
-            })
-
-            friendListOutput.appendChild(list);
-
-          })
-          .catch((error) => {
-            console.log("Error getting document:", error);
+          const buttonItem = document.createElement("button");
+          buttonItem.setAttribute("type", "button");
+          buttonItem.className = "friendBtn";
+          buttonItem.addEventListener("click", () => {
+            friendsProfile.value = doc.id;
           });
-        }
+
+          const friendsNames = document.createTextNode(`${doc.id}`);
+          buttonItem.appendChild(friendsNames);
+          listItem.appendChild(buttonItem);
+          list.appendChild(listItem);
+        });
+
+        friendListOutput.appendChild(list);
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  }
 }
 
 // ******* #5(B) of gift_idea.html, "Add To Friend" generates list of friends ******
 
-seeFriendsList.addEventListener('click', friendsListfromDB);
+seeFriendsList.addEventListener("click", friendsListfromDB);
 
 // *************************** Create Friends Obj via class ************************
 
@@ -110,7 +104,6 @@ class addFriendClass {
 
 addFriendBtn.addEventListener("click", () => {
   // event.preventDefault();
-
 
   // Converting every word for name to UpperCase Letter
   const friendsName = friendName.value
@@ -223,13 +216,10 @@ friendEventSelect2.addEventListener("change", () => {
   }
 });
 
-
-
 // ********  The below code was to build list of friends from button click *********
 // ********  We also built the "See List" functionality beside each name ***********
 // ********  We added the delete and edit buttons beside each name *****************
 // ********  THE WIREFRAME HAS CHANGED SO NEED TO KNOW IF THIS CODE IS REUSABLE ****
-
 
 let friendID;
 
@@ -418,5 +408,3 @@ let friendID;
 //       console.log("Error getting document:", error);
 //     });
 // }
-
-
