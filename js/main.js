@@ -37,7 +37,9 @@ const friendDate = document.querySelector("#friendDate");
 const addFriendBtn = document.querySelector("#addFriendBtn");
 const fetchFriendsBtn = document.querySelector("#fetchFriendsBtn");
 const friendEventSelect = document.querySelector("#friendEventSelect");
+const friendEventSelect2 = document.querySelector("#friendEventSelect2");
 const createEvent = document.querySelector("#createEvent");
+const createEvent2 = document.querySelector("#createEvent2");
 const friendAddBtn = document.querySelector("#friendAddBtn");
 const FriendsListfromDB = document.querySelector("#friendsListFromDB");
 
