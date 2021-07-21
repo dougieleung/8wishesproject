@@ -138,6 +138,7 @@ addFriendBtn.addEventListener("click", () => {
         friendDate.value
       );
     }
+    
     addFriendToFirestore(friendsName, newFriendObj);
     newFriendObj.resetInputs();
 
@@ -148,41 +149,61 @@ addFriendBtn.addEventListener("click", () => {
 });
 
 async function addFriendToFirestore(friendName, friendObject) {
-  const friendsArray = [];
-  await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("Friends")
-    .collection("List")
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        friendsArray.push(doc.id);
-        console.log(friendsArray);
-      });
-    });
+    const friendsArray = [];
 
-  for (let i = 0; i < friendsArray.length; i++) {
-    if (friendName !== friendsArray[i]) {
-      await db
-        .collection(firebase.auth().currentUser.uid)
-        .doc("Friends")
-        .collection("List")
-        .doc(friendName)
-        .set({
-          ...friendObject,
-        })
-        .then(() => {
-          console.log("Document successfully written!");
-        })
-        .catch((error) => {
-          console.error("Error writing document: ", error);
+    await db
+      .collection(firebase.auth().currentUser.uid)
+      .doc("Friends")
+      .collection("List")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          friendsArray.push(doc.id);
+          console.log(friendsArray);
         });
+      });
+    if (friendsArray.length === 0) {
+      await db
+      .collection(firebase.auth().currentUser.uid)
+      .doc("Friends")
+      .collection("List")
+      .doc(friendName)
+      .set({
+        ...friendObject,
+      })
+      .then(() => {
+        console.log("Document successfully written!");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
     } else {
-      alert("Friend already exists!");
+
+    if (friendsArray.length !== 0) {
+
+      for (let i = 0; i < friendsArray.length; i++) {
+        if (friendName !== friendsArray[i]) {
+          await db
+            .collection(firebase.auth().currentUser.uid)
+            .doc("Friends")
+            .collection("List")
+            .doc(friendName)
+            .set({
+              ...friendObject,
+            })
+            .then(() => {
+              console.log("Document successfully written!");
+            })
+            .catch((error) => {
+              console.error("Error writing document: ", error);
+            });
+        } else {
+          alert("Friend already exists!");
+        }
+      }
     }
   }
 }
-
 // ************************ Create (Other) New Event input field *********************
 
 friendEventSelect.addEventListener("change", () => {

@@ -173,7 +173,6 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
     // displayGift.innerHTML = `<h2> My List </h2>`;
 
-    // See L216 Function
     renderWishlist();
   }
 });
@@ -201,7 +200,6 @@ async function friendsListfromDB() {
         buttonItem.setAttribute("type", "button");
         buttonItem.addEventListener("click", () => {
 
-          // See L185 Function
           addIdeaToCollection(doc.id);
         });
 
