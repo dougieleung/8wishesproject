@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-giftcard_display main section {
+#giftcard_display main section {
   height: 90vh;
   margin: 0;
 }
@@ -1909,19 +1909,19 @@ main section {
   font-weight: 400;
 }
 
-#addFriendPage h2 {
+#addFriendPage h2, #addFriendPage2 h2 {
   font-family: "Baloo Bhai 2", sans-serif;
   font-weight: 500;
   font-size: 28px;
 }
 
-#addFriendPage label, #addFriendPage .profile-pic {
+#addFriendPage label, #addFriendPage .profile-pic, #addFriendPage2 label, #addFriendPage2 .profile-pic {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
-#addFriendPage input, #addFriendPage #friendEventSelect, #addFriendPage button {
+#addFriendPage input, #addFriendPage #friendEventSelect, #addFriendPage button, #addFriendPage2 input, #addFriendPage2 #friendEventSelect, #addFriendPage2 button {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;

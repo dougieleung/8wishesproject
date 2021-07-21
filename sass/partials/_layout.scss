@@ -24,20 +24,21 @@ main {
   display: none;
 }
 
-
 body #giftIdeaProcess .hide,
 body #friendsListProcess .hide,
 body #introPages .hide,
 body #listEmptyPage .hide,
-body #addFriendPage .hide {
+body #addFriendPage .hide
+ {
   display: none;
 }
 
-body #giftIdeaProcess .show,
+body #giftIdeaProcess .show, 
 body #friendsListProcess .show,
 body #introPages .show,
 body #listEmptyPage .show,
-body #addFriendPage .show {
+body #addFriendPage .show
+{
   display: flex;
 }
 

@@ -50,9 +50,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js" defer></script>
 
     <script src="../js/firebase.js" defer></script>
-    <script src="../js/main.js" defer></script>
+    
     <!-- <script src="../js/pageDisplay.js" defer></script> -->
     <script src="../js/friendsView.js" defer></script>
+    <script src="../js/pageDisplayNavFriend.js" defer></script>
 
 </head>
 
@@ -63,13 +64,47 @@
 <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
 
 
-<section id="giftcard_display" class="hide">
+<section id="mainFriendsPage" class="show">
+
     <h2>Friend's List</h2>
     <div id="friendsSeeList"></div>
 
     <div id="friendsWishlist" class="hide"></div>
+
+    <button id="addAFriendBtn2"><a href="#addFriendPage2">Add a Friend</a></button>
     
 </section>
+
+
+ <!--***************  #7 If No Friends, proceed to page to add friends and events  *************** -->
+
+ <section id="addFriendPage2" class="hide">
+    <h2>Add a friend</h2>
+
+    <div class="profile-pic"><a href="#">Add profile pic</a></div>
+
+    <!-- Select Event Name/Type -->
+    <label for="name">Friend name</label>
+    <input id="friendName" type="text" />
+    <label for="name">Select an event</label>
+    <select id="friendEventSelect" name="event">
+        <option value="resetOptions">-- Select An Event --</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Wedding Anniversary">Wedding Anniversary</option>
+        <option value="Graduation Day">Graduation Day</option>
+        <option value="Other">Other...</option>
+    </select>
+    <div id="createEvent"></div>
+
+    <!-- Select Event Date -->
+    <label for="date">Select a Date</label>
+    <input id="friendDate" type="date" id="event" name="event" />
+
+    <!-- Add Friend and Event to Firestore -->
+    <button id="addFriendBtn" type="button">Add</button>
+
+</section>
+
 
 <!-- Card to show image, title, description, friend, and event, date -->
 
@@ -86,8 +121,8 @@
         <button id="deleteWish" type="button">Delete</button>
 
     </form>
-    <!-- /#editForm -->
-</section> -->
+    <-/#editForm -->
+
 
 </main>
 

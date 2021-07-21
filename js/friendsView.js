@@ -11,14 +11,40 @@ const friendsFooter = document.querySelector("#friendsFooter");
 const friendsSeeList = document.querySelector("#friendsSeeList");
 const friendsWishlist = document.querySelector("#friendsWishlist");
 
+
+
 let friendID;
 
 async function friendsListfromDB() {
 
+  let mainUser = JSON.parse(localStorage.getItem("mainUser"));
+
   friendsSeeList.innerHTML = "";
- 
-      let mainUser = JSON.parse(localStorage.getItem("mainUser"));
+  const friendsListArray = [];
+  
+  await db
+  .collection(mainUser.uid)
+  .doc("Friends")
+  .collection("List")
+  .get()
+  .then((querySnapshot) => {
+
+    querySnapshot.forEach((doc) => {
       
+      friendsListArray.push(doc.id);
+      console.log(friendsListArray);
+
+    })
+  });
+
+  if (friendsListArray.length < 1) {
+
+      const header = document.createElement('h2');
+      header.innerText = `Your friend list is empty`;
+      friendsSeeList.appendChild(header);
+
+  } else {
+
       await db
       .collection(mainUser.uid)
       .doc("Friends")
@@ -52,8 +78,9 @@ async function friendsListfromDB() {
       .catch((error) => {
         console.log("Error getting document:", error);
       });
-}
-
+    }
+  }
+  
 friendsListfromDB();
 
 async function renderFriendsWishlist(docID) {

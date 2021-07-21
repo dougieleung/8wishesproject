@@ -26,6 +26,7 @@ const complete = document.querySelector('#complete');
 const friendtoProfile = document.querySelector('#friendtoProfile');
 const addEventPage = document.querySelector('#addEventPage');
 const addAFriendBtn = document.querySelector('#addAFriendBtn');
+const addFriendPage = document.querySelector('#addFriendPage');
 
 // ==================== Gift Ideas pages Display ========================
 
