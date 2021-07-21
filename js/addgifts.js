@@ -32,7 +32,7 @@ let newWish = {};
 // ********** #2 Add Gift Idea Section of gift_idea.html **********
 
 // variables for the storage
-let storageRef;
+let storageRef = storage.ref();
 let gsReference;
 addGift.addEventListener("click", () => {
 
@@ -44,11 +44,13 @@ addGift.addEventListener("click", () => {
       new Date()
     );
     // putting the image into firebase storage
-    storageRef = storage.ref();
-    let thisRef = storageRef.child(`images/${newWish.wishTitle}`);
-    thisRef.put(theBlob).then((snapshot) => {
-      console.log('Uploaded a blob or file!');
-    });
+    if (newWish.storeImage !== "") {
+
+      let thisRef = storageRef.child(`images/${newWish.wishTitle}`);
+      thisRef.put(theBlob).then((snapshot) => {
+        console.log('Uploaded a blob or file!');
+      });
+    }
 
     // end of Storage operation
     console.log(newWish);
@@ -150,7 +152,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
     complete.classList.toggle('hide');
     displayGift.classList.toggle('hide')
 
-    displayGift.innerHTML = `<h2> My List </h2>`;
+    // displayGift.innerHTML = `<h2> My List </h2>`;
 
     // See L216 Function
     renderWishlist();
@@ -240,7 +242,7 @@ async function renderWishlist() {
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        // console.log(doc.id, " => ", doc.data());        
+        console.log('rendering the items');
         // Create the card container
         const card = document.createElement("div");
         card.className = "displaycard";
@@ -293,7 +295,7 @@ async function renderWishlist() {
 
 function editWish(doc) {
   editCard.classList.remove('hide');
-  displayGift.classList.add('hide');
+  // displayGift.classList.add('hide');
 
   wishTitleEdit.value = `${doc.data().wishTitle}`;
   wishDescEdit.value = `${doc.data().wishDesc}`
@@ -340,5 +342,21 @@ function editWish(doc) {
     displayGift.innerHTML = "";
     renderWishlist();
     displayGift.classList.remove('hide');
+
   });
 }
+
+
+myListFooter.addEventListener('click', function () {
+  giftIdeaHomePage.classList.add('hide');
+  giftIdeaHomePage.classList.remove('show');
+  displayGift.classList.remove('hide');
+  renderWishlist()
+}
+);
+
+seeFullListLink.addEventListener('click', function () {
+  displayGift.classList.remove('hide');
+  renderWishlist();
+})
+
