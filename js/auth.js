@@ -103,7 +103,6 @@ loginButton.addEventListener("click", (event) => {
           localStorage.clear();
           localStorage.setItem("mainUser", JSON.stringify(auth.currentUser));
           redirectToHomePage();
-
         }
       })
       .catch((error) => {
@@ -132,10 +131,7 @@ logoutButton.addEventListener("click", () => {
     .auth()
     .signOut()
     .then(() => {
-<<<<<<< HEAD
-=======
       localStorage.clear();
->>>>>>> dev2
       notLoggedIn.style.display = "block";
     })
     .catch((error) => {
