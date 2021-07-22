@@ -19,6 +19,7 @@ async function friendsListfromDB() {
   console.log("friends list summary!");
   const friendsListArray = [];
   // friendsIntroPageContent.innerHTML = "";
+  console.log(firebase.auth().currentUser.uid);
   await db
     .collection(firebase.auth().currentUser.uid)
     .doc("Friends")
