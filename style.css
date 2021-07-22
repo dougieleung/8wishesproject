@@ -20,22 +20,22 @@ body {
 }
 
 #giftIdeaProcess {
-  background-color: #363D51;
+  background-color: #363d51;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 0;
-  color: #F9F9FB;
+  color: #f9f9fb;
   font-family: "Livvic", sans-serif;
 }
 
@@ -54,22 +54,22 @@ main #resetContainer,
 main #takePhoto,
 main #addEventPage,
 main #friendAddedPage {
-  background-color: #363D51;
+  background-color: #363d51;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 0;
-  color: #F9F9FB;
+  color: #f9f9fb;
   font-family: "Livvic", sans-serif;
 }
 
@@ -209,14 +209,14 @@ main #friendAddedPage #not-logged-in,
 main #friendAddedPage #registerForm {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,7 +376,7 @@ main #friendAddedPage #not-logged-in span,
 main #friendAddedPage #registerForm .link2,
 main #friendAddedPage #registerForm .link3,
 main #friendAddedPage #registerForm span {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main #loginPage #not-logged-in input#email1,
@@ -591,14 +591,14 @@ main #friendAddedPage #registerForm #confirmPassword,
 main #friendAddedPage #registerForm #registerButton {
   padding: 0.7rem;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 1rem;
   margin-left: 0;
   padding-right: 0;
@@ -667,8 +667,8 @@ main #addEventPage #not-logged-in #registerButton,
 main #addEventPage #registerForm #registerButton,
 main #friendAddedPage #not-logged-in #registerButton,
 main #friendAddedPage #registerForm #registerButton {
-  background-color: #86E4DE;
-  border-color: #86E4DE;
+  background-color: #86e4de;
+  border-color: #86e4de;
   color: #212531;
 }
 
@@ -687,7 +687,7 @@ main #resetContainer h2,
 main #takePhoto h2,
 main #addEventPage h2,
 main #friendAddedPage h2 {
-  color: #F9F9FB;
+  color: #f9f9fb;
   text-align: center;
 }
 
@@ -729,11 +729,11 @@ main #friendAddedPage .footer-login {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 main #loginPage #registerForm .footer-register,
@@ -785,7 +785,7 @@ main #addEventPage #registerForm .footer-register span,
 main #addEventPage #registerForm .footer-register a,
 main #friendAddedPage #registerForm .footer-register span,
 main #friendAddedPage #registerForm .footer-register a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main #welcomePage h1 {
@@ -801,25 +801,25 @@ main #welcomePage .footer-welcome div {
 }
 
 main #welcomePage .footer-welcome a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main #demo-page .demo-carousel {
   height: 70vh;
-  background-color: #F9F9FB;
+  background-color: #f9f9fb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 main #demo-page .fas {
@@ -827,20 +827,20 @@ main #demo-page .fas {
 }
 
 main #demo-page .footer-demo {
-  background-color: #363D51;
+  background-color: #363d51;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   height: 30vh;
 }
 
@@ -858,8 +858,8 @@ main #demo-page #log-in a {
 
 main #loginPage #logged-in {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 40vh;
 }
 
@@ -868,27 +868,27 @@ main #giftIdeaHomePage {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 main #giftIdeaHomePage .link4 {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main #giftIdeaHomePage #startIdeaBtn {
-  background-color: #86E4DE;
-  border-color: #86E4DE;
+  background-color: #86e4de;
+  border-color: #86e4de;
   padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 main #giftIdeaHomePage #startIdeaBtn a {
@@ -900,15 +900,15 @@ main #giftIdeaHomePage #startIdeaBtn a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #summaryCard #summaryCardimage {
@@ -916,8 +916,8 @@ main #giftIdeaHomePage #startIdeaBtn a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .add-idea-3 {
@@ -928,8 +928,8 @@ main #giftIdeaHomePage #startIdeaBtn a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 #windowDescription {
@@ -938,19 +938,19 @@ main #giftIdeaHomePage #startIdeaBtn a {
 
 #seeFriendsList {
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   margin: 1rem;
   padding: 1rem 4rem;
   border-radius: 44px;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #86E4DE;
-  border-color: #ABA0F5;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #86e4de;
+  border-color: #aba0f5;
   color: #212531;
 }
 
@@ -966,7 +966,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-1 label,
 .add-idea-2 label,
 .add-idea-3 label {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 .add-idea-1 .images,
@@ -991,17 +991,17 @@ main #giftIdeaHomePage #startIdeaBtn a {
   background: none;
   border: none;
   padding: 0.7rem 0.7rem;
-  border-bottom: 1px solid #F9F9FB;
+  border-bottom: 1px solid #f9f9fb;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 1rem;
   margin-left: 0;
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 .add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
@@ -1010,7 +1010,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
 .add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder,
 .add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 .add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
@@ -1019,7 +1019,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
 .add-idea-3 #ideaForm #gift_title:-ms-input-placeholder,
 .add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 .add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
@@ -1028,7 +1028,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
 .add-idea-3 #ideaForm #gift_title::-ms-input-placeholder,
 .add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 .add-idea-1 #ideaForm #gift_title::placeholder,
@@ -1037,7 +1037,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-2 #ideaForm #gift_description::placeholder,
 .add-idea-3 #ideaForm #gift_title::placeholder,
 .add-idea-3 #ideaForm #gift_description::placeholder {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 .add-idea-1 #displayTitle,
@@ -1046,7 +1046,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
   background: none;
   border: none;
   padding: 0.7rem 0.7rem;
-  border-bottom: 1px solid #F9F9FB;
+  border-bottom: 1px solid #f9f9fb;
   width: 100%;
 }
 
@@ -1066,15 +1066,15 @@ main #giftIdeaHomePage #startIdeaBtn a {
   display: flex;
   background: white;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border: none;
   border-radius: 44px;
   width: 330px;
   height: 48px;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   max-width: 100%;
   padding-right: 1rem;
   margin-top: 0.5rem;
@@ -1093,11 +1093,11 @@ main #giftIdeaHomePage #startIdeaBtn a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: 1.5rem;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 #addPhoto {
@@ -1115,14 +1115,14 @@ main #giftIdeaHomePage #startIdeaBtn a {
 
 #camera_btn,
 #gallery_btn {
-  background-color: #363D51;
+  background-color: #363d51;
   border-style: none;
 }
 
 #camera_btn i,
 #gallery_btn i {
   font-size: 2.5rem;
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 main #takePhoto {
@@ -1130,15 +1130,15 @@ main #takePhoto {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 main #takePhoto #camera {
@@ -1147,8 +1147,8 @@ main #takePhoto #camera {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 main #takePhoto #snap {
@@ -1164,7 +1164,7 @@ main #takePhoto #backToIdeaAdd2 {
 }
 
 #map-link {
-  color: #363D51;
+  color: #363d51;
   margin: 1rem;
 }
 
@@ -1173,19 +1173,19 @@ main #takePhoto #backToIdeaAdd2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 #nextToWishlists {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  background-color: #86E4DE;
-  border-color: #86E4DE;
+  background-color: #86e4de;
+  border-color: #86e4de;
   margin: 0;
 }
 
@@ -1199,8 +1199,8 @@ main #takePhoto #backToIdeaAdd2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #addGift,
@@ -1228,10 +1228,10 @@ main #takePhoto #backToIdeaAdd2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #86E4DE;
-  border-color: #86E4DE;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #86e4de;
+  border-color: #86e4de;
   color: #212531;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -1278,8 +1278,8 @@ main #takePhoto #backToIdeaAdd2 {
 #friendtoProfile:hover,
 #addEventBtn:hover,
 #friendAddBtn:hover {
-  background-color: #2BA199;
-  color: #F9F9FB;
+  background-color: #2ba199;
+  color: #f9f9fb;
 }
 
 #addGift:hover a,
@@ -1300,7 +1300,7 @@ main #takePhoto #backToIdeaAdd2 {
 #friendtoProfile:hover a,
 #addEventBtn:hover a,
 #friendAddBtn:hover a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 #add-wish-msg {
@@ -1315,29 +1315,29 @@ main #takePhoto #backToIdeaAdd2 {
 }
 
 #giftcard_display .displaycard {
-  border-color: #F9F9FB;
+  border-color: #f9f9fb;
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [2];
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr) [3];
+  grid-template-rows: repeat(3, 1fr);
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
 
 #giftcard_display .displaycard div {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   padding-left: 2rem;
   padding-right: 2rem;
   -ms-grid-row: 3;
@@ -1350,8 +1350,8 @@ main #takePhoto #backToIdeaAdd2 {
 
 #giftcard_display .displaycard h3 {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   padding-left: 2rem;
   padding-right: 2rem;
   -ms-grid-row: 2;
@@ -1364,8 +1364,8 @@ main #takePhoto #backToIdeaAdd2 {
 
 #giftcard_display .displaycard .editButton {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   padding: 0.3rem 2.5rem;
   margin: 0;
   -ms-grid-row: 2;
@@ -1382,29 +1382,29 @@ main #takePhoto #backToIdeaAdd2 {
 #giftcard_display .editTitleInput {
   padding: 0.7rem 0.7rem;
   border-radius: 0.7rem;
-  border: 1px solid #363D51;
+  border: 1px solid #363d51;
   width: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 1rem;
   margin-left: 0;
-  background-color: #ABA0F5;
-  border-color: #ABA0F5;
+  background-color: #aba0f5;
+  border-color: #aba0f5;
   color: #212531;
 }
 
 #giftcard_display .editDescInput,
 #giftcard_display .editTitleInput {
-  background-color: #F9F9FB;
-  color: #363D51;
+  background-color: #f9f9fb;
+  color: #363d51;
   padding: 0.7rem 0.7rem;
 }
 
@@ -1414,14 +1414,14 @@ main #takePhoto #backToIdeaAdd2 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #friendsList li {
@@ -1432,44 +1432,44 @@ main #takePhoto #backToIdeaAdd2 {
   padding: 0 5rem;
   color: #212531;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 1rem;
   margin-left: 0;
-  background-color: #FF90A3;
-  border-color: #FF90A3;
+  background-color: #ff90a3;
+  border-color: #ff90a3;
 }
 
 #friendsListFromDB #fetchedFriendsList li {
   padding: 0 5rem;
   color: #212531;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 1rem;
   margin-left: 0;
-  background-color: #FF90A3;
-  border-color: #FF90A3;
+  background-color: #ff90a3;
+  border-color: #ff90a3;
 }
 
 #fetchFriendsBtn {
@@ -1500,14 +1500,14 @@ input#friendName,
 #friendDate2 {
   padding: 0.7rem 0.7rem;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0;
   margin-left: 0;
   width: 60%;
@@ -1518,11 +1518,11 @@ input#friendName,
 }
 
 .profile-pic a {
-  color: #86E4DE;
+  color: #86e4de;
 }
 
 .friendAdded a {
-  color: #86E4DE;
+  color: #86e4de;
 }
 
 #addFriendPage #addFriendForm {
@@ -1530,15 +1530,15 @@ input#friendName,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
   margin: 3rem;
 }
 
@@ -1567,11 +1567,11 @@ input#friendName,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .email {
@@ -1580,14 +1580,14 @@ input#friendName,
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -1596,11 +1596,11 @@ input#friendName,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #reset_password,
@@ -1616,13 +1616,13 @@ label {
 #email_to_reset {
   padding: 1rem 0 1rem 0.3rem;
   border-radius: 0.7rem;
-  border: 1px solid #F9F9FB;
+  border: 1px solid #f9f9fb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 1rem;
   width: 30rem;
 }
@@ -1654,28 +1654,28 @@ label {
 }
 
 .friendBtn {
-  border-top: 1px solid #F9F9FB;
+  border-top: 1px solid #f9f9fb;
   border-left: none;
   border-right: none;
   width: 100%;
-  background-color: #363D51;
+  background-color: #363d51;
   opacity: 70%;
-  color: #F9F9FB;
+  color: #f9f9fb;
   padding: 0.5rem;
 }
 
 #fetchedFriendsList .friendBtn:focus {
-  background-color: #FF90A3;
+  background-color: #ff90a3;
   opacity: 100%;
 }
 
 #fetchedFriendsList li:hover {
-  background-color: #F9F9FB;
+  background-color: #f9f9fb;
   color: #212531;
 }
 
 #friendListOutput .friendBtn:nth-last-child() {
-  border-bottom: 1px solid #F9F9FB;
+  border-bottom: 1px solid #f9f9fb;
 }
 
 #addEventPage h1 {
@@ -1685,9 +1685,9 @@ label {
 #addEventPage input#friendsProfile {
   width: 40%;
   text-align: center;
-  background-color: #363D51;
-  border-color: #363D51;
-  color: #F9F9FB;
+  background-color: #363d51;
+  border-color: #363d51;
+  color: #f9f9fb;
   font-size: 2rem;
   font-weight: bolder;
   padding: 0.7rem 0.7rem;
@@ -1701,7 +1701,7 @@ footer {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  background-color: #F9F9FB;
+  background-color: #f9f9fb;
 }
 
 /* ================ Mixins =====================*/
@@ -1719,8 +1719,8 @@ main {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 #not-logged-in,
@@ -1765,8 +1765,8 @@ body #addFriendPage .show {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .bottom_navbar ul li {
@@ -1786,17 +1786,20 @@ main section {
   font-size: 28px;
 }
 
-#giftIdeaProcess a, #giftIdeaProcess .button, #giftIdeaProcess button {
+#giftIdeaProcess a,
+#giftIdeaProcess .button,
+#giftIdeaProcess button {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-#giftIdeaProcess input, #giftIdeaProcess textarea {
+#giftIdeaProcess input,
+#giftIdeaProcess textarea {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
 }
@@ -1824,7 +1827,8 @@ main section {
   font-size: 14px;
 }
 
-#loginPage .notloggedin a, #loginPage .notloggedin span {
+#loginPage .notloggedin a,
+#loginPage .notloggedin span {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1867,7 +1871,8 @@ main section {
   font-size: 16px;
 }
 
-#registerPage #registerForm button, #registerPage #registerForm input {
+#registerPage #registerForm button,
+#registerPage #registerForm input {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1891,7 +1896,8 @@ main section {
   font-size: 16px;
 }
 
-#resetContainer button, #resetContainer input {
+#resetContainer button,
+#resetContainer input {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1915,13 +1921,19 @@ main section {
   font-size: 28px;
 }
 
-#addFriendPage label, #addFriendPage .profile-pic, #addFriendPage2 label, #addFriendPage2 .profile-pic {
+
+#addFriendPage label,
+#addFriendPage .profile-pic {
+
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
-#addFriendPage input, #addFriendPage #friendEventSelect, #addFriendPage button, #addFriendPage2 input, #addFriendPage2 #friendEventSelect, #addFriendPage2 button {
+#addFriendPage input,
+#addFriendPage #friendEventSelect,
+#addFriendPage button {
+
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2031,8 +2043,8 @@ main section {
   width: 232px;
   height: 48px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: auto;
   margin-top: 0;
   -webkit-transition: all 1s ease;
@@ -2111,8 +2123,8 @@ main section {
 #addFriendPage #addAFriendBtn:hover,
 #addFriendPage #addEventBtn:hover,
 #addFriendPage #addFriendBtn:hover {
-  background-color: #2BA199;
-  color: #F9F9FB;
+  background-color: #2ba199;
+  color: #f9f9fb;
 }
 
 #giftIdeaHomePage #startIdeaBtn a,
@@ -2263,7 +2275,7 @@ main section {
 #addFriendPage #addAFriendBtn:hover a,
 #addFriendPage #addEventBtn:hover a,
 #addFriendPage #addFriendBtn:hover a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 #giftIdeaHomePage #startIdeaBtn,
@@ -2307,8 +2319,8 @@ main section {
   width: 232px;
   height: 48px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: auto;
   margin-top: 4rem;
 }
@@ -2327,8 +2339,8 @@ main section {
   width: 232px;
   height: 48px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: auto;
 }
 
@@ -2359,7 +2371,7 @@ main section {
 #addFriendPage #addtowish,
 #addFriendPage #seeFriendsList,
 #addFriendPage #addAFriendBtn {
-  background: #ABA0F5;
+  background: #aba0f5;
   border: none;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -2392,8 +2404,8 @@ main section {
 #addFriendPage #addtowish:hover,
 #addFriendPage #seeFriendsList:hover,
 #addFriendPage #addAFriendBtn:hover {
-  background-color: #8177C3;
-  color: #F9F9FB;
+  background-color: #8177c3;
+  color: #f9f9fb;
 }
 
 #giftIdeaHomePage #addtowish a,
@@ -2454,7 +2466,7 @@ main section {
 #addFriendPage #addtowish:hover a,
 #addFriendPage #seeFriendsList:hover a,
 #addFriendPage #addAFriendBtn:hover a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 #giftIdeaHomePage #backToStart,
@@ -2503,7 +2515,7 @@ main section {
 #addFriendPage #backToSummaryCard,
 #addFriendPage #backToChooseEvent {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin-left: 2rem;
   background: none;
   border: none;
@@ -2554,7 +2566,7 @@ main section {
 #addFriendPage #backToIdeaAdd a,
 #addFriendPage #backToSummaryCard a,
 #addFriendPage #backToChooseEvent a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 #registerLink {
@@ -2563,7 +2575,7 @@ main section {
 }
 
 #skiptologin {
-  background: #363D51;
+  background: #363d51;
   border: none;
   font-size: 16px;
   font-family: "Livvic", sans-serif;
@@ -2575,8 +2587,8 @@ main section {
 }
 
 #nav_btn3 {
-  background-color: #FF90A3;
-  border-color: #FF90A3;
+  background-color: #ff90a3;
+  border-color: #ff90a3;
 }
 
 .editButton {
@@ -2601,12 +2613,12 @@ main section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #86E4DE;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #86e4de;
   border: none;
   border-radius: 44px;
   width: 232px;
@@ -2624,8 +2636,8 @@ main section {
 #resetContainer #btn_logout:hover,
 #resetContainer #btn_AddGiftIdea:hover,
 #resetContainer #btn_login:hover {
-  background-color: #2BA199;
-  color: #F9F9FB;
+  background-color: #2ba199;
+  color: #f9f9fb;
 }
 
 #loginPage #btn_logout a,
@@ -2644,23 +2656,29 @@ main section {
 #resetContainer #btn_logout:hover a,
 #resetContainer #btn_AddGiftIdea:hover a,
 #resetContainer #btn_login:hover a {
-  color: #F9F9FB;
+  color: #f9f9fb;
 }
 
 /* ================ Media =====================*/
-.homeButton, .storeButton, .friendsButton, .listButton {
+.homeButton,
+.storeButton,
+.friendsButton,
+.listButton {
   background: none;
   border: none;
 }
 
-.homeButton img, .storeButton img, .friendsButton img, .listButton img {
+.homeButton img,
+.storeButton img,
+.friendsButton img,
+.listButton img {
   height: 1.5cm;
   width: 1.5cm;
 }
 
 .addButton {
-  background-color: #F9F9FB;
-  border-color: #6E64AC;
+  background-color: #f9f9fb;
+  border-color: #6e64ac;
   color: color_footer_icon;
   font-size: 2rem;
   border-radius: 60%;

@@ -6,37 +6,43 @@
 // firebase.auth().currentuser.uid
 let newUser = null;
 
+function redirectToHomePage() {
+  if (firebase.auth().currentUser.uid) {
+    window.setTimeout(function () {
+      window.location.href = "./home.html";
+    }, 500);
+  } else {
+    alert("Please login first!");
+  }
+}
 // *************************** CREATE USER OBJECT *****************************
 
 class userInfo {
   constructor(username, email) {
-    this.username = username,
-      this.email = email
+    (this.username = username), (this.email = email);
   }
   literalObject() {
     return { name: this.username, email: this.email }; //makes recognizable for DB
   }
   signUp(email, password, username) {
-
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
-
         var user = userCredential.user;
         if (userCredential) {
-          user.updateProfile({
-            displayName: this.username
-            // photoURL: // some photo url
-          }).then(
-            (s) => console.log(s)
-          )
+          user
+            .updateProfile({
+              displayName: this.username,
+              // photoURL: // some photo url
+            })
+            .then((s) => console.log(s));
         }
+        redirectToHomePage();
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
-
       });
   }
 }
@@ -75,6 +81,7 @@ firebase.auth().onAuthStateChanged((user) => {
       const email = user.email;
       document.getElementById("user_para").innerHTML =
         "Welcome, " + user.displayName;
+      console.log(`User:  ${user}`);
     }
   } else {
     loggedIn.style.display = "none";
@@ -95,6 +102,7 @@ loginButton.addEventListener("click", (event) => {
           console.log("logged in!");
           localStorage.clear();
           localStorage.setItem("mainUser", JSON.stringify(auth.currentUser));
+          redirectToHomePage();
         }
       })
       .catch((error) => {
@@ -112,13 +120,11 @@ loginButton.addEventListener("click", (event) => {
   loginEmail.value = "";
   loginPassword.value = "";
   loginEmail.focus();
-}); 
-
+});
 
 // **********************    LOGOUT EXISTING USER    **************************
 
 logoutButton.addEventListener("click", () => {
-
   const notLoggedIn = document.getElementById("not-logged-in");
 
   firebase
