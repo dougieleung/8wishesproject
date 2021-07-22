@@ -73,8 +73,6 @@
     <main id="giftIdeaProcess">
       <!--**********************************  #1 Home Page Section  *********************************** -->
 
-        <!--**********************************  #1 Home Page Section  *********************************** -->
-
         <section id="giftIdeaHomePage" class="show">
 
             <a href="#" class="link link4">All ideas</a>
@@ -161,50 +159,9 @@
                 <canvas id="canvas" width="240" height="190"></canvas>
 
                 <button id="addPhoto" type="submit">
-
-
                     <a href="#summaryCard">NEXT</a>
                 </button>
 
-          <!-- Add image and title, description to summary card -->
-          <button id="addGift" type="submit">
-            <a href="#summaryCard">NEXT</a>
-          </button>
-        </div>
-      </section>
-
-      <!--********************************  #3 Snapping Photo Section  ******************************** -->
-
-      <section id="takePhoto" class="hide">
-        <!-- Back button -->
-        <button id="backToIdeaAdd2">
-          <a href="#giftIdeaAdd">
-            <i class="fas fa-chevron-left"></i>
-          </a>
-        </button>
-        <!-- Back button -->
-
-        <div id="camera">
-          <!-- Video and Snapping photo -->
-          <video id="video" width="240" height="240" autoplay></video>
-
-        <!--****************************  #4 Gift Idea Summary Card Section  **************************** -->
-
-          <audio id="cameraAudio">
-            <source src="/icons/camera-shutter-click-03.mp3" />
-            ; Your browser does not support the audio tag.
-          </audio>
-
-            <!-- Back button -->
-            <button id="backToIdeaAdd">
-                <a href="#giftIdeaAdd">
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-            </button>
-
-          <button id="addPhoto" type="submit">
-            <a href="#summaryCard">NEXT</a>
-          </button>
         </div>
       </section>
 
@@ -274,49 +231,7 @@
         </div>
       </section>
 
-      <!--*********************** IF YOU CHOOSE (A), GO TO LINE 6 (A) LINE 289 ************************ -->
-      <!--*****************************  #6 (B) Add to Friends List Page  ***************************** -->
-
-      <!-- Friend's Intro Page showing list of friends or none -->
-      <section id="listEmptyPage" class="hide">
-        <h2>Choose a friend</h2>
-        <div id="friendListOutput"></div>
-
-        <!--*******************  #5 (A) Add to My Wishlist or (B) Friend's List Page  ******************* -->
-
-        <section id="addToWishlistSection" class="hide">
-
-            <!-- Back button -->
-            <button id="backToSummaryCard">
-                <a href="#summaryCard">
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-            </button>
-
-            <div class="add-idea-3">
-
-                <div class="idea-window">
-                    <div id=windowImage></div>
-                    <div id="windowDescription" class="window-description"></div>
-                </div>
-
-                <!-- Button to add to My List -->
-                <button id="addtowish" type="button">Add to My list</button>
-
-                <!-- User Feedback when wish is added to my list -->
-                <p id="add-wish-msg"></p>
-
-                <!-- Button to add to Friend's List -->
-                <button id="seeFriendsList" class="button button19" type="button">
-                    <a href="#listEmptyPage">Add to Friend</a>
-                </button>
-
-                <!-- Generated from list from Firestore -->
-                <div class="friends-list" id="friendsList"></div>
-            </div>
-        </section>
-
-        <!--*********************** IF YOU CHOOSE (A), GO TO LINE 6 (A) LINE 289 ************************ -->
+        <!--*********************** IF YOU CHOOSE (A), GO TO LINE 6 (A) LINE 310 ************************ -->
         <!--*****************************  #6 (B) Add to Friends List Page  ***************************** -->
 
         <!-- Friend's Intro Page showing list of friends or none -->
@@ -326,12 +241,8 @@
 
             <div id="friendNameEventContainer">
 
-                <button id="friendtoProfile">Add event for friend</button>
-            </div>
-
-            <div id="friendNameEventContainer">
-                <h2>Click on friend's name</h2>
-                <button id="friendtoProfile">Proceed to add event</button>
+              <h2>Click on friend's name</h2>
+              <button id="friendtoProfile">Add event for friend</button>
             </div>
 
             <button id="addAFriendBtn"><a href="#addFriendPage">Add a Friend</a></button>
@@ -391,109 +302,49 @@
             <div id="friendEventAdded"></div>
         </section>
 
+<!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
 
-        <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
+<section id="complete" class="hide">
+  <!-- Back button -->
+  <button id="backToChooseEvent">
+    <a href="#chooseEvent">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </button>
 
-        <section id="complete" class="hide">
+  <div class="add-idea-5">
+    <h2>Your Idea is Added!</h2>
+    <!-- <p id="idea-added-msg"></p> -->
+    <div id="ideaSummary"></div>
+    <!-- /#ideaSummary -->
 
-            <!-- Back button -->
-            <button id="backToChooseEvent">
-                <a href="#chooseEvent">
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-            </button>
+    <p id="login-to-add"></p>
 
-            <div class="add-idea-5">
+    <button id="addToDB" class="button button21" type="button">
+      Done
+    </button>
+  </div>
+  <!-- /#friendsWishlist -->
+</section>
 
-                <h2>Your Idea is Added!</h2>
-                <!-- <p id="idea-added-msg"></p> -->
-                <div id="ideaSummary"></div>
-                <!-- /#ideaSummary -->
+<section id="giftcard_display" class="hide">
+  <h2>My List</h2>
+</section>
 
-                <p id="login-to-add"></p>
+<!-- Card to show image, title, description, friend, and event, date -->
+<section id="editCard" class="hide">
+  <form action="#" id="editForm">
+    <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
+    <input type="text" id="wishDescEdit" name="wishDescEdit" />
 
-        <!-- Select Event Date -->
-        <label for="date">Select a Date</label>
-        <input id="friendDate" type="date" id="event" name="event" />
+    <a id="seeFullList" href="#">see full list</a>
+    <button id="saveEdit" type="button">Save</button>
+    <button id="deleteWish" type="button">Delete</button>
+  </form>
+  <!-- /#editForm -->
+</section>
+<!-- /#editCard -->
 
-            </div>
-            <!-- /#friendsWishlist -->
-
-        </section>
-
-        <section id="giftcard_display" class="hide">
-            <h2>My List</h2>
-        </section>
-
-        <!-- Card to show image, title, description, friend, and event, date -->
-        <section id="editCard" class="hide">
-
-      <!--**************  #7 (B) If There Are Friends, proceed to page to add events only ************* -->
-
-      <section id="addEventPage" class="hide">
-        <h1>Choose an event for</h1>
-        <input id="friendsProfile" />
-
-        <label for="name">Select an event</label>
-        <select id="friendEventSelect2" name="event">
-          <option value="resetOptions">-- Select An Event --</option>
-          <option value="Birthday">Birthday</option>
-          <option value="Wedding Anniversary">Wedding Anniversary</option>
-          <option value="Graduation Day">Graduation Day</option>
-          <option value="Other">Other...</option>
-        </select>
-        <div id="createEvent"></div>
-
-        <label for="date">Select a Date</label>
-
-        <!-- <input id="friendEvent" type="text" /> -->
-        <input id="friendDate2" type="date" id="event" name="event" />
-        <button id="addEventBtn" type="button">Add Event</button>
-        <div id="friendEventAdded"></div>
-      </section>
-
-      <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
-
-      <section id="complete" class="hide">
-        <!-- Back button -->
-        <button id="backToChooseEvent">
-          <a href="#chooseEvent">
-            <i class="fas fa-chevron-left"></i>
-          </a>
-        </button>
-
-        <div class="add-idea-5">
-          <h2>Your Idea is Added!</h2>
-          <!-- <p id="idea-added-msg"></p> -->
-          <div id="ideaSummary"></div>
-          <!-- /#ideaSummary -->
-
-          <p id="login-to-add"></p>
-
-          <button id="addToDB" class="button button21" type="button">
-            Done
-          </button>
-        </div>
-        <!-- /#friendsWishlist -->
-      </section>
-
-      <section id="giftcard_display" class="hide">
-        <h2>My List</h2>
-      </section>
-
-      <!-- Card to show image, title, description, friend, and event, date -->
-      <section id="editCard" class="hide">
-        <form action="#" id="editForm">
-          <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
-          <input type="text" id="wishDescEdit" name="wishDescEdit" />
-
-          <a id="seeFullList" href="#">see full list</a>
-          <button id="saveEdit" type="button">Save</button>
-          <button id="deleteWish" type="button">Delete</button>
-        </form>
-        <!-- /#editForm -->
-      </section>
-      <!-- /#editCard -->
     </main>
 
     <footer>
