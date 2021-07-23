@@ -387,15 +387,16 @@ main #giftIdeaHomePage {
 
 #camera_btn,
 #gallery_btn {
+  margin:5%;
   background-color: $color_primary;
   border-style: none;
 }
 
-#camera_btn i,
-#gallery_btn i {
-  font-size: 2.5rem;
-  color: $color_neutral_white;
-}
+// #camera_btn i,
+// #gallery_btn i {
+//   font-size: 2.5rem;
+//   color: $color_neutral_white;
+// }
 
 main #takePhoto {
   display: flex;

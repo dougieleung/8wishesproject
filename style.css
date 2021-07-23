@@ -1165,14 +1165,9 @@ main #giftIdeaHomePage #startIdeaBtn a {
 
 #camera_btn,
 #gallery_btn {
+  margin: 5%;
   background-color: #363D51;
   border-style: none;
-}
-
-#camera_btn i,
-#gallery_btn i {
-  font-size: 2.5rem;
-  color: #F9F9FB;
 }
 
 main #takePhoto {
@@ -2779,6 +2774,7 @@ main section {
 #nav_btn3 {
   background-color: #FF90A3;
   border-color: #FF90A3;
+  margin-top: 1rem;
 }
 
 .editButton {
@@ -2922,8 +2918,8 @@ section > a {
 .storeButton img,
 .friendsButton img,
 .listButton img {
-  height: 1.5cm;
-  width: 1.5cm;
+  height: 2.5cm;
+  width: 2.5cm;
 }
 
 .addButton {
