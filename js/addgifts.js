@@ -121,14 +121,14 @@ friendEventSelect2.addEventListener("change", () => {
 // **** #7 (B) IF Friends, add Event to newWish Obj and Firestore ****
 
 addEventBtn.addEventListener("click", () => {
-  if (createEventInput) {
-    newWish.eventName = createEventInput.value;
+  if (createEventInput2) {
+    newWish.eventName = createEventInput2.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
-    createEventInput.value = "";
+    createEventInput2.value = "";
     friendDate2.value = "";
   } else {
-    newWish.eventName = friendEventSelect.value;
+    newWish.eventName = friendEventSelect2.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
     friendEventSelect.value = "";
