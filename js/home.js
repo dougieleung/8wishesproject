@@ -70,7 +70,7 @@ async function upcomingEvents() {
     // create a class in scss, for this
     console.log(sortedEventsArray);
     const friendNames = document.createElement("h4");
-    friendNames.innerText = `${sortedEventsArray[j]}`;
+    friendNames.innerText = `${sortedEventsArray[j].friendName}`;
     eventCards.appendChild(friendNames);
 
     const friendEvents = document.createElement("p");
