@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-giftcard_display main section {
+main section {
   height: 90vh;
   margin: 0;
 }
@@ -34,6 +34,7 @@ main {
   #giftIdeaHomePage,
   #giftIdeaAdd,
   #summaryCard,
+  #addToWishlistSection,
   #complete,
   #listEmptyPage,
   #addFriendPage,
@@ -529,6 +530,8 @@ main #takePhoto {
       align-self: center;
       padding: 0.3rem 2.5rem;
       margin: 0;
+      position: relative;
+      left: 9rem;
       grid-row: 2 / 3;
       grid-column: 2 / 3;
       font-size: 12px;
@@ -805,11 +808,4 @@ label {
 
 #addEventBtn {
   padding: 1rem;
-}
-
-// ////////////// footer //////////////////////
-footer {
-  position: sticky;
-  bottom: 0;
-  background-color: $color_neutral_white;
 }
