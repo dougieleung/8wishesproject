@@ -17,7 +17,6 @@ const seeFullListLink = document.querySelector("#seeFullList");
 
 // ************ create wish idea object through class ************
 
-
 class newWishObject {
   constructor(title, description, image, timestamp) {
     this.wishTitle = title;
@@ -35,20 +34,18 @@ let newWish = {};
 let storageRef = storage.ref();
 let gsReference;
 addGift.addEventListener("click", () => {
-
   if (giftTitle.value.trim() && giftDescription.value.trim()) {
     newWish = new newWishObject(
       giftTitle.value.trim(),
       giftDescription.value.trim(),
-      storeimage = storeImage,
+      (storeimage = storeImage),
       new Date()
     );
     // putting the image into firebase storage
     if (newWish.storeImage !== "") {
-
       let thisRef = storageRef.child(`images/${newWish.wishTitle}`);
       thisRef.put(theBlob).then((snapshot) => {
-        console.log('Uploaded a blob or file!');
+        console.log("Uploaded a blob or file!");
       });
     }
 
@@ -62,14 +59,12 @@ addGift.addEventListener("click", () => {
   } else {
     alert("All fields are mandatory!");
   }
-
 });
 
 // ****** #4 Gift Idea Summary Card section of gift_idea.html ******
 // ************************ Add location ***************************
 
 nextToWishlists.addEventListener("click", () => {
-
   newWish.location = mapLink.href;
 
   if (newWish.location !== undefined) {
@@ -86,12 +81,11 @@ nextToWishlists.addEventListener("click", () => {
 // ****** #5 (A) Add to My Wishlist or (B) Friend's List Page ******
 
 addToWish.addEventListener("click", () => {
-
   addWishMsg.innerHTML = "";
   newWish.mine = true;
-  addToWishlistSection.classList.remove('show');
-  addToWishlistSection.classList.add('hide');
-  complete.classList.toggle('hide');
+  addToWishlistSection.classList.remove("show");
+  addToWishlistSection.classList.add("hide");
+  complete.classList.toggle("hide");
   if (newWish.location !== undefined) {
     ideaSummary.innerHTML = `${newWish.wishTitle}<br>
   ${newWish.wishDesc}<br>
@@ -100,7 +94,6 @@ addToWish.addEventListener("click", () => {
     ideaSummary.innerHTML = `${newWish.wishTitle}<br>
   ${newWish.wishDesc}`;
   }
-
 });
 
 const friendEventAdded = document.querySelector("#friendEventAdded");
@@ -120,7 +113,6 @@ friendEventSelect2.addEventListener("change", () => {
     createEvent2.appendChild(labelEl);
     createEvent2.appendChild(inputEl);
     createEventInput2 = document.querySelector("#inputOther");
-    
   } else {
     createEvent2.style.display = "none";
   }
@@ -128,14 +120,20 @@ friendEventSelect2.addEventListener("change", () => {
 
 // **** #7 (B) IF Friends, add Event to newWish Obj and Firestore ****
 
-
 addEventBtn.addEventListener("click", () => {
-
-    newWish.eventName = createEventInput2.value;
+  if (createEventInput) {
+    newWish.eventName = createEventInput.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
-    createEventInput2.value = "";
+    createEventInput.value = "";
     friendDate2.value = "";
+  } else {
+    newWish.eventName = friendEventSelect.value;
+    newWish.eventDate = friendDate2.value;
+    console.log(newWish);
+    friendEventSelect.value = "";
+    friendDate2.value = "";
+  }
 
   addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
   friendEventAdded.innerHTML = `Successfully added:
@@ -168,8 +166,8 @@ addToDB.addEventListener("click", async function addToFirestore() {
         console.error("Error writing document: ", error);
       });
 
-    complete.classList.toggle('hide');
-    displayGift.classList.toggle('hide')
+    complete.classList.toggle("hide");
+    displayGift.classList.toggle("hide");
 
     // displayGift.innerHTML = `<h2> My List </h2>`;
 
@@ -199,7 +197,6 @@ async function friendsListfromDB() {
         const buttonItem = document.createElement("button");
         buttonItem.setAttribute("type", "button");
         buttonItem.addEventListener("click", () => {
-
           addIdeaToCollection(doc.id);
         });
 
@@ -207,7 +204,6 @@ async function friendsListfromDB() {
         buttonItem.appendChild(friendsNames);
         listItem.appendChild(buttonItem);
         list.appendChild(listItem);
-
       });
 
       friendsList.appendChild(list);
@@ -259,7 +255,7 @@ async function renderWishlist() {
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        console.log('rendering the items');
+        console.log("rendering the items");
         // Create the card container
         const card = document.createElement("div");
         card.className = "displaycard";
@@ -271,8 +267,10 @@ async function renderWishlist() {
         // Add the image / photo here
         //Image
         if (doc.data().storeImage != "") {
-          const theImage = document.createElement('img');
-          storageRef.child(`images/${doc.data().wishTitle}`).getDownloadURL()
+          const theImage = document.createElement("img");
+          storageRef
+            .child(`images/${doc.data().wishTitle}`)
+            .getDownloadURL()
             .then((url) => {
               theImage.src = url;
             })
@@ -292,15 +290,15 @@ async function renderWishlist() {
         displayGift.appendChild(card);
 
         // Editing an item
-        const editBtn = document.createElement('button');
-        editBtn.type = 'button';
-        editBtn.classList = 'editButton'
+        const editBtn = document.createElement("button");
+        editBtn.type = "button";
+        editBtn.classList = "editButton";
         editBtn.innerText = "Edit/Delete";
         card.appendChild(editBtn);
-        editBtn.addEventListener('click', async function () {
-          console.log('Edit Button Clicked');
+        editBtn.addEventListener("click", async function () {
+          console.log("Edit Button Clicked");
           editWish(doc);
-        })
+        });
       });
     })
     .catch((error) => {
@@ -311,14 +309,14 @@ async function renderWishlist() {
 // ***************** Editing Wishes on user list *******************
 
 function editWish(doc) {
-  editCard.classList.remove('hide');
+  editCard.classList.remove("hide");
   // displayGift.classList.add('hide');
 
   wishTitleEdit.value = `${doc.data().wishTitle}`;
-  wishDescEdit.value = `${doc.data().wishDesc}`
+  wishDescEdit.value = `${doc.data().wishDesc}`;
 
-  saveEditBtn.addEventListener('click', async function () {
-    console.log('saveEdit Button Clicked');
+  saveEditBtn.addEventListener("click", async function () {
+    console.log("saveEdit Button Clicked");
     let wishEdited = {
       wishTitle: wishTitleEdit.value,
       wishDesc: wishDescEdit.value,
@@ -326,23 +324,21 @@ function editWish(doc) {
     // editCard.classList.add('hide');
     // renderWishlist();
     // displayGift.classList.remove('hide');
-    await db.collection(firebase.auth().currentUser.uid)
+    await db
+      .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
       .collection("List of items")
       .doc(doc.id)
       .update({ ...wishEdited });
 
-
-    editCard.classList.add('hide');
+    editCard.classList.add("hide");
     displayGift.innerHTML = "";
     renderWishlist();
-    displayGift.classList.remove('hide');
+    displayGift.classList.remove("hide");
+  });
 
-  })
-
-
-  deleteWishBtn.addEventListener('click', async function () {
-    console.log('Delete Button Clicked');
+  deleteWishBtn.addEventListener("click", async function () {
+    console.log("Delete Button Clicked");
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
@@ -355,25 +351,21 @@ function editWish(doc) {
       .catch((error) => {
         console.error("Error removing document: ", error);
       });
-    editCard.classList.add('hide');
+    editCard.classList.add("hide");
     displayGift.innerHTML = "";
     renderWishlist();
-    displayGift.classList.remove('hide');
-
+    displayGift.classList.remove("hide");
   });
 }
 
-
-myListFooter.addEventListener('click', function () {
-  giftIdeaHomePage.classList.add('hide');
-  giftIdeaHomePage.classList.remove('show');
-  displayGift.classList.remove('hide');
-  renderWishlist()
-}
-);
-
-seeFullListLink.addEventListener('click', function () {
-  displayGift.classList.remove('hide');
+myListFooter.addEventListener("click", function () {
+  giftIdeaHomePage.classList.add("hide");
+  giftIdeaHomePage.classList.remove("show");
+  displayGift.classList.remove("hide");
   renderWishlist();
-})
+});
 
+seeFullListLink.addEventListener("click", function () {
+  displayGift.classList.remove("hide");
+  renderWishlist();
+});
