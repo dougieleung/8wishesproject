@@ -86,8 +86,8 @@ let createEventInput, newFriendObj;
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
     (this.friendName = friendName),
-      (this.friendEvent = friendEvent),
-      (this.friendDate = friendDate);
+      (this.eventName = friendEvent),
+      (this.eventDate = friendDate);
   }
   resetInputs() {
     friendName.value = "";
