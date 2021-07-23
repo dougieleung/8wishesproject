@@ -1955,7 +1955,9 @@ main section {
   font-size: 28px;
 }
 
-#giftIdeaProcess a, #giftIdeaProcess .button, #giftIdeaProcess button {
+#giftIdeaProcess a,
+#giftIdeaProcess .button,
+#giftIdeaProcess button {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1965,7 +1967,8 @@ main section {
           align-items: center;
 }
 
-#giftIdeaProcess input, #giftIdeaProcess textarea {
+#giftIdeaProcess input,
+#giftIdeaProcess textarea {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
 }
@@ -1993,7 +1996,8 @@ main section {
   font-size: 14px;
 }
 
-#loginPage .notloggedin a, #loginPage .notloggedin span {
+#loginPage .notloggedin a,
+#loginPage .notloggedin span {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -2036,7 +2040,8 @@ main section {
   font-size: 16px;
 }
 
-#registerPage #registerForm button, #registerPage #registerForm input {
+#registerPage #registerForm button,
+#registerPage #registerForm input {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2060,7 +2065,8 @@ main section {
   font-size: 16px;
 }
 
-#resetContainer button, #resetContainer input {
+#resetContainer button,
+#resetContainer input {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2084,13 +2090,16 @@ main section {
   font-size: 28px;
 }
 
-#addFriendPage label, #addFriendPage .profile-pic {
+#addFriendPage label,
+#addFriendPage .profile-pic {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
-#addFriendPage input, #addFriendPage #friendEventSelect, #addFriendPage button {
+#addFriendPage input,
+#addFriendPage #friendEventSelect,
+#addFriendPage button {
   font-family: "Oxygen", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2901,12 +2910,18 @@ section > a {
 }
 
 /* ================ Media =====================*/
-.homeButton, .storeButton, .friendsButton, .listButton {
+.homeButton,
+.storeButton,
+.friendsButton,
+.listButton {
   background: none;
   border: none;
 }
 
-.homeButton img, .storeButton img, .friendsButton img, .listButton img {
+.homeButton img,
+.storeButton img,
+.friendsButton img,
+.listButton img {
   height: 1.5cm;
   width: 1.5cm;
 }

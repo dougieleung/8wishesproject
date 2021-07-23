@@ -25,6 +25,18 @@ const friendtoProfile = document.querySelector("#friendtoProfile");
 const addEventPage = document.querySelector("#addEventPage");
 const addAFriendBtn = document.querySelector("#addAFriendBtn");
 
+// ************  Rachel's Incoming change starts*****************
+
+// const editButton = document.querySelector(".editButton");
+// const giftcard_display  = document.querySelector("#giftcard_display");
+// editButton.addEventListener("click", () => {
+//   giftcard_display.classList.remove("show");
+//   giftcard_display.classList.add("hide");
+//   editCard.classList.toggle("hide");
+// })
+
+// ************  Rachel's Incoming change ends here*****************
+
 // ==================== Gift Ideas pages Display ========================
 
 startIdeaBtn.addEventListener("click", () => {
