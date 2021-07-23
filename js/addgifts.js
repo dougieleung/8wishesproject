@@ -224,6 +224,8 @@ async function addIdeaToCollection(friendsName, giftTitle) {
   // } else {
   //   ideaAddedMsg.innerHTML = "Your idea is added!";
 
+  newWish.friendName = friendsName;
+
   await db
     .collection(firebase.auth().currentUser.uid)
     .doc("Friends")

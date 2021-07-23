@@ -20,24 +20,23 @@ async function upcomingEvents() {
       console.log("Error getting document:", error);
     });
 
-  for (let j = 0; j < friendObjects.length; j++) {
-    await db
-      .collection(loggedUser)
-      .doc("Friends")
-      .collection("List")
-      .doc(friendObjects[j].friendName)
-      .collection("This Friend's List")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          console.log("Inside THIS FRIENDS' List");
-          friendObjects.push(doc.data());
-        });
-      })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
-  }
+  // for (let j = 0; j < friendObjects.length; j++) {
+  //   await db
+  //     .collection(loggedUser)
+  //     .doc("Friends")
+  //     .collection("List")
+  //     .doc(friendObjects[j].friendName)
+  //     .collection("This Friend's List")
+  //     .get()
+  //     .then((querySnapshot) => {
+  //       querySnapshot.forEach((doc) => {
+  //         friendObjects.push(doc.data());
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error getting document:", error);
+  //     });
+  // }
 
   //Sorting by event dates
   friendObjects.sort(function (a, b) {
