@@ -8,6 +8,10 @@ section,
 main {
   display: flex;
   flex-flow: row wrap;
+
+  section {
+    margin: 0;
+  }
 }
 
 #not-logged-in,
@@ -24,12 +28,13 @@ main {
   display: none;
 }
 
-
 body #giftIdeaProcess .hide,
 body #friendsListProcess .hide,
 body #introPages .hide,
 body #listEmptyPage .hide,
-body #addFriendPage .hide {
+body #addFriendPage .hide,
+body #giftcard_display .hide,
+body .editCard .hide {
   display: none;
 }
 
@@ -37,7 +42,9 @@ body #giftIdeaProcess .show,
 body #friendsListProcess .show,
 body #introPages .show,
 body #listEmptyPage .show,
-body #addFriendPage .show {
+body #addFriendPage .show,
+body #giftcard_display .show,
+body .editCard .show {
   display: flex;
 }
 
@@ -46,7 +53,8 @@ body #addFriendPage .show {
 /* Styles according to design ========================== */
 .bottom_navbar {
   ul {
-    padding: 0;
+    padding: 1rem;
+    margin: 0;
     display: flex;
     justify-content: space-evenly;
   }

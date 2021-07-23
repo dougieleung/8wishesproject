@@ -40,6 +40,14 @@
     }
   }
 
+  #friendListOutput button#friendtoProfile {
+    margin: 0;
+  }
+
+  #addEventBtn {
+    margin: 0;
+  }
+
   #startIdeaBtn,
   #addGift,
   #addtowish,
@@ -165,4 +173,52 @@
       color: $color_button_hover_text;
     }
   }
+}
+
+main #resetContainer {
+  height: 100vh;
+
+  #noreset a {
+    text-decoration: none;
+  }
+}
+
+#addEventBtn {
+  margin: 0;
+}
+
+.friendEventForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  #friendEventSelect2 {
+    width: 100%;
+  }
+
+  label,
+  select,
+  div,
+  input#friendDate2 {
+    margin: 1rem;
+    width: 100%;
+  }
+}
+
+section > a {
+  color: $color_neutral_white;
+}
+
+.fa-chevron-left {
+  margin: 1rem;
+  align-self: baseline;
+}
+
+#addEventPage a {
+  align-self: baseline;
+}
+
+.nav_btn:hover {
+  box-shadow: 5px 10px 10px $color_neutral_gray;
 }
