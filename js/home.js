@@ -68,9 +68,9 @@ async function upcomingEvents() {
     eventCards.setAttribute("class", "events-cards");
     eventCards.style.border = "1px solid black";
     // create a class in scss, for this
-
+    console.log(sortedEventsArray);
     const friendNames = document.createElement("h4");
-    friendNames.innerText = `${sortedEventsArray[j].friendName}`;
+    friendNames.innerText = `${sortedEventsArray[j]}`;
     eventCards.appendChild(friendNames);
 
     const friendEvents = document.createElement("p");
