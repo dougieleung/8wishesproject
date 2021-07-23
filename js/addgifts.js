@@ -104,7 +104,7 @@ addToWish.addEventListener("click", () => {
 });
 
 const friendEventAdded = document.querySelector("#friendEventAdded");
-
+let createEventInput2;
 // ************************ #2 Create (Other) New Event input field *********************
 
 friendEventSelect2.addEventListener("change", () => {
@@ -119,7 +119,8 @@ friendEventSelect2.addEventListener("change", () => {
     labelEl.setAttribute("for", "Other");
     createEvent2.appendChild(labelEl);
     createEvent2.appendChild(inputEl);
-    createEventInput = document.querySelector("#inputOther");
+    createEventInput2 = document.querySelector("#inputOther");
+    
   } else {
     createEvent2.style.display = "none";
   }
@@ -127,15 +128,14 @@ friendEventSelect2.addEventListener("change", () => {
 
 // **** #7 (B) IF Friends, add Event to newWish Obj and Firestore ****
 
+
 addEventBtn.addEventListener("click", () => {
 
-
-    newWish.eventName = createEventInput.value;
+    newWish.eventName = createEventInput2.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
-    createEventInput.value = "";
+    createEventInput2.value = "";
     friendDate2.value = "";
-
 
   addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
   friendEventAdded.innerHTML = `Successfully added:
