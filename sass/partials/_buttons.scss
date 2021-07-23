@@ -1,3 +1,4 @@
+// comment
 // gift idea page
 
 #giftIdeaHomePage,
@@ -9,6 +10,7 @@
 #complete,
 #addEventPage,
 #addFriendPage {
+
   #startIdeaBtn,
   #addGift,
   #addToDB,
@@ -144,6 +146,7 @@
 //////////////// Login Page ////////////////////
 #loginPage,
 #resetContainer {
+
   #btn_logout,
   #btn_AddGiftIdea,
   #btn_login {
@@ -206,7 +209,7 @@ main #resetContainer {
   }
 }
 
-section > a {
+section>a {
   color: $color_neutral_white;
 }
 

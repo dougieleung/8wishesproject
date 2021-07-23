@@ -1,5 +1,5 @@
 // Gift Idea Page
-
+// comment
 #giftIdeaProcess {
     h2 {
         font-family: $font_heading;
@@ -7,14 +7,18 @@
         font-size: 28px;
     }
 
-    a, .button, button {
+    a,
+    .button,
+    button {
         font-family: $font_interaction;
         font-size: 14px;
         font-weight: 400;
         text-decoration: none;
         align-items: center;
     }
-    input, textarea {
+
+    input,
+    textarea {
         font-family: $font_interaction;
         font-size: 14px;
     }
@@ -46,12 +50,15 @@
             font-family: $font_interaction;
             font-size: 14px;
         }
-        a, span {
+
+        a,
+        span {
             font-family: $font_body;
             font-weight: 400;
             font-size: 16px;
             text-decoration: none;
         }
+
         button {
             font-family: $font_interaction;
             font-size: 14px;
@@ -65,11 +72,13 @@
             font-weight: 500;
             font-size: 22px;
         }
+
         p {
             font-family: $font_body;
             font-weight: 400;
             font-size: 16px;
         }
+
         button {
             font-family: $font_interaction;
             font-size: 14px;
@@ -91,7 +100,9 @@
             font-weight: 400;
             font-size: 16px;
         }
-        button, input {
+
+        button,
+        input {
             font-family: $font_interaction;
             font-size: 14px;
             font-weight: 400;
@@ -107,18 +118,21 @@
         font-weight: 500;
         font-size: 28px;
     }
-    
+
     h4 {
         font-family: $font_body;
         font-weight: 400;
         font-size: 16px;
     }
+
     label {
         font-family: $font_body;
         font-weight: 400;
         font-size: 16px;
     }
-    button, input {
+
+    button,
+    input {
         font-family: $font_interaction;
         font-size: 14px;
         font-weight: 400;
@@ -133,6 +147,7 @@
         font-weight: 500;
         font-size: 28px;
     }
+
     button {
         font-family: $font_interaction;
         font-size: 14px;
@@ -146,12 +161,17 @@
         font-weight: 500;
         font-size: 28px;
     }
-    label, .profile-pic {
+
+    label,
+    .profile-pic {
         font-family: $font_body;
         font-weight: 400;
         font-size: 16px;
     }
-    input, #friendEventSelect, button {
+
+    input,
+    #friendEventSelect,
+    button {
         font-family: $font_interaction;
         font-size: 14px;
         font-weight: 400;
@@ -164,12 +184,14 @@
         font-weight: 500;
         font-size: 28px;
     }
+
     a {
         font-family: $font_interaction;
         font-size: 14px;
         font-weight: 400;
         text-decoration: none;
     }
+
     #fetchedFriendsList {
         font-family: $font_body;
         font-weight: 400;

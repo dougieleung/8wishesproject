@@ -1,5 +1,5 @@
 // ///////////////log in  + register + welcome//////////////////////////
-
+// comment
 body {
   margin: 0;
 }
@@ -27,6 +27,7 @@ body {
 }
 
 main {
+
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -305,6 +306,7 @@ main #giftIdeaHomePage {
   }
 
   #ideaForm {
+
     #gift_title,
     #gift_description {
       background: none;
@@ -811,6 +813,7 @@ main #listEmptyPage {
 #addEventPage {
   display: flex;
   justify-content: center;
+
   h1 {
     margin: 0;
   }
