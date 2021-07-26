@@ -1862,6 +1862,11 @@ footer {
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 section,
 .displaycard {
   border: 1px solid #000;
@@ -1904,7 +1909,9 @@ body #introPages .hide,
 body #listEmptyPage .hide,
 body #addFriendPage .hide,
 body #giftcard_display .hide,
-body .editCard .hide {
+body .editCard .hide,
+body section#editCardFriends.hide,
+body section#giftcardFriendsDisplay.hide {
   display: none;
 }
 

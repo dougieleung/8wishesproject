@@ -18,7 +18,7 @@
     }
   ],
   "scope": "/",
-  "start_url": "./index.html",
+  "start_url": "./pages/register+login.html",
   "display": "standalone",
   "orientation": "landscape",
   "theme_color": "orange",
