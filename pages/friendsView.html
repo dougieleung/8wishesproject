@@ -51,6 +51,7 @@
 
     <script src="../js/firebase.js" defer></script>
     <script src="../js/main.js" defer></script>
+
     <!-- <script src="../js/pageDisplay.js" defer></script> -->
     <script src="../js/friendsView.js" defer></script>
 
@@ -60,7 +61,7 @@
 
     <main id="friendsListView">
 
-        <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
+<!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
 
 
         <section id="giftcardFriendsDisplay">
@@ -69,11 +70,20 @@
 
             <div id="friendsWishlist"></div>
 
-            <button id="addAFriendBtn2"><a href="#addFriendPage2">Add a Friend</a></button>
+            <label for="name">Add a Friend</label>
+            <input id="friendName2" type="text" />
 
+            <!-- Add Friend and Event to Firestore -->
+            <button id="addFriendBtn2" type="button">Add</button>
+        
         </section>
+
+<!--************************************** Edit your idea  ************************************** -->
+        
         <section id="editCardFriends" class="hide">
+            
             <h2>Edit your idea</h2>
+            
             <form action="#" id="editForm">
                 <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
                 <input type="text" id="wishDescEdit" name="wishDescEdit" />
