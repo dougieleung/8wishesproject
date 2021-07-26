@@ -49,7 +49,7 @@ addGift.addEventListener("click", () => {
     );
     // putting the image into firebase storage
     if (newWish.storeImage !== "") {
-      let thisRef = storageRef.child(`images/${newWish.wishTitle}`);
+      let thisRef = storageRef.child(`images/${newWish.storeImage}`);
       thisRef.put(theBlob).then((snapshot) => {
         console.log("Uploaded a blob or file!");
       });
@@ -238,7 +238,7 @@ async function renderWishlist() {
         if (doc.data().storeImage != "") {
           const theImage = document.createElement("img");
           storageRef
-            .child(`images/${doc.data().wishTitle}`)
+            .child(`images/${doc.data().storeImage}`)
             .getDownloadURL()
             .then((url) => {
               theImage.src = url;
@@ -279,7 +279,7 @@ async function renderWishlist() {
 
 function editWish(doc) {
   editCard.classList.remove("hide");
-  // displayGift.classList.add('hide');
+  displayGift.classList.add('hide');
 
   wishTitleEdit.value = `${doc.data().wishTitle}`;
   wishDescEdit.value = `${doc.data().wishDesc}`;
@@ -320,10 +320,10 @@ function editWish(doc) {
       .catch((error) => {
         console.error("Error removing document: ", error);
       });
-    editCard.classList.add("hide");
-    displayGift.innerHTML = "";
-    renderWishlist();
-    displayGift.classList.remove("hide");
+    // editCard.classList.add("hide");
+    // displayGift.innerHTML = "";
+    // renderWishlist();
+    // displayGift.classList.remove("hide");
   });
 }
 
@@ -333,6 +333,8 @@ myListFooter.addEventListener("click", function () {
   displayGift.classList.remove("hide");
   renderWishlist();
 });
+
+
 
 seeFullListLink.addEventListener("click", function () {
   displayGift.classList.remove("hide");

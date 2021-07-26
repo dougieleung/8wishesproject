@@ -60,20 +60,37 @@
 
     <main id="friendsListView">
 
-<!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
+        <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
 
 
-<section id="giftcard_display" class="hide">
-    <h2>Friend's List</h2>
-    <div id="friendsSeeList"></div>
+        <section id="giftcardFriendsDisplay">
+            <h2>Friend's List</h2>
+            <div id="friendsSeeList"></div>
 
-    <div id="friendsWishlist" class="hide"></div>
-    
-</section>
+            <div id="friendsWishlist"></div>
 
-<!-- Card to show image, title, description, friend, and event, date -->
+            <button id="addAFriendBtn2"><a href="#addFriendPage2">Add a Friend</a></button>
 
-<!-- <section id="editCard" class="hide">
+        </section>
+        <section id="editCardFriends" class="hide">
+            <h2>Edit your idea</h2>
+            <form action="#" id="editForm">
+                <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
+                <input type="text" id="wishDescEdit" name="wishDescEdit" />
+
+                <a id="seeFullListFriends" href="#">see full list</a>
+                <button id="saveEditFriends" type="button">Save</button>
+                <button id="deleteWishFriends" type="button">Delete</button>
+            </form>
+            <!-- /#editForm -->
+        </section>
+        <!-- /#editCard -->
+
+        <!-- </section> -->
+
+        <!-- Card to show image, title, description, friend, and event, date -->
+
+        <!-- <section id="editCard" class="hide">
 
     <form action="#" id="editForm">
 
@@ -85,46 +102,46 @@
 
     </form>
     <!- /#editForm -->
-<!-- </section> -->
+        <!-- </section> -->
 
-</main>
+    </main>
 
-<footer>
+    <footer>
 
-    <div class="navbar_container">
-        <nav class="bottom_navbar">
-            <ul>
-                <li><button id="nav_btn1" class="button homeButton">
-                    <a href="./home.html">
-                        <img src="../icons/footerIcons/HomeIcon.svg">
-                    </a>
-                    </button>
-                </li>
-                <li><button id="myListFooter" class="button listButton">
-                    <a href ="#giftcard_display">
-                        <img src ="../icons/footerIcons/listIcon.svg">
-                    </a>
-                    </button>
-                </li>
-                <li><button id="nav_btn3" class="button addButton">
-                        <a href ="gift_idea.html">+</a>
-                    </button>
-                </li>
-                <li><button id="friendsFooter" class="button friendsButton">
-                    <a href ="friendsView.html">
-                        <img src ="../icons/footerIcons/friendsIcon.svg">
-                    </a>
-                    </button>
-                </li>
-                <li><button id="nav_btn5" class="button storeButton">
-                    <img src="../icons/footerIcons/storesIcon.svg">
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </div>
+        <div class="navbar_container">
+            <nav class="bottom_navbar">
+                <ul>
+                    <li><button id="nav_btn1" class="button homeButton">
+                            <a href="./home.html">
+                                <img src="../icons/footerIcons/HomeIcon.svg">
+                            </a>
+                        </button>
+                    </li>
+                    <li><button id="myListFooter2" class="button listButton">
+                            <a href="gift_idea.html#giftcard_display">
+                                <img src="../icons/footerIcons/listIcon.svg">
+                            </a>
+                        </button>
+                    </li>
+                    <li><button id="nav_btn3" class="button addButton">
+                            <a href="gift_idea.html">+</a>
+                        </button>
+                    </li>
+                    <li><button id="friendsFooter" class="button friendsButton">
+                            <a href="friendsView.html">
+                                <img src="../icons/footerIcons/friendsIcon.svg">
+                            </a>
+                        </button>
+                    </li>
+                    <li><button id="nav_btn5" class="button storeButton">
+                            <img src="../icons/footerIcons/storesIcon.svg">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <!-- <div class="footer_container">
+        <!-- <div class="footer_container">
         <nav class="footer_links">
             <hr>
             <ul>
@@ -137,7 +154,7 @@
         </nav>
     </div> -->
 
-</footer>
+    </footer>
 
 </body>
 
