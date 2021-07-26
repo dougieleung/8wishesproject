@@ -146,6 +146,8 @@ addEventBtn.addEventListener("click", () => {
   addIdeaToCollection(friendsProfile.value, newWish.wishTitle);
   friendEventAdded.innerHTML = `Successfully added:
     <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
+
+  setTimeout(()=> { location.href = "friendsView.html"}, 500);
 });
 
 // *********************** Add Gift Idea to Firestore and retrieve list ***********************
