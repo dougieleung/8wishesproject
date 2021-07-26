@@ -2,10 +2,9 @@
 // *************** This page is the code related to friend's names and gift list **************
 // ********************************************************************************************
 
-console.log("friendsView.JS Connected!");
+console.log("Connected to friendsView.js");
 
-// ************* global variables used in the script *************
-
+// *************************** global variables used in the script ****************************
 
 const friendsFooter = document.querySelector("#friendsFooter");
 const friendsSeeList = document.querySelector("#friendsSeeList");
@@ -176,7 +175,6 @@ function editWishTitle(doc, item, card) {
         renderTHISFriendList(doc, item.id);
     })
 }
-
 
 function editWishDesc(doc, item, card) {
   const editDescInput = document.createElement('input');

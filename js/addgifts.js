@@ -1,8 +1,11 @@
 // ********************************************************************************************
-// ********** This page is the code for adding gift idea to user or to friend's list **********
+// ********** This page is the code for adding gift ideas to user or to friend's list *********
 // ********************************************************************************************
 
-// ************* global variables used in the script *************
+
+console.log("Connected to addgifts.js");
+
+// *************************** global variables used in the script ****************************
 
 const displayTitle = document.querySelector("#displayTitle");
 const displayDescription = document.querySelector("#displayDesc");
@@ -14,8 +17,11 @@ const wishDescEdit = document.querySelector("#wishDescEdit");
 const saveEditBtn = document.querySelector("#saveEdit");
 const deleteWishBtn = document.querySelector("#deleteWish");
 const seeFullListLink = document.querySelector("#seeFullList");
+const friendEventSelect2 = document.querySelector("#friendEventSelect2");
+const createEvent2 = document.querySelector("#createEvent2");
+const addEventBtn = document.querySelector("#addEventBtn");
 
-// ************ create wish idea object through class ************
+// *************************** create wish idea object through class **************************
 
 class newWishObject {
   constructor(title, description, image, timestamp) {
@@ -28,7 +34,7 @@ class newWishObject {
 
 let newWish = {};
 
-// ********** #2 Add Gift Idea Section of gift_idea.html **********
+// *************************** Add Gift Idea Section of gift_idea.html ************************
 
 // variables for the storage
 let storageRef = storage.ref();
@@ -38,7 +44,7 @@ addGift.addEventListener("click", () => {
     newWish = new newWishObject(
       giftTitle.value.trim(),
       giftDescription.value.trim(),
-      (storeimage = storeImage),
+      (storeImage = storeImage),
       new Date()
     );
     // putting the image into firebase storage
@@ -61,8 +67,8 @@ addGift.addEventListener("click", () => {
   }
 });
 
-// ****** #4 Gift Idea Summary Card section of gift_idea.html ******
-// ************************ Add location ***************************
+// ********************* Gift Idea Summary Card section of gift_idea.html *********************
+// ************************************** Add location ****************************************
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
@@ -78,7 +84,8 @@ nextToWishlists.addEventListener("click", () => {
   console.log(newWish);
 });
 
-// ****** #5 (A) Add to My Wishlist or (B) Friend's List Page ******
+// ********************* (A) Add to My Wishlist or (B) Friend's List Page *********************
+
 
 addToWish.addEventListener("click", () => {
   addWishMsg.innerHTML = "";
@@ -98,7 +105,8 @@ addToWish.addEventListener("click", () => {
 
 const friendEventAdded = document.querySelector("#friendEventAdded");
 let createEventInput2;
-// ************************ #2 Create (Other) New Event input field *********************
+
+// **************************** Create (Other) New Event input field **************************
 
 friendEventSelect2.addEventListener("change", () => {
   if (friendEventSelect2.value === "Other") {
@@ -118,7 +126,7 @@ friendEventSelect2.addEventListener("change", () => {
   }
 });
 
-// **** #7 (B) IF Friends, add Event to newWish Obj and Firestore ****
+// ******************** IF Friends, add Event to newWish Obj and Firestore ********************
 
 addEventBtn.addEventListener("click", () => {
   if (createEventInput2) {
@@ -131,7 +139,7 @@ addEventBtn.addEventListener("click", () => {
     newWish.eventName = friendEventSelect2.value;
     newWish.eventDate = friendDate2.value;
     console.log(newWish);
-    friendEventSelect.value = "";
+    friendEventSelect2.value = "";
     friendDate2.value = "";
   }
 
@@ -140,7 +148,7 @@ addEventBtn.addEventListener("click", () => {
     <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
 });
 
-// ********** Add Gift Idea to Firestore and retrieve list ************
+// *********************** Add Gift Idea to Firestore and retrieve list ***********************
 
 addToDB.addEventListener("click", async function addToFirestore() {
   logintoadd.innerHTML = "";
@@ -169,52 +177,11 @@ addToDB.addEventListener("click", async function addToFirestore() {
     complete.classList.toggle("hide");
     displayGift.classList.toggle("hide");
 
-    // displayGift.innerHTML = `<h2> My List </h2>`;
-
     renderWishlist();
   }
 });
 
-// ********** Lists out the friend's names from Firestore ************
-
-async function friendsListfromDB() {
-  console.log("friends list summary!");
-  friendsList.innerHTML = "";
-  await db
-    .collection(firebase.auth().currentUser.uid)
-    .doc("Friends")
-    .collection("List")
-    .get()
-    .then((querySnapshot) => {
-      const list = document.createElement("ul");
-      list.setAttribute("id", "fetchedFriendsList");
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
-
-        const listItem = document.createElement("li");
-        listItem.setAttribute("id", `${doc.id}`);
-
-        const buttonItem = document.createElement("button");
-        buttonItem.setAttribute("type", "button");
-        buttonItem.addEventListener("click", () => {
-          addIdeaToCollection(doc.id);
-        });
-
-        const friendsNames = document.createTextNode(`${doc.id}`);
-        buttonItem.appendChild(friendsNames);
-        listItem.appendChild(buttonItem);
-        list.appendChild(listItem);
-      });
-
-      friendsList.appendChild(list);
-    })
-
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
-}
-
-// ********** Add Gift Idea to Friend's Collection of ideas ************
+// ********************** Add Gift Idea to Friend's Collection of ideas ***********************
 
 async function addIdeaToCollection(friendsName, giftTitle) {
   console.log("Event Listener Triggered! ");
@@ -244,7 +211,7 @@ async function addIdeaToCollection(friendsName, giftTitle) {
     });
 }
 
-// ********** Outputs the list of gift ideas belonging to User ************
+// ********************* Outputs the list of gift ideas belonging to User *********************
 
 async function renderWishlist() {
   displayGift.innerHTML = `<h2> My List </h2>`;
@@ -277,7 +244,7 @@ async function renderWishlist() {
               theImage.src = url;
             })
             .catch((error) => {
-              // Handle any errors
+              console.error("Error writing document: ", error);
             });
           card.appendChild(theImage);
         }
@@ -308,7 +275,7 @@ async function renderWishlist() {
     });
 }
 
-// ***************** Editing Wishes on user list *******************
+// ******************************* Editing Wishes on user list ********************************
 
 function editWish(doc) {
   editCard.classList.remove("hide");

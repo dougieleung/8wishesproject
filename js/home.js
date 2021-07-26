@@ -1,3 +1,10 @@
+// ********************************************************************************************
+// ************************ This page is the code related to home page ************************
+// ********************************************************************************************
+
+
+// *************************** global variables used in the script ****************************
+
 const userFriendsList = [];
 const sortedEventsArray = [];
 const eventsWrapper = document.querySelector("#events-wrapper");

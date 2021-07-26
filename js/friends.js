@@ -2,23 +2,21 @@
 // *************** This page is the code related to friend's names and gift list **************
 // ********************************************************************************************
 
-console.log("Friends JS Connected!");
+console.log("Connected to friends.js");
 
-// const friendsIntroPageContent = document.querySelector('#friendsIntroPageContent')
+// *************************** global variables used in the script ****************************
 
-// window.addEventListener('load', friendsListfromDB());
-
+const addFriendBtn = document.querySelector("#addFriendBtn");
 const friendListOutput = document.querySelector("#friendListOutput");
 const seeFriendsList = document.querySelector("#seeFriendsList");
 const friendsProfile = document.querySelector("#friendsProfile");
-const friendNameEventContainer = document.querySelector(
-  "#friendNameEventContainer"
-);
+const friendEventSelect = document.querySelector("#friendEventSelect");
+const friendNameEventContainer = document.querySelector("#friendNameEventContainer");
+const createEvent = document.querySelector("#createEvent");
 
 async function friendsListfromDB() {
   console.log("friends list summary!");
   const friendsListArray = [];
-  // friendsIntroPageContent.innerHTML = "";
   console.log(firebase.auth().currentUser.uid);
   await db
     .collection(firebase.auth().currentUser.uid)
@@ -78,16 +76,16 @@ async function friendsListfromDB() {
 
 seeFriendsList.addEventListener("click", friendsListfromDB);
 
-// *************************** Create Friends Obj via class ************************
+// ********************************* Create Friends Obj via class *****************************
 
 const friendsWishlist = document.querySelector("#friendsWishlist");
 let createEventInput, newFriendObj;
 
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
-    (this.friendName = friendName),
-      (this.eventName = friendEvent),
-      (this.eventDate = friendDate);
+      this.friendName = friendName,
+      this.eventName = friendEvent,
+      this.eventDate = friendDate
   }
   resetInputs() {
     friendName.value = "";
@@ -101,7 +99,7 @@ class addFriendClass {
   }
 }
 
-// ************** Adding Friend and checking if Friend's Name is in Firestore ***************
+// *************** Adding Friend and checking if Friend's Name is in Firestore ****************
 
 addFriendBtn.addEventListener("click", () => {
   // event.preventDefault();
@@ -196,7 +194,7 @@ async function addFriendToFirestore(friendName, friendObject) {
     }
   }
 }
-// ************************ Create (Other) New Event input field *********************
+// ***************************** Create (Other) New Event input field *************************
 
 friendEventSelect.addEventListener("change", () => {
   if (friendEventSelect.value === "Other") {

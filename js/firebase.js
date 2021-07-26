@@ -1,7 +1,9 @@
-"use strict";
-// this will throw errors when any syntax is missed or wrong, has GLOBAL SCOPE
+// ********************************************************************************************
+// ********************* This page is the code for Firebase Initialization ********************
+// ********************************************************************************************
 
-console.log('CONNECTED TO  firebase.JS FILE!!!!')
+
+console.log("Connected to firebase.js");
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -22,7 +24,6 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 // To add a new document to a collection you can use add() method of collection:
 // db.collection('Collection_Name').add('Object_to_Add')
-
 
 // images storage
 var storage = firebase.storage();
