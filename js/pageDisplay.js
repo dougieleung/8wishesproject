@@ -1,6 +1,13 @@
-console.log("pageDisplay.js CONNECTED");
+// ********************************************************************************************
+// **************** This page is the code connecting sections within html pages ***************
+// ********************************************************************************************
+
+
+console.log("Connected to pageDisplay.js");
 
 // ================== Fetching from DOM for Gift Idea Page ===================
+
+// *************************** global variables used in the script ****************************
 
 const startIdeaBtn = document.querySelector("#startIdeaBtn");
 const backToStart = document.querySelector("#backToStart");

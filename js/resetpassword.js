@@ -1,12 +1,19 @@
-// ************************** RESET USER PASSWORD *****************************
+// ********************************************************************************************
+// *********** This page is the code connecting sections within register+login.html ***********
+// ********************************************************************************************
+
+
+console.log("Connected to resetpassword.js");
+
+// ************************************ Reset user password ***********************************
 
 // Forgot Password: Send e-mail to reset
 const emailtoreset = document.querySelector("#email_to_reset");
 const resetPassword = document.querySelector("#reset_password");
 
-const backtologin = document.querySelector('#backtologin');
-const resetfeedback = document.querySelector('#resetfeedback');
-const noreset = document.querySelector('#noreset');
+const backtologin = document.querySelector("#backtologin");
+const resetfeedback = document.querySelector("#resetfeedback");
+const noreset = document.querySelector("#noreset");
 
 resetPassword.addEventListener("click", (event) => {
     event.preventDefault();
@@ -34,7 +41,7 @@ resetPassword.addEventListener("click", (event) => {
     }
 });
 
-backtologin.addEventListener('click', () => {
+backtologin.addEventListener("click", () => {
 
     noreset.style.display = "flex";
     backtologin.style.display = "none";

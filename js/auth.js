@@ -1,9 +1,12 @@
-"use strict";
-// this will throw errors when any syntax is missed or wrong, has GLOBAL SCOPE
+// ********************************************************************************************
+// ***************** This page is the code for authentication, login, register ****************
+// ********************************************************************************************
 
-// ********************** FIREBASE AUTHENTICATION *****************************
 
-// firebase.auth().currentuser.uid
+const errorLogin = document.querySelector("error-login");
+
+// ******************************** Firebase Authentication ***********************************
+
 let newUser = null;
 
 function redirectToHomePage() {
@@ -15,14 +18,15 @@ function redirectToHomePage() {
     alert("Please login first!");
   }
 }
-// *************************** CREATE USER OBJECT *****************************
+
+// *********************************** Create User Object *************************************
 
 class userInfo {
   constructor(username, email) {
     (this.username = username), (this.email = email);
   }
   literalObject() {
-    return { name: this.username, email: this.email }; //makes recognizable for DB
+    return { name: this.username, email: this.email }; //recognizable to Firestore DB
   }
   signUp(email, password, username) {
     firebase
@@ -47,7 +51,7 @@ class userInfo {
   }
 }
 
-// ************************ NEW USER REGISTRATION *****************************
+// ********************************* New User Registration ************************************
 
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -66,7 +70,7 @@ registerForm.addEventListener("submit", async (event) => {
   }
 });
 
-// *********************** AUTHENTICATION STATE CHANGE ************************
+// ******************************* Authentication State Change ********************************
 
 firebase.auth().onAuthStateChanged((user) => {
   const notLoggedIn = document.getElementById("not-logged-in");
@@ -89,7 +93,7 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
-// ****************************** USER LOGIN **********************************
+// ************************************** User Login ******************************************
 
 loginButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -122,7 +126,7 @@ loginButton.addEventListener("click", (event) => {
   loginEmail.focus();
 });
 
-// **********************    LOGOUT EXISTING USER    **************************
+// *********************************** Logout Existing User ***********************************
 
 logoutButton.addEventListener("click", () => {
   const notLoggedIn = document.getElementById("not-logged-in");
