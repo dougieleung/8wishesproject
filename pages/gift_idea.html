@@ -280,8 +280,12 @@
         <label for="date">Select a Date</label>
         <input id="friendDate" type="date" id="event" name="event" />
 
+        friendEventAdded.innerHTML = `Successfully added:
+        <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
+
         <!-- Add Friend and Event to Firestore -->
         <button id="addFriendBtn" type="button">Add</button>
+        <div id="friendEventAdded2"></div>
       </section>
 
       <!--**************  #7 (B) If There Are Friends, proceed to page to add events only ************* -->
