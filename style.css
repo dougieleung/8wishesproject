@@ -64,9 +64,10 @@ main #giftcardFriendsDisplay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 3%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1080,7 +1081,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-2 .images,
 .add-idea-3 .images {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 .add-idea-1 #displayDesc,

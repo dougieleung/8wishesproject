@@ -48,7 +48,8 @@ main {
   #giftcardFriendsDisplay {
     background-color: $color_primary;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 3%;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
@@ -306,7 +307,7 @@ main #giftIdeaHomePage {
 
   .images {
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 
   #displayDesc {
