@@ -239,6 +239,9 @@ async function addFriendToFirestore(friendName) {
       .catch((error) => {
         console.error("Error writing document: ", error);
       });
+      friendName2.value = "";
+      friendsListfromDB();
+
   } else {
     if (friendsArray.length !== 0) {
       for (let i = 0; i < friendsArray.length; i++) {
@@ -258,6 +261,9 @@ async function addFriendToFirestore(friendName) {
             .catch((error) => {
               console.error("Error writing document: ", error);
             });
+            friendName2.value = "";
+            friendsListfromDB();
+
         } else {
           alert("Friend already exists!");
         }
