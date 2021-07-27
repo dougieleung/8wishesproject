@@ -30,7 +30,8 @@ body {
 }
 
 #giftIdeaProcess section {
-  height: 89vh;
+  height: 90vh;
+  border: none;
 }
 
 main #loginPage,
@@ -48,7 +49,8 @@ main #resetContainer,
 main #takePhoto,
 main #addEventPage,
 main #friendAddedPage,
-main #editCard {
+main #editCard,
+main #giftcardFriendsDisplay {
   background-color: #363d51;
   display: flex;
   justify-content: space-evenly;
@@ -90,7 +92,9 @@ main #addEventPage #btn_AddGiftIdea,
 main #friendAddedPage .loggedin #btn_logout,
 main #friendAddedPage #btn_AddGiftIdea,
 main #editCard .loggedin #btn_logout,
-main #editCard #btn_AddGiftIdea {
+main #editCard #btn_AddGiftIdea,
+main #giftcardFriendsDisplay .loggedin #btn_logout,
+main #giftcardFriendsDisplay #btn_AddGiftIdea {
   color: #212531;
   margin: 2rem;
 }
@@ -126,7 +130,9 @@ main #addEventPage #btn_AddGiftIdea a,
 main #friendAddedPage .loggedin #btn_logout a,
 main #friendAddedPage #btn_AddGiftIdea a,
 main #editCard .loggedin #btn_logout a,
-main #editCard #btn_AddGiftIdea a {
+main #editCard #btn_AddGiftIdea a,
+main #giftcardFriendsDisplay .loggedin #btn_logout a,
+main #giftcardFriendsDisplay #btn_AddGiftIdea a {
   text-decoration: none;
   color: #212531;
 }
@@ -146,7 +152,8 @@ main #resetContainer #registerForm .form-item,
 main #takePhoto #registerForm .form-item,
 main #addEventPage #registerForm .form-item,
 main #friendAddedPage #registerForm .form-item,
-main #editCard #registerForm .form-item {
+main #editCard #registerForm .form-item,
+main #giftcardFriendsDisplay #registerForm .form-item {
   width: 100%;
 }
 
@@ -165,7 +172,8 @@ main #resetContainer #registerForm .form-item #registerButton,
 main #takePhoto #registerForm .form-item #registerButton,
 main #addEventPage #registerForm .form-item #registerButton,
 main #friendAddedPage #registerForm .form-item #registerButton,
-main #editCard #registerForm .form-item #registerButton {
+main #editCard #registerForm .form-item #registerButton,
+main #giftcardFriendsDisplay #registerForm .form-item #registerButton {
   margin-left: 0.3rem;
 }
 
@@ -200,7 +208,9 @@ main #addEventPage #registerForm,
 main #friendAddedPage #not-logged-in,
 main #friendAddedPage #registerForm,
 main #editCard #not-logged-in,
-main #editCard #registerForm {
+main #editCard #registerForm,
+main #giftcardFriendsDisplay #not-logged-in,
+main #giftcardFriendsDisplay #registerForm {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -271,7 +281,11 @@ main #friendAddedPage #registerForm span,
 main #editCard #not-logged-in a,
 main #editCard #not-logged-in span,
 main #editCard #registerForm a,
-main #editCard #registerForm span {
+main #editCard #registerForm span,
+main #giftcardFriendsDisplay #not-logged-in a,
+main #giftcardFriendsDisplay #not-logged-in span,
+main #giftcardFriendsDisplay #registerForm a,
+main #giftcardFriendsDisplay #registerForm span {
   color: #212531;
 }
 
@@ -370,7 +384,13 @@ main #editCard #not-logged-in .link3,
 main #editCard #not-logged-in span,
 main #editCard #registerForm .link2,
 main #editCard #registerForm .link3,
-main #editCard #registerForm span {
+main #editCard #registerForm span,
+main #giftcardFriendsDisplay #not-logged-in .link2,
+main #giftcardFriendsDisplay #not-logged-in .link3,
+main #giftcardFriendsDisplay #not-logged-in span,
+main #giftcardFriendsDisplay #registerForm .link2,
+main #giftcardFriendsDisplay #registerForm .link3,
+main #giftcardFriendsDisplay #registerForm span {
   color: #f9f9fb;
 }
 
@@ -597,7 +617,21 @@ main #editCard #registerForm #username,
 main #editCard #registerForm #email,
 main #editCard #registerForm #password,
 main #editCard #registerForm #confirmPassword,
-main #editCard #registerForm #registerButton {
+main #editCard #registerForm #registerButton,
+main #giftcardFriendsDisplay #not-logged-in input#email1,
+main #giftcardFriendsDisplay #not-logged-in #password1,
+main #giftcardFriendsDisplay #not-logged-in #username,
+main #giftcardFriendsDisplay #not-logged-in #email,
+main #giftcardFriendsDisplay #not-logged-in #password,
+main #giftcardFriendsDisplay #not-logged-in #confirmPassword,
+main #giftcardFriendsDisplay #not-logged-in #registerButton,
+main #giftcardFriendsDisplay #registerForm input#email1,
+main #giftcardFriendsDisplay #registerForm #password1,
+main #giftcardFriendsDisplay #registerForm #username,
+main #giftcardFriendsDisplay #registerForm #email,
+main #giftcardFriendsDisplay #registerForm #password,
+main #giftcardFriendsDisplay #registerForm #confirmPassword,
+main #giftcardFriendsDisplay #registerForm #registerButton {
   padding: 0.7rem;
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
@@ -640,7 +674,9 @@ main #addEventPage #registerForm .forgot-password,
 main #friendAddedPage #not-logged-in .forgot-password,
 main #friendAddedPage #registerForm .forgot-password,
 main #editCard #not-logged-in .forgot-password,
-main #editCard #registerForm .forgot-password {
+main #editCard #registerForm .forgot-password,
+main #giftcardFriendsDisplay #not-logged-in .forgot-password,
+main #giftcardFriendsDisplay #registerForm .forgot-password {
   text-align: right;
 }
 
@@ -675,7 +711,9 @@ main #addEventPage #registerForm #registerButton,
 main #friendAddedPage #not-logged-in #registerButton,
 main #friendAddedPage #registerForm #registerButton,
 main #editCard #not-logged-in #registerButton,
-main #editCard #registerForm #registerButton {
+main #editCard #registerForm #registerButton,
+main #giftcardFriendsDisplay #not-logged-in #registerButton,
+main #giftcardFriendsDisplay #registerForm #registerButton {
   background-color: #86e4de;
   border-color: #86e4de;
   color: #212531;
@@ -696,7 +734,8 @@ main #resetContainer h2,
 main #takePhoto h2,
 main #addEventPage h2,
 main #friendAddedPage h2,
-main #editCard h2 {
+main #editCard h2,
+main #giftcardFriendsDisplay h2 {
   color: #f9f9fb;
   text-align: center;
 }
@@ -716,7 +755,8 @@ main #resetContainer label,
 main #takePhoto label,
 main #addEventPage label,
 main #friendAddedPage label,
-main #editCard label {
+main #editCard label,
+main #giftcardFriendsDisplay label {
   padding: 0;
 }
 
@@ -735,7 +775,8 @@ main #resetContainer .footer-login,
 main #takePhoto .footer-login,
 main #addEventPage .footer-login,
 main #friendAddedPage .footer-login,
-main #editCard .footer-login {
+main #editCard .footer-login,
+main #giftcardFriendsDisplay .footer-login {
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -757,7 +798,8 @@ main #resetContainer #registerForm .footer-register,
 main #takePhoto #registerForm .footer-register,
 main #addEventPage #registerForm .footer-register,
 main #friendAddedPage #registerForm .footer-register,
-main #editCard #registerForm .footer-register {
+main #editCard #registerForm .footer-register,
+main #giftcardFriendsDisplay #registerForm .footer-register {
   text-align: center;
   margin-top: 1rem;
 }
@@ -793,7 +835,9 @@ main #addEventPage #registerForm .footer-register a,
 main #friendAddedPage #registerForm .footer-register span,
 main #friendAddedPage #registerForm .footer-register a,
 main #editCard #registerForm .footer-register span,
-main #editCard #registerForm .footer-register a {
+main #editCard #registerForm .footer-register a,
+main #giftcardFriendsDisplay #registerForm .footer-register span,
+main #giftcardFriendsDisplay #registerForm .footer-register a {
   color: #f9f9fb;
 }
 
@@ -822,7 +866,9 @@ main #demo-page .demo-carousel {
   align-items: center;
 }
 
-main #demo-page #demopage1, main #demo-page #demopage2, main #demo-page #demopage3 {
+main #demo-page #demopage1,
+main #demo-page #demopage2,
+main #demo-page #demopage3 {
   flex-direction: column;
 }
 
@@ -1598,6 +1644,37 @@ footer {
   }
 }
 
+#giftcardFriendsDisplay {
+  height: 90vh;
+  border: none;
+}
+
+#friendName2 {
+  display: flex;
+  border-radius: 1.5rem;
+  padding: 1rem 4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: none;
+  font-family: "Livvic", sans-serif;
+}
+
+#addFriendBtn2 {
+  border-radius: 1.5rem;
+  padding: 1rem 5rem;
+  border-style: none;
+  background-color: #c7beff;
+  color: #212531;
+  transition: all 0.5s ease;
+  font-family: "Livvic", sans-serif;
+}
+
+#addFriendBtn2:hover {
+  color: #f9f9fb;
+  background-color: #8177c3;
+}
+
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */
@@ -1665,6 +1742,10 @@ body #demopage3 .show {
 
 /* ============== Intro Pages ========================= */
 /* Styles according to design ========================== */
+.bottom_navbar {
+  background-color: #4a5470;
+}
+
 .bottom_navbar ul {
   padding: 1rem;
   margin: 0;

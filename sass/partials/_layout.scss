@@ -49,8 +49,6 @@ body #demopage3 .hide {
   display: none;
 }
 
-
-
 body #giftIdeaProcess .show,
 body #friendsListProcess .show,
 body #introPages .show,
@@ -68,6 +66,8 @@ body #demopage3 .show {
 
 /* Styles according to design ========================== */
 .bottom_navbar {
+  background-color: lighten($color_primary, 10%);
+
   ul {
     padding: 1rem;
     margin: 0;
