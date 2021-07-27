@@ -23,7 +23,7 @@ function geoLocation () {
       
       status.textContent = '';
       mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-      mapLink.textContent = `Latitude ${latitude.toFixed(2)} °, Longitude ${longitude.toFixed(2)} °`;
+      mapLink.textContent = `Click to see the map!`;
     }
   
     function error() {

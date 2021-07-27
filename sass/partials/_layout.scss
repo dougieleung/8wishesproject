@@ -42,7 +42,10 @@ body #addFriendPage .hide,
 body #giftcard_display .hide,
 body .editCard .hide,
 body section#editCardFriends.hide,
-body section#giftcardFriendsDisplay.hide {
+body section#giftcardFriendsDisplay.hide,
+body #demopage1 .hide,
+body #demopage2 .hide,
+body #demopage3 .hide {
   display: none;
 }
 
@@ -54,7 +57,10 @@ body #introPages .show,
 body #listEmptyPage .show,
 body #addFriendPage .show,
 body #giftcard_display .show,
-body .editCard .show {
+body .editCard .show,
+body #demopage1 .show,
+body #demopage2 .show,
+body #demopage3 .show {
   display: flex;
 }
 

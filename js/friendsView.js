@@ -13,9 +13,12 @@ const giftcardFriendsDisplay = document.querySelector("#giftcardFriendsDisplay")
 const editCardFriends = document.querySelector('#editCardFriends');
 const saveEditFriendsBtn = document.querySelector('#saveEditFriends');
 const deleteWishFriendsBtn = document.querySelector('#deleteWishFriends');
-
+const addFriendPage2 = document.querySelector("#addFriendPage2");
+const addFriendBtn2 = document.querySelector("#addFriendBtn2");
 
 let friendID;
+
+// ***************** Function #1: Retrieve list of friends from Firestore *********************
 
 async function friendsListfromDB() {
 
@@ -41,11 +44,12 @@ async function friendsListfromDB() {
         const seeListBtn = document.createElement("button");
         seeListBtn.innerText = "See List";
         listItem.appendChild(seeListBtn);
-        // listItem.appendChild(friendsWishlist);
-
+   
         seeListBtn.addEventListener("click", function () {
           friendID = this.parentElement.innerText.slice(0, -8);
           friendsWishlist.classList.remove("hide");
+          
+          // Please see Function #2
           renderTHISFriendList(friendID);
         });
       });
@@ -57,9 +61,10 @@ async function friendsListfromDB() {
       console.log("Error getting document:", error);
     });
 }
-
+// Call the function so when we navigate to friendsView.html, the list of friends are shown.
 friendsListfromDB();
 
+// ****************** Function #2: Retrieve list of gift ideas for Friends ********************
 
 let storageRef = storage.ref();
 async function renderTHISFriendList(friendID) {
@@ -85,8 +90,7 @@ async function renderTHISFriendList(friendID) {
         const giftHeader = document.createElement("h3");
         giftHeader.innerText = `${item.data().wishTitle}`;
         card.appendChild(giftHeader);
-        // Add the image / photo here
-        //Image
+      
         if (item.data().storeImage != "") {
           const theImage = document.createElement("img");
           storageRef
@@ -118,6 +122,8 @@ async function renderTHISFriendList(friendID) {
         card.appendChild(editBtn);
         editBtn.addEventListener("click", async function () {
           console.log("Edit Button Clicked");
+ 
+          // Please see #3 Function
           editWish(item);
         });
       });
@@ -127,8 +133,7 @@ async function renderTHISFriendList(friendID) {
     });
 }
 
-
-// ******************************* Editing Wishes on user list ********************************
+// ********************* Function #3: Editing Wishes on user list *****************************
 
 function editWish(doc) {
   console.log('inside EditWish')
@@ -144,9 +149,7 @@ function editWish(doc) {
       wishTitle: wishTitleEdit.value,
       wishDesc: wishDescEdit.value,
     };
-    // editCardFriends.classList.add('hide');
-    // renderWishlist();
-    // giftcardFriendsDisplay.classList.remove('hide');
+ 
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("Friends")
@@ -158,9 +161,12 @@ function editWish(doc) {
 
     editCardFriends.classList.add("hide");
     friendsWishlist.innerHTML = "";
+    // Please see #2 Function
     renderTHISFriendList();
     giftcardFriendsDisplay.classList.remove("hide");
   });
+
+// ********************* Function #4: Deleting Wishes from user list **************************
 
   deleteWishFriendsBtn.addEventListener("click", async function () {
     console.log("Delete Button Clicked");
@@ -180,7 +186,88 @@ function editWish(doc) {
       });
     editCardFriends.classList.add("hide");
     friendsWishlist.innerHTML = "";
+    // Please see #2 Function
     renderTHISFriendList();
     giftcardFriendsDisplay.classList.remove("hide");
   });
+}
+
+// ********************** Event Listener: Adding Friends to Firestore *************************
+
+addFriendBtn2.addEventListener("click", () => {
+
+  // Converting every word for name to UpperCase Letter
+  const friendsName = friendName2.value
+    .trim()
+    .toLowerCase()
+    .split(" ")
+    .map((eachWord) => eachWord.charAt(0).toUpperCase() + eachWord.substring(1))
+    .join(" ");
+
+    addFriendToFirestore(friendsName);
+
+});
+
+// *********************** Function #5: Adding Friends to Firestore ***************************
+
+async function addFriendToFirestore(friendName) {
+  const friendsArray = [];
+
+  await db
+    .collection(firebase.auth().currentUser.uid)
+    .doc("Friends")
+    .collection("List")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        friendsArray.push(doc.id);
+        console.log(friendsArray);
+      });
+    });
+  if (friendsArray.length === 0) {
+    await db
+      .collection(firebase.auth().currentUser.uid)
+      .doc("Friends")
+      .collection("List")
+      .doc(friendName)
+      .set({
+      friendName: friendName
+      })
+      .then(() => {
+        console.log("Document successfully written!");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
+      friendName2.value = "";
+      friendsListfromDB();
+
+  } else {
+    if (friendsArray.length !== 0) {
+      for (let i = 0; i < friendsArray.length; i++) {
+        if (friendName !== friendsArray[i]) {
+          await db
+            .collection(firebase.auth().currentUser.uid)
+            .doc("Friends")
+            .collection("List")
+
+            .doc(friendName)
+            .set({
+            friendName: friendName
+            })
+            .then(() => {
+              console.log("Document successfully written!");
+            })
+            .catch((error) => {
+              console.error("Error writing document: ", error);
+            });
+            friendName2.value = "";
+            friendsListfromDB();
+
+        } else {
+          alert("Friend already exists!");
+        }
+      }
+    }
+  }
 }
