@@ -22,7 +22,8 @@ body {
   font-family: $font_body;
 
   section {
-    height: 89vh;
+    height: 90vh;
+    border: none;
   }
 }
 
@@ -921,6 +922,11 @@ footer {
 }
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////
+
+#giftcardFriendsDisplay {
+  height: 90vh;
+  border: none;
+}
 
 #friendName2 {
   display: flex;

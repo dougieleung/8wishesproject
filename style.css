@@ -30,7 +30,8 @@ body {
 }
 
 #giftIdeaProcess section {
-  height: 89vh;
+  height: 90vh;
+  border: none;
 }
 
 main #loginPage,
@@ -1641,6 +1642,11 @@ footer {
   #desktopView {
     display: block;
   }
+}
+
+#giftcardFriendsDisplay {
+  height: 90vh;
+  border: none;
 }
 
 #friendName2 {
