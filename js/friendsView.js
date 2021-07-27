@@ -50,7 +50,8 @@ async function friendsListfromDB() {
         container.appendChild(seeListBtn);
      
         seeListBtn.addEventListener("click", function () {
-          friendID = this.parentElement.innerText.slice(0, -8);
+          friendID = nameItem.innerText;
+        
           friendsWishlist.classList.remove("hide");
           
           // Please see Function #2
