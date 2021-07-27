@@ -1736,6 +1736,10 @@ body #demopage3 .show {
 
 /* ============== Intro Pages ========================= */
 /* Styles according to design ========================== */
+.bottom_navbar {
+  background-color: #4a5470;
+}
+
 .bottom_navbar ul {
   padding: 1rem;
   margin: 0;
