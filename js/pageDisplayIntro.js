@@ -17,8 +17,8 @@ const demopage3 = document.querySelector("#demopage3");
 const ellipsis1 = document.querySelector("#ellipsis1");
 const ellipsis2 = document.querySelector("#ellipsis2");
 const ellipsis3 = document.querySelector("#ellipsis3");
-// const signUpBtn = document.querySelector("#sign-up");
-// const loginBtn = document.querySelector("#log-in");
+const signUpBtn = document.querySelector("#sign-up");
+const loginBtn = document.querySelector("#log-in");
 const loginPage = document.querySelector("#loginPage");
 const loginLink = document.querySelector("#loginLink");
 const registerLink = document.querySelector("#registerLink");
@@ -48,19 +48,19 @@ ellipsis3.addEventListener("click", () => {
     demopage1.classList.toggle('hide');
 })
 
-// signUpBtn.addEventListener("click", () => {
+signUpBtn.addEventListener("click", () => {
 
-//     demoPage.classList.remove('show');
-//     demoPage.classList.add('hide');
-//     registerPage.classList.toggle('hide');
+    demoPage.classList.remove('show');
+    demoPage.classList.add('hide');
+    registerPage.classList.toggle('hide');
 
-// })
+})
 
-// loginBtn.addEventListener("click", () => {
-//     demoPage.classList.remove('show');
-//     demoPage.classList.add('hide');
-//     loginPage.classList.toggle('hide');
-// })
+loginBtn.addEventListener("click", () => {
+    demoPage.classList.remove('show');
+    demoPage.classList.add('hide');
+    loginPage.classList.toggle('hide');
+})
 
 skiptologin.addEventListener("click", () => {
     welcomePage.classList.remove('show');
