@@ -99,7 +99,7 @@ body #demopage3 .show {
 
 /* Styles according to design ========================== */
 .bottom_navbar {
-  background-color: lighten($color_primary, 10%);
+  background-color: $color_neutral_white;
 
   ul {
     padding: 1rem;

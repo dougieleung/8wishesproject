@@ -7,7 +7,8 @@ body {
 #welcomePage,
 #demo-page,
 #registerPage,
-#loginPage {
+#loginPage,
+#StoresPage {
   height: 100vh;
 }
 
@@ -32,6 +33,7 @@ main {
   #registerPage,
   #welcomePage,
   #giftIdeaHomePage,
+  #StoresPage,
   #giftIdeaAdd,
   #summaryCard,
   #complete,
@@ -957,4 +959,26 @@ body #desktopView {
     color: $color_button_hover_text;
     background-color: $color_button_hover_purple_bg;
   }
+}
+
+
+// Stores Under Construction Page
+
+#StoresPage {
+background-color: $color_primary;
+}
+.constContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.constContainer h1 {
+  color: $color_neutral_white;
+  align-self: center;
+}
+
+.constContainer img {
+  align-self: center;
+  max-width: 90%;
+  margin: 20vh 0;
 }
