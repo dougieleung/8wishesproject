@@ -864,6 +864,13 @@ main #demo-page .demo-carousel {
           align-items: center;
 }
 
+main #demo-page #demopage1, main #demo-page #demopage2, main #demo-page #demopage3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 main #demo-page .fas {
   justify-self: baseline;
 }
@@ -1859,6 +1866,16 @@ footer {
   background-color: #F9F9FB;
 }
 
+#desktopView {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  #desktopView {
+    display: block;
+  }
+}
+
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */
@@ -1911,7 +1928,10 @@ body #addFriendPage .hide,
 body #giftcard_display .hide,
 body .editCard .hide,
 body section#editCardFriends.hide,
-body section#giftcardFriendsDisplay.hide {
+body section#giftcardFriendsDisplay.hide,
+body #demopage1 .hide,
+body #demopage2 .hide,
+body #demopage3 .hide {
   display: none;
 }
 
@@ -1921,7 +1941,10 @@ body #introPages .show,
 body #listEmptyPage .show,
 body #addFriendPage .show,
 body #giftcard_display .show,
-body .editCard .show {
+body .editCard .show,
+body #demopage1 .show,
+body #demopage2 .show,
+body #demopage3 .show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

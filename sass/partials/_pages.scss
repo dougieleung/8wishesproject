@@ -181,6 +181,10 @@ main #demo-page {
     align-items: center;
   }
 
+#demopage1, #demopage2, #demopage3 {
+    flex-direction: column;
+}  
+
   .fas {
     justify-self: baseline;
   }
@@ -899,4 +903,17 @@ footer {
   position: sticky;
   bottom: 0;
   background-color: $color_neutral_white;
+}
+
+
+// Desktop View of video and welcome message
+
+#desktopView {
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  #desktopView {
+    display: block;  
+  } 
 }
