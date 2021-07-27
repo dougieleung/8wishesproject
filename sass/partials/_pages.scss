@@ -982,3 +982,18 @@ background-color: $color_primary;
   max-width: 90%;
   margin: 20vh 0;
 }
+
+// FriendsView.html styling
+
+#friendsSeeList {
+  width: 300px;
+  align-self: center;
+  flex: 0 0 50%;
+}
+
+.nameContainer {
+  margin: 2% 0;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
