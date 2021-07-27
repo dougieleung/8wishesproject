@@ -64,6 +64,17 @@ body #demopage3 .show {
 
 /* ============== Intro Pages ========================= */
 
+#demopage1, #demopage2, #demopage3 {
+  display: flex;
+}
+
+#demopage1 p, #demopage2 p, #demopage3 p {
+  font-family: $font_body;
+  align-self: center;
+  font-size: 1.2rem;
+  margin-top: 12vh;
+}
+
 /* Styles according to design ========================== */
 .bottom_navbar {
   background-color: lighten($color_primary, 10%);
