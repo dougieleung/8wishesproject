@@ -1,4 +1,4 @@
-console.log("MAIN.JS CONNECTED");
+console.log("Connected main.js");
 
 // Declaring variables from DOM
 const usernameInput = document.querySelector("#username");
