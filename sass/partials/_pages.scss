@@ -911,14 +911,19 @@ footer {
 
 // Desktop View of video and welcome message
 
-#desktopView {
+body #desktopView {
   display: none;
 }
 
 @media only screen and (min-width: 1000px) {
-  #desktopView {
-    display: block;
+  body #desktopView {
+    display: flex;
+    flex-direction: column;
   }
+  #welcomePage {
+    height: 170vh;
+  }
+
 }
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////

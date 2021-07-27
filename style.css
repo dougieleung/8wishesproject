@@ -1916,13 +1916,22 @@ footer {
   background-color: #f9f9fb;
 }
 
-#desktopView {
+body #desktopView {
   display: none;
 }
 
 @media only screen and (min-width: 1000px) {
-  #desktopView {
-    display: block;
+  body #desktopView {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #welcomePage {
+    height: 170vh;
   }
 }
 
@@ -2052,6 +2061,28 @@ body #demopage3 .show {
       align-self: center;
   font-size: 1.2rem;
   margin-top: 12vh;
+}
+
+#desktopView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#desktopView p {
+  max-width: 50vw;
+}
+
+#desktopView p .teamQuote {
+  color: #ff90a3;
+}
+
+#desktopView p:first-of-type {
+  margin-top: 10vh;
 }
 
 /* Styles according to design ========================== */
@@ -3077,6 +3108,13 @@ section > a {
   width: 4rem;
   margin-top: 12vh;
   margin-bottom: 5vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#desktopView video {
+  margin-top: 5vh;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
