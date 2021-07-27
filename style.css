@@ -2033,9 +2033,7 @@ body #desktopView {
 
 .constContainer h1 {
   color: #f9f9fb;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  text-align: center;
 }
 
 .constContainer img {
