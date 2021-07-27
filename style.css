@@ -1225,6 +1225,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
   margin: 5%;
   background-color: #363d51;
   border-style: none;
+  width: 25%;
 }
 
 main #takePhoto {
