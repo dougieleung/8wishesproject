@@ -28,6 +28,7 @@ body {
 }
 
 main {
+
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -313,6 +314,7 @@ main #giftIdeaHomePage {
   }
 
   #ideaForm {
+
     #gift_title,
     #gift_description {
       background: none;
@@ -398,6 +400,7 @@ main #giftIdeaHomePage {
   margin: 5%;
   background-color: $color_primary;
   border-style: none;
+
 }
 
 // #camera_btn i,
@@ -820,6 +823,7 @@ main #listEmptyPage {
 #addEventPage {
   display: flex;
   justify-content: center;
+
   h1 {
     margin: 0;
   }
