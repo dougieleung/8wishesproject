@@ -240,7 +240,7 @@ async function addFriendToFirestore(friendName) {
         console.error("Error writing document: ", error);
       });
       friendName2.value = "";
-      friendsListfromDB();
+      location.href = "friendsView.html";
 
   } else {
     if (friendsArray.length !== 0) {
@@ -262,7 +262,7 @@ async function addFriendToFirestore(friendName) {
               console.error("Error writing document: ", error);
             });
             friendName2.value = "";
-            friendsListfromDB();
+            location.href = "friendsView.html";
 
         } else {
           alert("Friend already exists!");

@@ -2,7 +2,6 @@
 // ***************** This page is the code for authentication, login, register ****************
 // ********************************************************************************************
 
-
 const errorLogin = document.querySelector("error-login");
 
 // ******************************** Firebase Authentication ***********************************
@@ -12,7 +11,7 @@ let newUser = null;
 function redirectToHomePage() {
   if (firebase.auth().currentUser.uid) {
     window.setTimeout(function () {
-      window.location.href = "./home.html";
+      window.location.href = "/pages/home.html";
     }, 500);
   } else {
     alert("Please login first!");

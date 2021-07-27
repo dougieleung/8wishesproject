@@ -126,9 +126,9 @@
 }
 
 #nav_btn3 {
-  background-color: $color_card_bg2;
-  border-color: $color_card_bg2;
+  background-color: $color_home_button;
   margin-top: 1rem;
+  border-style: none;
 }
 
 .editButton {
@@ -221,6 +221,7 @@ section > a {
   align-self: baseline;
 }
 
-.nav_btn:hover {
-  box-shadow: 5px 10px 10px $color_neutral_gray;
-}
+// .nav_btn:hover {
+//   box-shadow: 5px 10px 10px $color_neutral_gray;
+// }
+

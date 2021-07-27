@@ -22,7 +22,8 @@ body {
   font-family: $font_body;
 
   section {
-    height: 89vh;
+    height: 90vh;
+    border: none;
   }
 }
 
@@ -42,7 +43,8 @@ main {
   #takePhoto,
   #addEventPage,
   #friendAddedPage,
-  #editCard {
+  #editCard,
+  #giftcardFriendsDisplay {
     background-color: $color_primary;
     display: flex;
     justify-content: space-evenly;
@@ -181,9 +183,11 @@ main #demo-page {
     align-items: center;
   }
 
-#demopage1, #demopage2, #demopage3 {
+  #demopage1,
+  #demopage2,
+  #demopage3 {
     flex-direction: column;
-}  
+  }
 
   .fas {
     justify-self: baseline;
@@ -391,7 +395,7 @@ main #giftIdeaHomePage {
 
 #camera_btn,
 #gallery_btn {
-  margin:5%;
+  margin: 5%;
   background-color: $color_primary;
   border-style: none;
 }
@@ -905,15 +909,47 @@ footer {
   background-color: $color_neutral_white;
 }
 
-
 // Desktop View of video and welcome message
 
 #desktopView {
-    display: none;
+  display: none;
 }
 
 @media only screen and (min-width: 1000px) {
   #desktopView {
-    display: block;  
-  } 
+    display: block;
+  }
+}
+
+//////////////////////// FRIENDS PAGE ///////////////////////////////////
+
+#giftcardFriendsDisplay {
+  height: 90vh;
+  border: none;
+}
+
+#friendName2 {
+  display: flex;
+  border-radius: 1.5rem;
+  padding: 1rem 4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: none;
+  font-family: $font_body;
+}
+
+#addFriendBtn2 {
+  border-radius: 1.5rem;
+  padding: 1rem 5rem;
+  border-style: none;
+  background-color: $color_card_bg;
+  color: $color_text_dark;
+  transition: all 0.5s ease;
+  font-family: $font_body;
+
+  &:hover {
+    color: $color_button_hover_text;
+    background-color: $color_button_hover_purple_bg;
+  }
 }

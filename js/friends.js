@@ -13,6 +13,7 @@ const friendsProfile = document.querySelector("#friendsProfile");
 const friendEventSelect = document.querySelector("#friendEventSelect");
 const friendNameEventContainer = document.querySelector("#friendNameEventContainer");
 const createEvent = document.querySelector("#createEvent");
+const friendEventAdded2 = document.querySelector("#friendEventAdded2");
 
 async function friendsListfromDB() {
   console.log("friends list summary!");
@@ -134,6 +135,12 @@ addFriendBtn.addEventListener("click", () => {
     addFriendToFirestore(friendsName, newFriendObj);
     newFriendObj.resetInputs();
     console.log("added to Firestore");
+
+    friendEventAdded2.innerHTML = `Successfully added:
+    <p> ${newFriendObj.eventName} on ${newFriendObj.eventDate} for ${newFriendObj.friendsName}`;
+
+    setTimeout(()=> { location.href = "friendsView.html"}, 1500);
+
   } else {
     alert("all fields are mandatory!");
   }
