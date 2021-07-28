@@ -1108,7 +1108,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-2 #ideaForm #gift_title,
 .add-idea-3 #ideaForm #gift_title {
   color: #f9f9fb;
-  background: none;
+  background: #363d51;
   border: none;
   font-weight: bold;
   font-size: 1.3rem;
@@ -3096,16 +3096,27 @@ section > a {
   width: 2.5cm;
 }
 
+.homeButton svg,
+.storeButton svg,
+.friendsButton svg,
+.listButton svg {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: #6E64AC;
+}
+
 .addButton {
   background-color: #f9f9fb;
   border-color: #6e64ac;
-  color: color_footer_icon;
+  color: #6e64ac;
   font-size: 2rem;
   border-radius: 60%;
   padding: 8px 16px;
 }
 
-#demopage1 img:nth-of-type(1), #demopage2 img:nth-of-type(1), #demopage3 img:nth-of-type(1) {
+#demopage1 img:nth-of-type(1),
+#demopage2 img:nth-of-type(1),
+#demopage3 img:nth-of-type(1) {
   height: auto;
   max-width: 100%;
   -ms-flex-item-align: center;
@@ -3114,7 +3125,9 @@ section > a {
   margin-top: 5vh;
 }
 
-#demopage1 img:nth-of-type(2), #demopage2 img:nth-of-type(2), #demopage3 img:nth-of-type(2) {
+#demopage1 img:nth-of-type(2),
+#demopage2 img:nth-of-type(2),
+#demopage3 img:nth-of-type(2) {
   height: 1rem;
   width: 4rem;
   margin-top: 12vh;
