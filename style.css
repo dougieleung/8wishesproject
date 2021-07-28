@@ -1597,6 +1597,7 @@ main #listEmptyPage #friendtoProfile {
 
 #fetchedFriendsList li {
   list-style-type: none;
+  width: 100vw;
 }
 
 .friendBtn {
@@ -1778,7 +1779,7 @@ body #desktopView {
   margin: 20vh 0;
 }
 
-#fetchedFriendsList li {
+#friendsSeeList #fetchedFriendsList li {
   width: 0;
   margin: 1rem;
 }

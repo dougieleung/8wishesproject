@@ -826,6 +826,7 @@ main #listEmptyPage {
 
 #fetchedFriendsList li {
   list-style-type: none;
+  width: 100vw;
 }
 
 .friendBtn {
@@ -1018,7 +1019,7 @@ body #desktopView {
 
 // FriendsView.html styling
 
-#fetchedFriendsList li {
+#friendsSeeList #fetchedFriendsList li {
   width: 0;
   margin: 1rem;
 }
