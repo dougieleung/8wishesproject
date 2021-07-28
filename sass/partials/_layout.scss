@@ -64,6 +64,8 @@ body #demopage3 .show {
 
 /* ============== Intro Pages ========================= */
 
+// Demo pages
+
 #demopage1, #demopage2, #demopage3 {
   display: flex;
 }
@@ -75,9 +77,29 @@ body #demopage3 .show {
   margin-top: 12vh;
 }
 
+// Video in desktop view
+
+#desktopView {
+  display: flex;
+  flex-direction: column;
+}
+
+// Video in desktop view
+
+#desktopView p {
+  max-width: 50vw;
+  .teamQuote {
+    color: $color_card_bg2;
+  }
+}
+
+#desktopView p:first-of-type {
+  margin-top: 10vh;
+}
+
 /* Styles according to design ========================== */
 .bottom_navbar {
-  background-color: lighten($color_primary, 10%);
+  background-color: $color_neutral_white;
 
   ul {
     padding: 1rem;

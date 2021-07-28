@@ -14,7 +14,8 @@ body {
 #welcomePage,
 #demo-page,
 #registerPage,
-#loginPage {
+#loginPage,
+#StoresPage {
   height: 100vh;
 }
 
@@ -47,6 +48,7 @@ main #loginPage,
 main #registerPage,
 main #welcomePage,
 main #giftIdeaHomePage,
+main #StoresPage,
 main #giftIdeaAdd,
 main #summaryCard,
 main #complete,
@@ -87,6 +89,8 @@ main #welcomePage .loggedin #btn_logout,
 main #welcomePage #btn_AddGiftIdea,
 main #giftIdeaHomePage .loggedin #btn_logout,
 main #giftIdeaHomePage #btn_AddGiftIdea,
+main #StoresPage .loggedin #btn_logout,
+main #StoresPage #btn_AddGiftIdea,
 main #giftIdeaAdd .loggedin #btn_logout,
 main #giftIdeaAdd #btn_AddGiftIdea,
 main #summaryCard .loggedin #btn_logout,
@@ -125,6 +129,8 @@ main #welcomePage .loggedin #btn_logout a,
 main #welcomePage #btn_AddGiftIdea a,
 main #giftIdeaHomePage .loggedin #btn_logout a,
 main #giftIdeaHomePage #btn_AddGiftIdea a,
+main #StoresPage .loggedin #btn_logout a,
+main #StoresPage #btn_AddGiftIdea a,
 main #giftIdeaAdd .loggedin #btn_logout a,
 main #giftIdeaAdd #btn_AddGiftIdea a,
 main #summaryCard .loggedin #btn_logout a,
@@ -159,6 +165,7 @@ main #loginPage #registerForm .form-item,
 main #registerPage #registerForm .form-item,
 main #welcomePage #registerForm .form-item,
 main #giftIdeaHomePage #registerForm .form-item,
+main #StoresPage #registerForm .form-item,
 main #giftIdeaAdd #registerForm .form-item,
 main #summaryCard #registerForm .form-item,
 main #complete #registerForm .form-item,
@@ -179,6 +186,7 @@ main #loginPage #registerForm .form-item #registerButton,
 main #registerPage #registerForm .form-item #registerButton,
 main #welcomePage #registerForm .form-item #registerButton,
 main #giftIdeaHomePage #registerForm .form-item #registerButton,
+main #StoresPage #registerForm .form-item #registerButton,
 main #giftIdeaAdd #registerForm .form-item #registerButton,
 main #summaryCard #registerForm .form-item #registerButton,
 main #complete #registerForm .form-item #registerButton,
@@ -203,6 +211,8 @@ main #welcomePage #not-logged-in,
 main #welcomePage #registerForm,
 main #giftIdeaHomePage #not-logged-in,
 main #giftIdeaHomePage #registerForm,
+main #StoresPage #not-logged-in,
+main #StoresPage #registerForm,
 main #giftIdeaAdd #not-logged-in,
 main #giftIdeaAdd #registerForm,
 main #summaryCard #not-logged-in,
@@ -261,6 +271,10 @@ main #giftIdeaHomePage #not-logged-in a,
 main #giftIdeaHomePage #not-logged-in span,
 main #giftIdeaHomePage #registerForm a,
 main #giftIdeaHomePage #registerForm span,
+main #StoresPage #not-logged-in a,
+main #StoresPage #not-logged-in span,
+main #StoresPage #registerForm a,
+main #StoresPage #registerForm span,
 main #giftIdeaAdd #not-logged-in a,
 main #giftIdeaAdd #not-logged-in span,
 main #giftIdeaAdd #registerForm a,
@@ -340,6 +354,12 @@ main #giftIdeaHomePage #not-logged-in span,
 main #giftIdeaHomePage #registerForm .link2,
 main #giftIdeaHomePage #registerForm .link3,
 main #giftIdeaHomePage #registerForm span,
+main #StoresPage #not-logged-in .link2,
+main #StoresPage #not-logged-in .link3,
+main #StoresPage #not-logged-in span,
+main #StoresPage #registerForm .link2,
+main #StoresPage #registerForm .link3,
+main #StoresPage #registerForm span,
 main #giftIdeaAdd #not-logged-in .link2,
 main #giftIdeaAdd #not-logged-in .link3,
 main #giftIdeaAdd #not-logged-in span,
@@ -477,6 +497,20 @@ main #giftIdeaHomePage #registerForm #email,
 main #giftIdeaHomePage #registerForm #password,
 main #giftIdeaHomePage #registerForm #confirmPassword,
 main #giftIdeaHomePage #registerForm #registerButton,
+main #StoresPage #not-logged-in input#email1,
+main #StoresPage #not-logged-in #password1,
+main #StoresPage #not-logged-in #username,
+main #StoresPage #not-logged-in #email,
+main #StoresPage #not-logged-in #password,
+main #StoresPage #not-logged-in #confirmPassword,
+main #StoresPage #not-logged-in #registerButton,
+main #StoresPage #registerForm input#email1,
+main #StoresPage #registerForm #password1,
+main #StoresPage #registerForm #username,
+main #StoresPage #registerForm #email,
+main #StoresPage #registerForm #password,
+main #StoresPage #registerForm #confirmPassword,
+main #StoresPage #registerForm #registerButton,
 main #giftIdeaAdd #not-logged-in input#email1,
 main #giftIdeaAdd #not-logged-in #password1,
 main #giftIdeaAdd #not-logged-in #username,
@@ -682,6 +716,8 @@ main #welcomePage #not-logged-in .forgot-password,
 main #welcomePage #registerForm .forgot-password,
 main #giftIdeaHomePage #not-logged-in .forgot-password,
 main #giftIdeaHomePage #registerForm .forgot-password,
+main #StoresPage #not-logged-in .forgot-password,
+main #StoresPage #registerForm .forgot-password,
 main #giftIdeaAdd #not-logged-in .forgot-password,
 main #giftIdeaAdd #registerForm .forgot-password,
 main #summaryCard #not-logged-in .forgot-password,
@@ -719,6 +755,8 @@ main #welcomePage #not-logged-in #registerButton,
 main #welcomePage #registerForm #registerButton,
 main #giftIdeaHomePage #not-logged-in #registerButton,
 main #giftIdeaHomePage #registerForm #registerButton,
+main #StoresPage #not-logged-in #registerButton,
+main #StoresPage #registerForm #registerButton,
 main #giftIdeaAdd #not-logged-in #registerButton,
 main #giftIdeaAdd #registerForm #registerButton,
 main #summaryCard #not-logged-in #registerButton,
@@ -754,6 +792,7 @@ main #loginPage h2,
 main #registerPage h2,
 main #welcomePage h2,
 main #giftIdeaHomePage h2,
+main #StoresPage h2,
 main #giftIdeaAdd h2,
 main #summaryCard h2,
 main #complete h2,
@@ -775,6 +814,7 @@ main #loginPage label,
 main #registerPage label,
 main #welcomePage label,
 main #giftIdeaHomePage label,
+main #StoresPage label,
 main #giftIdeaAdd label,
 main #summaryCard label,
 main #complete label,
@@ -795,6 +835,7 @@ main #loginPage .footer-login,
 main #registerPage .footer-login,
 main #welcomePage .footer-login,
 main #giftIdeaHomePage .footer-login,
+main #StoresPage .footer-login,
 main #giftIdeaAdd .footer-login,
 main #summaryCard .footer-login,
 main #complete .footer-login,
@@ -824,6 +865,7 @@ main #loginPage #registerForm .footer-register,
 main #registerPage #registerForm .footer-register,
 main #welcomePage #registerForm .footer-register,
 main #giftIdeaHomePage #registerForm .footer-register,
+main #StoresPage #registerForm .footer-register,
 main #giftIdeaAdd #registerForm .footer-register,
 main #summaryCard #registerForm .footer-register,
 main #complete #registerForm .footer-register,
@@ -849,6 +891,8 @@ main #welcomePage #registerForm .footer-register span,
 main #welcomePage #registerForm .footer-register a,
 main #giftIdeaHomePage #registerForm .footer-register span,
 main #giftIdeaHomePage #registerForm .footer-register a,
+main #StoresPage #registerForm .footer-register span,
+main #StoresPage #registerForm .footer-register a,
 main #giftIdeaAdd #registerForm .footer-register span,
 main #giftIdeaAdd #registerForm .footer-register a,
 main #summaryCard #registerForm .footer-register span,
@@ -1916,13 +1960,22 @@ footer {
   background-color: #f9f9fb;
 }
 
-#desktopView {
+body #desktopView {
   display: none;
 }
 
 @media only screen and (min-width: 1000px) {
-  #desktopView {
-    display: block;
+  body #desktopView {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #welcomePage {
+    height: 170vh;
   }
 }
 
@@ -1962,6 +2015,54 @@ footer {
 #addFriendBtn2:hover {
   color: #f9f9fb;
   background-color: #8177c3;
+}
+
+#StoresPage {
+  background-color: #363d51;
+}
+
+.constContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.constContainer h1 {
+  color: #f9f9fb;
+  text-align: center;
+}
+
+.constContainer img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 90%;
+  margin: 20vh 0;
+}
+
+#friendsSeeList {
+  width: 300px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.nameContainer {
+  margin: 2% 0;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* ================ Mixins =====================*/
@@ -2054,9 +2155,31 @@ body #demopage3 .show {
   margin-top: 12vh;
 }
 
+#desktopView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#desktopView p {
+  max-width: 50vw;
+}
+
+#desktopView p .teamQuote {
+  color: #ff90a3;
+}
+
+#desktopView p:first-of-type {
+  margin-top: 10vh;
+}
+
 /* Styles according to design ========================== */
 .bottom_navbar {
-  background-color: #4a5470;
+  background-color: #f9f9fb;
 }
 
 .bottom_navbar ul {
@@ -3077,6 +3200,13 @@ section > a {
   width: 4rem;
   margin-top: 12vh;
   margin-bottom: 5vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#desktopView video {
+  margin-top: 5vh;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
