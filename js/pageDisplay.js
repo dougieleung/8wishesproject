@@ -51,6 +51,7 @@ startIdeaBtn.addEventListener("click", () => {
   giftIdeaHomePage.classList.remove("show");
   giftIdeaHomePage.classList.add("hide");
   giftIdeaAdd.classList.toggle("hide");
+  footerNav.classList.toggle("hide");
 });
 
 backToStart.addEventListener("click", () => {

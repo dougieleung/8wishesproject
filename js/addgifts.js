@@ -181,7 +181,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
     renderWishlist();
   }
-  footerNav.classList.remove("hide");
+  footerNav.classList.toggle("hide");
 });
 
 // ********************** Add Gift Idea to Friend's Collection of ideas ***********************
