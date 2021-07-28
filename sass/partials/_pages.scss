@@ -8,7 +8,8 @@ body {
 #welcomePage,
 #demo-page,
 #registerPage,
-#loginPage {
+#loginPage,
+#StoresPage {
   height: 100vh;
 }
 
@@ -34,6 +35,7 @@ main {
   #registerPage,
   #welcomePage,
   #giftIdeaHomePage,
+  #StoresPage,
   #giftIdeaAdd,
   #summaryCard,
   #complete,
@@ -942,14 +944,19 @@ footer {
 
 // Desktop View of video and welcome message
 
-#desktopView {
+body #desktopView {
   display: none;
 }
 
 @media only screen and (min-width: 1000px) {
-  #desktopView {
-    display: block;
+  body #desktopView {
+    display: flex;
+    flex-direction: column;
   }
+  #welcomePage {
+    height: 170vh;
+  }
+
 }
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////
@@ -983,4 +990,43 @@ footer {
     color: $color_button_hover_text;
     background-color: $color_button_hover_purple_bg;
   }
+
+}
+
+
+// Stores Under Construction Page
+
+#StoresPage {
+background-color: $color_primary;
+}
+.constContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.constContainer h1 {
+  color: $color_neutral_white;
+  text-align: center;
+}
+
+.constContainer img {
+  align-self: center;
+  max-width: 90%;
+  margin: 20vh 0;
+}
+
+// FriendsView.html styling
+
+#friendsSeeList {
+  width: 300px;
+  align-self: center;
+  flex: 0 0 50%;
+}
+
+.nameContainer {
+  margin: 2% 0;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+
 }
