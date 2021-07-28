@@ -376,13 +376,13 @@ main #giftIdeaHomePage {
     display: flex;
     background: white;
     // justify-content: center;
-    align-items: center;
 
     border: none;
     border-radius: 44px;
     width: 330px;
     height: 48px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     max-width: 100%;
     padding-right: 1rem;
     margin-top: 0.5rem;
@@ -391,6 +391,8 @@ main #giftIdeaHomePage {
 
 #locate {
   border: none;
+  width: 1%;
+  padding: 0;
   border-radius: 44px;
   background: white;
   height: 40px;
@@ -462,9 +464,16 @@ main #takePhoto {
   height: 40vw;
 }
 
+.link-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 #map-link {
   color: $color_primary;
-  margin: 1rem;
+  padding-left: 3rem;
 }
 
 .add-idea-2 {
