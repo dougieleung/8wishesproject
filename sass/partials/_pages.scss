@@ -2,7 +2,6 @@
 // comment
 body {
   margin: 0;
-
 }
 
 #welcomePage,
@@ -30,7 +29,6 @@ body {
 }
 
 main {
-
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -342,7 +340,6 @@ main #giftIdeaHomePage {
       }
     }
 
-
     #gift_description {
       background: none;
       border: none;
@@ -360,8 +357,6 @@ main #giftIdeaHomePage {
       }
     }
   }
-
-
 
   #displayTitle {
     background: none;
@@ -956,7 +951,6 @@ body #desktopView {
   #welcomePage {
     height: 170vh;
   }
-
 }
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////
@@ -990,14 +984,12 @@ body #desktopView {
     color: $color_button_hover_text;
     background-color: $color_button_hover_purple_bg;
   }
-
 }
-
 
 // Stores Under Construction Page
 
 #StoresPage {
-background-color: $color_primary;
+  background-color: $color_primary;
 }
 .constContainer {
   display: flex;
@@ -1017,16 +1009,85 @@ background-color: $color_primary;
 
 // FriendsView.html styling
 
+#fetchedFriendsList li {
+  width: 0;
+  margin: 1rem;
+}
+
 #friendsSeeList {
-  width: 300px;
+  width: 30vw;
   align-self: center;
-  flex: 0 0 50%;
 }
 
 .nameContainer {
   margin: 2% 0;
-  width: 150px;
+  width: 30vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
+  &:hover span {
+    color: $color_button_purple;
+  }
+
+  button {
+    background-color: $color_button_purple;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    font-family: $font_body;
+    color: $color_text_dark;
+  }
+
+  button:hover {
+    background-color: $color_button_hover_purple_bg;
+    color: $color_button_hover_text;
+  }
+}
+
+///////////// #friendsWishlist on friendsView.html styling///////////
+
+#giftcardFriendsDisplay {
+  height: 100%;
+  margin-bottom: 4rem;
+}
+
+#friendsListView {
+  overflow: scroll;
+}
+
+#friendsWishlist {
+  width: 40vw;
+  margin-bottom: 2rem;
+
+  .displaycard {
+    background-color: $color_secondary_green;
+    color: $color_secondary_dark;
+    flex-direction: column;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .editButton {
+      background-color: $color_button_purple;
+      color: $color_text_dark;
+      margin: 0.5rem;
+      border-radius: 1rem;
+      border: none;
+      padding: 0.5rem 3rem;
+      display: flex;
+      font-family: $font_body;
+      justify-content: center;
+
+      &:hover {
+        background-color: $color_button_hover_purple_bg;
+        color: $color_button_hover_text;
+      }
+    }
+  }
+}
+
+#addFriendBtn2 {
+  margin: 1rem;
 }
