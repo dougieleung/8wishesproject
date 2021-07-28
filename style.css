@@ -39,7 +39,7 @@ body {
 }
 
 #giftIdeaProcess section {
-  height: 90vh;
+  height: 100vh;
   border: none;
 }
 
@@ -2059,7 +2059,8 @@ body section#editCardFriends.hide,
 body section#giftcardFriendsDisplay.hide,
 body #demopage1 .hide,
 body #demopage2 .hide,
-body #demopage3 .hide {
+body #demopage3 .hide,
+footer #footerNav.hide {
   display: none;
 }
 
@@ -2079,13 +2080,17 @@ body #demopage3 .show {
 }
 
 /* ============== Intro Pages ========================= */
-#demopage1, #demopage2, #demopage3 {
+#demopage1,
+#demopage2,
+#demopage3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#demopage1 p, #demopage2 p, #demopage3 p {
+#demopage1 p,
+#demopage2 p,
+#demopage3 p {
   font-family: "Livvic", sans-serif;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
