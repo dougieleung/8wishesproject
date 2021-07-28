@@ -84,7 +84,7 @@ let createEventInput, newFriendObj;
 
 class addFriendClass {
   constructor(friendName, friendEvent, friendDate) {
-      this.friendName = friendName,
+    this.friendName = friendName,
       this.eventName = friendEvent,
       this.eventDate = friendDate
   }
@@ -134,7 +134,6 @@ addFriendBtn.addEventListener("click", () => {
 
     addFriendToFirestore(friendsName, newFriendObj);
     newFriendObj.resetInputs();
-
     console.log("added to Firestore");
 
     friendEventAdded2.innerHTML = `Successfully added:
@@ -145,6 +144,7 @@ addFriendBtn.addEventListener("click", () => {
   } else {
     alert("all fields are mandatory!");
   }
+
 });
 
 async function addFriendToFirestore(friendName, friendObject) {

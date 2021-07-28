@@ -10,6 +10,7 @@
 #complete,
 #addEventPage,
 #addFriendPage {
+
   #startIdeaBtn,
   #addGift,
   #addToDB,
@@ -26,6 +27,7 @@
     margin: auto;
     margin-top: 0;
     transition: all 1s ease;
+    justify-self: flex-end;
 
     &:hover {
       background-color: $color_button_hover_green_bg;
@@ -57,9 +59,8 @@
     border-radius: 44px;
     width: 232px;
     height: 48px;
-    justify-content: center;
     margin: auto;
-    margin-top: 4rem;
+
   }
 
   #nextToEvents {
@@ -98,7 +99,7 @@
   #backToSummaryCard,
   #backToChooseEvent {
     align-self: flex-start;
-    margin-left: 2rem;
+    margin-left: 0;
     background: none;
     border: none;
 
@@ -146,6 +147,7 @@
 //////////////// Login Page ////////////////////
 #loginPage,
 #resetContainer {
+
   #btn_logout,
   #btn_AddGiftIdea,
   #btn_login {
@@ -208,7 +210,7 @@ main #resetContainer {
   }
 }
 
-section > a {
+section>a {
   color: $color_neutral_white;
 }
 
@@ -224,4 +226,3 @@ section > a {
 // .nav_btn:hover {
 //   box-shadow: 5px 10px 10px $color_neutral_gray;
 // }
-

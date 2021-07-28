@@ -147,7 +147,7 @@ addEventBtn.addEventListener("click", () => {
   friendEventAdded.innerHTML = `Successfully added:
     <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
 
-  setTimeout(()=> { location.href = "friendsView.html"}, 1500);
+  setTimeout(() => { location.href = "friendsView.html" }, 1500);
 });
 
 // *********************** Add Gift Idea to Firestore and retrieve list ***********************
@@ -181,6 +181,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
     renderWishlist();
   }
+  footerNav.classList.toggle("hide");
 });
 
 // ********************** Add Gift Idea to Friend's Collection of ideas ***********************
@@ -322,10 +323,10 @@ function editWish(doc) {
       .catch((error) => {
         console.error("Error removing document: ", error);
       });
-    // editCard.classList.add("hide");
-    // displayGift.innerHTML = "";
-    // renderWishlist();
-    // displayGift.classList.remove("hide");
+    editCard.classList.add("hide");
+    displayGift.innerHTML = "";
+    renderWishlist();
+    displayGift.classList.remove("hide");
   });
 }
 
@@ -334,6 +335,7 @@ myListFooter.addEventListener("click", function () {
   giftIdeaHomePage.classList.remove("show");
   displayGift.classList.remove("hide");
   renderWishlist();
+
 });
 
 
