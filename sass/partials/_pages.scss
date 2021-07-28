@@ -1091,3 +1091,34 @@ body #desktopView {
 #addFriendBtn2 {
   margin: 1rem;
 }
+
+////////////////////// HOME PAGE styling /////////////////@at-root
+#events-wrapper {
+  border: none;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_primary;
+  color: $color_neutral_white;
+
+  .events-cards {
+    width: 60vw;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    border-color: $color_button_hover_purple_bg;
+    background-color: $color_button_hover_purple_bg;
+    color: $color_neutral_white;
+    font-family: $font_body;
+
+    &:nth-child(even) {
+      background-color: $color_button_hover_green_bg;
+      border-color: $color_button_hover_green_bg;
+    }
+  }
+}

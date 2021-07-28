@@ -1850,6 +1850,36 @@ body #desktopView {
   margin: 1rem;
 }
 
+#events-wrapper {
+  border: none;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #363d51;
+  color: #f9f9fb;
+}
+
+#events-wrapper .events-cards {
+  width: 60vw;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  border-color: #8177c3;
+  background-color: #8177c3;
+  color: #f9f9fb;
+  font-family: "Livvic", sans-serif;
+}
+
+#events-wrapper .events-cards:nth-child(even) {
+  background-color: #2ba199;
+  border-color: #2ba199;
+}
+
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */
