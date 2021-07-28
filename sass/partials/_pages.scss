@@ -49,7 +49,7 @@ main {
     background-color: $color_primary;
     display: flex;
     justify-content: flex-start;
-    gap: 3%;
+    gap: 2%;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
@@ -288,7 +288,16 @@ main #giftIdeaHomePage {
   }
 }
 
-.add-idea-1,
+.add-idea-1 {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  justify-items: space-between;
+  min-height: 80vh;
+}
+
 .add-idea-2 {
   width: 60vw;
 }
@@ -310,30 +319,46 @@ main #giftIdeaHomePage {
     margin-top: 5rem;
   }
 
-  #displayDesc {
-    margin-bottom: 4rem;
-  }
-
   #ideaForm {
+    width: 100%;
 
-    #gift_title,
+    #gift_title {
+      color: $color_neutral_white;
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 1.3rem;
+      font-family: $font_heading;
+      border-bottom: 1px solid $color_neutral_white;
+      padding: 2%;
+      width: 96%;
+      margin: auto;
+
+      &::placeholder {
+        color: $color_neutral_white;
+      }
+    }
+
+
     #gift_description {
       background: none;
       border: none;
-      padding: 0.7rem 0.7rem;
-      border-bottom: 1px solid $color_neutral_white;
-      width: 100%;
+      padding: 3% 1%;
+      width: 95%;
       display: flex;
       justify-content: center;
-      margin: 1rem;
-      margin-left: 0;
+      margin: auto;
       color: $color_neutral_white;
+      font-family: $font_body;
+      resize: none;
 
       &::placeholder {
         color: $color_neutral_white;
       }
     }
   }
+
+
 
   #displayTitle {
     background: none;
@@ -401,7 +426,7 @@ main #giftIdeaHomePage {
   margin: 5%;
   background-color: $color_primary;
   border-style: none;
-  width: 25%;
+  width: 20%;
 }
 
 // #camera_btn i,

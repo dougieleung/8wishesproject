@@ -67,7 +67,7 @@ main #giftcardFriendsDisplay {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 3%;
+  gap: 2%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1059,7 +1059,21 @@ main #giftIdeaHomePage #startIdeaBtn a {
   color: #212531;
 }
 
-.add-idea-1,
+.add-idea-1 {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5%;
+  justify-items: space-between;
+  min-height: 80vh;
+}
+
 .add-idea-2 {
   width: 60vw;
 }
@@ -1084,66 +1098,90 @@ main #giftIdeaHomePage #startIdeaBtn a {
   margin-top: 5rem;
 }
 
-.add-idea-1 #displayDesc,
-.add-idea-2 #displayDesc,
-.add-idea-3 #displayDesc {
-  margin-bottom: 4rem;
+.add-idea-1 #ideaForm,
+.add-idea-2 #ideaForm,
+.add-idea-3 #ideaForm {
+  width: 100%;
 }
 
 .add-idea-1 #ideaForm #gift_title,
-.add-idea-1 #ideaForm #gift_description,
 .add-idea-2 #ideaForm #gift_title,
+.add-idea-3 #ideaForm #gift_title {
+  color: #f9f9fb;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: "Baloo Bhai 2", sans-serif;
+  border-bottom: 1px solid #f9f9fb;
+  padding: 2%;
+  width: 96%;
+  margin: auto;
+}
+
+.add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title::placeholder,
+.add-idea-2 #ideaForm #gift_title::placeholder,
+.add-idea-3 #ideaForm #gift_title::placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description,
 .add-idea-2 #ideaForm #gift_description,
-.add-idea-3 #ideaForm #gift_title,
 .add-idea-3 #ideaForm #gift_description {
   background: none;
   border: none;
-  padding: 0.7rem 0.7rem;
-  border-bottom: 1px solid #f9f9fb;
-  width: 100%;
+  padding: 3% 1%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem;
-  margin-left: 0;
+  margin: auto;
   color: #f9f9fb;
+  font-family: "Livvic", sans-serif;
+  resize: none;
 }
 
-.add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
 .add-idea-1 #ideaForm #gift_description::-webkit-input-placeholder,
-.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
 .add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
-.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder,
 .add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
   color: #f9f9fb;
 }
 
-.add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
 .add-idea-1 #ideaForm #gift_description:-ms-input-placeholder,
-.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
 .add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
-.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder,
 .add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
   color: #f9f9fb;
 }
 
-.add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
 .add-idea-1 #ideaForm #gift_description::-ms-input-placeholder,
-.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
 .add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
-.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder,
 .add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
   color: #f9f9fb;
 }
 
-.add-idea-1 #ideaForm #gift_title::placeholder,
 .add-idea-1 #ideaForm #gift_description::placeholder,
-.add-idea-2 #ideaForm #gift_title::placeholder,
 .add-idea-2 #ideaForm #gift_description::placeholder,
-.add-idea-3 #ideaForm #gift_title::placeholder,
 .add-idea-3 #ideaForm #gift_description::placeholder {
   color: #f9f9fb;
 }
@@ -1226,7 +1264,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
   margin: 5%;
   background-color: #363d51;
   border-style: none;
-  width: 25%;
+  width: 20%;
 }
 
 main #takePhoto {
@@ -2349,6 +2387,7 @@ main section {
   margin-top: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  justify-self: flex-end;
 }
 
 #giftIdeaHomePage #startIdeaBtn:hover,
@@ -2642,11 +2681,7 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: auto;
-  margin-top: 4rem;
 }
 
 #giftIdeaHomePage #nextToEvents,
@@ -2840,7 +2875,7 @@ main section {
 #addFriendPage #backToChooseEvent {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-left: 2rem;
+  margin-left: 0;
   background: none;
   border: none;
 }
