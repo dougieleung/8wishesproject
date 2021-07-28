@@ -181,6 +181,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
 
     renderWishlist();
   }
+  footerNav.classList.remove("hide");
 });
 
 // ********************** Add Gift Idea to Friend's Collection of ideas ***********************
@@ -334,6 +335,7 @@ myListFooter.addEventListener("click", function () {
   giftIdeaHomePage.classList.remove("show");
   displayGift.classList.remove("hide");
   renderWishlist();
+
 });
 
 
