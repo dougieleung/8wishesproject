@@ -8,8 +8,10 @@
 const userFriendsList = [];
 const sortedEventsArray = [];
 const eventsWrapper = document.querySelector("#events-wrapper");
+const loadingPage = document.querySelector(".loading-page");
 
 upcomingEvents();
+
 
 async function upcomingEvents() {
   console.log("Home page Loaded!");
@@ -70,6 +72,17 @@ async function upcomingEvents() {
     return new Date(a.eventDate) - new Date(b.eventDate);
   });
 
+  // hide loading page
+  loadingPage.style.display = "none";
+
+  //create home title
+  const homeTitle = document.createElement("h1");
+  homeTitle.className = "home-title";
+  homeTitle.innerText="All Events";
+  eventsWrapper.appendChild(homeTitle);
+
+  
+
   for (let j = 0; j < sortedEventsArray.length; j++) {
     const eventCards = document.createElement("div");
     eventCards.setAttribute("class", "events-cards");
@@ -90,4 +103,5 @@ async function upcomingEvents() {
 
     eventsWrapper.appendChild(eventCards);
   }
-}
+} 
+

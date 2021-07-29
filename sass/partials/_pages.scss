@@ -1148,8 +1148,8 @@ body #desktopView {
   color: $color_neutral_white;
 
   .events-cards {
-    width: 60vw;
-    margin: 1rem;
+    width: 90vw;
+    margin: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1159,11 +1159,67 @@ body #desktopView {
     background-color: $color_button_hover_purple_bg;
     color: $color_neutral_white;
     font-family: $font_body;
-    animation: fadeIn 0.5s ease-in both;
 
     &:nth-child(even) {
       background-color: $color_button_hover_green_bg;
       border-color: $color_button_hover_green_bg;
     }
+  }
+}
+
+/////////////// loading page//////////////////
+
+main {
+  background-color: $color_primary;
+}
+
+.home-title {
+  font-family: $font_interaction;
+}
+
+.loading-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $color_neutral_white;
+  font-family: $font_interaction;
+  align-items: center;
+
+  p {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.loader {
+  border: 16px solid $color_button_purple;
+  border-radius: 50%;
+  border-top: 16px solid $color_button_hover_purple_bg;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
