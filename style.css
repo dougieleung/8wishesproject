@@ -21,13 +21,24 @@ body {
 
 #giftIdeaProcess {
   background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #giftIdeaProcess section {
@@ -44,6 +55,7 @@ main #giftIdeaAdd,
 main #summaryCard,
 main #complete,
 main #listEmptyPage,
+main #addToWishlistSection,
 main #addFriendPage,
 main #addEventsPage,
 main #friendsListPage,
@@ -54,14 +66,25 @@ main #friendAddedPage,
 main #editCard,
 main #giftcardFriendsDisplay {
   background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 2%;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 main #loginPage .loggedin #btn_logout,
@@ -82,6 +105,8 @@ main #complete .loggedin #btn_logout,
 main #complete #btn_AddGiftIdea,
 main #listEmptyPage .loggedin #btn_logout,
 main #listEmptyPage #btn_AddGiftIdea,
+main #addToWishlistSection .loggedin #btn_logout,
+main #addToWishlistSection #btn_AddGiftIdea,
 main #addFriendPage .loggedin #btn_logout,
 main #addFriendPage #btn_AddGiftIdea,
 main #addEventsPage .loggedin #btn_logout,
@@ -122,6 +147,8 @@ main #complete .loggedin #btn_logout a,
 main #complete #btn_AddGiftIdea a,
 main #listEmptyPage .loggedin #btn_logout a,
 main #listEmptyPage #btn_AddGiftIdea a,
+main #addToWishlistSection .loggedin #btn_logout a,
+main #addToWishlistSection #btn_AddGiftIdea a,
 main #addFriendPage .loggedin #btn_logout a,
 main #addFriendPage #btn_AddGiftIdea a,
 main #addEventsPage .loggedin #btn_logout a,
@@ -153,6 +180,7 @@ main #giftIdeaAdd #registerForm .form-item,
 main #summaryCard #registerForm .form-item,
 main #complete #registerForm .form-item,
 main #listEmptyPage #registerForm .form-item,
+main #addToWishlistSection #registerForm .form-item,
 main #addFriendPage #registerForm .form-item,
 main #addEventsPage #registerForm .form-item,
 main #friendsListPage #registerForm .form-item,
@@ -174,6 +202,7 @@ main #giftIdeaAdd #registerForm .form-item #registerButton,
 main #summaryCard #registerForm .form-item #registerButton,
 main #complete #registerForm .form-item #registerButton,
 main #listEmptyPage #registerForm .form-item #registerButton,
+main #addToWishlistSection #registerForm .form-item #registerButton,
 main #addFriendPage #registerForm .form-item #registerButton,
 main #addEventsPage #registerForm .form-item #registerButton,
 main #friendsListPage #registerForm .form-item #registerButton,
@@ -204,6 +233,8 @@ main #complete #not-logged-in,
 main #complete #registerForm,
 main #listEmptyPage #not-logged-in,
 main #listEmptyPage #registerForm,
+main #addToWishlistSection #not-logged-in,
+main #addToWishlistSection #registerForm,
 main #addFriendPage #not-logged-in,
 main #addFriendPage #registerForm,
 main #addEventsPage #not-logged-in,
@@ -222,9 +253,18 @@ main #editCard #not-logged-in,
 main #editCard #registerForm,
 main #giftcardFriendsDisplay #not-logged-in,
 main #giftcardFriendsDisplay #registerForm {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 60vw;
 }
@@ -265,6 +305,10 @@ main #listEmptyPage #not-logged-in a,
 main #listEmptyPage #not-logged-in span,
 main #listEmptyPage #registerForm a,
 main #listEmptyPage #registerForm span,
+main #addToWishlistSection #not-logged-in a,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm a,
+main #addToWishlistSection #registerForm span,
 main #addFriendPage #not-logged-in a,
 main #addFriendPage #not-logged-in span,
 main #addFriendPage #registerForm a,
@@ -358,6 +402,12 @@ main #listEmptyPage #not-logged-in span,
 main #listEmptyPage #registerForm .link2,
 main #listEmptyPage #registerForm .link3,
 main #listEmptyPage #registerForm span,
+main #addToWishlistSection #not-logged-in .link2,
+main #addToWishlistSection #not-logged-in .link3,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm .link2,
+main #addToWishlistSection #registerForm .link3,
+main #addToWishlistSection #registerForm span,
 main #addFriendPage #not-logged-in .link2,
 main #addFriendPage #not-logged-in .link3,
 main #addFriendPage #not-logged-in span,
@@ -541,6 +591,20 @@ main #listEmptyPage #registerForm #email,
 main #listEmptyPage #registerForm #password,
 main #listEmptyPage #registerForm #confirmPassword,
 main #listEmptyPage #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in input#email1,
+main #addToWishlistSection #not-logged-in #password1,
+main #addToWishlistSection #not-logged-in #username,
+main #addToWishlistSection #not-logged-in #email,
+main #addToWishlistSection #not-logged-in #password,
+main #addToWishlistSection #not-logged-in #confirmPassword,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm input#email1,
+main #addToWishlistSection #registerForm #password1,
+main #addToWishlistSection #registerForm #username,
+main #addToWishlistSection #registerForm #email,
+main #addToWishlistSection #registerForm #password,
+main #addToWishlistSection #registerForm #confirmPassword,
+main #addToWishlistSection #registerForm #registerButton,
 main #addFriendPage #not-logged-in input#email1,
 main #addFriendPage #not-logged-in #password1,
 main #addFriendPage #not-logged-in #username,
@@ -671,8 +735,12 @@ main #giftcardFriendsDisplay #registerForm #registerButton {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
   padding-right: 0;
@@ -696,6 +764,8 @@ main #complete #not-logged-in .forgot-password,
 main #complete #registerForm .forgot-password,
 main #listEmptyPage #not-logged-in .forgot-password,
 main #listEmptyPage #registerForm .forgot-password,
+main #addToWishlistSection #not-logged-in .forgot-password,
+main #addToWishlistSection #registerForm .forgot-password,
 main #addFriendPage #not-logged-in .forgot-password,
 main #addFriendPage #registerForm .forgot-password,
 main #addEventsPage #not-logged-in .forgot-password,
@@ -735,6 +805,8 @@ main #complete #not-logged-in #registerButton,
 main #complete #registerForm #registerButton,
 main #listEmptyPage #not-logged-in #registerButton,
 main #listEmptyPage #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm #registerButton,
 main #addFriendPage #not-logged-in #registerButton,
 main #addFriendPage #registerForm #registerButton,
 main #addEventsPage #not-logged-in #registerButton,
@@ -767,6 +839,7 @@ main #giftIdeaAdd h2,
 main #summaryCard h2,
 main #complete h2,
 main #listEmptyPage h2,
+main #addToWishlistSection h2,
 main #addFriendPage h2,
 main #addEventsPage h2,
 main #friendsListPage h2,
@@ -789,6 +862,7 @@ main #giftIdeaAdd label,
 main #summaryCard label,
 main #complete label,
 main #listEmptyPage label,
+main #addToWishlistSection label,
 main #addFriendPage label,
 main #addEventsPage label,
 main #friendsListPage label,
@@ -810,6 +884,7 @@ main #giftIdeaAdd .footer-login,
 main #summaryCard .footer-login,
 main #complete .footer-login,
 main #listEmptyPage .footer-login,
+main #addToWishlistSection .footer-login,
 main #addFriendPage .footer-login,
 main #addEventsPage .footer-login,
 main #friendsListPage .footer-login,
@@ -820,9 +895,15 @@ main #friendAddedPage .footer-login,
 main #editCard .footer-login,
 main #giftcardFriendsDisplay .footer-login {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 main #loginPage #registerForm .footer-register,
@@ -834,6 +915,7 @@ main #giftIdeaAdd #registerForm .footer-register,
 main #summaryCard #registerForm .footer-register,
 main #complete #registerForm .footer-register,
 main #listEmptyPage #registerForm .footer-register,
+main #addToWishlistSection #registerForm .footer-register,
 main #addFriendPage #registerForm .footer-register,
 main #addEventsPage #registerForm .footer-register,
 main #friendsListPage #registerForm .footer-register,
@@ -865,6 +947,8 @@ main #complete #registerForm .footer-register span,
 main #complete #registerForm .footer-register a,
 main #listEmptyPage #registerForm .footer-register span,
 main #listEmptyPage #registerForm .footer-register a,
+main #addToWishlistSection #registerForm .footer-register span,
+main #addToWishlistSection #registerForm .footer-register a,
 main #addFriendPage #registerForm .footer-register span,
 main #addFriendPage #registerForm .footer-register a,
 main #addEventsPage #registerForm .footer-register span,
@@ -905,16 +989,28 @@ main #welcomePage .footer-welcome a {
 main #demo-page .demo-carousel {
   height: 70vh;
   background-color: #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #demo-page #demopage1,
 main #demo-page #demopage2,
 main #demo-page #demopage3 {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main #demo-page .fas {
@@ -923,10 +1019,19 @@ main #demo-page .fas {
 
 main #demo-page .footer-demo {
   background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   height: 30vh;
 }
 
@@ -943,14 +1048,22 @@ main #demo-page #log-in a {
 }
 
 main #loginPage #logged-in {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 40vh;
 }
 
 main #giftIdeaHomePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #giftIdeaHomePage .link4 {
@@ -961,8 +1074,12 @@ main #giftIdeaHomePage #startIdeaBtn {
   background-color: #86e4de;
   border-color: #86e4de;
   padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #giftIdeaHomePage #startIdeaBtn a {
@@ -970,37 +1087,74 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #summaryCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #summaryCard #summaryCardimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .add-idea-3 {
   text-align: center;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.add-idea-3 .window-description {
+  margin-bottom: 25vh;
 }
 
 #windowDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 300px;
-  overflow: hidden;
+}
+
+#windowDescription p {
+  word-wrap: break-word;
 }
 
 #seeFriendsList {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin: 1rem;
   padding: 1rem 4rem;
   border-radius: 44px;
   border: 1px solid #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #86e4de;
   border-color: #aba0f5;
   color: #212531;
@@ -1013,8 +1167,13 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-1 {
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 5%;
   justify-items: space-between;
   min-height: 80vh;
@@ -1025,7 +1184,9 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 .add-idea-3 {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 3rem;
 }
 
@@ -1063,6 +1224,24 @@ main #giftIdeaHomePage #startIdeaBtn a {
   margin: auto;
 }
 
+.add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
 .add-idea-1 #ideaForm #gift_title::placeholder,
 .add-idea-2 #ideaForm #gift_title::placeholder,
 .add-idea-3 #ideaForm #gift_title::placeholder {
@@ -1076,12 +1255,34 @@ main #giftIdeaHomePage #startIdeaBtn a {
   border: none;
   padding: 3% 1%;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
   resize: none;
+}
+
+.add-idea-1 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
+  color: #f9f9fb;
 }
 
 .add-idea-1 #ideaForm #gift_description::placeholder,
@@ -1111,14 +1312,20 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-1 #coordinates,
 .add-idea-2 #coordinates,
 .add-idea-3 #coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: white;
   border: none;
   border-radius: 44px;
   width: 330px;
   height: 48px;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 100%;
   padding-right: 1rem;
   margin-top: 0.5rem;
@@ -1135,10 +1342,15 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #locate .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 #addPhoto {
@@ -1163,15 +1375,29 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 main #takePhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
 }
 
 main #takePhoto #camera {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main #takePhoto #snap {
@@ -1192,9 +1418,15 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 .link-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -1204,9 +1436,16 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 .add-idea-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #backToSummaryCard i {
@@ -1231,8 +1470,12 @@ main #takePhoto #backToIdeaAdd2 i {
 
 #windowImage,
 #windowDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #addGift,
@@ -1256,11 +1499,16 @@ main #takePhoto #backToIdeaAdd2 i {
   padding: 1rem 0;
   border-radius: 1rem;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #86e4de;
   border-color: #86e4de;
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -1283,6 +1531,7 @@ main #takePhoto #backToIdeaAdd2 i {
 #addEventBtn a,
 #friendAddBtn a {
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -1338,16 +1587,27 @@ main #takePhoto #backToIdeaAdd2 i {
   margin: 1rem;
   overflow: hidden;
   border: none;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #giftcard_display .displaycard {
   border-color: #6e64ac;
   border-radius: 20px;
   margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #6e64ac;
 }
 
@@ -1358,7 +1618,9 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 #giftcard_display .displaycard h3 {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -1381,10 +1643,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #363d51;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #aba0f5;
@@ -1404,10 +1672,19 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 #friendsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #friendsList li {
@@ -1420,10 +1697,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #ff90a3;
@@ -1436,10 +1719,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #ff90a3;
@@ -1476,8 +1765,12 @@ input#friendName,
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   margin-left: 0;
   width: 60%;
@@ -1496,10 +1789,19 @@ input#friendName,
 }
 
 #addFriendPage #addFriendForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin: 3rem;
 }
 
@@ -1523,23 +1825,45 @@ input#friendName,
 #resetContainer form {
   width: 70%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .reset-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #reset_password,
@@ -1556,8 +1880,12 @@ label {
   padding: 1rem 0 1rem 0.3rem;
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   width: 30rem;
 }
@@ -1581,9 +1909,15 @@ main #listEmptyPage #friendtoProfile {
 }
 
 .addEventForFriend {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #fetchedFriendsList {
@@ -1626,8 +1960,12 @@ main #listEmptyPage #friendtoProfile {
 }
 
 #addEventPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #addEventPage h1 {
@@ -1650,10 +1988,19 @@ main #listEmptyPage #friendtoProfile {
 }
 
 #friendEventForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #friendEventForm label {
@@ -1666,8 +2013,12 @@ main #listEmptyPage #friendtoProfile {
 }
 
 main #complete {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #giftcard_display {
@@ -1675,10 +2026,19 @@ main #complete {
 }
 
 #editCard #editForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #editCard #editForm input,
@@ -1687,8 +2047,12 @@ main #complete {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
 }
@@ -1709,6 +2073,7 @@ main #complete {
 }
 
 footer {
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   background-color: #f9f9fb;
@@ -1720,11 +2085,16 @@ body #desktopView {
 
 @media only screen and (min-width: 1000px) {
   body #desktopView {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #welcomePage {
-    height: 170vh;
+    height: 200vh;
   }
 }
 
@@ -1734,11 +2104,17 @@ body #desktopView {
 }
 
 #friendName2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 1.5rem;
   padding: 1rem 4rem;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   border-style: none;
   font-family: "Livvic", sans-serif;
@@ -1750,6 +2126,7 @@ body #desktopView {
   border-style: none;
   background-color: #c7beff;
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-family: "Livvic", sans-serif;
 }
@@ -1764,17 +2141,28 @@ body #desktopView {
 }
 
 .constContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 .constContainer h1 {
+  font-family: "Baloo Bhai 2", sans-serif;
   color: #f9f9fb;
   text-align: center;
+  margin-top: 10%;
 }
 
 .constContainer img {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   max-width: 90%;
   margin: 20vh 0;
 }
@@ -1786,15 +2174,25 @@ body #desktopView {
 
 #friendsSeeList {
   width: 30vw;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .nameContainer {
   margin: 2% 0;
   width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 .nameContainer:hover span {
@@ -1832,11 +2230,20 @@ body #desktopView {
 #friendsWishlist .displaycard {
   background-color: #3dc8bf;
   color: #363d51;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #friendsWishlist .displaycard .editButton {
@@ -1846,9 +2253,13 @@ body #desktopView {
   border-radius: 1rem;
   border: none;
   padding: 0.5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Livvic", sans-serif;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #friendsWishlist .displaycard .editButton:hover {
@@ -1863,10 +2274,19 @@ body #desktopView {
 #events-wrapper {
   border: none;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #363d51;
   color: #f9f9fb;
 }
@@ -1874,15 +2294,26 @@ body #desktopView {
 #events-wrapper .events-cards {
   width: 60vw;
   margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 2rem;
   border-color: #8177c3;
   background-color: #8177c3;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #events-wrapper .events-cards:nth-child(even) {
@@ -1905,8 +2336,13 @@ section,
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 main section {
@@ -1920,6 +2356,8 @@ main section {
 
 #reset_password,
 #noreset {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1953,6 +2391,8 @@ body .editCard .show,
 body #demopage1 .show,
 body #demopage2 .show,
 body #demopage3 .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1960,21 +2400,32 @@ body #demopage3 .show {
 #demopage1,
 #demopage2,
 #demopage3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #demopage1 p,
 #demopage2 p,
 #demopage3 p {
   font-family: "Livvic", sans-serif;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-size: 1.2rem;
   margin-top: 12vh;
 }
 
 #desktopView {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #desktopView p {
@@ -1997,8 +2448,12 @@ body #demopage3 .show {
 .bottom_navbar ul {
   padding: 1rem;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .bottom_navbar ul li {
@@ -2025,7 +2480,9 @@ main section {
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #giftIdeaProcess input,
@@ -2269,9 +2726,12 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   margin-top: 0;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   justify-self: flex-end;
 }
@@ -2424,6 +2884,7 @@ main section {
 #addFriendPage #addAFriendBtn a,
 #addFriendPage #addEventBtn a,
 #addFriendPage #addFriendBtn a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2582,7 +3043,9 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
 
@@ -2615,6 +3078,7 @@ main section {
 #addFriendPage #addAFriendBtn {
   background: #aba0f5;
   border: none;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2676,6 +3140,7 @@ main section {
 #addFriendPage #addtowish a,
 #addFriendPage #seeFriendsList a,
 #addFriendPage #addAFriendBtn a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2754,7 +3219,8 @@ main section {
 #addFriendPage #backToIdeaAdd,
 #addFriendPage #backToSummaryCard,
 #addFriendPage #backToChooseEvent {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-left: 0;
   background: none;
   border: none;
@@ -2827,7 +3293,6 @@ main section {
 
 #nav_btn3 {
   background-color: #f0526c;
-  margin-top: 1rem;
   border-style: none;
 }
 
@@ -2849,9 +3314,15 @@ main section {
 #resetContainer #btn_logout,
 #resetContainer #btn_AddGiftIdea,
 #resetContainer #btn_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #86e4de;
   border: none;
   border-radius: 44px;
@@ -2860,6 +3331,7 @@ main section {
   justify-content: center;
   margin: auto;
   margin-top: 4rem;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2879,6 +3351,7 @@ main section {
 #resetContainer #btn_logout a,
 #resetContainer #btn_AddGiftIdea a,
 #resetContainer #btn_login a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2904,10 +3377,19 @@ main #resetContainer #noreset a {
 }
 
 .friendEventForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .friendEventForm #friendEventSelect2 {
@@ -2928,11 +3410,13 @@ section > a {
 
 .fa-chevron-left {
   margin: 1rem;
-  align-self: baseline;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 #addEventPage a {
-  align-self: baseline;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 /* ================ Media =====================*/
@@ -2975,7 +3459,9 @@ section > a {
 #demopage3 img:nth-of-type(1) {
   height: auto;
   max-width: 100%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-top: 5vh;
 }
 
@@ -2986,10 +3472,15 @@ section > a {
   width: 4rem;
   margin-top: 12vh;
   margin-bottom: 5vh;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #desktopView video {
   margin-top: 5vh;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
+/*# sourceMappingURL=style.css.map */
