@@ -72,14 +72,20 @@ addGift.addEventListener("click", () => {
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
-
-  if (newWish.location !== undefined) {
-    windowDescription.innerHTML = `${newWish.wishTitle}<br>
-  ${newWish.wishDesc}<br>
-  ${newWish.location}`;
+  const wishtitle = document.createElement("p");
+  const wishdesc = document.createElement("p");
+  const wishloc = document.createElement("p");
+  
+  if (newWish.location !== undefined) {  
+    wishtitle.innerText = `${newWish.wishTitle}`;
+    wishdesc.innerText = `${newWish.wishDesc}`;
+    wishloc.innerText = `${newWish.location}`;
+    windowDescription.appendChild(wishtitle);
+    windowDescription.appendChild(wishdesc);
+    windowDescription.appendChild(wishloc);
   } else {
-    windowDescription.innerHTML = `${newWish.wishTitle}<br>
-  ${newWish.wishDesc}`;
+    windowDescription.appendChild(wishtitle);
+    windowDescription.appendChild(wishdesc);
   }
   console.log(newWish);
 });

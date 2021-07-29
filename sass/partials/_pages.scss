@@ -267,9 +267,19 @@ main #giftIdeaHomePage {
   flex-flow: column wrap;
 }
 
+.add-idea-3 .window-description {
+  margin-bottom: 25vh;
+}
+
 #windowDescription {
+  display: flex;
+  flex-direction: column;
   width: 300px;
-  overflow: hidden;
+  // overflow: hidden;
+}
+
+#windowDescription p {
+  word-wrap: break-word;
 }
 
 #seeFriendsList {
@@ -959,7 +969,7 @@ body #desktopView {
     flex-direction: column;
   }
   #welcomePage {
-    height: 170vh;
+    height: 200vh;
   }
 }
 
@@ -1007,8 +1017,10 @@ body #desktopView {
 }
 
 .constContainer h1 {
+  font-family: $font_heading;
   color: $color_neutral_white;
   text-align: center;
+  margin-top: 10%;
 }
 
 .constContainer img {
