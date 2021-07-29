@@ -16,11 +16,20 @@
       "type": "image/png",
       "density": "4.0"
     }
+ 
   ],
   "scope": "/",
   "start_url": "./pages/register+login.html",
   "display": "standalone",
   "orientation": "landscape",
   "theme_color": "orange",
-  "background_color": "purple"
+  "background_color": "purple",
+  "permissions": {
+    "audio-capture": {
+      "description": "Required to capture audio using getUserMedia()"
+    },
+    "video-capture": {
+      "description": "Required to capture video using getUserMedia()"
+    }
+  }
 }
