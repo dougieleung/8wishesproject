@@ -30,7 +30,6 @@ body {
 }
 
 main {
-
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -833,15 +832,15 @@ main #listEmptyPage {
 #fetchedFriendsList {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   li {
     width: 100vw;
+    list-style-type: none;
   }
-}
-
-#fetchedFriendsList li {
-  list-style-type: none;
-  width: 100vw;
 }
 
 .friendBtn {
@@ -1036,48 +1035,64 @@ body #desktopView {
 }
 
 // FriendsView.html styling
+#giftcardFriendsDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #friendsSeeList #fetchedFriendsList li {
-  width: 0;
-  margin: 1rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $color_neutral_gray;
+  background-color: lighten($color_primary, 10%);
+
+  &:nth-of-type(1) {
+    border-top: 1px solid $color_neutral_gray;
+  }
+
+  &:hover {
+    background-color: $color_card_bg2;
+  }
+
+  &:hover button {
+    background-color: $color_card_bg2;
+    color: $color_text_dark;
+  }
 }
 
 #friendsSeeList {
-  width: 30vw;
-  align-self: center;
+  width: 100vw;
 }
 
 .nameContainer {
-  margin: 2% 0;
-  width: 30vw;
+  margin: 2% 2rem;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   animation: fadeIn 0.5s ease-in both;
 
-  &:hover span {
-    color: $color_button_purple;
-  }
-
   button {
-    background-color: $color_button_purple;
+    background-color: lighten($color_primary, 10%);
+    padding: 0;
     border: none;
-    border-radius: 1rem;
-    padding: 0.5rem 2rem;
     font-family: $font_body;
-    color: $color_text_dark;
+    color: $color_neutral_white;
   }
 
   button:hover {
-    background-color: $color_button_hover_purple_bg;
-    color: $color_button_hover_text;
+    border-bottom: 1px solid $color_text_dark;
   }
 }
 
 ///////////// #friendsWishlist on friendsView.html styling///////////
 
 #giftcardFriendsDisplay {
-  height: 100%;
+  height: 100vh;
+  overflow: scroll;
   margin-bottom: 4rem;
 }
 
@@ -1133,8 +1148,8 @@ body #desktopView {
   color: $color_neutral_white;
 
   .events-cards {
-    width: 60vw;
-    margin: 1rem;
+    width: 90vw;
+    margin: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1144,11 +1159,67 @@ body #desktopView {
     background-color: $color_button_hover_purple_bg;
     color: $color_neutral_white;
     font-family: $font_body;
-    animation: fadeIn 0.5s ease-in both;
 
     &:nth-child(even) {
       background-color: $color_button_hover_green_bg;
       border-color: $color_button_hover_green_bg;
     }
+  }
+}
+
+/////////////// loading page//////////////////
+
+main {
+  background-color: $color_primary;
+}
+
+.home-title {
+  font-family: $font_interaction;
+}
+
+.loading-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $color_neutral_white;
+  font-family: $font_interaction;
+  align-items: center;
+
+  p {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.loader {
+  border: 16px solid $color_button_purple;
+  border-radius: 50%;
+  border-top: 16px solid $color_button_hover_purple_bg;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
