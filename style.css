@@ -37,6 +37,8 @@ body {
   margin-bottom: 0;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #giftIdeaProcess section {
@@ -53,6 +55,7 @@ main #giftIdeaAdd,
 main #summaryCard,
 main #complete,
 main #listEmptyPage,
+main #addToWishlistSection,
 main #addFriendPage,
 main #addEventsPage,
 main #friendsListPage,
@@ -80,6 +83,8 @@ main #giftcardFriendsDisplay {
   margin-bottom: 0;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 main #loginPage .loggedin #btn_logout,
@@ -100,6 +105,8 @@ main #complete .loggedin #btn_logout,
 main #complete #btn_AddGiftIdea,
 main #listEmptyPage .loggedin #btn_logout,
 main #listEmptyPage #btn_AddGiftIdea,
+main #addToWishlistSection .loggedin #btn_logout,
+main #addToWishlistSection #btn_AddGiftIdea,
 main #addFriendPage .loggedin #btn_logout,
 main #addFriendPage #btn_AddGiftIdea,
 main #addEventsPage .loggedin #btn_logout,
@@ -140,6 +147,8 @@ main #complete .loggedin #btn_logout a,
 main #complete #btn_AddGiftIdea a,
 main #listEmptyPage .loggedin #btn_logout a,
 main #listEmptyPage #btn_AddGiftIdea a,
+main #addToWishlistSection .loggedin #btn_logout a,
+main #addToWishlistSection #btn_AddGiftIdea a,
 main #addFriendPage .loggedin #btn_logout a,
 main #addFriendPage #btn_AddGiftIdea a,
 main #addEventsPage .loggedin #btn_logout a,
@@ -171,6 +180,7 @@ main #giftIdeaAdd #registerForm .form-item,
 main #summaryCard #registerForm .form-item,
 main #complete #registerForm .form-item,
 main #listEmptyPage #registerForm .form-item,
+main #addToWishlistSection #registerForm .form-item,
 main #addFriendPage #registerForm .form-item,
 main #addEventsPage #registerForm .form-item,
 main #friendsListPage #registerForm .form-item,
@@ -192,6 +202,7 @@ main #giftIdeaAdd #registerForm .form-item #registerButton,
 main #summaryCard #registerForm .form-item #registerButton,
 main #complete #registerForm .form-item #registerButton,
 main #listEmptyPage #registerForm .form-item #registerButton,
+main #addToWishlistSection #registerForm .form-item #registerButton,
 main #addFriendPage #registerForm .form-item #registerButton,
 main #addEventsPage #registerForm .form-item #registerButton,
 main #friendsListPage #registerForm .form-item #registerButton,
@@ -222,6 +233,8 @@ main #complete #not-logged-in,
 main #complete #registerForm,
 main #listEmptyPage #not-logged-in,
 main #listEmptyPage #registerForm,
+main #addToWishlistSection #not-logged-in,
+main #addToWishlistSection #registerForm,
 main #addFriendPage #not-logged-in,
 main #addFriendPage #registerForm,
 main #addEventsPage #not-logged-in,
@@ -292,6 +305,10 @@ main #listEmptyPage #not-logged-in a,
 main #listEmptyPage #not-logged-in span,
 main #listEmptyPage #registerForm a,
 main #listEmptyPage #registerForm span,
+main #addToWishlistSection #not-logged-in a,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm a,
+main #addToWishlistSection #registerForm span,
 main #addFriendPage #not-logged-in a,
 main #addFriendPage #not-logged-in span,
 main #addFriendPage #registerForm a,
@@ -385,6 +402,12 @@ main #listEmptyPage #not-logged-in span,
 main #listEmptyPage #registerForm .link2,
 main #listEmptyPage #registerForm .link3,
 main #listEmptyPage #registerForm span,
+main #addToWishlistSection #not-logged-in .link2,
+main #addToWishlistSection #not-logged-in .link3,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm .link2,
+main #addToWishlistSection #registerForm .link3,
+main #addToWishlistSection #registerForm span,
 main #addFriendPage #not-logged-in .link2,
 main #addFriendPage #not-logged-in .link3,
 main #addFriendPage #not-logged-in span,
@@ -568,6 +591,20 @@ main #listEmptyPage #registerForm #email,
 main #listEmptyPage #registerForm #password,
 main #listEmptyPage #registerForm #confirmPassword,
 main #listEmptyPage #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in input#email1,
+main #addToWishlistSection #not-logged-in #password1,
+main #addToWishlistSection #not-logged-in #username,
+main #addToWishlistSection #not-logged-in #email,
+main #addToWishlistSection #not-logged-in #password,
+main #addToWishlistSection #not-logged-in #confirmPassword,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm input#email1,
+main #addToWishlistSection #registerForm #password1,
+main #addToWishlistSection #registerForm #username,
+main #addToWishlistSection #registerForm #email,
+main #addToWishlistSection #registerForm #password,
+main #addToWishlistSection #registerForm #confirmPassword,
+main #addToWishlistSection #registerForm #registerButton,
 main #addFriendPage #not-logged-in input#email1,
 main #addFriendPage #not-logged-in #password1,
 main #addFriendPage #not-logged-in #username,
@@ -727,6 +764,8 @@ main #complete #not-logged-in .forgot-password,
 main #complete #registerForm .forgot-password,
 main #listEmptyPage #not-logged-in .forgot-password,
 main #listEmptyPage #registerForm .forgot-password,
+main #addToWishlistSection #not-logged-in .forgot-password,
+main #addToWishlistSection #registerForm .forgot-password,
 main #addFriendPage #not-logged-in .forgot-password,
 main #addFriendPage #registerForm .forgot-password,
 main #addEventsPage #not-logged-in .forgot-password,
@@ -766,6 +805,8 @@ main #complete #not-logged-in #registerButton,
 main #complete #registerForm #registerButton,
 main #listEmptyPage #not-logged-in #registerButton,
 main #listEmptyPage #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm #registerButton,
 main #addFriendPage #not-logged-in #registerButton,
 main #addFriendPage #registerForm #registerButton,
 main #addEventsPage #not-logged-in #registerButton,
@@ -798,6 +839,7 @@ main #giftIdeaAdd h2,
 main #summaryCard h2,
 main #complete h2,
 main #listEmptyPage h2,
+main #addToWishlistSection h2,
 main #addFriendPage h2,
 main #addEventsPage h2,
 main #friendsListPage h2,
@@ -820,6 +862,7 @@ main #giftIdeaAdd label,
 main #summaryCard label,
 main #complete label,
 main #listEmptyPage label,
+main #addToWishlistSection label,
 main #addFriendPage label,
 main #addEventsPage label,
 main #friendsListPage label,
@@ -841,6 +884,7 @@ main #giftIdeaAdd .footer-login,
 main #summaryCard .footer-login,
 main #complete .footer-login,
 main #listEmptyPage .footer-login,
+main #addToWishlistSection .footer-login,
 main #addFriendPage .footer-login,
 main #addEventsPage .footer-login,
 main #friendsListPage .footer-login,
@@ -871,6 +915,7 @@ main #giftIdeaAdd #registerForm .footer-register,
 main #summaryCard #registerForm .footer-register,
 main #complete #registerForm .footer-register,
 main #listEmptyPage #registerForm .footer-register,
+main #addToWishlistSection #registerForm .footer-register,
 main #addFriendPage #registerForm .footer-register,
 main #addEventsPage #registerForm .footer-register,
 main #friendsListPage #registerForm .footer-register,
@@ -902,6 +947,8 @@ main #complete #registerForm .footer-register span,
 main #complete #registerForm .footer-register a,
 main #listEmptyPage #registerForm .footer-register span,
 main #listEmptyPage #registerForm .footer-register a,
+main #addToWishlistSection #registerForm .footer-register span,
+main #addToWishlistSection #registerForm .footer-register a,
 main #addFriendPage #registerForm .footer-register span,
 main #addFriendPage #registerForm .footer-register a,
 main #addEventsPage #registerForm .footer-register span,
@@ -1540,6 +1587,8 @@ main #takePhoto #backToIdeaAdd2 i {
   margin: 1rem;
   overflow: hidden;
   border: none;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #giftcard_display .displaycard {
@@ -2099,6 +2148,8 @@ body #desktopView {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 .constContainer h1 {
@@ -2140,6 +2191,8 @@ body #desktopView {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 .nameContainer:hover span {
@@ -2259,6 +2312,8 @@ body #desktopView {
   background-color: #8177c3;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #events-wrapper .events-cards:nth-child(even) {
@@ -2348,6 +2403,8 @@ body #demopage3 .show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #demopage1 p,

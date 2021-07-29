@@ -71,6 +71,8 @@ body #demopage3 .show {
 #demopage3 {
 
   display: flex;
+  animation: fadeIn 0.5s ease-in both;
+  
 }
 
 #demopage1 p,

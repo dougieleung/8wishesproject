@@ -21,6 +21,7 @@ body {
   margin-bottom: 0;
   color: $color_neutral_white;
   font-family: $font_body;
+  animation: fadeIn 0.5s ease-in both;
 
   section {
     height: 100vh;
@@ -29,6 +30,7 @@ body {
 }
 
 main {
+
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -38,6 +40,7 @@ main {
   #summaryCard,
   #complete,
   #listEmptyPage,
+  #addToWishlistSection,
   #addFriendPage,
   #addEventsPage,
   #friendsListPage,
@@ -56,6 +59,7 @@ main {
     margin-bottom: 0;
     color: $color_neutral_white;
     font-family: $font_body;
+    animation: fadeIn 0.5s ease-in both;
 
     .loggedin #btn_logout,
     #btn_AddGiftIdea {
@@ -571,6 +575,7 @@ main #takePhoto {
   margin: 1rem;
   overflow: hidden;
   border: none;
+  animation: fadeIn 0.5s ease-in both;
 
   .displaycard {
     border-color: $color_footer_icon;
@@ -1014,6 +1019,7 @@ body #desktopView {
 .constContainer {
   display: flex;
   flex-direction: column;
+  animation: fadeIn 0.5s ease-in both;
 }
 
 .constContainer h1 {
@@ -1047,6 +1053,7 @@ body #desktopView {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: fadeIn 0.5s ease-in both;
 
   &:hover span {
     color: $color_button_purple;
@@ -1137,6 +1144,7 @@ body #desktopView {
     background-color: $color_button_hover_purple_bg;
     color: $color_neutral_white;
     font-family: $font_body;
+    animation: fadeIn 0.5s ease-in both;
 
     &:nth-child(even) {
       background-color: $color_button_hover_green_bg;
