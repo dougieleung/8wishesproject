@@ -274,6 +274,20 @@ main #giftIdeaHomePage {
   margin-bottom: 25vh;
 }
 
+.idea-window {
+  border: 1px solid $color_button_purple;
+  background-color: $color_button_purple;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  height: 28rem;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 1rem;
+  }
+}
+
 #windowDescription {
   display: flex;
   flex-direction: column;
