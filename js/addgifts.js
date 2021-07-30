@@ -100,11 +100,11 @@ addToWish.addEventListener("click", () => {
   addToWishlistSection.classList.add("hide");
   complete.classList.toggle("hide");
   if (newWish.location !== undefined) {
-    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
-  ${newWish.wishDesc}<br>
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br><br>
+  ${newWish.wishDesc}<br><br>
   ${newWish.location}`;
   } else {
-    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br><br>
   ${newWish.wishDesc}`;
   }
 });

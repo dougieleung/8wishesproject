@@ -1123,13 +1123,16 @@ main #giftIdeaHomePage #startIdeaBtn a {
   background-color: #aba0f5;
   border-radius: 1rem;
   margin-bottom: 2rem;
-  height: 28rem;
+  height: 22rem;
 }
 
 .idea-window img {
   width: 100%;
-  object-fit: cover;
-  margin-top: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 #windowDescription {
@@ -1143,12 +1146,13 @@ main #giftIdeaHomePage #startIdeaBtn a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 1rem;
   width: 300px;
+  margin-bottom: 0;
 }
 
 #windowDescription p {
   word-wrap: break-word;
+  margin: 2%;
 }
 
 #seeFriendsList {
@@ -2022,7 +2026,9 @@ main #listEmptyPage #friendtoProfile {
 
 #ideaSummary {
   width: 302px;
-  overflow: hidden;
+  text-align: center;
+  margin: 2%;
+  word-wrap: break-word;
 }
 
 main #complete {
@@ -2107,7 +2113,7 @@ body #desktopView {
             flex-direction: column;
   }
   #welcomePage {
-    height: 100vh;
+    height: 210vh;
   }
 }
 
@@ -3077,38 +3083,47 @@ main section {
 #giftIdeaHomePage #startIdeaBtn,
 #giftIdeaHomePage #addGift,
 #giftIdeaHomePage #addtowish,
+#giftIdeaHomePage #seeFriendsList,
 #giftIdeaHomePage #addToDB,
 #giftIdeaAdd #startIdeaBtn,
 #giftIdeaAdd #addGift,
 #giftIdeaAdd #addtowish,
+#giftIdeaAdd #seeFriendsList,
 #giftIdeaAdd #addToDB,
 #takePhoto #startIdeaBtn,
 #takePhoto #addGift,
 #takePhoto #addtowish,
+#takePhoto #seeFriendsList,
 #takePhoto #addToDB,
 #summaryCard #startIdeaBtn,
 #summaryCard #addGift,
 #summaryCard #addtowish,
+#summaryCard #seeFriendsList,
 #summaryCard #addToDB,
 #addToWishlistSection #startIdeaBtn,
 #addToWishlistSection #addGift,
 #addToWishlistSection #addtowish,
+#addToWishlistSection #seeFriendsList,
 #addToWishlistSection #addToDB,
 #listEmptyPage #startIdeaBtn,
 #listEmptyPage #addGift,
 #listEmptyPage #addtowish,
+#listEmptyPage #seeFriendsList,
 #listEmptyPage #addToDB,
 #complete #startIdeaBtn,
 #complete #addGift,
 #complete #addtowish,
+#complete #seeFriendsList,
 #complete #addToDB,
 #addEventPage #startIdeaBtn,
 #addEventPage #addGift,
 #addEventPage #addtowish,
+#addEventPage #seeFriendsList,
 #addEventPage #addToDB,
 #addFriendPage #startIdeaBtn,
 #addFriendPage #addGift,
 #addFriendPage #addtowish,
+#addFriendPage #seeFriendsList,
 #addFriendPage #addToDB {
   border: none;
   border-radius: 44px;

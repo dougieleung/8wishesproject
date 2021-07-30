@@ -276,12 +276,14 @@ main #giftIdeaHomePage {
   background-color: $color_button_purple;
   border-radius: 1rem;
   margin-bottom: 2rem;
-  height: 28rem;
+  height: 22rem;
 
   img {
     width: 100%;
     object-fit: cover;
-    margin-top: 1rem;
+    margin-top: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
 
@@ -289,13 +291,15 @@ main #giftIdeaHomePage {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 1rem;
+  // padding-top: 1rem;
   width: 300px;
+  margin-bottom: 0;
 
 }
 
 #windowDescription p {
   word-wrap: break-word;
+  margin: 2%;
 }
 
 #seeFriendsList {
@@ -914,7 +918,9 @@ main #listEmptyPage {
 //////////////my list summary ////////////////
 #ideaSummary {
   width: 302px;
-  overflow: hidden;
+  text-align: center;
+  word-wrap: break-word;
+  
 }
 
 main #complete {
@@ -981,7 +987,7 @@ body #desktopView {
     flex-direction: column;
   }
   #welcomePage {
-    height: 100vh;
+    height: 210vh;
   }
 }
 
