@@ -8,7 +8,8 @@ body {
 #demo-page,
 #registerPage,
 #loginPage,
-#StoresPage {
+#StoresPage, 
+#addToWishlistSection {
   height: 100vh;
 }
 
@@ -180,19 +181,15 @@ main {
 ////////////////////////// demo page/////////////////////////////////
 
 main #demo-page {
-  .demo-carousel {
-    height: 70vh;
-    background-color: $color_neutral_white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
 
   #demopage1,
   #demopage2,
   #demopage3 {
     flex-direction: column;
+    height: 70vh;
+    background-color: $color_neutral_white;
+    justify-content: center;
+    align-items: center;
   }
 
   .fas {
@@ -271,7 +268,7 @@ main #giftIdeaHomePage {
 }
 
 .add-idea-3 .window-description {
-  margin-bottom: 25vh;
+  margin-bottom: 17vh;
 }
 
 .idea-window {
@@ -291,8 +288,10 @@ main #giftIdeaHomePage {
 #windowDescription {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding-top: 1rem;
   width: 300px;
-  // overflow: hidden;
+
 }
 
 #windowDescription p {
@@ -526,12 +525,7 @@ main #takePhoto {
   }
 }
 
-#windowDescription {
-  padding-top: 1rem;
-}
-
-#windowImage,
-#windowDescription {
+#windowImage {
   display: flex;
   justify-content: center;
 }
@@ -987,16 +981,12 @@ body #desktopView {
     flex-direction: column;
   }
   #welcomePage {
-    height: 200vh;
+    height: 100vh;
   }
 }
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////
 
-#giftcardFriendsDisplay {
-  height: 90vh;
-  border: none;
-}
 
 #friendName2 {
   display: flex;
@@ -1039,20 +1029,19 @@ body #desktopView {
   font-family: $font_heading;
   color: $color_neutral_white;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .constContainer img {
   align-self: center;
   max-width: 90%;
-  margin: 20vh 0;
+  margin: 5vh 0;
 }
 
 // FriendsView.html styling
 #giftcardFriendsDisplay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 90vh;
+  border: none;
 }
 
 #friendsSeeList #fetchedFriendsList li {
@@ -1105,14 +1094,14 @@ body #desktopView {
 ///////////// #friendsWishlist on friendsView.html styling///////////
 
 #giftcardFriendsDisplay {
-  height: 100vh;
-  overflow: scroll;
+  height: 100%;
   margin-bottom: 4rem;
 }
 
-#friendsListView {
-  overflow: scroll;
-}
+// The overflow: scroll adds a padding to the right
+// #friendsListView {
+//   overflow: scroll;
+// }
 
 #friendsWishlist {
   width: 40vw;
