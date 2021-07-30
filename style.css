@@ -15,7 +15,8 @@ body {
 #demo-page,
 #registerPage,
 #loginPage,
-#StoresPage {
+#StoresPage,
+#addToWishlistSection {
   height: 100vh;
 }
 
@@ -2092,7 +2093,7 @@ body #desktopView {
             flex-direction: column;
   }
   #welcomePage {
-    height: 200vh;
+    height: 100vh;
   }
 }
 
@@ -2226,7 +2227,7 @@ body #desktopView {
 }
 
 #giftcardFriendsDisplay {
-  height: 100vh;
+  height: 100%;
   margin-bottom: 4rem;
 }
 
@@ -2534,7 +2535,7 @@ body #demopage3 .show {
 
 main section {
   width: 100%;
-  min-height: 70vh;
+  min-height: 100vh;
 }
 
 /* Bottom nav bar ==================================== */
@@ -3556,7 +3557,7 @@ section > a {
 }
 
 #desktopView video {
-  margin-top: 5vh;
+  margin-top: 2vh;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
