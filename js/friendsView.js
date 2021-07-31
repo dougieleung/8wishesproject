@@ -15,10 +15,15 @@ const saveEditFriendsBtn = document.querySelector('#saveEditFriends');
 const deleteWishFriendsBtn = document.querySelector('#deleteWishFriends');
 const addFriendPage2 = document.querySelector("#addFriendPage2");
 const addFriendBtn2 = document.querySelector("#addFriendBtn2");
+const addFriendButton = document.querySelector("#addFriendButton");
+const addFriendForm = document.querySelector(".addFriendForm");
+
 
 let friendID;
 
 // ***************** Function #1: Retrieve list of friends from Firestore *********************
+
+
 
 async function friendsListfromDB() {
 
@@ -277,3 +282,7 @@ async function addFriendToFirestore(friendName) {
     }
   }
 }
+
+addFriendButton.addEventListener("click", ()=> {
+  addFriendForm.style.display = "block";
+})

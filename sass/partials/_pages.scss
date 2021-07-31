@@ -999,7 +999,7 @@ body #desktopView {
 #friendName2 {
   display: flex;
   border-radius: 1.5rem;
-  padding: 1rem 4rem;
+  padding: 0.5rem 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1007,18 +1007,34 @@ body #desktopView {
   font-family: $font_body;
 }
 
-#addFriendBtn2 {
+::placeholder {
+  color: $color_neutral_gray;
+}
+
+.addFriendButton {
   border-radius: 1.5rem;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
   border-style: none;
   background-color: $color_card_bg;
   color: $color_text_dark;
   transition: all 0.5s ease;
   font-family: $font_body;
+}
+
+#addFriendBtn2 {
+  border-radius: 1.5rem;
+  padding: 0.5rem 4rem;
+  border-style: none;
+  background-color: $color_secondary_green;
+  color: $color_text_dark;
+  transition: all 0.5s ease;
+  font-family: $font_body;
+  margin: 0.2rem;
 
   &:hover {
     color: $color_button_hover_text;
-    background-color: $color_button_hover_purple_bg;
+    background-color: $color_button_hover_green_bg;
   }
 }
 
@@ -1160,10 +1176,6 @@ body #desktopView {
   }
 }
 
-#addFriendBtn2 {
-  margin: 1rem;
-}
-
 ////////////////////// HOME PAGE styling /////////////////@at-root
 #events-wrapper {
   border: none;
@@ -1268,7 +1280,7 @@ body #editCardFriends {
 
   input,
   button {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
     border-style: none;
     margin-top: 0.5rem;
@@ -1298,5 +1310,10 @@ body #editCardFriends {
 // ///////////////// loading friends list ////////////////////////////
 
 .loadingFriendsList {
+  text-align: center;
+}
+
+.addFriendForm {
+  display: none;
   text-align: center;
 }

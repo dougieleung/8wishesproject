@@ -1845,7 +1845,7 @@ body #desktopView {
 #friendName2 {
   display: flex;
   border-radius: 1.5rem;
-  padding: 1rem 4rem;
+  padding: 0.5rem 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1853,9 +1853,14 @@ body #desktopView {
   font-family: "Livvic", sans-serif;
 }
 
-#addFriendBtn2 {
+::placeholder {
+  color: #b3b7c2;
+}
+
+.addFriendButton {
   border-radius: 1.5rem;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
   border-style: none;
   background-color: #c7beff;
   color: #212531;
@@ -1863,9 +1868,20 @@ body #desktopView {
   font-family: "Livvic", sans-serif;
 }
 
+#addFriendBtn2 {
+  border-radius: 1.5rem;
+  padding: 0.5rem 4rem;
+  border-style: none;
+  background-color: #3dc8bf;
+  color: #212531;
+  transition: all 0.5s ease;
+  font-family: "Livvic", sans-serif;
+  margin: 0.2rem;
+}
+
 #addFriendBtn2:hover {
   color: #f9f9fb;
-  background-color: #8177c3;
+  background-color: #2ba199;
 }
 
 #StoresPage {
@@ -1995,10 +2011,6 @@ body #desktopView {
   color: #f9f9fb;
 }
 
-#addFriendBtn2 {
-  margin: 1rem;
-}
-
 #events-wrapper {
   border: none;
   width: 100vw;
@@ -2090,7 +2102,7 @@ body #editCardFriends {
 
 #editForm input,
 #editForm button {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
   border-style: none;
   margin-top: 0.5rem;
@@ -2117,6 +2129,11 @@ body #editCardFriends {
 }
 
 .loadingFriendsList {
+  text-align: center;
+}
+
+.addFriendForm {
+  display: none;
   text-align: center;
 }
 
