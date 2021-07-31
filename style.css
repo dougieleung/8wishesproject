@@ -2116,6 +2116,10 @@ body #editCardFriends {
   transition: all 0.5s ease;
 }
 
+.loadingFriendsList {
+  text-align: center;
+}
+
 /* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 /* Testing Styles ==================== */

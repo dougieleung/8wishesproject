@@ -22,9 +22,9 @@ let friendID;
 
 async function friendsListfromDB() {
 
-  friendsSeeList.innerHTML = "";
 
   let mainUser = JSON.parse(localStorage.getItem("mainUser"));
+
 
   await db
     .collection(mainUser.uid)
@@ -32,6 +32,7 @@ async function friendsListfromDB() {
     .collection("List")
     .get()
     .then((querySnapshot) => {
+      friendsSeeList.innerHTML = "";
       const list = document.createElement("ul");
       list.setAttribute("id", "fetchedFriendsList");
       querySnapshot.forEach((item) => {
