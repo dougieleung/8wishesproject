@@ -36,17 +36,22 @@ async function friendsListfromDB() {
       list.setAttribute("id", "fetchedFriendsList");
       querySnapshot.forEach((item) => {
         console.log(item.id, " => ", item.data());
-
+        const container = document.createElement("div");
+        container.setAttribute("class", "nameContainer");
         const listItem = document.createElement("li");
-        listItem.innerText = `${item.id}`;
+        const nameItem = document.createElement("span");
+        nameItem.innerText = `${item.id}`;
         list.appendChild(listItem);
 
         const seeListBtn = document.createElement("button");
         seeListBtn.innerText = "See List";
-        listItem.appendChild(seeListBtn);
-   
+        listItem.appendChild(container);
+        container.appendChild(nameItem);
+        container.appendChild(seeListBtn);
+     
         seeListBtn.addEventListener("click", function () {
-          friendID = this.parentElement.innerText.slice(0, -8);
+          friendID = nameItem.innerText;
+        
           friendsWishlist.classList.remove("hide");
           
           // Please see Function #2
