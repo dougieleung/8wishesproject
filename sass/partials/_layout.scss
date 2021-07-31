@@ -5,11 +5,11 @@ img {
   height: auto;
 }
 
-section,
-.displaycard {
+section {
   border: 1px solid #000;
   margin: 1%;
 }
+
 
 main {
   display: flex;
@@ -72,7 +72,7 @@ body #demopage3 .show {
 
   display: flex;
   animation: fadeIn 0.5s ease-in both;
-  
+
 }
 
 #demopage1 p,
@@ -95,6 +95,7 @@ body #demopage3 .show {
 
 #desktopView p {
   max-width: 50vw;
+
   .teamQuote {
     color: $color_card_bg2;
   }
