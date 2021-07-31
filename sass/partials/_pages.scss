@@ -8,7 +8,7 @@ body {
 #demo-page,
 #registerPage,
 #loginPage,
-#StoresPage, 
+#StoresPage,
 #addToWishlistSection {
   height: 100vh;
 }
@@ -52,7 +52,7 @@ main {
   #giftcardFriendsDisplay {
     background-color: $color_primary;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     gap: 2%;
     align-items: center;
     flex-direction: column;
@@ -181,7 +181,6 @@ main {
 ////////////////////////// demo page/////////////////////////////////
 
 main #demo-page {
-
   #demopage1,
   #demopage2,
   #demopage3 {
@@ -218,6 +217,10 @@ main #demo-page {
 }
 
 main #loginPage {
+  h2 {
+    margin: 0;
+  }
+
   #logged-in {
     justify-content: center;
     height: 40vh;
@@ -294,7 +297,6 @@ main #giftIdeaHomePage {
   // padding-top: 1rem;
   width: 300px;
   margin-bottom: 0;
-
 }
 
 #windowDescription p {
@@ -565,6 +567,7 @@ main #takePhoto {
   a {
     color: $color_text_dark;
     transition: all 0.5s ease;
+    font-size: 1rem;
   }
 
   &:hover {
@@ -920,7 +923,6 @@ main #listEmptyPage {
   width: 302px;
   text-align: center;
   word-wrap: break-word;
-  
 }
 
 main #complete {
@@ -992,7 +994,6 @@ body #desktopView {
 }
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////
-
 
 #friendName2 {
   display: flex;
@@ -1090,6 +1091,7 @@ body #desktopView {
     border: none;
     font-family: $font_body;
     color: $color_neutral_white;
+    font-size: 1rem;
   }
 
   button:hover {
@@ -1231,4 +1233,8 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loggedin {
+  text-align: center;
 }
