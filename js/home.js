@@ -20,6 +20,7 @@ async function upcomingEvents() {
 
   if (this.localStorage.getItem("mainUser") === null) {
     loginFirst.style.display = "flex";
+    loadingPage.style.display= "none";
   } else {
     loginFirst.style.display= "none";
   }
