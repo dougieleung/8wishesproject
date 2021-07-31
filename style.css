@@ -55,7 +55,8 @@ main #takePhoto,
 main #addEventPage,
 main #friendAddedPage,
 main #editCard,
-main #giftcardFriendsDisplay {
+main #giftcardFriendsDisplay,
+main #editCardFriends {
   background-color: #363d51;
   display: flex;
   justify-content: space-around;
@@ -105,7 +106,9 @@ main #friendAddedPage #btn_AddGiftIdea,
 main #editCard .loggedin #btn_logout,
 main #editCard #btn_AddGiftIdea,
 main #giftcardFriendsDisplay .loggedin #btn_logout,
-main #giftcardFriendsDisplay #btn_AddGiftIdea {
+main #giftcardFriendsDisplay #btn_AddGiftIdea,
+main #editCardFriends .loggedin #btn_logout,
+main #editCardFriends #btn_AddGiftIdea {
   color: #212531;
   margin: 2rem;
 }
@@ -147,7 +150,9 @@ main #friendAddedPage #btn_AddGiftIdea a,
 main #editCard .loggedin #btn_logout a,
 main #editCard #btn_AddGiftIdea a,
 main #giftcardFriendsDisplay .loggedin #btn_logout a,
-main #giftcardFriendsDisplay #btn_AddGiftIdea a {
+main #giftcardFriendsDisplay #btn_AddGiftIdea a,
+main #editCardFriends .loggedin #btn_logout a,
+main #editCardFriends #btn_AddGiftIdea a {
   text-decoration: none;
   color: #212531;
 }
@@ -170,7 +175,8 @@ main #takePhoto #registerForm .form-item,
 main #addEventPage #registerForm .form-item,
 main #friendAddedPage #registerForm .form-item,
 main #editCard #registerForm .form-item,
-main #giftcardFriendsDisplay #registerForm .form-item {
+main #giftcardFriendsDisplay #registerForm .form-item,
+main #editCardFriends #registerForm .form-item {
   width: 100%;
 }
 
@@ -192,7 +198,8 @@ main #takePhoto #registerForm .form-item #registerButton,
 main #addEventPage #registerForm .form-item #registerButton,
 main #friendAddedPage #registerForm .form-item #registerButton,
 main #editCard #registerForm .form-item #registerButton,
-main #giftcardFriendsDisplay #registerForm .form-item #registerButton {
+main #giftcardFriendsDisplay #registerForm .form-item #registerButton,
+main #editCardFriends #registerForm .form-item #registerButton {
   margin-left: 0.3rem;
 }
 
@@ -233,7 +240,9 @@ main #friendAddedPage #registerForm,
 main #editCard #not-logged-in,
 main #editCard #registerForm,
 main #giftcardFriendsDisplay #not-logged-in,
-main #giftcardFriendsDisplay #registerForm {
+main #giftcardFriendsDisplay #registerForm,
+main #editCardFriends #not-logged-in,
+main #editCardFriends #registerForm {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -316,7 +325,11 @@ main #editCard #registerForm span,
 main #giftcardFriendsDisplay #not-logged-in a,
 main #giftcardFriendsDisplay #not-logged-in span,
 main #giftcardFriendsDisplay #registerForm a,
-main #giftcardFriendsDisplay #registerForm span {
+main #giftcardFriendsDisplay #registerForm span,
+main #editCardFriends #not-logged-in a,
+main #editCardFriends #not-logged-in span,
+main #editCardFriends #registerForm a,
+main #editCardFriends #registerForm span {
   color: #212531;
 }
 
@@ -433,7 +446,13 @@ main #giftcardFriendsDisplay #not-logged-in .link3,
 main #giftcardFriendsDisplay #not-logged-in span,
 main #giftcardFriendsDisplay #registerForm .link2,
 main #giftcardFriendsDisplay #registerForm .link3,
-main #giftcardFriendsDisplay #registerForm span {
+main #giftcardFriendsDisplay #registerForm span,
+main #editCardFriends #not-logged-in .link2,
+main #editCardFriends #not-logged-in .link3,
+main #editCardFriends #not-logged-in span,
+main #editCardFriends #registerForm .link2,
+main #editCardFriends #registerForm .link3,
+main #editCardFriends #registerForm span {
   color: #f9f9fb;
 }
 
@@ -702,7 +721,21 @@ main #giftcardFriendsDisplay #registerForm #username,
 main #giftcardFriendsDisplay #registerForm #email,
 main #giftcardFriendsDisplay #registerForm #password,
 main #giftcardFriendsDisplay #registerForm #confirmPassword,
-main #giftcardFriendsDisplay #registerForm #registerButton {
+main #giftcardFriendsDisplay #registerForm #registerButton,
+main #editCardFriends #not-logged-in input#email1,
+main #editCardFriends #not-logged-in #password1,
+main #editCardFriends #not-logged-in #username,
+main #editCardFriends #not-logged-in #email,
+main #editCardFriends #not-logged-in #password,
+main #editCardFriends #not-logged-in #confirmPassword,
+main #editCardFriends #not-logged-in #registerButton,
+main #editCardFriends #registerForm input#email1,
+main #editCardFriends #registerForm #password1,
+main #editCardFriends #registerForm #username,
+main #editCardFriends #registerForm #email,
+main #editCardFriends #registerForm #password,
+main #editCardFriends #registerForm #confirmPassword,
+main #editCardFriends #registerForm #registerButton {
   padding: 0.7rem;
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
@@ -751,7 +784,9 @@ main #friendAddedPage #registerForm .forgot-password,
 main #editCard #not-logged-in .forgot-password,
 main #editCard #registerForm .forgot-password,
 main #giftcardFriendsDisplay #not-logged-in .forgot-password,
-main #giftcardFriendsDisplay #registerForm .forgot-password {
+main #giftcardFriendsDisplay #registerForm .forgot-password,
+main #editCardFriends #not-logged-in .forgot-password,
+main #editCardFriends #registerForm .forgot-password {
   text-align: right;
 }
 
@@ -792,7 +827,9 @@ main #friendAddedPage #registerForm #registerButton,
 main #editCard #not-logged-in #registerButton,
 main #editCard #registerForm #registerButton,
 main #giftcardFriendsDisplay #not-logged-in #registerButton,
-main #giftcardFriendsDisplay #registerForm #registerButton {
+main #giftcardFriendsDisplay #registerForm #registerButton,
+main #editCardFriends #not-logged-in #registerButton,
+main #editCardFriends #registerForm #registerButton {
   background-color: #86e4de;
   border-color: #86e4de;
   color: #212531;
@@ -816,7 +853,8 @@ main #takePhoto h2,
 main #addEventPage h2,
 main #friendAddedPage h2,
 main #editCard h2,
-main #giftcardFriendsDisplay h2 {
+main #giftcardFriendsDisplay h2,
+main #editCardFriends h2 {
   color: #f9f9fb;
   text-align: center;
 }
@@ -839,7 +877,8 @@ main #takePhoto label,
 main #addEventPage label,
 main #friendAddedPage label,
 main #editCard label,
-main #giftcardFriendsDisplay label {
+main #giftcardFriendsDisplay label,
+main #editCardFriends label {
   padding: 0;
 }
 
@@ -861,7 +900,8 @@ main #takePhoto .footer-login,
 main #addEventPage .footer-login,
 main #friendAddedPage .footer-login,
 main #editCard .footer-login,
-main #giftcardFriendsDisplay .footer-login {
+main #giftcardFriendsDisplay .footer-login,
+main #editCardFriends .footer-login {
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -886,7 +926,8 @@ main #takePhoto #registerForm .footer-register,
 main #addEventPage #registerForm .footer-register,
 main #friendAddedPage #registerForm .footer-register,
 main #editCard #registerForm .footer-register,
-main #giftcardFriendsDisplay #registerForm .footer-register {
+main #giftcardFriendsDisplay #registerForm .footer-register,
+main #editCardFriends #registerForm .footer-register {
   text-align: center;
   margin-top: 1rem;
 }
@@ -928,7 +969,9 @@ main #friendAddedPage #registerForm .footer-register a,
 main #editCard #registerForm .footer-register span,
 main #editCard #registerForm .footer-register a,
 main #giftcardFriendsDisplay #registerForm .footer-register span,
-main #giftcardFriendsDisplay #registerForm .footer-register a {
+main #giftcardFriendsDisplay #registerForm .footer-register a,
+main #editCardFriends #registerForm .footer-register span,
+main #editCardFriends #registerForm .footer-register a {
   color: #f9f9fb;
 }
 
@@ -1921,7 +1964,7 @@ body #desktopView {
 }
 
 #friendsWishlist {
-  width: 40vw;
+  width: 80vw;
   margin-bottom: 2rem;
 }
 
@@ -2033,6 +2076,44 @@ main {
 
 .loggedin {
   text-align: center;
+}
+
+body #editCardFriends {
+  justify-content: center;
+  align-items: center;
+}
+
+#editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#editForm input,
+#editForm button {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border-style: none;
+  margin-top: 0.5rem;
+  border: 1px solid #f9f9fb;
+  font-family: "Oxygen", sans-serif;
+  background-color: #f9f9fb;
+  text-align: center;
+}
+
+#editForm #wishDescEdit {
+  margin-bottom: 2rem;
+}
+
+#editForm button {
+  background-color: #aba0f5;
+  border: 1px solid #aba0f5;
+}
+
+#editForm button:hover {
+  background-color: #8177c3;
+  border: 1px solid #8177c3;
+  color: #f9f9fb;
+  transition: all 0.5s ease;
 }
 
 /* ================ Mixins =====================*/

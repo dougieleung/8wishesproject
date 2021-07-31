@@ -49,7 +49,8 @@ main {
   #addEventPage,
   #friendAddedPage,
   #editCard,
-  #giftcardFriendsDisplay {
+  #giftcardFriendsDisplay,
+  #editCardFriends {
     background-color: $color_primary;
     display: flex;
     justify-content: space-around;
@@ -1128,7 +1129,7 @@ body #desktopView {
 // }
 
 #friendsWishlist {
-  width: 40vw;
+  width: 80vw;
   margin-bottom: 2rem;
 
   .displaycard {
@@ -1253,4 +1254,43 @@ main {
 
 .loggedin {
   text-align: center;
+}
+
+//////////////// edit friends cards ///////////////
+body #editCardFriends {
+  justify-content: center;
+  align-items: center;
+}
+
+#editForm {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  button {
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    border-style: none;
+    margin-top: 0.5rem;
+    border: 1px solid $color_neutral_white;
+    font-family: $font_interaction;
+    background-color: $color_neutral_white;
+    text-align: center;
+  }
+
+  #wishDescEdit {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background-color: $color_button_purple;
+    border: 1px solid $color_button_purple;
+
+    &:hover {
+      background-color: $color_button_hover_purple_bg;
+      border: 1px solid $color_button_hover_purple_bg;
+      color: $color_neutral_white;
+      transition: all 0.5s ease;
+    }
+  }
 }
