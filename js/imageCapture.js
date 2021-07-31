@@ -19,13 +19,36 @@ context.scale(0.4, 0.4);
 
 cameraBtn.addEventListener("click", function () {
 
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(stream => {
+  // navigator.mediaDevices.getUserMedia({ video: true })
+  //   .then(stream => {
+  //     video.srcObject = stream;
+  //     const track = stream.getVideoTracks()[0];
+  //     imageCapture = new ImageCapture(track);
+  //   })
+  //   .catch(error => console.log(error));
+
+  if (navigator.getUserMedia) { // Standard
+    navigator.getUserMedia({ video: true }, function (stream) {
+      video.src = stream;
+      const track = stream.getVideoTracks()[0];
+      imageCapture = new ImageCapture(track);
+      video.play();
+    }, errBack);
+  } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+    navigator.webkitGetUserMedia({ video: true }, function (stream) {
+      video.src = window.webkitURL.createObjectURL(stream);
+      const track = stream.getVideoTracks()[0];
+      imageCapture = new ImageCapture(track);
+      video.play();
+    }, errBack);
+  } else if (navigator.mozGetUserMedia) { // Mozilla-prefixed
+    navigator.mozGetUserMedia({ video: true }, function (stream) {
       video.srcObject = stream;
       const track = stream.getVideoTracks()[0];
       imageCapture = new ImageCapture(track);
-    })
-    .catch(error => console.log(error));
+      video.play();
+    }, errBack);
+  }
 
 });
 
@@ -73,23 +96,23 @@ function handleBlob(blob) {
 
 
 
-/* below is LEGACY code using navigator.getUserMedia in case you want to support older browsers
-else if(navigator.getUserMedia) { // Standard
-  navigator.getUserMedia({ video: true }, function(stream) {
-    video.src = stream;
-    video.play();
-  }, errBack);
-} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
-  navigator.webkitGetUserMedia({ video: true }, function(stream){
-    video.src = window.webkitURL.createObjectURL(stream);
-    video.play();
-  }, errBack);
-} else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
-  navigator.mozGetUserMedia({ video: true }, function(stream){
-    video.srcObject = stream;
-    video.play();
-  }, errBack);
-}
-*/
+//  below is LEGACY code using navigator.getUserMedia in case you want to support older browsers
+// else if(navigator.getUserMedia) { // Standard
+//   navigator.getUserMedia({ video: true }, function(stream) {
+//     video.src = stream;
+//     video.play();
+//   }, errBack);
+// } else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+//   navigator.webkitGetUserMedia({ video: true }, function(stream){
+//     video.src = window.webkitURL.createObjectURL(stream);
+//     video.play();
+//   }, errBack);
+// } else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
+//   navigator.mozGetUserMedia({ video: true }, function(stream){
+//     video.srcObject = stream;
+//     video.play();
+//   }, errBack);
+// }
+
 
 
