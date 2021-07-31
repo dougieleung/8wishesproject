@@ -4,32 +4,71 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
 
-    <title>REGISTER & LOGIN | 8 Wishes</title>
-    <meta
-      name="description"
-      content="An application for searching special unique gifts"
-    />
-    <link rel="manifest" href="./manifest.json" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <title>REGISTER & LOGIN | 8 Wishes</title>
+  <meta name="description" content="An application for searching special unique gifts" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <!-- add more sizes -->
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
 
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.ready.then((reg) => {
-          console.log(`Service Worker ready (Scope: ${reg.scope})`);
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.ready.then((reg) => {
+        console.log(`Service Worker ready (Scope: ${reg.scope})`);
+      });
+
+      navigator.serviceWorker
+        .register("./sw.js", {
+          scope: "/",
+        })
+        .then(function (reg) {
+          console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+        })
+        .catch(function (error) {
+          console.log(`Service Worker Error (${error})`);
         });
+    } else {
+      console.warn("Service Worker not available");
+    }
+  </script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js" defer></script>
+
+  <script src="./js/firebase.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/auth.js" defer></script>
+  <script src="./js/pageDisplayIntro.js" defer></script>
+</head>
+
+<body>
+  <header></header>
+  <main id="introPages">
+    <!-- ********************************   WELCOME Page section   ********************************** -->
+
+    <section id="welcomePage">
+      <h1>Welcome!</h1>
+
+      <div class="logo">
+        <img src="./icons/Logo_white_200.png" alt="8wishes-logo" />
+      </div>
+
 
         navigator.serviceWorker
           .register("./sw.js", {
@@ -93,12 +132,14 @@
             </video>
      
           <p><em>
+
             "...To inspire the user to capture, store and organize gift ideas
             for herself and her loved ones... To remind the user of special
             occasions like birthdays and anniversaries and give her that extra
             little nudge to translate hidden love into
             outward expression...” - <span class="teamQuote">8wishes Team</span>
           </em></p>
+
          
           <p>
             Who doesn’t want to treat herself to something special once in a
@@ -138,34 +179,34 @@
      
       </section>
 
-      <!-- ************************************   DEMO section   ************************************** -->
 
-      <section class="hide" id="demo-page">
-        <div id="demopage1" class="show">
-          <img src="./icons/demoimages/demoimage1.png" alt="" />
-          
-          <p>Spot a great gift idea?</p>
-          <img id="ellipsis1" src="./icons/demoimages/Ellipsis1.png" alt="" />
-        </div>
+    <section class="hide" id="demo-page">
+      <div id="demopage1" class="show">
+        <img src="./icons/demoimages/demoimage1.png" alt="" />
 
-        <div id="demopage2" class="hide">
-          <img src="./icons/demoimages/demoimage2.png" alt="" />
-          
-          <p>Take a picture and store the idea!</p>    
-          <img id="ellipsis2" src="./icons/demoimages/Ellipsis2.png" alt="" />
-        </div>
+        <p>Spot a great gift idea?</p>
+        <img id="ellipsis1" src="./icons/demoimages/Ellipsis1.png" alt="" />
+      </div>
 
-        <div id="demopage3" class="hide">
-          <img src="./icons/demoimages/demoimage3.png" alt="" />
-          
-          <p>Surprise a friend with the best one!</p>  
-          <img id="ellipsis3" src="./icons/demoimages/Ellipsis3.png" alt="" />
-        </div>
+      <div id="demopage2" class="hide">
+        <img src="./icons/demoimages/demoimage2.png" alt="" />
+
+        <p>Take a picture and store the idea!</p>
+        <img id="ellipsis2" src="./icons/demoimages/Ellipsis2.png" alt="" />
+      </div>
+
+      <div id="demopage3" class="hide">
+        <img src="./icons/demoimages/demoimage3.png" alt="" />
+
+        <p>Surprise a friend with the best one!</p>
+        <img id="ellipsis3" src="./icons/demoimages/Ellipsis3.png" alt="" />
+      </div>
 
       <div class="footer-demo">
         <button id="sign-up"><a href="#registerPage">Sign up</a></button>
         <button id="log-in"><a href="#loginPage">Login</a></button>
       </div>
+
       </section>
 
       <!-- *********************************   LOGIN Page section   *********************************** -->
@@ -210,8 +251,17 @@
             <button id="registerLink" class="link link3">Sign up Now!</button>
          
           </div>
-       
+
         </div>
+      </div>
+
+      <!-- Logged in section -->
+
+      <div class="loggedin" id="logged-in">
+        <h3>Welcome! You are logged in!</h3>
+        <p id="user_para"></p>
+        <button id="btn_logout" class="button button4">Logout</button>
+
 
         <!-- User logged in section -->
 
@@ -305,3 +355,4 @@
   </body>
 
 </html>
+

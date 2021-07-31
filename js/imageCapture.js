@@ -34,13 +34,13 @@ snap.addEventListener("click", function () {
   context.drawImage(video, 0, 0);
   const imageBlob = canvas.toBlob(handleBlob, "image/jpeg");
 
-    function playAudio() {
-      const cameraAudio = document.querySelector("#cameraAudio");
+  function playAudio() {
+    const cameraAudio = document.querySelector("#cameraAudio");
 
-      cameraAudio.play();
-    }
+    cameraAudio.play();
+  }
 
-    playAudio();
+  playAudio();
 
 });
 
@@ -70,4 +70,26 @@ function handleBlob(blob) {
   windowImage.appendChild(copyImg2);
   storeImage = objectURL;
 }
+
+
+
+/* below is LEGACY code using navigator.getUserMedia in case you want to support older browsers
+else if(navigator.getUserMedia) { // Standard
+  navigator.getUserMedia({ video: true }, function(stream) {
+    video.src = stream;
+    video.play();
+  }, errBack);
+} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+  navigator.webkitGetUserMedia({ video: true }, function(stream){
+    video.src = window.webkitURL.createObjectURL(stream);
+    video.play();
+  }, errBack);
+} else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
+  navigator.mozGetUserMedia({ video: true }, function(stream){
+    video.srcObject = stream;
+    video.play();
+  }, errBack);
+}
+*/
+
 
