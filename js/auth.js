@@ -4,7 +4,9 @@
 
 const errorLogin = document.querySelector("error-login");
 
+
 // ******************************** Firebase Authentication ***********************************
+
 
 let newUser = null;
 
@@ -18,7 +20,9 @@ function redirectToHomePage() {
   }
 }
 
+
 // *********************************** Create User Object *************************************
+
 
 class userInfo {
   constructor(username, email) {
@@ -50,7 +54,9 @@ class userInfo {
   }
 }
 
+
 // ********************************* New User Registration ************************************
+
 
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -60,16 +66,19 @@ registerForm.addEventListener("submit", async (event) => {
 
     newUser.signUp(emailInput.value, passwordInput.value, usernameInput.value);
     registerPage.style.display = "none";
+
   } else {
-    // console.error("Passwords are not matching");
 
     const outputMessage = document.querySelector("#outputMessage");
 
     outputMessage.innerHTML = "Passwords are not matching!";
   }
+
 });
 
+
 // ******************************* Authentication State Change ********************************
+
 
 firebase.auth().onAuthStateChanged((user) => {
   const notLoggedIn = document.getElementById("not-logged-in");
@@ -86,13 +95,17 @@ firebase.auth().onAuthStateChanged((user) => {
         "Welcome, " + user.displayName;
       console.log(`User:  ${user}`);
     }
+  
   } else {
     loggedIn.style.display = "none";
     notLoggedIn.style.display = "block";
   }
+
 });
 
+
 // ************************************** User Login ******************************************
+
 
 loginButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -114,18 +127,20 @@ loginButton.addEventListener("click", (event) => {
         const errorLogin = document.querySelector("#error-login");
         errorLogin.innerHTML = `Incorrect username or password. Please try again.`;
       });
+  
   } else {
     alert("All fields are mandatory!");
     loginEmail.focus();
   }
 
-  // Housekeeping
   loginEmail.value = "";
   loginPassword.value = "";
   loginEmail.focus();
 });
 
+
 // *********************************** Logout Existing User ***********************************
+
 
 logoutButton.addEventListener("click", () => {
   const notLoggedIn = document.getElementById("not-logged-in");
@@ -141,8 +156,9 @@ logoutButton.addEventListener("click", () => {
       console.error("Error signing out, ", error.message);
       alert(error.message);
     });
-  // Housekeeping
+
   loginEmail.value = "";
   loginPassword.value = "";
   loginEmail.focus();
+
 });

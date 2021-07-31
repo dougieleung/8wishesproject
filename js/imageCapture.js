@@ -2,7 +2,9 @@
 // ************************ This page is the code related to camera API ***********************
 // ********************************************************************************************
 
+
 // *************************** global variables used in the script ****************************
+
 
 const cameraBtn = document.querySelector("#camera_btn");
 const video = document.querySelector("#video");
@@ -69,5 +71,3 @@ function handleBlob(blob) {
   storeImage = objectURL;
 }
 
-
-// Firebase storage

@@ -5,6 +5,7 @@
 
 // *************************** global variables used in the script ****************************
 
+
 const userFriendsList = [];
 const sortedEventsArray = [];
 const eventsWrapper = document.querySelector("#events-wrapper");

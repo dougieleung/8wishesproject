@@ -46,12 +46,10 @@
       }
     </script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script
       src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
       defer
     ></script>
-    <!-- Add Firebase products that you want to use -->
     <script
       src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"
       defer
@@ -72,15 +70,19 @@
   </head>
 
   <body>
-    <header></header>
+   
     <main id="introPages">
+   
       <!-- ********************************   WELCOME Page section   ********************************** -->
 
       <section id="welcomePage">
+        
         <h1>Welcome!</h1>
 
         <div class="logo">
+       
           <img src="./icons/Logo_white_200.png" alt="8wishes-logo" />
+      
         </div>
 
         <div id="desktopView">
@@ -97,6 +99,7 @@
             little nudge to translate hidden love into
             outward expression...” - <span class="teamQuote">8wishes Team</span>
           </em></p>
+         
           <p>
             Who doesn’t want to treat herself to something special once in a
             while; or bless a friend with a memorable keepsake just because. We
@@ -114,19 +117,25 @@
             Whether the gift is big or small in size or monetary value doesn’t
             matter. As long as it's given from the heart...
           </p>
+        
         </div>
 
         <div class="footer-welcome">
+        
           <div class="see-demo" id="seeDemo">
             <a href="#demo-page">See the demo</a>
           </div>
+         
           <div class="explore" id="exploreLink">
             <a href="./pages/gift_idea.html">Explore</a>
           </div>
+         
           <button id="skiptologin" class="skip">
             <a href="#loginPage">Skip</a>
           </button>
+       
         </div>
+     
       </section>
 
       <!-- ************************************   DEMO section   ************************************** -->
@@ -162,10 +171,13 @@
       <!-- *********************************   LOGIN Page section   *********************************** -->
 
       <section class="hide" id="loginPage">
+        
         <h2>LOGIN</h2>
+       
         <img src="./icons/Logo_white_100.png" alt="" />
 
         <div class="notloggedin" id="not-logged-in">
+        
           <label for="email" id="email-label">Email</label>
           <input
             type="email"
@@ -173,6 +185,7 @@
             id="email1"
             placeholder="Enter your e-mail"
           />
+         
           <label for="password" id="password-label">Password</label>
           <input
             type="password"
@@ -192,30 +205,40 @@
           <div class="errorLogin" id="error-login"></div>
 
           <div class="footer-login">
+        
             <span>Not a Member?</span><br />
             <button id="registerLink" class="link link3">Sign up Now!</button>
+         
           </div>
+       
         </div>
 
-        <!-- Logged in section -->
+        <!-- User logged in section -->
 
         <div class="loggedin" id="logged-in">
+       
           <h3>Welcome! You are logged in!</h3>
+        
           <p id="user_para"></p>
+        
           <button id="btn_logout" class="button button4">Logout</button>
 
           <button id="btn_AddGiftIdea" class="button button5">
             <a href="./pages/home.html">Go to Home</a>
           </button>
+        
         </div>
+      
       </section>
 
       <!-- ********************************   REGISTER Page section   ********************************* -->
 
       <section class="hide" id="registerPage">
+     
         <h1>REGISTRATION</h1>
 
         <form id="registerForm">
+        
           <div class="form-item form-item1">
             <label for="username">Name</label>
             <input
@@ -226,6 +249,7 @@
               required
             />
           </div>
+       
           <div class="form-item form-item2">
             <label for="email">E-mail</label>
             <input
@@ -236,6 +260,7 @@
               required
             />
           </div>
+        
           <div class="form-item form-item3">
             <label for="password">Password</label>
             <input
@@ -246,6 +271,7 @@
               required
             />
           </div>
+         
           <div class="form-item form-item4">
             <label for="confirmPassword">Confirm Password</label>
             <input
@@ -256,6 +282,7 @@
               required
             />
           </div>
+         
           <div class="form-item form-button">
             <button type="submit" id="registerButton">Register</button>
           </div>
@@ -266,42 +293,15 @@
               <a href="#loginPage" id="loginLink" class="link link3">Log in!</a>
             </span>
           </div>
+       
         </form>
+     
         <p id="outputMessage"></p>
+      
       </section>
+    
     </main>
 
-    <footer>
-      <!-- <div class="navbar_container">
-      <nav class="bottom_navbar">
-          <ul>
-
-              <li><button id="nav_btn1" class="button homeButton">
-                <img src="../icons/footerIcons/HomeIcon.svg"></button></li>
-              <li><button id="myListFooter" class="button listButton">
-                <img src="../icons/footerIcons/listIcon.svg"></button></li>
-              <li><button id="nav_btn3" class="button addButton">+</button></li>
-              <li><button id="friendsFooter" class="button friendsButton">
-                <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
-              <li><button id="nav_btn5" class="button storeButton">
-                <img src="../icons/footerIcons/storesIcon.svg"></button></li>
-
-          </ul>
-      </nav>
-  </div> -->
-
-      <!-- <div class="footer_container">
-      <nav class="footer_links">
-        <hr />
-        <ul>
-          <li><a href="./tour.html">Take A Tour</a></li>
-          <li><a href="./privacy.html">Privacy Policies</a></li>
-          <li><a href="./advertise.html">Ads Info</a></li>
-          <li><a href="./business.html">Business</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div> -->
-    </footer>
   </body>
+
 </html>

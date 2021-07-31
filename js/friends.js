@@ -2,9 +2,12 @@
 // *************** This page is the code related to friend's names and gift list **************
 // ********************************************************************************************
 
+
 console.log("Connected to friends.js");
 
+
 // *************************** global variables used in the script ****************************
+
 
 const addFriendBtn = document.querySelector("#addFriendBtn");
 const friendListOutput = document.querySelector("#friendListOutput");
@@ -14,6 +17,10 @@ const friendEventSelect = document.querySelector("#friendEventSelect");
 const friendNameEventContainer = document.querySelector("#friendNameEventContainer");
 const createEvent = document.querySelector("#createEvent");
 const friendEventAdded2 = document.querySelector("#friendEventAdded2");
+
+
+// ************************* Retrieve Friend's list from Firestore DB *************************
+
 
 async function friendsListfromDB() {
   console.log("friends list summary!");
@@ -44,8 +51,10 @@ async function friendsListfromDB() {
       .collection("List")
       .get()
       .then((querySnapshot) => {
+        
         const list = document.createElement("ul");
         list.setAttribute("id", "fetchedFriendsList");
+       
         querySnapshot.forEach((doc) => {
           console.log(doc.id, " => ", doc.data());
 
@@ -73,11 +82,14 @@ async function friendsListfromDB() {
   }
 }
 
-// ******* #5(B) of gift_idea.html, "Add To Friend" generates list of friends ******
+// ************* #5(B) of gift_idea.html, "Add To Friend" generates list of friends ***********
+
 
 seeFriendsList.addEventListener("click", friendsListfromDB);
 
+
 // ********************************* Create Friends Obj via class *****************************
+
 
 const friendsWishlist = document.querySelector("#friendsWishlist");
 let createEventInput, newFriendObj;
@@ -100,10 +112,11 @@ class addFriendClass {
   }
 }
 
+
 // *************** Adding Friend and checking if Friend's Name is in Firestore ****************
 
+
 addFriendBtn.addEventListener("click", () => {
-  // event.preventDefault();
 
   // Converting every word for name to UpperCase Letter
   const friendsName = friendName.value
@@ -156,6 +169,7 @@ async function addFriendToFirestore(friendName, friendObject) {
     .collection("List")
     .get()
     .then((querySnapshot) => {
+    
       querySnapshot.forEach((doc) => {
         friendsArray.push(doc.id);
         console.log(friendsArray);
@@ -201,7 +215,10 @@ async function addFriendToFirestore(friendName, friendObject) {
     }
   }
 }
+
+
 // ***************************** Create (Other) New Event input field *************************
+
 
 friendEventSelect.addEventListener("change", () => {
   if (friendEventSelect.value === "Other") {

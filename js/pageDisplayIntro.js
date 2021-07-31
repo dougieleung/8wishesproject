@@ -5,6 +5,7 @@
 
 console.log("Connected to PageDisplayIntro.js");
 
+
 // *************************** global variables used in the script ****************************
 
 const welcomePage = document.querySelector("#welcomePage");
@@ -24,60 +25,59 @@ const loginLink = document.querySelector("#loginLink");
 const registerLink = document.querySelector("#registerLink");
 const skiptologin = document.querySelector("#skiptologin");
 
+
+
+
 seeDemo.addEventListener("click", () => {
-    welcomePage.classList.remove('show');
-    welcomePage.classList.add('hide');
-    demoPage.classList.toggle('hide');
+    welcomePage.classList.remove("show");
+    welcomePage.classList.add("hide");
+    demoPage.classList.toggle("hide");
 })
 
 ellipsis1.addEventListener("click", () => {
-    demopage1.classList.remove('show');
-    demopage1.classList.add('hide');
-    demopage2.classList.toggle('hide');
+    demopage1.classList.remove("show");
+    demopage1.classList.add("hide");
+    demopage2.classList.toggle("hide");
 })
 
 ellipsis2.addEventListener("click", () => {
-    demopage2.classList.remove('show');
-    demopage2.classList.add('hide');
-    demopage3.classList.toggle('hide');
+    demopage2.classList.remove("show");
+    demopage2.classList.add("hide");
+    demopage3.classList.toggle("hide");
 })
 
 ellipsis3.addEventListener("click", () => {
-    demopage3.classList.remove('show');
-    demopage3.classList.add('hide');
-    demopage1.classList.toggle('hide');
+    demopage3.classList.remove("show");
+    demopage3.classList.add("hide");
+    demopage1.classList.toggle("hide");
 })
 
 signUpBtn.addEventListener("click", () => {
-
-    demoPage.classList.remove('show');
-    demoPage.classList.add('hide');
-    registerPage.classList.toggle('hide');
-
+    demoPage.classList.remove("show");
+    demoPage.classList.add("hide");
+    registerPage.classList.toggle("hide");
 })
 
 loginBtn.addEventListener("click", () => {
-    demoPage.classList.remove('show');
-    demoPage.classList.add('hide');
-    loginPage.classList.toggle('hide');
+    demoPage.classList.remove("show");
+    demoPage.classList.add("hide");
+    loginPage.classList.toggle("hide");
 })
 
 skiptologin.addEventListener("click", () => {
-    welcomePage.classList.remove('show');
-    welcomePage.classList.add('hide');
-    loginPage.classList.toggle('hide');
+    welcomePage.classList.remove("show");
+    welcomePage.classList.add("hide");
+    loginPage.classList.toggle("hide");
 })
 
 loginLink.addEventListener("click", () => {
-
-    registerPage.classList.remove('show');
-    registerPage.classList.add('hide');
-    loginPage.classList.toggle('hide');
+    registerPage.classList.remove("show");
+    registerPage.classList.add("hide");
+    loginPage.classList.toggle("hide");
 })
 
 registerLink.addEventListener("click", () => {
-
-    loginPage.classList.remove('show');
-    loginPage.classList.add('hide');
-    registerPage.classList.toggle('hide');
+    loginPage.classList.remove("show");
+    loginPage.classList.add("hide");
+    registerPage.classList.toggle("hide");
 })

@@ -22,9 +22,6 @@ firebase.initializeApp(firebaseConfig);
 // Declare Firebase Auth and DB
 const auth = firebase.auth();
 const db = firebase.firestore();
-// To add a new document to a collection you can use add() method of collection:
-// db.collection('Collection_Name').add('Object_to_Add')
-
 // images storage
 var storage = firebase.storage();
 
