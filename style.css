@@ -2101,10 +2101,6 @@ main #complete {
           align-items: center;
 }
 
-#giftcard_display {
-  overflow: auto;
-}
-
 #editCard #editForm {
   display: -webkit-box;
   display: -ms-flexbox;
