@@ -41,9 +41,7 @@
     }
   </script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
-  <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js" defer></script>
@@ -52,27 +50,30 @@
   <script src="../js/main.js" defer></script>
   <script src="../js/geolocation.js" defer></script>
   <script src="../js/imageCapture.js" defer></script>
-
   <script src="../js/addgifts.js" defer></script>
   <script src="../js/pageDisplay.js" defer></script>
-
   <script src="../js/friends.js" defer></script>
-  <!-- <script src="../js/pageDisplayFriends.js" defer></script> -->
+ 
 </head>
 
 <body>
   <main id="giftIdeaProcess">
+    
     <!--**********************************  #1 Home Page Section  *********************************** -->
 
     <section id="giftIdeaHomePage" class="show">
+      
       <div class="main-home-ideas">
+        
         <h2>Add your gift idea</h2>
 
         <!-- "Add a new idea" button -->
         <button id="startIdeaBtn">
           <a href="#giftIdeaAdd">Add a new idea</a>
         </button>
+      
       </div>
+   
     </section>
 
     <!--********************************  #2 Add Gift Idea Section  ********************************* -->
@@ -88,8 +89,10 @@
       <div class="add-idea-1">
         <!-- Title and Description Input Fields -->
         <form id="ideaForm" method="post">
+          
           <input type="text" id="gift_title" placeholder="Title" required /><br />
           <textarea id="gift_description" placeholder="Description" required></textarea>
+        
         </form>
 
         <div class="images">
@@ -99,16 +102,22 @@
               <img src="../icons/cameraIcons/CameraIcon.svg" alt="Camera Icon">
             </a>
           </button>
+          
           <button id="gallery_btn" type="image">
-            <img src="../icons/cameraIcons/GalleryIcon.svg" alt="Gallery Icon">
+            <a href="../pages/underConstruction.html">
+              <img src="../icons/cameraIcons/GalleryIcon.svg" alt="Gallery Icon">
+            </a>
           </button>
+        
         </div>
 
         <!-- Add image and title, description to summary card -->
         <button id="addGift" type="submit">
           <a href="#summaryCard">NEXT</a>
         </button>
+      
       </div>
+    
     </section>
 
     <!--********************************  #3 Snapping Photo Section  ******************************** -->
@@ -120,7 +129,6 @@
           <i class="fas fa-chevron-left"></i>
         </a>
       </button>
-      <!-- Back button -->
 
       <div id="camera">
         <!-- Video and Snapping photo -->
@@ -138,7 +146,9 @@
         <button id="addPhoto" type="submit">
           <a href="#summaryCard">NEXT</a>
         </button>
+      
       </div>
+    
     </section>
 
     <!--****************************  #4 Gift Idea Summary Card Section  **************************** -->
@@ -160,9 +170,15 @@
 
         <!-- Add Geolocation -->
         <label for="location">Add location(optional)</label>
+       
         <div id="coordinates">
-          <a id="map-link" target="_blank"></a>
+          
+          <div class="link-div">
+            <a id="map-link" target="_blank"></a>
+          </div>
+
           <button id="locate"><i class="fas fa-map-marker-alt"></i></button>
+      
         </div>
 
         <p id="status"></p>
@@ -171,7 +187,9 @@
         <button id="nextToWishlists" type="submit">
           <a href="#addToWishlistSection">Next</a>
         </button>
+      
       </div>
+   
     </section>
 
     <!--*******************  #5 (A) Add to My Wishlist or (B) Friend's List Page  ******************* -->
@@ -185,9 +203,14 @@
       </button>
 
       <div class="add-idea-3">
+
         <div class="idea-window">
+
           <div id="windowImage"></div>
-          <div id="windowDescription" class="window-description"></div>
+          <div id="windowDescription" class="window-description">
+            <p id="link-map"></p>
+          </div>
+        
         </div>
 
         <!-- Button to add to My List -->
@@ -200,7 +223,9 @@
         <button id="seeFriendsList" class="button button19" type="button">
           <a href="#listEmptyPage">Add to Friend</a>
         </button>
-
+      
+      </div>
+    
     </section>
 
     <!--*********************** IF YOU CHOOSE (A), GO TO LINE 6 (A) LINE 310 ************************ -->
@@ -208,30 +233,38 @@
 
     <!-- Friend's Intro Page showing list of friends or none -->
     <section id="listEmptyPage" class="hide">
+    
       <a href="#addToWishlistSection">
         <i class="fas fa-chevron-left"></i>
       </a>
+     
       <h2>Choose a friend</h2>
+    
       <div id="friendListOutput"></div>
 
       <br />
       <br />
 
       <div class="addEventForFriend" id="friendNameEventContainer">
+     
         <button id="friendtoProfile">Add event for friend</button>
+    
       </div>
 
       <button id="addAFriendBtn">
         <a href="#addFriendPage">Add a Friend</a>
       </button>
+  
     </section>
 
     <!--***************  #7 If No Friends, proceed to page to add friends and events  *************** -->
 
     <section id="addFriendPage" class="hide">
+     
       <a href="#listEmptyPage">
         <i class="fas fa-chevron-left"></i>
       </a>
+     
       <h2>Add a friend</h2>
 
       <div class="profile-pic"><a href="#">Add profile pic</a></div>
@@ -253,24 +286,27 @@
       <label for="date">Select a Date</label>
       <input id="friendDate" type="date" id="event" name="event" />
 
-      friendEventAdded.innerHTML = `Successfully added:
-      <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
-
         <!-- Add Friend and Event to Firestore -->
         <button id="addFriendBtn" type="button">Add</button>
+   
         <div id="friendEventAdded2"></div>
-    </section>
+   
+      </section>
 
     <!--**************  #7 (B) If There Are Friends, proceed to page to add events only ************* -->
 
     <section id="addEventPage" class="hide">
+    
       <a href="#addFriendPage">
         <i class="fas fa-chevron-left"></i>
       </a>
+    
       <h1>Choose an event for</h1>
+    
       <input id="friendsProfile" />
 
       <div class="friendEventForm">
+    
         <label for="name">Select an event</label>
         <select id="friendEventSelect2" name="event">
           <option value="resetOptions">-- Select An Event --</option>
@@ -279,31 +315,38 @@
           <option value="Graduation Day">Graduation Day</option>
           <option value="Other">Other...</option>
         </select>
+     
         <div id="createEvent2"></div>
 
         <label for="date">Select a Date</label>
 
-        <!-- <input id="friendEvent" type="text" /> -->
         <input id="friendDate2" type="date" id="event" name="event" />
+    
       </div>
 
       <button id="addEventBtn" type="button">Add Event</button>
+     
       <div id="friendEventAdded"></div>
+   
     </section>
 
     <!--*************************  #6 (A) Idea added to My List - Complete  **************************-->
 
     <section id="complete" class="hide">
+     
       <!-- Back button -->
       <button id="backToChooseEvent">
+     
         <a href="#chooseEvent">
           <i class="fas fa-chevron-left"></i>
         </a>
+    
       </button>
 
       <div class="add-idea-5">
+     
         <h2>Your Idea is Added!</h2>
-        <!-- <p id="idea-added-msg"></p> -->
+       
         <div id="ideaSummary"></div>
         <!-- /#ideaSummary -->
 
@@ -312,6 +355,7 @@
         <button id="addToDB" class="button button21" type="button">
           Done
         </button>
+    
       </div>
       <!-- /#friendsWishlist -->
     </section>
@@ -325,14 +369,18 @@
 
     <!-- Card to show image, title, description, friend, and event, date -->
     <section id="editCard" class="hide">
+     
       <h2>Edit your idea</h2>
+     
       <form action="#" id="editForm">
+       
         <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
         <input type="text" id="wishDescEdit" name="wishDescEdit" />
 
         <a id="seeFullList" href="#">see full list</a>
         <button id="saveEdit" type="button">Save</button>
         <button id="deleteWish" type="button">Delete</button>
+     
       </form>
       <!-- /#editForm -->
     </section>
@@ -439,7 +487,7 @@
 
           <li>
             <button id="nav_btn5" class="nav_btn button storeButton">
-
+              <a href="./underConstruction.html">
               <svg width="175" height="258" viewBox="0 0 175 258" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19.7563 257.699C15.0119 257.699 10.7598 256.607 7 254.423L8.77246 248.649C10.4554 249.58 12.2816 250.332 14.251 250.905C16.2383 251.478 18.1719 251.764 20.0518 251.764C22.3613 251.764 24.1069 251.272 25.2886 250.287C26.4702 249.285 27.061 247.852 27.061 245.99C27.061 243.52 25.4139 241.81 22.1196 240.861C21.8869 240.789 21.2334 240.601 20.1592 240.297C19.085 239.975 18.0734 239.67 17.1245 239.384C16.1935 239.08 15.5221 238.847 15.1104 238.686C9.82878 236.824 7.18799 233.35 7.18799 228.266C7.18799 224.703 8.4502 221.955 10.9746 220.021C13.5169 218.088 16.8828 217.121 21.0723 217.121C25.8167 217.121 29.9077 218.097 33.3452 220.048L31.1431 225.365C27.634 223.79 24.3755 223.002 21.3677 223.002C19.2013 223.002 17.5632 223.387 16.4531 224.157C15.361 224.909 14.7791 226.171 14.7075 227.944C14.7075 230.128 15.7907 231.551 17.957 232.214C18.3867 232.375 19.443 232.724 21.126 233.261C22.8089 233.798 23.901 234.147 24.4023 234.308C28.001 235.49 30.5702 236.958 32.1099 238.713C33.6675 240.467 34.4463 242.911 34.4463 246.044C34.4463 249.786 33.1214 252.668 30.4717 254.692C27.8219 256.697 24.2502 257.699 19.7563 257.699Z" />
@@ -463,21 +511,7 @@
         </ul>
       </nav>
     </div>
-
-
-
-    <!-- <div class="footer_container">
-            <nav class="footer_links">
-                <hr>
-                <ul>
-                    <li><a href="./tour.html">Take A Tour</a></li>
-                    <li><a href="./privacy.html">Privacy Policies</a></li>
-                    <li><a href="./advertise.html">Ads Info</a></li>
-                    <li><a href="./business.html">Business</a></li>
-                    <li><a href="./faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div> -->
+    
   </footer>
 </body>
 

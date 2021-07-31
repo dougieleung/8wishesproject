@@ -69,83 +69,116 @@
         <img src="./icons/Logo_white_200.png" alt="8wishes-logo" />
       </div>
 
-      <div id="desktopView">
-        <video id="videoclip" width="320" height="240" controls>
-          <source src="./media/My Movie.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p>
-          "...To inspire the user to capture, store and organize gift ideas
-          for herself and her loved ones... To remind the user of special
-          occasions like birthdays and anniversaries and give her that extra
-          little nudge to translate hidden love into
-          outward expression...”
-        </p>
-        <br />
 
-        <p>
-          Who doesn’t want to treat herself to something special once in a
-          while; or bless a friend with a memorable keepsake just because. We
-          all agree that a thoughtful gift reaches far beyond the gift itself.
-          It builds new friendships, strengthens existing ones, and mends
-          broken relationships.
-        </p>
-        <br />
+        navigator.serviceWorker
+          .register("./sw.js", {
+            scope: "/",
+          })
+          .then(function (reg) {
+            console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+          })
+          .catch(function (error) {
+            console.log(`Service Worker Error (${error})`);
+          });
+      } else {
+        console.warn("Service Worker not available");
+      }
+    </script>
 
-        <p>A special gift lasts a lifetime.</p>
-        <br />
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"
+      defer
+    ></script>
 
-        <p>
-          We present you - 8wishes. Founded by 8 individuals who resonate
-          deeply with all the things mentioned above. We truly believe the act
-          of giving is an integral part of what makes relationships thrive.
-          Whether the gift is big or small in size or monetary value doesn’t
-          matter. As long as it's given from the heart...
-        </p>
-      </div>
+    <script src="./js/firebase.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/auth.js" defer></script>
+    <script src="./js/pageDisplayIntro.js" defer></script>
+  </head>
 
-      <div id="desktopView">
+  <body>
+   
+    <main id="introPages">
+   
+      <!-- ********************************   WELCOME Page section   ********************************** -->
 
-        <video id="videoclip" width="320" height="240" controls>
-          <source src="./media/My Movie.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <section id="welcomePage">
+        
+        <h1>Welcome!</h1>
 
-        <p><em>
+        <div class="logo">
+       
+          <img src="./icons/Logo_white_200.png" alt="8wishes-logo" />
+      
+        </div>
+
+        <div id="desktopView">
+        
+            <video id="videoclip" width="480" height="360" controls>
+              <source src="./media/My Movie.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+     
+          <p><em>
+
             "...To inspire the user to capture, store and organize gift ideas
             for herself and her loved ones... To remind the user of special
             occasions like birthdays and anniversaries and give her that extra
             little nudge to translate hidden love into
             outward expression...” - <span class="teamQuote">8wishes Team</span>
           </em></p>
-        <p>
-          Who doesn’t want to treat herself to something special once in a
-          while; or bless a friend with a memorable keepsake just because. We
-          all agree that a thoughtful gift reaches far beyond the gift itself.
-          It builds new friendships, strengthens existing ones, and mends
-          broken relationships.
-        </p>
 
-        <p>A special gift lasts a lifetime.</p>
+         
+          <p>
+            Who doesn’t want to treat herself to something special once in a
+            while; or bless a friend with a memorable keepsake just because. We
+            all agree that a thoughtful gift reaches far beyond the gift itself.
+            It builds new friendships, strengthens existing ones, and mends
+            broken relationships.
+          </p>
+    
+          <p>A special gift lasts a lifetime.</p>
+     
+          <p>
+            We present you - 8wishes. Founded by 8 individuals who resonate
+            deeply with all the things mentioned above. We truly believe the act
+            of giving is an integral part of what makes relationships thrive.
+            Whether the gift is big or small in size or monetary value doesn’t
+            matter. As long as it's given from the heart...
+          </p>
+        
+        </div>
 
-        <p>
-          We present you - 8wishes. Founded by 8 individuals who resonate
-          deeply with all the things mentioned above. We truly believe the act
-          of giving is an integral part of what makes relationships thrive.
-          Whether the gift is big or small in size or monetary value doesn’t
-          matter. As long as it's given from the heart...
-        </p>
-      </div>
-      <div class="explore" id="exploreLink">
-        <a href="./pages/gift_idea.html">Explore</a>
-      </div>
-      <button id="skiptologin" class="skip">
-        <a href="#loginPage">Skip</a>
-      </button>
-      </div>
-    </section>
+        <div class="footer-welcome">
+        
+          <div class="see-demo" id="seeDemo">
+            <a href="#demo-page">See the demo</a>
+          </div>
+         
+          <div class="explore" id="exploreLink">
+            <a href="./pages/gift_idea.html">Explore</a>
+          </div>
+         
+          <button id="skiptologin" class="skip">
+            <a href="#loginPage">Skip</a>
+          </button>
+       
+        </div>
+     
+      </section>
 
-    <!-- ************************************   DEMO section   ************************************** -->
 
     <section class="hide" id="demo-page">
       <div id="demopage1" class="show">
@@ -173,31 +206,52 @@
         <button id="sign-up"><a href="#registerPage">Sign up</a></button>
         <button id="log-in"><a href="#loginPage">Login</a></button>
       </div>
-    </section>
 
-    <!-- *********************************   LOGIN Page section   *********************************** -->
+      </section>
 
-    <section class="hide" id="loginPage">
-      <h2>LOGIN</h2>
-      <img src="./icons/Logo_white_100.png" alt="" />
+      <!-- *********************************   LOGIN Page section   *********************************** -->
 
-      <div class="notloggedin" id="not-logged-in">
-        <label for="email" id="email-label">Email</label>
-        <input type="email" name="" id="email1" placeholder="Enter your e-mail" />
-        <label for="password" id="password-label">Password</label>
-        <input type="password" name="" id="password1" placeholder="Enter your password" />
+      <section class="hide" id="loginPage">
+        
+        <h2>LOGIN</h2>
+       
+        <img src="./icons/Logo_white_100.png" alt="" />
 
-        <div class="forgot-password">
-          <a href="./pages/resetpassword.html" class="link link2">Forgot Password?</a>
-        </div>
+        <div class="notloggedin" id="not-logged-in">
+        
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            name=""
+            id="email1"
+            placeholder="Enter your e-mail"
+          />
+         
+          <label for="password" id="password-label">Password</label>
+          <input
+            type="password"
+            name=""
+            id="password1"
+            placeholder="Enter your password"
+          />
 
-        <button id="btn_login" class="button button3">Log in</button>
+          <div class="forgot-password">
+            <a href="./pages/resetpassword.html" class="link link2"
+              >Forgot Password?</a
+            >
+          </div>
 
-        <div class="errorLogin" id="error-login"></div>
+          <button id="btn_login" class="button button3">Log in</button>
 
-        <div class="footer-login">
-          <span>Not a Member?</span><br />
-          <button id="registerLink" class="link link3">Sign up Now!</button>
+          <div class="errorLogin" id="error-login"></div>
+
+          <div class="footer-login">
+        
+            <span>Not a Member?</span><br />
+            <button id="registerLink" class="link link3">Sign up Now!</button>
+         
+          </div>
+
         </div>
       </div>
 
@@ -208,81 +262,97 @@
         <p id="user_para"></p>
         <button id="btn_logout" class="button button4">Logout</button>
 
-        <button id="btn_AddGiftIdea" class="button button5">
-          <a href="./pages/gift_idea.html">Go to Home</a>
-        </button>
-      </div>
-    </section>
 
-    <!-- ********************************   REGISTER Page section   ********************************* -->
+        <!-- User logged in section -->
 
-    <section class="hide" id="registerPage">
-      <h1>REGISTRATION</h1>
+        <div class="loggedin" id="logged-in">
+       
+          <h3>Welcome! You are logged in!</h3>
+        
+          <p id="user_para"></p>
+        
+          <button id="btn_logout" class="button button4">Logout</button>
 
-      <form id="registerForm">
-        <div class="form-item form-item1">
-          <label for="username">Name</label>
-          <input type="text" name="username" id="username" placeholder="Enter your name" required />
+          <button id="btn_AddGiftIdea" class="button button5">
+            <a href="./pages/home.html">Go to Home</a>
+          </button>
+        
         </div>
-        <div class="form-item form-item2">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" placeholder="Enter your e-mail" required />
-        </div>
-        <div class="form-item form-item3">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Set up a password" required />
-        </div>
-        <div class="form-item form-item4">
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter password again"
-            required />
-        </div>
-        <div class="form-item form-button">
-          <button type="submit" id="registerButton">Register</button>
-        </div>
+      
+      </section>
 
-        <div class="footer-register">
-          <span>Already a Member?
-            <a href="#loginPage" id="loginLink" class="link link3">Log in!</a>
-          </span>
-        </div>
-      </form>
-      <p id="outputMessage"></p>
-    </section>
-  </main>
+      <!-- ********************************   REGISTER Page section   ********************************* -->
 
-  <footer>
-    <!-- <div class="navbar_container">
-      <nav class="bottom_navbar">
-          <ul>
+      <section class="hide" id="registerPage">
+     
+        <h1>REGISTRATION</h1>
 
-              <li><button id="nav_btn1" class="button homeButton">
-                <img src="../icons/footerIcons/HomeIcon.svg"></button></li>
-              <li><button id="myListFooter" class="button listButton">
-                <img src="../icons/footerIcons/listIcon.svg"></button></li>
-              <li><button id="nav_btn3" class="button addButton">+</button></li>
-              <li><button id="friendsFooter" class="button friendsButton">
-                <img src="../icons/footerIcons/friendsIcon.svg"></button></li>
-              <li><button id="nav_btn5" class="button storeButton">
-                <img src="../icons/footerIcons/storesIcon.svg"></button></li>
+        <form id="registerForm">
+        
+          <div class="form-item form-item1">
+            <label for="username">Name</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+       
+          <div class="form-item form-item2">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your e-mail"
+              required
+            />
+          </div>
+        
+          <div class="form-item form-item3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Set up a password"
+              required
+            />
+          </div>
+         
+          <div class="form-item form-item4">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="Enter password again"
+              required
+            />
+          </div>
+         
+          <div class="form-item form-button">
+            <button type="submit" id="registerButton">Register</button>
+          </div>
 
-          </ul>
-      </nav>
-  </div> -->
+          <div class="footer-register">
+            <span
+              >Already a Member?
+              <a href="#loginPage" id="loginLink" class="link link3">Log in!</a>
+            </span>
+          </div>
+       
+        </form>
+     
+        <p id="outputMessage"></p>
+      
+      </section>
+    
+    </main>
 
-    <!-- <div class="footer_container">
-      <nav class="footer_links">
-        <hr />
-        <ul>
-          <li><a href="./tour.html">Take A Tour</a></li>
-          <li><a href="./privacy.html">Privacy Policies</a></li>
-          <li><a href="./advertise.html">Ads Info</a></li>
-          <li><a href="./business.html">Business</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div> -->
-  </footer>
-</body>
+  </body>
 
 </html>
+

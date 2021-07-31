@@ -5,7 +5,9 @@
 
 console.log("Connected to addgifts.js");
 
+
 // *************************** global variables used in the script ****************************
+
 
 const displayTitle = document.querySelector("#displayTitle");
 const displayDescription = document.querySelector("#displayDesc");
@@ -21,7 +23,9 @@ const friendEventSelect2 = document.querySelector("#friendEventSelect2");
 const createEvent2 = document.querySelector("#createEvent2");
 const addEventBtn = document.querySelector("#addEventBtn");
 
+
 // *************************** create wish idea object through class **************************
+
 
 class newWishObject {
   constructor(title, description, image, timestamp) {
@@ -39,6 +43,7 @@ let newWish = {};
 // variables for the storage
 let storageRef = storage.ref();
 let gsReference;
+
 addGift.addEventListener("click", () => {
   if (giftTitle.value.trim() && giftDescription.value.trim()) {
     newWish = new newWishObject(
@@ -62,27 +67,37 @@ addGift.addEventListener("click", () => {
     displayDescription.innerHTML = `${giftDescription.value}`;
     giftTitle.value = "";
     giftDescription.value = "";
+ 
   } else {
     alert("All fields are mandatory!");
   }
 });
 
+
 // ********************* Gift Idea Summary Card section of gift_idea.html *********************
 // ************************************** Add location ****************************************
 
+
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
-
-  if (newWish.location !== undefined) {
-    windowDescription.innerHTML = `${newWish.wishTitle}<br>
-  ${newWish.wishDesc}<br>
-  ${newWish.location}`;
+  const wishtitle = document.createElement("p");
+  const wishdesc = document.createElement("p");
+  const wishloc = document.createElement("p");
+  
+  if (newWish.location !== undefined) {  
+    wishtitle.innerText = `${newWish.wishTitle}`;
+    wishdesc.innerText = `${newWish.wishDesc}`;
+    wishloc.innerText = `${newWish.location}`;
+    windowDescription.appendChild(wishtitle);
+    windowDescription.appendChild(wishdesc);
+    windowDescription.appendChild(wishloc);
   } else {
-    windowDescription.innerHTML = `${newWish.wishTitle}<br>
-  ${newWish.wishDesc}`;
+    windowDescription.appendChild(wishtitle);
+    windowDescription.appendChild(wishdesc);
   }
   console.log(newWish);
 });
+
 
 // ********************* (A) Add to My Wishlist or (B) Friend's List Page *********************
 
@@ -94,11 +109,11 @@ addToWish.addEventListener("click", () => {
   addToWishlistSection.classList.add("hide");
   complete.classList.toggle("hide");
   if (newWish.location !== undefined) {
-    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
-  ${newWish.wishDesc}<br>
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br><br>
+  ${newWish.wishDesc}<br><br>
   ${newWish.location}`;
   } else {
-    ideaSummary.innerHTML = `${newWish.wishTitle}<br>
+    ideaSummary.innerHTML = `${newWish.wishTitle}<br><br>
   ${newWish.wishDesc}`;
   }
 });
@@ -106,7 +121,9 @@ addToWish.addEventListener("click", () => {
 const friendEventAdded = document.querySelector("#friendEventAdded");
 let createEventInput2;
 
+
 // **************************** Create (Other) New Event input field **************************
+
 
 friendEventSelect2.addEventListener("change", () => {
   if (friendEventSelect2.value === "Other") {
@@ -126,7 +143,9 @@ friendEventSelect2.addEventListener("change", () => {
   }
 });
 
+
 // ******************** IF Friends, add Event to newWish Obj and Firestore ********************
+
 
 addEventBtn.addEventListener("click", () => {
   if (createEventInput2) {
@@ -148,19 +167,20 @@ addEventBtn.addEventListener("click", () => {
     <p> ${newWish.eventName} on ${newWish.eventDate} for ${friendsProfile.value}`;
 
   setTimeout(() => { location.href = "friendsView.html" }, 1500);
+
 });
+
 
 // *********************** Add Gift Idea to Firestore and retrieve list ***********************
 
+
 addToDB.addEventListener("click", async function addToFirestore() {
   logintoadd.innerHTML = "";
-  // ideaAddedMsg.innerHTML = "";
 
   if (firebase.auth().currentUser === null) {
     logintoadd.innerHTML = "Sorry.  Please sign in before adding wishes.";
   } else if (newWish.mine) {
-    // ideaAddedMsg.innerHTML = "Your idea is added!";
-
+  
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
@@ -184,15 +204,12 @@ addToDB.addEventListener("click", async function addToFirestore() {
   footerNav.classList.toggle("hide");
 });
 
+
 // ********************** Add Gift Idea to Friend's Collection of ideas ***********************
+
 
 async function addIdeaToCollection(friendsName, giftTitle) {
   console.log("Event Listener Triggered! ");
-
-  // if (firebase.auth().currentUser === null) {
-  //   logintoadd.innerHTML = "Sorry.  Please sign in before adding wishes.";
-  // } else {
-  //   ideaAddedMsg.innerHTML = "Your idea is added!";
 
   newWish.friendName = friendsName;
 
@@ -214,7 +231,9 @@ async function addIdeaToCollection(friendsName, giftTitle) {
     });
 }
 
+
 // ********************* Outputs the list of gift ideas belonging to User *********************
+
 
 async function renderWishlist() {
   displayGift.innerHTML = `<h2> My List </h2>`;
@@ -278,7 +297,9 @@ async function renderWishlist() {
     });
 }
 
+
 // ******************************* Editing Wishes on user list ********************************
+
 
 function editWish(doc) {
   editCard.classList.remove("hide");
@@ -293,9 +314,7 @@ function editWish(doc) {
       wishTitle: wishTitleEdit.value,
       wishDesc: wishDescEdit.value,
     };
-    // editCard.classList.add('hide');
-    // renderWishlist();
-    // displayGift.classList.remove('hide');
+
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
@@ -337,8 +356,6 @@ myListFooter.addEventListener("click", function () {
   renderWishlist();
 
 });
-
-
 
 seeFullListLink.addEventListener("click", function () {
   displayGift.classList.remove("hide");

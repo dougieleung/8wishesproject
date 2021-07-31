@@ -1,3 +1,11 @@
+// ********************************************************************************************
+// ************* This page is the code listing out variables used across js files *************
+// ********************************************************************************************
+
+
+// *************************** global variables used in the script ****************************
+
+
 console.log("Connected main.js");
 
 // Declaring variables from DOM
@@ -27,14 +35,6 @@ const friendsList = document.querySelector("#friendsList");
 const addToDB = document.querySelector("#addToDB");
 const logintoadd = document.querySelector("#login-to-add");
 const ideaAddedMsg = document.querySelector("#idea-added-msg");
-
-// ********************************************************************************************
-// ************* This page is the code listing out variables used across js files *************
-// ********************************************************************************************
-
-
-// *************************** global variables used in the script ****************************
-
 const friendName = document.querySelector("#friendName");
 const friendEvent = document.querySelector("#friendEvent");
 const friendDate = document.querySelector("#friendDate");

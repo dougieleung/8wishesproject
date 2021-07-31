@@ -10,7 +10,6 @@
 #complete,
 #addEventPage,
 #addFriendPage {
-
   #startIdeaBtn,
   #addGift,
   #addToDB,
@@ -54,13 +53,13 @@
   #startIdeaBtn,
   #addGift,
   #addtowish,
+  #seeFriendsList,
   #addToDB {
     border: none;
     border-radius: 44px;
     width: 232px;
     height: 48px;
     margin: auto;
-
   }
 
   #nextToEvents {
@@ -128,8 +127,12 @@
 
 #nav_btn3 {
   background-color: $color_home_button;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   border-style: none;
+}
+
+.bottom_navbar li:nth-of-type(3) {
+  align-self: center;
 }
 
 .editButton {
@@ -147,7 +150,6 @@
 //////////////// Login Page ////////////////////
 #loginPage,
 #resetContainer {
-
   #btn_logout,
   #btn_AddGiftIdea,
   #btn_login {
@@ -210,7 +212,7 @@ main #resetContainer {
   }
 }
 
-section>a {
+section > a {
   color: $color_neutral_white;
 }
 

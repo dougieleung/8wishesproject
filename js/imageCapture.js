@@ -2,7 +2,9 @@
 // ************************ This page is the code related to camera API ***********************
 // ********************************************************************************************
 
+
 // *************************** global variables used in the script ****************************
+
 
 const cameraBtn = document.querySelector("#camera_btn");
 const video = document.querySelector("#video");
@@ -70,6 +72,7 @@ function handleBlob(blob) {
 }
 
 
+
 /* below is LEGACY code using navigator.getUserMedia in case you want to support older browsers
 else if(navigator.getUserMedia) { // Standard
   navigator.getUserMedia({ video: true }, function(stream) {
@@ -88,3 +91,5 @@ else if(navigator.getUserMedia) { // Standard
   }, errBack);
 }
 */
+
+

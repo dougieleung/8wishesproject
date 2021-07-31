@@ -5,9 +5,9 @@
 
 console.log("Connected to pageDisplay.js");
 
-// ================== Fetching from DOM for Gift Idea Page ===================
 
 // *************************** global variables used in the script ****************************
+
 
 const startIdeaBtn = document.querySelector("#startIdeaBtn");
 const backToStart = document.querySelector("#backToStart");
@@ -32,19 +32,8 @@ const friendtoProfile = document.querySelector("#friendtoProfile");
 const addEventPage = document.querySelector("#addEventPage");
 const addAFriendBtn = document.querySelector("#addAFriendBtn");
 
-// ************  Rachel's Incoming change starts*****************
 
-// const editButton = document.querySelector(".editButton");
-// const giftcard_display  = document.querySelector("#giftcard_display");
-// editButton.addEventListener("click", () => {
-//   giftcard_display.classList.remove("show");
-//   giftcard_display.classList.add("hide");
-//   editCard.classList.toggle("hide");
-// })
 
-// ************  Rachel's Incoming change ends here*****************
-
-// ==================== Gift Ideas pages Display ========================
 
 startIdeaBtn.addEventListener("click", () => {
   console.log("Starting New Idea - clicked button");
@@ -109,18 +98,6 @@ backToChooseEvent.addEventListener("click", () => {
   complete.classList.add("hide");
   addToWishlistSection.classList.toggle("hide");
 });
-
-// addEventBtn.addEventListener('click', () => {
-//     chooseEvent.classList.add('hide');
-//     chooseEvent.classList.remove('show');
-//     complete.classList.toggle('hide');
-// })
-
-// backToChooseEvent.addEventListener('click', () => {
-//     complete.classList.remove('show');
-//     complete.classList.add('hide');
-//     chooseEvent.classList.toggle('hide');
-// })
 
 seeFriendsList.addEventListener("click", () => {
   addToWishlistSection.classList.remove("show");

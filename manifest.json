@@ -11,15 +11,33 @@
       "density": "3.0"
     },
     {
+      "src": "icons/apple-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": "3.0"
+    },
+    {
+      "src": "icons/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "density": "3.0"
+    },
+    {
       "src": "icons/ms-icon-310x310.png",
       "sizes": "310x310",
+      "type": "image/png",
+      "density": "4.0"
+    },
+    {
+      "src": "icons/ms-icon-150x150.png",
+      "sizes": "150x150",
       "type": "image/png",
       "density": "4.0"
     }
  
   ],
   "scope": "/",
-  "start_url": "./pages/register+login.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "orientation": "landscape",
   "theme_color": "orange",
