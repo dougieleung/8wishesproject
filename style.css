@@ -1640,6 +1640,14 @@ main #takePhoto #backToIdeaAdd2 i {
 #giftcard_display {
   width: 80vw;
   margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5%;
   overflow: hidden;
   border: none;
   -webkit-animation: fadeIn 0.5s ease-in both;
@@ -1659,7 +1667,6 @@ main #takePhoto #backToIdeaAdd2 i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2%;
   padding: 0;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -1671,7 +1678,7 @@ main #takePhoto #backToIdeaAdd2 i {
       -ms-flex-order: 1;
           order: 1;
   width: 100%;
-  height: 200px;
+  height: 20vh;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 20px;
@@ -1683,12 +1690,14 @@ main #takePhoto #backToIdeaAdd2 i {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
+  margin: 3% 1% 1% 3%;
 }
 
 #giftcard_display .displaycard div {
   -webkit-box-ordinal-group: 11;
       -ms-flex-order: 10;
           order: 10;
+  margin: 1% 1% 2% 3%;
 }
 
 #giftcard_display .displaycard button {
@@ -1697,7 +1706,6 @@ main #takePhoto #backToIdeaAdd2 i {
           order: 15;
 }
 
-#giftcard_display .displaycard button,
 #giftcard_display .editDescInput,
 #giftcard_display .editTitleInput {
   padding: 0.7rem 0.7rem;
@@ -3590,8 +3598,15 @@ main section {
       align-self: center;
 }
 
-.editButton {
-  width: 5rem;
+#giftcard_display button.editButton {
+  background: none;
+  border: none;
+  color: #f9f9fb;
+  font-size: 1.3rem;
+  position: relative;
+  top: -10vh;
+  right: -93%;
+  cursor: pointer;
 }
 
 #friendAddBtn {
