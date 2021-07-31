@@ -5,15 +5,19 @@
 
 console.log("Connected to resetpassword.js");
 
-// ************************************ Reset user password ***********************************
 
-// Forgot Password: Send e-mail to reset
+// *************************** global variables used in the script ****************************
+
+
 const emailtoreset = document.querySelector("#email_to_reset");
 const resetPassword = document.querySelector("#reset_password");
-
 const backtologin = document.querySelector("#backtologin");
 const resetfeedback = document.querySelector("#resetfeedback");
 const noreset = document.querySelector("#noreset");
+
+
+// ************************************ Reset user password ***********************************
+
 
 resetPassword.addEventListener("click", (event) => {
     event.preventDefault();
@@ -29,7 +33,7 @@ resetPassword.addEventListener("click", (event) => {
             alert(error.message);
     })
 
-    resetfeedback.innerHTML = "Your password is reset. Please check your e-mail."
+    resetfeedback.innerHTML = "Your password is reset. Please check your e-mail.";
     emailtoreset.value = "";
     emailtoreset.focus();
 
@@ -46,4 +50,4 @@ backtologin.addEventListener("click", () => {
     noreset.style.display = "flex";
     backtologin.style.display = "none";
 
-})
+});

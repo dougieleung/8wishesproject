@@ -2,9 +2,12 @@
 // *************** This page is the code related to friend's names and gift list **************
 // ********************************************************************************************
 
+
 console.log("Connected to friendsView.js");
 
+
 // *************************** global variables used in the script ****************************
+
 
 const friendsFooter = document.querySelector("#friendsFooter");
 const friendsSeeList = document.querySelector("#friendsSeeList");
@@ -19,16 +22,13 @@ const addFriendButton = document.querySelector("#addFriendButton");
 const addFriendForm = document.querySelector(".addFriendForm");
 const emptyFriendsList = document.querySelector(".emptyFriendsList");
 const loadingFriendsList = document.querySelector(".loadingFriendsList");
-
-
 let friendID;
+
 
 // ***************** Function #1: Retrieve list of friends from Firestore *********************
 
 
-
 async function friendsListfromDB() {
-
 
   let mainUser = JSON.parse(localStorage.getItem("mainUser"));
 
@@ -43,18 +43,19 @@ async function friendsListfromDB() {
     
   }
 
-
-
   await db
     .collection(mainUser.uid)
     .doc("Friends")
     .collection("List")
     .get()
     .then((querySnapshot) => {
+     
       friendsSeeList.innerHTML = "";
       const list = document.createElement("ul");
       list.setAttribute("id", "fetchedFriendsList");
+     
       querySnapshot.forEach((item) => {
+       
         console.log(item.id, " => ", item.data());
         const container = document.createElement("div");
         container.setAttribute("class", "nameContainer");
@@ -89,9 +90,12 @@ async function friendsListfromDB() {
 // Call the function so when we navigate to friendsView.html, the list of friends are shown.
 friendsListfromDB();
 
+
 // ****************** Function #2: Retrieve list of gift ideas for Friends ********************
 
+
 let storageRef = storage.ref();
+
 async function renderTHISFriendList(friendID) {
 
   friendsWishlist.innerHTML = "";
@@ -105,6 +109,7 @@ async function renderTHISFriendList(friendID) {
     .orderBy("timestamp", "desc")
     .get()
     .then((querySnapshot) => {
+     
       querySnapshot.forEach((item) => {
         console.log(item.id, " => ", item.data());
         // Create the card container
@@ -158,7 +163,9 @@ async function renderTHISFriendList(friendID) {
     });
 }
 
+
 // ********************* Function #3: Editing Wishes on user list *****************************
+
 
 function editWish(doc) {
   console.log('inside EditWish')
@@ -191,7 +198,9 @@ function editWish(doc) {
     giftcardFriendsDisplay.classList.remove("hide");
   });
 
+
 // ********************* Function #4: Deleting Wishes from user list **************************
+
 
   deleteWishFriendsBtn.addEventListener("click", async function () {
     console.log("Delete Button Clicked");
@@ -217,7 +226,9 @@ function editWish(doc) {
   });
 }
 
+
 // ********************** Event Listener: Adding Friends to Firestore *************************
+
 
 addFriendBtn2.addEventListener("click", () => {
 
@@ -233,7 +244,9 @@ addFriendBtn2.addEventListener("click", () => {
 
 });
 
+
 // *********************** Function #5: Adding Friends to Firestore ***************************
+
 
 async function addFriendToFirestore(friendName) {
   const friendsArray = [];
