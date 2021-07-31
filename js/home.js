@@ -9,13 +9,23 @@ const userFriendsList = [];
 const sortedEventsArray = [];
 const eventsWrapper = document.querySelector("#events-wrapper");
 const loadingPage = document.querySelector(".loading-page");
+const loginFirst  = document.querySelector(".login-first");
 
 upcomingEvents();
 
 
 async function upcomingEvents() {
   console.log("Home page Loaded!");
-  const loggedUser = JSON.parse(this.localStorage.getItem("mainUser")).uid;
+
+
+  if (this.localStorage.getItem("mainUser") === null) {
+    loginFirst.style.display = "flex";
+    loadingPage.style.display= "none";
+  } else {
+    loginFirst.style.display= "none";
+  }
+ 
+  const loggedUser = JSON.parse(this.localStorage.getItem("mainUser")).uid; 
   console.log(loggedUser);
 
   await db
@@ -81,7 +91,6 @@ async function upcomingEvents() {
   homeTitle.innerText="All Events";
   eventsWrapper.appendChild(homeTitle);
 
-  
 
   for (let j = 0; j < sortedEventsArray.length; j++) {
     const eventCards = document.createElement("div");

@@ -15,16 +15,35 @@ const saveEditFriendsBtn = document.querySelector('#saveEditFriends');
 const deleteWishFriendsBtn = document.querySelector('#deleteWishFriends');
 const addFriendPage2 = document.querySelector("#addFriendPage2");
 const addFriendBtn2 = document.querySelector("#addFriendBtn2");
+const addFriendButton = document.querySelector("#addFriendButton");
+const addFriendForm = document.querySelector(".addFriendForm");
+const emptyFriendsList = document.querySelector(".emptyFriendsList");
+const loadingFriendsList = document.querySelector(".loadingFriendsList");
+
 
 let friendID;
 
 // ***************** Function #1: Retrieve list of friends from Firestore *********************
 
+
+
 async function friendsListfromDB() {
 
-  friendsSeeList.innerHTML = "";
 
   let mainUser = JSON.parse(localStorage.getItem("mainUser"));
+
+  if (mainUser === null ) {
+      emptyFriendsList.style.display = "block";
+      emptyFriendsList.style.textAlign = "center";    
+      loadingFriendsList.style.display = "none";
+      addFriendButton.style.display= "none";
+      
+  } else {
+    friendsSeeList.style.display = "block";
+    
+  }
+
+
 
   await db
     .collection(mainUser.uid)
@@ -32,6 +51,7 @@ async function friendsListfromDB() {
     .collection("List")
     .get()
     .then((querySnapshot) => {
+      friendsSeeList.innerHTML = "";
       const list = document.createElement("ul");
       list.setAttribute("id", "fetchedFriendsList");
       querySnapshot.forEach((item) => {
@@ -276,3 +296,7 @@ async function addFriendToFirestore(friendName) {
     }
   }
 }
+
+addFriendButton.addEventListener("click", ()=> {
+  addFriendForm.style.display = "block";
+})

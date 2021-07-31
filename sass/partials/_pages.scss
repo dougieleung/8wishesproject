@@ -8,7 +8,7 @@ body {
 #demo-page,
 #registerPage,
 #loginPage,
-#StoresPage, 
+#StoresPage,
 #addToWishlistSection {
   height: 100vh;
 }
@@ -49,10 +49,11 @@ main {
   #addEventPage,
   #friendAddedPage,
   #editCard,
-  #giftcardFriendsDisplay {
+  #giftcardFriendsDisplay,
+  #editCardFriends {
     background-color: $color_primary;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     gap: 2%;
     align-items: center;
     flex-direction: column;
@@ -181,7 +182,6 @@ main {
 ////////////////////////// demo page/////////////////////////////////
 
 main #demo-page {
-
   #demopage1,
   #demopage2,
   #demopage3 {
@@ -218,6 +218,10 @@ main #demo-page {
 }
 
 main #loginPage {
+  h2 {
+    margin: 0;
+  }
+
   #logged-in {
     justify-content: center;
     height: 40vh;
@@ -294,7 +298,6 @@ main #giftIdeaHomePage {
   // padding-top: 1rem;
   width: 300px;
   margin-bottom: 0;
-
 }
 
 #windowDescription p {
@@ -565,6 +568,7 @@ main #takePhoto {
   a {
     color: $color_text_dark;
     transition: all 0.5s ease;
+    font-size: 1rem;
   }
 
   &:hover {
@@ -920,7 +924,6 @@ main #listEmptyPage {
   width: 302px;
   text-align: center;
   word-wrap: break-word;
-  
 }
 
 main #complete {
@@ -993,11 +996,10 @@ body #desktopView {
 
 //////////////////////// FRIENDS PAGE ///////////////////////////////////
 
-
 #friendName2 {
   display: flex;
   border-radius: 1.5rem;
-  padding: 1rem 4rem;
+  padding: 0.5rem 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1005,18 +1007,34 @@ body #desktopView {
   font-family: $font_body;
 }
 
-#addFriendBtn2 {
+::placeholder {
+  color: $color_neutral_gray;
+}
+
+.addFriendButton {
   border-radius: 1.5rem;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
   border-style: none;
   background-color: $color_card_bg;
   color: $color_text_dark;
   transition: all 0.5s ease;
   font-family: $font_body;
+}
+
+#addFriendBtn2 {
+  border-radius: 1.5rem;
+  padding: 0.5rem 4rem;
+  border-style: none;
+  background-color: $color_secondary_green;
+  color: $color_text_dark;
+  transition: all 0.5s ease;
+  font-family: $font_body;
+  margin: 0.2rem;
 
   &:hover {
     color: $color_button_hover_text;
-    background-color: $color_button_hover_purple_bg;
+    background-color: $color_button_hover_green_bg;
   }
 }
 
@@ -1024,11 +1042,27 @@ body #desktopView {
 
 #StoresPage {
   background-color: $color_primary;
+
+  footer {
+    margin-top: 20rem;
+  }
+
+  .bottom_navbar {
+    ul {
+      margin: 4rem 0;
+    }
+
+    li button img {
+      height: 2.5cm;
+      width: 2.5cm;
+    }
+  }
 }
 .constContainer {
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.5s ease-in both;
+  height: 80vh;
 }
 
 .constContainer h1 {
@@ -1090,6 +1124,7 @@ body #desktopView {
     border: none;
     font-family: $font_body;
     color: $color_neutral_white;
+    font-size: 1rem;
   }
 
   button:hover {
@@ -1110,7 +1145,7 @@ body #desktopView {
 // }
 
 #friendsWishlist {
-  width: 40vw;
+  width: 80vw;
   margin-bottom: 2rem;
 
   .displaycard {
@@ -1139,10 +1174,6 @@ body #desktopView {
       }
     }
   }
-}
-
-#addFriendBtn2 {
-  margin: 1rem;
 }
 
 ////////////////////// HOME PAGE styling /////////////////@at-root
@@ -1184,6 +1215,24 @@ main {
 
 .home-title {
   font-family: $font_interaction;
+}
+
+.login-first {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $color_neutral_white;
+  font-family: $font_interaction;
+  align-items: center;
+
+  p {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .loading-page {
@@ -1231,4 +1280,64 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loggedin {
+  text-align: center;
+}
+
+//////////////// edit friends cards ///////////////
+body #editCardFriends {
+  justify-content: center;
+  align-items: center;
+}
+
+#editForm {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border-style: none;
+    margin-top: 0.5rem;
+    border: 1px solid $color_neutral_white;
+    font-family: $font_interaction;
+    background-color: $color_neutral_white;
+    text-align: center;
+  }
+
+  #wishDescEdit {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background-color: $color_button_purple;
+    border: 1px solid $color_button_purple;
+
+    &:hover {
+      background-color: $color_button_hover_purple_bg;
+      border: 1px solid $color_button_hover_purple_bg;
+      color: $color_neutral_white;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+// ///////////////// loading friends list ////////////////////////////
+
+.loadingFriendsList {
+  text-align: center;
+}
+
+.addFriendForm {
+  display: none;
+  text-align: center;
+}
+
+///////////empty friends list///////////////////
+
+.emptyFriendsList {
+  display: none;
 }

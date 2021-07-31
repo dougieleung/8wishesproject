@@ -10,7 +10,6 @@
 #complete,
 #addEventPage,
 #addFriendPage {
-
   #startIdeaBtn,
   #addGift,
   #addToDB,
@@ -61,7 +60,6 @@
     width: 232px;
     height: 48px;
     margin: auto;
-
   }
 
   #nextToEvents {
@@ -134,7 +132,7 @@
 }
 
 .bottom_navbar li:nth-of-type(3) {
-align-self: center;
+  align-self: center;
 }
 
 .editButton {
@@ -152,7 +150,6 @@ align-self: center;
 //////////////// Login Page ////////////////////
 #loginPage,
 #resetContainer {
-
   #btn_logout,
   #btn_AddGiftIdea,
   #btn_login {
@@ -215,7 +212,7 @@ main #resetContainer {
   }
 }
 
-section>a {
+section > a {
   color: $color_neutral_white;
 }
 
