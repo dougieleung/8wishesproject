@@ -1025,11 +1025,27 @@ body #desktopView {
 
 #StoresPage {
   background-color: $color_primary;
+
+  footer {
+    margin-top: 20rem;
+  }
+
+  .bottom_navbar {
+    ul {
+      margin: 4rem 0;
+    }
+
+    li button img {
+      height: 2.5cm;
+      width: 2.5cm;
+    }
+  }
 }
 .constContainer {
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.5s ease-in both;
+  height: 80vh;
 }
 
 .constContainer h1 {
