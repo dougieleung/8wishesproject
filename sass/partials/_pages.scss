@@ -1217,6 +1217,24 @@ main {
   font-family: $font_interaction;
 }
 
+.login-first {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $color_neutral_white;
+  font-family: $font_interaction;
+  align-items: center;
+
+  p {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
 .loading-page {
   height: 100vh;
   width: 100vw;
@@ -1316,4 +1334,10 @@ body #editCardFriends {
 .addFriendForm {
   display: none;
   text-align: center;
+}
+
+///////////empty friends list///////////////////
+
+.emptyFriendsList {
+  display: none;
 }

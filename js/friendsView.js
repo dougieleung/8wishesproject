@@ -17,6 +17,8 @@ const addFriendPage2 = document.querySelector("#addFriendPage2");
 const addFriendBtn2 = document.querySelector("#addFriendBtn2");
 const addFriendButton = document.querySelector("#addFriendButton");
 const addFriendForm = document.querySelector(".addFriendForm");
+const emptyFriendsList = document.querySelector(".emptyFriendsList");
+const loadingFriendsList = document.querySelector(".loadingFriendsList");
 
 
 let friendID;
@@ -29,6 +31,18 @@ async function friendsListfromDB() {
 
 
   let mainUser = JSON.parse(localStorage.getItem("mainUser"));
+
+  if (mainUser === null ) {
+      emptyFriendsList.style.display = "block";
+      emptyFriendsList.style.textAlign = "center";    
+      loadingFriendsList.style.display = "none";
+      addFriendButton.style.display= "none";
+      
+  } else {
+    friendsSeeList.style.display = "block";
+    
+  }
+
 
 
   await db

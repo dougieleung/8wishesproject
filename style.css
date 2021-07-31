@@ -2049,6 +2049,24 @@ main {
   font-family: "Oxygen", sans-serif;
 }
 
+.login-first {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #f9f9fb;
+  font-family: "Oxygen", sans-serif;
+  align-items: center;
+}
+
+.login-first p {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 .loading-page {
   height: 100vh;
   width: 100vw;
@@ -2135,6 +2153,10 @@ body #editCardFriends {
 .addFriendForm {
   display: none;
   text-align: center;
+}
+
+.emptyFriendsList {
+  display: none;
 }
 
 /* ================ Mixins =====================*/
