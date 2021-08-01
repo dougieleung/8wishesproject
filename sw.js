@@ -60,6 +60,7 @@ const urlsToCache = [
   "/icons/ms-icon-150x150.png",
   "/icons/ms-icon-310x310.png",
   "/media/My Movie.mp4",
+  "/media/8-wishes-logo-black.gif",
   "/manifest.json",
   "/favicon.ico",
   "/style.css",
