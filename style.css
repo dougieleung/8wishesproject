@@ -2672,7 +2672,10 @@ body section#giftcardFriendsDisplay.hide,
 body #demopage1 .hide,
 body #demopage2 .hide,
 body #demopage3 .hide,
-footer #footerNav.hide {
+footer #footerNav.hide,
+#friendsListHeading.hide,
+body #friendsListView #giftcardFriendsDisplay #friendsSeeList.hide,
+#friendsListView #giftcardFriendsDisplay #addFriendButton.hide {
   display: none;
 }
 

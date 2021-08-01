@@ -22,6 +22,7 @@ const addFriendButton = document.querySelector("#addFriendButton");
 const addFriendForm = document.querySelector(".addFriendForm");
 const emptyFriendsList = document.querySelector(".emptyFriendsList");
 const loadingFriendsList = document.querySelector(".loadingFriendsList");
+const friendsListHeading = document.querySelector("#friendsListHeading");
 let friendID;
 
 
@@ -39,7 +40,7 @@ async function friendsListfromDB() {
     addFriendButton.style.display = "none";
 
   } else {
-    friendsSeeList.style.display = "block";
+    friendsSeeList.classList.remove('hide');
 
   }
 
@@ -72,7 +73,9 @@ async function friendsListfromDB() {
 
         seeListBtn.addEventListener("click", function () {
           friendID = nameItem.innerText;
-
+          friendsListHeading.classList.add('hide');
+          friendsSeeList.classList.add('hide');
+          addFriendButton.classList.add('hide');
           friendsWishlist.classList.remove("hide");
 
           // Please see Function #2
@@ -98,7 +101,7 @@ let storageRef = storage.ref();
 
 async function renderTHISFriendList(friendID) {
 
-  friendsWishlist.innerHTML = "";
+  friendsWishlist.innerHTML = `<h1>${friendID}'s List</h1>`;
 
   await db
     .collection(firebase.auth().currentUser.uid)
