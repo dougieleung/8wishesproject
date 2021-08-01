@@ -32,15 +32,15 @@ async function friendsListfromDB() {
 
   let mainUser = JSON.parse(localStorage.getItem("mainUser"));
 
-  if (mainUser === null ) {
-      emptyFriendsList.style.display = "block";
-      emptyFriendsList.style.textAlign = "center";    
-      loadingFriendsList.style.display = "none";
-      addFriendButton.style.display= "none";
-      
+  if (mainUser === null) {
+    emptyFriendsList.style.display = "block";
+    emptyFriendsList.style.textAlign = "center";
+    loadingFriendsList.style.display = "none";
+    addFriendButton.style.display = "none";
+
   } else {
     friendsSeeList.style.display = "block";
-    
+
   }
 
   await db
@@ -49,13 +49,13 @@ async function friendsListfromDB() {
     .collection("List")
     .get()
     .then((querySnapshot) => {
-     
+
       friendsSeeList.innerHTML = "";
       const list = document.createElement("ul");
       list.setAttribute("id", "fetchedFriendsList");
-     
+
       querySnapshot.forEach((item) => {
-       
+
         console.log(item.id, " => ", item.data());
         const container = document.createElement("div");
         container.setAttribute("class", "nameContainer");
@@ -69,12 +69,12 @@ async function friendsListfromDB() {
         listItem.appendChild(container);
         container.appendChild(nameItem);
         container.appendChild(seeListBtn);
-     
+
         seeListBtn.addEventListener("click", function () {
           friendID = nameItem.innerText;
-        
+
           friendsWishlist.classList.remove("hide");
-          
+
           // Please see Function #2
           renderTHISFriendList(friendID);
         });
@@ -109,7 +109,7 @@ async function renderTHISFriendList(friendID) {
     .orderBy("timestamp", "desc")
     .get()
     .then((querySnapshot) => {
-     
+
       querySnapshot.forEach((item) => {
         console.log(item.id, " => ", item.data());
         // Create the card container
@@ -120,7 +120,7 @@ async function renderTHISFriendList(friendID) {
         const giftHeader = document.createElement("h3");
         giftHeader.innerText = `${item.data().wishTitle}`;
         card.appendChild(giftHeader);
-      
+
         if (item.data().storeImage != "") {
           const theImage = document.createElement("img");
           storageRef
@@ -148,11 +148,11 @@ async function renderTHISFriendList(friendID) {
         const editBtn = document.createElement("button");
         editBtn.type = "button";
         editBtn.classList = "editButton";
-        editBtn.innerText = "Edit/Delete";
+        editBtn.innerHTML = `<i class="fas fa-ellipsis-v"></i>`;
         card.appendChild(editBtn);
         editBtn.addEventListener("click", async function () {
           console.log("Edit Button Clicked");
- 
+
           // Please see #3 Function
           editWish(item);
         });
@@ -181,7 +181,7 @@ function editWish(doc) {
       wishTitle: wishTitleEdit.value,
       wishDesc: wishDescEdit.value,
     };
- 
+
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("Friends")
@@ -199,7 +199,7 @@ function editWish(doc) {
   });
 
 
-// ********************* Function #4: Deleting Wishes from user list **************************
+  // ********************* Function #4: Deleting Wishes from user list **************************
 
 
   deleteWishFriendsBtn.addEventListener("click", async function () {
@@ -240,7 +240,7 @@ addFriendBtn2.addEventListener("click", () => {
     .map((eachWord) => eachWord.charAt(0).toUpperCase() + eachWord.substring(1))
     .join(" ");
 
-    addFriendToFirestore(friendsName);
+  addFriendToFirestore(friendsName);
 
 });
 
@@ -269,7 +269,7 @@ async function addFriendToFirestore(friendName) {
       .collection("List")
       .doc(friendName)
       .set({
-      friendName: friendName
+        friendName: friendName
       })
       .then(() => {
         console.log("Document successfully written!");
@@ -277,8 +277,8 @@ async function addFriendToFirestore(friendName) {
       .catch((error) => {
         console.error("Error writing document: ", error);
       });
-      friendName2.value = "";
-      location.href = "friendsView.html";
+    friendName2.value = "";
+    location.href = "friendsView.html";
 
   } else {
     if (friendsArray.length !== 0) {
@@ -291,7 +291,7 @@ async function addFriendToFirestore(friendName) {
 
             .doc(friendName)
             .set({
-            friendName: friendName
+              friendName: friendName
             })
             .then(() => {
               console.log("Document successfully written!");
@@ -299,8 +299,8 @@ async function addFriendToFirestore(friendName) {
             .catch((error) => {
               console.error("Error writing document: ", error);
             });
-            friendName2.value = "";
-            location.href = "friendsView.html";
+          friendName2.value = "";
+          location.href = "friendsView.html";
 
         } else {
           alert("Friend already exists!");
@@ -310,6 +310,6 @@ async function addFriendToFirestore(friendName) {
   }
 }
 
-addFriendButton.addEventListener("click", ()=> {
+addFriendButton.addEventListener("click", () => {
   addFriendForm.style.display = "block";
 })

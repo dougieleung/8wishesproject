@@ -136,7 +136,8 @@
   align-self: center;
 }
 
-#giftcard_display button.editButton {
+#giftcard_display button.editButton,
+#giftcardFriendsDisplay button.editButton {
   background: none;
   border: none;
   color: $color_neutral_white;
