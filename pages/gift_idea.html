@@ -132,7 +132,7 @@
 
       <div id="camera">
         <!-- Video and Snapping photo -->
-        <video id="video" width="240" height="240" autoplay></video>
+        <video id="video" autoplay></video>
 
         <button id="snap">Snap Photo</button>
 
@@ -202,29 +202,29 @@
         </a>
       </button>
 
-      <div class="add-idea-3">
 
-        <div class="idea-window">
 
-          <div id="windowImage"></div>
-          <div id="windowDescription" class="window-description">
-            <p id="link-map"></p>
-          </div>
+      <div class="idea-window">
 
+        <div id="windowImage"></div>
+        <div id="windowDescription" class="window-description">
+          <p id="link-map"></p>
         </div>
 
-        <!-- Button to add to My List -->
-        <button id="addtowish" type="button">Add to My list</button>
-
-        <!-- User Feedback when wish is added to my list -->
-        <p id="add-wish-msg"></p>
-
-        <!-- Button to add to Friend's List -->
-        <button id="seeFriendsList" class="button button19" type="button">
-          <a href="#listEmptyPage">Add to Friend</a>
-        </button>
-
       </div>
+
+      <!-- Button to add to My List -->
+      <button id="addtowish" type="button">Add to My list</button>
+
+      <!-- User Feedback when wish is added to my list -->
+      <!-- <p id="add-wish-msg"></p> -->
+
+      <!-- Button to add to Friend's List -->
+      <button id="seeFriendsList" class="button button19" type="button">
+        <a href="#listEmptyPage">Add to Friend</a>
+      </button>
+
+
 
     </section>
 
@@ -374,7 +374,9 @@
 
       <form action="#" id="editForm">
 
+        <!-- <label for="wishTitleEdit">Title</label> -->
         <input type="text" id="wishTitleEdit" name="wishTitleEdit" />
+        <!-- <label for="wishDescEdit">Description</label> -->
         <input type="text" id="wishDescEdit" name="wishDescEdit" />
 
         <a id="seeFullList" href="#">see full list</a>

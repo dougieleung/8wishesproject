@@ -80,7 +80,7 @@ addGift.addEventListener("click", () => {
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
-  const wishtitle = document.createElement("p");
+  const wishtitle = document.createElement("h3");
   const wishdesc = document.createElement("p");
   const wishloc = document.createElement("p");
 
@@ -103,7 +103,7 @@ nextToWishlists.addEventListener("click", () => {
 
 
 addToWish.addEventListener("click", () => {
-  addWishMsg.innerHTML = "";
+
   newWish.mine = true;
   addToWishlistSection.classList.remove("show");
   addToWishlistSection.classList.add("hide");

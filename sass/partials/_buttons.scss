@@ -51,6 +51,9 @@
     margin: 0;
   }
 
+
+  #snap,
+  #addPhoto,
   #startIdeaBtn,
   #addGift,
   #addtowish,
@@ -60,7 +63,7 @@
     border-radius: 44px;
     width: 232px;
     height: 48px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   #nextToEvents {
@@ -69,11 +72,10 @@
     width: 232px;
     height: 48px;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
   }
 
   #addtowish,
-  #seeFriendsList,
   #addAFriendBtn {
     background: $color_button_purple;
     border: none;
@@ -81,6 +83,28 @@
 
     &:hover {
       background-color: $color_button_hover_purple_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+
+
+  #snap,
+  #addPhoto,
+  #seeFriendsList {
+    background: $color_upcoming;
+    border: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
       color: $color_button_hover_text;
     }
 

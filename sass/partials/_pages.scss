@@ -255,42 +255,61 @@ main #giftIdeaHomePage {
   }
 }
 
-#summaryCard {
+#giftIdeaProcess #summaryCard {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  gap: 2%;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 
   #summaryCardimage {
     display: flex;
     justify-content: center;
+    width: 100%;
+
+
+    img {
+      border-radius: 25px;
+      max-width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
+
   }
+}
+
+#giftIdeaProcess #addToWishlistSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .add-idea-3 {
   text-align: center;
   width: 100vw;
   display: flex;
+  gap: 2%;
   flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.add-idea-3 .window-description {
-  margin-bottom: 17vh;
-}
 
 .idea-window {
-  border: 1px solid $color_button_purple;
-  background-color: $color_button_purple;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  height: 22rem;
+
+  border-radius: 25px;
+  width: 80%;
 
   img {
     width: 100%;
+    height: 40vh;
     object-fit: cover;
     margin-top: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 25px;
   }
 }
 
@@ -298,15 +317,24 @@ main #giftIdeaHomePage {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // padding-top: 1rem;
-  width: 300px;
+  align-items: center;
+  width: 100%;
   margin-bottom: 0;
+
+  h3 {
+    font-family: $font_heading;
+    margin: 0;
+  }
+
+  p {
+    word-wrap: break-word;
+    margin: 2%;
+    font-family: $font-body;
+  }
 }
 
-#windowDescription p {
-  word-wrap: break-word;
-  margin: 2%;
-}
+
+
 
 #seeFriendsList {
   align-self: center;
@@ -336,7 +364,7 @@ main #giftIdeaHomePage {
 }
 
 .add-idea-2 {
-  width: 60vw;
+  width: 80vw;
 }
 
 .add-idea-3 {
@@ -449,12 +477,15 @@ main #giftIdeaHomePage {
 }
 
 #video {
-  border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  margin-top: 5rem;
+  border: 0.5px solid $color_neutral_white;
+  width: 80%;
+  height: auto;
+  border-radius: 25px;
 }
 
 #canvas {
-  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border: 0.5px solid $color_neutral_white;
+  border-radius: 25px;
 }
 
 #camera_btn,
@@ -473,17 +504,19 @@ main #giftIdeaHomePage {
 
 main #takePhoto {
   display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 
   #camera {
+    width: 80%;
     display: flex;
-    flex-direction: column;
-  }
+    justify-content: space-around;
 
-  #snap {
-    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
   }
 
   #backToIdeaAdd2 {
@@ -496,9 +529,6 @@ main #takePhoto {
   }
 }
 
-#takePhoto #camera {
-  height: 40vw;
-}
 
 .link-div {
   display: flex;
@@ -589,8 +619,8 @@ main #takePhoto {
 }
 
 #giftcard_display {
-  width: 80%;
-  padding: 0 10%;
+  width: 90%;
+  padding: 0 5%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -674,8 +704,8 @@ main #takePhoto {
 
 #friendsWishlist {
   height: 80vh;
-  width: 80%;
-  padding: 0 10%;
+  width: 90%;
+  padding: 0 5%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -1038,16 +1068,21 @@ main #listEmptyPage {
 }
 
 main #complete {
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 
 ////////////edit wish ///////////
+#giftIdeaProcess #editCard {
+  justify-content: flex-start;
+  height: 80vh;
+}
+
 #editCard #editForm {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 
   input,
@@ -1060,6 +1095,15 @@ main #complete {
     justify-content: center;
     margin: 1rem;
     margin-left: 0;
+  }
+
+  #wishTitleEdit {
+    font-size: 1.5rem;
+    font-family: $font_heading;
+  }
+
+  #wishDescEdit {
+    height: 10vh;
   }
 
   a {
@@ -1293,22 +1337,31 @@ body #desktopView {
   color: $color_neutral_white;
 
   .events-cards {
-    width: 90vw;
-    margin: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 2rem;
-    border-color: $color_button_hover_purple_bg;
-    background-color: $color_button_hover_purple_bg;
+    width: 90%;
+    padding: 3%;
+    margin: 0.5rem 5%;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 25px;
+    background-color: $color_upcoming;
     color: $color_neutral_white;
-    font-family: $font_body;
 
-    &:nth-child(even) {
-      background-color: $color_button_hover_green_bg;
-      border-color: $color_button_hover_green_bg;
+    h4 {
+      margin: 0;
+      font-family: $font_heading;
+      color: $color_text_dark;
+      grid-area: 1/1/2/3;
+
     }
+
+    p {
+      margin: 0;
+      font-family: $font_body;
+      color: $color_text_dark;
+      grid-column: span 1;
+    }
+
   }
 }
 

@@ -57,14 +57,14 @@ function handleBlob(blob) {
   const objectURL = window.URL.createObjectURL(blob);
 
   const copyImg = document.createElement("img");
-  copyImg.style.height = "200px";
+  // copyImg.style.height = "200px";
   copyImg.src = objectURL;
   summaryCardimage.innerHTML = "";
 
   summaryCardimage.appendChild(copyImg);
 
   const copyImg2 = document.createElement("img");
-  copyImg2.style.height = "200px";
+  // copyImg2.style.height = "200px";
   copyImg2.src = objectURL;
   windowImage.innerHTML = "";
   windowImage.appendChild(copyImg2);
