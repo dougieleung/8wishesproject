@@ -298,6 +298,14 @@ main #giftIdeaHomePage {
   width: 100%;
 }
 
+#windowDescription {
+  p {
+    @media screen and (min-width: 650px) {
+      width: 100%;
+    }
+  }
+}
+
 .add-idea-3 {
   text-align: center;
   width: 100vw;
@@ -338,6 +346,8 @@ main #giftIdeaHomePage {
 
   p {
     word-wrap: break-word;
+    text-align: center;
+    width: 70%;
     margin: 2%;
     font-family: $font-body;
   }
