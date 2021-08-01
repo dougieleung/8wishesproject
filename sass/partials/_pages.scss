@@ -53,9 +53,10 @@ main {
   #giftcardFriendsDisplay,
   #editCardFriends {
     background-color: $color_primary;
+    min-height: 85vh;
     display: flex;
-    justify-content: space-around;
     gap: 2%;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
@@ -614,8 +615,6 @@ main #takePhoto {
     margin: 1%;
     display: flex;
     flex-direction: column;
-
-
     padding: 0;
     align-items: flex-start;
 
@@ -645,10 +644,6 @@ main #takePhoto {
     button {
       order: 15;
     }
-
-
-
-
   }
 
 
@@ -676,6 +671,96 @@ main #takePhoto {
     padding: 0.7rem 0.7rem;
   }
 }
+
+#friendsWishlist {
+  height: 80vh;
+  width: 80%;
+  padding: 0 10%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5%;
+  overflow: auto;
+  border: none;
+  animation: fadeIn 0.5s ease-in both;
+
+  div.displaycard:nth-child(3n+1) {
+    background-color: $color_card_bg;
+  }
+
+  div.displaycard:nth-child(3n+2) {
+    background-color: $color_card_bg2;
+  }
+
+  div.displaycard:nth-child(3n+3) {
+    background-color: $color_upcoming;
+  }
+
+  .displaycard {
+    border-color: $color_footer_icon;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    background-color: $color_footer_icon;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+
+    img {
+      order: 1;
+      width: 100%;
+      height: 20vh;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      margin: 0;
+    }
+
+    h3 {
+      order: 5;
+      margin: 3% 1% 1% 3%;
+      color: $color_text_dark;
+    }
+
+    div {
+      order: 10;
+      margin: 1% 1% 2% 3%;
+      font-family: $font_body;
+      color: $color_text_dark;
+    }
+
+    button {
+      order: 15;
+    }
+  }
+
+
+  .editDescInput,
+  .editTitleInput {
+    padding: 0.7rem 0.7rem;
+    border-radius: 0.7rem;
+    border: 1px solid $color_primary;
+    width: 13%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 0;
+    background-color: $color_button_purple;
+    border-color: $color_button_purple;
+    color: $color_text_dark;
+  }
+
+  .editDescInput,
+  .editTitleInput {
+    background-color: $color_neutral_white;
+    color: $color_primary;
+    padding: 0.7rem 0.7rem;
+  }
+}
+
 
 .friendEventForm #addEventBtn {
   margin: 0;
@@ -1106,10 +1191,7 @@ body #desktopView {
 }
 
 // FriendsView.html styling
-#giftcardFriendsDisplay {
-  height: 90vh;
-  border: none;
-}
+
 
 #friendsSeeList #fetchedFriendsList li {
   width: 100vw;
@@ -1161,47 +1243,43 @@ body #desktopView {
 
 ///////////// #friendsWishlist on friendsView.html styling///////////
 
-#giftcardFriendsDisplay {
-  height: 100%;
-  margin-bottom: 4rem;
-}
 
 // The overflow: scroll adds a padding to the right
 // #friendsListView {
 //   overflow: scroll;
 // }
 
-#friendsWishlist {
-  width: 80vw;
-  margin-bottom: 2rem;
+// #friendsWishlist {
+//   width: 80vw;
+//   margin-bottom: 2rem;
 
-  .displaycard {
-    background-color: $color_secondary_green;
-    color: $color_secondary_dark;
-    flex-direction: column;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// .displaycard {
+//   background-color: $color_secondary_green;
+//   color: $color_secondary_dark;
+//   flex-direction: column;
+//   border-radius: 2rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-    .editButton {
-      background-color: $color_button_purple;
-      color: $color_text_dark;
-      margin: 0.5rem;
-      border-radius: 1rem;
-      border: none;
-      padding: 0.5rem 3rem;
-      display: flex;
-      font-family: $font_body;
-      justify-content: center;
+//   .editButton {
+//     background-color: $color_button_purple;
+//     color: $color_text_dark;
+//     margin: 0.5rem;
+//     border-radius: 1rem;
+//     border: none;
+//     padding: 0.5rem 3rem;
+//     display: flex;
+//     font-family: $font_body;
+//     justify-content: center;
 
-      &:hover {
-        background-color: $color_button_hover_purple_bg;
-        color: $color_button_hover_text;
-      }
-    }
-  }
-}
+//     &:hover {
+//       background-color: $color_button_hover_purple_bg;
+//       color: $color_button_hover_text;
+//     }
+//   }
+// }
+// }
 
 ////////////////////// HOME PAGE styling /////////////////@at-root
 #events-wrapper {
