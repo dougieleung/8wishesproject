@@ -10,7 +10,7 @@ const userFriendsList = [];
 const sortedEventsArray = [];
 const eventsWrapper = document.querySelector("#events-wrapper");
 const loadingPage = document.querySelector(".loading-page");
-const loginFirst  = document.querySelector(".login-first");
+const loginFirst = document.querySelector(".login-first");
 
 upcomingEvents();
 
@@ -21,12 +21,12 @@ async function upcomingEvents() {
 
   if (this.localStorage.getItem("mainUser") === null) {
     loginFirst.style.display = "flex";
-    loadingPage.style.display= "none";
+    loadingPage.style.display = "none";
   } else {
-    loginFirst.style.display= "none";
+    loginFirst.style.display = "none";
   }
- 
-  const loggedUser = JSON.parse(this.localStorage.getItem("mainUser")).uid; 
+
+  const loggedUser = JSON.parse(this.localStorage.getItem("mainUser")).uid;
   console.log(loggedUser);
 
   await db
@@ -89,11 +89,13 @@ async function upcomingEvents() {
   //create home title
   const homeTitle = document.createElement("h1");
   homeTitle.className = "home-title";
-  homeTitle.innerText="All Events";
+  homeTitle.innerText = "All Events";
   eventsWrapper.appendChild(homeTitle);
 
 
   for (let j = 0; j < sortedEventsArray.length; j++) {
+    let options = { month: 'short', day: 'numeric' };
+    let formattedDate = new Date(sortedEventsArray[j].eventDate).toLocaleDateString("en-US", options);
     const eventCards = document.createElement("div");
     eventCards.setAttribute("class", "events-cards");
     eventCards.style.border = "1px solid black";
@@ -108,10 +110,10 @@ async function upcomingEvents() {
     eventCards.appendChild(friendEvents);
 
     const friendDates = document.createElement("p");
-    friendDates.innerText = `${sortedEventsArray[j].eventDate}`;
+    friendDates.innerText = `${formattedDate}`;
     eventCards.appendChild(friendDates);
 
     eventsWrapper.appendChild(eventCards);
   }
-} 
+}
 
