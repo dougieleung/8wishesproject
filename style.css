@@ -47,6 +47,15 @@ body {
   border: none;
 }
 
+@media screen and (min-width: 650px) {
+  #giftIdeaProcess {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 main #loginPage,
 main #registerPage,
 main #welcomePage,
@@ -2341,6 +2350,15 @@ footer {
   background-color: #f9f9fb;
 }
 
+@media screen and (min-width: 650px) {
+  footer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+}
+
 body #desktopView {
   display: none;
 }
@@ -2582,12 +2600,26 @@ body #desktopView {
   grid-column: span 1;
 }
 
+@media screen and (min-width: 650px) {
+  #events-wrapper {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+}
+
 main {
   background-color: #363d51;
 }
 
 .home-title {
   font-family: "Oxygen", sans-serif;
+  grid-column: 1 / -1;
 }
 
 .login-first {
@@ -2889,7 +2921,59 @@ main section {
   min-height: 100vh;
 }
 
-/* Bottom nav bar ==================================== */
+/*Desktop View Top Nav*/
+.topNavigation {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .topNavigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 3%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 15vh;
+    background-color: #fff;
+  }
+  .topNavigation img {
+    max-width: 100%;
+    height: 12vh;
+    margin: 0 2%;
+  }
+  .topNavigation ul {
+    font-family: "Oxygen", sans-serif;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .topNavigation ul li {
+    list-style-type: none;
+  }
+  .topNavigation ul li a {
+    text-decoration: none;
+    color: #596480;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body footer {
+    display: none;
+  }
+}
+
 /* ================ Typography =====================*/
 #giftIdeaProcess h2 {
   font-family: "Baloo Bhai 2", sans-serif;

@@ -28,6 +28,11 @@ body {
     height: 100vh;
     border: none;
   }
+
+  @media screen and (min-width: 650px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 main {
@@ -253,6 +258,8 @@ main #giftIdeaHomePage {
       color: $color_text_dark;
     }
   }
+
+
 }
 
 #giftIdeaProcess #summaryCard {
@@ -262,6 +269,8 @@ main #giftIdeaHomePage {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+
+
 
   #summaryCardimage {
     display: flex;
@@ -674,6 +683,8 @@ main #takePhoto {
     button {
       order: 15;
     }
+
+
   }
 
 
@@ -1128,6 +1139,12 @@ footer {
   position: sticky;
   bottom: 0;
   background-color: $color_neutral_white;
+
+  @media screen and (min-width:650px) {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
 }
 
 // Desktop View of video and welcome message
@@ -1363,6 +1380,15 @@ body #desktopView {
     }
 
   }
+
+  @media screen and (min-width: 650px) {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
 }
 
 /////////////// loading page//////////////////
@@ -1373,6 +1399,8 @@ main {
 
 .home-title {
   font-family: $font_interaction;
+  grid-column: 1 / -1;
+
 }
 
 .login-first {

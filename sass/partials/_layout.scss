@@ -34,6 +34,8 @@ main {
   display: none;
 }
 
+
+
 body #giftIdeaProcess .hide,
 body #friendsListProcess .hide,
 body #introPages .hide,
@@ -127,9 +129,53 @@ body #demopage3 .show {
   }
 }
 
+
 main section {
   width: 100%;
   min-height: 100vh;
 }
 
-/* Bottom nav bar ==================================== */
+/*Desktop View Top Nav*/
+.topNavigation {
+  display: none;
+
+  @media screen and(min-width:650px) {
+    display: flex;
+    background-color: #fff;
+    justify-content: flex-start;
+    gap: 3%;
+    align-items: center;
+    height: 15vh;
+    background-color: #fff;
+
+    img {
+      max-width: 100%;
+      height: 12vh;
+      margin: 0 2%;
+    }
+
+    ul {
+      font-family: $font_interaction;
+      width: 100%;
+      display: flex;
+      gap: 5%;
+      justify-content: flex-start;
+
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: $color_top_nav_links;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+body footer {
+  @media screen and (min-width:650px) {
+    display: none;
+  }
+}
