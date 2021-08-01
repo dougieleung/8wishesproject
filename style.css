@@ -1638,8 +1638,9 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 #giftcard_display {
-  width: 80vw;
-  margin: 1rem;
+  width: 80%;
+  padding: 0 10%;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1648,10 +1649,18 @@ main #takePhoto #backToIdeaAdd2 i {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5%;
-  overflow: hidden;
+  overflow: auto;
   border: none;
   -webkit-animation: fadeIn 0.5s ease-in both;
           animation: fadeIn 0.5s ease-in both;
+}
+
+#giftcard_display div.displaycard:nth-child(odd) {
+  background-color: #c7beff;
+}
+
+#giftcard_display div.displaycard:nth-child(even) {
+  background-color: #ff90a3;
 }
 
 #giftcard_display .displaycard {
@@ -1691,6 +1700,7 @@ main #takePhoto #backToIdeaAdd2 i {
       -ms-flex-order: 5;
           order: 5;
   margin: 3% 1% 1% 3%;
+  color: #212531;
 }
 
 #giftcard_display .displaycard div {
@@ -1698,6 +1708,8 @@ main #takePhoto #backToIdeaAdd2 i {
       -ms-flex-order: 10;
           order: 10;
   margin: 1% 1% 2% 3%;
+  font-family: "Livvic", sans-serif;
+  color: #212531;
 }
 
 #giftcard_display .displaycard button {
@@ -3601,8 +3613,9 @@ main section {
   font-size: 1.3rem;
   position: relative;
   top: -10vh;
-  right: -93%;
+  right: -90%;
   cursor: pointer;
+  color: #212531;
 }
 
 #friendAddBtn {
