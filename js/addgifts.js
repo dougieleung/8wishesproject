@@ -67,7 +67,7 @@ addGift.addEventListener("click", () => {
     displayDescription.innerHTML = `${giftDescription.value}`;
     giftTitle.value = "";
     giftDescription.value = "";
- 
+
   } else {
     alert("All fields are mandatory!");
   }
@@ -83,8 +83,8 @@ nextToWishlists.addEventListener("click", () => {
   const wishtitle = document.createElement("p");
   const wishdesc = document.createElement("p");
   const wishloc = document.createElement("p");
-  
-  if (newWish.location !== undefined) {  
+
+  if (newWish.location !== undefined) {
     wishtitle.innerText = `${newWish.wishTitle}`;
     wishdesc.innerText = `${newWish.wishDesc}`;
     wishloc.innerText = `${newWish.location}`;
@@ -180,7 +180,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
   if (firebase.auth().currentUser === null) {
     logintoadd.innerHTML = "Sorry.  Please sign in before adding wishes.";
   } else if (newWish.mine) {
-  
+
     await db
       .collection(firebase.auth().currentUser.uid)
       .doc("MyWishlist")
@@ -284,7 +284,7 @@ async function renderWishlist() {
         const editBtn = document.createElement("button");
         editBtn.type = "button";
         editBtn.classList = "editButton";
-        editBtn.innerText = "Edit/Delete";
+        editBtn.innerHTML = `<i class="fas fa-ellipsis-v"></i>`;
         card.appendChild(editBtn);
         editBtn.addEventListener("click", async function () {
           console.log("Edit Button Clicked");

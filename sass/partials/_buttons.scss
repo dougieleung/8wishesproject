@@ -10,6 +10,7 @@
 #complete,
 #addEventPage,
 #addFriendPage {
+
   #startIdeaBtn,
   #addGift,
   #addToDB,
@@ -135,8 +136,29 @@
   align-self: center;
 }
 
-.editButton {
-  width: 5rem;
+#giftcard_display button.editButton {
+  background: none;
+  border: none;
+  color: $color_neutral_white;
+  font-size: 1.3rem;
+  position: relative;
+  top: -10vh;
+  right: -90%;
+  cursor: pointer;
+  color: $color_text_dark;
+}
+
+#giftcardFriendsDisplay button.editButton {
+  background: none;
+  border: none;
+  color: $color_neutral_white;
+  font-size: 1.3rem;
+  position: relative;
+  top: -8vh;
+  right: -90%;
+  cursor: pointer;
+  color: $color_text_dark;
+
 }
 
 #friendAddBtn {
@@ -150,6 +172,7 @@
 //////////////// Login Page ////////////////////
 #loginPage,
 #resetContainer {
+
   #btn_logout,
   #btn_AddGiftIdea,
   #btn_login {
@@ -212,7 +235,7 @@ main #resetContainer {
   }
 }
 
-section > a {
+section>a {
   color: $color_neutral_white;
 }
 
