@@ -179,3 +179,27 @@ body footer {
     display: none;
   }
 }
+
+#footerNav {
+  @media screen and (min-width:650px) {
+    display: none;
+  }
+}
+
+#giftcardFriendsDisplay {
+  @media screen and (min-width:650px) {
+    width: 80%;
+    margin: auto;
+    border: none;
+
+    #friendsSeeList {
+      max-width: 100%;
+    }
+  }
+}
+
+#friendsListView {
+  @media screen and(min-width:650px) {
+    height: 85vh;
+  }
+}

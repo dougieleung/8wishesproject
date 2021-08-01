@@ -30,9 +30,10 @@ body {
   }
 
   @media screen and (min-width: 650px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    height: 85vh;
   }
+
 }
 
 main {
@@ -684,7 +685,9 @@ main #takePhoto {
       order: 15;
     }
 
-
+    @media screen and(min-width:650px) {
+      width: 100%;
+    }
   }
 
 
@@ -711,10 +714,24 @@ main #takePhoto {
     color: $color_primary;
     padding: 0.7rem 0.7rem;
   }
+
+  @media screen and (min-width: 650px) {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+
+    h2 {
+      grid-column: 1/-1;
+    }
+  }
 }
 
 #friendsWishlist {
-  height: 80vh;
+
   width: 90%;
   padding: 0 5%;
   margin: 0;
@@ -748,6 +765,7 @@ main #takePhoto {
     padding: 0;
     align-items: flex-start;
 
+
     img {
       order: 1;
       width: 100%;
@@ -774,6 +792,10 @@ main #takePhoto {
     button {
       order: 15;
     }
+
+    @media screen and(min-width:650px) {
+      width: 100%;
+    }
   }
 
 
@@ -799,6 +821,22 @@ main #takePhoto {
     background-color: $color_neutral_white;
     color: $color_primary;
     padding: 0.7rem 0.7rem;
+  }
+
+  @media screen and (min-width: 650px) {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    min-height: 30vh;
+
+
+    h1 {
+      grid-column: 1/-1;
+    }
   }
 }
 
@@ -1236,26 +1274,27 @@ body #desktopView {
   flex-direction: column;
   animation: fadeIn 0.5s ease-in both;
   height: 80vh;
+
 }
 
 .constContainer h1 {
   font-family: $font_heading;
   color: $color_neutral_white;
   text-align: center;
-  margin-top: 20%;
 }
 
 .constContainer img {
   align-self: center;
-  max-width: 90%;
-  margin: 5vh 0;
+  max-width: 50%;
+  height: auto;
+
 }
 
 // FriendsView.html styling
 
 
 #friendsSeeList #fetchedFriendsList li {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

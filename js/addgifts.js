@@ -361,3 +361,12 @@ seeFullListLink.addEventListener("click", function () {
   displayGift.classList.remove("hide");
   renderWishlist();
 });
+
+myListTopNav.addEventListener("click", function () {
+  console.log('my list top nav clicked')
+  giftIdeaHomePage.classList.add("hide");
+  giftIdeaHomePage.classList.remove("show");
+  displayGift.classList.remove("hide");
+  renderWishlist();
+
+});
