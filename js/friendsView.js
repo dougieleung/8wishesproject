@@ -99,7 +99,7 @@ friendsListfromDB();
 
 let storageRef = storage.ref();
 
-async function renderTHISFriendList(friendID) {
+async function renderTHISFriendList() {
 
   friendsWishlist.innerHTML = `<h1>${friendID}'s List</h1>`;
 
@@ -172,6 +172,7 @@ async function renderTHISFriendList(friendID) {
 
 function editWish(doc) {
   console.log('inside EditWish')
+
   editCardFriends.classList.remove("hide");
   giftcardFriendsDisplay.classList.add('hide');
 

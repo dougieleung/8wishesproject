@@ -80,7 +80,7 @@ addGift.addEventListener("click", () => {
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
-  const wishtitle = document.createElement("p");
+  const wishtitle = document.createElement("h3");
   const wishdesc = document.createElement("p");
   const wishloc = document.createElement("p");
 
@@ -103,7 +103,7 @@ nextToWishlists.addEventListener("click", () => {
 
 
 addToWish.addEventListener("click", () => {
-  addWishMsg.innerHTML = "";
+
   newWish.mine = true;
   addToWishlistSection.classList.remove("show");
   addToWishlistSection.classList.add("hide");
@@ -360,4 +360,13 @@ myListFooter.addEventListener("click", function () {
 seeFullListLink.addEventListener("click", function () {
   displayGift.classList.remove("hide");
   renderWishlist();
+});
+
+myListTopNav.addEventListener("click", function () {
+  console.log('my list top nav clicked')
+  giftIdeaHomePage.classList.add("hide");
+  giftIdeaHomePage.classList.remove("show");
+  displayGift.classList.remove("hide");
+  renderWishlist();
+
 });

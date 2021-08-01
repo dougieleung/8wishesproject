@@ -47,6 +47,12 @@ body {
   border: none;
 }
 
+@media screen and (min-width: 650px) {
+  #giftIdeaProcess {
+    height: 85vh;
+  }
+}
+
 main #loginPage,
 main #registerPage,
 main #welcomePage,
@@ -1124,29 +1130,58 @@ main #giftIdeaHomePage #startIdeaBtn a {
   color: #212531;
 }
 
-#summaryCard {
+#giftIdeaProcess #summaryCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
 }
 
-#summaryCard #summaryCardimage {
+#giftIdeaProcess #summaryCard #summaryCardimage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+}
+
+#giftIdeaProcess #summaryCard #summaryCardimage img {
+  border-radius: 25px;
+  max-width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#giftIdeaProcess #addToWishlistSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
 }
 
 .add-idea-3 {
@@ -1155,31 +1190,31 @@ main #giftIdeaHomePage #startIdeaBtn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 2%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-}
-
-.add-idea-3 .window-description {
-  margin-bottom: 17vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .idea-window {
-  border: 1px solid #aba0f5;
-  background-color: #aba0f5;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  height: 22rem;
+  border-radius: 25px;
+  width: 80%;
 }
 
 .idea-window img {
   width: 100%;
+  height: 40vh;
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 25px;
 }
 
 #windowDescription {
@@ -1193,13 +1228,22 @@ main #giftIdeaHomePage #startIdeaBtn a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   margin-bottom: 0;
+}
+
+#windowDescription h3 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  margin: 0;
 }
 
 #windowDescription p {
   word-wrap: break-word;
   margin: 2%;
+  font-family: "Livvic", sans-serif;
 }
 
 #seeFriendsList {
@@ -1240,7 +1284,7 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 .add-idea-2 {
-  width: 60vw;
+  width: 80vw;
 }
 
 .add-idea-3 {
@@ -1418,12 +1462,15 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #video {
-  border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  margin-top: 5rem;
+  border: 0.5px solid #f9f9fb;
+  width: 80%;
+  height: auto;
+  border-radius: 25px;
 }
 
 #canvas {
-  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border: 0.5px solid #f9f9fb;
+  border-radius: 25px;
 }
 
 #camera_btn,
@@ -1438,30 +1485,34 @@ main #takePhoto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-}
-
-main #takePhoto #camera {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
 }
 
-main #takePhoto #snap {
-  margin: 1rem;
+main #takePhoto #camera {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
 }
 
 main #takePhoto #backToIdeaAdd2 {
@@ -1471,10 +1522,6 @@ main #takePhoto #backToIdeaAdd2 {
 main #takePhoto #backToIdeaAdd2 i {
   margin: 0;
   margin-top: 1rem;
-}
-
-#takePhoto #camera {
-  height: 40vw;
 }
 
 .link-div {
@@ -1639,8 +1686,8 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 #giftcard_display {
-  width: 80%;
-  padding: 0 10%;
+  width: 90%;
+  padding: 0 5%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1719,6 +1766,12 @@ main #takePhoto #backToIdeaAdd2 i {
           order: 15;
 }
 
+@media screen and (min-width: 650px) {
+  #giftcard_display .displaycard {
+    width: 100%;
+  }
+}
+
 #giftcard_display .editDescInput,
 #giftcard_display .editTitleInput {
   padding: 0.7rem 0.7rem;
@@ -1749,10 +1802,26 @@ main #takePhoto #backToIdeaAdd2 i {
   padding: 0.7rem 0.7rem;
 }
 
+@media screen and (min-width: 650px) {
+  #giftcard_display {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2%;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+  #giftcard_display h2 {
+    grid-column: 1/-1;
+  }
+}
+
 #friendsWishlist {
-  height: 80vh;
-  width: 80%;
-  padding: 0 10%;
+  width: 90%;
+  padding: 0 5%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1835,6 +1904,12 @@ main #takePhoto #backToIdeaAdd2 i {
           order: 15;
 }
 
+@media screen and (min-width: 650px) {
+  #friendsWishlist .displaycard {
+    width: 100%;
+  }
+}
+
 #friendsWishlist .editDescInput,
 #friendsWishlist .editTitleInput {
   padding: 0.7rem 0.7rem;
@@ -1863,6 +1938,24 @@ main #takePhoto #backToIdeaAdd2 i {
   background-color: #f9f9fb;
   color: #363d51;
   padding: 0.7rem 0.7rem;
+}
+
+@media screen and (min-width: 650px) {
+  #friendsWishlist {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2%;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    min-height: 30vh;
+  }
+  #friendsWishlist h1 {
+    grid-column: 1/-1;
+  }
 }
 
 .friendEventForm #addEventBtn {
@@ -2222,12 +2315,19 @@ main #listEmptyPage #friendtoProfile {
 }
 
 main #complete {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#giftIdeaProcess #editCard {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 80vh;
 }
 
 #editCard #editForm {
@@ -2238,9 +2338,9 @@ main #complete {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2260,6 +2360,15 @@ main #complete {
           justify-content: center;
   margin: 1rem;
   margin-left: 0;
+}
+
+#editCard #editForm #wishTitleEdit {
+  font-size: 1.5rem;
+  font-family: "Baloo Bhai 2", sans-serif;
+}
+
+#editCard #editForm #wishDescEdit {
+  height: 10vh;
 }
 
 #editCard #editForm a {
@@ -2282,6 +2391,15 @@ footer {
   position: sticky;
   bottom: 0;
   background-color: #f9f9fb;
+}
+
+@media screen and (min-width: 650px) {
+  footer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
 }
 
 body #desktopView {
@@ -2401,19 +2519,18 @@ body #desktopView {
   font-family: "Baloo Bhai 2", sans-serif;
   color: #f9f9fb;
   text-align: center;
-  margin-top: 20%;
 }
 
 .constContainer img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  max-width: 90%;
-  margin: 5vh 0;
+  max-width: 50%;
+  height: auto;
 }
 
 #friendsSeeList #fetchedFriendsList li {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2494,31 +2611,48 @@ body #desktopView {
 }
 
 #events-wrapper .events-cards {
-  width: 90vw;
-  margin: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 2rem;
-  border-color: #8177c3;
-  background-color: #8177c3;
+  width: 90%;
+  padding: 3%;
+  margin: 0.5rem 5%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1%;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  border-radius: 25px;
+  background-color: #86e4de;
   color: #f9f9fb;
-  font-family: "Livvic", sans-serif;
 }
 
-#events-wrapper .events-cards:nth-child(even) {
-  background-color: #2ba199;
-  border-color: #2ba199;
+#events-wrapper .events-cards h4 {
+  margin: 0;
+  font-family: "Baloo Bhai 2", sans-serif;
+  color: #212531;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
+}
+
+#events-wrapper .events-cards p {
+  margin: 0;
+  font-family: "Livvic", sans-serif;
+  color: #212531;
+  grid-column: span 1;
+}
+
+@media screen and (min-width: 650px) {
+  #events-wrapper {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
 }
 
 main {
@@ -2527,6 +2661,7 @@ main {
 
 .home-title {
   font-family: "Oxygen", sans-serif;
+  grid-column: 1 / -1;
 }
 
 .login-first {
@@ -2737,6 +2872,8 @@ body #demopage3 .hide,
 footer #footerNav.hide,
 #friendsListHeading.hide,
 #friendsWishlist.hide,
+#giftIdeaProcess #summaryCard.hide,
+#giftIdeaProcess #addToWishlistSection.hide,
 body #friendsListView #giftcardFriendsDisplay #friendsSeeList.hide,
 #friendsListView #giftcardFriendsDisplay #addFriendButton.hide {
   display: none;
@@ -2826,7 +2963,82 @@ main section {
   min-height: 100vh;
 }
 
-/* Bottom nav bar ==================================== */
+/*Desktop View Top Nav*/
+.topNavigation {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .topNavigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 3%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 15vh;
+    background-color: #fff;
+  }
+  .topNavigation img {
+    max-width: 100%;
+    height: 12vh;
+    margin: 0 2%;
+  }
+  .topNavigation ul {
+    font-family: "Oxygen", sans-serif;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .topNavigation ul li {
+    list-style-type: none;
+  }
+  .topNavigation ul li a {
+    text-decoration: none;
+    color: #596480;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #footerNav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #giftcardFriendsDisplay {
+    width: 80%;
+    margin: auto;
+    border: none;
+  }
+  #giftcardFriendsDisplay #friendsSeeList {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #friendsListView {
+    height: 85vh;
+  }
+}
+
 /* ================ Typography =====================*/
 #giftIdeaProcess h2 {
   font-family: "Baloo Bhai 2", sans-serif;
@@ -3348,46 +3560,64 @@ main section {
   margin: 0;
 }
 
+#giftIdeaHomePage #snap,
+#giftIdeaHomePage #addPhoto,
 #giftIdeaHomePage #startIdeaBtn,
 #giftIdeaHomePage #addGift,
 #giftIdeaHomePage #addtowish,
 #giftIdeaHomePage #seeFriendsList,
 #giftIdeaHomePage #addToDB,
+#giftIdeaAdd #snap,
+#giftIdeaAdd #addPhoto,
 #giftIdeaAdd #startIdeaBtn,
 #giftIdeaAdd #addGift,
 #giftIdeaAdd #addtowish,
 #giftIdeaAdd #seeFriendsList,
 #giftIdeaAdd #addToDB,
+#takePhoto #snap,
+#takePhoto #addPhoto,
 #takePhoto #startIdeaBtn,
 #takePhoto #addGift,
 #takePhoto #addtowish,
 #takePhoto #seeFriendsList,
 #takePhoto #addToDB,
+#summaryCard #snap,
+#summaryCard #addPhoto,
 #summaryCard #startIdeaBtn,
 #summaryCard #addGift,
 #summaryCard #addtowish,
 #summaryCard #seeFriendsList,
 #summaryCard #addToDB,
+#addToWishlistSection #snap,
+#addToWishlistSection #addPhoto,
 #addToWishlistSection #startIdeaBtn,
 #addToWishlistSection #addGift,
 #addToWishlistSection #addtowish,
 #addToWishlistSection #seeFriendsList,
 #addToWishlistSection #addToDB,
+#listEmptyPage #snap,
+#listEmptyPage #addPhoto,
 #listEmptyPage #startIdeaBtn,
 #listEmptyPage #addGift,
 #listEmptyPage #addtowish,
 #listEmptyPage #seeFriendsList,
 #listEmptyPage #addToDB,
+#complete #snap,
+#complete #addPhoto,
 #complete #startIdeaBtn,
 #complete #addGift,
 #complete #addtowish,
 #complete #seeFriendsList,
 #complete #addToDB,
+#addEventPage #snap,
+#addEventPage #addPhoto,
 #addEventPage #startIdeaBtn,
 #addEventPage #addGift,
 #addEventPage #addtowish,
 #addEventPage #seeFriendsList,
 #addEventPage #addToDB,
+#addFriendPage #snap,
+#addFriendPage #addPhoto,
 #addFriendPage #startIdeaBtn,
 #addFriendPage #addGift,
 #addFriendPage #addtowish,
@@ -3397,7 +3627,7 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 #giftIdeaHomePage #nextToEvents,
@@ -3416,35 +3646,26 @@ main section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: auto;
+  margin: 0 auto;
 }
 
 #giftIdeaHomePage #addtowish,
-#giftIdeaHomePage #seeFriendsList,
 #giftIdeaHomePage #addAFriendBtn,
 #giftIdeaAdd #addtowish,
-#giftIdeaAdd #seeFriendsList,
 #giftIdeaAdd #addAFriendBtn,
 #takePhoto #addtowish,
-#takePhoto #seeFriendsList,
 #takePhoto #addAFriendBtn,
 #summaryCard #addtowish,
-#summaryCard #seeFriendsList,
 #summaryCard #addAFriendBtn,
 #addToWishlistSection #addtowish,
-#addToWishlistSection #seeFriendsList,
 #addToWishlistSection #addAFriendBtn,
 #listEmptyPage #addtowish,
-#listEmptyPage #seeFriendsList,
 #listEmptyPage #addAFriendBtn,
 #complete #addtowish,
-#complete #seeFriendsList,
 #complete #addAFriendBtn,
 #addEventPage #addtowish,
-#addEventPage #seeFriendsList,
 #addEventPage #addAFriendBtn,
 #addFriendPage #addtowish,
-#addFriendPage #seeFriendsList,
 #addFriendPage #addAFriendBtn {
   background: #aba0f5;
   border: none;
@@ -3453,94 +3674,192 @@ main section {
 }
 
 #giftIdeaHomePage #addtowish:hover,
-#giftIdeaHomePage #seeFriendsList:hover,
 #giftIdeaHomePage #addAFriendBtn:hover,
 #giftIdeaAdd #addtowish:hover,
-#giftIdeaAdd #seeFriendsList:hover,
 #giftIdeaAdd #addAFriendBtn:hover,
 #takePhoto #addtowish:hover,
-#takePhoto #seeFriendsList:hover,
 #takePhoto #addAFriendBtn:hover,
 #summaryCard #addtowish:hover,
-#summaryCard #seeFriendsList:hover,
 #summaryCard #addAFriendBtn:hover,
 #addToWishlistSection #addtowish:hover,
-#addToWishlistSection #seeFriendsList:hover,
 #addToWishlistSection #addAFriendBtn:hover,
 #listEmptyPage #addtowish:hover,
-#listEmptyPage #seeFriendsList:hover,
 #listEmptyPage #addAFriendBtn:hover,
 #complete #addtowish:hover,
-#complete #seeFriendsList:hover,
 #complete #addAFriendBtn:hover,
 #addEventPage #addtowish:hover,
-#addEventPage #seeFriendsList:hover,
 #addEventPage #addAFriendBtn:hover,
 #addFriendPage #addtowish:hover,
-#addFriendPage #seeFriendsList:hover,
 #addFriendPage #addAFriendBtn:hover {
   background-color: #8177c3;
   color: #f9f9fb;
 }
 
 #giftIdeaHomePage #addtowish a,
-#giftIdeaHomePage #seeFriendsList a,
 #giftIdeaHomePage #addAFriendBtn a,
 #giftIdeaAdd #addtowish a,
-#giftIdeaAdd #seeFriendsList a,
 #giftIdeaAdd #addAFriendBtn a,
 #takePhoto #addtowish a,
-#takePhoto #seeFriendsList a,
 #takePhoto #addAFriendBtn a,
 #summaryCard #addtowish a,
-#summaryCard #seeFriendsList a,
 #summaryCard #addAFriendBtn a,
 #addToWishlistSection #addtowish a,
-#addToWishlistSection #seeFriendsList a,
 #addToWishlistSection #addAFriendBtn a,
 #listEmptyPage #addtowish a,
-#listEmptyPage #seeFriendsList a,
 #listEmptyPage #addAFriendBtn a,
 #complete #addtowish a,
-#complete #seeFriendsList a,
 #complete #addAFriendBtn a,
 #addEventPage #addtowish a,
-#addEventPage #seeFriendsList a,
 #addEventPage #addAFriendBtn a,
 #addFriendPage #addtowish a,
-#addFriendPage #seeFriendsList a,
 #addFriendPage #addAFriendBtn a {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 #giftIdeaHomePage #addtowish:hover a,
-#giftIdeaHomePage #seeFriendsList:hover a,
 #giftIdeaHomePage #addAFriendBtn:hover a,
 #giftIdeaAdd #addtowish:hover a,
-#giftIdeaAdd #seeFriendsList:hover a,
 #giftIdeaAdd #addAFriendBtn:hover a,
 #takePhoto #addtowish:hover a,
-#takePhoto #seeFriendsList:hover a,
 #takePhoto #addAFriendBtn:hover a,
 #summaryCard #addtowish:hover a,
-#summaryCard #seeFriendsList:hover a,
 #summaryCard #addAFriendBtn:hover a,
 #addToWishlistSection #addtowish:hover a,
-#addToWishlistSection #seeFriendsList:hover a,
 #addToWishlistSection #addAFriendBtn:hover a,
 #listEmptyPage #addtowish:hover a,
-#listEmptyPage #seeFriendsList:hover a,
 #listEmptyPage #addAFriendBtn:hover a,
 #complete #addtowish:hover a,
-#complete #seeFriendsList:hover a,
 #complete #addAFriendBtn:hover a,
 #addEventPage #addtowish:hover a,
-#addEventPage #seeFriendsList:hover a,
 #addEventPage #addAFriendBtn:hover a,
 #addFriendPage #addtowish:hover a,
-#addFriendPage #seeFriendsList:hover a,
 #addFriendPage #addAFriendBtn:hover a {
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #snap,
+#giftIdeaHomePage #addPhoto,
+#giftIdeaHomePage #seeFriendsList,
+#giftIdeaAdd #snap,
+#giftIdeaAdd #addPhoto,
+#giftIdeaAdd #seeFriendsList,
+#takePhoto #snap,
+#takePhoto #addPhoto,
+#takePhoto #seeFriendsList,
+#summaryCard #snap,
+#summaryCard #addPhoto,
+#summaryCard #seeFriendsList,
+#addToWishlistSection #snap,
+#addToWishlistSection #addPhoto,
+#addToWishlistSection #seeFriendsList,
+#listEmptyPage #snap,
+#listEmptyPage #addPhoto,
+#listEmptyPage #seeFriendsList,
+#complete #snap,
+#complete #addPhoto,
+#complete #seeFriendsList,
+#addEventPage #snap,
+#addEventPage #addPhoto,
+#addEventPage #seeFriendsList,
+#addFriendPage #snap,
+#addFriendPage #addPhoto,
+#addFriendPage #seeFriendsList {
+  background: #86e4de;
+  border: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #snap:hover,
+#giftIdeaHomePage #addPhoto:hover,
+#giftIdeaHomePage #seeFriendsList:hover,
+#giftIdeaAdd #snap:hover,
+#giftIdeaAdd #addPhoto:hover,
+#giftIdeaAdd #seeFriendsList:hover,
+#takePhoto #snap:hover,
+#takePhoto #addPhoto:hover,
+#takePhoto #seeFriendsList:hover,
+#summaryCard #snap:hover,
+#summaryCard #addPhoto:hover,
+#summaryCard #seeFriendsList:hover,
+#addToWishlistSection #snap:hover,
+#addToWishlistSection #addPhoto:hover,
+#addToWishlistSection #seeFriendsList:hover,
+#listEmptyPage #snap:hover,
+#listEmptyPage #addPhoto:hover,
+#listEmptyPage #seeFriendsList:hover,
+#complete #snap:hover,
+#complete #addPhoto:hover,
+#complete #seeFriendsList:hover,
+#addEventPage #snap:hover,
+#addEventPage #addPhoto:hover,
+#addEventPage #seeFriendsList:hover,
+#addFriendPage #snap:hover,
+#addFriendPage #addPhoto:hover,
+#addFriendPage #seeFriendsList:hover {
+  background-color: #2ba199;
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #snap a,
+#giftIdeaHomePage #addPhoto a,
+#giftIdeaHomePage #seeFriendsList a,
+#giftIdeaAdd #snap a,
+#giftIdeaAdd #addPhoto a,
+#giftIdeaAdd #seeFriendsList a,
+#takePhoto #snap a,
+#takePhoto #addPhoto a,
+#takePhoto #seeFriendsList a,
+#summaryCard #snap a,
+#summaryCard #addPhoto a,
+#summaryCard #seeFriendsList a,
+#addToWishlistSection #snap a,
+#addToWishlistSection #addPhoto a,
+#addToWishlistSection #seeFriendsList a,
+#listEmptyPage #snap a,
+#listEmptyPage #addPhoto a,
+#listEmptyPage #seeFriendsList a,
+#complete #snap a,
+#complete #addPhoto a,
+#complete #seeFriendsList a,
+#addEventPage #snap a,
+#addEventPage #addPhoto a,
+#addEventPage #seeFriendsList a,
+#addFriendPage #snap a,
+#addFriendPage #addPhoto a,
+#addFriendPage #seeFriendsList a {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #snap:hover a,
+#giftIdeaHomePage #addPhoto:hover a,
+#giftIdeaHomePage #seeFriendsList:hover a,
+#giftIdeaAdd #snap:hover a,
+#giftIdeaAdd #addPhoto:hover a,
+#giftIdeaAdd #seeFriendsList:hover a,
+#takePhoto #snap:hover a,
+#takePhoto #addPhoto:hover a,
+#takePhoto #seeFriendsList:hover a,
+#summaryCard #snap:hover a,
+#summaryCard #addPhoto:hover a,
+#summaryCard #seeFriendsList:hover a,
+#addToWishlistSection #snap:hover a,
+#addToWishlistSection #addPhoto:hover a,
+#addToWishlistSection #seeFriendsList:hover a,
+#listEmptyPage #snap:hover a,
+#listEmptyPage #addPhoto:hover a,
+#listEmptyPage #seeFriendsList:hover a,
+#complete #snap:hover a,
+#complete #addPhoto:hover a,
+#complete #seeFriendsList:hover a,
+#addEventPage #snap:hover a,
+#addEventPage #addPhoto:hover a,
+#addEventPage #seeFriendsList:hover a,
+#addFriendPage #snap:hover a,
+#addFriendPage #addPhoto:hover a,
+#addFriendPage #seeFriendsList:hover a {
   color: #f9f9fb;
 }
 
