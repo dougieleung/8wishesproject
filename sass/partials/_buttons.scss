@@ -165,9 +165,9 @@
   border: none;
   color: $color_neutral_white;
   font-size: 1.3rem;
-  position: relative;
-  top: -10vh;
-  right: -90%;
+  position: absolute;
+  top: 180px;
+  right: 15px;
   cursor: pointer;
   color: $color_text_dark;
 }
@@ -177,12 +177,16 @@
   border: none;
   color: $color_neutral_white;
   font-size: 1.3rem;
-  position: relative;
-  top: -8vh;
-  right: -90%;
+  position: absolute;
+  top: 10px;
+  right: 15px;
   cursor: pointer;
   color: $color_text_dark;
 
+}
+
+.displaycard {
+  position: relative;
 }
 
 #friendAddBtn {

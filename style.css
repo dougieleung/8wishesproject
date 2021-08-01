@@ -1184,6 +1184,12 @@ main #giftIdeaHomePage #startIdeaBtn a {
   width: 100%;
 }
 
+@media screen and (min-width: 650px) {
+  #windowDescription p {
+    width: 100%;
+  }
+}
+
 .add-idea-3 {
   text-align: center;
   width: 100vw;
@@ -1242,6 +1248,8 @@ main #giftIdeaHomePage #startIdeaBtn a {
 
 #windowDescription p {
   word-wrap: break-word;
+  text-align: center;
+  width: 70%;
   margin: 2%;
   font-family: "Livvic", sans-serif;
 }
@@ -3996,9 +4004,9 @@ main section {
   border: none;
   color: #f9f9fb;
   font-size: 1.3rem;
-  position: relative;
-  top: -10vh;
-  right: -90%;
+  position: absolute;
+  top: 180px;
+  right: 15px;
   cursor: pointer;
   color: #212531;
 }
@@ -4008,11 +4016,15 @@ main section {
   border: none;
   color: #f9f9fb;
   font-size: 1.3rem;
-  position: relative;
-  top: -8vh;
-  right: -90%;
+  position: absolute;
+  top: 10px;
+  right: 15px;
   cursor: pointer;
   color: #212531;
+}
+
+.displaycard {
+  position: relative;
 }
 
 #friendAddBtn {
