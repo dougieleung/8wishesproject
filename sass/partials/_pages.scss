@@ -2,6 +2,7 @@
 // comment
 body {
   margin: 0;
+  background-color: $color_primary;
 }
 
 #welcomePage,
@@ -498,13 +499,15 @@ main #giftIdeaHomePage {
 
 #video {
   border: 0.5px solid $color_neutral_white;
-  width: 80%;
-  height: auto;
+  width: 240px;
+  height: 180px;
   border-radius: 25px;
 }
 
 #canvas {
   border: 0.5px solid $color_neutral_white;
+  width: 240px;
+  height: 180px;
   border-radius: 25px;
 }
 
@@ -1208,7 +1211,7 @@ body #desktopView {
   }
 
   #welcomePage {
-    height: 210vh;
+    height: 250vh;
   }
 }
 
