@@ -1744,17 +1744,13 @@ main #takePhoto #backToIdeaAdd2 i {
   margin-bottom: 2rem;
   background-color: #6e64ac;
   margin: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding: 0;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 30%, 30%, 20%, 20%;
+      grid-template-rows: 30%, 30%, 20%, 20%;
 }
 
 #giftcard_display .displaycard img {
@@ -1768,6 +1764,10 @@ main #takePhoto #backToIdeaAdd2 i {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin: 0;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
 #giftcard_display .displaycard h3 {
@@ -1776,6 +1776,18 @@ main #takePhoto #backToIdeaAdd2 i {
           order: 5;
   margin: 3% 1% 1% 3%;
   color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #giftcard_display .displaycard div {
@@ -1785,12 +1797,24 @@ main #takePhoto #backToIdeaAdd2 i {
   margin: 1% 1% 2% 3%;
   font-family: "Livvic", sans-serif;
   color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
 }
 
 #giftcard_display .displaycard button {
   -webkit-box-ordinal-group: 16;
       -ms-flex-order: 15;
           order: 15;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
 }
 
 @media screen and (min-width: 650px) {
@@ -1837,6 +1861,7 @@ main #takePhoto #backToIdeaAdd2 i {
     display: -ms-grid;
     display: grid;
     grid-gap: 2%;
+    grid-auto-flow: row;
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
@@ -4023,11 +4048,18 @@ main section {
   border: none;
   color: #f9f9fb;
   font-size: 1.3rem;
-  position: absolute;
-  top: 10px;
-  right: 15px;
   cursor: pointer;
   color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5%;
 }
 
 #giftcardFriendsDisplay button.editButton {
