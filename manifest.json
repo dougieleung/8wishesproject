@@ -40,7 +40,7 @@
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "landscape",
-  "theme_color": "orange",
+  "theme_color": "purple",
   "background_color": "purple",
   "permissions": {
     "audio-capture": {

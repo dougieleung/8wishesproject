@@ -9,6 +9,7 @@
 /* ================ Pages =====================*/
 body {
   margin: 0;
+  background-color: #363d51;
 }
 
 #welcomePage,
@@ -1471,13 +1472,15 @@ main #giftIdeaHomePage #startIdeaBtn a {
 
 #video {
   border: 0.5px solid #f9f9fb;
-  width: 80%;
-  height: auto;
+  width: 240px;
+  height: 180px;
   border-radius: 25px;
 }
 
 #canvas {
   border: 0.5px solid #f9f9fb;
+  width: 240px;
+  height: 180px;
   border-radius: 25px;
 }
 
@@ -2425,7 +2428,7 @@ body #desktopView {
             flex-direction: column;
   }
   #welcomePage {
-    height: 210vh;
+    height: 250vh;
   }
 }
 
@@ -4005,10 +4008,10 @@ main section {
   color: #f9f9fb;
   font-size: 1.3rem;
   position: absolute;
-  top: 180px;
+  top: 10px;
   right: 15px;
   cursor: pointer;
-  color: #212531;
+  color: #2ba199;
 }
 
 #giftcardFriendsDisplay button.editButton {
@@ -4020,7 +4023,7 @@ main section {
   top: 10px;
   right: 15px;
   cursor: pointer;
-  color: #212531;
+  color: #2ba199;
 }
 
 .displaycard {
