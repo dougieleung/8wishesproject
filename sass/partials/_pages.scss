@@ -589,8 +589,27 @@ main #takePhoto {
 }
 
 #windowImage {
+
+  img {
+      max-width: 50vw;
+      height: 40vh;
+      object-fit: cover;
+  }
+}
+
+
+
+#windowImage {
   display: flex;
   justify-content: center;
+  
+  img {
+    @media screen and (min-width: 650px) {
+      max-width: 400px;
+      height: 40vh;
+      object-fit: cover;
+    }
+  }
 }
 
 #addGift,

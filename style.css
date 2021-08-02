@@ -1582,6 +1582,13 @@ main #takePhoto #backToIdeaAdd2 i {
   color: #212531;
 }
 
+#windowImage img {
+  max-width: 50vw;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #windowImage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1589,6 +1596,15 @@ main #takePhoto #backToIdeaAdd2 i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 650px) {
+  #windowImage img {
+    max-width: 400px;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 #addGift,
