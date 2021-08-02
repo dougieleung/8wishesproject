@@ -45,7 +45,21 @@ class userInfo {
             })
             .then((s) => console.log(s));
         }
-        redirectToHomePage();
+
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        localStorage.clear();
+        registerPage.classList.remove("show");
+        registerPage.classList.add("hide");
+        loginPage.classList.toggle("hide"); 
+      })
+      .catch((error) => {
+        console.error("Error signing out, ", error.message);
+        alert(error.message);
+      });
+
       })
       .catch((error) => {
         var errorCode = error.code;
