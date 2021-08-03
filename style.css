@@ -2948,7 +2948,9 @@ body #editCardFriends {
 }
 
 #foundersCont img {
-  margin: 5%;
+  margin: 2% auto;
+  width: 90%;
+  height: 95%;
 }
 
 #foundersCont2 {
