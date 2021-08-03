@@ -4131,13 +4131,22 @@ main section {
   padding: 16px;
 }
 
-#nav_btn3 a {
+#nav_btn3 a, #floatButton a {
   text-decoration: none;
 }
 
-#nav_btn3 {
+#nav_btn3, #floatButton {
   background-color: #f0526c;
   border-style: none;
+}
+
+#floatButton {
+  position: fixed;
+  bottom: 30px;
+  right: 100px;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 20px 2px black;
+          box-shadow: 0px 0px 20px 2px black;
 }
 
 .bottom_navbar li:nth-of-type(3) {
@@ -4326,7 +4335,7 @@ section > a {
   fill: #6E64AC;
 }
 
-.addButton {
+.addButton, .floatButton {
   background-color: #f9f9fb;
   border-color: #6e64ac;
   color: #6e64ac;
