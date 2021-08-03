@@ -10,6 +10,7 @@ body {
 #registerPage,
 #loginPage,
 #StoresPage,
+#FoundersPage,
 #addToWishlistSection {
   height: 100vh;
 }
@@ -44,6 +45,7 @@ main {
   #welcomePage,
   #giftIdeaHomePage,
   #StoresPage,
+  #FoundersPage,
   #giftIdeaAdd,
   #summaryCard,
   #complete,
@@ -56,8 +58,8 @@ main {
   #takePhoto,
   #addEventPage,
   #friendAddedPage,
-  #editCard,
   #giftcardFriendsDisplay,
+  #editCard,
   #editCardFriends {
     background-color: $color_primary;
     min-height: 85vh;
@@ -661,8 +663,8 @@ main #takePhoto {
 }
 
 #giftcard_display {
-  width: 90%;
-  padding: 0 5%;
+  width: 100%;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -733,7 +735,6 @@ main #takePhoto {
     }
   }
 
-
   .editDescInput,
   .editTitleInput {
     padding: 0.7rem 0.7rem;
@@ -776,15 +777,19 @@ main #takePhoto {
 
 #friendsWishlist {
 
-  width: 90%;
-  padding: 0 5%;
+  width: 100%;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5%;
-  overflow: auto;
+  overflow: visible;
   border: none;
   animation: fadeIn 0.5s ease-in both;
+
+  h1 {
+    color: $color_neutral_white;
+  }
 
   div.displaycard:nth-child(3n+1) {
     background-color: $color_card_bg;
