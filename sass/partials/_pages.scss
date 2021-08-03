@@ -1633,10 +1633,14 @@ body #editCardFriends {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-    img {
-      margin: 5%;
-    }
 }
+
+#foundersCont img {
+  margin: 2% auto;
+  width: 90%;
+  height: 95%;
+}
+
 
 #foundersCont2 {
   display: none;
