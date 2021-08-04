@@ -23,6 +23,7 @@ cameraBtn.addEventListener("click", function () {
     .then(stream => {
       video.srcObject = stream;
       const track = stream.getVideoTracks()[0];
+      track.enabled = true;
       imageCapture = new ImageCapture(track);
     })
     .catch(error => console.log(error));

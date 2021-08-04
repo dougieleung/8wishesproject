@@ -146,14 +146,29 @@
   padding: 16px;
 }
 
-#nav_btn3 a {
+#floatButton {
+  display: none;
+}
+
+#nav_btn3 a, #floatButton a {
   text-decoration: none;
 }
 
-#nav_btn3 {
+#nav_btn3, #floatButton {
   background-color: $color_home_button;
   // margin-top: 1rem;
   border-style: none;
+}
+
+#floatButton {
+  @media only screen and (min-width: 650px) {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    z-index: 100;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.7);
+  }
 }
 
 .bottom_navbar li:nth-of-type(3) {
