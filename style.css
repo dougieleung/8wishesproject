@@ -1899,9 +1899,10 @@ main #takePhoto #backToIdeaAdd2 i {
 
 @media screen and (min-width: 650px) {
   #giftcard_display {
-    width: 90%;
+    width: 100%;
     min-height: 85vh;
     margin: auto;
+    padding: 0 5%;
     display: -ms-grid;
     display: grid;
     grid-gap: 2%;
@@ -1909,6 +1910,8 @@ main #takePhoto #backToIdeaAdd2 i {
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   #giftcard_display h2 {
     grid-column: 1/-1;
