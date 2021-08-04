@@ -4342,10 +4342,11 @@ section > a {
 .listButton svg {
   height: 3.5rem;
   width: 3.5rem;
-  fill: #6E64AC;
+  fill: #9AA2B6;
 }
 
-.addButton, .floatButton {
+.addButton,
+.floatButton {
   background-color: #f9f9fb;
   border-color: #6e64ac;
   color: #6e64ac;
