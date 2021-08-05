@@ -88,6 +88,7 @@ nextToWishlists.addEventListener("click", () => {
 });
 
 backToSummaryCard.addEventListener("click", () => {
+  windowDescription.innerHTML = "";
   addToWishlistSection.classList.remove("show");
   addToWishlistSection.classList.add("hide");
   summaryCard.classList.toggle("hide");
