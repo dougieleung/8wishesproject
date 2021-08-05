@@ -732,6 +732,7 @@ main #takePhoto {
 
     @media screen and(min-width:650px) {
       width: 100%;
+
     }
   }
 
@@ -760,14 +761,16 @@ main #takePhoto {
   }
 
   @media screen and (min-width: 650px) {
-    width: 90%;
+    width: 100%;
     min-height: 85vh;
     margin: auto;
+    padding: 0 5%;
     display: grid;
     grid-gap: 2%;
     grid-auto-flow: row;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+    box-sizing: border-box;
 
     h2 {
       grid-column: 1/-1;
@@ -1647,13 +1650,14 @@ body #editCardFriends {
 }
 
 
-  #foundersCont {
-    @media only screen and (min-width: 650px) {
+#foundersCont {
+  @media only screen and (min-width: 650px) {
     display: none;
-    }
   }
-  #foundersCont2 {
-    @media only screen and (min-width: 650px) {
+}
+
+#foundersCont2 {
+  @media only screen and (min-width: 650px) {
     display: block;
-    }
   }
+}

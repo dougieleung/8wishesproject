@@ -13,7 +13,7 @@
     svg {
         height: 3.5rem;
         width: 3.5rem;
-        fill: #6E64AC;
+        fill: #9AA2B6;
 
 
     }
@@ -21,7 +21,8 @@
 
 
 
-.addButton, .floatButton {
+.addButton,
+.floatButton {
     background-color: $color_neutral_white;
     border-color: $color_footer_icon;
     color: $color_footer_icon;
@@ -68,4 +69,3 @@
 
 
 // addToWishListSection page, styling image on card
-
