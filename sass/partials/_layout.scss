@@ -1,5 +1,4 @@
-// comment
-/* Testing Styles ==================== */
+//**************************************************** GENERAL STYLING ************************************************//
 img {
   max-width: 100%;
   height: auto;
@@ -9,7 +8,6 @@ section {
   border: 1px solid #000;
   margin: 1%;
 }
-
 
 main {
   display: flex;
@@ -33,8 +31,6 @@ main {
 #backtologin {
   display: none;
 }
-
-
 
 body #giftIdeaProcess .hide,
 body #friendsListProcess .hide,
@@ -71,49 +67,6 @@ body #demopage3 .show {
   display: flex;
 }
 
-/* ============== Intro Pages ========================= */
-
-
-#demopage1,
-#demopage2,
-#demopage3 {
-
-  display: flex;
-  animation: fadeIn 0.5s ease-in both;
-
-}
-
-#demopage1 p,
-#demopage2 p,
-#demopage3 p {
-  font-family: $font_body;
-  align-self: center;
-  font-size: 1.2rem;
-  margin-top: 12vh;
-}
-
-// Video in desktop view
-
-#desktopView {
-  display: flex;
-  flex-direction: column;
-}
-
-// Video in desktop view
-
-#desktopView p {
-  max-width: 50vw;
-
-  .teamQuote {
-    color: $color_card_bg2;
-  }
-}
-
-#desktopView p:first-of-type {
-  margin-top: 10vh;
-}
-
-/* Styles according to design ========================== */
 .bottom_navbar {
   background-color: $color_neutral_white;
 
@@ -129,13 +82,50 @@ body #demopage3 .show {
   }
 }
 
-
 main section {
   width: 100%;
   min-height: 100vh;
 }
 
-/*Desktop View Top Nav*/
+//**************************************************** INTRO PAGES STYLING ************************************************//
+
+#demopage1,
+#demopage2,
+#demopage3 {
+  display: flex;
+  animation: fadeIn 0.5s ease-in both;
+}
+
+#demopage1 p,
+#demopage2 p,
+#demopage3 p {
+  font-family: $font_body;
+  align-self: center;
+  font-size: 1.2rem;
+  margin-top: 12vh;
+}
+
+//************************* Video in desktop view *******************************//
+
+#desktopView {
+  display: flex;
+  flex-direction: column;
+}
+
+#desktopView p {
+  max-width: 50vw;
+
+  .teamQuote {
+    color: $color_card_bg2;
+  }
+}
+
+#desktopView p:first-of-type {
+  margin-top: 10vh;
+}
+
+//****************************** TOP NAV DESKTOP VIEW *********************************//
+
 .topNavigation {
   display: none;
 
@@ -175,19 +165,19 @@ main section {
 }
 
 body footer {
-  @media screen and (min-width:650px) {
+  @media screen and (min-width: 650px) {
     display: none;
   }
 }
 
 #footerNav {
-  @media screen and (min-width:650px) {
+  @media screen and (min-width: 650px) {
     display: none;
   }
 }
 
 #giftcardFriendsDisplay {
-  @media screen and (min-width:650px) {
+  @media screen and (min-width: 650px) {
     width: 80%;
     margin: auto;
     border: none;

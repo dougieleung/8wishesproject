@@ -2,70 +2,55 @@
 .storeButton,
 .friendsButton,
 .listButton {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 
-    img {
-        height: 2.5cm;
-        width: 2.5cm;
-    }
+  img {
+    height: 2.5cm;
+    width: 2.5cm;
+  }
 
-    svg {
-        height: 3.5rem;
-        width: 3.5rem;
-        fill: #9AA2B6;
-
-
-    }
+  svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: #9aa2b6;
+  }
 }
-
-
 
 .addButton,
 .floatButton {
-    background-color: $color_neutral_white;
-    border-color: $color_footer_icon;
-    color: $color_footer_icon;
-    font-size: 2rem;
-    border-radius: 60%;
-    padding: 8px 16px;
+  background-color: $color_neutral_white;
+  border-color: $color_footer_icon;
+  color: $color_footer_icon;
+  font-size: 2rem;
+  border-radius: 60%;
+  padding: 8px 16px;
 }
 
-// Demo page image size styling
-// Additional styling for text: see _layout.scss, intro pages.
+//********************************* DEMO PAGE IMAGE STYLING **********************************//
 
 #demopage1 img:nth-of-type(1),
 #demopage2 img:nth-of-type(1),
 #demopage3 img:nth-of-type(1) {
-    height: auto;
-    max-width: 100%;
-    align-self: center;
-    margin-top: 5vh;
+  height: auto;
+  max-width: 100%;
+  align-self: center;
+  margin-top: 5vh;
 }
-
-
-
 
 #demopage1 img:nth-of-type(2),
 #demopage2 img:nth-of-type(2),
 #demopage3 img:nth-of-type(2) {
-
-    height: 1rem;
-    width: 4rem;
-    margin-top: 12vh;
-    margin-bottom: 5vh;
-    align-self: center;
+  height: 1rem;
+  width: 4rem;
+  margin-top: 12vh;
+  margin-bottom: 5vh;
+  align-self: center;
 }
 
-
-// Additional styling for text: see _layout.scss, intro pages.
-
-// Video in desktop view
+//********************************* VIDEO IN DESKTOP VIEW **********************************//
 
 #desktopView video {
-    margin-top: 2vh;
-    align-self: center;
+  margin-top: 2vh;
+  align-self: center;
 }
-
-
-// addToWishListSection page, styling image on card

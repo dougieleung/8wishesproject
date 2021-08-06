@@ -1,5 +1,5 @@
-// comment
-// gift idea page
+
+//**************************************************** GIFT IDEA PAGE************************************************//
 
 #giftIdeaHomePage,
 #giftIdeaAdd,
@@ -156,7 +156,6 @@
 
 #nav_btn3, #floatButton {
   background-color: $color_home_button;
-  // margin-top: 1rem;
   border-style: none;
 }
 
@@ -212,7 +211,7 @@
   }
 }
 
-//////////////// Login Page ////////////////////
+//**************************************************** LOG IN PAGE************************************************//
 #loginPage,
 #resetContainer {
 
@@ -290,7 +289,3 @@ section>a {
 #addEventPage a {
   align-self: baseline;
 }
-
-// .nav_btn:hover {
-//   box-shadow: 5px 10px 10px $color_neutral_gray;
-// }
