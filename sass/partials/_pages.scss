@@ -1,5 +1,5 @@
-// ///////////////log in  + register + welcome//////////////////////////
-// comment
+//************************************* LOG IN + REGISTER + WELCOME ***************************************//
+
 body {
   margin: 0;
   background-color: $color_primary;
@@ -32,14 +32,11 @@ body {
   }
 
   @media screen and (min-width: 650px) {
-
     height: 85vh;
   }
-
 }
 
 main {
-
   #loginPage,
   #registerPage,
   #welcomePage,
@@ -169,7 +166,7 @@ main {
     }
   }
 
-  ///////////   welcome page  ////////////
+  //************************* WELCOME PAGE **************************//
 
   #welcomePage {
     h1 {
@@ -190,10 +187,9 @@ main {
   }
 }
 
-////////////////////////// demo page/////////////////////////////////
+//************************* DEMO PAGE **************************//
 
 main #demo-page {
-
   #demopage1,
   #demopage2,
   #demopage3 {
@@ -240,7 +236,7 @@ main #loginPage {
   }
 }
 
-////////////////////// gift idea page//////////////////////////////
+//************************* GIFT IDEA PAGE **************************//
 
 main #giftIdeaHomePage {
   display: flex;
@@ -262,8 +258,6 @@ main #giftIdeaHomePage {
       color: $color_text_dark;
     }
   }
-
-
 }
 
 #giftIdeaProcess #summaryCard {
@@ -274,13 +268,10 @@ main #giftIdeaHomePage {
   justify-content: flex-start;
   width: 100%;
 
-
-
   #summaryCardimage {
     display: flex;
     justify-content: center;
     width: 100%;
-
 
     img {
       border-radius: 25px;
@@ -288,7 +279,6 @@ main #giftIdeaHomePage {
       height: 40vh;
       object-fit: cover;
     }
-
   }
 }
 
@@ -319,9 +309,7 @@ main #giftIdeaHomePage {
   align-items: center;
 }
 
-
 .idea-window {
-
   border-radius: 25px;
   width: 80%;
 
@@ -355,9 +343,6 @@ main #giftIdeaHomePage {
     font-family: $font-body;
   }
 }
-
-
-
 
 #seeFriendsList {
   align-self: center;
@@ -493,7 +478,7 @@ main #giftIdeaHomePage {
   }
 }
 
-//////////////////////// take photo page////////////////////////////
+//************************* TAKE PHOTO SECTION **************************//
 
 #addPhoto {
   margin: 1rem;
@@ -520,12 +505,6 @@ main #giftIdeaHomePage {
   border-style: none;
   width: 20%;
 }
-
-// #camera_btn i,
-// #gallery_btn i {
-//   font-size: 2.5rem;
-//   color: $color_neutral_white;
-// }
 
 main #takePhoto {
   display: flex;
@@ -554,7 +533,6 @@ main #takePhoto {
   }
 }
 
-
 .link-div {
   display: flex;
   justify-content: center;
@@ -577,7 +555,8 @@ main #takePhoto {
   margin-top: 1rem;
 }
 
-///////////////// add to Wishlist page///////////////////////////////////////
+//************************* ADD TO WISHLIST SECTION **************************//
+
 #nextToWishlists {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -591,15 +570,12 @@ main #takePhoto {
 }
 
 #windowImage {
-
   img {
     max-width: 50vw;
     height: 40vh;
     object-fit: cover;
   }
 }
-
-
 
 #windowImage {
   display: flex;
@@ -727,12 +703,10 @@ main #takePhoto {
       order: 15;
       grid-column: 5/7;
       grid-row: 3/4;
-
     }
 
     @media screen and(min-width:650px) {
       width: 100%;
-
     }
   }
 
@@ -779,7 +753,6 @@ main #takePhoto {
 }
 
 #friendsWishlist {
-
   width: 100%;
   padding: 0;
   margin: 0;
@@ -794,15 +767,15 @@ main #takePhoto {
     color: $color_neutral_white;
   }
 
-  div.displaycard:nth-child(3n+1) {
+  div.displaycard:nth-child(3n + 1) {
     background-color: $color_card_bg;
   }
 
-  div.displaycard:nth-child(3n+2) {
+  div.displaycard:nth-child(3n + 2) {
     background-color: $color_card_bg2;
   }
 
-  div.displaycard:nth-child(3n+3) {
+  div.displaycard:nth-child(3n + 3) {
     background-color: $color_upcoming;
   }
 
@@ -852,15 +825,12 @@ main #takePhoto {
       order: 15;
       grid-column: 5/7;
       grid-row: 3/4;
-
     }
 
     @media screen and(min-width:650px) {
       width: 100%;
     }
   }
-
-
 
   .editDescInput,
   .editTitleInput {
@@ -896,13 +866,11 @@ main #takePhoto {
     justify-items: center;
     min-height: 30vh;
 
-
     h1 {
       grid-column: 1/-1;
     }
   }
 }
-
 
 .friendEventForm #addEventBtn {
   margin: 0;
@@ -935,7 +903,7 @@ main #takePhoto {
   }
 }
 
-/////////////////////// Friend page/////////////////////////////
+//************************* FRIENDS PAGE **************************//
 
 #friendsListFromDB #fetchedFriendsList li {
   padding: 0 5rem;
@@ -1029,7 +997,7 @@ input#friendName,
   margin: 0;
 }
 
-/////////////////////// reset password page/////////////////////////
+//************************* RESET PASSWORD PAGE **************************//
 
 #resetContainer form {
   width: 70%;
@@ -1077,7 +1045,8 @@ label {
   width: 12rem;
 }
 
-/////////// add to friend  page ////////
+//************************* ADD TO FRIEND PAGE **************************//
+
 #addAFriendBtn,
 #friendtoProfile {
   padding: 0.5rem 1rem;
@@ -1172,7 +1141,8 @@ main #listEmptyPage {
   }
 }
 
-//////////////my list summary ////////////////
+//************************* MY LIST SUMMARY **************************//
+
 #ideaSummary {
   width: 302px;
   text-align: center;
@@ -1183,7 +1153,6 @@ main #complete {
   justify-content: flex-start;
   align-items: center;
 }
-
 
 ////////////edit wish ///////////
 #giftIdeaProcess #editCard {
@@ -1230,25 +1199,27 @@ main #complete {
   }
 }
 
-///////////friend event ////////////
+//************************* FRIEND EVENT PAGE **************************//
+
 #friendEventAdded {
   margin: 3rem;
 }
 
-// ////////////// footer //////////////////////
+//***************************** FOOTER *********************************//
+
 footer {
   position: sticky;
   bottom: 0;
   background-color: $color_neutral_white;
 
-  @media screen and (min-width:650px) {
+  @media screen and (min-width: 650px) {
     position: sticky;
     top: 0;
     width: 100%;
   }
 }
 
-// Desktop View of video and welcome message
+//***************************** Desktop View of video and welcome message *********************************//
 
 body #desktopView {
   display: none;
@@ -1265,7 +1236,7 @@ body #desktopView {
   }
 }
 
-//////////////////////// FRIENDS PAGE ///////////////////////////////////
+//***************************** FRIENDS PAGE *********************************//
 
 #friendName2 {
   display: flex;
@@ -1311,7 +1282,7 @@ body #desktopView {
   }
 }
 
-// Stores Under Construction Page
+//***************************** Stores Under Construction Page *********************************//
 
 #StoresPage {
   background-color: $color_primary;
@@ -1337,7 +1308,6 @@ body #desktopView {
   flex-direction: column;
   animation: fadeIn 0.5s ease-in both;
   height: 80vh;
-
 }
 
 .constContainer h1 {
@@ -1350,11 +1320,9 @@ body #desktopView {
   align-self: center;
   max-width: 50%;
   height: auto;
-
 }
 
-// FriendsView.html styling
-
+//***************************** FriendsView.html styling *********************************//
 
 #friendsSeeList #fetchedFriendsList li {
   width: 100%;
@@ -1404,47 +1372,7 @@ body #desktopView {
   }
 }
 
-///////////// #friendsWishlist on friendsView.html styling///////////
-
-
-// The overflow: scroll adds a padding to the right
-// #friendsListView {
-//   overflow: scroll;
-// }
-
-// #friendsWishlist {
-//   width: 80vw;
-//   margin-bottom: 2rem;
-
-// .displaycard {
-//   background-color: $color_secondary_green;
-//   color: $color_secondary_dark;
-//   flex-direction: column;
-//   border-radius: 2rem;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   .editButton {
-//     background-color: $color_button_purple;
-//     color: $color_text_dark;
-//     margin: 0.5rem;
-//     border-radius: 1rem;
-//     border: none;
-//     padding: 0.5rem 3rem;
-//     display: flex;
-//     font-family: $font_body;
-//     justify-content: center;
-
-//     &:hover {
-//       background-color: $color_button_hover_purple_bg;
-//       color: $color_button_hover_text;
-//     }
-//   }
-// }
-// }
-
-////////////////////// HOME PAGE styling /////////////////@at-root
+//****************************************** HOME PAGE STYLING ***********************************************//
 #events-wrapper {
   border: none;
   width: 100vw;
@@ -1471,7 +1399,6 @@ body #desktopView {
       font-family: $font_heading;
       color: $color_text_dark;
       grid-area: 1/1/2/3;
-
     }
 
     p {
@@ -1480,7 +1407,6 @@ body #desktopView {
       color: $color_text_dark;
       grid-column: span 1;
     }
-
   }
 
   @media screen and (min-width: 650px) {
@@ -1493,7 +1419,7 @@ body #desktopView {
   }
 }
 
-/////////////// loading page//////////////////
+//****************************************** LOADING PAGE STYLING ***********************************************//
 
 main {
   background-color: $color_primary;
@@ -1502,7 +1428,6 @@ main {
 .home-title {
   font-family: $font_interaction;
   grid-column: 1 / -1;
-
 }
 
 .login-first {
@@ -1576,7 +1501,8 @@ main {
   text-align: center;
 }
 
-//////////////// edit friends cards ///////////////
+//****************************************** EDIT FRIEND'S CARDS ***********************************************//
+
 body #editCardFriends {
   justify-content: center;
   align-items: center;
@@ -1615,7 +1541,7 @@ body #editCardFriends {
   }
 }
 
-// ///////////////// loading friends list ////////////////////////////
+//****************************************** LOADING FRIENDS LIST ***********************************************//
 
 .loadingFriendsList {
   text-align: center;
@@ -1626,11 +1552,13 @@ body #editCardFriends {
   text-align: center;
 }
 
-///////////empty friends list///////////////////
+//****************************************** EMPTY FRIENDS LIST ***********************************************//
 
 .emptyFriendsList {
   display: none;
 }
+
+//****************************************** FOUNDERS PAGE ***********************************************//
 
 #foundersCont {
   display: grid;
@@ -1644,11 +1572,9 @@ body #editCardFriends {
   height: 95%;
 }
 
-
 #foundersCont2 {
   display: none;
 }
-
 
 #foundersCont {
   @media only screen and (min-width: 650px) {
