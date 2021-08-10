@@ -38,7 +38,6 @@ body #introPages .hide,
 body #listEmptyPage .hide,
 body #addFriendPage .hide,
 body #giftcard_display .hide,
-body .editCard .hide,
 body section#editCardFriends.hide,
 body section#giftcardFriendsDisplay.hide,
 body #demopage1 .hide,
@@ -54,13 +53,16 @@ body #friendsListView #giftcardFriendsDisplay #friendsSeeList.hide,
   display: none;
 }
 
+body main #editCard {
+  display: none;
+}
+
 body #giftIdeaProcess .show,
 body #friendsListProcess .show,
 body #introPages .show,
 body #listEmptyPage .show,
 body #addFriendPage .show,
 body #giftcard_display .show,
-body .editCard .show,
 body #demopage1 .show,
 body #demopage2 .show,
 body #demopage3 .show {

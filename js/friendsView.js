@@ -195,11 +195,7 @@ function editWish(doc) {
       .doc(doc.id)
       .update({ ...wishEdited });
 
-    editCardFriends.classList.add("hide");
-    friendsWishlist.innerHTML = "";
-    // Please see #2 Function
-    renderTHISFriendList();
-    giftcardFriendsDisplay.classList.remove("hide");
+    location.reload();
   });
 
 
@@ -222,11 +218,8 @@ function editWish(doc) {
       .catch((error) => {
         console.error("Error removing document: ", error);
       });
-    editCardFriends.classList.add("hide");
-    friendsWishlist.innerHTML = "";
-    // Please see #2 Function
-    renderTHISFriendList();
-    giftcardFriendsDisplay.classList.remove("hide");
+
+    location.reload();
   });
 }
 

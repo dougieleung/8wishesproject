@@ -45,8 +45,9 @@ class userInfo {
             })
             .then((s) => console.log(s));
         }
-
-    firebase
+// Firebase automatically logs in after sign up, so we want 
+// to log out and then allow the user to log back in
+      firebase
       .auth()
       .signOut()
       .then(() => {
@@ -74,7 +75,7 @@ class userInfo {
 
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("FORM SUBMITTED");
+  console.log("form submitted");
   if (passwordInput.value === confirmPassword.value) {
     newUser = new userInfo(usernameInput.value, emailInput.value);
 
@@ -107,7 +108,6 @@ firebase.auth().onAuthStateChanged((user) => {
       const email = user.email;
       document.getElementById("user_para").innerHTML =
         "Welcome, " + user.displayName;
-      console.log(`User:  ${user}`);
     }
   
   } else {
