@@ -1,4 +1,4 @@
-//************************************* LOG IN + REGISTER + WELCOME ***************************************//
+//********************************* LOG IN + REGISTER + WELCOME ***********************************//
 
 body {
   margin: 0;
@@ -142,6 +142,8 @@ main {
     h2 {
       color: $color_neutral_white;
       text-align: center;
+      font-family: $font_heading;
+      font-size: 2rem;
     }
 
     label {
@@ -166,7 +168,7 @@ main {
     }
   }
 
-  //************************* WELCOME PAGE **************************//
+//***************************************** WELCOME PAGE ******************************************//
 
   #welcomePage {
     h1 {
@@ -187,7 +189,7 @@ main {
   }
 }
 
-//************************* DEMO PAGE **************************//
+//****************************************** DEMO PAGE ********************************************//
 
 main #demo-page {
   #demopage1,
@@ -236,7 +238,7 @@ main #loginPage {
   }
 }
 
-//************************* GIFT IDEA PAGE **************************//
+//**************************************** GIFT IDEA PAGE *****************************************//
 
 main #giftIdeaHomePage {
   display: flex;
@@ -447,7 +449,6 @@ main #giftIdeaHomePage {
   #coordinates {
     display: flex;
     background: white;
-    // justify-content: center;
 
     border: none;
     border-radius: 44px;
@@ -478,7 +479,7 @@ main #giftIdeaHomePage {
   }
 }
 
-//************************* TAKE PHOTO SECTION **************************//
+//************************************** TAKE PHOTO SECTION ***************************************//
 
 #addPhoto {
   margin: 1rem;
@@ -555,7 +556,7 @@ main #takePhoto {
   margin-top: 1rem;
 }
 
-//************************* ADD TO WISHLIST SECTION **************************//
+//*********************************** ADD TO WISHLIST SECTION *************************************//
 
 #nextToWishlists {
   padding: 0.5rem 1rem;
@@ -638,22 +639,26 @@ main #takePhoto {
   text-align: center;
 }
 
+
+.myListTitle {
+  color: $color_neutral_white;
+  font-size: 2rem;
+  font-family: $font_heading;
+  justify-content: center;
+  align-self: center;
+
+}
+
 #giftcard_display {
   width: 100%;
-  padding: 5%;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5%;
-  overflow: auto;
   border: none;
   animation: fadeIn 0.5s ease-in both;
 
-  h2 {
-    color: $color_neutral_white;
-    font-size: 2rem;
-    font-family: $font_heading;
-  }
+
 
   div.displaycard:nth-child(odd) {
     background-color: $color_card_bg;
@@ -744,7 +749,7 @@ main #takePhoto {
     width: 100%;
     min-height: 85vh;
     margin: auto;
-    padding: 0 5%;
+    padding: 5%;
     display: grid;
     grid-gap: 2%;
     grid-auto-flow: row;
@@ -909,7 +914,7 @@ main #takePhoto {
   }
 }
 
-//************************* FRIENDS PAGE **************************//
+//***************************************** FRIENDS PAGE ******************************************//
 
 #friendsListFromDB #fetchedFriendsList li {
   padding: 0 5rem;
@@ -1003,7 +1008,7 @@ input#friendName,
   margin: 0;
 }
 
-//************************* RESET PASSWORD PAGE **************************//
+//************************************** RESET PASSWORD PAGE **************************************//
 
 #resetContainer form {
   width: 70%;
@@ -1051,7 +1056,8 @@ label {
   width: 12rem;
 }
 
-//************************* ADD TO FRIEND PAGE **************************//
+//************************************** ADD TO FRIEND PAGE ***************************************//
+
 
 #addAFriendBtn,
 #friendtoProfile {
@@ -1147,7 +1153,7 @@ main #listEmptyPage {
   }
 }
 
-//************************* MY LIST SUMMARY **************************//
+//*************************************** MY LIST SUMMARY *****************************************//
 
 #ideaSummary {
   width: 302px;
@@ -1159,12 +1165,6 @@ main #complete {
   justify-content: flex-start;
   align-items: center;
 }
-
-////////////edit wish ///////////
-// #giftIdeaProcess #editCard {
-//   justify-content: flex-start;
-//   height: 80vh;
-// }
 
 #editForm {
   display: flex;
@@ -1205,13 +1205,13 @@ main #complete {
   }
 }
 
-//************************* FRIEND EVENT PAGE **************************//
+//*************************************** FRIEND EVENT PAGE ***************************************//
 
 #friendEventAdded {
   margin: 3rem;
 }
 
-//***************************** FOOTER *********************************//
+//***************************************** FOOTER ************************************************//
 
 footer {
   position: sticky;
@@ -1225,7 +1225,7 @@ footer {
   }
 }
 
-//***************************** Desktop View of video and welcome message *********************************//
+//*************************** DESKTOP VIEW OF VIDEO AND WELCOME PAGE ******************************//
 
 body #desktopView {
   display: none;
@@ -1242,7 +1242,7 @@ body #desktopView {
   }
 }
 
-//***************************** FRIENDS PAGE *********************************//
+//**************************************** FRIENDS PAGE *******************************************//
 
 #friendName2 {
   display: flex;
@@ -1288,7 +1288,7 @@ body #desktopView {
   }
 }
 
-//***************************** Stores Under Construction Page *********************************//
+//********************************** UNDER CONSTRUCTION PAGE **************************************//
 
 #StoresPage {
   background-color: $color_primary;
@@ -1320,6 +1320,7 @@ body #desktopView {
   font-family: $font_heading;
   color: $color_neutral_white;
   text-align: center;
+  font-size: 2rem;
 }
 
 .constContainer img {
@@ -1328,7 +1329,7 @@ body #desktopView {
   height: auto;
 }
 
-//***************************** FriendsView.html styling *********************************//
+//********************************** FRIENDSVIEW.HTML STYLING *************************************//
 
 #friendsSeeList #fetchedFriendsList li {
   width: 100%;
@@ -1378,7 +1379,8 @@ body #desktopView {
   }
 }
 
-//****************************************** HOME PAGE STYLING ***********************************************//
+//************************************** HOME PAGE STYLING ****************************************//
+
 #events-wrapper {
   border: none;
   width: 100vw;
@@ -1388,9 +1390,10 @@ body #desktopView {
   align-items: center;
   background-color: $color_primary;
   color: $color_neutral_white;
+  margin: 2% auto;
 
   .events-cards {
-    width: 90%;
+    width: 80%;
     padding: 3%;
     margin: 0.5rem 5%;
     display: grid;
@@ -1425,14 +1428,14 @@ body #desktopView {
   }
 }
 
-//****************************************** LOADING PAGE STYLING ***********************************************//
+//************************************* LOADING PAGE STYLING **************************************//
 
 main {
   background-color: $color_primary;
 }
 
 .home-title {
-  font-family: $font_interaction;
+  font-family: $font_heading;
   grid-column: 1 / -1;
 }
 
@@ -1507,7 +1510,7 @@ main {
   text-align: center;
 }
 
-//****************************************** EDIT FRIEND'S CARDS ***********************************************//
+//************************************ EDIT FRIEND'S CARDS ****************************************//
 
 body #editCardFriends {
   justify-content: center;
@@ -1547,7 +1550,7 @@ body #editCardFriends {
   }
 }
 
-//****************************************** LOADING FRIENDS LIST ***********************************************//
+//************************************ LOADING FRIENDS LIST ***************************************//
 
 .loadingFriendsList {
   text-align: center;
@@ -1558,13 +1561,13 @@ body #editCardFriends {
   text-align: center;
 }
 
-//****************************************** EMPTY FRIENDS LIST ***********************************************//
+//************************************** EMPTY FRIENDS LIST ***************************************//
 
 .emptyFriendsList {
   display: none;
 }
 
-//****************************************** FOUNDERS PAGE ***********************************************//
+//**************************************** FOUNDERS PAGE ******************************************//
 
 #foundersCont {
   display: grid;

@@ -2,11 +2,12 @@
 // ************* This page is the code listing out variables used across js files *************
 // ********************************************************************************************
 
+'use strict';
+
+console.log("Connected main.js");
 
 // *************************** global variables used in the script ****************************
 
-
-console.log("Connected main.js");
 
 // Declaring variables from DOM
 const usernameInput = document.querySelector("#username");

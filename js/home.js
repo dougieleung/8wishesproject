@@ -2,6 +2,9 @@
 // ************************ This page is the code related to home page ************************
 // ********************************************************************************************
 
+'use strict';
+
+console.log("Connected to home.js");
 
 // *************************** global variables used in the script ****************************
 
@@ -12,25 +15,20 @@ const eventsWrapper = document.querySelector("#events-wrapper");
 const loadingPage = document.querySelector(".loading-page");
 const loginFirst = document.querySelector(".login-first");
 
-upcomingEvents();
-
 
 async function upcomingEvents() {
-  console.log("Home page Loaded!");
 
+  let mainUser = JSON.parse(localStorage.getItem("mainUser"));
 
-  if (this.localStorage.getItem("mainUser") === null) {
+  if (mainUser === null) {
     loginFirst.style.display = "flex";
     loadingPage.style.display = "none";
   } else {
     loginFirst.style.display = "none";
   }
 
-  const loggedUser = JSON.parse(this.localStorage.getItem("mainUser")).uid;
-  console.log(loggedUser);
-
   await db
-    .collection(loggedUser)
+    .collection(mainUser.uid)
     .doc("Friends")
     .collection("List")
     .get()
@@ -45,7 +43,7 @@ async function upcomingEvents() {
 
   for (let friend = 0; friend < userFriendsList.length; friend++) {
     await db
-      .collection(loggedUser)
+      .collection(mainUser.uid)
       .doc("Friends")
       .collection("List")
       .doc(userFriendsList[friend])
@@ -62,7 +60,7 @@ async function upcomingEvents() {
 
   for (let friend = 0; friend < userFriendsList.length; friend++) {
     await db
-      .collection(loggedUser)
+      .collection(mainUser.uid)
       .doc("Friends")
       .collection("List")
       .doc(userFriendsList[friend])
@@ -117,3 +115,4 @@ async function upcomingEvents() {
   }
 }
 
+upcomingEvents();

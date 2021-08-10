@@ -936,6 +936,8 @@ main #editCard h2,
 main #editCardFriends h2 {
   color: #f9f9fb;
   text-align: center;
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 2rem;
 }
 
 main #loginPage label,
@@ -1756,9 +1758,20 @@ main #takePhoto #backToIdeaAdd2 i {
   text-align: center;
 }
 
+.myListTitle {
+  color: #f9f9fb;
+  font-size: 2rem;
+  font-family: "Baloo Bhai 2", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 #giftcard_display {
   width: 100%;
-  padding: 5%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1768,16 +1781,9 @@ main #takePhoto #backToIdeaAdd2 i {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5%;
-  overflow: auto;
   border: none;
   -webkit-animation: fadeIn 0.5s ease-in both;
           animation: fadeIn 0.5s ease-in both;
-}
-
-#giftcard_display h2 {
-  color: #f9f9fb;
-  font-size: 2rem;
-  font-family: "Baloo Bhai 2", sans-serif;
 }
 
 #giftcard_display div.displaycard:nth-child(odd) {
@@ -1908,7 +1914,7 @@ main #takePhoto #backToIdeaAdd2 i {
     width: 100%;
     min-height: 85vh;
     margin: auto;
-    padding: 0 5%;
+    padding: 5%;
     display: -ms-grid;
     display: grid;
     grid-gap: 2%;
@@ -2645,6 +2651,7 @@ body #desktopView {
   font-family: "Baloo Bhai 2", sans-serif;
   color: #f9f9fb;
   text-align: center;
+  font-size: 2rem;
 }
 
 .constContainer img {
@@ -2734,10 +2741,11 @@ body #desktopView {
           align-items: center;
   background-color: #363d51;
   color: #f9f9fb;
+  margin: 2% auto;
 }
 
 #events-wrapper .events-cards {
-  width: 90%;
+  width: 80%;
   padding: 3%;
   margin: 0.5rem 5%;
   display: -ms-grid;
@@ -2786,7 +2794,7 @@ main {
 }
 
 .home-title {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Baloo Bhai 2", sans-serif;
   grid-column: 1 / -1;
 }
 
@@ -2986,10 +2994,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main section {
@@ -3189,7 +3197,7 @@ main section {
 
 @media screen and (min-width: 650px) {
   #friendsListView {
-    height: 85vh;
+    height: 100vh;
   }
 }
 

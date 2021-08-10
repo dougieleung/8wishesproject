@@ -2,9 +2,9 @@
 // ****************** This page is the code for displaying my list gift ideas *****************
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to mylist.js");
-
 
 // *************************** global variables used in the script ****************************
 
@@ -22,8 +22,7 @@ let storageRef = storage.ref();
 // ********************* Outputs the list of gift ideas belonging to User *********************
 
 async function renderWishlist() {
-    displayGift.innerHTML = `<h2> My List </h2>`;
-
+   
     let mainUser = JSON.parse(localStorage.getItem("mainUser"));
 
     await db
@@ -99,7 +98,7 @@ renderWishlist();
     wishDescEdit.value = `${doc.data().wishDesc}`;
   
     saveEditBtn.addEventListener("click", async function () {
-      console.log("saveEdit Button Clicked");
+     
       let wishEdited = {
         wishTitle: wishTitleEdit.value,
         wishDesc: wishDescEdit.value,
@@ -112,11 +111,16 @@ renderWishlist();
         .doc(doc.id)
         .update({ ...wishEdited });
   
-    location.reload();
+      // We resolved the re-rendering issue of calling the function and adding
+      // event listeners to the button each time, resulting in duplication of 
+      // items.  
+      // Once Firestore updated, we reloaded the page. This will just refresh
+      // the page and execute a new fetch of the updated list of gift items. 
+      location.reload();
     });
   
     deleteWishBtn.addEventListener("click", async function () {
-      console.log("Delete Button Clicked");
+     
       await db
         .collection(firebase.auth().currentUser.uid)
         .doc("MyWishlist")
@@ -129,11 +133,17 @@ renderWishlist();
         .catch((error) => {
           console.error("Error removing document: ", error);
         });
-    location.reload();
+
+      // We resolved the re-rendering issue of calling the function and adding
+      // event listeners to the button each time, resulting in duplication of 
+      // items.  
+      // Once Firestore updated, we reloaded the page. This will just refresh
+      // the page and execute a new fetch of the updated list of gift items. 
+      location.reload();
     });
   }
     
   seeFullListLink.addEventListener("click", function () {
-    location.reload();
+      location.reload();
   });
   

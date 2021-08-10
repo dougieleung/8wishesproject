@@ -2,6 +2,7 @@
 // *********** This page is the code connecting sections within register+login.html ***********
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to resetpassword.js");
 

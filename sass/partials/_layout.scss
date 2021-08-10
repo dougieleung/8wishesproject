@@ -1,4 +1,5 @@
-//**************************************************** GENERAL STYLING ************************************************//
+//*************************************** GENERAL STYLING *****************************************//
+
 img {
   max-width: 100%;
   height: auto;
@@ -11,7 +12,7 @@ section {
 
 main {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
 
   section {
     margin: 0;
@@ -89,7 +90,7 @@ main section {
   min-height: 100vh;
 }
 
-//**************************************************** INTRO PAGES STYLING ************************************************//
+//************************************** INTRO PAGES STYLING **************************************//
 
 #demopage1,
 #demopage2,
@@ -107,7 +108,7 @@ main section {
   margin-top: 12vh;
 }
 
-//************************* Video in desktop view *******************************//
+//************************************* VIDEO IN DESKTOP VIEW *************************************//
 
 #desktopView {
   display: flex;
@@ -126,7 +127,7 @@ main section {
   margin-top: 10vh;
 }
 
-//****************************** TOP NAV DESKTOP VIEW *********************************//
+//************************************ TOP NAV DESKTOP VIEW ***************************************//
 
 .topNavigation {
   display: none;
@@ -192,6 +193,6 @@ body footer {
 
 #friendsListView {
   @media screen and(min-width:650px) {
-    height: 85vh;
+    height: 100vh;
   }
 }

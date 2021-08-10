@@ -2,6 +2,9 @@
 // *********************** This page is the code related to geolocation ***********************
 // ********************************************************************************************
 
+'use strict';
+
+console.log("Connected to geolocation.js");
 
 // Retrieve longitude and latitude coordinates and use openStreetMap to locate
 // source code inspired by MDN Mozilla Tutorial https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API

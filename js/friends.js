@@ -2,9 +2,9 @@
 // *************** This page is the code related to friend's names and gift list **************
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to friends.js");
-
 
 // *************************** global variables used in the script ****************************
 
@@ -23,7 +23,7 @@ const friendEventAdded2 = document.querySelector("#friendEventAdded2");
 
 
 async function friendsListfromDB() {
-  console.log("friends list summary!");
+
   const friendsListArray = [];
   console.log(firebase.auth().currentUser.uid);
   await db
@@ -152,7 +152,7 @@ addFriendBtn.addEventListener("click", () => {
     friendEventAdded2.innerHTML = `Successfully added:
     <p> ${newFriendObj.eventName} on ${newFriendObj.eventDate} for ${newFriendObj.friendsName}`;
 
-    setTimeout(()=> { location.href = "friendsView.html"}, 1500);
+    setTimeout(()=> { location.href = "friendsView.html"}, 1000);
 
   } else {
     alert("all fields are mandatory!");

@@ -2,9 +2,9 @@
 // *************** This page is the code related to friend's names and gift list **************
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to friendsView.js");
-
 
 // *************************** global variables used in the script ****************************
 

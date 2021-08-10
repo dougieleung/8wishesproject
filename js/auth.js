@@ -2,6 +2,13 @@
 // ***************** This page is the code for authentication, login, register ****************
 // ********************************************************************************************
 
+'use strict';
+
+console.log("Connected to auth.js");
+
+// *************************** global variables used in the script ****************************
+
+
 const errorLogin = document.querySelector("error-login");
 
 
@@ -75,7 +82,7 @@ class userInfo {
 
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("form submitted");
+
   if (passwordInput.value === confirmPassword.value) {
     newUser = new userInfo(usernameInput.value, emailInput.value);
 
@@ -130,6 +137,10 @@ loginButton.addEventListener("click", (event) => {
       .then((user) => {
         if (user) {
           console.log("logged in!");
+          // We noticed retrieving the firebase.auth().currentUser.uid was sometimes delayed 
+          // and program failed to execute.  Hence, we stored the currentUser.uid in browser's 
+          // local storage and every time new user logs in, we will store their uid.
+          // We used the localStorage for friendsView.js, home.js and mylist.js
           localStorage.clear();
           localStorage.setItem("mainUser", JSON.stringify(auth.currentUser));
           redirectToHomePage();
@@ -174,5 +185,4 @@ logoutButton.addEventListener("click", () => {
   loginEmail.value = "";
   loginPassword.value = "";
   loginEmail.focus();
-
 });
