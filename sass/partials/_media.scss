@@ -50,7 +50,13 @@
 
 //********************************* VIDEO IN DESKTOP VIEW **********************************//
 
-#desktopView video {
+#introVideo {
+  display: flex;
+  flex-direction: column;
+}
+
+#introVideo iframe {
   margin-top: 2vh;
+  justify-content: center;
   align-self: center;
 }

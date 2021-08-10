@@ -640,7 +640,7 @@ main #takePhoto {
 
 #giftcard_display {
   width: 100%;
-  padding: 0;
+  padding: 5%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -648,6 +648,12 @@ main #takePhoto {
   overflow: auto;
   border: none;
   animation: fadeIn 0.5s ease-in both;
+
+  h2 {
+    color: $color_neutral_white;
+    font-size: 2rem;
+    font-family: $font_heading;
+  }
 
   div.displaycard:nth-child(odd) {
     background-color: $color_card_bg;
@@ -1155,12 +1161,12 @@ main #complete {
 }
 
 ////////////edit wish ///////////
-#giftIdeaProcess #editCard {
-  justify-content: flex-start;
-  height: 80vh;
-}
+// #giftIdeaProcess #editCard {
+//   justify-content: flex-start;
+//   height: 80vh;
+// }
 
-#editCard #editForm {
+#editForm {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

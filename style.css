@@ -24,14 +24,24 @@ body {
 
 #giftIdeaProcess {
   background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #giftIdeaProcess section {
@@ -68,15 +78,24 @@ main #editCard,
 main #editCardFriends {
   background-color: #363d51;
   min-height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2%;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 main #loginPage .loggedin #btn_logout,
@@ -261,9 +280,18 @@ main #editCard #not-logged-in,
 main #editCard #registerForm,
 main #editCardFriends #not-logged-in,
 main #editCardFriends #registerForm {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 60vw;
 }
@@ -782,8 +810,12 @@ main #editCardFriends #registerForm #registerButton {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
   padding-right: 0;
@@ -952,9 +984,15 @@ main #giftcardFriendsDisplay .footer-login,
 main #editCard .footer-login,
 main #editCardFriends .footer-login {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 main #loginPage #registerForm .footer-register,
@@ -1046,11 +1084,18 @@ main #welcomePage .footer-welcome a {
 main #demo-page #demopage1,
 main #demo-page #demopage2,
 main #demo-page #demopage3 {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 70vh;
   background-color: #f9f9fb;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #demo-page .fas {
@@ -1059,10 +1104,19 @@ main #demo-page .fas {
 
 main #demo-page .footer-demo {
   background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   height: 30vh;
 }
 
@@ -1083,14 +1137,22 @@ main #loginPage h2 {
 }
 
 main #loginPage #logged-in {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 40vh;
 }
 
 main #giftIdeaHomePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #giftIdeaHomePage .link4 {
@@ -1101,8 +1163,12 @@ main #giftIdeaHomePage #startIdeaBtn {
   background-color: #86e4de;
   border-color: #86e4de;
   padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #giftIdeaHomePage #startIdeaBtn a {
@@ -1110,17 +1176,30 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #giftIdeaProcess #summaryCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2%;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
 }
 
 #giftIdeaProcess #summaryCard #summaryCardimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -1128,15 +1207,25 @@ main #giftIdeaHomePage #startIdeaBtn a {
   border-radius: 25px;
   max-width: 100%;
   height: 40vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #giftIdeaProcess #addToWishlistSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 4%;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
 }
 
@@ -1149,11 +1238,20 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-3 {
   text-align: center;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2%;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .idea-window {
@@ -1164,16 +1262,26 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .idea-window img {
   width: 100%;
   height: 40vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 0;
   border-radius: 25px;
 }
 
 #windowDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   margin-bottom: 0;
 }
@@ -1192,13 +1300,18 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #seeFriendsList {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin: 1rem;
   padding: 1rem 4rem;
   border-radius: 44px;
   border: 1px solid #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #86e4de;
   border-color: #aba0f5;
   color: #212531;
@@ -1211,8 +1324,13 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-1 {
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 5%;
   justify-items: space-between;
   min-height: 80vh;
@@ -1223,7 +1341,9 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 .add-idea-3 {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 3rem;
 }
 
@@ -1261,6 +1381,24 @@ main #giftIdeaHomePage #startIdeaBtn a {
   margin: auto;
 }
 
+.add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
 .add-idea-1 #ideaForm #gift_title::placeholder,
 .add-idea-2 #ideaForm #gift_title::placeholder,
 .add-idea-3 #ideaForm #gift_title::placeholder {
@@ -1274,12 +1412,34 @@ main #giftIdeaHomePage #startIdeaBtn a {
   border: none;
   padding: 3% 1%;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   color: #f9f9fb;
   font-family: "Livvic", sans-serif;
   resize: none;
+}
+
+.add-idea-1 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
+  color: #f9f9fb;
 }
 
 .add-idea-1 #ideaForm #gift_description::placeholder,
@@ -1309,14 +1469,20 @@ main #giftIdeaHomePage #startIdeaBtn a {
 .add-idea-1 #coordinates,
 .add-idea-2 #coordinates,
 .add-idea-3 #coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: white;
   border: none;
   border-radius: 44px;
   width: 330px;
   height: 48px;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 100%;
   padding-right: 1rem;
   margin-top: 0.5rem;
@@ -1333,10 +1499,15 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 #locate .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 #addPhoto {
@@ -1366,19 +1537,36 @@ main #giftIdeaHomePage #startIdeaBtn a {
 }
 
 main #takePhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
 }
 
 main #takePhoto #camera {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
 }
 
@@ -1392,9 +1580,15 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 .link-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -1404,9 +1598,16 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 .add-idea-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #backToSummaryCard i {
@@ -1428,19 +1629,25 @@ main #takePhoto #backToIdeaAdd2 i {
 #windowImage img {
   max-width: 50vw;
   height: 40vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #windowImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 650px) {
   #windowImage img {
     max-width: 400px;
     height: 40vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -1465,11 +1672,16 @@ main #takePhoto #backToIdeaAdd2 i {
   padding: 1rem 0;
   border-radius: 1rem;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #86e4de;
   border-color: #86e4de;
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -1492,6 +1704,7 @@ main #takePhoto #backToIdeaAdd2 i {
 #addEventBtn a,
 #friendAddBtn a {
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-size: 1rem;
 }
@@ -1545,14 +1758,26 @@ main #takePhoto #backToIdeaAdd2 i {
 
 #giftcard_display {
   width: 100%;
-  padding: 0;
+  padding: 5%;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.5%;
   overflow: auto;
   border: none;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+#giftcard_display h2 {
+  color: #f9f9fb;
+  font-size: 2rem;
+  font-family: "Baloo Bhai 2", sans-serif;
 }
 
 #giftcard_display div.displaycard:nth-child(odd) {
@@ -1570,45 +1795,75 @@ main #takePhoto #backToIdeaAdd2 i {
   background-color: #6e64ac;
   margin: 1%;
   padding: 0;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 30%, 30%, 20%, 20%;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 30%, 30%, 20%, 20%;
+      grid-template-rows: 30%, 30%, 20%, 20%;
 }
 
 #giftcard_display .displaycard img {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 100%;
   height: 20vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin: 0;
   grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1/3;
 }
 
 #giftcard_display .displaycard h3 {
-  order: 5;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
   margin: 3% 1% 1% 3%;
   color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-column: 1/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #giftcard_display .displaycard div {
-  order: 10;
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
   margin: 1% 1% 2% 3%;
   font-family: "Livvic", sans-serif;
   color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-column: 1/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-row: 4/5;
 }
 
 #giftcard_display .displaycard button {
-  order: 15;
+  -webkit-box-ordinal-group: 16;
+      -ms-flex-order: 15;
+          order: 15;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
   grid-column: 5/7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
@@ -1624,10 +1879,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #363d51;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #aba0f5;
@@ -1648,12 +1909,15 @@ main #takePhoto #backToIdeaAdd2 i {
     min-height: 85vh;
     margin: auto;
     padding: 0 5%;
+    display: -ms-grid;
     display: grid;
     grid-gap: 2%;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   #giftcard_display h2 {
     grid-column: 1/-1;
@@ -1664,27 +1928,33 @@ main #takePhoto #backToIdeaAdd2 i {
   width: 100%;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.5%;
   overflow: visible;
   border: none;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #friendsWishlist h1 {
   color: #f9f9fb;
 }
 
-#friendsWishlist div.displaycard:nth-child(3n+1) {
+#friendsWishlist div.displaycard:nth-child(3n + 1) {
   background-color: #c7beff;
 }
 
-#friendsWishlist div.displaycard:nth-child(3n+2) {
+#friendsWishlist div.displaycard:nth-child(3n + 2) {
   background-color: #ff90a3;
 }
 
-#friendsWishlist div.displaycard:nth-child(3n+3) {
+#friendsWishlist div.displaycard:nth-child(3n + 3) {
   background-color: #86e4de;
 }
 
@@ -1695,45 +1965,75 @@ main #takePhoto #backToIdeaAdd2 i {
   background-color: #6e64ac;
   margin: 1%;
   padding: 0;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 30%, 30%, 20%, 20%;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 30%, 30%, 20%, 20%;
+      grid-template-rows: 30%, 30%, 20%, 20%;
 }
 
 #friendsWishlist .displaycard img {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 100%;
   height: 20vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin: 0;
   grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1/3;
 }
 
 #friendsWishlist .displaycard h3 {
-  order: 5;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
   margin: 3% 1% 1% 3%;
   color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-column: 1/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #friendsWishlist .displaycard div {
-  order: 10;
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
   margin: 1% 1% 2% 3%;
   font-family: "Livvic", sans-serif;
   color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-column: 1/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-row: 4/5;
 }
 
 #friendsWishlist .displaycard button {
-  order: 15;
+  -webkit-box-ordinal-group: 16;
+      -ms-flex-order: 15;
+          order: 15;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
   grid-column: 5/7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
@@ -1749,10 +2049,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #363d51;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #aba0f5;
@@ -1772,9 +2078,11 @@ main #takePhoto #backToIdeaAdd2 i {
     width: 90%;
     min-height: 85vh;
     margin: auto;
+    display: -ms-grid;
     display: grid;
     grid-gap: 2%;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
     min-height: 30vh;
   }
@@ -1788,10 +2096,19 @@ main #takePhoto #backToIdeaAdd2 i {
 }
 
 #friendsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #friendsList li {
@@ -1804,10 +2121,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #ff90a3;
@@ -1820,10 +2143,16 @@ main #takePhoto #backToIdeaAdd2 i {
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
   margin-left: 0;
   background-color: #ff90a3;
@@ -1861,8 +2190,12 @@ input#friendName,
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   margin-left: 0;
   width: 60%;
@@ -1881,10 +2214,19 @@ input#friendName,
 }
 
 #addFriendPage #addFriendForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin: 3rem;
 }
 
@@ -1908,23 +2250,45 @@ input#friendName,
 #resetContainer form {
   width: 70%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .reset-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #reset_password,
@@ -1941,8 +2305,12 @@ label {
   padding: 1rem 0 1rem 0.3rem;
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   width: 30rem;
 }
@@ -1966,18 +2334,33 @@ main #listEmptyPage #friendtoProfile {
 }
 
 .addEventForFriend {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #fetchedFriendsList {
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #fetchedFriendsList li {
@@ -2011,8 +2394,12 @@ main #listEmptyPage #friendtoProfile {
 }
 
 #addEventPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #addEventPage h1 {
@@ -2035,10 +2422,19 @@ main #listEmptyPage #friendtoProfile {
 }
 
 #friendEventForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #friendEventForm label {
@@ -2052,49 +2448,61 @@ main #listEmptyPage #friendtoProfile {
 }
 
 main #complete {
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#giftIdeaProcess #editCard {
-  justify-content: flex-start;
-  height: 80vh;
-}
-
-#editCard #editForm {
+#editForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#editCard #editForm input,
-#editCard #editForm button {
+#editForm input,
+#editForm button {
   padding: 0.7rem;
   border-radius: 0.7rem;
   border: 1px solid #f9f9fb;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1rem;
   margin-left: 0;
 }
 
-#editCard #editForm #wishTitleEdit {
+#editForm #wishTitleEdit {
   font-size: 1.5rem;
   font-family: "Baloo Bhai 2", sans-serif;
 }
 
-#editCard #editForm #wishDescEdit {
+#editForm #wishDescEdit {
   height: 10vh;
 }
 
-#editCard #editForm a {
+#editForm a {
   text-decoration: none;
   color: #f9f9fb;
 }
 
-#editCard #editForm button {
+#editForm button {
   background-color: #86e4de;
   border-color: #86e4de;
   color: #212531;
@@ -2105,6 +2513,7 @@ main #complete {
 }
 
 footer {
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   background-color: #f9f9fb;
@@ -2112,6 +2521,7 @@ footer {
 
 @media screen and (min-width: 650px) {
   footer {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
@@ -2124,8 +2534,13 @@ body #desktopView {
 
 @media only screen and (min-width: 1000px) {
   body #desktopView {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #welcomePage {
     height: 250vh;
@@ -2133,14 +2548,32 @@ body #desktopView {
 }
 
 #friendName2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 1.5rem;
   padding: 0.5rem 2rem;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   border-style: none;
   font-family: "Livvic", sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: #b3b7c2;
+}
+
+:-ms-input-placeholder {
+  color: #b3b7c2;
+}
+
+::-ms-input-placeholder {
+  color: #b3b7c2;
 }
 
 ::placeholder {
@@ -2154,6 +2587,7 @@ body #desktopView {
   border-style: none;
   background-color: #c7beff;
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-family: "Livvic", sans-serif;
   font-size: 1rem;
@@ -2165,6 +2599,7 @@ body #desktopView {
   border-style: none;
   background-color: #3dc8bf;
   color: #212531;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-family: "Livvic", sans-serif;
   margin: 1rem;
@@ -2194,9 +2629,15 @@ body #desktopView {
 }
 
 .constContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
   height: 80vh;
 }
 
@@ -2207,16 +2648,24 @@ body #desktopView {
 }
 
 .constContainer img {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   max-width: 50%;
   height: auto;
 }
 
 #friendsSeeList #fetchedFriendsList li {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #b3b7c2;
   background-color: #4a5470;
 }
@@ -2241,10 +2690,17 @@ body #desktopView {
 .nameContainer {
   margin: 2% 2rem;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 .nameContainer button {
@@ -2263,10 +2719,19 @@ body #desktopView {
 #events-wrapper {
   border: none;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #363d51;
   color: #f9f9fb;
 }
@@ -2275,9 +2740,11 @@ body #desktopView {
   width: 90%;
   padding: 3%;
   margin: 0.5rem 5%;
+  display: -ms-grid;
   display: grid;
   grid-gap: 1%;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   border-radius: 25px;
   background-color: #86e4de;
   color: #f9f9fb;
@@ -2287,6 +2754,10 @@ body #desktopView {
   margin: 0;
   font-family: "Baloo Bhai 2", sans-serif;
   color: #212531;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: 1/1/2/3;
 }
 
@@ -2302,8 +2773,10 @@ body #desktopView {
     width: 90%;
     min-height: 85vh;
     margin: auto;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
   }
 }
@@ -2320,12 +2793,21 @@ main {
 .login-first {
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #f9f9fb;
   font-family: "Oxygen", sans-serif;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .login-first p {
@@ -2338,12 +2820,21 @@ main {
 .loading-page {
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #f9f9fb;
   font-family: "Oxygen", sans-serif;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .loading-page p {
@@ -2359,16 +2850,28 @@ main {
   border-top: 16px solid #8177c3;
   width: 70px;
   height: 70px;
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   margin-bottom: 1rem;
 }
 
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -2377,13 +2880,22 @@ main {
 }
 
 body #editCardFriends {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #editForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #editForm input,
@@ -2411,6 +2923,7 @@ body #editCardFriends {
   background-color: #8177c3;
   border: 1px solid #8177c3;
   color: #f9f9fb;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -2428,9 +2941,12 @@ body #editCardFriends {
 }
 
 #foundersCont {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 }
 
 #foundersCont img {
@@ -2455,7 +2971,6 @@ body #editCardFriends {
   }
 }
 
-/* ================ Mixins =====================*/
 /* ================ Layout =====================*/
 img {
   max-width: 100%;
@@ -2468,8 +2983,13 @@ section {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 main section {
@@ -2483,6 +3003,8 @@ main section {
 
 #reset_password,
 #noreset {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2496,7 +3018,6 @@ body #introPages .hide,
 body #listEmptyPage .hide,
 body #addFriendPage .hide,
 body #giftcard_display .hide,
-body .editCard .hide,
 body section#editCardFriends.hide,
 body section#giftcardFriendsDisplay.hide,
 body #demopage1 .hide,
@@ -2512,16 +3033,21 @@ body #friendsListView #giftcardFriendsDisplay #friendsSeeList.hide,
   display: none;
 }
 
+body main #editCard {
+  display: none;
+}
+
 body #giftIdeaProcess .show,
 body #friendsListProcess .show,
 body #introPages .show,
 body #listEmptyPage .show,
 body #addFriendPage .show,
 body #giftcard_display .show,
-body .editCard .show,
 body #demopage1 .show,
 body #demopage2 .show,
 body #demopage3 .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2532,8 +3058,12 @@ body #demopage3 .show {
 .bottom_navbar ul {
   padding: 1rem;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .bottom_navbar ul li {
@@ -2548,22 +3078,32 @@ main section {
 #demopage1,
 #demopage2,
 #demopage3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  animation: fadeIn 0.5s ease-in both;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #demopage1 p,
 #demopage2 p,
 #demopage3 p {
   font-family: "Livvic", sans-serif;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-size: 1.2rem;
   margin-top: 12vh;
 }
 
 #desktopView {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #desktopView p {
@@ -2584,11 +3124,17 @@ main section {
 
 @media screen and (min-width: 650px) {
   .topNavigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: #fff;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 3%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 15vh;
     background-color: #fff;
   }
@@ -2600,9 +3146,13 @@ main section {
   .topNavigation ul {
     font-family: "Oxygen", sans-serif;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 5%;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .topNavigation ul li {
     list-style-type: none;
@@ -2657,7 +3207,9 @@ main section {
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #giftIdeaProcess input,
@@ -2901,9 +3453,12 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   margin-top: 0;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   justify-self: flex-end;
 }
@@ -3056,6 +3611,7 @@ main section {
 #addFriendPage #addAFriendBtn a,
 #addFriendPage #addEventBtn a,
 #addFriendPage #addFriendBtn a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3241,7 +3797,9 @@ main section {
   border-radius: 44px;
   width: 232px;
   height: 48px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
 }
 
@@ -3265,6 +3823,7 @@ main section {
 #addFriendPage #addAFriendBtn {
   background: #aba0f5;
   border: none;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3308,6 +3867,7 @@ main section {
 #addEventPage #addAFriendBtn a,
 #addFriendPage #addtowish a,
 #addFriendPage #addAFriendBtn a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3361,6 +3921,7 @@ main section {
 #addFriendPage #seeFriendsList {
   background: #86e4de;
   border: none;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3422,6 +3983,7 @@ main section {
 #addFriendPage #snap a,
 #addFriendPage #addPhoto a,
 #addFriendPage #seeFriendsList a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3500,7 +4062,8 @@ main section {
 #addFriendPage #backToIdeaAdd,
 #addFriendPage #backToSummaryCard,
 #addFriendPage #backToChooseEvent {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-left: 0;
   background: none;
   border: none;
@@ -3587,12 +4150,15 @@ main section {
     bottom: 30px;
     right: 100px;
     z-index: 1000;
-    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
   }
 }
 
 .bottom_navbar li:nth-of-type(3) {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #giftcard_display button.editButton {
@@ -3602,9 +4168,15 @@ main section {
   font-size: 1.3rem;
   cursor: pointer;
   color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5%;
 }
 
@@ -3638,9 +4210,15 @@ main section {
 #resetContainer #btn_logout,
 #resetContainer #btn_AddGiftIdea,
 #resetContainer #btn_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #86e4de;
   border: none;
   border-radius: 44px;
@@ -3649,6 +4227,7 @@ main section {
   justify-content: center;
   margin: auto;
   margin-top: 4rem;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3668,6 +4247,7 @@ main section {
 #resetContainer #btn_logout a,
 #resetContainer #btn_AddGiftIdea a,
 #resetContainer #btn_login a {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3693,10 +4273,19 @@ main #resetContainer #noreset a {
 }
 
 .friendEventForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .friendEventForm #friendEventSelect2 {
@@ -3717,11 +4306,13 @@ section > a {
 
 .fa-chevron-left {
   margin: 1rem;
-  align-self: baseline;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 #addEventPage a {
-  align-self: baseline;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 /* ================ Media =====================*/
@@ -3765,7 +4356,9 @@ section > a {
 #demopage3 img:nth-of-type(1) {
   height: auto;
   max-width: 100%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-top: 5vh;
 }
 
@@ -3776,10 +4369,28 @@ section > a {
   width: 4rem;
   margin-top: 12vh;
   margin-bottom: 5vh;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-#desktopView video {
-  margin-top: 2vh;
-  align-self: center;
+#introVideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
+#introVideo iframe {
+  margin-top: 2vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */
