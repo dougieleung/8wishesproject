@@ -2,9 +2,9 @@
 // **************** This page is the code connecting sections within html pages ***************
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to pageDisplay.js");
-
 
 // *************************** global variables used in the script ****************************
 
@@ -27,13 +27,12 @@ const listEmptyPage = document.querySelector("#listEmptyPage");
 const chooseEvent = document.querySelector("#chooseEvent");
 const backToChooseEvent = document.querySelector("#backToChooseEvent");
 const complete = document.querySelector("#complete");
-
 const friendtoProfile = document.querySelector("#friendtoProfile");
 const addEventPage = document.querySelector("#addEventPage");
 const addAFriendBtn = document.querySelector("#addAFriendBtn");
 
 
-
+//******************* Toggling from one page to another in gift_idea.html *********************
 
 startIdeaBtn.addEventListener("click", () => {
   console.log("Starting New Idea - clicked button");

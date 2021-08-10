@@ -2,9 +2,9 @@
 // ********** This page is the code for adding gift ideas to user or to friend's list *********
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to addgifts.js");
-
 
 // *************************** global variables used in the script ****************************
 
@@ -189,10 +189,6 @@ addToDB.addEventListener("click", async function addToFirestore() {
         console.error("Error writing document: ", error);
       });
 
-    // complete.classList.toggle("hide");
-    // displayGift.classList.toggle("hide");
-
-    // renderWishlist();
     location.href = "mylist.html";
   }
   footerNav.classList.toggle("hide");

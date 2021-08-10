@@ -2,9 +2,9 @@
 // *********** This page is the code connecting sections within register+login.html ***********
 // ********************************************************************************************
 
+'use strict';
 
 console.log("Connected to PageDisplayIntro.js");
-
 
 // *************************** global variables used in the script ****************************
 
@@ -26,7 +26,7 @@ const registerLink = document.querySelector("#registerLink");
 const skiptologin = document.querySelector("#skiptologin");
 
 
-
+//******************* Toggling from one page to another in gift_idea.html *********************
 
 seeDemo.addEventListener("click", () => {
     welcomePage.classList.remove("show");
