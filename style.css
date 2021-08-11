@@ -2741,11 +2741,11 @@ body #desktopView {
           align-items: center;
   background-color: #363d51;
   color: #f9f9fb;
-  margin: 2% auto;
+  margin: 0 auto;
 }
 
 #events-wrapper .events-cards {
-  width: 80%;
+  width: 90%;
   padding: 3%;
   margin: 0.5rem 5%;
   display: -ms-grid;
