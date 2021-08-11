@@ -1390,10 +1390,10 @@ body #desktopView {
   align-items: center;
   background-color: $color_primary;
   color: $color_neutral_white;
-  margin: 2% auto;
+  margin: 0 auto;
 
   .events-cards {
-    width: 80%;
+    width: 90%;
     padding: 3%;
     margin: 0.5rem 5%;
     display: grid;
