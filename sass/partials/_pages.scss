@@ -1394,7 +1394,7 @@ body #desktopView {
     align-self: flex-start;
     width: 90%;
     padding: 3%;
-    margin: 0.5rem 5%;
+    margin: 0.5rem 0;
     display: grid;
     grid-gap: 1%;
     grid-template-columns: repeat(2, 1fr);
@@ -1436,7 +1436,7 @@ main {
 .home-title {
   font-family: $font_heading;
   font-size: 2rem;
-  align-self: center;
+  // align-self: center;
   grid-column: 1 / -1;
 }
 

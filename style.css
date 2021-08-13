@@ -2760,7 +2760,7 @@ body #desktopView {
   align-self: flex-start;
   width: 90%;
   padding: 3%;
-  margin: 0.5rem 5%;
+  margin: 0.5rem 0;
   display: -ms-grid;
   display: grid;
   grid-gap: 1%;
@@ -2809,8 +2809,6 @@ main {
 .home-title {
   font-family: "Baloo Bhai 2", sans-serif;
   font-size: 2rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   grid-column: 1 / -1;
 }
 
