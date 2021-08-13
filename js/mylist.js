@@ -92,6 +92,7 @@ renderWishlist();
   
   function editWish(doc) {
     editCard.style.display = "flex";
+    mylist_title.style.display = "none";
     displayGift.style.display = "none";
   
     wishTitleEdit.value = `${doc.data().wishTitle}`;

@@ -1875,7 +1875,23 @@ main #takePhoto #backToIdeaAdd2 i {
 
 @media screen and (min-width: 650px) {
   #giftcard_display .displaycard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #giftcard_display .displaycard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 
@@ -1912,21 +1928,17 @@ main #takePhoto #backToIdeaAdd2 i {
 @media screen and (min-width: 650px) {
   #giftcard_display {
     width: 100%;
-    min-height: 85vh;
     margin: auto;
     padding: 5%;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 2%;
-    grid-auto-flow: row;
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-  }
-  #giftcard_display h2 {
-    grid-column: 1/-1;
   }
 }
 
@@ -2658,7 +2670,7 @@ body #desktopView {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -2745,6 +2757,7 @@ body #desktopView {
 }
 
 #events-wrapper .events-cards {
+  align-self: flex-start;
   width: 90%;
   padding: 3%;
   margin: 0.5rem 5%;
@@ -2795,6 +2808,9 @@ main {
 
 .home-title {
   font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   grid-column: 1 / -1;
 }
 

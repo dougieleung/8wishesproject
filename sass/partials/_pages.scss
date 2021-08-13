@@ -658,8 +658,6 @@ main #takePhoto {
   border: none;
   animation: fadeIn 0.5s ease-in both;
 
-
-
   div.displaycard:nth-child(odd) {
     background-color: $color_card_bg;
   }
@@ -717,8 +715,16 @@ main #takePhoto {
     }
 
     @media screen and(min-width:650px) {
+      flex: 0 0 47%;
+      align-self: flex-start;
       width: 100%;
     }
+    @media screen and(min-width:900px) {
+      flex: 0 0 30%;
+      width: 100%;
+      align-self: flex-start;
+    }
+
   }
 
   .editDescInput,
@@ -747,19 +753,11 @@ main #takePhoto {
 
   @media screen and (min-width: 650px) {
     width: 100%;
-    min-height: 85vh;
     margin: auto;
     padding: 5%;
-    display: grid;
-    grid-gap: 2%;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+    display: flex;
+    flex-flow: row wrap;
     box-sizing: border-box;
-
-    h2 {
-      grid-column: 1/-1;
-    }
   }
 }
 
@@ -1325,7 +1323,7 @@ body #desktopView {
 
 .constContainer img {
   align-self: center;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -1393,6 +1391,7 @@ body #desktopView {
   margin: 0 auto;
 
   .events-cards {
+    align-self: flex-start;
     width: 90%;
     padding: 3%;
     margin: 0.5rem 5%;
@@ -1436,6 +1435,8 @@ main {
 
 .home-title {
   font-family: $font_heading;
+  font-size: 2rem;
+  align-self: flex-start;
   grid-column: 1 / -1;
 }
 
