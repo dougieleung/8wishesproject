@@ -8,7 +8,6 @@ console.log("Connected to friends.js");
 
 // *************************** global variables used in the script ****************************
 
-
 const addFriendBtn = document.querySelector("#addFriendBtn");
 const friendListOutput = document.querySelector("#friendListOutput");
 const seeFriendsList = document.querySelector("#seeFriendsList");
@@ -18,9 +17,7 @@ const friendNameEventContainer = document.querySelector("#friendNameEventContain
 const createEvent = document.querySelector("#createEvent");
 const friendEventAdded2 = document.querySelector("#friendEventAdded2");
 
-
 // ************************* Retrieve Friend's list from Firestore DB *************************
-
 
 async function friendsListfromDB() {
 
@@ -84,12 +81,9 @@ async function friendsListfromDB() {
 
 // ************* #5(B) of gift_idea.html, "Add To Friend" generates list of friends ***********
 
-
 seeFriendsList.addEventListener("click", friendsListfromDB);
 
-
 // ********************************* Create Friends Obj via class *****************************
-
 
 const friendsWishlist = document.querySelector("#friendsWishlist");
 let createEventInput, newFriendObj;
@@ -112,9 +106,7 @@ class addFriendClass {
   }
 }
 
-
 // *************** Adding Friend and checking if Friend's Name is in Firestore ****************
-
 
 addFriendBtn.addEventListener("click", () => {
 
@@ -216,9 +208,7 @@ async function addFriendToFirestore(friendName, friendObject) {
   }
 }
 
-
 // ***************************** Create (Other) New Event input field *************************
-
 
 friendEventSelect.addEventListener("change", () => {
   if (friendEventSelect.value === "Other") {

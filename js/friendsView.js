@@ -8,7 +8,6 @@ console.log("Connected to friendsView.js");
 
 // *************************** global variables used in the script ****************************
 
-
 const friendsFooter = document.querySelector("#friendsFooter");
 const friendsSeeList = document.querySelector("#friendsSeeList");
 const friendsWishlist = document.querySelector("#friendsWishlist");
@@ -25,9 +24,7 @@ const loadingFriendsList = document.querySelector(".loadingFriendsList");
 const friendsListHeading = document.querySelector("#friendsListHeading");
 let friendID;
 
-
 // ***************** Function #1: Retrieve list of friends from Firestore *********************
-
 
 async function friendsListfromDB() {
 
@@ -93,9 +90,7 @@ async function friendsListfromDB() {
 // Call the function so when we navigate to friendsView.html, the list of friends are shown.
 friendsListfromDB();
 
-
 // ****************** Function #2: Retrieve list of gift ideas for Friends ********************
-
 
 let storageRef = storage.ref();
 
@@ -166,9 +161,7 @@ async function renderTHISFriendList() {
     });
 }
 
-
 // ********************* Function #3: Editing Wishes on user list *****************************
-
 
 function editWish(doc) {
   console.log('inside EditWish')
@@ -198,9 +191,7 @@ function editWish(doc) {
     location.reload();
   });
 
-
   // ********************* Function #4: Deleting Wishes from user list **************************
-
 
   deleteWishFriendsBtn.addEventListener("click", async function () {
     console.log("Delete Button Clicked");
@@ -223,9 +214,7 @@ function editWish(doc) {
   });
 }
 
-
 // ********************** Event Listener: Adding Friends to Firestore *************************
-
 
 addFriendBtn2.addEventListener("click", () => {
 
@@ -241,9 +230,7 @@ addFriendBtn2.addEventListener("click", () => {
 
 });
 
-
 // *********************** Function #5: Adding Friends to Firestore ***************************
-
 
 async function addFriendToFirestore(friendName) {
   const friendsArray = [];

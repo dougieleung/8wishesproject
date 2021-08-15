@@ -89,7 +89,6 @@ renderWishlist();
 
   // ******************************* Editing Wishes on user list ********************************
   
-  
   function editWish(doc) {
     editCard.style.display = "flex";
     mylist_title.style.display = "none";

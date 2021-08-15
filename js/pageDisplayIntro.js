@@ -25,7 +25,6 @@ const loginLink = document.querySelector("#loginLink");
 const registerLink = document.querySelector("#registerLink");
 const skiptologin = document.querySelector("#skiptologin");
 
-
 //******************* Toggling from one page to another in gift_idea.html *********************
 
 seeDemo.addEventListener("click", () => {

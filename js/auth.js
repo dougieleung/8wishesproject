@@ -8,12 +8,9 @@ console.log("Connected to auth.js");
 
 // *************************** global variables used in the script ****************************
 
-
 const errorLogin = document.querySelector("error-login");
 
-
 // ******************************** Firebase Authentication ***********************************
-
 
 let newUser = null;
 
@@ -27,9 +24,7 @@ function redirectToHomePage() {
   }
 }
 
-
 // *********************************** Create User Object *************************************
-
 
 class userInfo {
   constructor(username, email) {
@@ -76,9 +71,7 @@ class userInfo {
   }
 }
 
-
 // ********************************* New User Registration ************************************
-
 
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -98,9 +91,7 @@ registerForm.addEventListener("submit", async (event) => {
 
 });
 
-
 // ******************************* Authentication State Change ********************************
-
 
 firebase.auth().onAuthStateChanged((user) => {
   const notLoggedIn = document.getElementById("not-logged-in");
@@ -124,9 +115,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
 });
 
-
 // ************************************** User Login ******************************************
-
 
 loginButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -163,9 +152,7 @@ loginButton.addEventListener("click", (event) => {
   loginEmail.focus();
 });
 
-
 // *********************************** Logout Existing User ***********************************
-
 
 logoutButton.addEventListener("click", () => {
   const notLoggedIn = document.getElementById("not-logged-in");
