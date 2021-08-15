@@ -9,13 +9,13 @@ console.log("Connected to geolocation.js");
 // Retrieve longitude and latitude coordinates and use openStreetMap to locate
 // source code inspired by MDN Mozilla Tutorial https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
 
-
 // *************************** global variables used in the script ****************************
-
 
 const locate = document.querySelector("#locate");
 const status = document.querySelector("#status");
 const mapLink = document.querySelector("#map-link");
+
+// **************************************** functions *****************************************
 
 function geoLocation () {
 

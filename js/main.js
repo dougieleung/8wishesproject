@@ -4,10 +4,9 @@
 
 'use strict';
 
-console.log("Connected main.js");
+console.log("Connected to main.js");
 
 // *************************** global variables used in the script ****************************
-
 
 // Declaring variables from DOM
 const usernameInput = document.querySelector("#username");

@@ -4346,6 +4346,15 @@ section > a {
   border: none;
 }
 
+.homeButton:hover,
+.storeButton:hover,
+.friendsButton:hover,
+.listButton:hover {
+  cursor: pointer;
+  -webkit-animation: pulse 1s ease 1;
+          animation: pulse 1s ease 1;
+}
+
 .homeButton img,
 .storeButton img,
 .friendsButton img,
@@ -4368,9 +4377,30 @@ section > a {
   background-color: #f9f9fb;
   border-color: #6e64ac;
   color: #6e64ac;
-  font-size: 2rem;
-  border-radius: 60%;
-  padding: 8px 16px;
+  font-size: 2.2rem;
+  border-radius: 70%;
+  padding: 6px 16px;
+}
+
+.addButton:hover,
+.floatButton:hover {
+  cursor: pointer;
+  -webkit-animation: pulse 1s ease 1;
+          animation: pulse 1s ease 1;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 #demopage1 img:nth-of-type(1),

@@ -8,13 +8,13 @@ console.log("Connected to home.js");
 
 // *************************** global variables used in the script ****************************
 
-
 const userFriendsList = [];
 const sortedEventsArray = [];
 const eventsWrapper = document.querySelector("#events-wrapper");
 const loadingPage = document.querySelector(".loading-page");
 const loginFirst = document.querySelector(".login-first");
 
+// **************************************** functions *****************************************
 
 async function upcomingEvents() {
 

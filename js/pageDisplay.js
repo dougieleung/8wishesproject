@@ -8,7 +8,6 @@ console.log("Connected to pageDisplay.js");
 
 // *************************** global variables used in the script ****************************
 
-
 const startIdeaBtn = document.querySelector("#startIdeaBtn");
 const backToStart = document.querySelector("#backToStart");
 const giftIdeaHomePage = document.querySelector("#giftIdeaHomePage");
@@ -30,7 +29,6 @@ const complete = document.querySelector("#complete");
 const friendtoProfile = document.querySelector("#friendtoProfile");
 const addEventPage = document.querySelector("#addEventPage");
 const addAFriendBtn = document.querySelector("#addAFriendBtn");
-
 
 //******************* Toggling from one page to another in gift_idea.html *********************
 

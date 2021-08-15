@@ -8,7 +8,6 @@ console.log("Connected to addgifts.js");
 
 // *************************** global variables used in the script ****************************
 
-
 const displayTitle = document.querySelector("#displayTitle");
 const displayDescription = document.querySelector("#displayDesc");
 const windowDescription = document.querySelector("#windowDescription");
@@ -16,9 +15,7 @@ const friendEventSelect2 = document.querySelector("#friendEventSelect2");
 const createEvent2 = document.querySelector("#createEvent2");
 const addEventBtn = document.querySelector("#addEventBtn");
 
-
 // *************************** create wish idea object through class **************************
-
 
 class newWishObject {
   constructor(title, description, image, timestamp) {
@@ -66,10 +63,8 @@ addGift.addEventListener("click", () => {
   }
 });
 
-
 // ********************* Gift Idea Summary Card section of gift_idea.html *********************
 // ************************************** Add location ****************************************
-
 
 nextToWishlists.addEventListener("click", () => {
   newWish.location = mapLink.href;
@@ -91,9 +86,7 @@ nextToWishlists.addEventListener("click", () => {
   console.log(newWish);
 });
 
-
 // ********************* (A) Add to My Wishlist or (B) Friend's List Page *********************
-
 
 addToWish.addEventListener("click", () => {
 
@@ -114,9 +107,7 @@ addToWish.addEventListener("click", () => {
 const friendEventAdded = document.querySelector("#friendEventAdded");
 let createEventInput2;
 
-
 // **************************** Create (Other) New Event input field **************************
-
 
 friendEventSelect2.addEventListener("change", () => {
   if (friendEventSelect2.value === "Other") {
@@ -136,9 +127,7 @@ friendEventSelect2.addEventListener("change", () => {
   }
 });
 
-
 // ******************** IF Friends, add Event to newWish Obj and Firestore ********************
-
 
 addEventBtn.addEventListener("click", () => {
   if (createEventInput2) {
@@ -163,9 +152,7 @@ addEventBtn.addEventListener("click", () => {
 
 });
 
-
 // *********************** Add Gift Idea to Firestore and retrieve list ***********************
-
 
 addToDB.addEventListener("click", async function addToFirestore() {
   logintoadd.innerHTML = "";
@@ -194,9 +181,7 @@ addToDB.addEventListener("click", async function addToFirestore() {
   footerNav.classList.toggle("hide");
 });
 
-
 // ********************** Add Gift Idea to Friend's Collection of ideas ***********************
-
 
 async function addIdeaToCollection(friendsName, giftTitle) {
   console.log("Event Listener Triggered! ");

@@ -1,14 +1,12 @@
 // ********************************************************************************************
-// *********** This page is the code connecting sections within register+login.html ***********
+// ************************* This page is the code to reset password **************************
 // ********************************************************************************************
 
 'use strict';
 
 console.log("Connected to resetpassword.js");
 
-
 // *************************** global variables used in the script ****************************
-
 
 const emailtoreset = document.querySelector("#email_to_reset");
 const resetPassword = document.querySelector("#reset_password");
@@ -16,9 +14,7 @@ const backtologin = document.querySelector("#backtologin");
 const resetfeedback = document.querySelector("#resetfeedback");
 const noreset = document.querySelector("#noreset");
 
-
 // ************************************ Reset user password ***********************************
-
 
 resetPassword.addEventListener("click", (event) => {
     event.preventDefault();
