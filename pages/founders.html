@@ -1,0 +1,78 @@
+<!-- ******************************************************************************************** -->
+<!-- **********************************  FOUNDERS HTML Page  ************************************ -->
+<!-- ******************************************************************************************** -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <title>FOUNDERS | 8 Wishes</title>
+  <meta name="description" content="An application for searching special unique gifts" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.ready.then((reg) => {
+        console.log(`Service Worker ready (Scope: ${reg.scope})`);
+      });
+
+      navigator.serviceWorker
+        .register("../sw.js", {
+          scope: "/",
+        })
+        .then(function (reg) {
+          console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+        })
+        .catch(function (error) {
+          console.log(`Service Worker Error (${error})`);
+        });
+    } else {
+      console.warn("Service Worker not available");
+    }
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js" defer></script>
+
+</head>
+<nav class="topNavigation">
+  <img src="../icons/image.png" alt="logo">
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="mylist.html">My List</a></li>
+    <li><a href="friendsView.html">Friends</a></li>
+    <li><a href="underConstruction.html">Stores</a></li>
+    <li><a style="color:#2ba199" href="#">Founders</a></li>
+    <li><a href="../index.html">Sign In</a></li>
+  </ul>
+</nav>
+
+<body id="FoundersPage">
+
+  <div id="foundersCont">
+    <img src="/icons/Teampic1.png" alt="team picture">
+  
+    <img src="/icons/Teampic2.png" alt="team picture">
+  </div>
+  <div id="foundersCont2">
+    <img src="/icons/Teampic3.png" alt="team picture">
+  </div>
+
+  <button id="floatButton" class="floatButton">
+    <a href="gift_idea.html">+</a>
+  </button>
+
+</body>
+
+</html>

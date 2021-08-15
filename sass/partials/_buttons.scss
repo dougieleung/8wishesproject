@@ -1,0 +1,292 @@
+//****************************************** GIFT IDEA PAGE ***************************************//
+
+#giftIdeaHomePage,
+#giftIdeaAdd,
+#takePhoto,
+#summaryCard,
+#addToWishlistSection,
+#listEmptyPage,
+#complete,
+#addEventPage,
+#addFriendPage {
+
+  #startIdeaBtn,
+  #addGift,
+  #addToDB,
+  #nextToWishlists,
+  #friendtoProfile,
+  #addAFriendBtn,
+  #addEventBtn,
+  #addFriendBtn {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0;
+    transition: all 1s ease;
+    justify-self: flex-end;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+
+  #friendListOutput button#friendtoProfile {
+    margin: 0;
+  }
+
+  #addEventBtn {
+    margin: 0;
+  }
+
+
+  #snap,
+  #addPhoto,
+  #startIdeaBtn,
+  #addGift,
+  #addtowish,
+  #seeFriendsList,
+  #addToDB {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    margin: 0 auto;
+  }
+
+  #nextToEvents {
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  #addtowish,
+  #addAFriendBtn {
+    background: $color_button_purple;
+    border: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_purple_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+
+
+  #snap,
+  #addPhoto,
+  #seeFriendsList {
+    background: $color_upcoming;
+    border: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+
+  #backToStart,
+  #backToIdeaAdd2,
+  #backToIdeaAdd,
+  #backToSummaryCard,
+  #backToChooseEvent {
+    align-self: flex-start;
+    margin-left: 0;
+    background: none;
+    border: none;
+
+    a {
+      color: $color_neutral_white;
+    }
+  }
+}
+
+#registerLink {
+  border: none;
+  background: none;
+}
+
+#skiptologin {
+  background: $color_primary;
+  border: none;
+  font-size: 16px;
+  font-family: $font_body;
+  padding: 16px;
+}
+
+#floatButton {
+  display: none;
+    
+}
+
+#nav_btn3 a, #floatButton a {
+  text-decoration: none;
+}
+
+#nav_btn3, #floatButton {
+  background-color: $color_home_button;
+  border-style: none;
+}
+
+#floatButton {
+  @media only screen and (min-width: 650px) {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    z-index: 1000;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.7);
+  }
+}
+
+.bottom_navbar li:nth-of-type(3) {
+  align-self: center;
+}
+
+#giftcard_display button.editButton {
+  background: none;
+  border: none;
+  color: $color_neutral_white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: $color_secondary_dark;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 5%;
+}
+
+#giftcardFriendsDisplay button.editButton {
+  background: none;
+  border: none;
+  color: $color_neutral_white;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: $color_secondary_dark;
+}
+
+.displaycard {
+  position: relative;
+}
+
+#friendAddBtn {
+  padding: 1rem 2rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//******************************************** LOG IN PAGE ****************************************//
+
+#loginPage,
+#resetContainer {
+
+  #btn_logout,
+  #btn_AddGiftIdea,
+  #btn_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_accent;
+    border: none;
+    border-radius: 44px;
+    width: 232px;
+    height: 48px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color_button_hover_green_bg;
+      color: $color_button_hover_text;
+    }
+
+    a {
+      transition: all 1s ease;
+    }
+
+    &:hover a {
+      color: $color_button_hover_text;
+    }
+  }
+}
+
+main #resetContainer {
+  height: 100vh;
+
+  #noreset a {
+    text-decoration: none;
+  }
+}
+
+#addEventBtn {
+  margin: 0;
+}
+
+.friendEventForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  #friendEventSelect2 {
+    width: 100%;
+  }
+
+  label,
+  select,
+  div,
+  input#friendDate2 {
+    margin: 1rem;
+    width: 100%;
+  }
+}
+
+section>a {
+  color: $color_neutral_white;
+}
+
+.fa-chevron-left {
+  margin: 1rem;
+  align-self: baseline;
+}
+
+#addEventPage a {
+  align-self: baseline;
+}

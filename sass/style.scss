@@ -1,0 +1,16 @@
+:root {
+  --bMode: multiply;
+}
+
+/* ================ Variables ==================*/
+@import "partials/variables";
+/* ================ Pages =====================*/
+@import "partials/pages";
+/* ================ Layout =====================*/
+@import "partials/layout";
+/* ================ Typography =====================*/
+@import "partials/typography";
+/* ================ Buttons =====================*/
+@import "partials/buttons";
+/* ================ Media =====================*/
+@import "partials/media";

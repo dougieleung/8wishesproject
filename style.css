@@ -1,0 +1,4448 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+:root {
+  --bMode: multiply;
+}
+
+/* ================ Variables ==================*/
+/* ================ Pages =====================*/
+body {
+  margin: 0;
+  background-color: #363d51;
+}
+
+#welcomePage,
+#demo-page,
+#registerPage,
+#loginPage,
+#StoresPage,
+#FoundersPage,
+#addToWishlistSection {
+  height: 100vh;
+}
+
+#giftIdeaProcess {
+  background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+  color: #f9f9fb;
+  font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+#giftIdeaProcess section {
+  height: 100vh;
+  border: none;
+}
+
+@media screen and (min-width: 650px) {
+  #giftIdeaProcess {
+    height: 85vh;
+  }
+}
+
+main #loginPage,
+main #registerPage,
+main #welcomePage,
+main #giftIdeaHomePage,
+main #StoresPage,
+main #FoundersPage,
+main #giftIdeaAdd,
+main #summaryCard,
+main #complete,
+main #listEmptyPage,
+main #addToWishlistSection,
+main #addFriendPage,
+main #addEventsPage,
+main #friendsListPage,
+main #resetContainer,
+main #takePhoto,
+main #addEventPage,
+main #friendAddedPage,
+main #giftcardFriendsDisplay,
+main #editCard,
+main #editCardFriends {
+  background-color: #363d51;
+  min-height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+  color: #f9f9fb;
+  font-family: "Livvic", sans-serif;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+main #loginPage .loggedin #btn_logout,
+main #loginPage #btn_AddGiftIdea,
+main #registerPage .loggedin #btn_logout,
+main #registerPage #btn_AddGiftIdea,
+main #welcomePage .loggedin #btn_logout,
+main #welcomePage #btn_AddGiftIdea,
+main #giftIdeaHomePage .loggedin #btn_logout,
+main #giftIdeaHomePage #btn_AddGiftIdea,
+main #StoresPage .loggedin #btn_logout,
+main #StoresPage #btn_AddGiftIdea,
+main #FoundersPage .loggedin #btn_logout,
+main #FoundersPage #btn_AddGiftIdea,
+main #giftIdeaAdd .loggedin #btn_logout,
+main #giftIdeaAdd #btn_AddGiftIdea,
+main #summaryCard .loggedin #btn_logout,
+main #summaryCard #btn_AddGiftIdea,
+main #complete .loggedin #btn_logout,
+main #complete #btn_AddGiftIdea,
+main #listEmptyPage .loggedin #btn_logout,
+main #listEmptyPage #btn_AddGiftIdea,
+main #addToWishlistSection .loggedin #btn_logout,
+main #addToWishlistSection #btn_AddGiftIdea,
+main #addFriendPage .loggedin #btn_logout,
+main #addFriendPage #btn_AddGiftIdea,
+main #addEventsPage .loggedin #btn_logout,
+main #addEventsPage #btn_AddGiftIdea,
+main #friendsListPage .loggedin #btn_logout,
+main #friendsListPage #btn_AddGiftIdea,
+main #resetContainer .loggedin #btn_logout,
+main #resetContainer #btn_AddGiftIdea,
+main #takePhoto .loggedin #btn_logout,
+main #takePhoto #btn_AddGiftIdea,
+main #addEventPage .loggedin #btn_logout,
+main #addEventPage #btn_AddGiftIdea,
+main #friendAddedPage .loggedin #btn_logout,
+main #friendAddedPage #btn_AddGiftIdea,
+main #giftcardFriendsDisplay .loggedin #btn_logout,
+main #giftcardFriendsDisplay #btn_AddGiftIdea,
+main #editCard .loggedin #btn_logout,
+main #editCard #btn_AddGiftIdea,
+main #editCardFriends .loggedin #btn_logout,
+main #editCardFriends #btn_AddGiftIdea {
+  color: #212531;
+  margin: 2rem;
+}
+
+main #loginPage .loggedin #btn_logout a,
+main #loginPage #btn_AddGiftIdea a,
+main #registerPage .loggedin #btn_logout a,
+main #registerPage #btn_AddGiftIdea a,
+main #welcomePage .loggedin #btn_logout a,
+main #welcomePage #btn_AddGiftIdea a,
+main #giftIdeaHomePage .loggedin #btn_logout a,
+main #giftIdeaHomePage #btn_AddGiftIdea a,
+main #StoresPage .loggedin #btn_logout a,
+main #StoresPage #btn_AddGiftIdea a,
+main #FoundersPage .loggedin #btn_logout a,
+main #FoundersPage #btn_AddGiftIdea a,
+main #giftIdeaAdd .loggedin #btn_logout a,
+main #giftIdeaAdd #btn_AddGiftIdea a,
+main #summaryCard .loggedin #btn_logout a,
+main #summaryCard #btn_AddGiftIdea a,
+main #complete .loggedin #btn_logout a,
+main #complete #btn_AddGiftIdea a,
+main #listEmptyPage .loggedin #btn_logout a,
+main #listEmptyPage #btn_AddGiftIdea a,
+main #addToWishlistSection .loggedin #btn_logout a,
+main #addToWishlistSection #btn_AddGiftIdea a,
+main #addFriendPage .loggedin #btn_logout a,
+main #addFriendPage #btn_AddGiftIdea a,
+main #addEventsPage .loggedin #btn_logout a,
+main #addEventsPage #btn_AddGiftIdea a,
+main #friendsListPage .loggedin #btn_logout a,
+main #friendsListPage #btn_AddGiftIdea a,
+main #resetContainer .loggedin #btn_logout a,
+main #resetContainer #btn_AddGiftIdea a,
+main #takePhoto .loggedin #btn_logout a,
+main #takePhoto #btn_AddGiftIdea a,
+main #addEventPage .loggedin #btn_logout a,
+main #addEventPage #btn_AddGiftIdea a,
+main #friendAddedPage .loggedin #btn_logout a,
+main #friendAddedPage #btn_AddGiftIdea a,
+main #giftcardFriendsDisplay .loggedin #btn_logout a,
+main #giftcardFriendsDisplay #btn_AddGiftIdea a,
+main #editCard .loggedin #btn_logout a,
+main #editCard #btn_AddGiftIdea a,
+main #editCardFriends .loggedin #btn_logout a,
+main #editCardFriends #btn_AddGiftIdea a {
+  text-decoration: none;
+  color: #212531;
+}
+
+main #loginPage #registerForm .form-item,
+main #registerPage #registerForm .form-item,
+main #welcomePage #registerForm .form-item,
+main #giftIdeaHomePage #registerForm .form-item,
+main #StoresPage #registerForm .form-item,
+main #FoundersPage #registerForm .form-item,
+main #giftIdeaAdd #registerForm .form-item,
+main #summaryCard #registerForm .form-item,
+main #complete #registerForm .form-item,
+main #listEmptyPage #registerForm .form-item,
+main #addToWishlistSection #registerForm .form-item,
+main #addFriendPage #registerForm .form-item,
+main #addEventsPage #registerForm .form-item,
+main #friendsListPage #registerForm .form-item,
+main #resetContainer #registerForm .form-item,
+main #takePhoto #registerForm .form-item,
+main #addEventPage #registerForm .form-item,
+main #friendAddedPage #registerForm .form-item,
+main #giftcardFriendsDisplay #registerForm .form-item,
+main #editCard #registerForm .form-item,
+main #editCardFriends #registerForm .form-item {
+  width: 100%;
+}
+
+main #loginPage #registerForm .form-item #registerButton,
+main #registerPage #registerForm .form-item #registerButton,
+main #welcomePage #registerForm .form-item #registerButton,
+main #giftIdeaHomePage #registerForm .form-item #registerButton,
+main #StoresPage #registerForm .form-item #registerButton,
+main #FoundersPage #registerForm .form-item #registerButton,
+main #giftIdeaAdd #registerForm .form-item #registerButton,
+main #summaryCard #registerForm .form-item #registerButton,
+main #complete #registerForm .form-item #registerButton,
+main #listEmptyPage #registerForm .form-item #registerButton,
+main #addToWishlistSection #registerForm .form-item #registerButton,
+main #addFriendPage #registerForm .form-item #registerButton,
+main #addEventsPage #registerForm .form-item #registerButton,
+main #friendsListPage #registerForm .form-item #registerButton,
+main #resetContainer #registerForm .form-item #registerButton,
+main #takePhoto #registerForm .form-item #registerButton,
+main #addEventPage #registerForm .form-item #registerButton,
+main #friendAddedPage #registerForm .form-item #registerButton,
+main #giftcardFriendsDisplay #registerForm .form-item #registerButton,
+main #editCard #registerForm .form-item #registerButton,
+main #editCardFriends #registerForm .form-item #registerButton {
+  margin-left: 0.3rem;
+}
+
+main #loginPage #not-logged-in,
+main #loginPage #registerForm,
+main #registerPage #not-logged-in,
+main #registerPage #registerForm,
+main #welcomePage #not-logged-in,
+main #welcomePage #registerForm,
+main #giftIdeaHomePage #not-logged-in,
+main #giftIdeaHomePage #registerForm,
+main #StoresPage #not-logged-in,
+main #StoresPage #registerForm,
+main #FoundersPage #not-logged-in,
+main #FoundersPage #registerForm,
+main #giftIdeaAdd #not-logged-in,
+main #giftIdeaAdd #registerForm,
+main #summaryCard #not-logged-in,
+main #summaryCard #registerForm,
+main #complete #not-logged-in,
+main #complete #registerForm,
+main #listEmptyPage #not-logged-in,
+main #listEmptyPage #registerForm,
+main #addToWishlistSection #not-logged-in,
+main #addToWishlistSection #registerForm,
+main #addFriendPage #not-logged-in,
+main #addFriendPage #registerForm,
+main #addEventsPage #not-logged-in,
+main #addEventsPage #registerForm,
+main #friendsListPage #not-logged-in,
+main #friendsListPage #registerForm,
+main #resetContainer #not-logged-in,
+main #resetContainer #registerForm,
+main #takePhoto #not-logged-in,
+main #takePhoto #registerForm,
+main #addEventPage #not-logged-in,
+main #addEventPage #registerForm,
+main #friendAddedPage #not-logged-in,
+main #friendAddedPage #registerForm,
+main #giftcardFriendsDisplay #not-logged-in,
+main #giftcardFriendsDisplay #registerForm,
+main #editCard #not-logged-in,
+main #editCard #registerForm,
+main #editCardFriends #not-logged-in,
+main #editCardFriends #registerForm {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+}
+
+main #loginPage #not-logged-in a,
+main #loginPage #not-logged-in span,
+main #loginPage #registerForm a,
+main #loginPage #registerForm span,
+main #registerPage #not-logged-in a,
+main #registerPage #not-logged-in span,
+main #registerPage #registerForm a,
+main #registerPage #registerForm span,
+main #welcomePage #not-logged-in a,
+main #welcomePage #not-logged-in span,
+main #welcomePage #registerForm a,
+main #welcomePage #registerForm span,
+main #giftIdeaHomePage #not-logged-in a,
+main #giftIdeaHomePage #not-logged-in span,
+main #giftIdeaHomePage #registerForm a,
+main #giftIdeaHomePage #registerForm span,
+main #StoresPage #not-logged-in a,
+main #StoresPage #not-logged-in span,
+main #StoresPage #registerForm a,
+main #StoresPage #registerForm span,
+main #FoundersPage #not-logged-in a,
+main #FoundersPage #not-logged-in span,
+main #FoundersPage #registerForm a,
+main #FoundersPage #registerForm span,
+main #giftIdeaAdd #not-logged-in a,
+main #giftIdeaAdd #not-logged-in span,
+main #giftIdeaAdd #registerForm a,
+main #giftIdeaAdd #registerForm span,
+main #summaryCard #not-logged-in a,
+main #summaryCard #not-logged-in span,
+main #summaryCard #registerForm a,
+main #summaryCard #registerForm span,
+main #complete #not-logged-in a,
+main #complete #not-logged-in span,
+main #complete #registerForm a,
+main #complete #registerForm span,
+main #listEmptyPage #not-logged-in a,
+main #listEmptyPage #not-logged-in span,
+main #listEmptyPage #registerForm a,
+main #listEmptyPage #registerForm span,
+main #addToWishlistSection #not-logged-in a,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm a,
+main #addToWishlistSection #registerForm span,
+main #addFriendPage #not-logged-in a,
+main #addFriendPage #not-logged-in span,
+main #addFriendPage #registerForm a,
+main #addFriendPage #registerForm span,
+main #addEventsPage #not-logged-in a,
+main #addEventsPage #not-logged-in span,
+main #addEventsPage #registerForm a,
+main #addEventsPage #registerForm span,
+main #friendsListPage #not-logged-in a,
+main #friendsListPage #not-logged-in span,
+main #friendsListPage #registerForm a,
+main #friendsListPage #registerForm span,
+main #resetContainer #not-logged-in a,
+main #resetContainer #not-logged-in span,
+main #resetContainer #registerForm a,
+main #resetContainer #registerForm span,
+main #takePhoto #not-logged-in a,
+main #takePhoto #not-logged-in span,
+main #takePhoto #registerForm a,
+main #takePhoto #registerForm span,
+main #addEventPage #not-logged-in a,
+main #addEventPage #not-logged-in span,
+main #addEventPage #registerForm a,
+main #addEventPage #registerForm span,
+main #friendAddedPage #not-logged-in a,
+main #friendAddedPage #not-logged-in span,
+main #friendAddedPage #registerForm a,
+main #friendAddedPage #registerForm span,
+main #giftcardFriendsDisplay #not-logged-in a,
+main #giftcardFriendsDisplay #not-logged-in span,
+main #giftcardFriendsDisplay #registerForm a,
+main #giftcardFriendsDisplay #registerForm span,
+main #editCard #not-logged-in a,
+main #editCard #not-logged-in span,
+main #editCard #registerForm a,
+main #editCard #registerForm span,
+main #editCardFriends #not-logged-in a,
+main #editCardFriends #not-logged-in span,
+main #editCardFriends #registerForm a,
+main #editCardFriends #registerForm span {
+  color: #212531;
+}
+
+main #loginPage #not-logged-in .link2,
+main #loginPage #not-logged-in .link3,
+main #loginPage #not-logged-in span,
+main #loginPage #registerForm .link2,
+main #loginPage #registerForm .link3,
+main #loginPage #registerForm span,
+main #registerPage #not-logged-in .link2,
+main #registerPage #not-logged-in .link3,
+main #registerPage #not-logged-in span,
+main #registerPage #registerForm .link2,
+main #registerPage #registerForm .link3,
+main #registerPage #registerForm span,
+main #welcomePage #not-logged-in .link2,
+main #welcomePage #not-logged-in .link3,
+main #welcomePage #not-logged-in span,
+main #welcomePage #registerForm .link2,
+main #welcomePage #registerForm .link3,
+main #welcomePage #registerForm span,
+main #giftIdeaHomePage #not-logged-in .link2,
+main #giftIdeaHomePage #not-logged-in .link3,
+main #giftIdeaHomePage #not-logged-in span,
+main #giftIdeaHomePage #registerForm .link2,
+main #giftIdeaHomePage #registerForm .link3,
+main #giftIdeaHomePage #registerForm span,
+main #StoresPage #not-logged-in .link2,
+main #StoresPage #not-logged-in .link3,
+main #StoresPage #not-logged-in span,
+main #StoresPage #registerForm .link2,
+main #StoresPage #registerForm .link3,
+main #StoresPage #registerForm span,
+main #FoundersPage #not-logged-in .link2,
+main #FoundersPage #not-logged-in .link3,
+main #FoundersPage #not-logged-in span,
+main #FoundersPage #registerForm .link2,
+main #FoundersPage #registerForm .link3,
+main #FoundersPage #registerForm span,
+main #giftIdeaAdd #not-logged-in .link2,
+main #giftIdeaAdd #not-logged-in .link3,
+main #giftIdeaAdd #not-logged-in span,
+main #giftIdeaAdd #registerForm .link2,
+main #giftIdeaAdd #registerForm .link3,
+main #giftIdeaAdd #registerForm span,
+main #summaryCard #not-logged-in .link2,
+main #summaryCard #not-logged-in .link3,
+main #summaryCard #not-logged-in span,
+main #summaryCard #registerForm .link2,
+main #summaryCard #registerForm .link3,
+main #summaryCard #registerForm span,
+main #complete #not-logged-in .link2,
+main #complete #not-logged-in .link3,
+main #complete #not-logged-in span,
+main #complete #registerForm .link2,
+main #complete #registerForm .link3,
+main #complete #registerForm span,
+main #listEmptyPage #not-logged-in .link2,
+main #listEmptyPage #not-logged-in .link3,
+main #listEmptyPage #not-logged-in span,
+main #listEmptyPage #registerForm .link2,
+main #listEmptyPage #registerForm .link3,
+main #listEmptyPage #registerForm span,
+main #addToWishlistSection #not-logged-in .link2,
+main #addToWishlistSection #not-logged-in .link3,
+main #addToWishlistSection #not-logged-in span,
+main #addToWishlistSection #registerForm .link2,
+main #addToWishlistSection #registerForm .link3,
+main #addToWishlistSection #registerForm span,
+main #addFriendPage #not-logged-in .link2,
+main #addFriendPage #not-logged-in .link3,
+main #addFriendPage #not-logged-in span,
+main #addFriendPage #registerForm .link2,
+main #addFriendPage #registerForm .link3,
+main #addFriendPage #registerForm span,
+main #addEventsPage #not-logged-in .link2,
+main #addEventsPage #not-logged-in .link3,
+main #addEventsPage #not-logged-in span,
+main #addEventsPage #registerForm .link2,
+main #addEventsPage #registerForm .link3,
+main #addEventsPage #registerForm span,
+main #friendsListPage #not-logged-in .link2,
+main #friendsListPage #not-logged-in .link3,
+main #friendsListPage #not-logged-in span,
+main #friendsListPage #registerForm .link2,
+main #friendsListPage #registerForm .link3,
+main #friendsListPage #registerForm span,
+main #resetContainer #not-logged-in .link2,
+main #resetContainer #not-logged-in .link3,
+main #resetContainer #not-logged-in span,
+main #resetContainer #registerForm .link2,
+main #resetContainer #registerForm .link3,
+main #resetContainer #registerForm span,
+main #takePhoto #not-logged-in .link2,
+main #takePhoto #not-logged-in .link3,
+main #takePhoto #not-logged-in span,
+main #takePhoto #registerForm .link2,
+main #takePhoto #registerForm .link3,
+main #takePhoto #registerForm span,
+main #addEventPage #not-logged-in .link2,
+main #addEventPage #not-logged-in .link3,
+main #addEventPage #not-logged-in span,
+main #addEventPage #registerForm .link2,
+main #addEventPage #registerForm .link3,
+main #addEventPage #registerForm span,
+main #friendAddedPage #not-logged-in .link2,
+main #friendAddedPage #not-logged-in .link3,
+main #friendAddedPage #not-logged-in span,
+main #friendAddedPage #registerForm .link2,
+main #friendAddedPage #registerForm .link3,
+main #friendAddedPage #registerForm span,
+main #giftcardFriendsDisplay #not-logged-in .link2,
+main #giftcardFriendsDisplay #not-logged-in .link3,
+main #giftcardFriendsDisplay #not-logged-in span,
+main #giftcardFriendsDisplay #registerForm .link2,
+main #giftcardFriendsDisplay #registerForm .link3,
+main #giftcardFriendsDisplay #registerForm span,
+main #editCard #not-logged-in .link2,
+main #editCard #not-logged-in .link3,
+main #editCard #not-logged-in span,
+main #editCard #registerForm .link2,
+main #editCard #registerForm .link3,
+main #editCard #registerForm span,
+main #editCardFriends #not-logged-in .link2,
+main #editCardFriends #not-logged-in .link3,
+main #editCardFriends #not-logged-in span,
+main #editCardFriends #registerForm .link2,
+main #editCardFriends #registerForm .link3,
+main #editCardFriends #registerForm span {
+  color: #f9f9fb;
+}
+
+main #loginPage #not-logged-in input#email1,
+main #loginPage #not-logged-in #password1,
+main #loginPage #not-logged-in #username,
+main #loginPage #not-logged-in #email,
+main #loginPage #not-logged-in #password,
+main #loginPage #not-logged-in #confirmPassword,
+main #loginPage #not-logged-in #registerButton,
+main #loginPage #registerForm input#email1,
+main #loginPage #registerForm #password1,
+main #loginPage #registerForm #username,
+main #loginPage #registerForm #email,
+main #loginPage #registerForm #password,
+main #loginPage #registerForm #confirmPassword,
+main #loginPage #registerForm #registerButton,
+main #registerPage #not-logged-in input#email1,
+main #registerPage #not-logged-in #password1,
+main #registerPage #not-logged-in #username,
+main #registerPage #not-logged-in #email,
+main #registerPage #not-logged-in #password,
+main #registerPage #not-logged-in #confirmPassword,
+main #registerPage #not-logged-in #registerButton,
+main #registerPage #registerForm input#email1,
+main #registerPage #registerForm #password1,
+main #registerPage #registerForm #username,
+main #registerPage #registerForm #email,
+main #registerPage #registerForm #password,
+main #registerPage #registerForm #confirmPassword,
+main #registerPage #registerForm #registerButton,
+main #welcomePage #not-logged-in input#email1,
+main #welcomePage #not-logged-in #password1,
+main #welcomePage #not-logged-in #username,
+main #welcomePage #not-logged-in #email,
+main #welcomePage #not-logged-in #password,
+main #welcomePage #not-logged-in #confirmPassword,
+main #welcomePage #not-logged-in #registerButton,
+main #welcomePage #registerForm input#email1,
+main #welcomePage #registerForm #password1,
+main #welcomePage #registerForm #username,
+main #welcomePage #registerForm #email,
+main #welcomePage #registerForm #password,
+main #welcomePage #registerForm #confirmPassword,
+main #welcomePage #registerForm #registerButton,
+main #giftIdeaHomePage #not-logged-in input#email1,
+main #giftIdeaHomePage #not-logged-in #password1,
+main #giftIdeaHomePage #not-logged-in #username,
+main #giftIdeaHomePage #not-logged-in #email,
+main #giftIdeaHomePage #not-logged-in #password,
+main #giftIdeaHomePage #not-logged-in #confirmPassword,
+main #giftIdeaHomePage #not-logged-in #registerButton,
+main #giftIdeaHomePage #registerForm input#email1,
+main #giftIdeaHomePage #registerForm #password1,
+main #giftIdeaHomePage #registerForm #username,
+main #giftIdeaHomePage #registerForm #email,
+main #giftIdeaHomePage #registerForm #password,
+main #giftIdeaHomePage #registerForm #confirmPassword,
+main #giftIdeaHomePage #registerForm #registerButton,
+main #StoresPage #not-logged-in input#email1,
+main #StoresPage #not-logged-in #password1,
+main #StoresPage #not-logged-in #username,
+main #StoresPage #not-logged-in #email,
+main #StoresPage #not-logged-in #password,
+main #StoresPage #not-logged-in #confirmPassword,
+main #StoresPage #not-logged-in #registerButton,
+main #StoresPage #registerForm input#email1,
+main #StoresPage #registerForm #password1,
+main #StoresPage #registerForm #username,
+main #StoresPage #registerForm #email,
+main #StoresPage #registerForm #password,
+main #StoresPage #registerForm #confirmPassword,
+main #StoresPage #registerForm #registerButton,
+main #FoundersPage #not-logged-in input#email1,
+main #FoundersPage #not-logged-in #password1,
+main #FoundersPage #not-logged-in #username,
+main #FoundersPage #not-logged-in #email,
+main #FoundersPage #not-logged-in #password,
+main #FoundersPage #not-logged-in #confirmPassword,
+main #FoundersPage #not-logged-in #registerButton,
+main #FoundersPage #registerForm input#email1,
+main #FoundersPage #registerForm #password1,
+main #FoundersPage #registerForm #username,
+main #FoundersPage #registerForm #email,
+main #FoundersPage #registerForm #password,
+main #FoundersPage #registerForm #confirmPassword,
+main #FoundersPage #registerForm #registerButton,
+main #giftIdeaAdd #not-logged-in input#email1,
+main #giftIdeaAdd #not-logged-in #password1,
+main #giftIdeaAdd #not-logged-in #username,
+main #giftIdeaAdd #not-logged-in #email,
+main #giftIdeaAdd #not-logged-in #password,
+main #giftIdeaAdd #not-logged-in #confirmPassword,
+main #giftIdeaAdd #not-logged-in #registerButton,
+main #giftIdeaAdd #registerForm input#email1,
+main #giftIdeaAdd #registerForm #password1,
+main #giftIdeaAdd #registerForm #username,
+main #giftIdeaAdd #registerForm #email,
+main #giftIdeaAdd #registerForm #password,
+main #giftIdeaAdd #registerForm #confirmPassword,
+main #giftIdeaAdd #registerForm #registerButton,
+main #summaryCard #not-logged-in input#email1,
+main #summaryCard #not-logged-in #password1,
+main #summaryCard #not-logged-in #username,
+main #summaryCard #not-logged-in #email,
+main #summaryCard #not-logged-in #password,
+main #summaryCard #not-logged-in #confirmPassword,
+main #summaryCard #not-logged-in #registerButton,
+main #summaryCard #registerForm input#email1,
+main #summaryCard #registerForm #password1,
+main #summaryCard #registerForm #username,
+main #summaryCard #registerForm #email,
+main #summaryCard #registerForm #password,
+main #summaryCard #registerForm #confirmPassword,
+main #summaryCard #registerForm #registerButton,
+main #complete #not-logged-in input#email1,
+main #complete #not-logged-in #password1,
+main #complete #not-logged-in #username,
+main #complete #not-logged-in #email,
+main #complete #not-logged-in #password,
+main #complete #not-logged-in #confirmPassword,
+main #complete #not-logged-in #registerButton,
+main #complete #registerForm input#email1,
+main #complete #registerForm #password1,
+main #complete #registerForm #username,
+main #complete #registerForm #email,
+main #complete #registerForm #password,
+main #complete #registerForm #confirmPassword,
+main #complete #registerForm #registerButton,
+main #listEmptyPage #not-logged-in input#email1,
+main #listEmptyPage #not-logged-in #password1,
+main #listEmptyPage #not-logged-in #username,
+main #listEmptyPage #not-logged-in #email,
+main #listEmptyPage #not-logged-in #password,
+main #listEmptyPage #not-logged-in #confirmPassword,
+main #listEmptyPage #not-logged-in #registerButton,
+main #listEmptyPage #registerForm input#email1,
+main #listEmptyPage #registerForm #password1,
+main #listEmptyPage #registerForm #username,
+main #listEmptyPage #registerForm #email,
+main #listEmptyPage #registerForm #password,
+main #listEmptyPage #registerForm #confirmPassword,
+main #listEmptyPage #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in input#email1,
+main #addToWishlistSection #not-logged-in #password1,
+main #addToWishlistSection #not-logged-in #username,
+main #addToWishlistSection #not-logged-in #email,
+main #addToWishlistSection #not-logged-in #password,
+main #addToWishlistSection #not-logged-in #confirmPassword,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm input#email1,
+main #addToWishlistSection #registerForm #password1,
+main #addToWishlistSection #registerForm #username,
+main #addToWishlistSection #registerForm #email,
+main #addToWishlistSection #registerForm #password,
+main #addToWishlistSection #registerForm #confirmPassword,
+main #addToWishlistSection #registerForm #registerButton,
+main #addFriendPage #not-logged-in input#email1,
+main #addFriendPage #not-logged-in #password1,
+main #addFriendPage #not-logged-in #username,
+main #addFriendPage #not-logged-in #email,
+main #addFriendPage #not-logged-in #password,
+main #addFriendPage #not-logged-in #confirmPassword,
+main #addFriendPage #not-logged-in #registerButton,
+main #addFriendPage #registerForm input#email1,
+main #addFriendPage #registerForm #password1,
+main #addFriendPage #registerForm #username,
+main #addFriendPage #registerForm #email,
+main #addFriendPage #registerForm #password,
+main #addFriendPage #registerForm #confirmPassword,
+main #addFriendPage #registerForm #registerButton,
+main #addEventsPage #not-logged-in input#email1,
+main #addEventsPage #not-logged-in #password1,
+main #addEventsPage #not-logged-in #username,
+main #addEventsPage #not-logged-in #email,
+main #addEventsPage #not-logged-in #password,
+main #addEventsPage #not-logged-in #confirmPassword,
+main #addEventsPage #not-logged-in #registerButton,
+main #addEventsPage #registerForm input#email1,
+main #addEventsPage #registerForm #password1,
+main #addEventsPage #registerForm #username,
+main #addEventsPage #registerForm #email,
+main #addEventsPage #registerForm #password,
+main #addEventsPage #registerForm #confirmPassword,
+main #addEventsPage #registerForm #registerButton,
+main #friendsListPage #not-logged-in input#email1,
+main #friendsListPage #not-logged-in #password1,
+main #friendsListPage #not-logged-in #username,
+main #friendsListPage #not-logged-in #email,
+main #friendsListPage #not-logged-in #password,
+main #friendsListPage #not-logged-in #confirmPassword,
+main #friendsListPage #not-logged-in #registerButton,
+main #friendsListPage #registerForm input#email1,
+main #friendsListPage #registerForm #password1,
+main #friendsListPage #registerForm #username,
+main #friendsListPage #registerForm #email,
+main #friendsListPage #registerForm #password,
+main #friendsListPage #registerForm #confirmPassword,
+main #friendsListPage #registerForm #registerButton,
+main #resetContainer #not-logged-in input#email1,
+main #resetContainer #not-logged-in #password1,
+main #resetContainer #not-logged-in #username,
+main #resetContainer #not-logged-in #email,
+main #resetContainer #not-logged-in #password,
+main #resetContainer #not-logged-in #confirmPassword,
+main #resetContainer #not-logged-in #registerButton,
+main #resetContainer #registerForm input#email1,
+main #resetContainer #registerForm #password1,
+main #resetContainer #registerForm #username,
+main #resetContainer #registerForm #email,
+main #resetContainer #registerForm #password,
+main #resetContainer #registerForm #confirmPassword,
+main #resetContainer #registerForm #registerButton,
+main #takePhoto #not-logged-in input#email1,
+main #takePhoto #not-logged-in #password1,
+main #takePhoto #not-logged-in #username,
+main #takePhoto #not-logged-in #email,
+main #takePhoto #not-logged-in #password,
+main #takePhoto #not-logged-in #confirmPassword,
+main #takePhoto #not-logged-in #registerButton,
+main #takePhoto #registerForm input#email1,
+main #takePhoto #registerForm #password1,
+main #takePhoto #registerForm #username,
+main #takePhoto #registerForm #email,
+main #takePhoto #registerForm #password,
+main #takePhoto #registerForm #confirmPassword,
+main #takePhoto #registerForm #registerButton,
+main #addEventPage #not-logged-in input#email1,
+main #addEventPage #not-logged-in #password1,
+main #addEventPage #not-logged-in #username,
+main #addEventPage #not-logged-in #email,
+main #addEventPage #not-logged-in #password,
+main #addEventPage #not-logged-in #confirmPassword,
+main #addEventPage #not-logged-in #registerButton,
+main #addEventPage #registerForm input#email1,
+main #addEventPage #registerForm #password1,
+main #addEventPage #registerForm #username,
+main #addEventPage #registerForm #email,
+main #addEventPage #registerForm #password,
+main #addEventPage #registerForm #confirmPassword,
+main #addEventPage #registerForm #registerButton,
+main #friendAddedPage #not-logged-in input#email1,
+main #friendAddedPage #not-logged-in #password1,
+main #friendAddedPage #not-logged-in #username,
+main #friendAddedPage #not-logged-in #email,
+main #friendAddedPage #not-logged-in #password,
+main #friendAddedPage #not-logged-in #confirmPassword,
+main #friendAddedPage #not-logged-in #registerButton,
+main #friendAddedPage #registerForm input#email1,
+main #friendAddedPage #registerForm #password1,
+main #friendAddedPage #registerForm #username,
+main #friendAddedPage #registerForm #email,
+main #friendAddedPage #registerForm #password,
+main #friendAddedPage #registerForm #confirmPassword,
+main #friendAddedPage #registerForm #registerButton,
+main #giftcardFriendsDisplay #not-logged-in input#email1,
+main #giftcardFriendsDisplay #not-logged-in #password1,
+main #giftcardFriendsDisplay #not-logged-in #username,
+main #giftcardFriendsDisplay #not-logged-in #email,
+main #giftcardFriendsDisplay #not-logged-in #password,
+main #giftcardFriendsDisplay #not-logged-in #confirmPassword,
+main #giftcardFriendsDisplay #not-logged-in #registerButton,
+main #giftcardFriendsDisplay #registerForm input#email1,
+main #giftcardFriendsDisplay #registerForm #password1,
+main #giftcardFriendsDisplay #registerForm #username,
+main #giftcardFriendsDisplay #registerForm #email,
+main #giftcardFriendsDisplay #registerForm #password,
+main #giftcardFriendsDisplay #registerForm #confirmPassword,
+main #giftcardFriendsDisplay #registerForm #registerButton,
+main #editCard #not-logged-in input#email1,
+main #editCard #not-logged-in #password1,
+main #editCard #not-logged-in #username,
+main #editCard #not-logged-in #email,
+main #editCard #not-logged-in #password,
+main #editCard #not-logged-in #confirmPassword,
+main #editCard #not-logged-in #registerButton,
+main #editCard #registerForm input#email1,
+main #editCard #registerForm #password1,
+main #editCard #registerForm #username,
+main #editCard #registerForm #email,
+main #editCard #registerForm #password,
+main #editCard #registerForm #confirmPassword,
+main #editCard #registerForm #registerButton,
+main #editCardFriends #not-logged-in input#email1,
+main #editCardFriends #not-logged-in #password1,
+main #editCardFriends #not-logged-in #username,
+main #editCardFriends #not-logged-in #email,
+main #editCardFriends #not-logged-in #password,
+main #editCardFriends #not-logged-in #confirmPassword,
+main #editCardFriends #not-logged-in #registerButton,
+main #editCardFriends #registerForm input#email1,
+main #editCardFriends #registerForm #password1,
+main #editCardFriends #registerForm #username,
+main #editCardFriends #registerForm #email,
+main #editCardFriends #registerForm #password,
+main #editCardFriends #registerForm #confirmPassword,
+main #editCardFriends #registerForm #registerButton {
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+  padding-right: 0;
+}
+
+main #loginPage #not-logged-in .forgot-password,
+main #loginPage #registerForm .forgot-password,
+main #registerPage #not-logged-in .forgot-password,
+main #registerPage #registerForm .forgot-password,
+main #welcomePage #not-logged-in .forgot-password,
+main #welcomePage #registerForm .forgot-password,
+main #giftIdeaHomePage #not-logged-in .forgot-password,
+main #giftIdeaHomePage #registerForm .forgot-password,
+main #StoresPage #not-logged-in .forgot-password,
+main #StoresPage #registerForm .forgot-password,
+main #FoundersPage #not-logged-in .forgot-password,
+main #FoundersPage #registerForm .forgot-password,
+main #giftIdeaAdd #not-logged-in .forgot-password,
+main #giftIdeaAdd #registerForm .forgot-password,
+main #summaryCard #not-logged-in .forgot-password,
+main #summaryCard #registerForm .forgot-password,
+main #complete #not-logged-in .forgot-password,
+main #complete #registerForm .forgot-password,
+main #listEmptyPage #not-logged-in .forgot-password,
+main #listEmptyPage #registerForm .forgot-password,
+main #addToWishlistSection #not-logged-in .forgot-password,
+main #addToWishlistSection #registerForm .forgot-password,
+main #addFriendPage #not-logged-in .forgot-password,
+main #addFriendPage #registerForm .forgot-password,
+main #addEventsPage #not-logged-in .forgot-password,
+main #addEventsPage #registerForm .forgot-password,
+main #friendsListPage #not-logged-in .forgot-password,
+main #friendsListPage #registerForm .forgot-password,
+main #resetContainer #not-logged-in .forgot-password,
+main #resetContainer #registerForm .forgot-password,
+main #takePhoto #not-logged-in .forgot-password,
+main #takePhoto #registerForm .forgot-password,
+main #addEventPage #not-logged-in .forgot-password,
+main #addEventPage #registerForm .forgot-password,
+main #friendAddedPage #not-logged-in .forgot-password,
+main #friendAddedPage #registerForm .forgot-password,
+main #giftcardFriendsDisplay #not-logged-in .forgot-password,
+main #giftcardFriendsDisplay #registerForm .forgot-password,
+main #editCard #not-logged-in .forgot-password,
+main #editCard #registerForm .forgot-password,
+main #editCardFriends #not-logged-in .forgot-password,
+main #editCardFriends #registerForm .forgot-password {
+  text-align: right;
+}
+
+main #loginPage #not-logged-in #registerButton,
+main #loginPage #registerForm #registerButton,
+main #registerPage #not-logged-in #registerButton,
+main #registerPage #registerForm #registerButton,
+main #welcomePage #not-logged-in #registerButton,
+main #welcomePage #registerForm #registerButton,
+main #giftIdeaHomePage #not-logged-in #registerButton,
+main #giftIdeaHomePage #registerForm #registerButton,
+main #StoresPage #not-logged-in #registerButton,
+main #StoresPage #registerForm #registerButton,
+main #FoundersPage #not-logged-in #registerButton,
+main #FoundersPage #registerForm #registerButton,
+main #giftIdeaAdd #not-logged-in #registerButton,
+main #giftIdeaAdd #registerForm #registerButton,
+main #summaryCard #not-logged-in #registerButton,
+main #summaryCard #registerForm #registerButton,
+main #complete #not-logged-in #registerButton,
+main #complete #registerForm #registerButton,
+main #listEmptyPage #not-logged-in #registerButton,
+main #listEmptyPage #registerForm #registerButton,
+main #addToWishlistSection #not-logged-in #registerButton,
+main #addToWishlistSection #registerForm #registerButton,
+main #addFriendPage #not-logged-in #registerButton,
+main #addFriendPage #registerForm #registerButton,
+main #addEventsPage #not-logged-in #registerButton,
+main #addEventsPage #registerForm #registerButton,
+main #friendsListPage #not-logged-in #registerButton,
+main #friendsListPage #registerForm #registerButton,
+main #resetContainer #not-logged-in #registerButton,
+main #resetContainer #registerForm #registerButton,
+main #takePhoto #not-logged-in #registerButton,
+main #takePhoto #registerForm #registerButton,
+main #addEventPage #not-logged-in #registerButton,
+main #addEventPage #registerForm #registerButton,
+main #friendAddedPage #not-logged-in #registerButton,
+main #friendAddedPage #registerForm #registerButton,
+main #giftcardFriendsDisplay #not-logged-in #registerButton,
+main #giftcardFriendsDisplay #registerForm #registerButton,
+main #editCard #not-logged-in #registerButton,
+main #editCard #registerForm #registerButton,
+main #editCardFriends #not-logged-in #registerButton,
+main #editCardFriends #registerForm #registerButton {
+  background-color: #86e4de;
+  border-color: #86e4de;
+  color: #212531;
+}
+
+main #loginPage h2,
+main #registerPage h2,
+main #welcomePage h2,
+main #giftIdeaHomePage h2,
+main #StoresPage h2,
+main #FoundersPage h2,
+main #giftIdeaAdd h2,
+main #summaryCard h2,
+main #complete h2,
+main #listEmptyPage h2,
+main #addToWishlistSection h2,
+main #addFriendPage h2,
+main #addEventsPage h2,
+main #friendsListPage h2,
+main #resetContainer h2,
+main #takePhoto h2,
+main #addEventPage h2,
+main #friendAddedPage h2,
+main #giftcardFriendsDisplay h2,
+main #editCard h2,
+main #editCardFriends h2 {
+  color: #f9f9fb;
+  text-align: center;
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 2rem;
+}
+
+main #loginPage label,
+main #registerPage label,
+main #welcomePage label,
+main #giftIdeaHomePage label,
+main #StoresPage label,
+main #FoundersPage label,
+main #giftIdeaAdd label,
+main #summaryCard label,
+main #complete label,
+main #listEmptyPage label,
+main #addToWishlistSection label,
+main #addFriendPage label,
+main #addEventsPage label,
+main #friendsListPage label,
+main #resetContainer label,
+main #takePhoto label,
+main #addEventPage label,
+main #friendAddedPage label,
+main #giftcardFriendsDisplay label,
+main #editCard label,
+main #editCardFriends label {
+  padding: 0;
+}
+
+main #loginPage .footer-login,
+main #registerPage .footer-login,
+main #welcomePage .footer-login,
+main #giftIdeaHomePage .footer-login,
+main #StoresPage .footer-login,
+main #FoundersPage .footer-login,
+main #giftIdeaAdd .footer-login,
+main #summaryCard .footer-login,
+main #complete .footer-login,
+main #listEmptyPage .footer-login,
+main #addToWishlistSection .footer-login,
+main #addFriendPage .footer-login,
+main #addEventsPage .footer-login,
+main #friendsListPage .footer-login,
+main #resetContainer .footer-login,
+main #takePhoto .footer-login,
+main #addEventPage .footer-login,
+main #friendAddedPage .footer-login,
+main #giftcardFriendsDisplay .footer-login,
+main #editCard .footer-login,
+main #editCardFriends .footer-login {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main #loginPage #registerForm .footer-register,
+main #registerPage #registerForm .footer-register,
+main #welcomePage #registerForm .footer-register,
+main #giftIdeaHomePage #registerForm .footer-register,
+main #StoresPage #registerForm .footer-register,
+main #FoundersPage #registerForm .footer-register,
+main #giftIdeaAdd #registerForm .footer-register,
+main #summaryCard #registerForm .footer-register,
+main #complete #registerForm .footer-register,
+main #listEmptyPage #registerForm .footer-register,
+main #addToWishlistSection #registerForm .footer-register,
+main #addFriendPage #registerForm .footer-register,
+main #addEventsPage #registerForm .footer-register,
+main #friendsListPage #registerForm .footer-register,
+main #resetContainer #registerForm .footer-register,
+main #takePhoto #registerForm .footer-register,
+main #addEventPage #registerForm .footer-register,
+main #friendAddedPage #registerForm .footer-register,
+main #giftcardFriendsDisplay #registerForm .footer-register,
+main #editCard #registerForm .footer-register,
+main #editCardFriends #registerForm .footer-register {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+main #loginPage #registerForm .footer-register span,
+main #loginPage #registerForm .footer-register a,
+main #registerPage #registerForm .footer-register span,
+main #registerPage #registerForm .footer-register a,
+main #welcomePage #registerForm .footer-register span,
+main #welcomePage #registerForm .footer-register a,
+main #giftIdeaHomePage #registerForm .footer-register span,
+main #giftIdeaHomePage #registerForm .footer-register a,
+main #StoresPage #registerForm .footer-register span,
+main #StoresPage #registerForm .footer-register a,
+main #FoundersPage #registerForm .footer-register span,
+main #FoundersPage #registerForm .footer-register a,
+main #giftIdeaAdd #registerForm .footer-register span,
+main #giftIdeaAdd #registerForm .footer-register a,
+main #summaryCard #registerForm .footer-register span,
+main #summaryCard #registerForm .footer-register a,
+main #complete #registerForm .footer-register span,
+main #complete #registerForm .footer-register a,
+main #listEmptyPage #registerForm .footer-register span,
+main #listEmptyPage #registerForm .footer-register a,
+main #addToWishlistSection #registerForm .footer-register span,
+main #addToWishlistSection #registerForm .footer-register a,
+main #addFriendPage #registerForm .footer-register span,
+main #addFriendPage #registerForm .footer-register a,
+main #addEventsPage #registerForm .footer-register span,
+main #addEventsPage #registerForm .footer-register a,
+main #friendsListPage #registerForm .footer-register span,
+main #friendsListPage #registerForm .footer-register a,
+main #resetContainer #registerForm .footer-register span,
+main #resetContainer #registerForm .footer-register a,
+main #takePhoto #registerForm .footer-register span,
+main #takePhoto #registerForm .footer-register a,
+main #addEventPage #registerForm .footer-register span,
+main #addEventPage #registerForm .footer-register a,
+main #friendAddedPage #registerForm .footer-register span,
+main #friendAddedPage #registerForm .footer-register a,
+main #giftcardFriendsDisplay #registerForm .footer-register span,
+main #giftcardFriendsDisplay #registerForm .footer-register a,
+main #editCard #registerForm .footer-register span,
+main #editCard #registerForm .footer-register a,
+main #editCardFriends #registerForm .footer-register span,
+main #editCardFriends #registerForm .footer-register a {
+  color: #f9f9fb;
+}
+
+main #welcomePage h1 {
+  font-size: 3rem;
+}
+
+main #welcomePage .footer-welcome {
+  text-align: center;
+}
+
+main #welcomePage .footer-welcome div {
+  padding: 1rem;
+}
+
+main #welcomePage .footer-welcome a {
+  color: #f9f9fb;
+}
+
+main #demo-page #demopage1,
+main #demo-page #demopage2,
+main #demo-page #demopage3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70vh;
+  background-color: #f9f9fb;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #demo-page .fas {
+  justify-self: baseline;
+}
+
+main #demo-page .footer-demo {
+  background-color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 30vh;
+}
+
+main #demo-page #sign-up,
+main #demo-page #log-in {
+  width: 60%;
+  font-family: "Livvic", sans-serif;
+  margin: 1rem;
+}
+
+main #demo-page #sign-up a,
+main #demo-page #log-in a {
+  text-decoration: none;
+}
+
+main #loginPage h2 {
+  margin: 0;
+}
+
+main #loginPage #logged-in {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40vh;
+}
+
+main #giftIdeaHomePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #giftIdeaHomePage .link4 {
+  color: #f9f9fb;
+}
+
+main #giftIdeaHomePage #startIdeaBtn {
+  background-color: #86e4de;
+  border-color: #86e4de;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #giftIdeaHomePage #startIdeaBtn a {
+  color: #212531;
+}
+
+#giftIdeaProcess #summaryCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+#giftIdeaProcess #summaryCard #summaryCardimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#giftIdeaProcess #summaryCard #summaryCardimage img {
+  border-radius: 25px;
+  max-width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#giftIdeaProcess #addToWishlistSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+@media screen and (min-width: 650px) {
+  #windowDescription p {
+    width: 100%;
+  }
+}
+
+.add-idea-3 {
+  text-align: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.idea-window {
+  border-radius: 25px;
+  width: 80%;
+}
+
+.idea-window img {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 0;
+  border-radius: 25px;
+}
+
+#windowDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#windowDescription h3 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  margin: 0;
+}
+
+#windowDescription p {
+  word-wrap: break-word;
+  text-align: center;
+  width: 70%;
+  margin: 2%;
+  font-family: "Livvic", sans-serif;
+}
+
+#seeFriendsList {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 1rem;
+  padding: 1rem 4rem;
+  border-radius: 44px;
+  border: 1px solid #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #86e4de;
+  border-color: #aba0f5;
+  color: #212531;
+}
+
+#seeFriendsList a {
+  color: #212531;
+}
+
+.add-idea-1 {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5%;
+  justify-items: space-between;
+  min-height: 80vh;
+}
+
+.add-idea-2 {
+  width: 80vw;
+}
+
+.add-idea-3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.add-idea-1 label,
+.add-idea-2 label,
+.add-idea-3 label {
+  color: #f9f9fb;
+}
+
+.add-idea-1 .images,
+.add-idea-2 .images,
+.add-idea-3 .images {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.add-idea-1 #ideaForm,
+.add-idea-2 #ideaForm,
+.add-idea-3 #ideaForm {
+  width: 100%;
+}
+
+.add-idea-1 #ideaForm #gift_title,
+.add-idea-2 #ideaForm #gift_title,
+.add-idea-3 #ideaForm #gift_title {
+  color: #f9f9fb;
+  background: #363d51;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: "Baloo Bhai 2", sans-serif;
+  border-bottom: 1px solid #f9f9fb;
+  padding: 2%;
+  width: 96%;
+  margin: auto;
+}
+
+.add-idea-1 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_title::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_title::-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_title::placeholder,
+.add-idea-2 #ideaForm #gift_title::placeholder,
+.add-idea-3 #ideaForm #gift_title::placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description,
+.add-idea-2 #ideaForm #gift_description,
+.add-idea-3 #ideaForm #gift_description {
+  background: none;
+  border: none;
+  padding: 3% 1%;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  color: #f9f9fb;
+  font-family: "Livvic", sans-serif;
+  resize: none;
+}
+
+.add-idea-1 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-webkit-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-webkit-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description:-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description:-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-2 #ideaForm #gift_description::-ms-input-placeholder,
+.add-idea-3 #ideaForm #gift_description::-ms-input-placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #ideaForm #gift_description::placeholder,
+.add-idea-2 #ideaForm #gift_description::placeholder,
+.add-idea-3 #ideaForm #gift_description::placeholder {
+  color: #f9f9fb;
+}
+
+.add-idea-1 #displayTitle,
+.add-idea-2 #displayTitle,
+.add-idea-3 #displayTitle {
+  background: none;
+  border: none;
+  padding: 0.7rem 0.7rem;
+  border-bottom: 1px solid #f9f9fb;
+  width: 100%;
+}
+
+.add-idea-1 #displayDesc,
+.add-idea-2 #displayDesc,
+.add-idea-3 #displayDesc {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.add-idea-1 #coordinates,
+.add-idea-2 #coordinates,
+.add-idea-3 #coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  border: none;
+  border-radius: 44px;
+  width: 330px;
+  height: 48px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+#locate {
+  border: none;
+  width: 1%;
+  padding: 0;
+  border-radius: 44px;
+  background: white;
+  height: 40px;
+  width: 40px;
+}
+
+#locate .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#addPhoto {
+  margin: 1rem;
+}
+
+#video {
+  border: 0.5px solid #f9f9fb;
+  width: 240px;
+  height: 180px;
+  border-radius: 25px;
+}
+
+#canvas {
+  border: 0.5px solid #f9f9fb;
+  width: 240px;
+  height: 180px;
+  border-radius: 25px;
+}
+
+#camera_btn,
+#gallery_btn {
+  margin: 5%;
+  background-color: #363d51;
+  border-style: none;
+  width: 20%;
+}
+
+main #takePhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+main #takePhoto #camera {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+main #takePhoto #backToIdeaAdd2 {
+  margin: 0;
+}
+
+main #takePhoto #backToIdeaAdd2 i {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.link-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#map-link {
+  color: #363d51;
+  padding-left: 3rem;
+}
+
+.add-idea-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#backToSummaryCard i {
+  margin-top: 1rem;
+}
+
+#nextToWishlists {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #86e4de;
+  border-color: #86e4de;
+  margin: 0;
+}
+
+#nextToWishlists a {
+  color: #212531;
+}
+
+#windowImage img {
+  max-width: 50vw;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#windowImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 650px) {
+  #windowImage img {
+    max-width: 400px;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+#addGift,
+#addtowish,
+#nextToEvents,
+#addToDB,
+#sign-up,
+#log-in,
+#addFriend,
+#addFriendBtn,
+#fetchFriendsBtn,
+#reset_password,
+#noreset,
+#snap,
+#backtologin,
+#addPhoto,
+#addAFriendBtn,
+#friendtoProfile,
+#addEventBtn,
+#friendAddBtn {
+  padding: 1rem 0;
+  border-radius: 1rem;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #86e4de;
+  border-color: #86e4de;
+  color: #212531;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#addGift a,
+#addtowish a,
+#nextToEvents a,
+#addToDB a,
+#sign-up a,
+#log-in a,
+#addFriend a,
+#addFriendBtn a,
+#fetchFriendsBtn a,
+#reset_password a,
+#noreset a,
+#snap a,
+#backtologin a,
+#addPhoto a,
+#addAFriendBtn a,
+#friendtoProfile a,
+#addEventBtn a,
+#friendAddBtn a {
+  color: #212531;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+}
+
+#addGift:hover,
+#addtowish:hover,
+#nextToEvents:hover,
+#addToDB:hover,
+#sign-up:hover,
+#log-in:hover,
+#addFriend:hover,
+#addFriendBtn:hover,
+#fetchFriendsBtn:hover,
+#reset_password:hover,
+#noreset:hover,
+#snap:hover,
+#backtologin:hover,
+#addPhoto:hover,
+#addAFriendBtn:hover,
+#friendtoProfile:hover,
+#addEventBtn:hover,
+#friendAddBtn:hover {
+  background-color: #2ba199;
+  color: #f9f9fb;
+}
+
+#addGift:hover a,
+#addtowish:hover a,
+#nextToEvents:hover a,
+#addToDB:hover a,
+#sign-up:hover a,
+#log-in:hover a,
+#addFriend:hover a,
+#addFriendBtn:hover a,
+#fetchFriendsBtn:hover a,
+#reset_password:hover a,
+#noreset:hover a,
+#snap:hover a,
+#backtologin:hover a,
+#addPhoto:hover a,
+#addAFriendBtn:hover a,
+#friendtoProfile:hover a,
+#addEventBtn:hover a,
+#friendAddBtn:hover a {
+  color: #f9f9fb;
+}
+
+#add-wish-msg {
+  text-align: center;
+}
+
+.myListTitle {
+  color: #f9f9fb;
+  font-size: 2rem;
+  font-family: "Baloo Bhai 2", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#giftcard_display {
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5%;
+  border: none;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+#giftcard_display div.displaycard:nth-child(odd) {
+  background-color: #c7beff;
+}
+
+#giftcard_display div.displaycard:nth-child(even) {
+  background-color: #ff90a3;
+}
+
+#giftcard_display .displaycard {
+  border-color: #6e64ac;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  background-color: #6e64ac;
+  margin: 1%;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 30%, 30%, 20%, 20%;
+      grid-template-rows: 30%, 30%, 20%, 20%;
+}
+
+#giftcard_display .displaycard img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+  height: 20vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+#giftcard_display .displaycard h3 {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  margin: 3% 1% 1% 3%;
+  color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#giftcard_display .displaycard div {
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
+  margin: 1% 1% 2% 3%;
+  font-family: "Livvic", sans-serif;
+  color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+#giftcard_display .displaycard button {
+  -webkit-box-ordinal-group: 16;
+      -ms-flex-order: 15;
+          order: 15;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+@media screen and (min-width: 650px) {
+  #giftcard_display .displaycard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #giftcard_display .displaycard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+#giftcard_display .editDescInput,
+#giftcard_display .editTitleInput {
+  padding: 0.7rem 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #363d51;
+  width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #aba0f5;
+  border-color: #aba0f5;
+  color: #212531;
+}
+
+#giftcard_display .editDescInput,
+#giftcard_display .editTitleInput {
+  background-color: #f9f9fb;
+  color: #363d51;
+  padding: 0.7rem 0.7rem;
+}
+
+@media screen and (min-width: 650px) {
+  #giftcard_display {
+    width: 100%;
+    margin: auto;
+    padding: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+#friendsWishlist {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5%;
+  overflow: visible;
+  border: none;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+#friendsWishlist h1 {
+  color: #f9f9fb;
+}
+
+#friendsWishlist div.displaycard:nth-child(3n + 1) {
+  background-color: #c7beff;
+}
+
+#friendsWishlist div.displaycard:nth-child(3n + 2) {
+  background-color: #ff90a3;
+}
+
+#friendsWishlist div.displaycard:nth-child(3n + 3) {
+  background-color: #86e4de;
+}
+
+#friendsWishlist .displaycard {
+  border-color: #6e64ac;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  background-color: #6e64ac;
+  margin: 1%;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 30%, 30%, 20%, 20%;
+      grid-template-rows: 30%, 30%, 20%, 20%;
+}
+
+#friendsWishlist .displaycard img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+  height: 20vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+#friendsWishlist .displaycard h3 {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  margin: 3% 1% 1% 3%;
+  color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#friendsWishlist .displaycard div {
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
+  margin: 1% 1% 2% 3%;
+  font-family: "Livvic", sans-serif;
+  color: #212531;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+#friendsWishlist .displaycard button {
+  -webkit-box-ordinal-group: 16;
+      -ms-flex-order: 15;
+          order: 15;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+@media screen and (min-width: 650px) {
+  #friendsWishlist .displaycard {
+    width: 100%;
+  }
+}
+
+#friendsWishlist .editDescInput,
+#friendsWishlist .editTitleInput {
+  padding: 0.7rem 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #363d51;
+  width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #aba0f5;
+  border-color: #aba0f5;
+  color: #212531;
+}
+
+#friendsWishlist .editDescInput,
+#friendsWishlist .editTitleInput {
+  background-color: #f9f9fb;
+  color: #363d51;
+  padding: 0.7rem 0.7rem;
+}
+
+@media screen and (min-width: 650px) {
+  #friendsWishlist {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2%;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    min-height: 30vh;
+  }
+  #friendsWishlist h1 {
+    grid-column: 1/-1;
+  }
+}
+
+.friendEventForm #addEventBtn {
+  margin: 0;
+}
+
+#friendsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#friendsList li {
+  list-style-type: none;
+}
+
+#friendsList button {
+  padding: 0 5rem;
+  color: #212531;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #ff90a3;
+  border-color: #ff90a3;
+}
+
+#friendsListFromDB #fetchedFriendsList li {
+  padding: 0 5rem;
+  color: #212531;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  margin-left: 0;
+  background-color: #ff90a3;
+  border-color: #ff90a3;
+}
+
+#fetchFriendsBtn {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: "Livvic", sans-serif;
+}
+
+#addFriend,
+#addFriendBtn {
+  width: 40%;
+  font-size: 1rem;
+}
+
+#addFriend a,
+#addFriendBtn a {
+  text-decoration: none;
+}
+
+#addFriendBtn {
+  margin-bottom: 2rem;
+}
+
+input#friendName,
+#friendEventSelect,
+#friendDate,
+#friendsProfile,
+#friendEventSelect2,
+#friendDate2 {
+  padding: 0.7rem 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  margin-left: 0;
+  width: 60%;
+}
+
+#friendDate {
+  margin-bottom: 1rem;
+}
+
+.profile-pic a {
+  color: #86e4de;
+}
+
+.friendAdded a {
+  color: #86e4de;
+}
+
+#addFriendPage #addFriendForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 3rem;
+}
+
+#addFriendPage #addFriendForm label {
+  margin: 1rem;
+}
+
+#addFriendPage #addFriendForm input {
+  padding: 0.5rem 4rem;
+  text-align: center;
+}
+
+#addFriendPage #addFriendForm #friendEventSelect {
+  width: 100%;
+}
+
+#addFriendBtn {
+  margin: 0;
+}
+
+#resetContainer form {
+  width: 70%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.reset-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#reset_password,
+#noreset {
+  padding: 1rem 2rem;
+  margin: 0.4rem;
+}
+
+label {
+  padding: 1rem;
+}
+
+#email_to_reset {
+  padding: 1rem 0 1rem 0.3rem;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+  width: 30rem;
+}
+
+#backtologin {
+  width: 12rem;
+}
+
+#addAFriendBtn,
+#friendtoProfile {
+  padding: 0.5rem 1rem;
+}
+
+main #listEmptyPage {
+  height: 90vh;
+  display: block;
+}
+
+main #listEmptyPage #friendtoProfile {
+  margin: 1rem;
+}
+
+.addEventForFriend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fetchedFriendsList {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fetchedFriendsList li {
+  width: 100vw;
+  list-style-type: none;
+}
+
+.friendBtn {
+  border-top: 1px solid #f9f9fb;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  background-color: #363d51;
+  opacity: 70%;
+  color: #f9f9fb;
+  padding: 0.5rem;
+}
+
+#fetchedFriendsList .friendBtn:focus {
+  background-color: #ff90a3;
+  opacity: 100%;
+}
+
+#fetchedFriendsList li:hover {
+  background-color: #f9f9fb;
+  color: #212531;
+}
+
+#fetchedFriendsList li button:nth-last-child() {
+  border-bottom: 1px solid #f9f9fb;
+}
+
+#addEventPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#addEventPage h1 {
+  margin: 0;
+}
+
+#addEventPage input#friendsProfile {
+  width: 40%;
+  text-align: center;
+  background-color: #363d51;
+  border-color: #363d51;
+  color: #f9f9fb;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 0.7rem 0.7rem;
+}
+
+#addEventBtn {
+  padding: 1rem;
+}
+
+#friendEventForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#friendEventForm label {
+  margin: 1rem;
+}
+
+#ideaSummary {
+  width: 302px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+main #complete {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#editForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#editForm input,
+#editForm button {
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9fb;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+#editForm #wishTitleEdit {
+  font-size: 1.5rem;
+  font-family: "Baloo Bhai 2", sans-serif;
+}
+
+#editForm #wishDescEdit {
+  height: 10vh;
+}
+
+#editForm a {
+  text-decoration: none;
+  color: #f9f9fb;
+}
+
+#editForm button {
+  background-color: #86e4de;
+  border-color: #86e4de;
+  color: #212531;
+}
+
+#friendEventAdded {
+  margin: 3rem;
+}
+
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: #f9f9fb;
+}
+
+@media screen and (min-width: 650px) {
+  footer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+}
+
+body #desktopView {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  body #desktopView {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #welcomePage {
+    height: 250vh;
+  }
+}
+
+#friendName2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1.5rem;
+  padding: 0.5rem 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-style: none;
+  font-family: "Livvic", sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: #b3b7c2;
+}
+
+:-ms-input-placeholder {
+  color: #b3b7c2;
+}
+
+::-ms-input-placeholder {
+  color: #b3b7c2;
+}
+
+::placeholder {
+  color: #b3b7c2;
+}
+
+.addFriendButton {
+  border-radius: 1.5rem;
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
+  border-style: none;
+  background-color: #c7beff;
+  color: #212531;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Livvic", sans-serif;
+  font-size: 1rem;
+}
+
+#addFriendBtn2 {
+  border-radius: 1.5rem;
+  padding: 0.5rem 4rem;
+  border-style: none;
+  background-color: #3dc8bf;
+  color: #212531;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Livvic", sans-serif;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+#addFriendBtn2:hover {
+  color: #f9f9fb;
+  background-color: #2ba199;
+}
+
+#StoresPage {
+  background-color: #363d51;
+}
+
+#StoresPage footer {
+  margin-top: 20rem;
+}
+
+#StoresPage .bottom_navbar ul {
+  margin: 4rem 0;
+}
+
+#StoresPage .bottom_navbar li button img {
+  height: 2.5cm;
+  width: 2.5cm;
+}
+
+.constContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+  height: 80vh;
+}
+
+.constContainer h1 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  color: #f9f9fb;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.constContainer img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 40%;
+  height: auto;
+}
+
+#friendsSeeList #fetchedFriendsList li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #b3b7c2;
+  background-color: #4a5470;
+}
+
+#friendsSeeList #fetchedFriendsList li:nth-of-type(1) {
+  border-top: 1px solid #b3b7c2;
+}
+
+#friendsSeeList #fetchedFriendsList li:hover {
+  background-color: #ff90a3;
+}
+
+#friendsSeeList #fetchedFriendsList li:hover button {
+  background-color: #ff90a3;
+  color: #212531;
+}
+
+#friendsSeeList {
+  width: 100vw;
+}
+
+.nameContainer {
+  margin: 2% 2rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+.nameContainer button {
+  background-color: #4a5470;
+  padding: 0;
+  border: none;
+  font-family: "Livvic", sans-serif;
+  color: #f9f9fb;
+  font-size: 1rem;
+}
+
+.nameContainer button:hover {
+  border-bottom: 1px solid #212531;
+}
+
+#events-wrapper {
+  border: none;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #363d51;
+  color: #f9f9fb;
+  margin: 0 auto;
+}
+
+#events-wrapper .events-cards {
+  align-self: flex-start;
+  width: 90%;
+  padding: 3%;
+  margin: 0.5rem 0;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1%;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  border-radius: 25px;
+  background-color: #86e4de;
+  color: #f9f9fb;
+}
+
+#events-wrapper .events-cards h4 {
+  margin: 0;
+  font-family: "Baloo Bhai 2", sans-serif;
+  color: #212531;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
+}
+
+#events-wrapper .events-cards p {
+  margin: 0;
+  font-family: "Livvic", sans-serif;
+  color: #212531;
+  grid-column: span 1;
+}
+
+@media screen and (min-width: 650px) {
+  #events-wrapper {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+}
+
+main {
+  background-color: #363d51;
+}
+
+.home-title {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 2rem;
+  grid-column: 1 / -1;
+}
+
+.login-first {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f9f9fb;
+  font-family: "Oxygen", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-first p {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.loading-page {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f9f9fb;
+  font-family: "Oxygen", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-page p {
+  width: 70%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.loader {
+  border: 16px solid #aba0f5;
+  border-radius: 50%;
+  border-top: 16px solid #8177c3;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loggedin {
+  text-align: center;
+}
+
+body #editCardFriends {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#editForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#editForm input,
+#editForm button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border-style: none;
+  margin-top: 0.5rem;
+  border: 1px solid #f9f9fb;
+  font-family: "Oxygen", sans-serif;
+  background-color: #f9f9fb;
+  text-align: center;
+}
+
+#editForm #wishDescEdit {
+  margin-bottom: 2rem;
+}
+
+#editForm button {
+  background-color: #aba0f5;
+  border: 1px solid #aba0f5;
+}
+
+#editForm button:hover {
+  background-color: #8177c3;
+  border: 1px solid #8177c3;
+  color: #f9f9fb;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.loadingFriendsList {
+  text-align: center;
+}
+
+.addFriendForm {
+  display: none;
+  text-align: center;
+}
+
+.emptyFriendsList {
+  display: none;
+}
+
+#foundersCont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+#foundersCont img {
+  margin: 2% auto;
+  width: 90%;
+  height: 95%;
+}
+
+#foundersCont2 {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  #foundersCont {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  #foundersCont2 {
+    display: block;
+  }
+}
+
+/* ================ Layout =====================*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  border: 1px solid #000;
+  margin: 1%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section {
+  margin: 0;
+}
+
+#not-logged-in,
+#logged-in {
+  display: none;
+}
+
+#reset_password,
+#noreset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#backtologin {
+  display: none;
+}
+
+body #giftIdeaProcess .hide,
+body #friendsListProcess .hide,
+body #introPages .hide,
+body #listEmptyPage .hide,
+body #addFriendPage .hide,
+body #giftcard_display .hide,
+body section#editCardFriends.hide,
+body section#giftcardFriendsDisplay.hide,
+body #demopage1 .hide,
+body #demopage2 .hide,
+body #demopage3 .hide,
+footer #footerNav.hide,
+#friendsListHeading.hide,
+#friendsWishlist.hide,
+#giftIdeaProcess #summaryCard.hide,
+#giftIdeaProcess #addToWishlistSection.hide,
+body #friendsListView #giftcardFriendsDisplay #friendsSeeList.hide,
+#friendsListView #giftcardFriendsDisplay #addFriendButton.hide {
+  display: none;
+}
+
+body main #editCard {
+  display: none;
+}
+
+body #giftIdeaProcess .show,
+body #friendsListProcess .show,
+body #introPages .show,
+body #listEmptyPage .show,
+body #addFriendPage .show,
+body #giftcard_display .show,
+body #demopage1 .show,
+body #demopage2 .show,
+body #demopage3 .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bottom_navbar {
+  background-color: #f9f9fb;
+}
+
+.bottom_navbar ul {
+  padding: 1rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bottom_navbar ul li {
+  list-style-type: none;
+}
+
+main section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#demopage1,
+#demopage2,
+#demopage3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
+}
+
+#demopage1 p,
+#demopage2 p,
+#demopage3 p {
+  font-family: "Livvic", sans-serif;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.2rem;
+  margin-top: 12vh;
+}
+
+#desktopView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#desktopView p {
+  max-width: 50vw;
+}
+
+#desktopView p .teamQuote {
+  color: #ff90a3;
+}
+
+#desktopView p:first-of-type {
+  margin-top: 10vh;
+}
+
+.topNavigation {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .topNavigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 3%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 15vh;
+    background-color: #fff;
+  }
+  .topNavigation img {
+    max-width: 100%;
+    height: 12vh;
+    margin: 0 2%;
+  }
+  .topNavigation ul {
+    font-family: "Oxygen", sans-serif;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .topNavigation ul li {
+    list-style-type: none;
+  }
+  .topNavigation ul li a {
+    text-decoration: none;
+    color: #596480;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #footerNav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #giftcardFriendsDisplay {
+    width: 80%;
+    margin: auto;
+    border: none;
+  }
+  #giftcardFriendsDisplay #friendsSeeList {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #friendsListView {
+    height: 100vh;
+  }
+}
+
+/* ================ Typography =====================*/
+#giftIdeaProcess h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#giftIdeaProcess a,
+#giftIdeaProcess .button,
+#giftIdeaProcess button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#giftIdeaProcess input,
+#giftIdeaProcess textarea {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+}
+
+#giftIdeaProcess h3 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#giftIdeaProcess .displaycard div {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#loginPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#loginPage .notloggedin input {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+}
+
+#loginPage .notloggedin a,
+#loginPage .notloggedin span {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#loginPage .notloggedin button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#loginPage .loggedin h3 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#loginPage .loggedin p {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#loginPage .loggedin button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#registerPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#registerPage #registerForm label {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#registerPage #registerForm button,
+#registerPage #registerForm input {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#resetContainer h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#resetContainer h4 {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#resetContainer label {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#resetContainer button,
+#resetContainer input {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#listEmptyPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#listEmptyPage button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#addFriendPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#addFriendPage label,
+#addFriendPage .profile-pic {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#addFriendPage input,
+#addFriendPage #friendEventSelect,
+#addFriendPage button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#friendsListPage h2 {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#friendsListPage a {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#friendsListPage #fetchedFriendsList {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer_container a {
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* ================ Buttons =====================*/
+#giftIdeaHomePage #startIdeaBtn,
+#giftIdeaHomePage #addGift,
+#giftIdeaHomePage #addToDB,
+#giftIdeaHomePage #nextToWishlists,
+#giftIdeaHomePage #friendtoProfile,
+#giftIdeaHomePage #addAFriendBtn,
+#giftIdeaHomePage #addEventBtn,
+#giftIdeaHomePage #addFriendBtn,
+#giftIdeaAdd #startIdeaBtn,
+#giftIdeaAdd #addGift,
+#giftIdeaAdd #addToDB,
+#giftIdeaAdd #nextToWishlists,
+#giftIdeaAdd #friendtoProfile,
+#giftIdeaAdd #addAFriendBtn,
+#giftIdeaAdd #addEventBtn,
+#giftIdeaAdd #addFriendBtn,
+#takePhoto #startIdeaBtn,
+#takePhoto #addGift,
+#takePhoto #addToDB,
+#takePhoto #nextToWishlists,
+#takePhoto #friendtoProfile,
+#takePhoto #addAFriendBtn,
+#takePhoto #addEventBtn,
+#takePhoto #addFriendBtn,
+#summaryCard #startIdeaBtn,
+#summaryCard #addGift,
+#summaryCard #addToDB,
+#summaryCard #nextToWishlists,
+#summaryCard #friendtoProfile,
+#summaryCard #addAFriendBtn,
+#summaryCard #addEventBtn,
+#summaryCard #addFriendBtn,
+#addToWishlistSection #startIdeaBtn,
+#addToWishlistSection #addGift,
+#addToWishlistSection #addToDB,
+#addToWishlistSection #nextToWishlists,
+#addToWishlistSection #friendtoProfile,
+#addToWishlistSection #addAFriendBtn,
+#addToWishlistSection #addEventBtn,
+#addToWishlistSection #addFriendBtn,
+#listEmptyPage #startIdeaBtn,
+#listEmptyPage #addGift,
+#listEmptyPage #addToDB,
+#listEmptyPage #nextToWishlists,
+#listEmptyPage #friendtoProfile,
+#listEmptyPage #addAFriendBtn,
+#listEmptyPage #addEventBtn,
+#listEmptyPage #addFriendBtn,
+#complete #startIdeaBtn,
+#complete #addGift,
+#complete #addToDB,
+#complete #nextToWishlists,
+#complete #friendtoProfile,
+#complete #addAFriendBtn,
+#complete #addEventBtn,
+#complete #addFriendBtn,
+#addEventPage #startIdeaBtn,
+#addEventPage #addGift,
+#addEventPage #addToDB,
+#addEventPage #nextToWishlists,
+#addEventPage #friendtoProfile,
+#addEventPage #addAFriendBtn,
+#addEventPage #addEventBtn,
+#addEventPage #addFriendBtn,
+#addFriendPage #startIdeaBtn,
+#addFriendPage #addGift,
+#addFriendPage #addToDB,
+#addFriendPage #nextToWishlists,
+#addFriendPage #friendtoProfile,
+#addFriendPage #addAFriendBtn,
+#addFriendPage #addEventBtn,
+#addFriendPage #addFriendBtn {
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-top: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  justify-self: flex-end;
+}
+
+#giftIdeaHomePage #startIdeaBtn:hover,
+#giftIdeaHomePage #addGift:hover,
+#giftIdeaHomePage #addToDB:hover,
+#giftIdeaHomePage #nextToWishlists:hover,
+#giftIdeaHomePage #friendtoProfile:hover,
+#giftIdeaHomePage #addAFriendBtn:hover,
+#giftIdeaHomePage #addEventBtn:hover,
+#giftIdeaHomePage #addFriendBtn:hover,
+#giftIdeaAdd #startIdeaBtn:hover,
+#giftIdeaAdd #addGift:hover,
+#giftIdeaAdd #addToDB:hover,
+#giftIdeaAdd #nextToWishlists:hover,
+#giftIdeaAdd #friendtoProfile:hover,
+#giftIdeaAdd #addAFriendBtn:hover,
+#giftIdeaAdd #addEventBtn:hover,
+#giftIdeaAdd #addFriendBtn:hover,
+#takePhoto #startIdeaBtn:hover,
+#takePhoto #addGift:hover,
+#takePhoto #addToDB:hover,
+#takePhoto #nextToWishlists:hover,
+#takePhoto #friendtoProfile:hover,
+#takePhoto #addAFriendBtn:hover,
+#takePhoto #addEventBtn:hover,
+#takePhoto #addFriendBtn:hover,
+#summaryCard #startIdeaBtn:hover,
+#summaryCard #addGift:hover,
+#summaryCard #addToDB:hover,
+#summaryCard #nextToWishlists:hover,
+#summaryCard #friendtoProfile:hover,
+#summaryCard #addAFriendBtn:hover,
+#summaryCard #addEventBtn:hover,
+#summaryCard #addFriendBtn:hover,
+#addToWishlistSection #startIdeaBtn:hover,
+#addToWishlistSection #addGift:hover,
+#addToWishlistSection #addToDB:hover,
+#addToWishlistSection #nextToWishlists:hover,
+#addToWishlistSection #friendtoProfile:hover,
+#addToWishlistSection #addAFriendBtn:hover,
+#addToWishlistSection #addEventBtn:hover,
+#addToWishlistSection #addFriendBtn:hover,
+#listEmptyPage #startIdeaBtn:hover,
+#listEmptyPage #addGift:hover,
+#listEmptyPage #addToDB:hover,
+#listEmptyPage #nextToWishlists:hover,
+#listEmptyPage #friendtoProfile:hover,
+#listEmptyPage #addAFriendBtn:hover,
+#listEmptyPage #addEventBtn:hover,
+#listEmptyPage #addFriendBtn:hover,
+#complete #startIdeaBtn:hover,
+#complete #addGift:hover,
+#complete #addToDB:hover,
+#complete #nextToWishlists:hover,
+#complete #friendtoProfile:hover,
+#complete #addAFriendBtn:hover,
+#complete #addEventBtn:hover,
+#complete #addFriendBtn:hover,
+#addEventPage #startIdeaBtn:hover,
+#addEventPage #addGift:hover,
+#addEventPage #addToDB:hover,
+#addEventPage #nextToWishlists:hover,
+#addEventPage #friendtoProfile:hover,
+#addEventPage #addAFriendBtn:hover,
+#addEventPage #addEventBtn:hover,
+#addEventPage #addFriendBtn:hover,
+#addFriendPage #startIdeaBtn:hover,
+#addFriendPage #addGift:hover,
+#addFriendPage #addToDB:hover,
+#addFriendPage #nextToWishlists:hover,
+#addFriendPage #friendtoProfile:hover,
+#addFriendPage #addAFriendBtn:hover,
+#addFriendPage #addEventBtn:hover,
+#addFriendPage #addFriendBtn:hover {
+  background-color: #2ba199;
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #startIdeaBtn a,
+#giftIdeaHomePage #addGift a,
+#giftIdeaHomePage #addToDB a,
+#giftIdeaHomePage #nextToWishlists a,
+#giftIdeaHomePage #friendtoProfile a,
+#giftIdeaHomePage #addAFriendBtn a,
+#giftIdeaHomePage #addEventBtn a,
+#giftIdeaHomePage #addFriendBtn a,
+#giftIdeaAdd #startIdeaBtn a,
+#giftIdeaAdd #addGift a,
+#giftIdeaAdd #addToDB a,
+#giftIdeaAdd #nextToWishlists a,
+#giftIdeaAdd #friendtoProfile a,
+#giftIdeaAdd #addAFriendBtn a,
+#giftIdeaAdd #addEventBtn a,
+#giftIdeaAdd #addFriendBtn a,
+#takePhoto #startIdeaBtn a,
+#takePhoto #addGift a,
+#takePhoto #addToDB a,
+#takePhoto #nextToWishlists a,
+#takePhoto #friendtoProfile a,
+#takePhoto #addAFriendBtn a,
+#takePhoto #addEventBtn a,
+#takePhoto #addFriendBtn a,
+#summaryCard #startIdeaBtn a,
+#summaryCard #addGift a,
+#summaryCard #addToDB a,
+#summaryCard #nextToWishlists a,
+#summaryCard #friendtoProfile a,
+#summaryCard #addAFriendBtn a,
+#summaryCard #addEventBtn a,
+#summaryCard #addFriendBtn a,
+#addToWishlistSection #startIdeaBtn a,
+#addToWishlistSection #addGift a,
+#addToWishlistSection #addToDB a,
+#addToWishlistSection #nextToWishlists a,
+#addToWishlistSection #friendtoProfile a,
+#addToWishlistSection #addAFriendBtn a,
+#addToWishlistSection #addEventBtn a,
+#addToWishlistSection #addFriendBtn a,
+#listEmptyPage #startIdeaBtn a,
+#listEmptyPage #addGift a,
+#listEmptyPage #addToDB a,
+#listEmptyPage #nextToWishlists a,
+#listEmptyPage #friendtoProfile a,
+#listEmptyPage #addAFriendBtn a,
+#listEmptyPage #addEventBtn a,
+#listEmptyPage #addFriendBtn a,
+#complete #startIdeaBtn a,
+#complete #addGift a,
+#complete #addToDB a,
+#complete #nextToWishlists a,
+#complete #friendtoProfile a,
+#complete #addAFriendBtn a,
+#complete #addEventBtn a,
+#complete #addFriendBtn a,
+#addEventPage #startIdeaBtn a,
+#addEventPage #addGift a,
+#addEventPage #addToDB a,
+#addEventPage #nextToWishlists a,
+#addEventPage #friendtoProfile a,
+#addEventPage #addAFriendBtn a,
+#addEventPage #addEventBtn a,
+#addEventPage #addFriendBtn a,
+#addFriendPage #startIdeaBtn a,
+#addFriendPage #addGift a,
+#addFriendPage #addToDB a,
+#addFriendPage #nextToWishlists a,
+#addFriendPage #friendtoProfile a,
+#addFriendPage #addAFriendBtn a,
+#addFriendPage #addEventBtn a,
+#addFriendPage #addFriendBtn a {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #startIdeaBtn:hover a,
+#giftIdeaHomePage #addGift:hover a,
+#giftIdeaHomePage #addToDB:hover a,
+#giftIdeaHomePage #nextToWishlists:hover a,
+#giftIdeaHomePage #friendtoProfile:hover a,
+#giftIdeaHomePage #addAFriendBtn:hover a,
+#giftIdeaHomePage #addEventBtn:hover a,
+#giftIdeaHomePage #addFriendBtn:hover a,
+#giftIdeaAdd #startIdeaBtn:hover a,
+#giftIdeaAdd #addGift:hover a,
+#giftIdeaAdd #addToDB:hover a,
+#giftIdeaAdd #nextToWishlists:hover a,
+#giftIdeaAdd #friendtoProfile:hover a,
+#giftIdeaAdd #addAFriendBtn:hover a,
+#giftIdeaAdd #addEventBtn:hover a,
+#giftIdeaAdd #addFriendBtn:hover a,
+#takePhoto #startIdeaBtn:hover a,
+#takePhoto #addGift:hover a,
+#takePhoto #addToDB:hover a,
+#takePhoto #nextToWishlists:hover a,
+#takePhoto #friendtoProfile:hover a,
+#takePhoto #addAFriendBtn:hover a,
+#takePhoto #addEventBtn:hover a,
+#takePhoto #addFriendBtn:hover a,
+#summaryCard #startIdeaBtn:hover a,
+#summaryCard #addGift:hover a,
+#summaryCard #addToDB:hover a,
+#summaryCard #nextToWishlists:hover a,
+#summaryCard #friendtoProfile:hover a,
+#summaryCard #addAFriendBtn:hover a,
+#summaryCard #addEventBtn:hover a,
+#summaryCard #addFriendBtn:hover a,
+#addToWishlistSection #startIdeaBtn:hover a,
+#addToWishlistSection #addGift:hover a,
+#addToWishlistSection #addToDB:hover a,
+#addToWishlistSection #nextToWishlists:hover a,
+#addToWishlistSection #friendtoProfile:hover a,
+#addToWishlistSection #addAFriendBtn:hover a,
+#addToWishlistSection #addEventBtn:hover a,
+#addToWishlistSection #addFriendBtn:hover a,
+#listEmptyPage #startIdeaBtn:hover a,
+#listEmptyPage #addGift:hover a,
+#listEmptyPage #addToDB:hover a,
+#listEmptyPage #nextToWishlists:hover a,
+#listEmptyPage #friendtoProfile:hover a,
+#listEmptyPage #addAFriendBtn:hover a,
+#listEmptyPage #addEventBtn:hover a,
+#listEmptyPage #addFriendBtn:hover a,
+#complete #startIdeaBtn:hover a,
+#complete #addGift:hover a,
+#complete #addToDB:hover a,
+#complete #nextToWishlists:hover a,
+#complete #friendtoProfile:hover a,
+#complete #addAFriendBtn:hover a,
+#complete #addEventBtn:hover a,
+#complete #addFriendBtn:hover a,
+#addEventPage #startIdeaBtn:hover a,
+#addEventPage #addGift:hover a,
+#addEventPage #addToDB:hover a,
+#addEventPage #nextToWishlists:hover a,
+#addEventPage #friendtoProfile:hover a,
+#addEventPage #addAFriendBtn:hover a,
+#addEventPage #addEventBtn:hover a,
+#addEventPage #addFriendBtn:hover a,
+#addFriendPage #startIdeaBtn:hover a,
+#addFriendPage #addGift:hover a,
+#addFriendPage #addToDB:hover a,
+#addFriendPage #nextToWishlists:hover a,
+#addFriendPage #friendtoProfile:hover a,
+#addFriendPage #addAFriendBtn:hover a,
+#addFriendPage #addEventBtn:hover a,
+#addFriendPage #addFriendBtn:hover a {
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #friendListOutput button#friendtoProfile,
+#giftIdeaAdd #friendListOutput button#friendtoProfile,
+#takePhoto #friendListOutput button#friendtoProfile,
+#summaryCard #friendListOutput button#friendtoProfile,
+#addToWishlistSection #friendListOutput button#friendtoProfile,
+#listEmptyPage #friendListOutput button#friendtoProfile,
+#complete #friendListOutput button#friendtoProfile,
+#addEventPage #friendListOutput button#friendtoProfile,
+#addFriendPage #friendListOutput button#friendtoProfile {
+  margin: 0;
+}
+
+#giftIdeaHomePage #addEventBtn,
+#giftIdeaAdd #addEventBtn,
+#takePhoto #addEventBtn,
+#summaryCard #addEventBtn,
+#addToWishlistSection #addEventBtn,
+#listEmptyPage #addEventBtn,
+#complete #addEventBtn,
+#addEventPage #addEventBtn,
+#addFriendPage #addEventBtn {
+  margin: 0;
+}
+
+#giftIdeaHomePage #snap,
+#giftIdeaHomePage #addPhoto,
+#giftIdeaHomePage #startIdeaBtn,
+#giftIdeaHomePage #addGift,
+#giftIdeaHomePage #addtowish,
+#giftIdeaHomePage #seeFriendsList,
+#giftIdeaHomePage #addToDB,
+#giftIdeaAdd #snap,
+#giftIdeaAdd #addPhoto,
+#giftIdeaAdd #startIdeaBtn,
+#giftIdeaAdd #addGift,
+#giftIdeaAdd #addtowish,
+#giftIdeaAdd #seeFriendsList,
+#giftIdeaAdd #addToDB,
+#takePhoto #snap,
+#takePhoto #addPhoto,
+#takePhoto #startIdeaBtn,
+#takePhoto #addGift,
+#takePhoto #addtowish,
+#takePhoto #seeFriendsList,
+#takePhoto #addToDB,
+#summaryCard #snap,
+#summaryCard #addPhoto,
+#summaryCard #startIdeaBtn,
+#summaryCard #addGift,
+#summaryCard #addtowish,
+#summaryCard #seeFriendsList,
+#summaryCard #addToDB,
+#addToWishlistSection #snap,
+#addToWishlistSection #addPhoto,
+#addToWishlistSection #startIdeaBtn,
+#addToWishlistSection #addGift,
+#addToWishlistSection #addtowish,
+#addToWishlistSection #seeFriendsList,
+#addToWishlistSection #addToDB,
+#listEmptyPage #snap,
+#listEmptyPage #addPhoto,
+#listEmptyPage #startIdeaBtn,
+#listEmptyPage #addGift,
+#listEmptyPage #addtowish,
+#listEmptyPage #seeFriendsList,
+#listEmptyPage #addToDB,
+#complete #snap,
+#complete #addPhoto,
+#complete #startIdeaBtn,
+#complete #addGift,
+#complete #addtowish,
+#complete #seeFriendsList,
+#complete #addToDB,
+#addEventPage #snap,
+#addEventPage #addPhoto,
+#addEventPage #startIdeaBtn,
+#addEventPage #addGift,
+#addEventPage #addtowish,
+#addEventPage #seeFriendsList,
+#addEventPage #addToDB,
+#addFriendPage #snap,
+#addFriendPage #addPhoto,
+#addFriendPage #startIdeaBtn,
+#addFriendPage #addGift,
+#addFriendPage #addtowish,
+#addFriendPage #seeFriendsList,
+#addFriendPage #addToDB {
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+#giftIdeaHomePage #nextToEvents,
+#giftIdeaAdd #nextToEvents,
+#takePhoto #nextToEvents,
+#summaryCard #nextToEvents,
+#addToWishlistSection #nextToEvents,
+#listEmptyPage #nextToEvents,
+#complete #nextToEvents,
+#addEventPage #nextToEvents,
+#addFriendPage #nextToEvents {
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+#giftIdeaHomePage #addtowish,
+#giftIdeaHomePage #addAFriendBtn,
+#giftIdeaAdd #addtowish,
+#giftIdeaAdd #addAFriendBtn,
+#takePhoto #addtowish,
+#takePhoto #addAFriendBtn,
+#summaryCard #addtowish,
+#summaryCard #addAFriendBtn,
+#addToWishlistSection #addtowish,
+#addToWishlistSection #addAFriendBtn,
+#listEmptyPage #addtowish,
+#listEmptyPage #addAFriendBtn,
+#complete #addtowish,
+#complete #addAFriendBtn,
+#addEventPage #addtowish,
+#addEventPage #addAFriendBtn,
+#addFriendPage #addtowish,
+#addFriendPage #addAFriendBtn {
+  background: #aba0f5;
+  border: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #addtowish:hover,
+#giftIdeaHomePage #addAFriendBtn:hover,
+#giftIdeaAdd #addtowish:hover,
+#giftIdeaAdd #addAFriendBtn:hover,
+#takePhoto #addtowish:hover,
+#takePhoto #addAFriendBtn:hover,
+#summaryCard #addtowish:hover,
+#summaryCard #addAFriendBtn:hover,
+#addToWishlistSection #addtowish:hover,
+#addToWishlistSection #addAFriendBtn:hover,
+#listEmptyPage #addtowish:hover,
+#listEmptyPage #addAFriendBtn:hover,
+#complete #addtowish:hover,
+#complete #addAFriendBtn:hover,
+#addEventPage #addtowish:hover,
+#addEventPage #addAFriendBtn:hover,
+#addFriendPage #addtowish:hover,
+#addFriendPage #addAFriendBtn:hover {
+  background-color: #8177c3;
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #addtowish a,
+#giftIdeaHomePage #addAFriendBtn a,
+#giftIdeaAdd #addtowish a,
+#giftIdeaAdd #addAFriendBtn a,
+#takePhoto #addtowish a,
+#takePhoto #addAFriendBtn a,
+#summaryCard #addtowish a,
+#summaryCard #addAFriendBtn a,
+#addToWishlistSection #addtowish a,
+#addToWishlistSection #addAFriendBtn a,
+#listEmptyPage #addtowish a,
+#listEmptyPage #addAFriendBtn a,
+#complete #addtowish a,
+#complete #addAFriendBtn a,
+#addEventPage #addtowish a,
+#addEventPage #addAFriendBtn a,
+#addFriendPage #addtowish a,
+#addFriendPage #addAFriendBtn a {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #addtowish:hover a,
+#giftIdeaHomePage #addAFriendBtn:hover a,
+#giftIdeaAdd #addtowish:hover a,
+#giftIdeaAdd #addAFriendBtn:hover a,
+#takePhoto #addtowish:hover a,
+#takePhoto #addAFriendBtn:hover a,
+#summaryCard #addtowish:hover a,
+#summaryCard #addAFriendBtn:hover a,
+#addToWishlistSection #addtowish:hover a,
+#addToWishlistSection #addAFriendBtn:hover a,
+#listEmptyPage #addtowish:hover a,
+#listEmptyPage #addAFriendBtn:hover a,
+#complete #addtowish:hover a,
+#complete #addAFriendBtn:hover a,
+#addEventPage #addtowish:hover a,
+#addEventPage #addAFriendBtn:hover a,
+#addFriendPage #addtowish:hover a,
+#addFriendPage #addAFriendBtn:hover a {
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #snap,
+#giftIdeaHomePage #addPhoto,
+#giftIdeaHomePage #seeFriendsList,
+#giftIdeaAdd #snap,
+#giftIdeaAdd #addPhoto,
+#giftIdeaAdd #seeFriendsList,
+#takePhoto #snap,
+#takePhoto #addPhoto,
+#takePhoto #seeFriendsList,
+#summaryCard #snap,
+#summaryCard #addPhoto,
+#summaryCard #seeFriendsList,
+#addToWishlistSection #snap,
+#addToWishlistSection #addPhoto,
+#addToWishlistSection #seeFriendsList,
+#listEmptyPage #snap,
+#listEmptyPage #addPhoto,
+#listEmptyPage #seeFriendsList,
+#complete #snap,
+#complete #addPhoto,
+#complete #seeFriendsList,
+#addEventPage #snap,
+#addEventPage #addPhoto,
+#addEventPage #seeFriendsList,
+#addFriendPage #snap,
+#addFriendPage #addPhoto,
+#addFriendPage #seeFriendsList {
+  background: #86e4de;
+  border: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #snap:hover,
+#giftIdeaHomePage #addPhoto:hover,
+#giftIdeaHomePage #seeFriendsList:hover,
+#giftIdeaAdd #snap:hover,
+#giftIdeaAdd #addPhoto:hover,
+#giftIdeaAdd #seeFriendsList:hover,
+#takePhoto #snap:hover,
+#takePhoto #addPhoto:hover,
+#takePhoto #seeFriendsList:hover,
+#summaryCard #snap:hover,
+#summaryCard #addPhoto:hover,
+#summaryCard #seeFriendsList:hover,
+#addToWishlistSection #snap:hover,
+#addToWishlistSection #addPhoto:hover,
+#addToWishlistSection #seeFriendsList:hover,
+#listEmptyPage #snap:hover,
+#listEmptyPage #addPhoto:hover,
+#listEmptyPage #seeFriendsList:hover,
+#complete #snap:hover,
+#complete #addPhoto:hover,
+#complete #seeFriendsList:hover,
+#addEventPage #snap:hover,
+#addEventPage #addPhoto:hover,
+#addEventPage #seeFriendsList:hover,
+#addFriendPage #snap:hover,
+#addFriendPage #addPhoto:hover,
+#addFriendPage #seeFriendsList:hover {
+  background-color: #2ba199;
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #snap a,
+#giftIdeaHomePage #addPhoto a,
+#giftIdeaHomePage #seeFriendsList a,
+#giftIdeaAdd #snap a,
+#giftIdeaAdd #addPhoto a,
+#giftIdeaAdd #seeFriendsList a,
+#takePhoto #snap a,
+#takePhoto #addPhoto a,
+#takePhoto #seeFriendsList a,
+#summaryCard #snap a,
+#summaryCard #addPhoto a,
+#summaryCard #seeFriendsList a,
+#addToWishlistSection #snap a,
+#addToWishlistSection #addPhoto a,
+#addToWishlistSection #seeFriendsList a,
+#listEmptyPage #snap a,
+#listEmptyPage #addPhoto a,
+#listEmptyPage #seeFriendsList a,
+#complete #snap a,
+#complete #addPhoto a,
+#complete #seeFriendsList a,
+#addEventPage #snap a,
+#addEventPage #addPhoto a,
+#addEventPage #seeFriendsList a,
+#addFriendPage #snap a,
+#addFriendPage #addPhoto a,
+#addFriendPage #seeFriendsList a {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#giftIdeaHomePage #snap:hover a,
+#giftIdeaHomePage #addPhoto:hover a,
+#giftIdeaHomePage #seeFriendsList:hover a,
+#giftIdeaAdd #snap:hover a,
+#giftIdeaAdd #addPhoto:hover a,
+#giftIdeaAdd #seeFriendsList:hover a,
+#takePhoto #snap:hover a,
+#takePhoto #addPhoto:hover a,
+#takePhoto #seeFriendsList:hover a,
+#summaryCard #snap:hover a,
+#summaryCard #addPhoto:hover a,
+#summaryCard #seeFriendsList:hover a,
+#addToWishlistSection #snap:hover a,
+#addToWishlistSection #addPhoto:hover a,
+#addToWishlistSection #seeFriendsList:hover a,
+#listEmptyPage #snap:hover a,
+#listEmptyPage #addPhoto:hover a,
+#listEmptyPage #seeFriendsList:hover a,
+#complete #snap:hover a,
+#complete #addPhoto:hover a,
+#complete #seeFriendsList:hover a,
+#addEventPage #snap:hover a,
+#addEventPage #addPhoto:hover a,
+#addEventPage #seeFriendsList:hover a,
+#addFriendPage #snap:hover a,
+#addFriendPage #addPhoto:hover a,
+#addFriendPage #seeFriendsList:hover a {
+  color: #f9f9fb;
+}
+
+#giftIdeaHomePage #backToStart,
+#giftIdeaHomePage #backToIdeaAdd2,
+#giftIdeaHomePage #backToIdeaAdd,
+#giftIdeaHomePage #backToSummaryCard,
+#giftIdeaHomePage #backToChooseEvent,
+#giftIdeaAdd #backToStart,
+#giftIdeaAdd #backToIdeaAdd2,
+#giftIdeaAdd #backToIdeaAdd,
+#giftIdeaAdd #backToSummaryCard,
+#giftIdeaAdd #backToChooseEvent,
+#takePhoto #backToStart,
+#takePhoto #backToIdeaAdd2,
+#takePhoto #backToIdeaAdd,
+#takePhoto #backToSummaryCard,
+#takePhoto #backToChooseEvent,
+#summaryCard #backToStart,
+#summaryCard #backToIdeaAdd2,
+#summaryCard #backToIdeaAdd,
+#summaryCard #backToSummaryCard,
+#summaryCard #backToChooseEvent,
+#addToWishlistSection #backToStart,
+#addToWishlistSection #backToIdeaAdd2,
+#addToWishlistSection #backToIdeaAdd,
+#addToWishlistSection #backToSummaryCard,
+#addToWishlistSection #backToChooseEvent,
+#listEmptyPage #backToStart,
+#listEmptyPage #backToIdeaAdd2,
+#listEmptyPage #backToIdeaAdd,
+#listEmptyPage #backToSummaryCard,
+#listEmptyPage #backToChooseEvent,
+#complete #backToStart,
+#complete #backToIdeaAdd2,
+#complete #backToIdeaAdd,
+#complete #backToSummaryCard,
+#complete #backToChooseEvent,
+#addEventPage #backToStart,
+#addEventPage #backToIdeaAdd2,
+#addEventPage #backToIdeaAdd,
+#addEventPage #backToSummaryCard,
+#addEventPage #backToChooseEvent,
+#addFriendPage #backToStart,
+#addFriendPage #backToIdeaAdd2,
+#addFriendPage #backToIdeaAdd,
+#addFriendPage #backToSummaryCard,
+#addFriendPage #backToChooseEvent {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 0;
+  background: none;
+  border: none;
+}
+
+#giftIdeaHomePage #backToStart a,
+#giftIdeaHomePage #backToIdeaAdd2 a,
+#giftIdeaHomePage #backToIdeaAdd a,
+#giftIdeaHomePage #backToSummaryCard a,
+#giftIdeaHomePage #backToChooseEvent a,
+#giftIdeaAdd #backToStart a,
+#giftIdeaAdd #backToIdeaAdd2 a,
+#giftIdeaAdd #backToIdeaAdd a,
+#giftIdeaAdd #backToSummaryCard a,
+#giftIdeaAdd #backToChooseEvent a,
+#takePhoto #backToStart a,
+#takePhoto #backToIdeaAdd2 a,
+#takePhoto #backToIdeaAdd a,
+#takePhoto #backToSummaryCard a,
+#takePhoto #backToChooseEvent a,
+#summaryCard #backToStart a,
+#summaryCard #backToIdeaAdd2 a,
+#summaryCard #backToIdeaAdd a,
+#summaryCard #backToSummaryCard a,
+#summaryCard #backToChooseEvent a,
+#addToWishlistSection #backToStart a,
+#addToWishlistSection #backToIdeaAdd2 a,
+#addToWishlistSection #backToIdeaAdd a,
+#addToWishlistSection #backToSummaryCard a,
+#addToWishlistSection #backToChooseEvent a,
+#listEmptyPage #backToStart a,
+#listEmptyPage #backToIdeaAdd2 a,
+#listEmptyPage #backToIdeaAdd a,
+#listEmptyPage #backToSummaryCard a,
+#listEmptyPage #backToChooseEvent a,
+#complete #backToStart a,
+#complete #backToIdeaAdd2 a,
+#complete #backToIdeaAdd a,
+#complete #backToSummaryCard a,
+#complete #backToChooseEvent a,
+#addEventPage #backToStart a,
+#addEventPage #backToIdeaAdd2 a,
+#addEventPage #backToIdeaAdd a,
+#addEventPage #backToSummaryCard a,
+#addEventPage #backToChooseEvent a,
+#addFriendPage #backToStart a,
+#addFriendPage #backToIdeaAdd2 a,
+#addFriendPage #backToIdeaAdd a,
+#addFriendPage #backToSummaryCard a,
+#addFriendPage #backToChooseEvent a {
+  color: #f9f9fb;
+}
+
+#registerLink {
+  border: none;
+  background: none;
+}
+
+#skiptologin {
+  background: #363d51;
+  border: none;
+  font-size: 16px;
+  font-family: "Livvic", sans-serif;
+  padding: 16px;
+}
+
+#floatButton {
+  display: none;
+}
+
+#nav_btn3 a, #floatButton a {
+  text-decoration: none;
+}
+
+#nav_btn3, #floatButton {
+  background-color: #f0526c;
+  border-style: none;
+}
+
+@media only screen and (min-width: 650px) {
+  #floatButton {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.bottom_navbar li:nth-of-type(3) {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#giftcard_display button.editButton {
+  background: none;
+  border: none;
+  color: #f9f9fb;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #363d51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5%;
+}
+
+#giftcardFriendsDisplay button.editButton {
+  background: none;
+  border: none;
+  color: #f9f9fb;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: #363d51;
+}
+
+.displaycard {
+  position: relative;
+}
+
+#friendAddBtn {
+  padding: 1rem 2rem;
+}
+
+#friendAddBtn a {
+  text-decoration: none;
+}
+
+#loginPage #btn_logout,
+#loginPage #btn_AddGiftIdea,
+#loginPage #btn_login,
+#resetContainer #btn_logout,
+#resetContainer #btn_AddGiftIdea,
+#resetContainer #btn_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #86e4de;
+  border: none;
+  border-radius: 44px;
+  width: 232px;
+  height: 48px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 4rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#loginPage #btn_logout:hover,
+#loginPage #btn_AddGiftIdea:hover,
+#loginPage #btn_login:hover,
+#resetContainer #btn_logout:hover,
+#resetContainer #btn_AddGiftIdea:hover,
+#resetContainer #btn_login:hover {
+  background-color: #2ba199;
+  color: #f9f9fb;
+}
+
+#loginPage #btn_logout a,
+#loginPage #btn_AddGiftIdea a,
+#loginPage #btn_login a,
+#resetContainer #btn_logout a,
+#resetContainer #btn_AddGiftIdea a,
+#resetContainer #btn_login a {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#loginPage #btn_logout:hover a,
+#loginPage #btn_AddGiftIdea:hover a,
+#loginPage #btn_login:hover a,
+#resetContainer #btn_logout:hover a,
+#resetContainer #btn_AddGiftIdea:hover a,
+#resetContainer #btn_login:hover a {
+  color: #f9f9fb;
+}
+
+main #resetContainer {
+  height: 100vh;
+}
+
+main #resetContainer #noreset a {
+  text-decoration: none;
+}
+
+#addEventBtn {
+  margin: 0;
+}
+
+.friendEventForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.friendEventForm #friendEventSelect2 {
+  width: 100%;
+}
+
+.friendEventForm label,
+.friendEventForm select,
+.friendEventForm div,
+.friendEventForm input#friendDate2 {
+  margin: 1rem;
+  width: 100%;
+}
+
+section > a {
+  color: #f9f9fb;
+}
+
+.fa-chevron-left {
+  margin: 1rem;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+#addEventPage a {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+/* ================ Media =====================*/
+.homeButton,
+.storeButton,
+.friendsButton,
+.listButton {
+  background: none;
+  border: none;
+}
+
+.homeButton:hover,
+.storeButton:hover,
+.friendsButton:hover,
+.listButton:hover {
+  cursor: pointer;
+  -webkit-animation: pulse 1s ease 1;
+          animation: pulse 1s ease 1;
+}
+
+.homeButton img,
+.storeButton img,
+.friendsButton img,
+.listButton img {
+  height: 2.5cm;
+  width: 2.5cm;
+}
+
+.homeButton svg,
+.storeButton svg,
+.friendsButton svg,
+.listButton svg {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: #9aa2b6;
+}
+
+.addButton,
+.floatButton {
+  background-color: #f9f9fb;
+  border-color: #6e64ac;
+  color: #6e64ac;
+  font-size: 2.2rem;
+  border-radius: 70%;
+  padding: 6px 16px;
+}
+
+.addButton:hover,
+.floatButton:hover {
+  cursor: pointer;
+  -webkit-animation: pulse 1s ease 1;
+          animation: pulse 1s ease 1;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+#demopage1 img:nth-of-type(1),
+#demopage2 img:nth-of-type(1),
+#demopage3 img:nth-of-type(1) {
+  height: auto;
+  max-width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 5vh;
+}
+
+#demopage1 img:nth-of-type(2),
+#demopage2 img:nth-of-type(2),
+#demopage3 img:nth-of-type(2) {
+  height: 1rem;
+  width: 4rem;
+  margin-top: 12vh;
+  margin-bottom: 5vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#introVideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#introVideo iframe {
+  margin-top: 2vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */

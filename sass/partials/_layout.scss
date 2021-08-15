@@ -1,0 +1,198 @@
+//*************************************** GENERAL STYLING *****************************************//
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  border: 1px solid #000;
+  margin: 1%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  section {
+    margin: 0;
+  }
+}
+
+#not-logged-in,
+#logged-in {
+  display: none;
+}
+
+#reset_password,
+#noreset {
+  display: flex;
+}
+
+#backtologin {
+  display: none;
+}
+
+body #giftIdeaProcess .hide,
+body #friendsListProcess .hide,
+body #introPages .hide,
+body #listEmptyPage .hide,
+body #addFriendPage .hide,
+body #giftcard_display .hide,
+body section#editCardFriends.hide,
+body section#giftcardFriendsDisplay.hide,
+body #demopage1 .hide,
+body #demopage2 .hide,
+body #demopage3 .hide,
+footer #footerNav.hide,
+#friendsListHeading.hide,
+#friendsWishlist.hide,
+#giftIdeaProcess #summaryCard.hide,
+#giftIdeaProcess #addToWishlistSection.hide,
+body #friendsListView #giftcardFriendsDisplay #friendsSeeList.hide,
+#friendsListView #giftcardFriendsDisplay #addFriendButton.hide {
+  display: none;
+}
+
+body main #editCard {
+  display: none;
+}
+
+body #giftIdeaProcess .show,
+body #friendsListProcess .show,
+body #introPages .show,
+body #listEmptyPage .show,
+body #addFriendPage .show,
+body #giftcard_display .show,
+body #demopage1 .show,
+body #demopage2 .show,
+body #demopage3 .show {
+  display: flex;
+}
+
+.bottom_navbar {
+  background-color: $color_neutral_white;
+
+  ul {
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+}
+
+main section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+//************************************** INTRO PAGES STYLING **************************************//
+
+#demopage1,
+#demopage2,
+#demopage3 {
+  display: flex;
+  animation: fadeIn 0.5s ease-in both;
+}
+
+#demopage1 p,
+#demopage2 p,
+#demopage3 p {
+  font-family: $font_body;
+  align-self: center;
+  font-size: 1.2rem;
+  margin-top: 12vh;
+}
+
+//************************************* VIDEO IN DESKTOP VIEW *************************************//
+
+#desktopView {
+  display: flex;
+  flex-direction: column;
+}
+
+#desktopView p {
+  max-width: 50vw;
+
+  .teamQuote {
+    color: $color_card_bg2;
+  }
+}
+
+#desktopView p:first-of-type {
+  margin-top: 10vh;
+}
+
+//************************************ TOP NAV DESKTOP VIEW ***************************************//
+
+.topNavigation {
+  display: none;
+
+  @media screen and(min-width:650px) {
+    display: flex;
+    background-color: #fff;
+    justify-content: flex-start;
+    gap: 3%;
+    align-items: center;
+    height: 15vh;
+    background-color: #fff;
+
+    img {
+      max-width: 100%;
+      height: 12vh;
+      margin: 0 2%;
+    }
+
+    ul {
+      font-family: $font_interaction;
+      width: 100%;
+      display: flex;
+      gap: 5%;
+      justify-content: flex-start;
+
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: $color_top_nav_links;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+body footer {
+  @media screen and (min-width: 650px) {
+    display: none;
+  }
+}
+
+#footerNav {
+  @media screen and (min-width: 650px) {
+    display: none;
+  }
+}
+
+#giftcardFriendsDisplay {
+  @media screen and (min-width: 650px) {
+    width: 80%;
+    margin: auto;
+    border: none;
+
+    #friendsSeeList {
+      max-width: 100%;
+    }
+  }
+}
+
+#friendsListView {
+  @media screen and(min-width:650px) {
+    height: 100vh;
+  }
+}
