@@ -62,7 +62,7 @@ main {
     min-height: 85vh;
     display: flex;
     gap: 2%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
@@ -1006,6 +1006,10 @@ input#friendName,
 
 #addFriendBtn {
   margin: 0;
+}
+
+main #giftcardFriendsDisplay {
+  justify-content: space-between;
 }
 
 //************************************** RESET PASSWORD PAGE **************************************//
