@@ -1962,6 +1962,8 @@ main #takePhoto #backToIdeaAdd2 i {
 
 #friendsWishlist h1 {
   color: #f9f9fb;
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 2rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
