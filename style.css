@@ -82,8 +82,9 @@ main #editCardFriends {
   display: -ms-flexbox;
   display: flex;
   gap: 2%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1962,6 +1963,9 @@ main #takePhoto #backToIdeaAdd2 i {
 
 #friendsWishlist h1 {
   color: #f9f9fb;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #friendsWishlist div.displaycard:nth-child(3n + 1) {
@@ -2095,7 +2099,6 @@ main #takePhoto #backToIdeaAdd2 i {
   #friendsWishlist {
     width: 90%;
     min-height: 85vh;
-    margin: auto;
     display: -ms-grid;
     display: grid;
     grid-gap: 2%;
@@ -2663,15 +2666,22 @@ body #desktopView {
   font-family: "Baloo Bhai 2", sans-serif;
   color: #f9f9fb;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin-top: 5%;
 }
 
 .constContainer img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  max-width: 40%;
+  max-width: 90%;
   height: auto;
+}
+
+@media screen and (min-width: 650px) {
+  .constContainer img {
+    max-width: 40%;
+  }
 }
 
 #friendsSeeList #fetchedFriendsList li {
@@ -2737,7 +2747,7 @@ body #desktopView {
 
 #events-wrapper {
   border: none;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2745,15 +2755,15 @@ body #desktopView {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 0.5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #363d51;
   color: #f9f9fb;
   margin: 0 auto;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+          animation: fadeIn 0.5s ease-in both;
 }
 
 #events-wrapper .events-cards {
@@ -2790,15 +2800,21 @@ body #desktopView {
 }
 
 @media screen and (min-width: 650px) {
-  #events-wrapper {
-    width: 90%;
-    min-height: 85vh;
-    margin: auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+  #events-wrapper .events-cards {
+    padding: 1.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #events-wrapper .events-cards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    width: 30%;
   }
 }
 
@@ -3201,7 +3217,7 @@ main section {
 @media screen and (min-width: 650px) {
   #giftcardFriendsDisplay {
     width: 80%;
-    margin: auto;
+    margin: 1% auto;
     border: none;
   }
   #giftcardFriendsDisplay #friendsSeeList {

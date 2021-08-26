@@ -62,7 +62,7 @@ main {
     min-height: 85vh;
     display: flex;
     gap: 2%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
@@ -767,6 +767,7 @@ main #takePhoto {
   margin: 0;
   display: flex;
   flex-direction: column;
+  // align-items: center;
   gap: 0.5%;
   overflow: visible;
   border: none;
@@ -774,6 +775,7 @@ main #takePhoto {
 
   h1 {
     color: $color_neutral_white;
+    align-self: center;
   }
 
   div.displaycard:nth-child(3n + 1) {
@@ -868,7 +870,7 @@ main #takePhoto {
   @media screen and (min-width: 650px) {
     width: 90%;
     min-height: 85vh;
-    margin: auto;
+    // margin: auto;
     display: grid;
     grid-gap: 2%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1318,14 +1320,23 @@ body #desktopView {
   font-family: $font_heading;
   color: $color_neutral_white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin-top: 5%;
 }
 
 .constContainer img {
   align-self: center;
-  max-width: 40%;
+  max-width: 90%;
   height: auto;
 }
+
+.constContainer img {
+  @media screen and(min-width:650px) {
+    max-width: 40%;
+  }
+}
+
+
 
 //********************************** FRIENDSVIEW.HTML STYLING *************************************//
 
@@ -1381,14 +1392,15 @@ body #desktopView {
 
 #events-wrapper {
   border: none;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 0.5%;
   align-items: center;
   background-color: $color_primary;
   color: $color_neutral_white;
   margin: 0 auto;
+  animation: fadeIn 0.5s ease-in both;
 
   .events-cards {
     align-self: flex-start;
@@ -1417,13 +1429,18 @@ body #desktopView {
     }
   }
 
-  @media screen and (min-width: 650px) {
-    width: 90%;
-    min-height: 85vh;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+  .events-cards {
+    @media screen and(min-width:650px) {
+        padding: 1.5%;
+        flex: 0 0 50%;  
+        width: 45%;
+    }
+  }
+  .events-cards {
+    @media screen and(min-width:900px) {
+      flex: 0 0 33%;
+      width: 30%;
+    }
   }
 }
 
